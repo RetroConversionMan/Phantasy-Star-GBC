@@ -1,0 +1,115 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _battle_animation_pools                                         00000206 GR
+  8 _battle_animations                                              00000000 GR
+    _battle_motion_pairs_00                                         ******** GX
+    _battle_motion_pairs_01                                         ******** GX
+    _battle_motion_pairs_02                                         ******** GX
+    _battle_motion_pairs_03                                         ******** GX
+    _battle_motion_pairs_04                                         ******** GX
+    _battle_motion_pairs_05                                         ******** GX
+    _battle_motion_pairs_06                                         ******** GX
+    _battle_motion_pairs_07                                         ******** GX
+    _battle_motion_sequence_01                                      ******** GX
+    _battle_motion_sequence_02                                      ******** GX
+    _battle_motion_sequence_03                                      ******** GX
+    _battle_motion_sequence_04                                      ******** GX
+    _battle_motion_sequence_05                                      ******** GX
+    _battle_motion_sequence_06                                      ******** GX
+    _battle_motion_sequence_07                                      ******** GX
+    _battle_motion_sequence_08                                      ******** GX
+    _battle_motion_sequence_09                                      ******** GX
+    _battle_motion_sequence_10                                      ******** GX
+    _battle_motion_sequence_11                                      ******** GX
+    _battle_motion_sequence_12                                      ******** GX
+    _battle_motion_sequence_13                                      ******** GX
+    _battle_motion_sequence_14                                      ******** GX
+    _battle_motion_sequence_15                                      ******** GX
+    _battle_motion_sequence_16                                      ******** GX
+    _battle_motion_sequence_17                                      ******** GX
+    _battle_motion_sequence_18                                      ******** GX
+    _battle_motion_sequence_19                                      ******** GX
+    _battle_motion_sequence_20                                      ******** GX
+    _battle_motion_sequence_21                                      ******** GX
+    _battle_motion_sequence_22                                      ******** GX
+    _battle_motion_sequence_23                                      ******** GX
+    _battle_motion_sequence_24                                      ******** GX
+    _battle_motion_sequence_25                                      ******** GX
+    _battle_motion_sequence_26                                      ******** GX
+    _battle_motion_sequence_27                                      ******** GX
+    _battle_motion_sequence_28                                      ******** GX
+    _battle_motion_sequence_29                                      ******** GX
+    _battle_motion_sequence_30                                      ******** GX
+    _battle_motion_sequence_31                                      ******** GX
+    _battle_motion_sequence_32                                      ******** GX
+    _battle_motion_sequence_33                                      ******** GX
+    _battle_motion_sequence_34                                      ******** GX
+    _battle_motion_sequence_35                                      ******** GX
+    _battle_motion_sequence_36                                      ******** GX
+    _battle_motion_sequence_37                                      ******** GX
+    _battle_motion_sequence_38                                      ******** GX
+    _battle_motion_sequence_39                                      ******** GX
+    _battle_motion_sequence_40                                      ******** GX
+    _battle_motion_sequence_41                                      ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_motion_sequence_42                                      ******** GX
+    _battle_motion_sequence_43                                      ******** GX
+    _battle_motion_sequence_44                                      ******** GX
+    _battle_motion_sequence_45                                      ******** GX
+    _battle_motion_sequence_46                                      ******** GX
+    _battle_motion_sequence_47                                      ******** GX
+    _battle_motion_sequence_48                                      ******** GX
+    _battle_motion_sequence_49                                      ******** GX
+    _battle_motion_sequence_50                                      ******** GX
+    _battle_motion_sequence_51                                      ******** GX
+    _battle_motion_sequence_52                                      ******** GX
+    _battle_motion_sequence_53                                      ******** GX
+    _battle_motion_sequence_54                                      ******** GX
+    _battle_motion_sequence_55                                      ******** GX
+    _battle_motion_sequence_56                                      ******** GX
+    _battle_motion_sequence_57                                      ******** GX
+    _battle_motion_sequence_58                                      ******** GX
+    _battle_motion_sequence_59                                      ******** GX
+    _battle_motion_sequence_60                                      ******** GX
+    _battle_motion_sequence_61                                      ******** GX
+    _battle_motion_sequence_62                                      ******** GX
+    _battle_motion_sequence_63                                      ******** GX
+    _battle_motion_sequence_64                                      ******** GX
+    _battle_motion_sequence_65                                      ******** GX
+    _battle_motion_sequence_66                                      ******** GX
+    _battle_motion_sequence_67                                      ******** GX
+    _battle_motion_sequence_68                                      ******** GX
+    _battle_motion_sequence_69                                      ******** GX
+    _battle_motion_sequence_70                                      ******** GX
+    _battle_motion_sequence_71                                      ******** GX
+    _battle_motion_sequence_74                                      ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_31                                   size      21E   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

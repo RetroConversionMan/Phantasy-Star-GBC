@@ -1,0 +1,135 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-MOTION",
+    "bytes": 4194304,
+    "sha256": "e50ce6c2512b4f939119b2c8b66e48e25aa130edacc75c16b9154f8238a722de",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "fixtures": [
+    {
+      "name": "door-2",
+      "dungeon": [
+        2,
+        104,
+        1
+      ],
+      "items": []
+    },
+    {
+      "name": "door-3",
+      "dungeon": [
+        1,
+        39,
+        2
+      ],
+      "items": [
+        45
+      ]
+    },
+    {
+      "name": "door-4",
+      "dungeon": [
+        9,
+        234,
+        1
+      ],
+      "items": [
+        62
+      ]
+    },
+    {
+      "name": "stairs",
+      "dungeon": [
+        19,
+        82,
+        1
+      ]
+    },
+    {
+      "name": "fall",
+      "dungeon": [
+        19,
+        73,
+        0
+      ],
+      "controller": "forward into original floor19/39 pit, automatic fall to18/39"
+    }
+  ],
+  "checks": [
+    {
+      "name": "door-2",
+      "source_visible_changes": 2,
+      "physical_frames": 32,
+      "audio_irq_ticks": 43,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "door-3",
+      "source_visible_changes": 2,
+      "physical_frames": 33,
+      "audio_irq_ticks": 35,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 1,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "door-4",
+      "source_visible_changes": 2,
+      "physical_frames": 33,
+      "audio_irq_ticks": 35,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 1,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "stairs",
+      "source_visible_changes": 10,
+      "physical_frames": 119,
+      "audio_irq_ticks": 121,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        195
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "fall",
+      "source_visible_changes": 28,
+      "physical_frames": 49,
+      "audio_irq_ticks": 51,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        192
+      ],
+      "standing_pattern_buffer": 0
+    }
+  ],
+  "campaign_complete": false,
+  "passed": true,
+  "guard": {
+    "address": "0xDBC0",
+    "bytes": 64,
+    "stack_window": 1024,
+    "intact": true
+  }
+}

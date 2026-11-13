@@ -1,0 +1,64 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/scene-fades/atomic/main.c:
+src/travel.c:
+src/travel_render.c:
+src/travel_art.c:
+src/world.c:
+src/world_assets.c:
+src/scene_actor.c:
+src/scene_actor_data.c:
+src/bank_io.c:
+src/assets.c:
+src/assets_sprites.c:
+src/audio.c:
+src/audio_irq.c:
+src/audio_data.c:
+src/audio_tables.c:
+src/audio_low_62.c:
+src/audio_low_63.c:
+src/world_assets_00_map.c:
+src/world_assets_00_tiles.c:
+src/world_assets_01_map.c:
+src/world_assets_01_tiles.c:
+src/world_assets_02_map.c:
+src/world_assets_02_tiles.c:
+src/world_assets_03_map.c:
+src/world_assets_03_tiles.c:
+src/world_assets_04_map.c:
+src/world_assets_04_tiles.c:
+src/world_assets_05_map.c:
+src/world_assets_05_tiles.c:
+src/world_assets_06_map.c:
+src/world_assets_06_tiles.c:
+src/world_assets_07_map.c:
+src/world_assets_07_tiles.c:
+src/world_assets_08_map.c:
+src/world_assets_08_tiles.c:
+src/world_assets_09_map.c:
+src/world_assets_09_tiles.c:
+src/world_assets_10_map.c:
+src/world_assets_10_tiles.c:
+src/scene_actor_bank_111.c:
+src/scene_actor_bank_112.c:
+src/scene_actor_bank_113.c:
+src/scene_actor_bank_114.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 2097152,
+    "sha256": "2dde0b02656010d8eb553c6ebfdf67035e99448542ac4f0ae8da4296e2868c76",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "physical_frames": 252,
+  "audio_updates": 230,
+  "guard_bytes": 64,
+  "scope": "Production movie and departure fade helpers, actual CGB PPU with all seven BG and eight OBJ palettes, real score IRQs. Uniform white fixture isolates partial-frame palette commits; exact 60-color readbacks check all source fade steps. LCD-off reset frames excluded."
+}
+Mixed frames: 0

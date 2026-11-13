@@ -1,0 +1,9 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_story_ui.py", line 195, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_story_ui.py", line 190, in main
+    assert physical>3499 and abs(score-physical)<=2,(physical,score,audio_window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (6800, 6797, [(6744, 6254), (13544, 13051)])

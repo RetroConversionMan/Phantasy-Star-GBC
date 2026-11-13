@@ -1,0 +1,860 @@
+{
+  "updated_date": "2026-11-13",
+  "objective": "Complete faithful native Game Boy Color port of original Phantasy Star",
+  "complete": true,
+  "status": "COMPLETE: unchanged native v5 ROM passes full story, independent full replay, exact earned SRAM, both title comparisons,13integration suites, source/native component proofs, exact canonical rebuild and final independent preservation audit",
+  "baseline": {
+    "preserved_unchanged": true,
+    "manifest_files_verified": 45,
+    "reproduced_with": "GBDK 4.5.0 macOS ARM64",
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "behavior_and_world_tests": "passed"
+  },
+  "current_binary": {
+    "path": "build/phantasy-star-gbc-world.gbc",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "preserved_milestone": "build/milestones/vehicle-map-reload-20261113",
+    "integrated": [
+      "11 world groups/24 map IDs and original transitions",
+      "source RPG/event/service rules and native menus",
+      "natural/scripted battles with source initial enemies/backgrounds",
+      "Original first-person dungeon moves/turns, doors, stairs, falls, objects, darkness, traps and chests",
+      "field magic/items and source vehicles/temporary IceDigger terrain",
+      "source road and ship sequences",
+      "native score/PSG logic and GBC audio adapter",
+      "recruitment narrative routing and Odin/Torch/Prism effects",
+      "save version5 world/dungeon/vehicle and persistent motor-cycle state; v4 reads supported",
+      "Original title/opening and complete ending credits returning to title",
+      "Myau flights and actual GoldDragon transition",
+      "Ordinary enemy/chest motion, source-index palette flashes and non-gun player weapon effects",
+      "Five named save files with isolated integrity checks",
+      "Source-traced gun/Fire/Wind/Thunder per-hit presentation with exact target and HP progression",
+      "Gradual source text, scroll waits and frozen input latches; A/B confirm highlighted Yes/No",
+      "Original contextual vehicle, key and Nuts battle-item dispatch; deferred field-only effects remain deferred",
+      "Ordinary enemy Fire/Thunder original alternate poses, spell actors, blocked hits and per-hit HP/death messages",
+      "Native shop SELL pointer fix with actual cancel/sale verification",
+      "Ending map packing/batching optimization with real audio and1KiB stack guard",
+      "Original food/escape/talk item message/audio sequence and six-frame close waits",
+      "Atomic movie/travel BG and OBJ fades, with original colors and uninterrupted active-LCD score updates",
+      "Source boss/Gold palettes and atomic combat flashes; corrected original actorpriority",
+      "OriginalGovernorfall andsame-sessionmenu/window restoration",
+      "Torch palette/consumption/close/Nuts award boundaries",
+      "Supportcommands and victory audio/rowrestore/clear/hold ordering",
+      "OriginalDarkFalz retainedbody/reveal/music93 andGovernorportrait/return/healing",
+      "Original map 14 road-arrival music entry 0x87, including normal and skipped travel",
+      "Original world pattern phases and source-index nonzero priority with atomic native uploads",
+      "Living party packing, delayed direction following, exact original sorting/walking and foot/vehicle speed; held A/B field-menu controls",
+      "Original vehicle color-index cycles and motor-before-score command order; persistent C30F/C310",
+      "Original service/item sound ordering, Equip/Drop text, equipment panel and delayed inventory mutations",
+      "Shared C21D fade phase, C2F4 map-music latch, full title/map/dungeon/interaction fades and one-load Continue",
+      "Source Suelo, guest/Governor sleep and DrMad sacrifice chronology; native UI palette fades",
+      "Single source map reload/fade after successful field vehicle boarding/dismount; denied actions retain menu with no load"
+    ],
+    "verified_routes": [
+      "expansion",
+      "dungeon-emulator",
+      "integrated-battle",
+      "field-integration",
+      "travel-integration",
+      "chest-menu-integration",
+      "save-ui",
+      "integrated-audio",
+      "story-ui/all",
+      "dialogue-input",
+      "services-emulator",
+      "battle-vehicle-integration",
+      "enemy-magic-integration"
+    ],
+    "source_has_newer_unbuilt_changes": false,
+    "source_snapshot": "build/source-snapshots/release-candidate-v5-20261113",
+    "working_source_promotion": "Complete:262 fresh GBDK4.5.0 compilations; all343 source/Makefile entries,262 objects, ROM/NOI match frozen v5"
+  },
+  "world": {
+    "logic": "passed independent SMS-byte tests",
+    "emulator": "all11 groups/187 viewports/74613 tile-attribute comparisons",
+    "limitations": [
+      "Complete required story route and declared focused controller cases verified; not every possible optional route/input combination is exhaustively played",
+      "Physical hardware testing unverified"
+    ]
+  },
+  "rpg": {
+    "state_rules": "host and selected native UI verified",
+    "battle_rules": "Source rule kernel385470sanitizerchecks; source-specific formulas/flags preserved; final56support/5victory native cases andper-hit tests pass",
+    "native_battle_gameplay_verified": true,
+    "battle_items": {
+      "integrated": true,
+      "bridge_probe_sha256": "59e89a9077556ea899ef915de32cde459a8cf8189362c31b57b01f00393d8621",
+      "vehicle_contexts": 2640,
+      "key_contexts": 512,
+      "nuts_contexts": 64,
+      "direct_original_cases": 576,
+      "combined_real_encounter_vehicle_reboard_and_save": true,
+      "food_escape_talk_presentation_chronology": {
+        "source_original_cases": 184,
+        "native_actual_menu_cases": 17,
+        "controller_host_checks": 222,
+        "verified": true,
+        "probe_sha256": "e9aae5b556d4b8d239a5e1ce8e7aa79ba615149deff456f85dfd678f56a5ceff",
+        "state_timing_limit": "Rule outcomes are computed before visible playback; original persistent-state commit boundaries during presentation are not claimed."
+      }
+    },
+    "enemy_magic": {
+      "ordinary_casters": [
+        13,
+        23,
+        47,
+        49,
+        56,
+        57,
+        65
+      ],
+      "native_controller_cases": 10,
+      "source_motion_checks": 1139,
+      "native_art_records": 104,
+      "production_combined_natural_encounter_save_verified": true,
+      "boss_specials_complete": true
+    },
+    "shop_sell": {
+      "fixed_native_pointer_compilation": true,
+      "native_cases": 6048,
+      "combined_actual_buy_cancel_sale": true,
+      "additional_native_service_checks": 324,
+      "additional_native_service_states": 4
+    },
+    "boss_candidate": {
+      "sha256": "c1ac6fa1a589a86e58aa2afea618189f9d721ba6190953754db240e3478a260c",
+      "milestone": "milestones/boss-gold-before-priority-20261112",
+      "canonical_integrated": false,
+      "full_main_suites": 13,
+      "PPU_flash_transitions": 36,
+      "mixed_frames": 0
+    },
+    "support_and_victory_final": {
+      "production_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa",
+      "support_cases": 56,
+      "victory_cases": 5,
+      "guard_bytes": 64,
+      "reports": [
+        "build/verification/release-v2-support/report.json",
+        "build/verification/release-v2-victory/report.json"
+      ],
+      "state_timing_limit": "Persistent battle rule outcomes remain precomputed before visible playback."
+    }
+  },
+  "dialogue_events": {
+    "story_dialogue_references": 341,
+    "service_dialogue_references": 170,
+    "dispatched_handlers": 182,
+    "total_handlers": 182,
+    "remaining_handlers": 0,
+    "native_verified": [
+      "Suelo",
+      "Nekise",
+      "armory",
+      "church",
+      "hospital"
+    ],
+    "portraits": "169 native source scene tuples plus separate actor probes pass; selected integrated scenes verified",
+    "timing_original": "Original logical glyph/scroll/terminator waits preserved; native display overhead measured separately",
+    "narrative_dialogue_references": 23,
+    "streaming_source": {
+      "all_records_original_z80_match": 534,
+      "glyph_positions_compared": 27730,
+      "glyph_scroll_frames_compared": 34234,
+      "production_cartridge_integrated": true,
+      "native_records_verified": 534,
+      "native_window_cells_verified": 1088712,
+      "representative_free_running_one_frame_per_step": false,
+      "physical_cadence": "Native one-cell/post-draw paced probe passed with no skipped glyph steps; setup/newline overhead is measured separately",
+      "probe_sha256": "082c95598222fd389599d152d37ca0f3caadfb97023473e74734b5a9455e77a3",
+      "preserved_probe": "milestones/dialogue-stream-probe-20261112",
+      "free_running_cadence": [
+        {
+          "id": "0x1e2",
+          "segments": [
+            {
+              "logical_stream_steps": 60,
+              "physical_frames": 62,
+              "maximum_steps_in_one_physical_frame": 1
+            },
+            {
+              "logical_stream_steps": 27,
+              "physical_frames": 28,
+              "maximum_steps_in_one_physical_frame": 1
+            }
+          ]
+        },
+        {
+          "id": "0xf49b",
+          "segments": [
+            {
+              "logical_stream_steps": 68,
+              "physical_frames": 71,
+              "maximum_steps_in_one_physical_frame": 1
+            },
+            {
+              "logical_stream_steps": 33,
+              "physical_frames": 37,
+              "maximum_steps_in_one_physical_frame": 1
+            }
+          ]
+        }
+      ],
+      "integrated_input_latches_verified": true
+    }
+  },
+  "save": {
+    "source_version": 5,
+    "source_record_bytes": 628,
+    "source_covers": [
+      "world position",
+      "party/inventory/money/RNG",
+      "story/object flags/church/secrets",
+      "dungeon floor/position/direction/light; opened doors reload like source",
+      "active vehicle and post-travel destination",
+      "source persistent vehicle animation phase/countdown C30F/C310"
+    ],
+    "host_checks": 5209,
+    "dungeon_travel_state_covered": true,
+    "native_tested_record_bytes": 628,
+    "slots": 5,
+    "stride": 1024,
+    "name_characters": 5,
+    "labels_directory_offset": 5120,
+    "source_name_actions_compared_to_original_z80": 360,
+    "five_slot_native_verified": true,
+    "legacy_read_versions": [
+      4
+    ],
+    "native_migration_commands": 60,
+    "persistent_vehicle_cycle": {
+      "phase_record_offset": 624,
+      "clock_record_offset": 625,
+      "crc_offset": 626
+    }
+  },
+  "dungeons": {
+    "state": "Original movement/turn/door/stair/fall presentation integrated and source-derived viewport/audio/actor-overlap/save tests passed",
+    "emulator_render_scenes": 301,
+    "emulator_pixel_comparisons": 5779200,
+    "limits": [
+      "Native motion/asset-upload cadence is slower than SMS; source poses/order preserved",
+      "Not every optional dungeon route traversed in a single campaign"
+    ],
+    "production_lean_scenes": 0,
+    "production_lean_pixel_comparisons": 5068800,
+    "production_motion_images": 1430,
+    "production_native_patterns": 14533,
+    "production_max_patterns_per_image": 209,
+    "production_WRAM_bytes": 6905,
+    "production_stack_reserved_bytes": 1127,
+    "motion_verification": {
+      "geometry_cases": 20443,
+      "original_Z80_turns": 1944,
+      "controller_checks": 13895,
+      "presentation_order_assertions": 162,
+      "unmatched_viewport_frames": 0,
+      "actor_background_font_bytes": 7397224,
+      "actor_frames": 1657,
+      "largest_OBJ_tile_exercised": 158,
+      "exact_combined_suites": 13,
+      "performance_original": false
+    },
+    "fall_window_map": {
+      "fixed": true,
+      "only_changed_object_from_bae": "dungeon_present.o",
+      "same_session_routes": 3,
+      "each_title_pixels_compared": 23040,
+      "each_dialogue_exposed_pixels_compared": 16640,
+      "baseline_ROM_negative_control_failed": true
+    }
+  },
+  "enemy_art": {
+    "initial_poses": 74,
+    "banks": [
+      54,
+      60
+    ],
+    "native_asset_probe_passed": true,
+    "native_battle_integrated": true,
+    "animation": "Ordinary physical attacks, chest motion, hit flashes, player physical/gun and Fire/Wind/Thunder per-hit effects integrated",
+    "source_background_scenes": true,
+    "pending": "No known unimplemented battle art; native palette/resolution adaptations and upload stalls remain documented",
+    "priority_audit": {
+      "report": "build/research/enemy-priority/report.json",
+      "equal_Y_nonempty_pairs": 130,
+      "ordinary_enemies_affected": 21,
+      "initial_poses_affected": 9,
+      "scaled_source_pixel_differences": 1617,
+      "native_pixels_confirmed_wrong_actor_RGB": 1084,
+      "canonical_corrected": true
+    }
+  },
+  "audio": {
+    "state": "Integrated; original-driver Z80 comparisons and native audio/interrupt probes pass",
+    "source_reference_frame_assertions": 437200,
+    "limits": [
+      "GBC APU pitch/volume/noise adaptation",
+      "LCD-off pauses LCD-interrupt audio",
+      "Full soundtrack listening and hardware review pending"
+    ],
+    "native_command_capture": {
+      "report": "build/verification/audio-review/report.json",
+      "probe_sha256": "e3e95e63b289c92263e4119a4e254938503ee54ced7e837bc883d94c1af3e23d",
+      "music_commands": 20,
+      "effects": 53,
+      "native_frames": 21540,
+      "listening_review_complete": false,
+      "hardware_tested": false
+    }
+  },
+  "travel": {
+    "implemented": true,
+    "source_logic_all_routes_passed": 14,
+    "isolated_native_all_routes_passed": 14,
+    "integrated_verified": [
+      "road1",
+      "Passport purchase/admission",
+      "ship81 full route",
+      "ship82 skip route",
+      "post-travel save/power cycle"
+    ],
+    "all_routes_in_campaign_verified": false,
+    "verified_fade_candidate": {
+      "sha256": "5d298e3647515398844606873b4255b721448bf1e328063b95a2c09c3ffc1221",
+      "milestone": "milestones/scene-fades-20261112",
+      "canonical_integrated": true,
+      "mixed_scanline_frames_before": 72,
+      "mixed_scanline_frames_after": 0,
+      "native_frame_checks": 252,
+      "all_routes": 14,
+      "combined": [
+        "story-ui/all",
+        "travel-integration",
+        "integrated-audio"
+      ],
+      "additional_WRAM_bytes": 56
+    }
+  },
+  "ending": {
+    "outer_sequence": "Earned DarkFalz victory, complete original ending/credits and settled title verified in full campaign and independent clean-power-on replay",
+    "credits": "Optimizedsourceimagepreservation: all334nativeimages visible,zero blankframes;3499logicalframes represented in6253isolatedphysicalframes",
+    "full_sequence_combined_verified": true,
+    "complete_campaign_verified": true,
+    "performance_original": false,
+    "optimized_source": {
+      "isolated_physical_frames": 6253,
+      "prior_isolated_physical_frames": 8257,
+      "source_logical_frames": 3499,
+      "visible_native_images": 334,
+      "unmatched_display_frames": 0,
+      "combined_focused_sha256": "26362dd91e5b21db4ffaaac141d2ddbaaa499fd4448b27265f522ed2d94252f3",
+      "combined_active_frames": 6794,
+      "combined_audio_frames": 6795,
+      "stack_guard_1KiB_passed": true,
+      "preserved_milestone": "milestones/ending-speed-20261112",
+      "canonical_integrated": true
+    }
+  },
+  "remaining": [],
+  "reports": {
+    "rpg-report": "build/verification/rpg-report.json",
+    "world-logic-report": "build/verification/world-logic-report.json",
+    "dungeon-logic-report": "build/verification/dungeon-logic-report.json",
+    "events-report": "build/verification/events-report.json",
+    "save-report": "build/verification/save-report.json",
+    "battle-report": "build/verification/battle-report.json",
+    "services-report": "build/verification/services-report.json"
+  },
+  "bank_allocations": {
+    "0": "engine/descriptors",
+    "1": "UI",
+    "2-3": "baseline map metadata and Alis",
+    "4": "RPG tables/rules/encounter tables",
+    "5": "save",
+    "6": "world",
+    "7": "events",
+    "8": "dialogue reader/references",
+    "9-10": "dialogue text",
+    "16": "dungeon data",
+    "17": "dungeon traversal/rendering",
+    "18": "battles",
+    "19": "services",
+    "30": "battle UI",
+    "31": "battle scene renderer",
+    "32-53": "world groups",
+    "54-60": "enemy initial-pose graphics",
+    "11": "dungeon play/field actions",
+    "12": "world rules/event flow/field flow/narratives/effects",
+    "13": "scene/actor rendering",
+    "14": "UI and sequence integration",
+    "15": "audio",
+    "61-63": "audio data",
+    "97-110,192": "world/story scenes",
+    "111-114": "actor data",
+    "115": "chests",
+    "116-117": "recruitment art",
+    "118": "Layered vehicle art and persistent cycle kernel",
+    "119-120": "travel controller/presenter/assets",
+    "128": "palette effects",
+    "121": "opening/Myau/ending dispatch",
+    "122": "five-file save UI/names",
+    "129-130": "opening/title/ending bitmap",
+    "131-132": "Myau flight and opening controllers",
+    "136-139,193-208": "ending credits controller and images",
+    "140-146": "battle initial scenery",
+    "147,182-191,213": "weapon/gun/player magic effect assets",
+    "148-181": "ordinary enemy attack poses",
+    "252-253": "Ordinaryenemy Fire/Thunder extra poses and effect assets",
+    "20": "Dungeon production lookup tables and12 flash-aware palettes",
+    "21-29,64-76,78-96": "Freed by production dungeon dependency cleanup; legacy sources preserved",
+    "77": "Dungeon motion controller",
+    "209-212,214-251": "Source dungeon motion images, blocks and native patterns",
+    "21": "World motion code and descriptors (moved from ROM0 after combined layout overflow)",
+    "22": "Party rendering and source poses",
+    "24": "Palma world phases",
+    "25": "Motavia world phases",
+    "29": "Shared source transitions"
+  },
+  "toolchain_note": "Recreated ../../.venv-transfer. Use relative .tools/gbdk path because included lcc overflows on long paths. Archived venv is not used.",
+  "campaign": {
+    "state": "Completed full story and independently replayed from power-on on unchanged b72",
+    "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "run": "build/campaign/release-v5-newgame-b72feead",
+    "complete": true,
+    "initial_sram_loaded": false,
+    "initial_emulator_state_loaded": false,
+    "injected_fixtures": false,
+    "independent_replay": {
+      "passed": true,
+      "report": "build/campaign/release-v5-live-replay-b72feead/replay-report.json",
+      "report_sha256": "b85bd705fabe42e57a1c787833b6c10f6b3df1b5dd44f26d32c668baa11844a0",
+      "frames": 3581580,
+      "checkpoints": 484,
+      "controller_rows": 144464,
+      "controller_bytes": 11721245,
+      "controller_sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+      "native_sram_sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60",
+      "native_sram_matches_source": true,
+      "initial_sram_loaded": false,
+      "save_states_loaded": false,
+      "state_injection": false,
+      "final_state_matched": true,
+      "executed_tool_sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+      "reproduction": "build/campaign/release-v5-live-replay-b72feead/REPRODUCE.txt",
+      "title_comparison": {
+        "passed": true,
+        "differing_pixels": 0,
+        "report": "build/campaign/release-v5-live-replay-b72feead/ENDING_TITLE_VISUAL_PROOF.json"
+      }
+    },
+    "settled_title_comparison": {
+      "passed": true,
+      "differing_pixels": 0,
+      "reference": "Separate settled native boot with same-cartridge earned SRAM only",
+      "report": "build/campaign/release-v5-newgame-b72feead/ENDING_TITLE_VISUAL_PROOF.json"
+    },
+    "native_event_object_offset": 293,
+    "native_layout_proof": "Compiled event_init matched byte-for-byte against actual ROM; frozen native-layout.json in run",
+    "progress_source": "Live report.json/controller.jsonl/checkpoints in run; no fixed completion estimate",
+    "prefix_replay": {
+      "passed": true,
+      "frames": 1633795,
+      "checkpoints": 352,
+      "initial_sram_loaded": false,
+      "save_states_loaded": false,
+      "state_injection": false,
+      "retries": 0,
+      "omitted_gameplay_frames": 0,
+      "proof": "build/campaign/release-v5-newgame-b72feead/PREFIX_REPLAY_PROOF.json",
+      "metadata_scope": "build/campaign/release-v5-newgame-b72feead/PREFIX_METADATA_PROVENANCE.json"
+    },
+    "prefix_independent_audit": "build/verification/release-v4-prefix-independent-audit/report.json",
+    "prefix_method_audit": "build/verification/release-v5-prefix-method-audit/report.json",
+    "settled_title_method_audit": "build/verification/release-v5-title-method-audit/report.json",
+    "frames": 3581580,
+    "checkpoints": 484,
+    "final_state": "Settled native title after Dark Falz and full ending/credits",
+    "encounter_annotations": {
+      "total": 1230,
+      "inherited_prefix": 501,
+      "fresh_after_prefix": 729,
+      "scope": "Inherited annotation scope is explicitly documented; the prefix controls and everycheckpoint were freshly executed on b72."
+    },
+    "natural_full_party_defeats": 1,
+    "actual_native_continues": 1,
+    "runner_assertions": 1,
+    "runner_assertion_scope": "Zero-MP Fly correctly refused; driver continued from exact stopped state using earned Hovercraft, with no ROM change or rewind",
+    "closed_marker": "build/campaign/release-v5-newgame-b72feead/CAMPAIGN_CLOSED.json",
+    "source_evidence_manifest": "build/campaign/release-v5-newgame-b72feead/SHA256.json",
+    "source_evidence_files": 443,
+    "story_milestone": "build/milestones/release-v5-campaign-story-20261113/SUMMARY.md",
+    "story_independent_audit": "build/verification/release-v5-story-independent-audit/report.json",
+    "final_independent_audit": {
+      "passed": true,
+      "report": "build/verification/release-v5-final-independent-audit/report.json",
+      "sha256": "429c268b552e094e6013ce0c3bb660e4f5644a68a4042031ee3f6e65b5370b96"
+    }
+  },
+  "native_adaptations": [
+    "160x144 resolution and palette/color reduction",
+    "GBC APU pitch/volume/noise mapping; LCD-off pauses scanline sound updates",
+    "Source RNG feedback port omits unavailable Z80 refresh-registerR contribution; no exact SMS random-sequence claim",
+    "Expensive native graphics uploads and some motion/credits take additional physical frames while tested source logical waits/order remain intact",
+    "Battle outcomes are computed before visible per-hit playback",
+    "Native dialogue window closes as a whole while preserving the original six logical close waits, rather than the SMS six-row raster closure"
+  ],
+  "untested_external_validation": [
+    "Physical GBC hardware",
+    "Complete subjective soundtrack listening review"
+  ],
+  "historical_campaign": {
+    "state": "Controller-only frozen-probe campaign defeated GoldenDragon, Shadow and Lassic and saved before governor event55 at checkpoint423/frame2258524. Independent clean power-on replay through Lassic passed420checkpoints/2234181frames, including party/inventory/story/objectflags/RNG and four actual deaths/Continues. Earned-SRAM continuation authorized on verified1bea58bc corrected-story candidate, explicitly documented upgrade; fresh final-ROM campaign remains pending.",
+    "rom_sha256": "4f4a7b6dce593f9e799a6fd4afadd3c927b6a6a182b1b642f664c630e8c0a9e2",
+    "injected_fixtures": false,
+    "verified_checkpoints": 420,
+    "replayed_frames": 2234181,
+    "evidence": "build/campaign/milestones/lassic/replay-report.json",
+    "complete": false,
+    "progress_checkpoints": 424,
+    "progress_frames": 2258524,
+    "earned_sram_sha256": "cc347885fac722c6c129a210e60d6ba8173559e98bd3e33285c80f3a3330636d",
+    "preserved_progress": "build/campaign/milestones/pre-final-governor",
+    "replay_report_sha256": "f45e00099ce83a7d7b417149a98673aca3e3d65306c6b3573b281918d446b55e",
+    "earned_continuation": {
+      "rom_sha256": "1bea58bc107c1e3d4b5029e5ba4d662de2d09130a2e143351e43522fbbba3a45",
+      "report": "build/campaign/final-story-earned-1bea58bc/report.json",
+      "complete_to_title": true,
+      "fresh_NewGame_proof": false,
+      "frames": 384766,
+      "encounters": 138,
+      "deaths": 3,
+      "progression": "ActualContinue, governorfall/finalmaze, threepreservedDarkFalzdefeats, sourcefloor32training, earned15000DiamondArmor,equip, fourthDarkFalzwinandfullendingtotitle",
+      "independent_replay": "running",
+      "known_presentation_gaps": [
+        "supportcommands",
+        "DarkFalzreveal/music93",
+        "DarkFalzretainedbody",
+        "Governorendingportrait",
+        "victorysound/clearorder"
+      ]
+    },
+    "scope": "Earlier ROM campaigns and explicitly upgraded earned-save continuation only; not final55b7 campaign evidence"
+  },
+  "presentation_component_history": {
+    "world_motion": {
+      "status": "frozen isolated source and native proofs passed; not canonical",
+      "manifest": "build/source-snapshots/world-motion-files/MANIFEST.json",
+      "milestone": "build/milestones/world-motion-20261113/SHA256.json",
+      "rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c",
+      "integration_suites_passed": 13,
+      "native_sampled_frames": 453,
+      "mixed_frames": 0,
+      "clean_reextraction": "73 files byte-identical; build/verification/world-motion-reextract/report.json"
+    },
+    "world_priority": "build/source-snapshots/world-priority-files; isolated source/PPU proof passed; not integrated canonical",
+    "party_followers": "source movement, party packing, delayed following, original sorting and source-art proofs passed; corrected native menu conditional under final integration verification",
+    "services_inventory": {
+      "status": "frozen isolated source/native proofs passed; merging with transitions and party",
+      "manifest": "build/source-snapshots/service-inventory-files/MANIFEST.json",
+      "milestone": "build/milestones/service-inventory-order-20261113/SHA256.json"
+    },
+    "events_and_outer_transitions": "source phase/music/loaders and native event ordering proofs passed; final presentation regression and service merge underway",
+    "canonical_unchanged": true,
+    "vehicle_motor_audio": {
+      "status": "frozen isolated helper and source/native proof passed; vehicle integration pending",
+      "manifest": "build/source-snapshots/audio-order-files/MANIFEST.json",
+      "milestone": "build/milestones/audio-motor-order-20261113/SHA256.json",
+      "native_score_ticks": 5040,
+      "source_driver_bytes_compared": 2580480,
+      "continuous_cadence_frames": 1200
+    },
+    "vehicle_cycle": {
+      "status": "source phase/art and savev5 backward compatibility isolated checks passed; native integration in progress",
+      "snapshot": "build/source-snapshots/vehicle-cycle-work"
+    },
+    "controller_smoke": {
+      "rom_sha256": "bdc70a55ac1722067922eb0422e54ec1a0d3f77aea718a9d99b63b8e0b57653a",
+      "frames": 146042,
+      "natural_encounters": 44,
+      "checkpoints": 38,
+      "campaign_complete": false,
+      "proof": "build/campaign/controller-smoke-source-menus-bdc70a55/controller-smoke-proof.json"
+    },
+    "scope": "Historical isolated-stage descriptions; every listed production component is now integrated in frozen releasev4. These older component ROMs/proofs are retained, not final campaign evidence."
+  },
+  "open_audits": [],
+  "release_candidate_v5": {
+    "status": "ACCEPTED: complete story, independent full replay, earned-save/title/build/preservation checks pass",
+    "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "source_snapshot": "build/source-snapshots/release-candidate-v5-20261113",
+    "production_source_and_makefile_files": 343,
+    "objects": 262,
+    "changed_from_v4": [
+      "src/game_field.c",
+      "game_field.o"
+    ],
+    "identical_objects_to_v4": 261,
+    "wram_bytes": 6886,
+    "wram_end": "DB86",
+    "stack_address_space_reserved": 1146,
+    "exact_binary_integration_suites": 13,
+    "integration_report": "build/verification/vehicle-reload-fix-integrations/report.json",
+    "vehicle_source_cases": 10,
+    "vehicle_native_cases": 4,
+    "focused_evidence": "build/milestones/vehicle-map-reload-20261113/SHA256.json",
+    "manifest_sha256": "5e16a7c5e010421313970c42809a768d0d34fa6cf14fa4faca299265f25377ec",
+    "build_proof_sha256": "032d73e4b7a766499315b2dfd3f7253133db5c62d747cefac7db52e366604255",
+    "scope": "Only vehicle completion dispatcher changed; every other v4 object identical. Pure-rule and focused unchanged-component evidence retain exact object attribution; final v5 cartridge13-suite passes.",
+    "canonical_reproduction": "milestones/canonical-promotion-v5-20261113/EXACT_REBUILD.json",
+    "canonical_preservation": "milestones/canonical-promotion-v5-20261113/PRESERVATION.json"
+  },
+  "resolved_defects": [
+    {
+      "feature": "field vehicle boarding/dismount",
+      "old_rom_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+      "new_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+      "cause": "FIELD_VEHICLE explicitly reloaded before resume_walk, which also reloads",
+      "correction": "Call resume_walk only; keep context cleanup and exactly one source load/fade pair",
+      "evidence": "build/milestones/vehicle-map-reload-20261113/SHA256.json",
+      "limits": "Recorded native physical upload times differ from source; no source logical fade sequence duplicated"
+    }
+  ],
+  "campaign_v4_held": {
+    "run": "build/campaign/release-v4-newgame-55b71a17",
+    "rom_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+    "checkpoint": "351-torch-continue-aukba-rested",
+    "frames": 1633795,
+    "checkpoints": 352,
+    "encounters": 501,
+    "natural_deaths": 1,
+    "actual_native_continues": 1,
+    "vehicle_uses": 0,
+    "status": "Immutable complete352-checkpoint prefix including real defeat/Continue; no tail omitted"
+  },
+  "world_regeneration": {
+    "report": "build/verification/full-world-reextract/report.json",
+    "source_files": 28,
+    "asset_files": 46,
+    "byte_identical_to_current": true,
+    "safe_legacy_cli": "build/milestones/world-extractor-cli-20261113/SHA256.json",
+    "cli_guard_cases": 15
+  },
+  "historical_milestones": {
+    "scope": "Preserved superseded milestone snapshots. Their running/pending/known-issue fields describe the time recorded, not the current release. Current status is in current_binary, release_candidate_v5 and campaign.",
+    "latest_integration_probe": {
+      "path": "milestones/non-gun-weapon-probe-20261112/presentation-integration-probe.gbc",
+      "sha256": "2034927a6914281c354c0a4da36dc4063dafd067ca1745140653bc47b4df1007",
+      "production": false,
+      "credits_stub_never_completes": true,
+      "verified": [
+        "Original title and complete opening",
+        "Myau/Odin/Noah recruitment via explicitly listed nearby SRAM fixtures",
+        "Prism reveal, outbound Myau flight, actual GoldDragon battle, castle arrival and return flight",
+        "Actual DarkFalz battle from labeled nearby fixture through ending prelude to credits boundary",
+        "Chest full-field-menu Tele/Trap, retained post-open menu and immediate object flag save",
+        "Five file creation/naming/load/delete/overwrite and isolated corruption; slot0 remains compatible",
+        "All previous world/dungeon/battle/field/travel/audio/chest routes pass with new save UI"
+      ],
+      "report_roots": [
+        "build/verification/story-ui",
+        "build/verification/chest-menu-integration"
+      ],
+      "not_full_campaign": true,
+      "preserved_milestone": "milestones/non-gun-weapon-probe-20261112"
+    },
+    "source_priority_candidate": {
+      "path": "build/source-snapshots/source-priority-candidate",
+      "sha256": "922da45be9df827300b7370f5d6dd76c716ff907d3f624ba61efb3f2f771d457",
+      "canonical_integrated": true,
+      "full_main_suites_passed": 13,
+      "report": "build/verification/release-source-priority/report.json",
+      "included": [
+        "Lassic/DarkFalz source special attacks and GoldDragon original palette phases/outcomes",
+        "Atomic combat flashes",
+        "Independent original actor priority correction in45generatedartfiles",
+        "Selective dungeon movement wait optimization preserving finalstandingframe"
+      ],
+      "excludes": [
+        "Governor event55 correctedfall",
+        "Torch palette/consumption/reply/award chronology",
+        "Remaining supportspell andbattlecommand message/audio/close chronology"
+      ],
+      "incorporated_into_canonical_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa"
+    },
+    "torch_candidate": {
+      "sha256": "5d8fa587d8e8ba4599327a61195f8e0ce9e7af4d4cc71dfd7d23c1d6916fcebf",
+      "milestone": "milestones/torch-order-20261113",
+      "canonical_integrated": true,
+      "original_Z80_cases": 10,
+      "actual_native_menu_cases": 8,
+      "combined_suites": [
+        "field",
+        "dialogue",
+        "story/all"
+      ],
+      "order": "B458;1effectVBlank;Potcheck/selectedTorchremoval;B49A/B471;6closeVBlanks;conditionalNutsaward/B3",
+      "added_WRAM_bytes": 0,
+      "native_window_limit": "Nativefive-rowwindowhiddenatonce;SMSsixhalf-glyphrowsrestoreprogressively",
+      "incorporated_into_canonical_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa"
+    },
+    "final_story_candidate": {
+      "sha256": "1bea58bc107c1e3d4b5029e5ba4d662de2d09130a2e143351e43522fbbba3a45",
+      "source_snapshot": "build/source-snapshots/final-story-candidate",
+      "milestone": "milestones/final-story-before-presentation-20261113",
+      "canonical_integrated": false,
+      "combined_suites_passed": 13,
+      "native_Torch_cases": 8,
+      "governor_earned_save_and_pits_verified": true,
+      "source_changes": [
+        "922source-priority/boss/Gold/atomicflash/waitcandidate",
+        "governor9filepatch",
+        "Torch5filepatch"
+      ],
+      "known_remaining": [
+        "Support-command chronology",
+        "DarkFalz5619prelude/revealmusic93",
+        "Governor53portraitinendingandafterSaccubus",
+        "FreshNewGame-to-endingcampaign"
+      ]
+    },
+    "dark_falz_art_candidate": {
+      "status": "Source/native/full-main verified and integrated",
+      "original_source_proof": "build/research/dark-falz-prelude/source-report.json",
+      "changed_scene_images": [
+        "31-00-00",
+        "32-00-73"
+      ],
+      "other_scene_images_unchanged": 167,
+      "native_patterns_before": 6749,
+      "native_patterns_after": 6620,
+      "changed_production_files": 18,
+      "file_manifest": "build/source-snapshots/dark-falz-background-files/MANIFEST.json",
+      "canonical_integrated": true,
+      "source": "5619changesInteraction_Type31to32withoutreloadingorclearingthebackground;B19_8000supplieshigh16palettebeforefirstupload",
+      "milestone": "milestones/dark-falz-background-20261113",
+      "native_probe_sha256": "dee56ee8ea1870937626efd5bba93f613673179bde7e04c8c07112f8a4dd650b",
+      "source_indices_verified": 98304,
+      "palette_bytes_verified": 64,
+      "native_flash_class_pixels_verified": 38400,
+      "PPU_flash_transitions": 24,
+      "mixed_frames": 0,
+      "prior_actual_source_RGB_differences": 12740,
+      "prior_actual_native_RGB_differences": 5066,
+      "incorporated_into_canonical_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa"
+    },
+    "release_candidate": {
+      "path": "build/source-snapshots/release-candidate-20261113/build/phantasy-star-gbc-world.gbc",
+      "sha256": "bae370f7712fa9433da983bd5c83da77c8f8decc02fe46b437fa58b69867f47c",
+      "source_snapshot": "build/source-snapshots/release-candidate-20261113",
+      "source_manifest_files": 326,
+      "WRAM_bytes": 6905,
+      "WRAM_end": "DB99",
+      "stack_address_space_reserved": 1127,
+      "combined_suites_passed": 13,
+      "native_Torch_cases": 8,
+      "native_Governor_earned_save_and_pits": "passed",
+      "native_final_presentation_cases": 4,
+      "native_final_presentation_pixel_checks": 107520,
+      "full_main_flash_transitions": 36,
+      "mixed_frames": 0,
+      "support_and_victory_exact_object_rechecks": "running",
+      "fresh_NewGame_campaign": "running from emptySRAM",
+      "campaign_output": "build/campaign/release-newgame-bae370f7",
+      "canonical_promoted": false,
+      "complete": false,
+      "superseded_by": "release_candidate_v2",
+      "reason": "Confirmedfallwindowmapretentionbug; frozenbaeunchanged"
+    },
+    "release_candidate_v2": {
+      "path": "build/source-snapshots/release-candidate-v2-20261113/build/phantasy-star-gbc-world.gbc",
+      "sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa",
+      "source_snapshot": "build/source-snapshots/release-candidate-v2-20261113",
+      "source_manifest_files": 326,
+      "WRAM_bytes": 6905,
+      "WRAM_end": "DB99",
+      "stack_address_space_reserved": 1127,
+      "combined_suites_passed": 13,
+      "native_Torch_cases": 8,
+      "native_Governor_earned_save_and_pits": "passed",
+      "native_final_presentation_cases": 4,
+      "native_final_presentation_pixel_checks": 107520,
+      "full_main_flash_transitions": 36,
+      "mixed_frames": 0,
+      "support_and_victory_exact_object_rechecks": "passed56+5",
+      "fresh_NewGame_campaign": "Clean power-on prefix replay passed all 276 checkpoints through frame 908977, including RNG, without importing SRAM or an old emulator state. The same ROM continues through the story; full ending and independent full replay pending.",
+      "campaign_output": "build/campaign/release-v2-newgame-1b2b41bc",
+      "canonical_promoted": true,
+      "complete": false,
+      "fix": "RestoreWindow9C00attheendofeachfall;allthreesame-sessiontitlechecks23040pixelseachPASS",
+      "changed_objects_from_bae": [
+        "dungeon_present.o"
+      ],
+      "preserved_milestone": "milestones/release-v2-20261113",
+      "prefix_replay_report": "build/campaign/release-v2-newgame-1b2b41bc/PREFIX_REPLAY_PROOF.json",
+      "working_source_forced_rebuild": {
+        "passed": true,
+        "same_rom_sha256": true,
+        "same_object_files": 253,
+        "report": "build/verification/release-v2-working-rebuild.json"
+      },
+      "known_issue": "Road 3 arrival at map 14 selects music 0x88 during its 40-tick fade; original LABEL_DD9 requires 0x87. enter_map later corrects it. Source-verified correction is being prepared in an isolated v3 snapshot."
+    },
+    "release_candidate_v3": {
+      "path": "build/source-snapshots/release-candidate-v3-20261113/build/phantasy-star-gbc-world.gbc",
+      "sha256": "2e151f71ae14996d5753791d373b6ef9f0d7a27f7f86e3cab3742c39ea19668c",
+      "source_snapshot": "build/source-snapshots/release-candidate-v3-20261113",
+      "source_manifest_files": 326,
+      "changed_objects_from_v2": [
+        "travel.o"
+      ],
+      "fix": "Map 14 road-arrival music follows original LABEL_DD9: 0x87 instead of 0x88. Stale main.c header comment corrected without object change.",
+      "combined_suites_passed": 13,
+      "focused_travel_music_verification": "28 host and 28 native cases passed; negative v2 control reproduces two road3 failures",
+      "canonical_promoted": true,
+      "full_clean_power_on_candidate_replay": "Old v2 fixed-input timing probe stopped at checkpoint126/frame413402 with one-tile position difference after music correction; diagnostic preserved. Fresh adaptive v3 run held at checkpoint121/frame393732 while newly identified source presentation omissions are implemented.",
+      "complete": false,
+      "travel_timing": "40 logical arrival ticks retained; road3 native duration increases one frame because corrected original track affects upload scheduling",
+      "preserved_milestone": "milestones/release-v3-20261113",
+      "working_source_forced_rebuild": {
+        "passed": true,
+        "same_rom_sha256": true,
+        "same_object_files": 253,
+        "report": "build/verification/release-v3-working-rebuild.json"
+      }
+    },
+    "release_candidate_v4": {
+      "status": "Preserved historical candidate; vehicle double-reload defect corrected in v5; clean campaign held before any vehicle use",
+      "rom_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+      "source_snapshot": "build/source-snapshots/release-candidate-v4-20261113",
+      "production_source_and_makefile_files": 343,
+      "objects": 262,
+      "wram_bytes": 6886,
+      "wram_end": "DB86",
+      "stack_address_space_reserved": 1146,
+      "exact_binary_integration_suites": 13,
+      "integration_report": "build/verification/full-v5-integrations-verified/report.json",
+      "final_presentation_report": "build/verification/full-v5-final-presentation/report.json",
+      "party_vehicle_save_report": "build/source-snapshots/full-presentation-work/evidence/party-vehicle-merged-proof.json",
+      "service_evidence": "build/milestones/full-final-services-20261113/SHA256.json",
+      "world_evidence": "build/verification/full-presentation-world-native/report.json",
+      "audio_order_evidence": "build/verification/full-presentation-audio-motor/report.json",
+      "subsystem_equivalence": "260/262 production objects identical to ad50 combined proof. Only main source-menu control-flow alignment and help text differ; final55b7 integration and late-story full-ROM suites pass.",
+      "invalid_probe_evidence": "Bank0 overflow attempt397ea3d3 and two diagnostic chest attempts retained explicitly invalid; excluded from acceptance",
+      "field_failure_correction": "Original Palma-menu test failure was premature input during a synchronous fade. Corrected controller waits pass both ad50 and55b7; removed redundant entrance call is source alignment, not a reproduced gameplay fix.",
+      "canonical_reproduction": "milestones/canonical-promotion-v4-20261113/EXACT_REBUILD.json",
+      "canonical_preservation": "milestones/canonical-promotion-v4-20261113/PRESERVATION.json",
+      "core_host_suites_passed": 7
+    }
+  },
+  "completion_scope": "Complete original game content and native gameplay implemented and verified in a GBC emulator through an earned New Game-to-ending campaign and independent clean-power-on replay. Declared native adaptations and untested physical/listening validation remain explicit.",
+  "release_artifact": {
+    "rom": "releases/phantasy-star-gbc/Phantasy-Star-GBC.gbc",
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "bytes": 4194304,
+    "guide": "releases/phantasy-star-gbc/PLAY.txt",
+    "status": "releases/phantasy-star-gbc/RELEASE_STATUS.json",
+    "evidence": "releases/phantasy-star-gbc/EVIDENCE_SHA256.json"
+  }
+}

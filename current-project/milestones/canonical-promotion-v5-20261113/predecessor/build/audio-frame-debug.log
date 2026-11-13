@@ -1,0 +1,10 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+BEGIN title 0 0 0x46d9
+BEGIN Camineet 0 1 0x1c5
+DELTA Camineet 0 2 0 1 0x54e5
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "tools/verify_integrated_audio.py", line 28, in <module>
+    samples.append(pcm);report['sections'].append({'name':section,'score_frames':frames,'music_command':e.memory[s['audio_music']],'pcm_peak_to_peak':int(pcm.max())-int(pcm.min())})
+           ^^^^^^^^^^^
+AssertionError: ('Camineet', 301)

@@ -1,0 +1,77 @@
+# GBDK 4.5.0 lcc has a fixed-size path buffer: prefer a short relative path.
+GBDK_HOME ?= .tools/gbdk
+PYTHON ?= ../../.venv-transfer/bin/python
+LCC := $(GBDK_HOME)/bin/lcc
+ROM := build/phantasy-star-gbc-world.gbc
+# Expansion integration; verified-baseline remains a separate build.
+SOURCES := src/assets.c src/assets_sprites.c src/font.c src/main.c src/bank_io.c \
+ src/ui.c src/game_ui.c src/game_transition.c src/party_world.c src/party_world_data.c src/game_flow.c src/game_field.c src/game_sequence.c src/game_movie.c src/field_actions.c src/save.c src/save_slots.c src/save_ui.c src/rpg.c src/rpg_data.c src/events.c src/events_data.c \
+ src/services.c src/inventory_menu.c src/dialogue.c src/dialogue_data.c src/world.c src/world_rules.c src/world_motion.c src/world_motion_data.c $(wildcard src/world_motion_bank_*.c) \
+ src/battle.c src/battle_view.c src/enemy_art.c src/chest_art.c src/vehicle_art.c src/vehicle_cycle.c \
+ src/battle_scene.c src/battle_scene_data.c $(wildcard src/battle_scene_bank_*.c) \
+ src/boss_motion.c src/boss_effects_bank_254.c src/boss_effects_bank_255.c \
+ src/gold_scene.c src/gold_scene_bank_123.c \
+ src/battle_weapon.c $(wildcard src/weapon_bank_*.c) \
+ src/battle_motion.c src/chest_motion.c src/battle_animation_data.c $(wildcard src/battle_animation_bank_*.c) \
+ src/enemy_magic.c src/enemy_magic_bank_252.c src/enemy_magic_bank_253.c \
+ src/dungeon.c src/dungeon_data.c src/dungeon_play.c src/dungeon_render_play.c \
+ src/dungeon_view.c src/dungeon_upload.c src/dungeon_present.c \
+ src/dungeon_motion.c src/dungeon_motion_upload.c src/dungeon_motion_data.c $(wildcard src/dungeon_motion_bank_*.c) \
+ src/dungeon_production_data.c src/dungeon_production_tables.c \
+ src/scene.c src/palette_commit.c src/scene_data.c src/scene_actor.c src/scene_actor_data.c \
+ src/cutscene.c src/cutscene_art.c src/cutscene_art_data.c src/cutscene_art_bank_116.c src/cutscene_art_bank_117.c \
+ src/presentation.c src/presentation_data.c src/presentation_bank_128.c \
+ src/travel.c src/travel_render.c src/travel_art.c \
+ src/opening.c src/opening_data.c src/opening_bank_129.c src/opening_bank_130.c \
+ src/myau_flight.c src/myau_flight_data.c src/myau_flight_bank_131.c \
+ src/ending_walk.c src/ending_walk_data.c src/ending_upload.c $(wildcard src/ending_walk_bank_*.c) \
+ src/audio.c src/audio_irq.c src/audio_data.c src/audio_tables.c src/audio_low_62.c src/audio_low_63.c \
+ $(wildcard src/dialogue_text_*.c src/world_assets*.c src/enemy_art_*.c src/scene_bank_*.c src/scene_actor_bank_*.c)
+OBJECTS := $(patsubst src/%.c,build/obj/%.o,$(SOURCES))
+HEADERS := $(wildcard src/*.h)
+
+.PHONY: all expansion baseline assets previews audit verify verify-logic verify-world clean
+all: expansion
+expansion: $(ROM)
+# Focused cinematic integration probe; credits intentionally cannot complete.
+# Never distribute this as the production cartridge or claim ending coverage.
+presentation-probe: $(filter-out build/obj/ending%,$(OBJECTS))
+	$(LCC) -msm83:gb -DPS_DUNGEON_LEAN -Isrc -c -o build/presentation_credits_stub.o tests/presentation_credits_stub.c
+	$(LCC) -msm83:gb -Wm-yC -Wm-yt0x1b -Wm-yo256 -Wm-ya1 -Wm-ynPSGBC-PROBE -Wl-m -Wl-j -o build/presentation-integration-probe.gbc $(filter-out build/obj/ending%,$(OBJECTS)) build/presentation_credits_stub.o
+	$(PYTHON) tools/verify_layout.py build/presentation-integration-probe.gbc
+baseline:
+	$(PYTHON) tools/reproduce_baseline.py
+assets:
+	$(PYTHON) tools/extract_assets.py --no-preview
+	$(PYTHON) tools/extract_world_motion.py --src src --output assets/world --priority-helper tools/world_priority.py
+	$(PYTHON) tools/extract_rpg.py
+	$(PYTHON) tools/extract_dialogue.py
+	$(PYTHON) tools/extract_enemies.py
+	$(PYTHON) tools/extract_party_world.py
+	$(PYTHON) tools/extract_vehicle_cycles.py
+	$(PYTHON) tools/make_font.py
+previews:
+	$(PYTHON) tools/extract_assets.py
+build/obj/%.o: src/%.c $(HEADERS) Makefile
+	mkdir -p build/obj
+	$(LCC) -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o $@ $<
+$(ROM): $(OBJECTS)
+	$(LCC) -msm83:gb -Wm-yC -Wm-yt0x1b -Wm-yo256 -Wm-ya1 -Wm-ynPSGBC-WORLD -Wl-m -Wl-j -o $@ $(OBJECTS)
+	$(PYTHON) tools/verify_layout.py $@
+audit:
+	$(PYTHON) tools/audit_source.py
+verify: all
+	$(PYTHON) tools/verify_rom.py $(ROM) --output build/verification/expansion-smoke
+verify-logic:
+	$(PYTHON) tools/verify_rpg.py
+	$(PYTHON) tools/verify_events.py
+	$(PYTHON) tools/verify_services.py
+	$(PYTHON) tools/verify_story_events.py
+	$(PYTHON) tools/verify_battle.py
+	$(PYTHON) tools/verify_save.py
+	$(PYTHON) tools/verify_world_rules.py
+verify-world:
+	$(PYTHON) tools/verify_world_logic.py
+	$(PYTHON) tools/verify_world_emulator.py
+clean:
+	$(PYTHON) -c "from pathlib import Path; import shutil; shutil.rmtree('build/obj',ignore_errors=True); [p.unlink() for p in Path('build').glob('phantasy-star-gbc-world.*') if p.suffix not in ('.sav','.ram')]"

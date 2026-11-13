@@ -1,0 +1,82 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "attempts": [
+    {
+      "start_frame": 300,
+      "controller_steps": 112,
+      "encounter_dialogues": [
+        "0xb71b",
+        "0xb604",
+        "0xbce1",
+        "0xb656",
+        "0xb648"
+      ],
+      "enemy": 1,
+      "count": 1,
+      "encounter_position": [
+        1400,
+        896
+      ],
+      "initial_party": [
+        1,
+        16,
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": 1,
+      "final_party": [
+        1,
+        13,
+        0,
+        2,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "checks": [
+    "Controller-only original Camineet exit and Palma grass movement trigger a natural source encounter",
+    "Level1 Alis wins using physical attacks without enemy, HP, inventory, money or RNG injection; actual EXP/chest money match source group rewards",
+    "Battle return preserves player location and restores399 world tile/attribute pairs",
+    "Power-cycle Continue restores post-battle HP, EXP, money, inventory, RNG, map, position and facing exactly"
+  ],
+  "injected_fixtures": [],
+  "campaign_complete": false,
+  "world_return_conversion_table_sha256": "1cb4084269c99fbfc7e65007b382019da6e6ab850f74c5b5e3a5834272832746",
+  "world_return_pairs": 399,
+  "passed": true
+}

@@ -1,0 +1,14 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "host_compositions": 62616,
+  "host_source_tilemap_bytes": 96178176,
+  "emulator_scenes": 264,
+  "emulator_patterns": 79200,
+  "emulator_pixels": 5068800,
+  "passed": true,
+  "fast_frames_min": 10,
+  "fast_frames_max": 17,
+  "motion_frames_min": null,
+  "motion_frames_max": null,
+  "report": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/dungeon-render-lean/report.json"
+}

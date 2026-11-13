@@ -1,0 +1,1752 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module travel_render
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl b_party_world_draw
+                                     11 	.globl _party_world_draw
+                                     12 	.globl b_party_world_reset
+                                     13 	.globl _party_world_reset
+                                     14 	.globl b_scene_actor_show_data
+                                     15 	.globl _scene_actor_show_data
+                                     16 	.globl b_scene_actor_hide
+                                     17 	.globl _scene_actor_hide
+                                     18 	.globl b_scene_palette_capture
+                                     19 	.globl _scene_palette_capture
+                                     20 	.globl b_scene_palette_commit
+                                     21 	.globl _scene_palette_commit
+                                     22 	.globl _bank_bkg_data
+                                     23 	.globl _bank_copy
+                                     24 	.globl b_world_motion_reset
+                                     25 	.globl _world_motion_reset
+                                     26 	.globl b_world_terrain_sync
+                                     27 	.globl _world_terrain_sync
+                                     28 	.globl b_world_draw
+                                     29 	.globl _world_draw
+                                     30 	.globl b_world_load_graphics
+                                     31 	.globl _world_load_graphics
+                                     32 	.globl b_world_select
+                                     33 	.globl _world_select
+                                     34 	.globl b_travel_fade_color
+                                     35 	.globl _travel_fade_color
+                                     36 	.globl b_travel_space_row
+                                     37 	.globl _travel_space_row
+                                     38 	.globl _set_bkg_tiles
+                                     39 	.globl _display_off
+                                     40 	.globl b_travel_fade_current
+                                     41 	.globl _travel_fade_current
+                                     42 	.globl b_scene_fade_begin
+                                     43 	.globl _scene_fade_begin
+                                     44 	.globl b_scene_fade_step
+                                     45 	.globl _scene_fade_step
+                                     46 	.globl b_travel_present
+                                     47 	.globl _travel_present
+                                     48 ;--------------------------------------------------------
+                                     49 ; special function registers
+                                     50 ;--------------------------------------------------------
+                                     51 	.area _HRAM
+                                     52 ;--------------------------------------------------------
+                                     53 ; ram data
+                                     54 ;--------------------------------------------------------
+                                     55 	.area _DATA
+    00000000                         56 _fade_target:
+    00000000                         57 	.ds 64
+                                     58 ;--------------------------------------------------------
+                                     59 ; ram data
+                                     60 ;--------------------------------------------------------
+                                     61 	.area _INITIALIZED
+    00000000                         62 _last_space_scroll:
+    00000000                         63 	.ds 1
+                                     64 ;--------------------------------------------------------
+                                     65 ; absolute external ram data
+                                     66 ;--------------------------------------------------------
+                                     67 	.area _DABS (ABS)
+                                     68 ;--------------------------------------------------------
+                                     69 ; global & static initialisations
+                                     70 ;--------------------------------------------------------
+                                     71 	.area _HOME
+                                     72 	.area _GSINIT
+                                     73 	.area _GSFINAL
+                                     74 	.area _GSINIT
+                                     75 ;--------------------------------------------------------
+                                     76 ; Home
+                                     77 ;--------------------------------------------------------
+                                     78 	.area _HOME
+                                     79 	.area _HOME
+                                     80 ;--------------------------------------------------------
+                                     81 ; code
+                                     82 ;--------------------------------------------------------
+                                     83 	.area _CODE_119
+                                     84 ;src/travel_render.c:18: static const uint8_t *planet_data(uint8_t planet) {
+                                     85 ;	---------------------------------
+                                     86 ; Function planet_data
+                                     87 ; ---------------------------------
+    00000000                         88 _planet_data:
+                                     89 ;src/travel_render.c:19: return planet==0u?travel_planet_0:planet==1u?travel_planet_1:travel_planet_2;
+    00000000 B7               [ 4]   90 	or	a, a
+    00000001 20 04            [12]   91 	jr	NZ, 00103$
+    00000003 01r00r00         [12]   92 	ld	bc, #_travel_planet_0+0
+    00000006 C9               [16]   93 	ret
+    00000007                         94 00103$:
+    00000007 3D               [ 4]   95 	dec	a
+    00000008 20 04            [12]   96 	jr	NZ, 00105$
+    0000000A 01r00r00         [12]   97 	ld	bc, #_travel_planet_1+0
+    0000000D C9               [16]   98 	ret
+    0000000E                         99 00105$:
+    0000000E 01r00r00         [12]  100 	ld	bc, #_travel_planet_2+0
+                                    101 ;src/travel_render.c:20: }
+    00000011 C9               [16]  102 	ret
+    00000012                        103 _scene_ui_colors:
+    00000012 62 20                  104 	.dw #0x2062
+    00000014 46 4D                  105 	.dw #0x4d46
+    00000016 DE 22                  106 	.dw #0x22de
+    00000018 DE 6F                  107 	.dw #0x6fde
+                                    108 ;src/travel_render.c:21: static const uint8_t *ship_data(const TravelState *s) {
+                                    109 ;	---------------------------------
+                                    110 ; Function ship_data
+                                    111 ; ---------------------------------
+    0000001A                        112 _ship_data:
+                                    113 ;src/travel_render.c:22: return s->ship_mode==16u?travel_ship_0:travel_ship_1;
+    0000001A 21 15 00         [12]  114 	ld	hl, #0x0015
+    0000001D 19               [ 8]  115 	add	hl, de
+    0000001E 7E               [ 8]  116 	ld	a, (hl)
+    0000001F D6 10            [ 8]  117 	sub	a, #0x10
+    00000021 20 04            [12]  118 	jr	NZ, 00103$
+    00000023 01r00r00         [12]  119 	ld	bc, #_travel_ship_0+0
+    00000026 C9               [16]  120 	ret
+    00000027                        121 00103$:
+    00000027 01r00r00         [12]  122 	ld	bc, #_travel_ship_1+0
+                                    123 ;src/travel_render.c:23: }
+    0000002A C9               [16]  124 	ret
+                                    125 ;src/travel_render.c:24: static uint8_t sms_color(uint16_t color) {
+                                    126 ;	---------------------------------
+                                    127 ; Function sms_color
+                                    128 ; ---------------------------------
+    0000002B                        129 _sms_color:
+    0000002B 3B               [ 8]  130 	dec	sp
+    0000002C 3B               [ 8]  131 	dec	sp
+    0000002D 4B               [ 4]  132 	ld	c, e
+    0000002E 42               [ 4]  133 	ld	b, d
+                                    134 ;src/travel_render.c:25: uint8_t r=((color&31u)*3u+15u)/31u,g=(((color>>5)&31u)*3u+15u)/31u;
+    0000002F 79               [ 4]  135 	ld	a, c
+    00000030 E6 1F            [ 8]  136 	and	a, #0x1f
+    00000032 5F               [ 4]  137 	ld	e, a
+    00000033 87               [ 4]  138 	add	a, a
+    00000034 83               [ 4]  139 	add	a, e
+    00000035 C6 0F            [ 8]  140 	add	a, #0x0f
+    00000037 C5               [16]  141 	push	bc
+    00000038 1E 1F            [ 8]  142 	ld	e, #0x1f
+    0000003A CDr00r00         [24]  143 	call	__divuchar
+    0000003D 79               [ 4]  144 	ld	a, c
+    0000003E C1               [12]  145 	pop	bc
+    0000003F F8 00            [12]  146 	ldhl	sp,	#0
+    00000041 77               [ 8]  147 	ld	(hl), a
+    00000042 59               [ 4]  148 	ld	e, c
+    00000043 50               [ 4]  149 	ld	d, b
+    00000044 CB 3A            [ 8]  150 	srl	d
+    00000046 CB 1B            [ 8]  151 	rr	e
+    00000048 CB 3A            [ 8]  152 	srl	d
+    0000004A CB 1B            [ 8]  153 	rr	e
+    0000004C CB 3A            [ 8]  154 	srl	d
+    0000004E CB 1B            [ 8]  155 	rr	e
+    00000050 CB 3A            [ 8]  156 	srl	d
+    00000052 CB 1B            [ 8]  157 	rr	e
+    00000054 CB 3A            [ 8]  158 	srl	d
+    00000056 CB 1B            [ 8]  159 	rr	e
+    00000058 7B               [ 4]  160 	ld	a, e
+    00000059 E6 1F            [ 8]  161 	and	a, #0x1f
+    0000005B 5F               [ 4]  162 	ld	e, a
+    0000005C 87               [ 4]  163 	add	a, a
+    0000005D 83               [ 4]  164 	add	a, e
+    0000005E C6 0F            [ 8]  165 	add	a, #0x0f
+    00000060 C5               [16]  166 	push	bc
+    00000061 1E 1F            [ 8]  167 	ld	e, #0x1f
+    00000063 CDr00r00         [24]  168 	call	__divuchar
+    00000066 79               [ 4]  169 	ld	a, c
+    00000067 C1               [12]  170 	pop	bc
+    00000068 F8 01            [12]  171 	ldhl	sp,	#1
+    0000006A 77               [ 8]  172 	ld	(hl), a
+                                    173 ;src/travel_render.c:26: uint8_t b=(((color>>10)&31u)*3u+15u)/31u;
+    0000006B 78               [ 4]  174 	ld	a, b
+    0000006C 0F               [ 4]  175 	rrca
+    0000006D 0F               [ 4]  176 	rrca
+    0000006E E6 1F            [ 8]  177 	and	a, #0x1f
+    00000070 4F               [ 4]  178 	ld	c, a
+    00000071 87               [ 4]  179 	add	a, a
+    00000072 81               [ 4]  180 	add	a, c
+    00000073 C6 0F            [ 8]  181 	add	a, #0x0f
+    00000075 1E 1F            [ 8]  182 	ld	e, #0x1f
+    00000077 CDr00r00         [24]  183 	call	__divuchar
+                                    184 ;src/travel_render.c:27: return r|(g<<2)|(b<<4);
+    0000007A F8 01            [12]  185 	ldhl	sp,	#1
+    0000007C 3A               [ 8]  186 	ld	a, (hl-)
+    0000007D 87               [ 4]  187 	add	a, a
+    0000007E 87               [ 4]  188 	add	a, a
+    0000007F 5F               [ 4]  189 	ld	e, a
+    00000080 B6               [ 8]  190 	or	a, (hl)
+    00000081 6F               [ 4]  191 	ld	l, a
+    00000082 79               [ 4]  192 	ld	a, c
+    00000083 CB 37            [ 8]  193 	swap	a
+    00000085 E6 F0            [ 8]  194 	and	a, #0xf0
+    00000087 B5               [ 4]  195 	or	a, l
+                                    196 ;src/travel_render.c:28: }
+    00000088 33               [ 8]  197 	inc	sp
+    00000089 33               [ 8]  198 	inc	sp
+    0000008A C9               [16]  199 	ret
+                                    200 ;src/travel_render.c:29: static uint16_t native_color(uint8_t sms) {
+                                    201 ;	---------------------------------
+                                    202 ; Function native_color
+                                    203 ; ---------------------------------
+    0000008B                        204 _native_color:
+    0000008B E8 FB            [16]  205 	add	sp, #-5
+                                    206 ;src/travel_render.c:30: uint8_t r=sms&3u,g=(sms>>2)&3u,b=sms>>4;
+    0000008D 5F               [ 4]  207 	ld	e, a
+    0000008E E6 03            [ 8]  208 	and	a, #0x03
+    00000090 4F               [ 4]  209 	ld	c, a
+    00000091 7B               [ 4]  210 	ld	a, e
+    00000092 0F               [ 4]  211 	rrca
+    00000093 0F               [ 4]  212 	rrca
+    00000094 E6 03            [ 8]  213 	and	a, #0x3
+    00000096 F8 04            [12]  214 	ldhl	sp,	#4
+    00000098 77               [ 8]  215 	ld	(hl), a
+    00000099 7B               [ 4]  216 	ld	a, e
+    0000009A CB 37            [ 8]  217 	swap	a
+    0000009C E6 0F            [ 8]  218 	and	a, #0x0f
+    0000009E F8 00            [12]  219 	ldhl	sp,	#0
+    000000A0 77               [ 8]  220 	ld	(hl), a
+                                    221 ;src/travel_render.c:31: return (uint16_t)(r*10u+(r>=2u))|((uint16_t)(g*10u+(g>=2u))<<5)|((uint16_t)(b*10u+(b>=2u))<<10);
+    000000A1 69               [ 4]  222 	ld	l, c
+    000000A2 26 00            [ 8]  223 	ld	h, #0x00
+    000000A4 5D               [ 4]  224 	ld	e, l
+    000000A5 54               [ 4]  225 	ld	d, h
+    000000A6 29               [ 8]  226 	add	hl, hl
+    000000A7 29               [ 8]  227 	add	hl, hl
+    000000A8 19               [ 8]  228 	add	hl, de
+    000000A9 29               [ 8]  229 	add	hl, hl
+    000000AA 79               [ 4]  230 	ld	a, c
+    000000AB D6 02            [ 8]  231 	sub	a, #0x02
+    000000AD 3E 00            [ 8]  232 	ld	a, #0x00
+    000000AF 17               [ 4]  233 	rla
+    000000B0 EE 01            [ 8]  234 	xor	a, #0x01
+    000000B2 4F               [ 4]  235 	ld	c, a
+    000000B3 06 00            [ 8]  236 	ld	b, #0x00
+    000000B5 09               [ 8]  237 	add	hl, bc
+    000000B6 4D               [ 4]  238 	ld	c, l
+    000000B7 7C               [ 4]  239 	ld	a, h
+    000000B8 F8 01            [12]  240 	ldhl	sp,	#1
+    000000BA 71               [ 8]  241 	ld	(hl), c
+    000000BB 23               [ 8]  242 	inc	hl
+    000000BC 22               [ 8]  243 	ld	(hl+), a
+    000000BD 23               [ 8]  244 	inc	hl
+    000000BE 4E               [ 8]  245 	ld	c, (hl)
+    000000BF 06 00            [ 8]  246 	ld	b, #0x00
+    000000C1 69               [ 4]  247 	ld	l, c
+    000000C2 60               [ 4]  248 	ld	h, b
+    000000C3 29               [ 8]  249 	add	hl, hl
+    000000C4 29               [ 8]  250 	add	hl, hl
+    000000C5 09               [ 8]  251 	add	hl, bc
+    000000C6 29               [ 8]  252 	add	hl, hl
+    000000C7 4D               [ 4]  253 	ld	c, l
+    000000C8 44               [ 4]  254 	ld	b, h
+    000000C9 F8 04            [12]  255 	ldhl	sp,	#4
+    000000CB 7E               [ 8]  256 	ld	a, (hl)
+    000000CC D6 02            [ 8]  257 	sub	a, #0x02
+    000000CE 3E 00            [ 8]  258 	ld	a, #0x00
+    000000D0 17               [ 4]  259 	rla
+    000000D1 EE 01            [ 8]  260 	xor	a, #0x01
+    000000D3 26 00            [ 8]  261 	ld	h, #0x00
+    000000D5 6F               [ 4]  262 	ld	l, a
+    000000D6 09               [ 8]  263 	add	hl, bc
+    000000D7 29               [ 8]  264 	add	hl, hl
+    000000D8 29               [ 8]  265 	add	hl, hl
+    000000D9 29               [ 8]  266 	add	hl, hl
+    000000DA 29               [ 8]  267 	add	hl, hl
+    000000DB 29               [ 8]  268 	add	hl, hl
+    000000DC 4D               [ 4]  269 	ld	c, l
+    000000DD 44               [ 4]  270 	ld	b, h
+    000000DE F8 01            [12]  271 	ldhl	sp,	#1
+    000000E0 2A               [ 8]  272 	ld	a, (hl+)
+    000000E1 23               [ 8]  273 	inc	hl
+    000000E2 B1               [ 4]  274 	or	a, c
+    000000E3 22               [ 8]  275 	ld	(hl+), a
+    000000E4 70               [ 8]  276 	ld	(hl), b
+    000000E5 F8 00            [12]  277 	ldhl	sp,	#0
+    000000E7 4E               [ 8]  278 	ld	c, (hl)
+    000000E8 06 00            [ 8]  279 	ld	b, #0x00
+    000000EA 69               [ 4]  280 	ld	l, c
+    000000EB 60               [ 4]  281 	ld	h, b
+    000000EC 29               [ 8]  282 	add	hl, hl
+    000000ED 29               [ 8]  283 	add	hl, hl
+    000000EE 09               [ 8]  284 	add	hl, bc
+    000000EF 29               [ 8]  285 	add	hl, hl
+    000000F0 4D               [ 4]  286 	ld	c, l
+    000000F1 44               [ 4]  287 	ld	b, h
+    000000F2 F8 00            [12]  288 	ldhl	sp,	#0
+    000000F4 7E               [ 8]  289 	ld	a, (hl)
+    000000F5 D6 02            [ 8]  290 	sub	a, #0x02
+    000000F7 3E 00            [ 8]  291 	ld	a, #0x00
+    000000F9 17               [ 4]  292 	rla
+    000000FA EE 01            [ 8]  293 	xor	a, #0x01
+    000000FC 26 00            [ 8]  294 	ld	h, #0x00
+    000000FE 6F               [ 4]  295 	ld	l, a
+    000000FF 09               [ 8]  296 	add	hl, bc
+    00000100 7D               [ 4]  297 	ld	a, l
+    00000101 87               [ 4]  298 	add	a, a
+    00000102 87               [ 4]  299 	add	a, a
+    00000103 57               [ 4]  300 	ld	d, a
+    00000104 F8 03            [12]  301 	ldhl	sp,	#3
+    00000106 2A               [ 8]  302 	ld	a, (hl+)
+    00000107 4F               [ 4]  303 	ld	c, a
+    00000108 7E               [ 8]  304 	ld	a, (hl)
+    00000109 B2               [ 4]  305 	or	a, d
+    0000010A 47               [ 4]  306 	ld	b, a
+                                    307 ;src/travel_render.c:32: }
+    0000010B E8 05            [16]  308 	add	sp, #5
+    0000010D C9               [16]  309 	ret
+                                    310 ;src/travel_render.c:33: static uint16_t faded(uint16_t color,uint8_t step,uint8_t fade_in) {
+                                    311 ;	---------------------------------
+                                    312 ; Function faded
+                                    313 ; ---------------------------------
+    0000010E                        314 _faded:
+    0000010E 47               [ 4]  315 	ld	b, a
+                                    316 ;src/travel_render.c:34: return native_color(travel_fade_color(sms_color(color),step,fade_in));
+    0000010F C5               [16]  317 	push	bc
+    00000110 CDr2Br00         [24]  318 	call	_sms_color
+    00000113 C1               [12]  319 	pop	bc
+    00000114 F8 02            [12]  320 	ldhl	sp,	#2
+    00000116 66               [ 8]  321 	ld	h, (hl)
+    00000117 68               [ 4]  322 	ld	l, b
+    00000118 E5               [16]  323 	push	hl
+    00000119 F5               [16]  324 	push	af
+    0000011A 33               [ 8]  325 	inc	sp
+    0000011B 1Er00            [ 8]  326 	ld	e, #b_travel_fade_color
+    0000011D 21r00r00         [12]  327 	ld	hl, #_travel_fade_color
+    00000120 CDr00r00         [24]  328 	call	___sdcc_bcall_ehl
+    00000123 E8 03            [16]  329 	add	sp, #3
+    00000125 CDr8Br00         [24]  330 	call	_native_color
+                                    331 ;src/travel_render.c:35: }
+    00000128 E1               [12]  332 	pop	hl
+    00000129 33               [ 8]  333 	inc	sp
+    0000012A E9               [ 4]  334 	jp	(hl)
+                                    335 ;src/travel_render.c:36: void travel_fade_current(void) __banked {
+                                    336 ;	---------------------------------
+                                    337 ; Function travel_fade_current
+                                    338 ; ---------------------------------
+                         00000077   339 	b_travel_fade_current	= 119
+    0000012B                        340 _travel_fade_current::
+    0000012B 3B               [ 8]  341 	dec	sp
+                                    342 ;src/travel_render.c:38: scene_palette_capture();
+    0000012C 1Er00            [ 8]  343 	ld	e, #b_scene_palette_capture
+    0000012E 21r00r00         [12]  344 	ld	hl, #_scene_palette_capture
+    00000131 CDr00r00         [24]  345 	call	___sdcc_bcall_ehl
+                                    346 ;src/travel_render.c:39: for(i=0;i<32u;++i)scene_palette_background[i]=faded(scene_palette_background[i],1u,0u);
+    00000134 F8 00            [12]  347 	ldhl	sp,	#0
+    00000136 36 00            [12]  348 	ld	(hl), #0x00
+    00000138                        349 00103$:
+    00000138 F8 00            [12]  350 	ldhl	sp,	#0
+    0000013A 4E               [ 8]  351 	ld	c, (hl)
+    0000013B 06 00            [ 8]  352 	ld	b, #0x00
+    0000013D CB 21            [ 8]  353 	sla	c
+    0000013F CB 10            [ 8]  354 	rl	b
+    00000141 21r00r00         [12]  355 	ld	hl, #_scene_palette_background
+    00000144 09               [ 8]  356 	add	hl, bc
+    00000145 4D               [ 4]  357 	ld	c,l
+    00000146 44               [ 4]  358 	ld	b,h
+    00000147 2A               [ 8]  359 	ld	a,	(hl+)
+    00000148 66               [ 8]  360 	ld	h, (hl)
+    00000149 6F               [ 4]  361 	ld	l, a
+    0000014A C5               [16]  362 	push	bc
+    0000014B AF               [ 4]  363 	xor	a, a
+    0000014C F5               [16]  364 	push	af
+    0000014D 33               [ 8]  365 	inc	sp
+    0000014E 3E 01            [ 8]  366 	ld	a, #0x01
+    00000150 5D               [ 4]  367 	ld	e, l
+    00000151 54               [ 4]  368 	ld	d, h
+    00000152 CDr0Er01         [24]  369 	call	_faded
+    00000155 59               [ 4]  370 	ld	e, c
+    00000156 50               [ 4]  371 	ld	d, b
+    00000157 C1               [12]  372 	pop	bc
+    00000158 7B               [ 4]  373 	ld	a, e
+    00000159 02               [ 8]  374 	ld	(bc), a
+    0000015A 03               [ 8]  375 	inc	bc
+    0000015B 7A               [ 4]  376 	ld	a, d
+    0000015C 02               [ 8]  377 	ld	(bc), a
+    0000015D F8 00            [12]  378 	ldhl	sp,	#0
+    0000015F 34               [12]  379 	inc	(hl)
+    00000160 7E               [ 8]  380 	ld	a, (hl)
+    00000161 D6 20            [ 8]  381 	sub	a, #0x20
+    00000163 38 D3            [12]  382 	jr	C, 00103$
+                                    383 ;src/travel_render.c:40: for(i=0;i<32u;++i)scene_shared_colors[i]=faded(scene_shared_colors[i],1u,0u);
+    00000165 36 00            [12]  384 	ld	(hl), #0x00
+    00000167                        385 00105$:
+    00000167 F8 00            [12]  386 	ldhl	sp,	#0
+    00000169 4E               [ 8]  387 	ld	c, (hl)
+    0000016A 06 00            [ 8]  388 	ld	b, #0x00
+    0000016C CB 21            [ 8]  389 	sla	c
+    0000016E CB 10            [ 8]  390 	rl	b
+    00000170 21r00r00         [12]  391 	ld	hl, #_scene_shared_colors
+    00000173 09               [ 8]  392 	add	hl, bc
+    00000174 4D               [ 4]  393 	ld	c,l
+    00000175 44               [ 4]  394 	ld	b,h
+    00000176 2A               [ 8]  395 	ld	a,	(hl+)
+    00000177 66               [ 8]  396 	ld	h, (hl)
+    00000178 6F               [ 4]  397 	ld	l, a
+    00000179 C5               [16]  398 	push	bc
+    0000017A AF               [ 4]  399 	xor	a, a
+    0000017B F5               [16]  400 	push	af
+    0000017C 33               [ 8]  401 	inc	sp
+    0000017D 3E 01            [ 8]  402 	ld	a, #0x01
+    0000017F 5D               [ 4]  403 	ld	e, l
+    00000180 54               [ 4]  404 	ld	d, h
+    00000181 CDr0Er01         [24]  405 	call	_faded
+    00000184 59               [ 4]  406 	ld	e, c
+    00000185 50               [ 4]  407 	ld	d, b
+    00000186 C1               [12]  408 	pop	bc
+    00000187 7B               [ 4]  409 	ld	a, e
+    00000188 02               [ 8]  410 	ld	(bc), a
+    00000189 03               [ 8]  411 	inc	bc
+    0000018A 7A               [ 4]  412 	ld	a, d
+    0000018B 02               [ 8]  413 	ld	(bc), a
+    0000018C F8 00            [12]  414 	ldhl	sp,	#0
+    0000018E 34               [12]  415 	inc	(hl)
+    0000018F 7E               [ 8]  416 	ld	a, (hl)
+    00000190 D6 20            [ 8]  417 	sub	a, #0x20
+    00000192 38 D3            [12]  418 	jr	C, 00105$
+                                    419 ;src/travel_render.c:41: scene_palette_commit();
+    00000194 1Er00            [ 8]  420 	ld	e, #b_scene_palette_commit
+    00000196 21r00r00         [12]  421 	ld	hl, #_scene_palette_commit
+    00000199 CDr00r00         [24]  422 	call	___sdcc_bcall_ehl
+                                    423 ;src/travel_render.c:42: }
+    0000019C 33               [ 8]  424 	inc	sp
+    0000019D C9               [16]  425 	ret
+                                    426 ;src/travel_render.c:43: void scene_fade_begin(uint8_t fade_in) __banked {
+                                    427 ;	---------------------------------
+                                    428 ; Function scene_fade_begin
+                                    429 ; ---------------------------------
+                         00000077   430 	b_scene_fade_begin	= 119
+    0000019E                        431 _scene_fade_begin::
+    0000019E 3B               [ 8]  432 	dec	sp
+    0000019F 3B               [ 8]  433 	dec	sp
+                                    434 ;src/travel_render.c:45: scene_palette_capture();
+    000001A0 1Er00            [ 8]  435 	ld	e, #b_scene_palette_capture
+    000001A2 21r00r00         [12]  436 	ld	hl, #_scene_palette_capture
+    000001A5 CDr00r00         [24]  437 	call	___sdcc_bcall_ehl
+                                    438 ;src/travel_render.c:46: if(fade_in)for(i=0;i<4u;++i)scene_palette_background[28u+i]=scene_ui_colors[i];
+    000001A8 F8 08            [12]  439 	ldhl	sp,	#8
+    000001AA 7E               [ 8]  440 	ld	a, (hl)
+    000001AB B7               [ 4]  441 	or	a, a
+    000001AC 28 2C            [12]  442 	jr	Z, 00118$
+    000001AE F8 01            [12]  443 	ldhl	sp,	#1
+    000001B0 36 00            [12]  444 	ld	(hl), #0x00
+    000001B2                        445 00108$:
+    000001B2 F8 01            [12]  446 	ldhl	sp,	#1
+    000001B4 7E               [ 8]  447 	ld	a, (hl)
+    000001B5 C6 1C            [ 8]  448 	add	a, #0x1c
+    000001B7 06 00            [ 8]  449 	ld	b, #0x00
+    000001B9 87               [ 4]  450 	add	a, a
+    000001BA CB 10            [ 8]  451 	rl	b
+    000001BC C6r00            [ 8]  452 	add	a, #<(_scene_palette_background)
+    000001BE 4F               [ 4]  453 	ld	c, a
+    000001BF 78               [ 4]  454 	ld	a, b
+    000001C0 CEs00            [ 8]  455 	adc	a, #>(_scene_palette_background)
+    000001C2 47               [ 4]  456 	ld	b, a
+    000001C3 5E               [ 8]  457 	ld	e, (hl)
+    000001C4 AF               [ 4]  458 	xor	a, a
+    000001C5 6B               [ 4]  459 	ld	l, e
+    000001C6 67               [ 4]  460 	ld	h, a
+    000001C7 29               [ 8]  461 	add	hl, hl
+    000001C8 11r12r00         [12]  462 	ld	de, #_scene_ui_colors
+    000001CB 19               [ 8]  463 	add	hl, de
+    000001CC 2A               [ 8]  464 	ld	a,	(hl+)
+    000001CD 66               [ 8]  465 	ld	h, (hl)
+    000001CE 02               [ 8]  466 	ld	(bc), a
+    000001CF 03               [ 8]  467 	inc	bc
+    000001D0 7C               [ 4]  468 	ld	a, h
+    000001D1 02               [ 8]  469 	ld	(bc), a
+    000001D2 F8 01            [12]  470 	ldhl	sp,	#1
+    000001D4 34               [12]  471 	inc	(hl)
+    000001D5 7E               [ 8]  472 	ld	a, (hl)
+    000001D6 D6 04            [ 8]  473 	sub	a, #0x04
+    000001D8 38 D8            [12]  474 	jr	C, 00108$
+                                    475 ;src/travel_render.c:47: for(i=0;i<32u;++i)fade_target[i]=sms_color(scene_palette_background[i]);
+    000001DA                        476 00118$:
+    000001DA F8 01            [12]  477 	ldhl	sp,	#1
+    000001DC 36 00            [12]  478 	ld	(hl), #0x00
+    000001DE                        479 00110$:
+    000001DE 11r00r00         [12]  480 	ld	de, #_fade_target
+    000001E1 F8 01            [12]  481 	ldhl	sp,	#1
+    000001E3 6E               [ 8]  482 	ld	l, (hl)
+    000001E4 26 00            [ 8]  483 	ld	h, #0x00
+    000001E6 19               [ 8]  484 	add	hl, de
+    000001E7 4D               [ 4]  485 	ld	c, l
+    000001E8 44               [ 4]  486 	ld	b, h
+    000001E9 F8 01            [12]  487 	ldhl	sp,	#1
+    000001EB 5E               [ 8]  488 	ld	e, (hl)
+    000001EC AF               [ 4]  489 	xor	a, a
+    000001ED 6B               [ 4]  490 	ld	l, e
+    000001EE 67               [ 4]  491 	ld	h, a
+    000001EF 29               [ 8]  492 	add	hl, hl
+    000001F0 11r00r00         [12]  493 	ld	de, #_scene_palette_background
+    000001F3 19               [ 8]  494 	add	hl, de
+    000001F4 2A               [ 8]  495 	ld	a,	(hl+)
+    000001F5 66               [ 8]  496 	ld	h, (hl)
+    000001F6 6F               [ 4]  497 	ld	l, a
+    000001F7 C5               [16]  498 	push	bc
+    000001F8 5D               [ 4]  499 	ld	e, l
+    000001F9 54               [ 4]  500 	ld	d, h
+    000001FA CDr2Br00         [24]  501 	call	_sms_color
+    000001FD C1               [12]  502 	pop	bc
+    000001FE 02               [ 8]  503 	ld	(bc), a
+    000001FF F8 01            [12]  504 	ldhl	sp,	#1
+    00000201 34               [12]  505 	inc	(hl)
+    00000202 7E               [ 8]  506 	ld	a, (hl)
+    00000203 D6 20            [ 8]  507 	sub	a, #0x20
+    00000205 38 D7            [12]  508 	jr	C, 00110$
+                                    509 ;src/travel_render.c:48: for(i=0;i<32u;++i)fade_target[i+32u]=sms_color(scene_shared_colors[i]);
+    00000207 0E 00            [ 8]  510 	ld	c, #0x00
+    00000209                        511 00112$:
+    00000209 79               [ 4]  512 	ld	a, c
+    0000020A C6 20            [ 8]  513 	add	a, #0x20
+    0000020C 5F               [ 4]  514 	ld	e, a
+    0000020D 16 00            [ 8]  515 	ld	d, #0x00
+    0000020F 21r00r00         [12]  516 	ld	hl, #_fade_target
+    00000212 19               [ 8]  517 	add	hl, de
+    00000213 33               [ 8]  518 	inc	sp
+    00000214 33               [ 8]  519 	inc	sp
+    00000215 E5               [16]  520 	push	hl
+    00000216 69               [ 4]  521 	ld	l, c
+    00000217 AF               [ 4]  522 	xor	a, a
+    00000218 67               [ 4]  523 	ld	h, a
+    00000219 29               [ 8]  524 	add	hl, hl
+    0000021A 11r00r00         [12]  525 	ld	de, #_scene_shared_colors
+    0000021D 19               [ 8]  526 	add	hl, de
+    0000021E 2A               [ 8]  527 	ld	a,	(hl+)
+    0000021F 66               [ 8]  528 	ld	h, (hl)
+    00000220 6F               [ 4]  529 	ld	l, a
+    00000221 C5               [16]  530 	push	bc
+    00000222 5D               [ 4]  531 	ld	e, l
+    00000223 54               [ 4]  532 	ld	d, h
+    00000224 CDr2Br00         [24]  533 	call	_sms_color
+    00000227 C1               [12]  534 	pop	bc
+    00000228 E1               [12]  535 	pop	hl
+    00000229 E5               [16]  536 	push	hl
+    0000022A 77               [ 8]  537 	ld	(hl), a
+    0000022B 0C               [ 4]  538 	inc	c
+    0000022C 79               [ 4]  539 	ld	a, c
+    0000022D D6 20            [ 8]  540 	sub	a, #0x20
+    0000022F 38 D8            [12]  541 	jr	C, 00112$
+                                    542 ;src/travel_render.c:49: if(fade_in)scene_fade_step(0u,1u);
+    00000231 F8 08            [12]  543 	ldhl	sp,	#8
+    00000233 7E               [ 8]  544 	ld	a, (hl)
+    00000234 B7               [ 4]  545 	or	a, a
+    00000235 28 0C            [12]  546 	jr	Z, 00114$
+    00000237 AF               [ 4]  547 	xor	a, a
+    00000238 3C               [ 4]  548 	inc	a
+    00000239 F5               [16]  549 	push	af
+    0000023A 1Er00            [ 8]  550 	ld	e, #b_scene_fade_step
+    0000023C 21r46r02         [12]  551 	ld	hl, #_scene_fade_step
+    0000023F CDr00r00         [24]  552 	call	___sdcc_bcall_ehl
+    00000242 E1               [12]  553 	pop	hl
+    00000243                        554 00114$:
+                                    555 ;src/travel_render.c:50: }
+    00000243 33               [ 8]  556 	inc	sp
+    00000244 33               [ 8]  557 	inc	sp
+    00000245 C9               [16]  558 	ret
+                                    559 ;src/travel_render.c:51: void scene_fade_step(uint8_t step,uint8_t fade_in) __banked {
+                                    560 ;	---------------------------------
+                                    561 ; Function scene_fade_step
+                                    562 ; ---------------------------------
+                         00000077   563 	b_scene_fade_step	= 119
+    00000246                        564 _scene_fade_step::
+    00000246 3B               [ 8]  565 	dec	sp
+                                    566 ;src/travel_render.c:53: for(i=0;i<32u;++i)scene_palette_background[i]=native_color(travel_fade_color(fade_target[i],step,fade_in));
+    00000247 0E 00            [ 8]  567 	ld	c, #0x00
+    00000249                        568 00107$:
+    00000249 69               [ 4]  569 	ld	l, c
+    0000024A 26 00            [ 8]  570 	ld	h, #0x00
+    0000024C 29               [ 8]  571 	add	hl, hl
+    0000024D 7D               [ 4]  572 	ld	a, l
+    0000024E C6r00            [ 8]  573 	add	a, #<(_scene_palette_background)
+    00000250 5F               [ 4]  574 	ld	e, a
+    00000251 7C               [ 4]  575 	ld	a, h
+    00000252 CEs00            [ 8]  576 	adc	a, #>(_scene_palette_background)
+    00000254 57               [ 4]  577 	ld	d, a
+    00000255 21r00r00         [12]  578 	ld	hl, #_fade_target
+    00000258 06 00            [ 8]  579 	ld	b, #0x00
+    0000025A 09               [ 8]  580 	add	hl, bc
+    0000025B 7E               [ 8]  581 	ld	a, (hl)
+    0000025C C5               [16]  582 	push	bc
+    0000025D D5               [16]  583 	push	de
+    0000025E F8 0C            [12]  584 	ldhl	sp,	#12
+    00000260 66               [ 8]  585 	ld	h, (hl)
+    00000261 E5               [16]  586 	push	hl
+    00000262 33               [ 8]  587 	inc	sp
+    00000263 F8 0C            [12]  588 	ldhl	sp,	#12
+    00000265 66               [ 8]  589 	ld	h, (hl)
+    00000266 E5               [16]  590 	push	hl
+    00000267 33               [ 8]  591 	inc	sp
+    00000268 F5               [16]  592 	push	af
+    00000269 33               [ 8]  593 	inc	sp
+    0000026A 1Er00            [ 8]  594 	ld	e, #b_travel_fade_color
+    0000026C 21r00r00         [12]  595 	ld	hl, #_travel_fade_color
+    0000026F CDr00r00         [24]  596 	call	___sdcc_bcall_ehl
+    00000272 E8 03            [16]  597 	add	sp, #3
+    00000274 CDr8Br00         [24]  598 	call	_native_color
+    00000277 69               [ 4]  599 	ld	l, c
+    00000278 60               [ 4]  600 	ld	h, b
+    00000279 D1               [12]  601 	pop	de
+    0000027A C1               [12]  602 	pop	bc
+    0000027B 7D               [ 4]  603 	ld	a, l
+    0000027C 12               [ 8]  604 	ld	(de), a
+    0000027D 13               [ 8]  605 	inc	de
+    0000027E 7C               [ 4]  606 	ld	a, h
+    0000027F 12               [ 8]  607 	ld	(de), a
+    00000280 0C               [ 4]  608 	inc	c
+    00000281 79               [ 4]  609 	ld	a, c
+    00000282 D6 20            [ 8]  610 	sub	a, #0x20
+    00000284 38 C3            [12]  611 	jr	C, 00107$
+                                    612 ;src/travel_render.c:54: for(i=0;i<32u;++i)scene_shared_colors[i]=native_color(travel_fade_color(fade_target[i+32u],step,fade_in));
+    00000286 0E 00            [ 8]  613 	ld	c, #0x00
+    00000288                        614 00109$:
+    00000288 69               [ 4]  615 	ld	l, c
+    00000289 26 00            [ 8]  616 	ld	h, #0x00
+    0000028B 29               [ 8]  617 	add	hl, hl
+    0000028C 7D               [ 4]  618 	ld	a, l
+    0000028D C6r00            [ 8]  619 	add	a, #<(_scene_shared_colors)
+    0000028F 5F               [ 4]  620 	ld	e, a
+    00000290 7C               [ 4]  621 	ld	a, h
+    00000291 CEs00            [ 8]  622 	adc	a, #>(_scene_shared_colors)
+    00000293 57               [ 4]  623 	ld	d, a
+    00000294 79               [ 4]  624 	ld	a, c
+    00000295 C6 20            [ 8]  625 	add	a, #0x20
+    00000297 C6r00            [ 8]  626 	add	a, #<(_fade_target)
+    00000299 6F               [ 4]  627 	ld	l, a
+    0000029A 3E 00            [ 8]  628 	ld	a, #0x00
+    0000029C CEs00            [ 8]  629 	adc	a, #>(_fade_target)
+    0000029E 67               [ 4]  630 	ld	h, a
+    0000029F 7E               [ 8]  631 	ld	a, (hl)
+    000002A0 C5               [16]  632 	push	bc
+    000002A1 D5               [16]  633 	push	de
+    000002A2 F8 0C            [12]  634 	ldhl	sp,	#12
+    000002A4 66               [ 8]  635 	ld	h, (hl)
+    000002A5 E5               [16]  636 	push	hl
+    000002A6 33               [ 8]  637 	inc	sp
+    000002A7 F8 0C            [12]  638 	ldhl	sp,	#12
+    000002A9 66               [ 8]  639 	ld	h, (hl)
+    000002AA E5               [16]  640 	push	hl
+    000002AB 33               [ 8]  641 	inc	sp
+    000002AC F5               [16]  642 	push	af
+    000002AD 33               [ 8]  643 	inc	sp
+    000002AE 1Er00            [ 8]  644 	ld	e, #b_travel_fade_color
+    000002B0 21r00r00         [12]  645 	ld	hl, #_travel_fade_color
+    000002B3 CDr00r00         [24]  646 	call	___sdcc_bcall_ehl
+    000002B6 E8 03            [16]  647 	add	sp, #3
+    000002B8 CDr8Br00         [24]  648 	call	_native_color
+    000002BB 69               [ 4]  649 	ld	l, c
+    000002BC 60               [ 4]  650 	ld	h, b
+    000002BD D1               [12]  651 	pop	de
+    000002BE C1               [12]  652 	pop	bc
+    000002BF 7D               [ 4]  653 	ld	a, l
+    000002C0 12               [ 8]  654 	ld	(de), a
+    000002C1 13               [ 8]  655 	inc	de
+    000002C2 7C               [ 4]  656 	ld	a, h
+    000002C3 12               [ 8]  657 	ld	(de), a
+    000002C4 0C               [ 4]  658 	inc	c
+    000002C5 79               [ 4]  659 	ld	a, c
+    000002C6 D6 20            [ 8]  660 	sub	a, #0x20
+    000002C8 38 BE            [12]  661 	jr	C, 00109$
+                                    662 ;src/travel_render.c:57: if(fade_in&&step>=9u)for(i=0;i<4u;++i)scene_palette_background[28u+i]=scene_ui_colors[i];
+    000002CA F8 08            [12]  663 	ldhl	sp,	#8
+    000002CC 7E               [ 8]  664 	ld	a, (hl)
+    000002CD B7               [ 4]  665 	or	a, a
+    000002CE 28 32            [12]  666 	jr	Z, 00105$
+    000002D0 2B               [ 8]  667 	dec	hl
+    000002D1 7E               [ 8]  668 	ld	a, (hl)
+    000002D2 D6 09            [ 8]  669 	sub	a, #0x09
+    000002D4 38 2C            [12]  670 	jr	C, 00105$
+    000002D6 F8 00            [12]  671 	ldhl	sp,	#0
+    000002D8 36 00            [12]  672 	ld	(hl), #0x00
+    000002DA                        673 00111$:
+    000002DA F8 00            [12]  674 	ldhl	sp,	#0
+    000002DC 7E               [ 8]  675 	ld	a, (hl)
+    000002DD C6 1C            [ 8]  676 	add	a, #0x1c
+    000002DF 06 00            [ 8]  677 	ld	b, #0x00
+    000002E1 87               [ 4]  678 	add	a, a
+    000002E2 CB 10            [ 8]  679 	rl	b
+    000002E4 C6r00            [ 8]  680 	add	a, #<(_scene_palette_background)
+    000002E6 4F               [ 4]  681 	ld	c, a
+    000002E7 78               [ 4]  682 	ld	a, b
+    000002E8 CEs00            [ 8]  683 	adc	a, #>(_scene_palette_background)
+    000002EA 47               [ 4]  684 	ld	b, a
+    000002EB 5E               [ 8]  685 	ld	e, (hl)
+    000002EC AF               [ 4]  686 	xor	a, a
+    000002ED 6B               [ 4]  687 	ld	l, e
+    000002EE 67               [ 4]  688 	ld	h, a
+    000002EF 29               [ 8]  689 	add	hl, hl
+    000002F0 11r12r00         [12]  690 	ld	de, #_scene_ui_colors
+    000002F3 19               [ 8]  691 	add	hl, de
+    000002F4 2A               [ 8]  692 	ld	a,	(hl+)
+    000002F5 66               [ 8]  693 	ld	h, (hl)
+    000002F6 02               [ 8]  694 	ld	(bc), a
+    000002F7 03               [ 8]  695 	inc	bc
+    000002F8 7C               [ 4]  696 	ld	a, h
+    000002F9 02               [ 8]  697 	ld	(bc), a
+    000002FA F8 00            [12]  698 	ldhl	sp,	#0
+    000002FC 34               [12]  699 	inc	(hl)
+    000002FD 7E               [ 8]  700 	ld	a, (hl)
+    000002FE D6 04            [ 8]  701 	sub	a, #0x04
+    00000300 38 D8            [12]  702 	jr	C, 00111$
+    00000302                        703 00105$:
+                                    704 ;src/travel_render.c:58: scene_palette_commit();
+    00000302 1Er00            [ 8]  705 	ld	e, #b_scene_palette_commit
+    00000304 21r00r00         [12]  706 	ld	hl, #_scene_palette_commit
+    00000307 CDr00r00         [24]  707 	call	___sdcc_bcall_ehl
+                                    708 ;src/travel_render.c:59: }
+    0000030A 33               [ 8]  709 	inc	sp
+    0000030B C9               [16]  710 	ret
+                                    711 ;src/travel_render.c:60: static void palettes(const TravelState *s) {
+                                    712 ;	---------------------------------
+                                    713 ; Function palettes
+                                    714 ; ---------------------------------
+    0000030C                        715 _palettes:
+    0000030C E8 F1            [16]  716 	add	sp, #-15
+    0000030E F8 0C            [12]  717 	ldhl	sp,	#12
+    00000310 7B               [ 4]  718 	ld	a, e
+    00000311 22               [ 8]  719 	ld	(hl+), a
+                                    720 ;src/travel_render.c:62: if(s->space_visible){bank=TRAVEL_ART_BANK;data=planet_data(s->planet)+TRAVEL_GRAPHICS_BYTES;}
+    00000312 7A               [ 4]  721 	ld	a, d
+    00000313 32               [ 8]  722 	ld	(hl-), a
+    00000314 2A               [ 8]  723 	ld	a, (hl+)
+    00000315 5F               [ 4]  724 	ld	e, a
+    00000316 56               [ 8]  725 	ld	d, (hl)
+    00000317 21 1E 00         [12]  726 	ld	hl, #0x001e
+    0000031A 19               [ 8]  727 	add	hl, de
+    0000031B 4D               [ 4]  728 	ld	c, l
+    0000031C 44               [ 4]  729 	ld	b, h
+    0000031D 0A               [ 8]  730 	ld	a, (bc)
+    0000031E B7               [ 4]  731 	or	a, a
+    0000031F 28 1B            [12]  732 	jr	Z, 00102$
+    00000321 F8 0E            [12]  733 	ldhl	sp,	#14
+    00000323 3E 78            [ 8]  734 	ld	a, #0x78
+    00000325 32               [ 8]  735 	ld	(hl-), a
+    00000326 2B               [ 8]  736 	dec	hl
+    00000327 2A               [ 8]  737 	ld	a, (hl+)
+    00000328 5F               [ 4]  738 	ld	e, a
+    00000329 56               [ 8]  739 	ld	d, (hl)
+    0000032A 21 1C 00         [12]  740 	ld	hl, #0x001c
+    0000032D 19               [ 8]  741 	add	hl, de
+    0000032E 4D               [ 4]  742 	ld	c, l
+    0000032F 44               [ 4]  743 	ld	b, h
+    00000330 0A               [ 8]  744 	ld	a, (bc)
+    00000331 CDr00r00         [24]  745 	call	_planet_data
+    00000334 21 20 06         [12]  746 	ld	hl, #0x0620
+    00000337 09               [ 8]  747 	add	hl, bc
+    00000338 4D               [ 4]  748 	ld	c, l
+    00000339 44               [ 4]  749 	ld	b, h
+    0000033A 18 21            [12]  750 	jr	00103$
+    0000033C                        751 00102$:
+                                    752 ;src/travel_render.c:63: else {const WorldScene *scene=&world_scenes[world_group_id];bank=scene->asset_bank;data=(const uint8_t *)scene->palettes;}
+    0000033C 21r00r00         [12]  753 	ld	hl, #_world_group_id
+    0000033F 4E               [ 8]  754 	ld	c, (hl)
+    00000340 06 00            [ 8]  755 	ld	b, #0x00
+    00000342 69               [ 4]  756 	ld	l, c
+    00000343 60               [ 4]  757 	ld	h, b
+    00000344 29               [ 8]  758 	add	hl, hl
+    00000345 29               [ 8]  759 	add	hl, hl
+    00000346 29               [ 8]  760 	add	hl, hl
+    00000347 29               [ 8]  761 	add	hl, hl
+    00000348 09               [ 8]  762 	add	hl, bc
+    00000349 01r00r00         [12]  763 	ld	bc, #_world_scenes
+    0000034C 09               [ 8]  764 	add	hl, bc
+    0000034D 4D               [ 4]  765 	ld	c, l
+    0000034E 44               [ 4]  766 	ld	b, h
+    0000034F 59               [ 4]  767 	ld	e, c
+    00000350 50               [ 4]  768 	ld	d, b
+    00000351 13               [ 8]  769 	inc	de
+    00000352 1A               [ 8]  770 	ld	a, (de)
+    00000353 F8 0E            [12]  771 	ldhl	sp,	#14
+    00000355 77               [ 8]  772 	ld	(hl), a
+    00000356 21 0C 00         [12]  773 	ld	hl, #0x000c
+    00000359 09               [ 8]  774 	add	hl, bc
+    0000035A 2A               [ 8]  775 	ld	a, (hl+)
+    0000035B 4F               [ 4]  776 	ld	c, a
+    0000035C 46               [ 8]  777 	ld	b, (hl)
+    0000035D                        778 00103$:
+                                    779 ;src/travel_render.c:64: bank_copy(scene_palette_background,bank,data,56u);
+    0000035D 11 38 00         [12]  780 	ld	de, #0x0038
+    00000360 D5               [16]  781 	push	de
+    00000361 C5               [16]  782 	push	bc
+    00000362 F8 12            [12]  783 	ldhl	sp,	#18
+    00000364 7E               [ 8]  784 	ld	a, (hl)
+    00000365 11r00r00         [12]  785 	ld	de, #_scene_palette_background
+    00000368 CDr00r00         [24]  786 	call	_bank_copy
+                                    787 ;src/travel_render.c:65: for(i=0;i<28u;++i)scene_palette_background[i]=faded(scene_palette_background[i],s->fade_step,s->fade_in);
+    0000036B F8 0C            [12]  788 	ldhl	sp,#12
+    0000036D 2A               [ 8]  789 	ld	a, (hl+)
+    0000036E 5F               [ 4]  790 	ld	e, a
+    0000036F 56               [ 8]  791 	ld	d, (hl)
+    00000370 21 21 00         [12]  792 	ld	hl, #0x0021
+    00000373 19               [ 8]  793 	add	hl, de
+    00000374 4D               [ 4]  794 	ld	c, l
+    00000375 44               [ 4]  795 	ld	b, h
+    00000376 33               [ 8]  796 	inc	sp
+    00000377 33               [ 8]  797 	inc	sp
+    00000378 C5               [16]  798 	push	bc
+    00000379 F8 0C            [12]  799 	ldhl	sp,#12
+    0000037B 2A               [ 8]  800 	ld	a, (hl+)
+    0000037C 5F               [ 4]  801 	ld	e, a
+    0000037D 56               [ 8]  802 	ld	d, (hl)
+    0000037E 21 1F 00         [12]  803 	ld	hl, #0x001f
+    00000381 19               [ 8]  804 	add	hl, de
+    00000382 E5               [16]  805 	push	hl
+    00000383 7D               [ 4]  806 	ld	a, l
+    00000384 F8 04            [12]  807 	ldhl	sp,	#4
+    00000386 77               [ 8]  808 	ld	(hl), a
+    00000387 E1               [12]  809 	pop	hl
+    00000388 7C               [ 4]  810 	ld	a, h
+    00000389 F8 03            [12]  811 	ldhl	sp,	#3
+    0000038B 32               [ 8]  812 	ld	(hl-), a
+    0000038C 2A               [ 8]  813 	ld	a, (hl+)
+    0000038D 23               [ 8]  814 	inc	hl
+    0000038E 32               [ 8]  815 	ld	(hl-), a
+    0000038F 2A               [ 8]  816 	ld	a, (hl+)
+    00000390 23               [ 8]  817 	inc	hl
+    00000391 77               [ 8]  818 	ld	(hl), a
+    00000392 F8 0E            [12]  819 	ldhl	sp,	#14
+    00000394 36 00            [12]  820 	ld	(hl), #0x00
+    00000396                        821 00110$:
+    00000396 F8 0E            [12]  822 	ldhl	sp,	#14
+    00000398 5E               [ 8]  823 	ld	e, (hl)
+    00000399 16 00            [ 8]  824 	ld	d, #0x00
+    0000039B CB 23            [ 8]  825 	sla	e
+    0000039D CB 12            [ 8]  826 	rl	d
+    0000039F 21r00r00         [12]  827 	ld	hl, #_scene_palette_background
+    000003A2 19               [ 8]  828 	add	hl, de
+    000003A3 E5               [16]  829 	push	hl
+    000003A4 7D               [ 4]  830 	ld	a, l
+    000003A5 F8 08            [12]  831 	ldhl	sp,	#8
+    000003A7 77               [ 8]  832 	ld	(hl), a
+    000003A8 E1               [12]  833 	pop	hl
+    000003A9 7C               [ 4]  834 	ld	a, h
+    000003AA F8 07            [12]  835 	ldhl	sp,	#7
+    000003AC 22               [ 8]  836 	ld	(hl+), a
+    000003AD D1               [12]  837 	pop	de
+    000003AE D5               [16]  838 	push	de
+    000003AF 1A               [ 8]  839 	ld	a, (de)
+    000003B0 77               [ 8]  840 	ld	(hl), a
+    000003B1 F8 04            [12]  841 	ldhl	sp,#4
+    000003B3 2A               [ 8]  842 	ld	a, (hl+)
+    000003B4 5F               [ 4]  843 	ld	e, a
+    000003B5 56               [ 8]  844 	ld	d, (hl)
+    000003B6 1A               [ 8]  845 	ld	a, (de)
+    000003B7 F8 09            [12]  846 	ldhl	sp,	#9
+    000003B9 32               [ 8]  847 	ld	(hl-), a
+    000003BA 2B               [ 8]  848 	dec	hl
+    000003BB 2B               [ 8]  849 	dec	hl
+    000003BC 2A               [ 8]  850 	ld	a, (hl+)
+    000003BD 5F               [ 4]  851 	ld	e, a
+    000003BE 56               [ 8]  852 	ld	d, (hl)
+    000003BF 1A               [ 8]  853 	ld	a, (de)
+    000003C0 F8 0A            [12]  854 	ldhl	sp,	#10
+    000003C2 22               [ 8]  855 	ld	(hl+), a
+    000003C3 13               [ 8]  856 	inc	de
+    000003C4 1A               [ 8]  857 	ld	a, (de)
+    000003C5 77               [ 8]  858 	ld	(hl), a
+    000003C6 C5               [16]  859 	push	bc
+    000003C7 F8 0A            [12]  860 	ldhl	sp,	#10
+    000003C9 2A               [ 8]  861 	ld	a, (hl+)
+    000003CA F5               [16]  862 	push	af
+    000003CB 33               [ 8]  863 	inc	sp
+    000003CC 2A               [ 8]  864 	ld	a, (hl+)
+    000003CD 5E               [ 8]  865 	ld	e, (hl)
+    000003CE 23               [ 8]  866 	inc	hl
+    000003CF 56               [ 8]  867 	ld	d, (hl)
+    000003D0 CDr0Er01         [24]  868 	call	_faded
+    000003D3 F8 0C            [12]  869 	ldhl	sp,	#12
+    000003D5 79               [ 4]  870 	ld	a, c
+    000003D6 22               [ 8]  871 	ld	(hl+), a
+    000003D7 70               [ 8]  872 	ld	(hl), b
+    000003D8 C1               [12]  873 	pop	bc
+    000003D9 F8 06            [12]  874 	ldhl	sp,	#6
+    000003DB 2A               [ 8]  875 	ld	a, (hl+)
+    000003DC 5F               [ 4]  876 	ld	e, a
+    000003DD 56               [ 8]  877 	ld	d, (hl)
+    000003DE F8 0A            [12]  878 	ldhl	sp,	#10
+    000003E0 2A               [ 8]  879 	ld	a, (hl+)
+    000003E1 12               [ 8]  880 	ld	(de), a
+    000003E2 13               [ 8]  881 	inc	de
+    000003E3 7E               [ 8]  882 	ld	a, (hl)
+    000003E4 12               [ 8]  883 	ld	(de), a
+    000003E5 F8 0E            [12]  884 	ldhl	sp,	#14
+    000003E7 34               [12]  885 	inc	(hl)
+    000003E8 7E               [ 8]  886 	ld	a, (hl)
+    000003E9 D6 1C            [ 8]  887 	sub	a, #0x1c
+    000003EB 38 A9            [12]  888 	jr	C, 00110$
+                                    889 ;src/travel_render.c:66: for(i=0;i<4u;++i)scene_palette_background[28u+i]=(s->fade_in&&s->fade_step>=9u)?scene_ui_colors[i]:faded(scene_ui_colors[i],s->fade_step,s->fade_in);
+    000003ED 36 00            [12]  890 	ld	(hl), #0x00
+    000003EF                        891 00112$:
+    000003EF F8 0E            [12]  892 	ldhl	sp,	#14
+    000003F1 7E               [ 8]  893 	ld	a, (hl)
+    000003F2 C6 1C            [ 8]  894 	add	a, #0x1c
+    000003F4 6F               [ 4]  895 	ld	l, a
+    000003F5 26 00            [ 8]  896 	ld	h, #0x00
+    000003F7 29               [ 8]  897 	add	hl, hl
+    000003F8 5D               [ 4]  898 	ld	e, l
+    000003F9 54               [ 4]  899 	ld	d, h
+    000003FA 21r00r00         [12]  900 	ld	hl, #_scene_palette_background
+    000003FD 19               [ 8]  901 	add	hl, de
+    000003FE E5               [16]  902 	push	hl
+    000003FF 7D               [ 4]  903 	ld	a, l
+    00000400 F8 08            [12]  904 	ldhl	sp,	#8
+    00000402 77               [ 8]  905 	ld	(hl), a
+    00000403 E1               [12]  906 	pop	hl
+    00000404 7C               [ 4]  907 	ld	a, h
+    00000405 F8 07            [12]  908 	ldhl	sp,	#7
+                                    909 ;src/travel_render.c:65: for(i=0;i<28u;++i)scene_palette_background[i]=faded(scene_palette_background[i],s->fade_step,s->fade_in);
+    00000407 22               [ 8]  910 	ld	(hl+), a
+    00000408 D1               [12]  911 	pop	de
+    00000409 D5               [16]  912 	push	de
+    0000040A 1A               [ 8]  913 	ld	a, (de)
+    0000040B 77               [ 8]  914 	ld	(hl), a
+    0000040C F8 04            [12]  915 	ldhl	sp,#4
+    0000040E 2A               [ 8]  916 	ld	a, (hl+)
+    0000040F 5F               [ 4]  917 	ld	e, a
+    00000410 56               [ 8]  918 	ld	d, (hl)
+    00000411 1A               [ 8]  919 	ld	a, (de)
+    00000412 F8 09            [12]  920 	ldhl	sp,	#9
+    00000414 77               [ 8]  921 	ld	(hl), a
+                                    922 ;src/travel_render.c:66: for(i=0;i<4u;++i)scene_palette_background[28u+i]=(s->fade_in&&s->fade_step>=9u)?scene_ui_colors[i]:faded(scene_ui_colors[i],s->fade_step,s->fade_in);
+    00000415 F8 0E            [12]  923 	ldhl	sp,	#14
+    00000417 5E               [ 8]  924 	ld	e, (hl)
+    00000418 AF               [ 4]  925 	xor	a, a
+    00000419 57               [ 4]  926 	ld	d, a
+    0000041A CB 23            [ 8]  927 	sla	e
+    0000041C CB 12            [ 8]  928 	rl	d
+    0000041E F8 08            [12]  929 	ldhl	sp,	#8
+    00000420 7E               [ 8]  930 	ld	a, (hl)
+    00000421 B7               [ 4]  931 	or	a, a
+    00000422 28 15            [12]  932 	jr	Z, 00118$
+    00000424 23               [ 8]  933 	inc	hl
+    00000425 7E               [ 8]  934 	ld	a, (hl)
+    00000426 D6 09            [ 8]  935 	sub	a, #0x09
+    00000428 38 0F            [12]  936 	jr	C, 00118$
+    0000042A 21r12r00         [12]  937 	ld	hl, #_scene_ui_colors
+    0000042D 19               [ 8]  938 	add	hl, de
+    0000042E 5D               [ 4]  939 	ld	e, l
+    0000042F 54               [ 4]  940 	ld	d, h
+    00000430 1A               [ 8]  941 	ld	a, (de)
+    00000431 F8 0A            [12]  942 	ldhl	sp,	#10
+    00000433 22               [ 8]  943 	ld	(hl+), a
+    00000434 13               [ 8]  944 	inc	de
+    00000435 1A               [ 8]  945 	ld	a, (de)
+    00000436 77               [ 8]  946 	ld	(hl), a
+    00000437 18 20            [12]  947 	jr	00119$
+    00000439                        948 00118$:
+    00000439 21r12r00         [12]  949 	ld	hl, #_scene_ui_colors
+    0000043C 19               [ 8]  950 	add	hl, de
+    0000043D 5D               [ 4]  951 	ld	e, l
+    0000043E 54               [ 4]  952 	ld	d, h
+    0000043F 1A               [ 8]  953 	ld	a, (de)
+    00000440 F8 0A            [12]  954 	ldhl	sp,	#10
+    00000442 22               [ 8]  955 	ld	(hl+), a
+    00000443 13               [ 8]  956 	inc	de
+    00000444 1A               [ 8]  957 	ld	a, (de)
+    00000445 77               [ 8]  958 	ld	(hl), a
+    00000446 C5               [16]  959 	push	bc
+    00000447 F8 0A            [12]  960 	ldhl	sp,	#10
+    00000449 2A               [ 8]  961 	ld	a, (hl+)
+    0000044A F5               [16]  962 	push	af
+    0000044B 33               [ 8]  963 	inc	sp
+    0000044C 2A               [ 8]  964 	ld	a, (hl+)
+    0000044D 5E               [ 8]  965 	ld	e, (hl)
+    0000044E 23               [ 8]  966 	inc	hl
+    0000044F 56               [ 8]  967 	ld	d, (hl)
+    00000450 CDr0Er01         [24]  968 	call	_faded
+    00000453 F8 0C            [12]  969 	ldhl	sp,	#12
+    00000455 79               [ 4]  970 	ld	a, c
+    00000456 22               [ 8]  971 	ld	(hl+), a
+    00000457 70               [ 8]  972 	ld	(hl), b
+    00000458 C1               [12]  973 	pop	bc
+    00000459                        974 00119$:
+    00000459 F8 06            [12]  975 	ldhl	sp,	#6
+    0000045B 2A               [ 8]  976 	ld	a, (hl+)
+    0000045C 5F               [ 4]  977 	ld	e, a
+    0000045D 56               [ 8]  978 	ld	d, (hl)
+    0000045E F8 0A            [12]  979 	ldhl	sp,	#10
+    00000460 2A               [ 8]  980 	ld	a, (hl+)
+    00000461 12               [ 8]  981 	ld	(de), a
+    00000462 13               [ 8]  982 	inc	de
+    00000463 7E               [ 8]  983 	ld	a, (hl)
+    00000464 12               [ 8]  984 	ld	(de), a
+    00000465 F8 0E            [12]  985 	ldhl	sp,	#14
+    00000467 34               [12]  986 	inc	(hl)
+    00000468 7E               [ 8]  987 	ld	a, (hl)
+    00000469 D6 04            [ 8]  988 	sub	a, #0x04
+    0000046B 38 82            [12]  989 	jr	C, 00112$
+                                    990 ;src/travel_render.c:67: if(s->ship_mode){bank=TRAVEL_ART_BANK;data=ship_data(s)+320u;}
+    0000046D 2B               [ 8]  991 	dec	hl
+    0000046E 2B               [ 8]  992 	dec	hl
+    0000046F 2A               [ 8]  993 	ld	a, (hl+)
+    00000470 5F               [ 4]  994 	ld	e, a
+    00000471 56               [ 8]  995 	ld	d, (hl)
+    00000472 21 15 00         [12]  996 	ld	hl, #0x0015
+    00000475 19               [ 8]  997 	add	hl, de
+    00000476 5D               [ 4]  998 	ld	e, l
+    00000477 54               [ 4]  999 	ld	d, h
+    00000478 1A               [ 8] 1000 	ld	a, (de)
+    00000479 B7               [ 4] 1001 	or	a, a
+    0000047A 28 18            [12] 1002 	jr	Z, 00107$
+    0000047C F8 0E            [12] 1003 	ldhl	sp,	#14
+    0000047E 3E 78            [ 8] 1004 	ld	a, #0x78
+    00000480 32               [ 8] 1005 	ld	(hl-), a
+    00000481 2B               [ 8] 1006 	dec	hl
+    00000482 C5               [16] 1007 	push	bc
+    00000483 2A               [ 8] 1008 	ld	a, (hl+)
+    00000484 5F               [ 4] 1009 	ld	e, a
+    00000485 56               [ 8] 1010 	ld	d, (hl)
+    00000486 CDr1Ar00         [24] 1011 	call	_ship_data
+    00000489 59               [ 4] 1012 	ld	e, c
+    0000048A 50               [ 4] 1013 	ld	d, b
+    0000048B C1               [12] 1014 	pop	bc
+    0000048C 21 40 01         [12] 1015 	ld	hl, #0x0140
+    0000048F 19               [ 8] 1016 	add	hl, de
+    00000490 5D               [ 4] 1017 	ld	e, l
+    00000491 54               [ 4] 1018 	ld	d, h
+    00000492 18 07            [12] 1019 	jr	00108$
+    00000494                       1020 00107$:
+                                   1021 ;src/travel_render.c:68: else {bank=PARTY_WORLD_BANK;data=(const uint8_t *)party_world_palettes;}
+    00000494 F8 0E            [12] 1022 	ldhl	sp,	#14
+    00000496 36 16            [12] 1023 	ld	(hl), #0x16
+    00000498 11r00r00         [12] 1024 	ld	de, #_party_world_palettes
+    0000049B                       1025 00108$:
+                                   1026 ;src/travel_render.c:69: bank_copy(scene_shared_colors,bank,data,64u);
+    0000049B C5               [16] 1027 	push	bc
+    0000049C 21 40 00         [12] 1028 	ld	hl, #0x0040
+    0000049F E5               [16] 1029 	push	hl
+    000004A0 D5               [16] 1030 	push	de
+    000004A1 F8 14            [12] 1031 	ldhl	sp,	#20
+    000004A3 7E               [ 8] 1032 	ld	a, (hl)
+    000004A4 11r00r00         [12] 1033 	ld	de, #_scene_shared_colors
+    000004A7 CDr00r00         [24] 1034 	call	_bank_copy
+    000004AA C1               [12] 1035 	pop	bc
+                                   1036 ;src/travel_render.c:70: for(i=0;i<32u;++i)scene_shared_colors[i]=faded(scene_shared_colors[i],s->fade_step,s->fade_in);
+    000004AB F8 08            [12] 1037 	ldhl	sp,	#8
+    000004AD 79               [ 4] 1038 	ld	a, c
+    000004AE 22               [ 8] 1039 	ld	(hl+), a
+    000004AF 70               [ 8] 1040 	ld	(hl), b
+    000004B0 F8 02            [12] 1041 	ldhl	sp,	#2
+    000004B2 7E               [ 8] 1042 	ld	a, (hl)
+    000004B3 F8 0A            [12] 1043 	ldhl	sp,	#10
+    000004B5 77               [ 8] 1044 	ld	(hl), a
+    000004B6 F8 03            [12] 1045 	ldhl	sp,	#3
+    000004B8 7E               [ 8] 1046 	ld	a, (hl)
+    000004B9 F8 0B            [12] 1047 	ldhl	sp,	#11
+    000004BB 77               [ 8] 1048 	ld	(hl), a
+    000004BC F8 0E            [12] 1049 	ldhl	sp,	#14
+    000004BE 36 00            [12] 1050 	ld	(hl), #0x00
+    000004C0                       1051 00114$:
+    000004C0 F8 0E            [12] 1052 	ldhl	sp,	#14
+    000004C2 4E               [ 8] 1053 	ld	c, (hl)
+    000004C3 AF               [ 4] 1054 	xor	a, a
+    000004C4 47               [ 4] 1055 	ld	b, a
+    000004C5 CB 21            [ 8] 1056 	sla	c
+    000004C7 CB 10            [ 8] 1057 	rl	b
+    000004C9 21r00r00         [12] 1058 	ld	hl, #_scene_shared_colors
+    000004CC 09               [ 8] 1059 	add	hl, bc
+    000004CD E5               [16] 1060 	push	hl
+    000004CE 7D               [ 4] 1061 	ld	a, l
+    000004CF F8 06            [12] 1062 	ldhl	sp,	#6
+    000004D1 77               [ 8] 1063 	ld	(hl), a
+    000004D2 E1               [12] 1064 	pop	hl
+    000004D3 7C               [ 4] 1065 	ld	a, h
+    000004D4 F8 05            [12] 1066 	ldhl	sp,	#5
+    000004D6 77               [ 8] 1067 	ld	(hl), a
+    000004D7 F8 08            [12] 1068 	ldhl	sp,#8
+    000004D9 2A               [ 8] 1069 	ld	a, (hl+)
+    000004DA 5F               [ 4] 1070 	ld	e, a
+    000004DB 2A               [ 8] 1071 	ld	a, (hl+)
+    000004DC 57               [ 4] 1072 	ld	d, a
+    000004DD 1A               [ 8] 1073 	ld	a, (de)
+    000004DE 47               [ 4] 1074 	ld	b, a
+    000004DF 2A               [ 8] 1075 	ld	a, (hl+)
+    000004E0 5F               [ 4] 1076 	ld	e, a
+    000004E1 56               [ 8] 1077 	ld	d, (hl)
+    000004E2 1A               [ 8] 1078 	ld	a, (de)
+    000004E3 4F               [ 4] 1079 	ld	c, a
+    000004E4 F8 04            [12] 1080 	ldhl	sp,#4
+    000004E6 2A               [ 8] 1081 	ld	a, (hl+)
+    000004E7 5F               [ 4] 1082 	ld	e, a
+    000004E8 56               [ 8] 1083 	ld	d, (hl)
+    000004E9 1A               [ 8] 1084 	ld	a, (de)
+    000004EA 6F               [ 4] 1085 	ld	l, a
+    000004EB 13               [ 8] 1086 	inc	de
+    000004EC 1A               [ 8] 1087 	ld	a, (de)
+    000004ED 67               [ 4] 1088 	ld	h, a
+    000004EE C5               [16] 1089 	push	bc
+    000004EF 33               [ 8] 1090 	inc	sp
+    000004F0 79               [ 4] 1091 	ld	a, c
+    000004F1 5D               [ 4] 1092 	ld	e, l
+    000004F2 54               [ 4] 1093 	ld	d, h
+    000004F3 CDr0Er01         [24] 1094 	call	_faded
+    000004F6 F8 06            [12] 1095 	ldhl	sp,	#6
+    000004F8 79               [ 4] 1096 	ld	a, c
+    000004F9 22               [ 8] 1097 	ld	(hl+), a
+    000004FA 70               [ 8] 1098 	ld	(hl), b
+    000004FB F8 04            [12] 1099 	ldhl	sp,	#4
+    000004FD 2A               [ 8] 1100 	ld	a, (hl+)
+    000004FE 5F               [ 4] 1101 	ld	e, a
+    000004FF 2A               [ 8] 1102 	ld	a, (hl+)
+    00000500 57               [ 4] 1103 	ld	d, a
+    00000501 2A               [ 8] 1104 	ld	a, (hl+)
+    00000502 12               [ 8] 1105 	ld	(de), a
+    00000503 13               [ 8] 1106 	inc	de
+    00000504 7E               [ 8] 1107 	ld	a, (hl)
+    00000505 12               [ 8] 1108 	ld	(de), a
+    00000506 F8 0E            [12] 1109 	ldhl	sp,	#14
+    00000508 34               [12] 1110 	inc	(hl)
+    00000509 7E               [ 8] 1111 	ld	a, (hl)
+    0000050A D6 20            [ 8] 1112 	sub	a, #0x20
+    0000050C 38 B2            [12] 1113 	jr	C, 00114$
+                                   1114 ;src/travel_render.c:71: scene_palette_commit();
+    0000050E 1Er00            [ 8] 1115 	ld	e, #b_scene_palette_commit
+    00000510 21r00r00         [12] 1116 	ld	hl, #_scene_palette_commit
+    00000513 CDr00r00         [24] 1117 	call	___sdcc_bcall_ehl
+                                   1118 ;src/travel_render.c:72: }
+    00000516 E8 0F            [16] 1119 	add	sp, #15
+    00000518 C9               [16] 1120 	ret
+                                   1121 ;src/travel_render.c:73: static void space_row(const TravelState *s,uint8_t logical) {
+                                   1122 ;	---------------------------------
+                                   1123 ; Function space_row
+                                   1124 ; ---------------------------------
+    00000519                       1125 _space_row:
+    00000519 E8 FC            [16] 1126 	add	sp, #-4
+    0000051B 4B               [ 4] 1127 	ld	c, e
+    0000051C 42               [ 4] 1128 	ld	b, d
+    0000051D F8 03            [12] 1129 	ldhl	sp,	#3
+    0000051F 77               [ 8] 1130 	ld	(hl), a
+                                   1131 ;src/travel_render.c:74: uint8_t row,kind=travel_space_row(s,logical%28u,&row);
+    00000520 7E               [ 8] 1132 	ld	a, (hl)
+    00000521 C5               [16] 1133 	push	bc
+    00000522 1E 1C            [ 8] 1134 	ld	e, #0x1c
+    00000524 CDr00r00         [24] 1135 	call	__moduchar
+    00000527 51               [ 4] 1136 	ld	d, c
+    00000528 C1               [12] 1137 	pop	bc
+    00000529 C5               [16] 1138 	push	bc
+    0000052A 21 02 00         [12] 1139 	ld	hl, #2
+    0000052D 39               [ 8] 1140 	add	hl, sp
+    0000052E E5               [16] 1141 	push	hl
+    0000052F D5               [16] 1142 	push	de
+    00000530 33               [ 8] 1143 	inc	sp
+    00000531 C5               [16] 1144 	push	bc
+    00000532 1Er00            [ 8] 1145 	ld	e, #b_travel_space_row
+    00000534 21r00r00         [12] 1146 	ld	hl, #_travel_space_row
+    00000537 CDr00r00         [24] 1147 	call	___sdcc_bcall_ehl
+    0000053A E8 05            [16] 1148 	add	sp, #5
+    0000053C 5F               [ 4] 1149 	ld	e, a
+    0000053D C1               [12] 1150 	pop	bc
+                                   1151 ;src/travel_render.c:75: const uint8_t *p=planet_data(s->planet)+TRAVEL_MAP_OFFSET+(uint16_t)kind*768u+(uint16_t)row*32u+7u;
+    0000053E 21 1C 00         [12] 1152 	ld	hl, #0x001c
+    00000541 09               [ 8] 1153 	add	hl, bc
+    00000542 7E               [ 8] 1154 	ld	a, (hl)
+    00000543 D5               [16] 1155 	push	de
+    00000544 CDr00r00         [24] 1156 	call	_planet_data
+    00000547 F8 03            [12] 1157 	ldhl	sp,	#3
+    00000549 79               [ 4] 1158 	ld	a, c
+    0000054A 22               [ 8] 1159 	ld	(hl+), a
+    0000054B 70               [ 8] 1160 	ld	(hl), b
+    0000054C D1               [12] 1161 	pop	de
+    0000054D 4B               [ 4] 1162 	ld	c, e
+    0000054E 06 00            [ 8] 1163 	ld	b, #0x00
+    00000550 69               [ 4] 1164 	ld	l, c
+    00000551 60               [ 4] 1165 	ld	h, b
+    00000552 29               [ 8] 1166 	add	hl, hl
+    00000553 09               [ 8] 1167 	add	hl, bc
+    00000554 29               [ 8] 1168 	add	hl, hl
+    00000555 29               [ 8] 1169 	add	hl, hl
+    00000556 29               [ 8] 1170 	add	hl, hl
+    00000557 29               [ 8] 1171 	add	hl, hl
+    00000558 29               [ 8] 1172 	add	hl, hl
+    00000559 29               [ 8] 1173 	add	hl, hl
+    0000055A 29               [ 8] 1174 	add	hl, hl
+    0000055B 29               [ 8] 1175 	add	hl, hl
+    0000055C 01 5F 06         [12] 1176 	ld	bc, #0x65f
+    0000055F 09               [ 8] 1177 	add	hl,bc
+    00000560 4D               [ 4] 1178 	ld	c, l
+    00000561 44               [ 4] 1179 	ld	b, h
+    00000562 F8 00            [12] 1180 	ldhl	sp,	#0
+    00000564 5E               [ 8] 1181 	ld	e, (hl)
+    00000565 AF               [ 4] 1182 	xor	a, a
+    00000566 6B               [ 4] 1183 	ld	l, e
+    00000567 67               [ 4] 1184 	ld	h, a
+    00000568 29               [ 8] 1185 	add	hl, hl
+    00000569 29               [ 8] 1186 	add	hl, hl
+    0000056A 29               [ 8] 1187 	add	hl, hl
+    0000056B 29               [ 8] 1188 	add	hl, hl
+    0000056C 29               [ 8] 1189 	add	hl, hl
+    0000056D 09               [ 8] 1190 	add	hl, bc
+    0000056E 4D               [ 4] 1191 	ld	c, l
+    0000056F 44               [ 4] 1192 	ld	b, h
+    00000570 F8 01            [12] 1193 	ldhl	sp,	#1
+    00000572 2A               [ 8] 1194 	ld	a,	(hl+)
+    00000573 66               [ 8] 1195 	ld	h, (hl)
+    00000574 6F               [ 4] 1196 	ld	l, a
+    00000575 09               [ 8] 1197 	add	hl, bc
+    00000576 4D               [ 4] 1198 	ld	c, l
+    00000577 44               [ 4] 1199 	ld	b, h
+                                   1200 ;src/travel_render.c:76: bank_copy(scene_shared_bytes,TRAVEL_ART_BANK,p,20u);
+    00000578 59               [ 4] 1201 	ld	e, c
+    00000579 50               [ 4] 1202 	ld	d, b
+    0000057A C5               [16] 1203 	push	bc
+    0000057B 21 14 00         [12] 1204 	ld	hl, #0x0014
+    0000057E E5               [16] 1205 	push	hl
+    0000057F D5               [16] 1206 	push	de
+    00000580 3E 78            [ 8] 1207 	ld	a, #0x78
+    00000582 11r00r00         [12] 1208 	ld	de, #_scene_shared_bytes
+    00000585 CDr00r00         [24] 1209 	call	_bank_copy
+    00000588 C1               [12] 1210 	pop	bc
+                                   1211 ;src/travel_render.c:77: bank_copy(scene_shared_bytes+20,TRAVEL_ART_BANK,p+384u,20u);
+    00000589 21 80 01         [12] 1212 	ld	hl, #0x0180
+    0000058C 09               [ 8] 1213 	add	hl, bc
+    0000058D 11 14 00         [12] 1214 	ld	de, #0x0014
+    00000590 D5               [16] 1215 	push	de
+    00000591 E5               [16] 1216 	push	hl
+    00000592 3E 78            [ 8] 1217 	ld	a, #0x78
+    00000594 11r14r00         [12] 1218 	ld	de, #(_scene_shared_bytes + 20)
+    00000597 CDr00r00         [24] 1219 	call	_bank_copy
+                                   1220 ;src/travel_render.c:78: VBK_REG=0;set_bkg_tiles(0,logical&31u,20,1,scene_shared_bytes);
+    0000059A AF               [ 4] 1221 	xor	a, a
+    0000059B E0r00            [12] 1222 	ldh	(_VBK_REG + 0), a
+    0000059D F8 03            [12] 1223 	ldhl	sp,	#3
+    0000059F 7E               [ 8] 1224 	ld	a, (hl)
+    000005A0 E6 1F            [ 8] 1225 	and	a, #0x1f
+    000005A2 4F               [ 4] 1226 	ld	c, a
+    000005A3 11r00r00         [12] 1227 	ld	de, #_scene_shared_bytes
+    000005A6 D5               [16] 1228 	push	de
+    000005A7 21 14 01         [12] 1229 	ld	hl, #0x114
+    000005AA E5               [16] 1230 	push	hl
+    000005AB 61               [ 4] 1231 	ld	h, c
+    000005AC 2E 00            [ 8] 1232 	ld	l, #0x00
+    000005AE E5               [16] 1233 	push	hl
+    000005AF CDr00r00         [24] 1234 	call	_set_bkg_tiles
+    000005B2 E8 06            [16] 1235 	add	sp, #6
+                                   1236 ;src/travel_render.c:79: VBK_REG=1;set_bkg_tiles(0,logical&31u,20,1,scene_shared_bytes+20);VBK_REG=0;
+    000005B4 3E 01            [ 8] 1237 	ld	a, #0x01
+    000005B6 E0r00            [12] 1238 	ldh	(_VBK_REG + 0), a
+    000005B8 11r14r00         [12] 1239 	ld	de, #(_scene_shared_bytes + 20)
+    000005BB D5               [16] 1240 	push	de
+    000005BC 21 14 01         [12] 1241 	ld	hl, #0x114
+    000005BF E5               [16] 1242 	push	hl
+    000005C0 61               [ 4] 1243 	ld	h, c
+    000005C1 2E 00            [ 8] 1244 	ld	l, #0x00
+    000005C3 E5               [16] 1245 	push	hl
+    000005C4 CDr00r00         [24] 1246 	call	_set_bkg_tiles
+    000005C7 E8 06            [16] 1247 	add	sp, #6
+    000005C9 AF               [ 4] 1248 	xor	a, a
+    000005CA E0r00            [12] 1249 	ldh	(_VBK_REG + 0), a
+                                   1250 ;src/travel_render.c:80: }
+    000005CC E8 04            [16] 1251 	add	sp, #4
+    000005CE C9               [16] 1252 	ret
+                                   1253 ;src/travel_render.c:81: static void draw_space(const TravelState *s,uint8_t force) {
+                                   1254 ;	---------------------------------
+                                   1255 ; Function draw_space
+                                   1256 ; ---------------------------------
+    000005CF                       1257 _draw_space:
+    000005CF E8 FA            [16] 1258 	add	sp, #-6
+    000005D1 F8 04            [12] 1259 	ldhl	sp,	#4
+    000005D3 73               [ 8] 1260 	ld	(hl), e
+    000005D4 23               [ 8] 1261 	inc	hl
+    000005D5 72               [ 8] 1262 	ld	(hl), d
+    000005D6 2B               [ 8] 1263 	dec	hl
+    000005D7 2B               [ 8] 1264 	dec	hl
+                                   1265 ;src/travel_render.c:82: uint8_t row,head=(s->scroll+32u)>>3;
+    000005D8 22               [ 8] 1266 	ld	(hl+), a
+    000005D9 2A               [ 8] 1267 	ld	a, (hl+)
+    000005DA 5F               [ 4] 1268 	ld	e, a
+    000005DB 56               [ 8] 1269 	ld	d, (hl)
+    000005DC 21 1A 00         [12] 1270 	ld	hl, #0x001a
+    000005DF 19               [ 8] 1271 	add	hl, de
+    000005E0 4D               [ 4] 1272 	ld	c, l
+    000005E1 44               [ 4] 1273 	ld	b, h
+    000005E2 0A               [ 8] 1274 	ld	a, (bc)
+    000005E3 5F               [ 4] 1275 	ld	e, a
+    000005E4 6B               [ 4] 1276 	ld	l, e
+    000005E5 26 00            [ 8] 1277 	ld	h, #0x00
+    000005E7 D5               [16] 1278 	push	de
+    000005E8 11 20 00         [12] 1279 	ld	de, #0x0020
+    000005EB 19               [ 8] 1280 	add	hl, de
+    000005EC D1               [12] 1281 	pop	de
+    000005ED 54               [ 4] 1282 	ld	d, h
+    000005EE CB 3A            [ 8] 1283 	srl	d
+    000005F0 CB 1D            [ 8] 1284 	rr	l
+    000005F2 CB 3A            [ 8] 1285 	srl	d
+    000005F4 CB 1D            [ 8] 1286 	rr	l
+    000005F6 CB 3A            [ 8] 1287 	srl	d
+    000005F8 CB 1D            [ 8] 1288 	rr	l
+    000005FA 7D               [ 4] 1289 	ld	a, l
+    000005FB F8 00            [12] 1290 	ldhl	sp,	#0
+    000005FD 77               [ 8] 1291 	ld	(hl), a
+                                   1292 ;src/travel_render.c:83: if(force||last_space_scroll==255u||s->scroll>last_space_scroll)
+    000005FE F8 03            [12] 1293 	ldhl	sp,	#3
+    00000600 7E               [ 8] 1294 	ld	a, (hl)
+    00000601 B7               [ 4] 1295 	or	a, a
+    00000602 20 0C            [12] 1296 	jr	NZ, 00116$
+    00000604 FAr00r00         [16] 1297 	ld	a, (#_last_space_scroll)
+    00000607 3C               [ 4] 1298 	inc	a
+    00000608 28 06            [12] 1299 	jr	Z, 00116$
+    0000060A FAr00r00         [16] 1300 	ld	a, (#_last_space_scroll)
+    0000060D 93               [ 4] 1301 	sub	a, e
+    0000060E 30 1A            [12] 1302 	jr	NC, 00105$
+                                   1303 ;src/travel_render.c:84: for(row=0;row<19u;++row)space_row(s,head+row);
+    00000610                       1304 00116$:
+    00000610 1E 00            [ 8] 1305 	ld	e, #0x00
+    00000612                       1306 00110$:
+    00000612 F8 00            [12] 1307 	ldhl	sp,	#0
+    00000614 7E               [ 8] 1308 	ld	a, (hl)
+    00000615 83               [ 4] 1309 	add	a, e
+    00000616 C5               [16] 1310 	push	bc
+    00000617 D5               [16] 1311 	push	de
+    00000618 F8 08            [12] 1312 	ldhl	sp,	#8
+    0000061A 5E               [ 8] 1313 	ld	e, (hl)
+    0000061B 23               [ 8] 1314 	inc	hl
+    0000061C 56               [ 8] 1315 	ld	d, (hl)
+    0000061D CDr19r05         [24] 1316 	call	_space_row
+    00000620 D1               [12] 1317 	pop	de
+    00000621 C1               [12] 1318 	pop	bc
+    00000622 1C               [ 4] 1319 	inc	e
+    00000623 7B               [ 4] 1320 	ld	a, e
+    00000624 D6 13            [ 8] 1321 	sub	a, #0x13
+    00000626 38 EA            [12] 1322 	jr	C, 00110$
+    00000628 18 33            [12] 1323 	jr	00106$
+    0000062A                       1324 00105$:
+                                   1325 ;src/travel_render.c:85: else if(head!=((last_space_scroll+32u)>>3))space_row(s,head);
+    0000062A FAr00r00         [16] 1326 	ld	a, (_last_space_scroll)
+    0000062D 1E 00            [ 8] 1327 	ld	e, #0x00
+    0000062F C6 20            [ 8] 1328 	add	a, #0x20
+    00000631 57               [ 4] 1329 	ld	d, a
+    00000632 30 01            [12] 1330 	jr	NC, 00151$
+    00000634 1C               [ 4] 1331 	inc	e
+    00000635                       1332 00151$:
+    00000635 CB 3B            [ 8] 1333 	srl	e
+    00000637 CB 1A            [ 8] 1334 	rr	d
+    00000639 CB 3B            [ 8] 1335 	srl	e
+    0000063B CB 1A            [ 8] 1336 	rr	d
+    0000063D CB 3B            [ 8] 1337 	srl	e
+    0000063F CB 1A            [ 8] 1338 	rr	d
+    00000641 F8 00            [12] 1339 	ldhl	sp,	#0
+    00000643 2A               [ 8] 1340 	ld	a, (hl+)
+    00000644 22               [ 8] 1341 	ld	(hl+), a
+    00000645 AF               [ 4] 1342 	xor	a, a
+    00000646 32               [ 8] 1343 	ld	(hl-), a
+    00000647 7A               [ 4] 1344 	ld	a, d
+    00000648 96               [ 8] 1345 	sub	a, (hl)
+    00000649 20 05            [12] 1346 	jr	NZ, 00152$
+    0000064B 23               [ 8] 1347 	inc	hl
+    0000064C 7B               [ 4] 1348 	ld	a, e
+    0000064D 96               [ 8] 1349 	sub	a, (hl)
+    0000064E 28 0D            [12] 1350 	jr	Z, 00106$
+    00000650                       1351 00152$:
+    00000650 C5               [16] 1352 	push	bc
+    00000651 F8 02            [12] 1353 	ldhl	sp,	#2
+    00000653 7E               [ 8] 1354 	ld	a, (hl)
+    00000654 F8 06            [12] 1355 	ldhl	sp,	#6
+    00000656 5E               [ 8] 1356 	ld	e, (hl)
+    00000657 23               [ 8] 1357 	inc	hl
+    00000658 56               [ 8] 1358 	ld	d, (hl)
+    00000659 CDr19r05         [24] 1359 	call	_space_row
+    0000065C C1               [12] 1360 	pop	bc
+    0000065D                       1361 00106$:
+                                   1362 ;src/travel_render.c:86: move_bkg(0,s->scroll+32u);last_space_scroll=s->scroll;
+    0000065D 0A               [ 8] 1363 	ld	a, (bc)
+    0000065E C6 20            [ 8] 1364 	add	a, #0x20
+    00000660 5F               [ 4] 1365 	ld	e, a
+                                   1366 ;../../../.tools/gbdk/include/gb/gb.h:1461: SCX_REG=x, SCY_REG=y;
+    00000661 AF               [ 4] 1367 	xor	a, a
+    00000662 E0r00            [12] 1368 	ldh	(_SCX_REG + 0), a
+    00000664 7B               [ 4] 1369 	ld	a, e
+    00000665 E0r00            [12] 1370 	ldh	(_SCY_REG + 0), a
+                                   1371 ;src/travel_render.c:86: move_bkg(0,s->scroll+32u);last_space_scroll=s->scroll;
+    00000667 0A               [ 8] 1372 	ld	a, (bc)
+    00000668 EAr00r00         [16] 1373 	ld	(#_last_space_scroll),a
+                                   1374 ;src/travel_render.c:87: }
+    0000066B E8 06            [16] 1375 	add	sp, #6
+    0000066D C9               [16] 1376 	ret
+                                   1377 ;src/travel_render.c:88: void travel_present(const TravelState *s,uint8_t flags) __banked {
+                                   1378 ;	---------------------------------
+                                   1379 ; Function travel_present
+                                   1380 ; ---------------------------------
+                         00000077  1381 	b_travel_present	= 119
+    0000066E                       1382 _travel_present::
+    0000066E E8 F9            [16] 1383 	add	sp, #-7
+                                   1384 ;src/travel_render.c:89: uint8_t full=flags&(TRAVEL_WORLD|TRAVEL_SPACE);
+    00000670 F8 0F            [12] 1385 	ldhl	sp,	#15
+    00000672 7E               [ 8] 1386 	ld	a, (hl)
+    00000673 E6 03            [ 8] 1387 	and	a, #0x03
+    00000675 F8 00            [12] 1388 	ldhl	sp,	#0
+    00000677 77               [ 8] 1389 	ld	(hl), a
+                                   1390 ;src/travel_render.c:90: if(full) {
+    00000678 7E               [ 8] 1391 	ld	a, (hl)
+    00000679 B7               [ 4] 1392 	or	a, a
+    0000067A CAr9Fr07         [16] 1393 	jp	Z, 00110$
+                                   1394 ;src/travel_render.c:91: DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;last_space_scroll=255u;
+    0000067D CDr00r00         [24] 1395 	call	_display_off
+    00000680 F0r00            [12] 1396 	ldh	a, (_LCDC_REG + 0)
+    00000682 E6 DF            [ 8] 1397 	and	a, #0xdf
+    00000684 E0r00            [12] 1398 	ldh	(_LCDC_REG + 0), a
+    00000686 F0r00            [12] 1399 	ldh	a, (_LCDC_REG + 0)
+    00000688 E6 FD            [ 8] 1400 	and	a, #0xfd
+    0000068A E0r00            [12] 1401 	ldh	(_LCDC_REG + 0), a
+    0000068C 21r00r00         [12] 1402 	ld	hl, #_last_space_scroll
+    0000068F 36 FF            [12] 1403 	ld	(hl), #0xff
+                                   1404 ;src/travel_render.c:93: world_select(s->map);world_load_graphics();world_terrain_sync(s->x,s->y);
+    00000691 F8 0D            [12] 1405 	ldhl	sp,	#13
+    00000693 7E               [ 8] 1406 	ld	a, (hl)
+    00000694 F8 03            [12] 1407 	ldhl	sp,	#3
+    00000696 77               [ 8] 1408 	ld	(hl), a
+    00000697 F8 0E            [12] 1409 	ldhl	sp,	#14
+    00000699 7E               [ 8] 1410 	ld	a, (hl)
+    0000069A F8 04            [12] 1411 	ldhl	sp,	#4
+    0000069C 77               [ 8] 1412 	ld	(hl), a
+                                   1413 ;src/travel_render.c:92: if(flags&TRAVEL_WORLD) {
+    0000069D E5               [16] 1414 	push	hl
+    0000069E F8 11            [12] 1415 	ldhl	sp,	#17
+    000006A0 CB 46            [12] 1416 	bit	0, (hl)
+    000006A2 E1               [12] 1417 	pop	hl
+    000006A3 28 5C            [12] 1418 	jr	Z, 00104$
+                                   1419 ;src/travel_render.c:93: world_select(s->map);world_load_graphics();world_terrain_sync(s->x,s->y);
+    000006A5 F8 03            [12] 1420 	ldhl	sp,#3
+    000006A7 2A               [ 8] 1421 	ld	a, (hl+)
+    000006A8 5F               [ 4] 1422 	ld	e, a
+    000006A9 56               [ 8] 1423 	ld	d, (hl)
+    000006AA 21 13 00         [12] 1424 	ld	hl, #0x0013
+    000006AD 19               [ 8] 1425 	add	hl, de
+    000006AE 4D               [ 4] 1426 	ld	c, l
+    000006AF 44               [ 4] 1427 	ld	b, h
+    000006B0 0A               [ 8] 1428 	ld	a, (bc)
+    000006B1 F5               [16] 1429 	push	af
+    000006B2 33               [ 8] 1430 	inc	sp
+    000006B3 1Er00            [ 8] 1431 	ld	e, #b_world_select
+    000006B5 21r00r00         [12] 1432 	ld	hl, #_world_select
+    000006B8 CDr00r00         [24] 1433 	call	___sdcc_bcall_ehl
+    000006BB 33               [ 8] 1434 	inc	sp
+    000006BC 1Er00            [ 8] 1435 	ld	e, #b_world_load_graphics
+    000006BE 21r00r00         [12] 1436 	ld	hl, #_world_load_graphics
+    000006C1 CDr00r00         [24] 1437 	call	___sdcc_bcall_ehl
+    000006C4 F8 03            [12] 1438 	ldhl	sp,	#3
+    000006C6 2A               [ 8] 1439 	ld	a, (hl+)
+    000006C7 66               [ 8] 1440 	ld	h, (hl)
+    000006C8 6F               [ 4] 1441 	ld	l, a
+    000006C9 23               [ 8] 1442 	inc	hl
+    000006CA 23               [ 8] 1443 	inc	hl
+    000006CB 2A               [ 8] 1444 	ld	a, (hl+)
+    000006CC 4F               [ 4] 1445 	ld	c, a
+    000006CD 46               [ 8] 1446 	ld	b, (hl)
+    000006CE F8 03            [12] 1447 	ldhl	sp,#3
+    000006D0 2A               [ 8] 1448 	ld	a, (hl+)
+    000006D1 5F               [ 4] 1449 	ld	e, a
+    000006D2 56               [ 8] 1450 	ld	d, (hl)
+    000006D3 1A               [ 8] 1451 	ld	a, (de)
+    000006D4 6F               [ 4] 1452 	ld	l, a
+    000006D5 13               [ 8] 1453 	inc	de
+    000006D6 1A               [ 8] 1454 	ld	a, (de)
+    000006D7 67               [ 4] 1455 	ld	h, a
+    000006D8 C5               [16] 1456 	push	bc
+    000006D9 E5               [16] 1457 	push	hl
+    000006DA 1Er00            [ 8] 1458 	ld	e, #b_world_terrain_sync
+    000006DC 21r00r00         [12] 1459 	ld	hl, #_world_terrain_sync
+    000006DF CDr00r00         [24] 1460 	call	___sdcc_bcall_ehl
+    000006E2 E8 04            [16] 1461 	add	sp, #4
+                                   1462 ;src/travel_render.c:94: if(s->tag<0x80u)world_motion_reset(s->tag);
+    000006E4 F8 03            [12] 1463 	ldhl	sp,#3
+    000006E6 2A               [ 8] 1464 	ld	a, (hl+)
+    000006E7 5F               [ 4] 1465 	ld	e, a
+    000006E8 56               [ 8] 1466 	ld	d, (hl)
+    000006E9 21 10 00         [12] 1467 	ld	hl, #0x0010
+    000006EC 19               [ 8] 1468 	add	hl, de
+    000006ED 4D               [ 4] 1469 	ld	c, l
+    000006EE 44               [ 4] 1470 	ld	b, h
+    000006EF 0A               [ 8] 1471 	ld	a, (bc)
+    000006F0 FE 80            [ 8] 1472 	cp	a, #0x80
+    000006F2 30 39            [12] 1473 	jr	NC, 00105$
+    000006F4 F5               [16] 1474 	push	af
+    000006F5 33               [ 8] 1475 	inc	sp
+    000006F6 1Er00            [ 8] 1476 	ld	e, #b_world_motion_reset
+    000006F8 21r00r00         [12] 1477 	ld	hl, #_world_motion_reset
+    000006FB CDr00r00         [24] 1478 	call	___sdcc_bcall_ehl
+    000006FE 33               [ 8] 1479 	inc	sp
+    000006FF 18 2C            [12] 1480 	jr	00105$
+    00000701                       1481 00104$:
+                                   1482 ;src/travel_render.c:95: } else bank_bkg_data(TRAVEL_ART_BANK,0,98,planet_data(s->planet),0);
+    00000701 F8 03            [12] 1483 	ldhl	sp,#3
+    00000703 2A               [ 8] 1484 	ld	a, (hl+)
+    00000704 5F               [ 4] 1485 	ld	e, a
+    00000705 56               [ 8] 1486 	ld	d, (hl)
+    00000706 21 1C 00         [12] 1487 	ld	hl, #0x001c
+    00000709 19               [ 8] 1488 	add	hl, de
+    0000070A 4D               [ 4] 1489 	ld	c, l
+    0000070B 44               [ 4] 1490 	ld	b, h
+    0000070C 0A               [ 8] 1491 	ld	a, (bc)
+    0000070D F8 06            [12] 1492 	ldhl	sp,	#6
+    0000070F 77               [ 8] 1493 	ld	(hl), a
+    00000710 7E               [ 8] 1494 	ld	a, (hl)
+    00000711 CDr00r00         [24] 1495 	call	_planet_data
+    00000714 F8 05            [12] 1496 	ldhl	sp,	#5
+    00000716 79               [ 4] 1497 	ld	a, c
+    00000717 22               [ 8] 1498 	ld	(hl+), a
+    00000718 70               [ 8] 1499 	ld	(hl), b
+    00000719 AF               [ 4] 1500 	xor	a, a
+    0000071A F5               [16] 1501 	push	af
+    0000071B 33               [ 8] 1502 	inc	sp
+    0000071C F8 06            [12] 1503 	ldhl	sp,	#6
+    0000071E 2A               [ 8] 1504 	ld	a, (hl+)
+    0000071F 5F               [ 4] 1505 	ld	e, a
+    00000720 56               [ 8] 1506 	ld	d, (hl)
+    00000721 D5               [16] 1507 	push	de
+    00000722 3E 62            [ 8] 1508 	ld	a, #0x62
+    00000724 F5               [16] 1509 	push	af
+    00000725 33               [ 8] 1510 	inc	sp
+    00000726 1E 00            [ 8] 1511 	ld	e, #0x00
+    00000728 3E 78            [ 8] 1512 	ld	a, #0x78
+    0000072A CDr00r00         [24] 1513 	call	_bank_bkg_data
+    0000072D                       1514 00105$:
+                                   1515 ;src/travel_render.c:96: if(s->ship_mode){scene_actor_show_data(TRAVEL_ART_BANK,ship_data(s),16,16);scene_actor_active=0;}
+    0000072D F8 03            [12] 1516 	ldhl	sp,#3
+    0000072F 2A               [ 8] 1517 	ld	a, (hl+)
+    00000730 5F               [ 4] 1518 	ld	e, a
+    00000731 56               [ 8] 1519 	ld	d, (hl)
+    00000732 21 15 00         [12] 1520 	ld	hl, #0x0015
+    00000735 19               [ 8] 1521 	add	hl, de
+    00000736 4D               [ 4] 1522 	ld	c, l
+    00000737 44               [ 4] 1523 	ld	b, h
+    00000738 0A               [ 8] 1524 	ld	a, (bc)
+    00000739 B7               [ 4] 1525 	or	a, a
+    0000073A 28 21            [12] 1526 	jr	Z, 00107$
+    0000073C F8 03            [12] 1527 	ldhl	sp,	#3
+    0000073E 2A               [ 8] 1528 	ld	a, (hl+)
+    0000073F 5F               [ 4] 1529 	ld	e, a
+    00000740 56               [ 8] 1530 	ld	d, (hl)
+    00000741 CDr1Ar00         [24] 1531 	call	_ship_data
+    00000744 21 10 10         [12] 1532 	ld	hl, #0x1010
+    00000747 E5               [16] 1533 	push	hl
+    00000748 C5               [16] 1534 	push	bc
+    00000749 3E 78            [ 8] 1535 	ld	a, #0x78
+    0000074B F5               [16] 1536 	push	af
+    0000074C 33               [ 8] 1537 	inc	sp
+    0000074D 1Er00            [ 8] 1538 	ld	e, #b_scene_actor_show_data
+    0000074F 21r00r00         [12] 1539 	ld	hl, #_scene_actor_show_data
+    00000752 CDr00r00         [24] 1540 	call	___sdcc_bcall_ehl
+    00000755 E8 05            [16] 1541 	add	sp, #5
+    00000757 AF               [ 4] 1542 	xor	a, a
+    00000758 EAr00r00         [16] 1543 	ld	(#_scene_actor_active),a
+    0000075B 18 42            [12] 1544 	jr	00110$
+    0000075D                       1545 00107$:
+                                   1546 ;src/travel_render.c:98: scene_actor_hide();
+    0000075D 1Er00            [ 8] 1547 	ld	e, #b_scene_actor_hide
+    0000075F 21r00r00         [12] 1548 	ld	hl, #_scene_actor_hide
+    00000762 CDr00r00         [24] 1549 	call	___sdcc_bcall_ehl
+                                   1550 ;src/travel_render.c:99: party_world_reset(s->next_stage==TRAVEL_ROAD?(1u<<(s->facing<2u?s->facing^1u:s->facing)):0u);
+    00000765 F8 03            [12] 1551 	ldhl	sp,#3
+    00000767 2A               [ 8] 1552 	ld	a, (hl+)
+    00000768 5F               [ 4] 1553 	ld	e, a
+    00000769 56               [ 8] 1554 	ld	d, (hl)
+    0000076A 21 12 00         [12] 1555 	ld	hl, #0x0012
+    0000076D 19               [ 8] 1556 	add	hl, de
+    0000076E 4D               [ 4] 1557 	ld	c, l
+    0000076F 44               [ 4] 1558 	ld	b, h
+    00000770 0A               [ 8] 1559 	ld	a, (bc)
+    00000771 D6 02            [ 8] 1560 	sub	a, #0x02
+    00000773 20 1E            [12] 1561 	jr	NZ, 00122$
+    00000775 F8 03            [12] 1562 	ldhl	sp,#3
+    00000777 2A               [ 8] 1563 	ld	a, (hl+)
+    00000778 5F               [ 4] 1564 	ld	e, a
+    00000779 56               [ 8] 1565 	ld	d, (hl)
+    0000077A 21 14 00         [12] 1566 	ld	hl, #0x0014
+    0000077D 19               [ 8] 1567 	add	hl, de
+    0000077E 4D               [ 4] 1568 	ld	c, l
+    0000077F 44               [ 4] 1569 	ld	b, h
+    00000780 0A               [ 8] 1570 	ld	a, (bc)
+    00000781 FE 02            [ 8] 1571 	cp	a, #0x02
+    00000783 30 02            [12] 1572 	jr	NC, 00124$
+    00000785 EE 01            [ 8] 1573 	xor	a, #0x01
+    00000787                       1574 00124$:
+    00000787 47               [ 4] 1575 	ld	b, a
+    00000788 3E 01            [ 8] 1576 	ld	a, #0x01
+    0000078A 04               [ 4] 1577 	inc	b
+    0000078B 18 01            [12] 1578 	jr	00200$
+    0000078D                       1579 00199$:
+    0000078D 87               [ 4] 1580 	add	a, a
+    0000078E                       1581 00200$:
+    0000078E 05               [ 4] 1582 	dec	b
+    0000078F 20 FC            [12] 1583 	jr	NZ,00199$
+    00000791 18 01            [12] 1584 	jr	00123$
+    00000793                       1585 00122$:
+    00000793 AF               [ 4] 1586 	xor	a, a
+    00000794                       1587 00123$:
+    00000794 F5               [16] 1588 	push	af
+    00000795 33               [ 8] 1589 	inc	sp
+    00000796 1Er00            [ 8] 1590 	ld	e, #b_party_world_reset
+    00000798 21r00r00         [12] 1591 	ld	hl, #_party_world_reset
+    0000079B CDr00r00         [24] 1592 	call	___sdcc_bcall_ehl
+    0000079E 33               [ 8] 1593 	inc	sp
+    0000079F                       1594 00110$:
+                                   1595 ;src/travel_render.c:93: world_select(s->map);world_load_graphics();world_terrain_sync(s->x,s->y);
+    0000079F F8 0D            [12] 1596 	ldhl	sp,	#13
+    000007A1 7E               [ 8] 1597 	ld	a, (hl)
+    000007A2 F8 01            [12] 1598 	ldhl	sp,	#1
+    000007A4 77               [ 8] 1599 	ld	(hl), a
+    000007A5 F8 0E            [12] 1600 	ldhl	sp,	#14
+    000007A7 7E               [ 8] 1601 	ld	a, (hl)
+    000007A8 F8 02            [12] 1602 	ldhl	sp,	#2
+                                   1603 ;src/travel_render.c:102: if(s->space_visible)draw_space(s,full);
+    000007AA 32               [ 8] 1604 	ld	(hl-), a
+    000007AB 2A               [ 8] 1605 	ld	a, (hl+)
+    000007AC 5F               [ 4] 1606 	ld	e, a
+    000007AD 56               [ 8] 1607 	ld	d, (hl)
+    000007AE 21 1E 00         [12] 1608 	ld	hl, #0x001e
+    000007B1 19               [ 8] 1609 	add	hl, de
+    000007B2 4D               [ 4] 1610 	ld	c, l
+    000007B3 44               [ 4] 1611 	ld	b, h
+    000007B4 0A               [ 8] 1612 	ld	a, (bc)
+    000007B5 F8 06            [12] 1613 	ldhl	sp,	#6
+    000007B7 77               [ 8] 1614 	ld	(hl), a
+    000007B8 7E               [ 8] 1615 	ld	a, (hl)
+    000007B9 B7               [ 4] 1616 	or	a, a
+    000007BA 28 0B            [12] 1617 	jr	Z, 00112$
+    000007BC F8 00            [12] 1618 	ldhl	sp,	#0
+    000007BE 2A               [ 8] 1619 	ld	a, (hl+)
+    000007BF 5E               [ 8] 1620 	ld	e, (hl)
+    000007C0 23               [ 8] 1621 	inc	hl
+    000007C1 56               [ 8] 1622 	ld	d, (hl)
+    000007C2 CDrCFr05         [24] 1623 	call	_draw_space
+    000007C5 18 62            [12] 1624 	jr	00113$
+    000007C7                       1625 00112$:
+                                   1626 ;src/travel_render.c:103: else world_draw((s->x+2048u-80u)&2047u,(s->y+1536u-80u)%1536u,full);
+    000007C7 F8 01            [12] 1627 	ldhl	sp,#1
+    000007C9 2A               [ 8] 1628 	ld	a, (hl+)
+    000007CA 5F               [ 4] 1629 	ld	e, a
+    000007CB 56               [ 8] 1630 	ld	d, (hl)
+    000007CC 21 02 00         [12] 1631 	ld	hl, #0x0002
+    000007CF 19               [ 8] 1632 	add	hl, de
+    000007D0 E5               [16] 1633 	push	hl
+    000007D1 7D               [ 4] 1634 	ld	a, l
+    000007D2 F8 07            [12] 1635 	ldhl	sp,	#7
+    000007D4 77               [ 8] 1636 	ld	(hl), a
+    000007D5 E1               [12] 1637 	pop	hl
+    000007D6 7C               [ 4] 1638 	ld	a, h
+    000007D7 F8 06            [12] 1639 	ldhl	sp,	#6
+    000007D9 32               [ 8] 1640 	ld	(hl-), a
+    000007DA 2A               [ 8] 1641 	ld	a, (hl+)
+    000007DB 5F               [ 4] 1642 	ld	e, a
+    000007DC 3A               [ 8] 1643 	ld	a, (hl-)
+    000007DD 57               [ 4] 1644 	ld	d, a
+    000007DE 1A               [ 8] 1645 	ld	a, (de)
+    000007DF 22               [ 8] 1646 	ld	(hl+), a
+    000007E0 13               [ 8] 1647 	inc	de
+    000007E1 1A               [ 8] 1648 	ld	a, (de)
+    000007E2 32               [ 8] 1649 	ld	(hl-), a
+    000007E3 3A               [ 8] 1650 	ld	a, (hl-)
+    000007E4 2B               [ 8] 1651 	dec	hl
+    000007E5 77               [ 8] 1652 	ld	(hl), a
+    000007E6 F8 06            [12] 1653 	ldhl	sp,	#6
+    000007E8 3A               [ 8] 1654 	ld	a, (hl-)
+    000007E9 2B               [ 8] 1655 	dec	hl
+    000007EA 32               [ 8] 1656 	ld	(hl-), a
+    000007EB 2A               [ 8] 1657 	ld	a, (hl+)
+    000007EC 5F               [ 4] 1658 	ld	e, a
+    000007ED 56               [ 8] 1659 	ld	d, (hl)
+    000007EE 21 B0 05         [12] 1660 	ld	hl, #0x05b0
+    000007F1 19               [ 8] 1661 	add	hl, de
+    000007F2 E5               [16] 1662 	push	hl
+    000007F3 7D               [ 4] 1663 	ld	a, l
+    000007F4 F8 07            [12] 1664 	ldhl	sp,	#7
+    000007F6 77               [ 8] 1665 	ld	(hl), a
+    000007F7 E1               [12] 1666 	pop	hl
+    000007F8 7C               [ 4] 1667 	ld	a, h
+    000007F9 F8 06            [12] 1668 	ldhl	sp,	#6
+    000007FB 32               [ 8] 1669 	ld	(hl-), a
+    000007FC 01 00 06         [12] 1670 	ld	bc, #0x0600
+    000007FF 2A               [ 8] 1671 	ld	a, (hl+)
+    00000800 5F               [ 4] 1672 	ld	e, a
+    00000801 56               [ 8] 1673 	ld	d, (hl)
+    00000802 CDr00r00         [24] 1674 	call	__moduint
+    00000805 F8 01            [12] 1675 	ldhl	sp,#1
+    00000807 2A               [ 8] 1676 	ld	a, (hl+)
+    00000808 5F               [ 4] 1677 	ld	e, a
+    00000809 56               [ 8] 1678 	ld	d, (hl)
+    0000080A 1A               [ 8] 1679 	ld	a, (de)
+    0000080B 6F               [ 4] 1680 	ld	l, a
+    0000080C 13               [ 8] 1681 	inc	de
+    0000080D 1A               [ 8] 1682 	ld	a, (de)
+    0000080E 67               [ 4] 1683 	ld	h, a
+    0000080F 11 B0 07         [12] 1684 	ld	de, #0x07b0
+    00000812 19               [ 8] 1685 	add	hl, de
+    00000813 5D               [ 4] 1686 	ld	e, l
+    00000814 7C               [ 4] 1687 	ld	a, h
+    00000815 E6 07            [ 8] 1688 	and	a, #0x07
+    00000817 F8 00            [12] 1689 	ldhl	sp,	#0
+    00000819 66               [ 8] 1690 	ld	h, (hl)
+    0000081A E5               [16] 1691 	push	hl
+    0000081B 33               [ 8] 1692 	inc	sp
+    0000081C C5               [16] 1693 	push	bc
+    0000081D 57               [ 4] 1694 	ld	d, a
+    0000081E D5               [16] 1695 	push	de
+    0000081F 1Er00            [ 8] 1696 	ld	e, #b_world_draw
+    00000821 21r00r00         [12] 1697 	ld	hl, #_world_draw
+    00000824 CDr00r00         [24] 1698 	call	___sdcc_bcall_ehl
+    00000827 E8 05            [16] 1699 	add	sp, #5
+    00000829                       1700 00113$:
+                                   1701 ;src/travel_render.c:104: if(!s->ship_mode)party_world_draw();
+    00000829 F8 01            [12] 1702 	ldhl	sp,#1
+    0000082B 2A               [ 8] 1703 	ld	a, (hl+)
+    0000082C 5F               [ 4] 1704 	ld	e, a
+    0000082D 56               [ 8] 1705 	ld	d, (hl)
+    0000082E 21 15 00         [12] 1706 	ld	hl, #0x0015
+    00000831 19               [ 8] 1707 	add	hl, de
+    00000832 4D               [ 4] 1708 	ld	c, l
+    00000833 44               [ 4] 1709 	ld	b, h
+    00000834 0A               [ 8] 1710 	ld	a, (bc)
+    00000835 B7               [ 4] 1711 	or	a, a
+    00000836 20 08            [12] 1712 	jr	NZ, 00115$
+    00000838 1Er00            [ 8] 1713 	ld	e, #b_party_world_draw
+    0000083A 21r00r00         [12] 1714 	ld	hl, #_party_world_draw
+    0000083D CDr00r00         [24] 1715 	call	___sdcc_bcall_ehl
+    00000840                       1716 00115$:
+                                   1717 ;src/travel_render.c:105: if(flags&TRAVEL_PALETTE)palettes(s);
+    00000840 E5               [16] 1718 	push	hl
+    00000841 F8 11            [12] 1719 	ldhl	sp,	#17
+    00000843 CB 56            [12] 1720 	bit	2, (hl)
+    00000845 E1               [12] 1721 	pop	hl
+    00000846 28 08            [12] 1722 	jr	Z, 00117$
+    00000848 F8 01            [12] 1723 	ldhl	sp,	#1
+    0000084A 2A               [ 8] 1724 	ld	a, (hl+)
+    0000084B 5F               [ 4] 1725 	ld	e, a
+    0000084C 56               [ 8] 1726 	ld	d, (hl)
+    0000084D CDr0Cr03         [24] 1727 	call	_palettes
+    00000850                       1728 00117$:
+                                   1729 ;src/travel_render.c:106: SHOW_BKG;SHOW_SPRITES;
+    00000850 F0r00            [12] 1730 	ldh	a, (_LCDC_REG + 0)
+    00000852 F6 01            [ 8] 1731 	or	a, #0x01
+    00000854 E0r00            [12] 1732 	ldh	(_LCDC_REG + 0), a
+    00000856 F0r00            [12] 1733 	ldh	a, (_LCDC_REG + 0)
+    00000858 F6 02            [ 8] 1734 	or	a, #0x02
+    0000085A E0r00            [12] 1735 	ldh	(_LCDC_REG + 0), a
+                                   1736 ;src/travel_render.c:107: if(full)DISPLAY_ON;
+    0000085C F8 00            [12] 1737 	ldhl	sp,	#0
+    0000085E 7E               [ 8] 1738 	ld	a, (hl)
+    0000085F B7               [ 4] 1739 	or	a, a
+    00000860 28 06            [12] 1740 	jr	Z, 00120$
+    00000862 F0r00            [12] 1741 	ldh	a, (_LCDC_REG + 0)
+    00000864 F6 80            [ 8] 1742 	or	a, #0x80
+    00000866 E0r00            [12] 1743 	ldh	(_LCDC_REG + 0), a
+    00000868                       1744 00120$:
+                                   1745 ;src/travel_render.c:108: }
+    00000868 E8 07            [16] 1746 	add	sp, #7
+    0000086A C9               [16] 1747 	ret
+                                   1748 	.area _CODE_119
+                                   1749 	.area _INITIALIZER
+    00000000                       1750 __xinit__last_space_scroll:
+    00000000 FF                    1751 	.db #0xff	; 255
+                                   1752 	.area _CABS (ABS)

@@ -1,0 +1,443 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "ordinary_initial_poses": 72,
+  "opaque_pixels": 66614,
+  "eight_palette_rgb_mismatches": 19351,
+  "six_palette_rgb_mismatches": 20067,
+  "source_flash_class_mismatches": 0,
+  "records": [
+    {
+      "enemy": 1,
+      "opaque_pixels": 266,
+      "eight_palette_rgb_mismatches": 70,
+      "six_palette_rgb_mismatches": 70
+    },
+    {
+      "enemy": 2,
+      "opaque_pixels": 147,
+      "eight_palette_rgb_mismatches": 20,
+      "six_palette_rgb_mismatches": 20
+    },
+    {
+      "enemy": 3,
+      "opaque_pixels": 327,
+      "eight_palette_rgb_mismatches": 80,
+      "six_palette_rgb_mismatches": 80
+    },
+    {
+      "enemy": 4,
+      "opaque_pixels": 448,
+      "eight_palette_rgb_mismatches": 71,
+      "six_palette_rgb_mismatches": 71
+    },
+    {
+      "enemy": 5,
+      "opaque_pixels": 422,
+      "eight_palette_rgb_mismatches": 129,
+      "six_palette_rgb_mismatches": 129
+    },
+    {
+      "enemy": 6,
+      "opaque_pixels": 422,
+      "eight_palette_rgb_mismatches": 131,
+      "six_palette_rgb_mismatches": 131
+    },
+    {
+      "enemy": 7,
+      "opaque_pixels": 147,
+      "eight_palette_rgb_mismatches": 26,
+      "six_palette_rgb_mismatches": 26
+    },
+    {
+      "enemy": 8,
+      "opaque_pixels": 629,
+      "eight_palette_rgb_mismatches": 253,
+      "six_palette_rgb_mismatches": 253
+    },
+    {
+      "enemy": 9,
+      "opaque_pixels": 327,
+      "eight_palette_rgb_mismatches": 77,
+      "six_palette_rgb_mismatches": 77
+    },
+    {
+      "enemy": 10,
+      "opaque_pixels": 448,
+      "eight_palette_rgb_mismatches": 72,
+      "six_palette_rgb_mismatches": 72
+    },
+    {
+      "enemy": 11,
+      "opaque_pixels": 422,
+      "eight_palette_rgb_mismatches": 142,
+      "six_palette_rgb_mismatches": 142
+    },
+    {
+      "enemy": 12,
+      "opaque_pixels": 629,
+      "eight_palette_rgb_mismatches": 240,
+      "six_palette_rgb_mismatches": 240
+    },
+    {
+      "enemy": 13,
+      "opaque_pixels": 266,
+      "eight_palette_rgb_mismatches": 68,
+      "six_palette_rgb_mismatches": 68
+    },
+    {
+      "enemy": 14,
+      "opaque_pixels": 200,
+      "eight_palette_rgb_mismatches": 61,
+      "six_palette_rgb_mismatches": 61
+    },
+    {
+      "enemy": 15,
+      "opaque_pixels": 610,
+      "eight_palette_rgb_mismatches": 230,
+      "six_palette_rgb_mismatches": 230
+    },
+    {
+      "enemy": 16,
+      "opaque_pixels": 327,
+      "eight_palette_rgb_mismatches": 89,
+      "six_palette_rgb_mismatches": 89
+    },
+    {
+      "enemy": 17,
+      "opaque_pixels": 147,
+      "eight_palette_rgb_mismatches": 20,
+      "six_palette_rgb_mismatches": 20
+    },
+    {
+      "enemy": 18,
+      "opaque_pixels": 632,
+      "eight_palette_rgb_mismatches": 124,
+      "six_palette_rgb_mismatches": 124
+    },
+    {
+      "enemy": 19,
+      "opaque_pixels": 558,
+      "eight_palette_rgb_mismatches": 168,
+      "six_palette_rgb_mismatches": 168
+    },
+    {
+      "enemy": 20,
+      "opaque_pixels": 899,
+      "eight_palette_rgb_mismatches": 321,
+      "six_palette_rgb_mismatches": 337
+    },
+    {
+      "enemy": 21,
+      "opaque_pixels": 571,
+      "eight_palette_rgb_mismatches": 121,
+      "six_palette_rgb_mismatches": 123
+    },
+    {
+      "enemy": 22,
+      "opaque_pixels": 1242,
+      "eight_palette_rgb_mismatches": 238,
+      "six_palette_rgb_mismatches": 238
+    },
+    {
+      "enemy": 23,
+      "opaque_pixels": 958,
+      "eight_palette_rgb_mismatches": 354,
+      "six_palette_rgb_mismatches": 356
+    },
+    {
+      "enemy": 24,
+      "opaque_pixels": 631,
+      "eight_palette_rgb_mismatches": 106,
+      "six_palette_rgb_mismatches": 118
+    },
+    {
+      "enemy": 25,
+      "opaque_pixels": 1242,
+      "eight_palette_rgb_mismatches": 239,
+      "six_palette_rgb_mismatches": 239
+    },
+    {
+      "enemy": 26,
+      "opaque_pixels": 899,
+      "eight_palette_rgb_mismatches": 281,
+      "six_palette_rgb_mismatches": 329
+    },
+    {
+      "enemy": 27,
+      "opaque_pixels": 561,
+      "eight_palette_rgb_mismatches": 145,
+      "six_palette_rgb_mismatches": 145
+    },
+    {
+      "enemy": 28,
+      "opaque_pixels": 200,
+      "eight_palette_rgb_mismatches": 51,
+      "six_palette_rgb_mismatches": 51
+    },
+    {
+      "enemy": 29,
+      "opaque_pixels": 632,
+      "eight_palette_rgb_mismatches": 132,
+      "six_palette_rgb_mismatches": 132
+    },
+    {
+      "enemy": 30,
+      "opaque_pixels": 2075,
+      "eight_palette_rgb_mismatches": 841,
+      "six_palette_rgb_mismatches": 881
+    },
+    {
+      "enemy": 31,
+      "opaque_pixels": 717,
+      "eight_palette_rgb_mismatches": 201,
+      "six_palette_rgb_mismatches": 201
+    },
+    {
+      "enemy": 32,
+      "opaque_pixels": 490,
+      "eight_palette_rgb_mismatches": 74,
+      "six_palette_rgb_mismatches": 74
+    },
+    {
+      "enemy": 33,
+      "opaque_pixels": 558,
+      "eight_palette_rgb_mismatches": 157,
+      "six_palette_rgb_mismatches": 157
+    },
+    {
+      "enemy": 34,
+      "opaque_pixels": 571,
+      "eight_palette_rgb_mismatches": 120,
+      "six_palette_rgb_mismatches": 122
+    },
+    {
+      "enemy": 35,
+      "opaque_pixels": 631,
+      "eight_palette_rgb_mismatches": 54,
+      "six_palette_rgb_mismatches": 59
+    },
+    {
+      "enemy": 36,
+      "opaque_pixels": 490,
+      "eight_palette_rgb_mismatches": 139,
+      "six_palette_rgb_mismatches": 139
+    },
+    {
+      "enemy": 37,
+      "opaque_pixels": 958,
+      "eight_palette_rgb_mismatches": 354,
+      "six_palette_rgb_mismatches": 356
+    },
+    {
+      "enemy": 38,
+      "opaque_pixels": 1480,
+      "eight_palette_rgb_mismatches": 450,
+      "six_palette_rgb_mismatches": 450
+    },
+    {
+      "enemy": 39,
+      "opaque_pixels": 200,
+      "eight_palette_rgb_mismatches": 66,
+      "six_palette_rgb_mismatches": 66
+    },
+    {
+      "enemy": 40,
+      "opaque_pixels": 571,
+      "eight_palette_rgb_mismatches": 122,
+      "six_palette_rgb_mismatches": 125
+    },
+    {
+      "enemy": 41,
+      "opaque_pixels": 1125,
+      "eight_palette_rgb_mismatches": 384,
+      "six_palette_rgb_mismatches": 402
+    },
+    {
+      "enemy": 42,
+      "opaque_pixels": 631,
+      "eight_palette_rgb_mismatches": 59,
+      "six_palette_rgb_mismatches": 69
+    },
+    {
+      "enemy": 43,
+      "opaque_pixels": 561,
+      "eight_palette_rgb_mismatches": 175,
+      "six_palette_rgb_mismatches": 174
+    },
+    {
+      "enemy": 44,
+      "opaque_pixels": 717,
+      "eight_palette_rgb_mismatches": 195,
+      "six_palette_rgb_mismatches": 195
+    },
+    {
+      "enemy": 45,
+      "opaque_pixels": 717,
+      "eight_palette_rgb_mismatches": 173,
+      "six_palette_rgb_mismatches": 173
+    },
+    {
+      "enemy": 46,
+      "opaque_pixels": 811,
+      "eight_palette_rgb_mismatches": 136,
+      "six_palette_rgb_mismatches": 138
+    },
+    {
+      "enemy": 47,
+      "opaque_pixels": 1063,
+      "eight_palette_rgb_mismatches": 494,
+      "six_palette_rgb_mismatches": 504
+    },
+    {
+      "enemy": 48,
+      "opaque_pixels": 1480,
+      "eight_palette_rgb_mismatches": 455,
+      "six_palette_rgb_mismatches": 455
+    },
+    {
+      "enemy": 49,
+      "opaque_pixels": 558,
+      "eight_palette_rgb_mismatches": 248,
+      "six_palette_rgb_mismatches": 248
+    },
+    {
+      "enemy": 50,
+      "opaque_pixels": 2147,
+      "eight_palette_rgb_mismatches": 635,
+      "six_palette_rgb_mismatches": 639
+    },
+    {
+      "enemy": 51,
+      "opaque_pixels": 811,
+      "eight_palette_rgb_mismatches": 110,
+      "six_palette_rgb_mismatches": 110
+    },
+    {
+      "enemy": 52,
+      "opaque_pixels": 1125,
+      "eight_palette_rgb_mismatches": 341,
+      "six_palette_rgb_mismatches": 322
+    },
+    {
+      "enemy": 53,
+      "opaque_pixels": 2147,
+      "eight_palette_rgb_mismatches": 609,
+      "six_palette_rgb_mismatches": 613
+    },
+    {
+      "enemy": 54,
+      "opaque_pixels": 1480,
+      "eight_palette_rgb_mismatches": 447,
+      "six_palette_rgb_mismatches": 447
+    },
+    {
+      "enemy": 55,
+      "opaque_pixels": 1629,
+      "eight_palette_rgb_mismatches": 384,
+      "six_palette_rgb_mismatches": 424
+    },
+    {
+      "enemy": 56,
+      "opaque_pixels": 1063,
+      "eight_palette_rgb_mismatches": 355,
+      "six_palette_rgb_mismatches": 474
+    },
+    {
+      "enemy": 57,
+      "opaque_pixels": 1193,
+      "eight_palette_rgb_mismatches": 499,
+      "six_palette_rgb_mismatches": 484
+    },
+    {
+      "enemy": 58,
+      "opaque_pixels": 985,
+      "eight_palette_rgb_mismatches": 304,
+      "six_palette_rgb_mismatches": 304
+    },
+    {
+      "enemy": 59,
+      "opaque_pixels": 985,
+      "eight_palette_rgb_mismatches": 379,
+      "six_palette_rgb_mismatches": 379
+    },
+    {
+      "enemy": 60,
+      "opaque_pixels": 2558,
+      "eight_palette_rgb_mismatches": 686,
+      "six_palette_rgb_mismatches": 810
+    },
+    {
+      "enemy": 61,
+      "opaque_pixels": 2558,
+      "eight_palette_rgb_mismatches": 561,
+      "six_palette_rgb_mismatches": 619
+    },
+    {
+      "enemy": 62,
+      "opaque_pixels": 968,
+      "eight_palette_rgb_mismatches": 376,
+      "six_palette_rgb_mismatches": 376
+    },
+    {
+      "enemy": 63,
+      "opaque_pixels": 2075,
+      "eight_palette_rgb_mismatches": 743,
+      "six_palette_rgb_mismatches": 774
+    },
+    {
+      "enemy": 64,
+      "opaque_pixels": 1193,
+      "eight_palette_rgb_mismatches": 453,
+      "six_palette_rgb_mismatches": 466
+    },
+    {
+      "enemy": 65,
+      "opaque_pixels": 1629,
+      "eight_palette_rgb_mismatches": 405,
+      "six_palette_rgb_mismatches": 445
+    },
+    {
+      "enemy": 66,
+      "opaque_pixels": 2147,
+      "eight_palette_rgb_mismatches": 593,
+      "six_palette_rgb_mismatches": 597
+    },
+    {
+      "enemy": 67,
+      "opaque_pixels": 1241,
+      "eight_palette_rgb_mismatches": 569,
+      "six_palette_rgb_mismatches": 569
+    },
+    {
+      "enemy": 68,
+      "opaque_pixels": 2558,
+      "eight_palette_rgb_mismatches": 671,
+      "six_palette_rgb_mismatches": 723
+    },
+    {
+      "enemy": 69,
+      "opaque_pixels": 2558,
+      "eight_palette_rgb_mismatches": 539,
+      "six_palette_rgb_mismatches": 629
+    },
+    {
+      "enemy": 70,
+      "opaque_pixels": 383,
+      "eight_palette_rgb_mismatches": 161,
+      "six_palette_rgb_mismatches": 161
+    },
+    {
+      "enemy": 71,
+      "opaque_pixels": 968,
+      "eight_palette_rgb_mismatches": 336,
+      "six_palette_rgb_mismatches": 336
+    },
+    {
+      "enemy": 74,
+      "opaque_pixels": 600,
+      "eight_palette_rgb_mismatches": 239,
+      "six_palette_rgb_mismatches": 239
+    }
+  ],
+  "scope": "RGB adaptation of source first poses at unlit/common floor palette0; every conversion asserts exact source flash class for every opaque pixel. Additional floor/physical poses are tested by the native renderer."
+}

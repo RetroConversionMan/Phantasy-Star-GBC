@@ -1,0 +1,102 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-TEXT",
+    "bytes": 4194304,
+    "sha256": "fcdd9b2fc64b746066c9df938f62a84e80aeec48a576c0b2d47c4f84b6b7b9e2",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    {
+      "opening": "Original title, full unskipped pan/city/three-record narrative, then source newgame",
+      "pan_source_changes": 223,
+      "pan_emulator_frames": 224,
+      "story_records": [
+        [
+          4,
+          0,
+          62619
+        ],
+        [
+          4,
+          1,
+          62716
+        ],
+        [
+          4,
+          2,
+          62933
+        ]
+      ]
+    },
+    {
+      "ending": "Actual MiracleKey/door, DarkFalz combat, ending choice, sky/text/story/bitmap",
+      "credits_verified": true,
+      "stopped_before_credits": false,
+      "story_records": [
+        [
+          6,
+          3,
+          63976
+        ],
+        [
+          6,
+          5,
+          63984
+        ],
+        [
+          6,
+          6,
+          63995
+        ],
+        [
+          6,
+          4,
+          64006
+        ],
+        [
+          6,
+          3,
+          64018
+        ],
+        [
+          6,
+          3,
+          64084
+        ]
+      ],
+      "closing_texts": [
+        48822,
+        48848,
+        48872,
+        48893,
+        48905,
+        48929
+      ],
+      "stages": [
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "SRAM fixture:floor31/DE facing original DarkFalz doorCE, MiracleKey,4strong party, prior Shadow/Lassic flags; no DarkFalz outcome or ending state injected"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

@@ -1,0 +1,129 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _battle_overlay_065                                             00000000 GR
+  8 _battle_overlay_066                                             000000AA GR
+  8 _battle_overlay_067                                             00000154 GR
+  8 _battle_overlay_068                                             000001FE GR
+  8 _battle_overlay_069                                             000002A8 GR
+  8 _battle_overlay_070                                             00000352 GR
+  8 _battle_overlay_071                                             000003FC GR
+  8 _battle_overlay_072                                             000004A6 GR
+  8 _battle_overlay_073                                             00000550 GR
+  8 _battle_overlay_074                                             000005FA GR
+  8 _battle_overlay_076                                             000006A4 GR
+  8 _battle_overlay_077                                             0000073A GR
+  8 _battle_overlay_078                                             000007D0 GR
+  8 _battle_overlay_079                                             00000866 GR
+  8 _battle_overlay_080                                             000008FC GR
+  8 _battle_overlay_081                                             00000992 GR
+  8 _battle_overlay_082                                             00000A28 GR
+  8 _battle_overlay_083                                             00000ABE GR
+  8 _battle_overlay_084                                             00000B54 GR
+  8 _battle_overlay_085                                             00000BEA GR
+  8 _battle_overlay_086                                             00000C80 GR
+  8 _battle_overlay_087                                             00000CF8 GR
+  8 _battle_overlay_088                                             00000D66 GR
+  8 _battle_overlay_089                                             00000DF2 GR
+  8 _battle_overlay_090                                             00000EBF GR
+  8 _battle_overlay_091                                             00000F8C GR
+  8 _battle_overlay_092                                             00001059 GR
+  8 _battle_overlay_093                                             00001126 GR
+  8 _battle_overlay_094                                             000011F3 GR
+  8 _battle_overlay_095                                             000012C0 GR
+  8 _battle_overlay_096                                             0000138D GR
+  8 _battle_overlay_097                                             0000145A GR
+  8 _battle_overlay_098                                             00001527 GR
+  8 _battle_overlay_099                                             000015F4 GR
+  8 _battle_overlay_100                                             000016C1 GR
+  8 _battle_overlay_101                                             0000175C GR
+  8 _battle_overlay_102                                             000017DE GR
+  8 _battle_overlay_103                                             0000186A GR
+  8 _battle_overlay_104                                             000018FB GR
+  8 _battle_overlay_105                                             0000198C GR
+  8 _battle_overlay_106                                             00001A1D GR
+  8 _battle_overlay_107                                             00001AAE GR
+  8 _battle_overlay_108                                             00001B3F GR
+  8 _battle_overlay_109                                             00001BD0 GR
+  8 _battle_overlay_110                                             00001C61 GR
+  8 _battle_overlay_111                                             00001CF2 GR
+  8 _battle_overlay_112                                             00001D83 GR
+  8 _battle_overlay_113                                             00001E14 GR
+  8 _battle_overlay_114                                             00001EA5 GR
+  8 _battle_overlay_115                                             00001F3B GR
+  8 _battle_overlay_116                                             00001FBD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _battle_overlay_117                                             00002067 GR
+  8 _battle_overlay_118                                             00002111 GR
+  8 _battle_overlay_119                                             000021BB GR
+  8 _battle_overlay_120                                             00002265 GR
+  8 _battle_overlay_121                                             0000230F GR
+  8 _battle_overlay_122                                             000023B9 GR
+  8 _battle_overlay_123                                             00002463 GR
+  8 _battle_overlay_124                                             0000250D GR
+  8 _battle_overlay_125                                             000025B7 GR
+  8 _battle_overlay_126                                             00002661 GR
+  8 _battle_overlay_127                                             0000270B GR
+  8 _battle_overlay_128                                             000027C4 GR
+  8 _battle_overlay_129                                             0000287D GR
+  8 _battle_overlay_130                                             00002936 GR
+  8 _battle_overlay_131                                             000029EF GR
+  8 _battle_overlay_132                                             00002AA8 GR
+  8 _battle_overlay_133                                             00002B61 GR
+  8 _battle_overlay_134                                             00002C1A GR
+  8 _battle_overlay_135                                             00002CD3 GR
+  8 _battle_overlay_136                                             00002D8C GR
+  8 _battle_overlay_137                                             00002E45 GR
+  8 _battle_overlay_138                                             00002EFE GR
+  8 _battle_overlay_139                                             00002F6C GR
+  8 _battle_overlay_140                                             00002FFD GR
+  8 _battle_overlay_141                                             0000308E GR
+  8 _battle_overlay_142                                             0000311F GR
+  8 _battle_overlay_143                                             000031B0 GR
+  8 _battle_overlay_144                                             00003241 GR
+  8 _battle_overlay_145                                             000032D2 GR
+  8 _battle_overlay_146                                             00003363 GR
+  8 _battle_overlay_147                                             000033F4 GR
+  8 _battle_overlay_148                                             00003485 GR
+  8 _battle_overlay_149                                             00003516 GR
+  8 _battle_overlay_150                                             000035A7 GR
+  8 _battle_overlay_151                                             00003651 GR
+  8 _battle_overlay_152                                             000036FB GR
+  8 _battle_overlay_153                                             000037A5 GR
+  8 _battle_overlay_154                                             0000384F GR
+  8 _battle_overlay_155                                             000038F9 GR
+  8 _battle_overlay_156                                             000039A3 GR
+  8 _battle_overlay_157                                             00003A4D GR
+  8 _battle_overlay_158                                             00003AF7 GR
+  8 _battle_overlay_159                                             00003BA1 GR
+  8 _battle_overlay_160                                             00003C4B GR
+  8 _battle_overlay_161                                             00003CF5 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_142                                  size     3D8B   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

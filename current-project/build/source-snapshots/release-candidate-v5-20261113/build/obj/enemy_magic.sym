@@ -1,0 +1,50 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _bank_copy                                                      ******** GX
+    _bank_read8                                                     ******** GX
+  8 _enemy_magic_animation                                          00000038 GR
+    _enemy_magic_animations                                         ******** GX
+  8 _enemy_magic_asset                                              0000025E GR
+  8 _enemy_magic_begin                                              00000061 GR
+    _enemy_magic_effect_lookup                                      ******** GX
+    _enemy_magic_effects                                            ******** GX
+    _enemy_magic_enemies                                            ******** GX
+    _enemy_magic_kinds                                              ******** GX
+  8 _enemy_magic_pose                                               000001F8 GR
+    _enemy_magic_pose_keys                                          ******** GX
+    _enemy_magic_pose_lookup                                        ******** GX
+  8 _enemy_magic_sound                                              000001E2 GR
+  8 _enemy_magic_tick                                               00000133 GR
+  8 _index_for                                                      00000000 R
+  8 _read_word                                                      00000024 R
+    b_enemy_magic_animation                                     =   0000001F G
+    b_enemy_magic_asset                                         =   0000001F G
+    b_enemy_magic_begin                                         =   0000001F G
+    b_enemy_magic_pose                                          =   0000001F G
+    b_enemy_magic_sound                                         =   0000001F G
+    b_enemy_magic_tick                                          =   0000001F G
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_31                                   size      2EC   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

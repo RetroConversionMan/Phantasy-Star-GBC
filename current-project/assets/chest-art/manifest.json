@@ -1,0 +1,207 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_bank": 115,
+  "data_bytes": 4392,
+  "records": [
+    {
+      "source_sprites": 23,
+      "source_metatile_pointer": 40284,
+      "source_bbox": [
+        104,
+        107,
+        152,
+        136
+      ],
+      "frame": 58,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 99,
+      "data_sha256": "7254743a6d81b7bcca617fcdaa4a9b04299ecc20cb1cd22f054ace48380660a2"
+    },
+    {
+      "source_sprites": 23,
+      "source_metatile_pointer": 40354,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 59,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 132,
+      "data_sha256": "a06e5d6984a0fbd511af452990813bfc861413c66808a062fc214dda62a22947"
+    },
+    {
+      "source_sprites": 28,
+      "source_metatile_pointer": 40424,
+      "source_bbox": [
+        104,
+        97,
+        152,
+        136
+      ],
+      "frame": 60,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 86,
+      "data_sha256": "a2af69ccb0dd8c45b367a608b9e741b729671b5b1669cb84537ae1c59790b554"
+    },
+    {
+      "source_sprites": 22,
+      "source_metatile_pointer": 40509,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 61,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 92,
+      "data_sha256": "7d5b01200f2da0ac5f7bc39ef5cba35562f7b307f4dc89dd3b8f51a5ca50bd72"
+    },
+    {
+      "source_sprites": 22,
+      "source_metatile_pointer": 40576,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 62,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 105,
+      "data_sha256": "1fb9c5147eaa23ffe95b13c29dd3c7f19e5628e10b2b4743d1548584d89c661c"
+    },
+    {
+      "source_sprites": 22,
+      "source_metatile_pointer": 40643,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 63,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 156,
+      "data_sha256": "08c2e29e5c01100278061f4b24f78b17d6cae354049d132c44c75487d50fa359"
+    },
+    {
+      "source_sprites": 26,
+      "source_metatile_pointer": 40710,
+      "source_bbox": [
+        104,
+        98,
+        152,
+        137
+      ],
+      "frame": 64,
+      "tiles": 14,
+      "sprites": 14,
+      "quantized_pixels": 154,
+      "data_sha256": "84a135468828a9b932c1dfedc8a499094b9d3fc23a59aef56ded6efed7a4052a"
+    },
+    {
+      "source_sprites": 38,
+      "source_metatile_pointer": 40789,
+      "source_bbox": [
+        96,
+        89,
+        160,
+        137
+      ],
+      "frame": 65,
+      "tiles": 20,
+      "sprites": 20,
+      "quantized_pixels": 31,
+      "data_sha256": "fda7b051b17b276b2acc11a3517c2977959337cd2cf0683e04d9fbbbf3a207da"
+    },
+    {
+      "source_sprites": 24,
+      "source_metatile_pointer": 40904,
+      "source_bbox": [
+        104,
+        105,
+        160,
+        136
+      ],
+      "frame": 66,
+      "tiles": 14,
+      "sprites": 14,
+      "quantized_pixels": 127,
+      "data_sha256": "bbddc1cac299ad1c206333b621b040ac6a9c30dde52fba40c48de5eb2dca35e0"
+    },
+    {
+      "source_sprites": 22,
+      "source_metatile_pointer": 40977,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 67,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 97,
+      "data_sha256": "b9b9e4d58d431c325d152568737e8d4ccdd6533c0cd1a9288e45128d47ac2309"
+    },
+    {
+      "source_sprites": 22,
+      "source_metatile_pointer": 41044,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        136
+      ],
+      "frame": 68,
+      "tiles": 12,
+      "sprites": 12,
+      "quantized_pixels": 100,
+      "data_sha256": "cea34afea1eb217dff0d0d679c6030ab3fd6a36eb0fd9943a27cbd556df5b8da"
+    },
+    {
+      "source_sprites": 24,
+      "source_metatile_pointer": 41111,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        145
+      ],
+      "frame": 69,
+      "tiles": 14,
+      "sprites": 14,
+      "quantized_pixels": 121,
+      "data_sha256": "8852ba3a14b2867aa8f616c53c1e078defe6a32e3930a2a223d9e5d264a95d62"
+    },
+    {
+      "source_sprites": 30,
+      "source_metatile_pointer": 41184,
+      "source_bbox": [
+        104,
+        105,
+        152,
+        161
+      ],
+      "frame": 70,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 116,
+      "data_sha256": "e96fe6ae7e19971760038e38687975d1385dd6e138c2122d4136bda55ede8718"
+    }
+  ],
+  "limits": [
+    "Source-scaled poses, not an implemented source animation scheduler",
+    "Native 5/8 scaling and per-tile three-color quantization are explicit adaptations",
+    "Screen shake, trap damage, sound and chest rewards belong to caller gameplay"
+  ]
+}

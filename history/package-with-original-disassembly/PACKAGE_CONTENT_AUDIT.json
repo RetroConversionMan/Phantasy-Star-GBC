@@ -1,0 +1,332 @@
+{
+  "schema": 1,
+  "audited_at_UTC": "2026-11-13T14:18:39.140973+00:00",
+  "scope": "Independent read-only staged package audit. Production hashes, assembly index, retained trees, immutable proof closure, local document links and license preservation. No native build, emulator run, physical hardware test, or final ZIP CRC check performed in this audit. Root delivery documents/helpers and package-wide manifest were being finalized separately.",
+  "passed": true,
+  "production": {
+    "manifest_entries": 343,
+    "C_files": 262,
+    "headers": 80,
+    "file_set_exact": true,
+    "failures": []
+  },
+  "original_to_staged": [
+    {
+      "tree": "src",
+      "original_files_excluding_cache": 342,
+      "staged_files_excluding_cache": 342,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "build/obj",
+      "original_files_excluding_cache": 1048,
+      "staged_files_excluding_cache": 1048,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "upstream",
+      "original_files_excluding_cache": 53,
+      "staged_files_excluding_cache": 53,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "tools",
+      "original_files_excluding_cache": 162,
+      "staged_files_excluding_cache": 162,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "tests",
+      "original_files_excluding_cache": 16,
+      "staged_files_excluding_cache": 16,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "docs",
+      "original_files_excluding_cache": 22,
+      "staged_files_excluding_cache": 22,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "assets",
+      "original_files_excluding_cache": 14436,
+      "staged_files_excluding_cache": 14436,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": ".tools/gbdk",
+      "original_files_excluding_cache": 657,
+      "staged_files_excluding_cache": 657,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "build/sms-reference",
+      "original_files_excluding_cache": 44,
+      "staged_files_excluding_cache": 44,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "tree": "build/research",
+      "original_files_excluding_cache": 194,
+      "staged_files_excluding_cache": 194,
+      "missing": [],
+      "extra": [],
+      "changed": [],
+      "passed": true
+    }
+  ],
+  "objects": {
+    "counts": {
+      ".sym": 262,
+      ".o": 262,
+      ".lst": 262,
+      ".asm": 262
+    },
+    "frozen_object_failures": []
+  },
+  "baseline": {
+    "files": 45,
+    "file_set_exact": true,
+    "failures": []
+  },
+  "assembly_index": {
+    "native_modules": 262,
+    "Z80_modules": 31,
+    "metadata_counts_match": true,
+    "native_file_paths": 1310,
+    "native_file_set_exact": true,
+    "inline_files_present": true,
+    "original_assembly_set_exact": true,
+    "failures": []
+  },
+  "immutable_manifests": [
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/SHA256.json",
+      "entries": 1084,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-live-replay-b72feead/SHA256.json",
+      "entries": 22,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/SHA256.json",
+      "entries": 443,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/SHA256.json",
+      "entries": 37,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/independent-tool-review/SHA256.json",
+      "entries": 10,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/replay/SHA256.json",
+      "entries": 22,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/verification/release-v5-final-independent-audit/SHA256.json",
+      "entries": 2,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/verification/release-v5-story-independent-audit/SHA256.json",
+      "entries": 2,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/canonical-promotion-v5-20261113/SHA256.json",
+      "entries": 2003,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/canonical-promotion-v5-20261113/predecessor/SHA256.json",
+      "entries": 1725,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/completed-native-release-20261113/SHA256.json",
+      "entries": 28,
+      "failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-live-replay-b72feead/verification-tooling/FROZEN_TOOLS.json",
+      "entries": 4,
+      "scope": "listed tool files",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json",
+      "entries": 4,
+      "scope": "listed tool files",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/replay/verification-tooling/FROZEN_TOOLS.json",
+      "entries": 4,
+      "scope": "listed tool files",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json",
+      "entries": 4,
+      "scope": "listed tool files",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/driver-correction-001-torch-recovery/MANIFEST.json",
+      "entries": 2,
+      "scope": "listed manifest entries",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/driver-initial/MANIFEST.json",
+      "entries": 8,
+      "scope": "listed manifest entries",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/driver-final/MANIFEST.json",
+      "entries": 9,
+      "scope": "listed manifest entries",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/verification-tooling/MANIFEST.json",
+      "entries": 10,
+      "scope": "listed manifest entries",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/source-snapshots/release-candidate-v5-20261113/MANIFEST.json",
+      "entries": 343,
+      "scope": "listed manifest entries",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-campaign-story-20261113/MANIFEST.json",
+      "entries": 7,
+      "scope": "source campaign evidence and local summary",
+      "failures": [],
+      "summary_hash_passed": true,
+      "passed": true
+    }
+  ],
+  "license_preservation": {
+    "files": [
+      "current-project/docs/UPSTREAM_README.md",
+      "current-project/docs/GBDK-LICENSE.txt",
+      "current-project/upstream/ps1disasm/README.md",
+      "current-project/upstream/ps1disasm/binaries/LICENSE",
+      "current-project/.tools/wla-dx/LICENSE",
+      "current-project/.tools/gbdk/licenses/LICENSE_ihxcheck",
+      "current-project/.tools/gbdk/licenses/LICENSE_SDCC",
+      "current-project/.tools/gbdk/licenses/LICENSE_ZX0",
+      "current-project/.tools/gbdk/licenses/LICENSE_png2hicolorgb",
+      "current-project/.tools/gbdk/licenses/LICENSE_gbcompress",
+      "current-project/.tools/gbdk/licenses/LICENSE_romusage",
+      "current-project/.tools/gbdk/licenses/LICENSE_makecom",
+      "current-project/.tools/gbdk/licenses/LICENSE_bankpack",
+      "current-project/.tools/gbdk/licenses/LICENSE_GPLV2_LE",
+      "current-project/.tools/gbdk/licenses/LICENSE_crashhandler",
+      "current-project/.tools/gbdk/licenses/LICENSE_makebin",
+      "current-project/.tools/gbdk/licenses/LICENSE_lcc",
+      "current-project/.tools/gbdk/licenses/LICENSE_png2asset"
+    ],
+    "all_original_hashes_match": true,
+    "upstream_README_mirror_exact": true
+  },
+  "local_document_links": [
+    {
+      "document": "CONVERSION_GUIDE.md",
+      "local_links": 39,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "document": "BUILD_AND_TEST.md",
+      "local_links": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "document": "ASSEMBLY_INDEX.md",
+      "local_links": 1345,
+      "missing": [],
+      "passed": true
+    }
+  ],
+  "accepted_ROM_hashes": {
+    "ROM/Phantasy-Star-GBC.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "current-project/build/phantasy-star-gbc-world.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "current-project/releases/phantasy-star-gbc/Phantasy-Star-GBC.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "current-project/build/source-snapshots/release-candidate-v5-20261113/build/phantasy-star-gbc-world.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "accepted_ROM_hashes_match": true,
+  "symlinks": [],
+  "issues": []
+}

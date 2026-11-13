@@ -1,0 +1,119 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_bank": 118,
+  "data_bytes": 4608,
+  "records": [
+    {
+      "frame": 0,
+      "mode": 4,
+      "source_facing": 0,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 146,
+      "data_sha256": "bac8d6089674765ecc234603bc173aa05f3901c3a249da59a27f4289249dede6"
+    },
+    {
+      "frame": 1,
+      "mode": 4,
+      "source_facing": 1,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 146,
+      "data_sha256": "2e0bf6ce41b06e80dc146bc9c18e93a86012a09e7ef59f86266b83baa131d6fa"
+    },
+    {
+      "frame": 2,
+      "mode": 4,
+      "source_facing": 2,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 146,
+      "data_sha256": "fd406664d0433859c52a9ab5f6894fdd17515ea42748840983ca6acbc071906c"
+    },
+    {
+      "frame": 3,
+      "mode": 4,
+      "source_facing": 3,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 146,
+      "data_sha256": "5db2f90e1498dc9ac5fd95f1eb81e07f493cc82b10ae3ae44faa677f9f3858d4"
+    },
+    {
+      "frame": 4,
+      "mode": 8,
+      "source_facing": 0,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 215,
+      "data_sha256": "bf6ce796e9b66c56d426baad6cb91cb29780f0acf8d7580bc332b861d014745e"
+    },
+    {
+      "frame": 5,
+      "mode": 8,
+      "source_facing": 1,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 215,
+      "data_sha256": "e6c21587aaf9246bf42a35cd0f7161bf0d2591af5ad4bb1ce5307b1a18118bf6"
+    },
+    {
+      "frame": 6,
+      "mode": 8,
+      "source_facing": 2,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 215,
+      "data_sha256": "ee9a6408bf69cdec718341ebc71e96dff8acbd3dfc36817aecef9de4bf55e8de"
+    },
+    {
+      "frame": 7,
+      "mode": 8,
+      "source_facing": 3,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 215,
+      "data_sha256": "093ce49e941505e906251b36073ca52c0dbe68d90339b91ec83ae90b16e88b5a"
+    },
+    {
+      "frame": 8,
+      "mode": 12,
+      "source_facing": 0,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 222,
+      "data_sha256": "efeb72fda5fe737d14b7cd5163979f3b7d1cc8025c0a70badbf816dd9071496a"
+    },
+    {
+      "frame": 9,
+      "mode": 12,
+      "source_facing": 1,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 222,
+      "data_sha256": "73a6f4489d52a71214279853cc43fdffc444d7dcb699604a4242f720b112af9e"
+    },
+    {
+      "frame": 10,
+      "mode": 12,
+      "source_facing": 2,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 222,
+      "data_sha256": "7d79cb86aa108f4ce2bd0e589556ec2e32bfa6300c79b1707476c8cece7f91a1"
+    },
+    {
+      "frame": 11,
+      "mode": 12,
+      "source_facing": 3,
+      "tiles": 16,
+      "sprites": 16,
+      "quantized_pixels": 222,
+      "data_sha256": "03422bb754df97ef64109f9fecfe5e30089fa92c0032e4356b45f17486461909"
+    }
+  ],
+  "limits": [
+    "Original static directional frames; movement timing controlled by caller",
+    "Three-color per-tile quantization with eight shared OBJ palettes; original size and anchor preserved"
+  ]
+}

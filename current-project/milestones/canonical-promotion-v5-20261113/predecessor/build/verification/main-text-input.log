@@ -1,0 +1,12 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_dialogue_input.py", line 63, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_dialogue_input.py", line 56, in main
+    press('b');wait(lambda:state()==6,'B confirms selected YES');shot('b-confirms-yes');press('b');drain(1)
+                                                                                                   ^^^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_dialogue_input.py", line 41, in drain
+    assert state()==4,('drain',target,state())
+           ^^^^^^^^^^
+AssertionError: ('drain', 1, 6)

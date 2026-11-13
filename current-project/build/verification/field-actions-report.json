@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": 50726,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "scope": "Pure field/map spell and item actions; native menu/scene integration separate",
+  "verified": [
+    "Original MP timing including Rise cancel and invalid-context consumption",
+    "All256 door bytes for DungeonKey/MiracleKey/Open",
+    "All61floors*256ahead cells independently checked against original object records for Trap/Tele",
+    "Flash,Flute,Transfer,church destinations,food fullHP/dead behavior",
+    "Torch/Pot/Nuts,Prism projection and raw Myau status gates",
+    "Prepared chest Tele/Trap disarm/open without reroll"
+  ],
+  "remaining": [
+    "Vehicle geometry delegated",
+    "Alsulin/Polymaterial delegated to event controller",
+    "Prism/Myau flight/Torch scenes emitted for caller; not animated here",
+    "Battle use of Wand/Escaper/Hat/Sphere belongs battle controller"
+  ],
+  "inputs_sha256": {
+    "src/field_actions.c": "c231ed231f14ffa45ff8efc9847a130a94cab3f0cd45e3fdbb3ca1626e7eb60e",
+    "src/rpg.c": "f6f23ab3848aa108bf29048ae13746732533db1ead092893cdc3300005bd426b",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "src/battle.c": "820684dccf12afa872f97336b1fabc345a867915c8a69b404530aa5fc9f205a2",
+    "src/dungeon.c": "340513e6b552130bc9f49ee00d78f0b3dd8f23db3a3024b292acd0e61ab16327",
+    "src/dungeon_data.c": "5f9c450b65762b5d97df6b847fba2780fb991bef3ea5368cad3a910cf65bb211",
+    "src/bank_io.c": "534a7caaa9cc1a4ef0fb1f97d1fa39481c1a30e4cdf371bff37976bc03991a03",
+    "tests/test_field_actions.c": "cba7e9296c4318249ab26fb6f6916ed53228250e94836ae839c942e86f980456"
+  }
+}

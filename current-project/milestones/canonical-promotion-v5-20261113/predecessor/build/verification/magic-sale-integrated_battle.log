@@ -1,0 +1,132 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "873b30357cec0f8282c287f2ec7ad82bba19d4ca824f4ab657b634e490ac837d",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "attempts": [
+    {
+      "start_frame": 300,
+      "controller_steps": 71,
+      "encounter_dialogues": [
+        "0xb728",
+        "0xbd23"
+      ],
+      "enemy": 5,
+      "count": 2,
+      "encounter_position": [
+        1416,
+        896
+      ],
+      "initial_party": [
+        1,
+        16,
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": 2,
+      "final_party": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "start_frame": 317,
+      "controller_steps": 33,
+      "encounter_dialogues": [
+        "0xb71b",
+        "0xb604",
+        "0xbce1",
+        "0xb656",
+        "0xb648"
+      ],
+      "enemy": 1,
+      "count": 1,
+      "encounter_position": [
+        1416,
+        864
+      ],
+      "initial_party": [
+        1,
+        16,
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": 1,
+      "final_party": [
+        1,
+        15,
+        0,
+        2,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "checks": [
+    "Controller-only original Camineet exit and Palma grass movement trigger a natural source encounter",
+    "Level1 Alis wins using physical attacks without enemy, HP, inventory, money or RNG injection; actual EXP/chest money match source group rewards",
+    "Battle return preserves player location and restores399 world tile/attribute pairs",
+    "Power-cycle Continue restores post-battle HP, EXP, money, inventory, RNG, map, position and facing exactly"
+  ],
+  "injected_fixtures": [],
+  "campaign_complete": false,
+  "world_return_pairs": 399,
+  "passed": true
+}

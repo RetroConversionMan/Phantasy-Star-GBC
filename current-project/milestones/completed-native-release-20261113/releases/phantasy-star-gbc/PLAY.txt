@@ -1,0 +1,33 @@
+PHANTASY STAR — NATIVE GAME BOY COLOR PORT
+
+Open Phantasy-Star-GBC.gbc in a Game Boy Color emulator.
+This is a native GBC cartridge: 4 MiB, MBC5, 8 KiB battery-save memory.
+Keep your emulator's battery-save file when moving your game.
+
+CONTROLS
+D-pad: move or select.
+A or B while exploring: open the field menu at a movement boundary.
+A: choose or advance dialogue.
+B: return from menus; A or B confirms the highlighted Yes/No answer.
+Start: begin or use the menu/resume shortcut.
+Select: save after the current movement step.
+
+Five named save files are available. Save version5 includes vehicle state;
+version4 records remain readable. The old Camineet baseline is preserved
+separately and is not this cartridge.
+
+SOURCE AND VERIFICATION
+Full story and independent New Game-to-ending replay passed on this ROM.
+All 13 integration suites passed; independently earned save memory matches.
+Both ending titles match separate boots with their own earned saves.
+
+The complete working source, extraction tools and test evidence are in the
+current-project folder containing this releases directory. Read README.md,
+PROJECT_STATE.json and docs/PORT_STATUS.md there for the current proof status.
+SHA256SUMS.txt identifies this exact cartridge.
+
+Native adaptations are documented: screen resolution and palettes, GBC sound,
+RNG without the SMS CPU refresh-register contribution, slower large uploads,
+precomputed battle outcomes, and native dialogue-window closure.
+Physical hardware and a complete subjective listening review are untested.
+Original Phantasy Star content belongs to its respective rights holders.

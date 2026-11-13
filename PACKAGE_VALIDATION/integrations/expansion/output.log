@@ -1,0 +1,90 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "real_input_checks": [
+    "New game starts at original Camineet position with Alis HP16",
+    "Source-valid walking route triggers Suelo introduction and C501 flag",
+    "Nekise awards exactly one Laconian Pot; repeat visit preserves inventory",
+    "Status and inventory screens open by controller input and show acquired pot",
+    "Power-cycle Continue restores position, Suelo/Nekise flags, and Laconian Pot",
+    "Actual walking across Camineet exit changes to original Palma map"
+  ],
+  "injected_fixtures": [
+    "Set Alis HP to1 in WRAM solely to verify repeat Suelo healing; no battle occurred"
+  ],
+  "routes": [
+    {
+      "name": "Suelo introduction",
+      "start_cell": [
+        105,
+        18
+      ],
+      "destination_cell": [
+        102,
+        22
+      ],
+      "input_steps": 9
+    },
+    {
+      "name": "Suelo repeat",
+      "start_cell": [
+        101,
+        22
+      ],
+      "destination_cell": [
+        102,
+        22
+      ],
+      "input_steps": 1
+    },
+    {
+      "name": "Nekise and Laconian Pot",
+      "start_cell": [
+        101,
+        22
+      ],
+      "destination_cell": [
+        85,
+        16
+      ],
+      "input_steps": 22
+    },
+    {
+      "name": "Nekise repeat",
+      "start_cell": [
+        85,
+        17
+      ],
+      "destination_cell": [
+        85,
+        16
+      ],
+      "input_steps": 1
+    },
+    {
+      "name": "Camineet original exit",
+      "start_cell": [
+        85,
+        17
+      ],
+      "destination_cell": [
+        109,
+        23
+      ],
+      "input_steps": 30
+    }
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

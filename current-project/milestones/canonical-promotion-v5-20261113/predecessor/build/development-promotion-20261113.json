@@ -1,0 +1,10 @@
+{
+  "old_development_sha256": "dedacde430e190390dbedb7a4802b3275a20977a8c5a27f64867f8d56b4e03f8",
+  "old_preserved_milestone": "milestones/dungeon-motion-20261112",
+  "new_development_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa",
+  "source_snapshot": "build/source-snapshots/release-candidate-v2-20261113",
+  "baseline_45_files_unchanged": true,
+  "complete_game_verified": false,
+  "fresh_campaign": "Runningfromclearpower-on ontheunchangednewROM",
+  "canonical_promoted": true
+}

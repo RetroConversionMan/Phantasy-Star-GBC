@@ -1,0 +1,40 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/audio-review/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_tables.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_low_62.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_low_63.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_irq.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/bank_io.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 1048576,
+    "sha256": "e3e95e63b289c92263e4119a4e254938503ee54ced7e837bc883d94c1af3e23d",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "music_commands": 20,
+  "effect_commands": 53,
+  "native_frames": 21540,
+  "scope": "Native GBC APU captures under the production scanline0 score scheduler; no injected game state and no source-driver substitutions. Effect clips include track85 underneath. Machine checks establish non-silent PCM, continuing score IRQs and no driver fault, not subjective sound quality or effect identity.",
+  "listened_to": false,
+  "hardware_tested": false,
+  "input_sha256": {
+    "main.c": "64775eeaab60c6641774bfbe456a35e637f126b90f796223835494f7f4321723",
+    "audio.c": "e7303196c921a60b3791c8c7820f6fc89a65dcfee6f534b37a0c8bc21db32356",
+    "audio_data.c": "2d29db5b95ae36bd92cd5f1d8a1e8d6a015cb026f330d1209c68c27aaadb5a2b",
+    "audio_tables.c": "7961e4a308476c605d9560a24025556e815e9d974e0f51270095715ce5a91b03",
+    "audio_low_62.c": "2e91a67e0646dbe1f13686ff53de072ef509ecfb1782df3f99c2d1991c62e0ce",
+    "audio_low_63.c": "339bb421615ff4bbc87388c0dffa611ed25c931fd72f89f8d04754ccaf30dda4",
+    "audio_irq.c": "93553a56328c33b0a846471d6672ff8986d7037b5a68ebf0efa858cc514e766e",
+    "bank_io.c": "534a7caaa9cc1a4ef0fb1f97d1fa39481c1a30e4cdf371bff37976bc03991a03"
+  }
+}

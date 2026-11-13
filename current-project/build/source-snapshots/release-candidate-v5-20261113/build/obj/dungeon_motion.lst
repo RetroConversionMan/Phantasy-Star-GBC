@@ -1,0 +1,837 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module dungeon_motion
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl b_dungeon_view_scene_id
+                                     11 	.globl _dungeon_view_scene_id
+                                     12 	.globl _dungeon_motion_upload_end
+                                     13 	.globl _dungeon_motion_prepare_variant
+                                     14 	.globl _dungeon_motion_expand_map
+                                     15 	.globl _dungeon_motion_upload_begin
+                                     16 	.globl _dungeon_motion_home
+                                     17 	.globl _bank_copy
+                                     18 	.globl b_dungeon_sample_position
+                                     19 	.globl _dungeon_sample_position
+                                     20 	.globl b_dungeon_sample
+                                     21 	.globl _dungeon_sample
+                                     22 	.globl b_dungeon_motion_scene
+                                     23 	.globl _dungeon_motion_scene
+                                     24 	.globl b_dungeon_motion_render_image
+                                     25 	.globl _dungeon_motion_render_image
+                                     26 	.globl b_dungeon_motion_door_image
+                                     27 	.globl _dungeon_motion_door_image
+                                     28 	.globl b_dungeon_motion_render
+                                     29 	.globl _dungeon_motion_render
+                                     30 	.globl b_dungeon_motion_sequence_frame
+                                     31 	.globl _dungeon_motion_sequence_frame
+                                     32 	.globl b_dungeon_motion_turn_sequence
+                                     33 	.globl _dungeon_motion_turn_sequence
+                                     34 ;--------------------------------------------------------
+                                     35 ; special function registers
+                                     36 ;--------------------------------------------------------
+                                     37 	.area _HRAM
+                                     38 ;--------------------------------------------------------
+                                     39 ; ram data
+                                     40 ;--------------------------------------------------------
+                                     41 	.area _DATA
+    00000000                         42 _last_image:
+    00000000                         43 	.ds 2
+    00000002                         44 _last_palette:
+    00000002                         45 	.ds 1
+                                     46 ;--------------------------------------------------------
+                                     47 ; ram data
+                                     48 ;--------------------------------------------------------
+                                     49 	.area _INITIALIZED
+                                     50 ;--------------------------------------------------------
+                                     51 ; absolute external ram data
+                                     52 ;--------------------------------------------------------
+                                     53 	.area _DABS (ABS)
+                                     54 ;--------------------------------------------------------
+                                     55 ; global & static initialisations
+                                     56 ;--------------------------------------------------------
+                                     57 	.area _HOME
+                                     58 	.area _GSINIT
+                                     59 	.area _GSFINAL
+                                     60 	.area _GSINIT
+                                     61 ;--------------------------------------------------------
+                                     62 ; Home
+                                     63 ;--------------------------------------------------------
+                                     64 	.area _HOME
+                                     65 	.area _HOME
+                                     66 ;--------------------------------------------------------
+                                     67 ; code
+                                     68 ;--------------------------------------------------------
+                                     69 	.area _CODE_77
+                                     70 ;src/dungeon_motion.c:11: static uint16_t word(const DungeonGraphicAsset *a,uint16_t offset) {
+                                     71 ;	---------------------------------
+                                     72 ; Function word
+                                     73 ; ---------------------------------
+    00000000                         74 _word:
+    00000000 E8 FB            [16]   75 	add	sp, #-5
+    00000002 F8 03            [12]   76 	ldhl	sp,	#3
+    00000004 7B               [ 4]   77 	ld	a, e
+    00000005 22               [ 8]   78 	ld	(hl+), a
+                                     79 ;src/dungeon_motion.c:12: uint8_t bytes[2];bank_copy(bytes,a->bank,a->data+offset,2u);return(uint16_t)bytes[0]|((uint16_t)bytes[1]<<8);
+    00000006 7A               [ 4]   80 	ld	a, d
+    00000007 32               [ 8]   81 	ld	(hl-), a
+    00000008 2A               [ 8]   82 	ld	a, (hl+)
+    00000009 66               [ 8]   83 	ld	h, (hl)
+    0000000A 6F               [ 4]   84 	ld	l, a
+    0000000B 23               [ 8]   85 	inc	hl
+    0000000C 2A               [ 8]   86 	ld	a,	(hl+)
+    0000000D 66               [ 8]   87 	ld	h, (hl)
+    0000000E 6F               [ 4]   88 	ld	l, a
+    0000000F 09               [ 8]   89 	add	hl, bc
+    00000010 4D               [ 4]   90 	ld	c, l
+    00000011 44               [ 4]   91 	ld	b, h
+    00000012 F8 03            [12]   92 	ldhl	sp,#3
+    00000014 2A               [ 8]   93 	ld	a, (hl+)
+    00000015 5F               [ 4]   94 	ld	e, a
+    00000016 3A               [ 8]   95 	ld	a, (hl-)
+    00000017 2B               [ 8]   96 	dec	hl
+    00000018 57               [ 4]   97 	ld	d, a
+    00000019 1A               [ 8]   98 	ld	a, (de)
+    0000001A 77               [ 8]   99 	ld	(hl), a
+    0000001B 11 02 00         [12]  100 	ld	de, #0x0002
+    0000001E D5               [16]  101 	push	de
+    0000001F C5               [16]  102 	push	bc
+    00000020 7E               [ 8]  103 	ld	a, (hl)
+    00000021 21 04 00         [12]  104 	ld	hl, #4
+    00000024 39               [ 8]  105 	add	hl, sp
+    00000025 5D               [ 4]  106 	ld	e, l
+    00000026 54               [ 4]  107 	ld	d, h
+    00000027 CDr00r00         [24]  108 	call	_bank_copy
+    0000002A F8 00            [12]  109 	ldhl	sp,	#0
+    0000002C 2A               [ 8]  110 	ld	a, (hl+)
+    0000002D 4F               [ 4]  111 	ld	c, a
+    0000002E 46               [ 8]  112 	ld	b, (hl)
+    0000002F AF               [ 4]  113 	xor	a, a
+                                    114 ;src/dungeon_motion.c:13: }
+    00000030 E8 05            [16]  115 	add	sp, #5
+    00000032 C9               [16]  116 	ret
+                                    117 ;src/dungeon_motion.c:14: uint16_t dungeon_motion_scene(const DungeonState *s,uint8_t frame) __banked {
+                                    118 ;	---------------------------------
+                                    119 ; Function dungeon_motion_scene
+                                    120 ; ---------------------------------
+                         0000004D   121 	b_dungeon_motion_scene	= 77
+    00000033                        122 _dungeon_motion_scene::
+    00000033 E8 F8            [16]  123 	add	sp, #-8
+                                    124 ;src/dungeon_motion.c:15: uint16_t key=0,view;uint8_t depth,front,kind,nibble;
+    00000035 AF               [ 4]  125 	xor	a, a
+    00000036 F8 05            [12]  126 	ldhl	sp,	#5
+    00000038 22               [ 8]  127 	ld	(hl+), a
+    00000039 77               [ 8]  128 	ld	(hl), a
+                                    129 ;src/dungeon_motion.c:16: if(frame>=38u)return 65535u;
+    0000003A F8 10            [12]  130 	ldhl	sp,	#16
+    0000003C 7E               [ 8]  131 	ld	a, (hl)
+    0000003D D6 26            [ 8]  132 	sub	a, #0x26
+    0000003F 38 06            [12]  133 	jr	C, 00102$
+    00000041 01 FF FF         [12]  134 	ld	bc, #0xffff
+    00000044 C3rEFr01         [16]  135 	jp	00118$
+    00000047                        136 00102$:
+                                    137 ;src/dungeon_motion.c:17: if(frame>6u)return motion_fixed[frame];
+    00000047 3E 06            [ 8]  138 	ld	a, #0x06
+    00000049 F8 10            [12]  139 	ldhl	sp,	#16
+    0000004B 96               [ 8]  140 	sub	a, (hl)
+    0000004C 30 0F            [12]  141 	jr	NC, 00104$
+    0000004E 01r00r00         [12]  142 	ld	bc, #_motion_fixed+0
+    00000051 5E               [ 8]  143 	ld	e, (hl)
+    00000052 AF               [ 4]  144 	xor	a, a
+    00000053 6B               [ 4]  145 	ld	l, e
+    00000054 67               [ 4]  146 	ld	h, a
+    00000055 29               [ 8]  147 	add	hl, hl
+    00000056 09               [ 8]  148 	add	hl, bc
+    00000057 2A               [ 8]  149 	ld	a, (hl+)
+    00000058 4F               [ 4]  150 	ld	c, a
+    00000059 46               [ 8]  151 	ld	b, (hl)
+    0000005A C3rEFr01         [16]  152 	jp	00118$
+    0000005D                        153 00104$:
+                                    154 ;src/dungeon_motion.c:18: if(frame==0u)return motion_lookup[0][dungeon_view_scene_id(s)];
+    0000005D F8 10            [12]  155 	ldhl	sp,	#16
+    0000005F 7E               [ 8]  156 	ld	a, (hl)
+    00000060 B7               [ 4]  157 	or	a, a
+    00000061 20 1C            [12]  158 	jr	NZ, 00106$
+    00000063 2B               [ 8]  159 	dec	hl
+    00000064 2B               [ 8]  160 	dec	hl
+    00000065 2A               [ 8]  161 	ld	a, (hl+)
+    00000066 5F               [ 4]  162 	ld	e, a
+    00000067 56               [ 8]  163 	ld	d, (hl)
+    00000068 D5               [16]  164 	push	de
+    00000069 1Er00            [ 8]  165 	ld	e, #b_dungeon_view_scene_id
+    0000006B 21r00r00         [12]  166 	ld	hl, #_dungeon_view_scene_id
+    0000006E CDr00r00         [24]  167 	call	___sdcc_bcall_ehl
+    00000071 E1               [12]  168 	pop	hl
+    00000072 69               [ 4]  169 	ld	l, c
+    00000073 60               [ 4]  170 	ld	h, b
+    00000074 29               [ 8]  171 	add	hl, hl
+    00000075 11r00r00         [12]  172 	ld	de, #_motion_lookup
+    00000078 19               [ 8]  173 	add	hl, de
+    00000079 2A               [ 8]  174 	ld	a, (hl+)
+    0000007A 4F               [ 4]  175 	ld	c, a
+    0000007B 46               [ 8]  176 	ld	b, (hl)
+    0000007C C3rEFr01         [16]  177 	jp	00118$
+    0000007F                        178 00106$:
+                                    179 ;src/dungeon_motion.c:19: if(frame==6u){front=s->layout[dungeon_sample_position(s,1u)];kind=(front&7u)|((front&128u)?8u:0u);if(!(kind&7u))kind=1u;
+    0000007F F8 10            [12]  180 	ldhl	sp,	#16
+    00000081 7E               [ 8]  181 	ld	a, (hl)
+    00000082 D6 06            [ 8]  182 	sub	a, #0x06
+    00000084 20 4B            [12]  183 	jr	NZ, 00145$
+    00000086 F8 0E            [12]  184 	ldhl	sp,	#14
+    00000088 2A               [ 8]  185 	ld	a, (hl+)
+    00000089 4F               [ 4]  186 	ld	c, a
+    0000008A 46               [ 8]  187 	ld	b, (hl)
+    0000008B 21 08 00         [12]  188 	ld	hl, #0x0008
+    0000008E 09               [ 8]  189 	add	hl, bc
+    0000008F E5               [16]  190 	push	hl
+    00000090 3E 01            [ 8]  191 	ld	a, #0x01
+    00000092 F5               [16]  192 	push	af
+    00000093 33               [ 8]  193 	inc	sp
+    00000094 C5               [16]  194 	push	bc
+    00000095 1Er00            [ 8]  195 	ld	e, #b_dungeon_sample_position
+    00000097 21r00r00         [12]  196 	ld	hl, #_dungeon_sample_position
+    0000009A CDr00r00         [24]  197 	call	___sdcc_bcall_ehl
+    0000009D E8 03            [16]  198 	add	sp, #3
+    0000009F E1               [12]  199 	pop	hl
+    000000A0 5F               [ 4]  200 	ld	e, a
+    000000A1 16 00            [ 8]  201 	ld	d, #0x00
+    000000A3 19               [ 8]  202 	add	hl, de
+    000000A4 66               [ 8]  203 	ld	h, (hl)
+    000000A5 7C               [ 4]  204 	ld	a, h
+    000000A6 E6 07            [ 8]  205 	and	a, #0x07
+    000000A8 29               [ 8]  206 	add	hl, hl
+    000000A9 30 04            [12]  207 	jr	NC, 00120$
+    000000AB 0E 08            [ 8]  208 	ld	c, #0x08
+    000000AD 18 02            [12]  209 	jr	00121$
+    000000AF                        210 00120$:
+    000000AF 0E 00            [ 8]  211 	ld	c, #0x00
+    000000B1                        212 00121$:
+    000000B1 B1               [ 4]  213 	or	a, c
+    000000B2 6F               [ 4]  214 	ld	l, a
+    000000B3 E6 07            [ 8]  215 	and	a, #0x07
+    000000B5 20 02            [12]  216 	jr	NZ, 00108$
+    000000B7 2E 01            [ 8]  217 	ld	l, #0x01
+    000000B9                        218 00108$:
+                                    219 ;src/dungeon_motion.c:20: view=word(&dungeon_view_front,(uint16_t)kind*2u);return motion_lookup[0][view];}
+    000000B9 26 00            [ 8]  220 	ld	h, #0x00
+    000000BB 29               [ 8]  221 	add	hl, hl
+    000000BC 4D               [ 4]  222 	ld	c, l
+    000000BD 44               [ 4]  223 	ld	b, h
+    000000BE 11r00r00         [12]  224 	ld	de, #_dungeon_view_front
+    000000C1 CDr00r00         [24]  225 	call	_word
+    000000C4 11r00r00         [12]  226 	ld	de, #_motion_lookup+0
+    000000C7 69               [ 4]  227 	ld	l, c
+    000000C8 60               [ 4]  228 	ld	h, b
+    000000C9 29               [ 8]  229 	add	hl, hl
+    000000CA 19               [ 8]  230 	add	hl, de
+    000000CB 2A               [ 8]  231 	ld	a, (hl+)
+    000000CC 4F               [ 4]  232 	ld	c, a
+    000000CD 46               [ 8]  233 	ld	b, (hl)
+    000000CE C3rEFr01         [16]  234 	jp	00118$
+                                    235 ;src/dungeon_motion.c:21: for(depth=0;depth<3u;++depth) {
+    000000D1                        236 00145$:
+    000000D1 F8 07            [12]  237 	ldhl	sp,	#7
+    000000D3 36 00            [12]  238 	ld	(hl), #0x00
+    000000D5                        239 00116$:
+                                    240 ;src/dungeon_motion.c:22: front=dungeon_sample(s,depth*3u+4u)&7u;kind=!front?0u:(front==1u||front==7u)?1u:2u;
+    000000D5 F8 07            [12]  241 	ldhl	sp,	#7
+    000000D7 7E               [ 8]  242 	ld	a, (hl)
+    000000D8 4F               [ 4]  243 	ld	c, a
+    000000D9 87               [ 4]  244 	add	a, a
+    000000DA 81               [ 4]  245 	add	a, c
+    000000DB F8 03            [12]  246 	ldhl	sp,	#3
+    000000DD 77               [ 8]  247 	ld	(hl), a
+    000000DE 3C               [ 4]  248 	inc	a
+    000000DF 3C               [ 4]  249 	inc	a
+    000000E0 3C               [ 4]  250 	inc	a
+    000000E1 3C               [ 4]  251 	inc	a
+    000000E2 F5               [16]  252 	push	af
+    000000E3 33               [ 8]  253 	inc	sp
+    000000E4 F8 0F            [12]  254 	ldhl	sp,	#15
+    000000E6 2A               [ 8]  255 	ld	a, (hl+)
+    000000E7 5F               [ 4]  256 	ld	e, a
+    000000E8 56               [ 8]  257 	ld	d, (hl)
+    000000E9 D5               [16]  258 	push	de
+    000000EA 1Er00            [ 8]  259 	ld	e, #b_dungeon_sample
+    000000EC 21r00r00         [12]  260 	ld	hl, #_dungeon_sample
+    000000EF CDr00r00         [24]  261 	call	___sdcc_bcall_ehl
+    000000F2 E8 03            [16]  262 	add	sp, #3
+    000000F4 E6 07            [ 8]  263 	and	a, #0x07
+    000000F6 F8 04            [12]  264 	ldhl	sp,	#4
+    000000F8 77               [ 8]  265 	ld	(hl), a
+    000000F9 B7               [ 4]  266 	or	a, a
+    000000FA 20 03            [12]  267 	jr	NZ, 00122$
+    000000FC 77               [ 8]  268 	ld	(hl), a
+    000000FD 18 17            [12]  269 	jr	00123$
+    000000FF                        270 00122$:
+    000000FF F8 04            [12]  271 	ldhl	sp,	#4
+    00000101 7E               [ 8]  272 	ld	a, (hl)
+    00000102 3D               [ 4]  273 	dec	a
+    00000103 28 07            [12]  274 	jr	Z, 00127$
+    00000105 F8 04            [12]  275 	ldhl	sp,	#4
+    00000107 7E               [ 8]  276 	ld	a, (hl)
+    00000108 D6 07            [ 8]  277 	sub	a, #0x07
+    0000010A 20 06            [12]  278 	jr	NZ, 00124$
+    0000010C                        279 00127$:
+    0000010C F8 04            [12]  280 	ldhl	sp,	#4
+    0000010E 36 01            [12]  281 	ld	(hl), #0x01
+    00000110 18 04            [12]  282 	jr	00125$
+    00000112                        283 00124$:
+    00000112 F8 04            [12]  284 	ldhl	sp,	#4
+    00000114 36 02            [12]  285 	ld	(hl), #0x02
+    00000116                        286 00125$:
+    00000116                        287 00123$:
+    00000116 F8 04            [12]  288 	ldhl	sp,	#4
+    00000118 3A               [ 8]  289 	ld	a, (hl-)
+    00000119 2B               [ 8]  290 	dec	hl
+                                    291 ;src/dungeon_motion.c:23: nibble=(dungeon_sample(s,depth*3u+2u)&7u)?1u:0u;
+    0000011A 22               [ 8]  292 	ld	(hl+), a
+    0000011B 7E               [ 8]  293 	ld	a, (hl)
+    0000011C 3C               [ 4]  294 	inc	a
+    0000011D 3C               [ 4]  295 	inc	a
+    0000011E F5               [16]  296 	push	af
+    0000011F 33               [ 8]  297 	inc	sp
+    00000120 F8 0F            [12]  298 	ldhl	sp,	#15
+    00000122 2A               [ 8]  299 	ld	a, (hl+)
+    00000123 5F               [ 4]  300 	ld	e, a
+    00000124 56               [ 8]  301 	ld	d, (hl)
+    00000125 D5               [16]  302 	push	de
+    00000126 1Er00            [ 8]  303 	ld	e, #b_dungeon_sample
+    00000128 21r00r00         [12]  304 	ld	hl, #_dungeon_sample
+    0000012B CDr00r00         [24]  305 	call	___sdcc_bcall_ehl
+    0000012E E8 03            [16]  306 	add	sp, #3
+    00000130 E6 07            [ 8]  307 	and	a, #0x07
+    00000132 3E 01            [ 8]  308 	ld	a, #0x01
+    00000134 20 01            [12]  309 	jr	NZ, 00130$
+    00000136 AF               [ 4]  310 	xor	a, a
+    00000137                        311 00130$:
+    00000137 F8 04            [12]  312 	ldhl	sp,	#4
+                                    313 ;src/dungeon_motion.c:24: if(dungeon_sample(s,depth*3u+3u)&7u)nibble|=2u;nibble|=kind<<2;key|=(uint16_t)nibble<<(depth*4u);
+    00000139 32               [ 8]  314 	ld	(hl-), a
+    0000013A 7E               [ 8]  315 	ld	a, (hl)
+    0000013B 3C               [ 4]  316 	inc	a
+    0000013C 3C               [ 4]  317 	inc	a
+    0000013D 3C               [ 4]  318 	inc	a
+    0000013E F5               [16]  319 	push	af
+    0000013F 33               [ 8]  320 	inc	sp
+    00000140 F8 0F            [12]  321 	ldhl	sp,	#15
+    00000142 2A               [ 8]  322 	ld	a, (hl+)
+    00000143 5F               [ 4]  323 	ld	e, a
+    00000144 56               [ 8]  324 	ld	d, (hl)
+    00000145 D5               [16]  325 	push	de
+    00000146 1Er00            [ 8]  326 	ld	e, #b_dungeon_sample
+    00000148 21r00r00         [12]  327 	ld	hl, #_dungeon_sample
+    0000014B CDr00r00         [24]  328 	call	___sdcc_bcall_ehl
+    0000014E E8 03            [16]  329 	add	sp, #3
+    00000150 E6 07            [ 8]  330 	and	a, #0x07
+    00000152 28 04            [12]  331 	jr	Z, 00112$
+    00000154 F8 04            [12]  332 	ldhl	sp,	#4
+    00000156 CB CE            [16]  333 	set	1, (hl)
+    00000158                        334 00112$:
+    00000158 F8 02            [12]  335 	ldhl	sp,	#2
+    0000015A 3A               [ 8]  336 	ld	a, (hl-)
+    0000015B 87               [ 4]  337 	add	a, a
+    0000015C 87               [ 4]  338 	add	a, a
+    0000015D 77               [ 8]  339 	ld	(hl), a
+    0000015E F8 04            [12]  340 	ldhl	sp,	#4
+    00000160 7E               [ 8]  341 	ld	a, (hl)
+    00000161 F8 01            [12]  342 	ldhl	sp,	#1
+    00000163 B6               [ 8]  343 	or	a, (hl)
+    00000164 F8 04            [12]  344 	ldhl	sp,	#4
+    00000166 77               [ 8]  345 	ld	(hl), a
+    00000167 F8 00            [12]  346 	ldhl	sp,	#0
+    00000169 22               [ 8]  347 	ld	(hl+), a
+    0000016A 36 00            [12]  348 	ld	(hl), #0x00
+    0000016C F8 07            [12]  349 	ldhl	sp,	#7
+    0000016E 7E               [ 8]  350 	ld	a, (hl)
+    0000016F 87               [ 4]  351 	add	a, a
+    00000170 87               [ 4]  352 	add	a, a
+    00000171 F8 04            [12]  353 	ldhl	sp,	#4
+    00000173 77               [ 8]  354 	ld	(hl), a
+    00000174 F5               [16]  355 	push	af
+    00000175 F8 02            [12]  356 	ldhl	sp,	#2
+    00000177 7E               [ 8]  357 	ld	a, (hl)
+    00000178 F8 05            [12]  358 	ldhl	sp,	#5
+    0000017A 22               [ 8]  359 	ld	(hl+), a
+    0000017B 36 00            [12]  360 	ld	(hl), #0x00
+    0000017D F1               [12]  361 	pop	af
+    0000017E 3C               [ 4]  362 	inc	a
+    0000017F 18 07            [12]  363 	jr	00237$
+    00000181                        364 00236$:
+    00000181 F8 03            [12]  365 	ldhl	sp,	#3
+    00000183 CB 26            [16]  366 	sla	(hl)
+    00000185 23               [ 8]  367 	inc	hl
+    00000186 CB 16            [16]  368 	rl	(hl)
+    00000188                        369 00237$:
+    00000188 3D               [ 4]  370 	dec	a
+    00000189 20 F6            [12]  371 	jr	NZ,00236$
+    0000018B F8 05            [12]  372 	ldhl	sp,	#5
+    0000018D 3A               [ 8]  373 	ld	a, (hl-)
+    0000018E 2B               [ 8]  374 	dec	hl
+    0000018F B6               [ 8]  375 	or	a, (hl)
+    00000190 23               [ 8]  376 	inc	hl
+    00000191 23               [ 8]  377 	inc	hl
+    00000192 22               [ 8]  378 	ld	(hl+), a
+    00000193 3A               [ 8]  379 	ld	a, (hl-)
+    00000194 2B               [ 8]  380 	dec	hl
+    00000195 B6               [ 8]  381 	or	a, (hl)
+    00000196 23               [ 8]  382 	inc	hl
+    00000197 23               [ 8]  383 	inc	hl
+    00000198 77               [ 8]  384 	ld	(hl), a
+                                    385 ;src/dungeon_motion.c:25: if(kind)break;
+    00000199 F8 02            [12]  386 	ldhl	sp,	#2
+    0000019B 7E               [ 8]  387 	ld	a, (hl)
+    0000019C B7               [ 4]  388 	or	a, a
+    0000019D 20 09            [12]  389 	jr	NZ, 00115$
+                                    390 ;src/dungeon_motion.c:21: for(depth=0;depth<3u;++depth) {
+    0000019F F8 07            [12]  391 	ldhl	sp,	#7
+    000001A1 34               [12]  392 	inc	(hl)
+    000001A2 7E               [ 8]  393 	ld	a, (hl)
+    000001A3 D6 03            [ 8]  394 	sub	a, #0x03
+    000001A5 DArD5r00         [16]  395 	jp	C, 00116$
+    000001A8                        396 00115$:
+                                    397 ;src/dungeon_motion.c:27: view=word(&dungeon_view_index,key*2u);return view<232u?motion_lookup[frame][view]:65535u;
+    000001A8 F8 05            [12]  398 	ldhl	sp,	#5
+    000001AA 2A               [ 8]  399 	ld	a, (hl+)
+    000001AB 4F               [ 4]  400 	ld	c, a
+    000001AC 46               [ 8]  401 	ld	b, (hl)
+    000001AD CB 21            [ 8]  402 	sla	c
+    000001AF CB 10            [ 8]  403 	rl	b
+    000001B1 11r00r00         [12]  404 	ld	de, #_dungeon_view_index
+    000001B4 CDr00r00         [24]  405 	call	_word
+    000001B7 59               [ 4]  406 	ld	e, c
+    000001B8 50               [ 4]  407 	ld	d, b
+    000001B9 7B               [ 4]  408 	ld	a, e
+    000001BA D6 E8            [ 8]  409 	sub	a, #0xe8
+    000001BC 7A               [ 4]  410 	ld	a, d
+    000001BD DE 00            [ 8]  411 	sbc	a, #0x00
+    000001BF 30 2B            [12]  412 	jr	NC, 00131$
+    000001C1 F8 10            [12]  413 	ldhl	sp,	#16
+    000001C3 7E               [ 8]  414 	ld	a, (hl)
+    000001C4 F8 06            [12]  415 	ldhl	sp,	#6
+    000001C6 22               [ 8]  416 	ld	(hl+), a
+    000001C7 AF               [ 4]  417 	xor	a, a
+    000001C8 32               [ 8]  418 	ld	(hl-), a
+    000001C9 2A               [ 8]  419 	ld	a, (hl+)
+    000001CA 5F               [ 4]  420 	ld	e, a
+    000001CB 56               [ 8]  421 	ld	d, (hl)
+    000001CC 6B               [ 4]  422 	ld	l, e
+    000001CD 62               [ 4]  423 	ld	h, d
+    000001CE 29               [ 8]  424 	add	hl, hl
+    000001CF 19               [ 8]  425 	add	hl, de
+    000001D0 29               [ 8]  426 	add	hl, hl
+    000001D1 19               [ 8]  427 	add	hl, de
+    000001D2 29               [ 8]  428 	add	hl, hl
+    000001D3 19               [ 8]  429 	add	hl, de
+    000001D4 29               [ 8]  430 	add	hl, hl
+    000001D5 29               [ 8]  431 	add	hl, hl
+    000001D6 29               [ 8]  432 	add	hl, hl
+    000001D7 19               [ 8]  433 	add	hl, de
+    000001D8 29               [ 8]  434 	add	hl, hl
+    000001D9 19               [ 8]  435 	add	hl, de
+    000001DA 29               [ 8]  436 	add	hl, hl
+    000001DB 7D               [ 4]  437 	ld	a, l
+    000001DC C6r00            [ 8]  438 	add	a, #<(_motion_lookup)
+    000001DE 5F               [ 4]  439 	ld	e, a
+    000001DF 7C               [ 4]  440 	ld	a, h
+    000001E0 CEs00            [ 8]  441 	adc	a, #>(_motion_lookup)
+    000001E2 57               [ 4]  442 	ld	d, a
+    000001E3 69               [ 4]  443 	ld	l, c
+    000001E4 60               [ 4]  444 	ld	h, b
+    000001E5 29               [ 8]  445 	add	hl, hl
+    000001E6 19               [ 8]  446 	add	hl, de
+    000001E7 2A               [ 8]  447 	ld	a, (hl+)
+    000001E8 4F               [ 4]  448 	ld	c, a
+    000001E9 46               [ 8]  449 	ld	b, (hl)
+    000001EA 18 03            [12]  450 	jr	00132$
+    000001EC                        451 00131$:
+    000001EC 01 FF FF         [12]  452 	ld	bc, #0xffff
+    000001EF                        453 00132$:
+    000001EF                        454 00118$:
+                                    455 ;src/dungeon_motion.c:28: }
+    000001EF E8 08            [16]  456 	add	sp, #8
+    000001F1 C9               [16]  457 	ret
+                                    458 ;src/dungeon_motion.c:29: uint8_t dungeon_motion_render_image(uint16_t image,uint8_t palette) __banked {
+                                    459 ;	---------------------------------
+                                    460 ; Function dungeon_motion_render_image
+                                    461 ; ---------------------------------
+                         0000004D   462 	b_dungeon_motion_render_image	= 77
+    000001F2                        463 _dungeon_motion_render_image::
+    000001F2 3B               [ 8]  464 	dec	sp
+    000001F3 3B               [ 8]  465 	dec	sp
+                                    466 ;src/dungeon_motion.c:31: if(image>=MOTION_IMAGE_COUNT||palette>=12u)return 0;
+    000001F4 F8 08            [12]  467 	ldhl	sp,	#8
+    000001F6 2A               [ 8]  468 	ld	a, (hl+)
+    000001F7 4F               [ 4]  469 	ld	c, a
+    000001F8 46               [ 8]  470 	ld	b, (hl)
+    000001F9 79               [ 4]  471 	ld	a, c
+    000001FA D6 96            [ 8]  472 	sub	a, #0x96
+    000001FC 78               [ 4]  473 	ld	a, b
+    000001FD DE 05            [ 8]  474 	sbc	a, #0x05
+    000001FF 30 06            [12]  475 	jr	NC, 00101$
+    00000201 23               [ 8]  476 	inc	hl
+    00000202 7E               [ 8]  477 	ld	a, (hl)
+    00000203 D6 0C            [ 8]  478 	sub	a, #0x0c
+    00000205 38 03            [12]  479 	jr	C, 00102$
+    00000207                        480 00101$:
+    00000207 AF               [ 4]  481 	xor	a, a
+    00000208 18 71            [12]  482 	jr	00104$
+    0000020A                        483 00102$:
+                                    484 ;src/dungeon_motion.c:32: asset=dungeon_graphic_palettes+palette;bank_copy(dungeon_render_palette,asset->bank,asset->data+312u,56u);
+    0000020A F8 0A            [12]  485 	ldhl	sp,	#10
+    0000020C 4E               [ 8]  486 	ld	c, (hl)
+    0000020D 06 00            [ 8]  487 	ld	b, #0x00
+    0000020F 69               [ 4]  488 	ld	l, c
+    00000210 60               [ 4]  489 	ld	h, b
+    00000211 29               [ 8]  490 	add	hl, hl
+    00000212 09               [ 8]  491 	add	hl, bc
+    00000213 33               [ 8]  492 	inc	sp
+    00000214 33               [ 8]  493 	inc	sp
+    00000215 E5               [16]  494 	push	hl
+    00000216 11r00r00         [12]  495 	ld	de, #_dungeon_graphic_palettes
+    00000219 E1               [12]  496 	pop	hl
+    0000021A E5               [16]  497 	push	hl
+    0000021B 19               [ 8]  498 	add	hl, de
+    0000021C 4D               [ 4]  499 	ld	c,l
+    0000021D 44               [ 4]  500 	ld	b,h
+    0000021E 23               [ 8]  501 	inc	hl
+    0000021F 2A               [ 8]  502 	ld	a, (hl+)
+    00000220 6E               [ 8]  503 	ld	l, (hl)
+    00000221 C6 38            [ 8]  504 	add	a, #0x38
+    00000223 5F               [ 4]  505 	ld	e, a
+    00000224 7D               [ 4]  506 	ld	a, l
+    00000225 CE 01            [ 8]  507 	adc	a, #0x01
+    00000227 57               [ 4]  508 	ld	d, a
+    00000228 0A               [ 8]  509 	ld	a, (bc)
+    00000229 4F               [ 4]  510 	ld	c, a
+    0000022A 21 38 00         [12]  511 	ld	hl, #0x0038
+    0000022D E5               [16]  512 	push	hl
+    0000022E D5               [16]  513 	push	de
+    0000022F 79               [ 4]  514 	ld	a, c
+    00000230 11r00r00         [12]  515 	ld	de, #_dungeon_render_palette
+    00000233 CDr00r00         [24]  516 	call	_bank_copy
+                                    517 ;src/dungeon_motion.c:33: variant=motion_variants+palette;dungeon_motion_upload_begin();dungeon_motion_expand_map(motion_maps+image);
+    00000236 11r00r00         [12]  518 	ld	de, #_motion_variants
+    00000239 E1               [12]  519 	pop	hl
+    0000023A E5               [16]  520 	push	hl
+    0000023B 19               [ 8]  521 	add	hl, de
+    0000023C 4D               [ 4]  522 	ld	c, l
+    0000023D 44               [ 4]  523 	ld	b, h
+    0000023E 33               [ 8]  524 	inc	sp
+    0000023F 33               [ 8]  525 	inc	sp
+    00000240 C5               [16]  526 	push	bc
+    00000241 CDr00r00         [24]  527 	call	_dungeon_motion_upload_begin
+    00000244 F8 08            [12]  528 	ldhl	sp,#8
+    00000246 2A               [ 8]  529 	ld	a, (hl+)
+    00000247 4F               [ 4]  530 	ld	c, a
+    00000248 46               [ 8]  531 	ld	b, (hl)
+    00000249 69               [ 4]  532 	ld	l, c
+    0000024A 60               [ 4]  533 	ld	h, b
+    0000024B 29               [ 8]  534 	add	hl, hl
+    0000024C 09               [ 8]  535 	add	hl, bc
+    0000024D 01r00r00         [12]  536 	ld	bc, #_motion_maps
+    00000250 09               [ 8]  537 	add	hl, bc
+    00000251 5D               [ 4]  538 	ld	e, l
+    00000252 54               [ 4]  539 	ld	d, h
+    00000253 CDr00r00         [24]  540 	call	_dungeon_motion_expand_map
+                                    541 ;src/dungeon_motion.c:34: dungeon_motion_prepare_variant(variant);dungeon_motion_upload_end();
+    00000256 D1               [12]  542 	pop	de
+    00000257 D5               [16]  543 	push	de
+    00000258 CDr00r00         [24]  544 	call	_dungeon_motion_prepare_variant
+    0000025B CDr00r00         [24]  545 	call	_dungeon_motion_upload_end
+                                    546 ;src/dungeon_motion.c:35: last_image=image;last_palette=palette;return dungeon_motion_fault?0u:1u;
+    0000025E F8 08            [12]  547 	ldhl	sp,	#8
+    00000260 7E               [ 8]  548 	ld	a, (hl)
+    00000261 EAr00r00         [16]  549 	ld	(#_last_image),a
+    00000264 F8 09            [12]  550 	ldhl	sp,	#9
+    00000266 7E               [ 8]  551 	ld	a, (hl)
+    00000267 EAr01r00         [16]  552 	ld	(#_last_image + 1),a
+    0000026A F8 0A            [12]  553 	ldhl	sp,	#10
+    0000026C 7E               [ 8]  554 	ld	a, (hl)
+    0000026D EAr02r00         [16]  555 	ld	(#_last_palette),a
+    00000270 FAr00r00         [16]  556 	ld	a, (#_dungeon_motion_fault)
+    00000273 B7               [ 4]  557 	or	a, a
+    00000274 28 03            [12]  558 	jr	Z, 00106$
+    00000276 AF               [ 4]  559 	xor	a, a
+    00000277 18 02            [12]  560 	jr	00107$
+    00000279                        561 00106$:
+    00000279 3E 01            [ 8]  562 	ld	a, #0x01
+    0000027B                        563 00107$:
+    0000027B                        564 00104$:
+                                    565 ;src/dungeon_motion.c:36: }
+    0000027B 33               [ 8]  566 	inc	sp
+    0000027C 33               [ 8]  567 	inc	sp
+    0000027D C9               [16]  568 	ret
+                                    569 ;src/dungeon_motion.c:37: uint16_t dungeon_motion_door_image(uint8_t index) __banked {
+                                    570 ;	---------------------------------
+                                    571 ; Function dungeon_motion_door_image
+                                    572 ; ---------------------------------
+                         0000004D   573 	b_dungeon_motion_door_image	= 77
+    0000027E                        574 _dungeon_motion_door_image::
+                                    575 ;src/dungeon_motion.c:39: if(index>10u)return 65535u;
+    0000027E 3E 0A            [ 8]  576 	ld	a, #0x0a
+    00000280 F8 06            [12]  577 	ldhl	sp,	#6
+    00000282 96               [ 8]  578 	sub	a, (hl)
+    00000283 30 04            [12]  579 	jr	NC, 00102$
+    00000285 01 FF FF         [12]  580 	ld	bc, #0xffff
+    00000288 C9               [16]  581 	ret
+    00000289                        582 00102$:
+                                    583 ;src/dungeon_motion.c:40: kind=index<5u?index+2u:index==5u?10u:index+4u;
+    00000289 F8 06            [12]  584 	ldhl	sp,	#6
+    0000028B 7E               [ 8]  585 	ld	a, (hl)
+    0000028C D6 05            [ 8]  586 	sub	a, #0x05
+    0000028E 30 05            [12]  587 	jr	NC, 00105$
+    00000290 4E               [ 8]  588 	ld	c, (hl)
+    00000291 0C               [ 4]  589 	inc	c
+    00000292 0C               [ 4]  590 	inc	c
+    00000293 18 12            [12]  591 	jr	00106$
+    00000295                        592 00105$:
+    00000295 F8 06            [12]  593 	ldhl	sp,	#6
+    00000297 7E               [ 8]  594 	ld	a, (hl)
+    00000298 D6 05            [ 8]  595 	sub	a, #0x05
+    0000029A 20 04            [12]  596 	jr	NZ, 00107$
+    0000029C 0E 0A            [ 8]  597 	ld	c, #0x0a
+    0000029E 18 07            [12]  598 	jr	00108$
+    000002A0                        599 00107$:
+    000002A0 F8 06            [12]  600 	ldhl	sp,	#6
+    000002A2 4E               [ 8]  601 	ld	c, (hl)
+    000002A3 0C               [ 4]  602 	inc	c
+    000002A4 0C               [ 4]  603 	inc	c
+    000002A5 0C               [ 4]  604 	inc	c
+    000002A6 0C               [ 4]  605 	inc	c
+    000002A7                        606 00108$:
+    000002A7                        607 00106$:
+                                    608 ;src/dungeon_motion.c:41: return motion_lookup[0][word(&dungeon_view_front,(uint16_t)kind*2u)];
+    000002A7 AF               [ 4]  609 	xor	a, a
+    000002A8 47               [ 4]  610 	ld	b, a
+    000002A9 CB 21            [ 8]  611 	sla	c
+    000002AB CB 10            [ 8]  612 	rl	b
+    000002AD 11r00r00         [12]  613 	ld	de, #_dungeon_view_front
+    000002B0 CDr00r00         [24]  614 	call	_word
+    000002B3 69               [ 4]  615 	ld	l, c
+    000002B4 60               [ 4]  616 	ld	h, b
+    000002B5 29               [ 8]  617 	add	hl, hl
+    000002B6 11r00r00         [12]  618 	ld	de, #_motion_lookup
+    000002B9 19               [ 8]  619 	add	hl, de
+    000002BA 2A               [ 8]  620 	ld	a, (hl+)
+    000002BB 4F               [ 4]  621 	ld	c, a
+    000002BC 46               [ 8]  622 	ld	b, (hl)
+                                    623 ;src/dungeon_motion.c:42: }
+    000002BD C9               [16]  624 	ret
+                                    625 ;src/dungeon_motion.c:43: uint8_t dungeon_motion_render(const DungeonState *s,uint8_t frame) __banked {
+                                    626 ;	---------------------------------
+                                    627 ; Function dungeon_motion_render
+                                    628 ; ---------------------------------
+                         0000004D   629 	b_dungeon_motion_render	= 77
+    000002BE                        630 _dungeon_motion_render::
+    000002BE 3B               [ 8]  631 	dec	sp
+                                    632 ;src/dungeon_motion.c:44: uint16_t image=dungeon_motion_scene(s,frame);uint8_t result;
+    000002BF F8 09            [12]  633 	ldhl	sp,	#9
+    000002C1 3A               [ 8]  634 	ld	a, (hl-)
+    000002C2 2B               [ 8]  635 	dec	hl
+    000002C3 F5               [16]  636 	push	af
+    000002C4 33               [ 8]  637 	inc	sp
+    000002C5 2A               [ 8]  638 	ld	a, (hl+)
+    000002C6 5F               [ 4]  639 	ld	e, a
+    000002C7 56               [ 8]  640 	ld	d, (hl)
+    000002C8 D5               [16]  641 	push	de
+    000002C9 1Er00            [ 8]  642 	ld	e, #b_dungeon_motion_scene
+    000002CB 21r33r00         [12]  643 	ld	hl, #_dungeon_motion_scene
+    000002CE CDr00r00         [24]  644 	call	___sdcc_bcall_ehl
+    000002D1 E8 03            [16]  645 	add	sp, #3
+                                    646 ;src/dungeon_motion.c:47: if(frame==0u&&dungeon_motion_active&&!dungeon_motion_buffer&&last_image==image&&last_palette==s->palette_index) {
+    000002D3 F8 07            [12]  647 	ldhl	sp,	#7
+    000002D5 2A               [ 8]  648 	ld	a, (hl+)
+    000002D6 5F               [ 4]  649 	ld	e, a
+    000002D7 56               [ 8]  650 	ld	d, (hl)
+    000002D8 21 06 00         [12]  651 	ld	hl, #0x0006
+    000002DB 19               [ 8]  652 	add	hl, de
+    000002DC 5D               [ 4]  653 	ld	e, l
+    000002DD 54               [ 4]  654 	ld	d, h
+                                    655 ;src/dungeon_motion.c:50: result=dungeon_motion_render_image(image,s->palette_index);
+    000002DE 1A               [ 8]  656 	ld	a, (de)
+    000002DF F8 00            [12]  657 	ldhl	sp,	#0
+    000002E1 77               [ 8]  658 	ld	(hl), a
+                                    659 ;src/dungeon_motion.c:47: if(frame==0u&&dungeon_motion_active&&!dungeon_motion_buffer&&last_image==image&&last_palette==s->palette_index) {
+    000002E2 F8 09            [12]  660 	ldhl	sp,	#9
+    000002E4 7E               [ 8]  661 	ld	a, (hl)
+    000002E5 B7               [ 4]  662 	or	a, a
+    000002E6 20 27            [12]  663 	jr	NZ, 00102$
+    000002E8 FAr00r00         [16]  664 	ld	a, (#_dungeon_motion_active)
+    000002EB B7               [ 4]  665 	or	a, a
+    000002EC 28 21            [12]  666 	jr	Z, 00102$
+    000002EE FAr00r00         [16]  667 	ld	a, (#_dungeon_motion_buffer)
+    000002F1 B7               [ 4]  668 	or	a, a
+    000002F2 20 1B            [12]  669 	jr	NZ, 00102$
+    000002F4 21r00r00         [12]  670 	ld	hl, #_last_image
+    000002F7 7E               [ 8]  671 	ld	a, (hl)
+    000002F8 91               [ 4]  672 	sub	a, c
+    000002F9 20 14            [12]  673 	jr	NZ, 00102$
+    000002FB 23               [ 8]  674 	inc	hl
+    000002FC 7E               [ 8]  675 	ld	a, (hl)
+    000002FD 90               [ 4]  676 	sub	a, b
+    000002FE 20 0F            [12]  677 	jr	NZ, 00102$
+    00000300 FAr02r00         [16]  678 	ld	a, (#_last_palette)
+    00000303 F8 00            [12]  679 	ldhl	sp,	#0
+    00000305 96               [ 8]  680 	sub	a, (hl)
+    00000306 20 07            [12]  681 	jr	NZ, 00102$
+                                    682 ;src/dungeon_motion.c:48: dungeon_motion_home();return 1u;
+    00000308 CDr00r00         [24]  683 	call	_dungeon_motion_home
+    0000030B 3E 01            [ 8]  684 	ld	a, #0x01
+    0000030D 18 3D            [12]  685 	jr	00112$
+    0000030F                        686 00102$:
+                                    687 ;src/dungeon_motion.c:50: result=dungeon_motion_render_image(image,s->palette_index);
+    0000030F C5               [16]  688 	push	bc
+    00000310 D5               [16]  689 	push	de
+    00000311 F8 04            [12]  690 	ldhl	sp,	#4
+    00000313 7E               [ 8]  691 	ld	a, (hl)
+    00000314 F5               [16]  692 	push	af
+    00000315 33               [ 8]  693 	inc	sp
+    00000316 C5               [16]  694 	push	bc
+    00000317 1Er00            [ 8]  695 	ld	e, #b_dungeon_motion_render_image
+    00000319 21rF2r01         [12]  696 	ld	hl, #_dungeon_motion_render_image
+    0000031C CDr00r00         [24]  697 	call	___sdcc_bcall_ehl
+    0000031F E8 03            [16]  698 	add	sp, #3
+    00000321 D1               [12]  699 	pop	de
+    00000322 C1               [12]  700 	pop	bc
+    00000323 F8 00            [12]  701 	ldhl	sp,	#0
+    00000325 77               [ 8]  702 	ld	(hl), a
+                                    703 ;src/dungeon_motion.c:51: if(result&&frame==0u) {
+    00000326 B7               [ 4]  704 	or	a, a
+    00000327 28 20            [12]  705 	jr	Z, 00110$
+    00000329 F8 09            [12]  706 	ldhl	sp,	#9
+    0000032B 7E               [ 8]  707 	ld	a, (hl)
+    0000032C B7               [ 4]  708 	or	a, a
+    0000032D 20 1A            [12]  709 	jr	NZ, 00110$
+                                    710 ;src/dungeon_motion.c:52: if(dungeon_motion_buffer)result=dungeon_motion_render_image(image,s->palette_index);
+    0000032F FAr00r00         [16]  711 	ld	a, (#_dungeon_motion_buffer)
+    00000332 B7               [ 4]  712 	or	a, a
+    00000333 28 11            [12]  713 	jr	Z, 00108$
+    00000335 1A               [ 8]  714 	ld	a, (de)
+    00000336 F5               [16]  715 	push	af
+    00000337 33               [ 8]  716 	inc	sp
+    00000338 C5               [16]  717 	push	bc
+    00000339 1Er00            [ 8]  718 	ld	e, #b_dungeon_motion_render_image
+    0000033B 21rF2r01         [12]  719 	ld	hl, #_dungeon_motion_render_image
+    0000033E CDr00r00         [24]  720 	call	___sdcc_bcall_ehl
+    00000341 E8 03            [16]  721 	add	sp, #3
+    00000343 F8 00            [12]  722 	ldhl	sp,	#0
+    00000345 77               [ 8]  723 	ld	(hl), a
+    00000346                        724 00108$:
+                                    725 ;src/dungeon_motion.c:53: dungeon_motion_home();
+    00000346 CDr00r00         [24]  726 	call	_dungeon_motion_home
+    00000349                        727 00110$:
+                                    728 ;src/dungeon_motion.c:55: return result;
+    00000349 F8 00            [12]  729 	ldhl	sp,	#0
+    0000034B 7E               [ 8]  730 	ld	a, (hl)
+    0000034C                        731 00112$:
+                                    732 ;src/dungeon_motion.c:56: }
+    0000034C 33               [ 8]  733 	inc	sp
+    0000034D C9               [16]  734 	ret
+                                    735 ;src/dungeon_motion.c:57: uint8_t dungeon_motion_sequence_frame(uint8_t sequence,uint8_t ordinal) __banked {
+                                    736 ;	---------------------------------
+                                    737 ; Function dungeon_motion_sequence_frame
+                                    738 ; ---------------------------------
+                         0000004D   739 	b_dungeon_motion_sequence_frame	= 77
+    0000034E                        740 _dungeon_motion_sequence_frame::
+                                    741 ;src/dungeon_motion.c:58: return sequence<10u&&ordinal<9u?motion_sequences[sequence][ordinal]:255u;
+    0000034E F8 06            [12]  742 	ldhl	sp,	#6
+    00000350 7E               [ 8]  743 	ld	a, (hl)
+    00000351 D6 0A            [ 8]  744 	sub	a, #0x0a
+    00000353 30 1E            [12]  745 	jr	NC, 00103$
+    00000355 23               [ 8]  746 	inc	hl
+    00000356 7E               [ 8]  747 	ld	a, (hl)
+    00000357 D6 09            [ 8]  748 	sub	a, #0x09
+    00000359 30 18            [12]  749 	jr	NC, 00103$
+    0000035B 2B               [ 8]  750 	dec	hl
+    0000035C 4E               [ 8]  751 	ld	c, (hl)
+    0000035D 06 00            [ 8]  752 	ld	b, #0x00
+    0000035F 69               [ 4]  753 	ld	l, c
+    00000360 60               [ 4]  754 	ld	h, b
+    00000361 29               [ 8]  755 	add	hl, hl
+    00000362 29               [ 8]  756 	add	hl, hl
+    00000363 29               [ 8]  757 	add	hl, hl
+    00000364 09               [ 8]  758 	add	hl, bc
+    00000365 01r00r00         [12]  759 	ld	bc, #_motion_sequences
+    00000368 09               [ 8]  760 	add	hl, bc
+    00000369 4D               [ 4]  761 	ld	c, l
+    0000036A 44               [ 4]  762 	ld	b, h
+    0000036B F8 07            [12]  763 	ldhl	sp,	#7
+    0000036D 6E               [ 8]  764 	ld	l, (hl)
+    0000036E 26 00            [ 8]  765 	ld	h, #0x00
+    00000370 09               [ 8]  766 	add	hl, bc
+    00000371 7E               [ 8]  767 	ld	a, (hl)
+    00000372 C9               [16]  768 	ret
+    00000373                        769 00103$:
+    00000373 3E FF            [ 8]  770 	ld	a, #0xff
+                                    771 ;src/dungeon_motion.c:59: }
+    00000375 C9               [16]  772 	ret
+                                    773 ;src/dungeon_motion.c:60: uint8_t dungeon_motion_turn_sequence(const DungeonState *s,uint8_t right) __banked {
+                                    774 ;	---------------------------------
+                                    775 ; Function dungeon_motion_turn_sequence
+                                    776 ; ---------------------------------
+                         0000004D   777 	b_dungeon_motion_turn_sequence	= 77
+    00000376                        778 _dungeon_motion_turn_sequence::
+                                    779 ;src/dungeon_motion.c:61: uint8_t sequence=right?6u:2u;
+    00000376 F8 08            [12]  780 	ldhl	sp,	#8
+    00000378 7E               [ 8]  781 	ld	a, (hl)
+    00000379 B7               [ 4]  782 	or	a, a
+    0000037A 0E 06            [ 8]  783 	ld	c, #0x06
+    0000037C 20 02            [12]  784 	jr	NZ, 00108$
+    0000037E 0E 02            [ 8]  785 	ld	c, #0x02
+    00000380                        786 00108$:
+                                    787 ;src/dungeon_motion.c:62: if(dungeon_sample(s,right?12u:13u)&7u)sequence+=2u;
+    00000380 F8 08            [12]  788 	ldhl	sp,	#8
+    00000382 7E               [ 8]  789 	ld	a, (hl)
+    00000383 B7               [ 4]  790 	or	a, a
+    00000384 3E 0C            [ 8]  791 	ld	a, #0x0c
+    00000386 20 02            [12]  792 	jr	NZ, 00110$
+    00000388 3E 0D            [ 8]  793 	ld	a, #0x0d
+    0000038A                        794 00110$:
+    0000038A C5               [16]  795 	push	bc
+    0000038B F5               [16]  796 	push	af
+    0000038C 33               [ 8]  797 	inc	sp
+    0000038D F8 09            [12]  798 	ldhl	sp,	#9
+    0000038F 2A               [ 8]  799 	ld	a, (hl+)
+    00000390 5F               [ 4]  800 	ld	e, a
+    00000391 56               [ 8]  801 	ld	d, (hl)
+    00000392 D5               [16]  802 	push	de
+    00000393 1Er00            [ 8]  803 	ld	e, #b_dungeon_sample
+    00000395 21r00r00         [12]  804 	ld	hl, #_dungeon_sample
+    00000398 CDr00r00         [24]  805 	call	___sdcc_bcall_ehl
+    0000039B E8 03            [16]  806 	add	sp, #3
+    0000039D C1               [12]  807 	pop	bc
+    0000039E E6 07            [ 8]  808 	and	a, #0x07
+    000003A0 28 02            [12]  809 	jr	Z, 00102$
+    000003A2 0C               [ 4]  810 	inc	c
+    000003A3 0C               [ 4]  811 	inc	c
+    000003A4                        812 00102$:
+                                    813 ;src/dungeon_motion.c:63: if(dungeon_sample(s,1u)&7u)++sequence;return sequence;
+    000003A4 C5               [16]  814 	push	bc
+    000003A5 3E 01            [ 8]  815 	ld	a, #0x01
+    000003A7 F5               [16]  816 	push	af
+    000003A8 33               [ 8]  817 	inc	sp
+    000003A9 F8 09            [12]  818 	ldhl	sp,	#9
+    000003AB 2A               [ 8]  819 	ld	a, (hl+)
+    000003AC 5F               [ 4]  820 	ld	e, a
+    000003AD 56               [ 8]  821 	ld	d, (hl)
+    000003AE D5               [16]  822 	push	de
+    000003AF 1Er00            [ 8]  823 	ld	e, #b_dungeon_sample
+    000003B1 21r00r00         [12]  824 	ld	hl, #_dungeon_sample
+    000003B4 CDr00r00         [24]  825 	call	___sdcc_bcall_ehl
+    000003B7 E8 03            [16]  826 	add	sp, #3
+    000003B9 C1               [12]  827 	pop	bc
+    000003BA E6 07            [ 8]  828 	and	a, #0x07
+    000003BC 28 01            [12]  829 	jr	Z, 00104$
+    000003BE 0C               [ 4]  830 	inc	c
+    000003BF                        831 00104$:
+    000003BF 79               [ 4]  832 	ld	a, c
+                                    833 ;src/dungeon_motion.c:64: }
+    000003C0 C9               [16]  834 	ret
+                                    835 	.area _CODE_77
+                                    836 	.area _INITIALIZER
+                                    837 	.area _CABS (ABS)

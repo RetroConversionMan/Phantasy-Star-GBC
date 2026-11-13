@@ -1,0 +1,35 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/field/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/field_actions.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle.c:247: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/bank_io.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 524288,
+    "sha256": "9e20a992a5c93406aff8aa080dc5f4ccc692c4f6fb1a2f3d03f87a4ca4c05a3d",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Rise cancellation spends12MP before target selection",
+    "Reusable MiracleKey opens original type6 cell and returns action4",
+    "Flash consumes one item and resolves source floor lighting through bank17/16",
+    "Trap clears an unregistered08pit",
+    "Chest Trap prepares/disarms source visual and emits immediate-open action",
+    "Transfer consumes item and returns exact last-church packed destination"
+  ],
+  "fixtures": "Separate native probe creates original level30 party and selected inventory/dungeon fixtures; no campaign progress asserted",
+  "banking": "Every call restores caller bank1 across native field11/rpg4/dungeon17/data16/battle18"
+}

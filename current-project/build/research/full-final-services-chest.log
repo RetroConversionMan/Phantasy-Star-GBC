@@ -1,0 +1,10 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Warning: Multiple write of    13 bytes at 0x40c6 -> 0x40d2 writes:(0x40c6 -> 0x40d2, 0x4000 -> 0x4141)
+Warning: Multiple write of     1 bytes at 0x40c0 -> 0x40c0 writes:(0x4000 -> 0x4141, 0x40c0 -> 0x40c0)
+Warning: Multiple write of     2 bytes at 0x40c1 -> 0x40c2 writes:(0x4000 -> 0x4141, 0x40c1 -> 0x40c2)
+Warning: Multiple write of     1 bytes at 0x40c3 -> 0x40c3 writes:(0x4000 -> 0x4141, 0x40c3 -> 0x40c3)
+Warning: Multiple write of   192 bytes at 0x4000 -> 0x40bf writes:(0x4000 -> 0x4141, 0x3fd5 -> 0x40bf)
+Warning: Multiple write of     1 bytes at 0x40c4 -> 0x40c4 writes:(0x4000 -> 0x4141, 0x40c4 -> 0x40c4)
+Warning: Multiple write of     1 bytes at 0x40c5 -> 0x40c5 writes:(0x4000 -> 0x4141, 0x40c5 -> 0x40c5)
+Warning: Possible overflow from Bank 0 into Bank 1
+{"passed": true, "cases": 6, "probe_sha256": "57c7bef05de5fa5a41793b522217bda25afd7c3fd3058fde5c52e133caa63c9b"}

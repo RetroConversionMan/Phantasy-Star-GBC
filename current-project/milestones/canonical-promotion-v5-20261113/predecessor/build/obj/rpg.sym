@@ -1,0 +1,144 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuint                                                       ******** GX
+    __moduint                                                       ******** GX
+    __mulint                                                        ******** GX
+  8 _heal                                                           00000937 R
+  8 _joined                                                         00000000 R
+  8 _living                                                         0000002A R
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+  8 _refresh_character                                              00000053 R
+  8 _ror                                                            00000349 R
+  8 _rpg_add_item                                                   000003F3 GR
+  8 _rpg_add_money                                                  0000087C GR
+  8 _rpg_award_exp                                                  00000C0C GR
+    _rpg_battle_spells                                              ******** GX
+  8 _rpg_buy                                                        000007C1 GR
+  8 _rpg_cast_heal                                                  00000DB9 GR
+  8 _rpg_drop_item                                                  000004C9 GR
+  8 _rpg_dungeon_encounter                                          000010B1 GR
+    _rpg_dungeon_settings                                           ******** GX
+  8 _rpg_dungeon_settings_get                                       00001101 GR
+  8 _rpg_encounter_from_pool                                        00000F4B GR
+    _rpg_encounter_pools                                            ******** GX
+    _rpg_enemies                                                    ******** GX
+  8 _rpg_enemy_name                                                 00000F0E GR
+    _rpg_enemy_names                                                ******** GX
+  8 _rpg_enemy_record                                               00000EE1 GR
+  8 _rpg_equip                                                      0000072A GR
+    _rpg_equip_boost                                                ******** GX
+  8 _rpg_equip_finish                                               000006E5 GR
+  8 _rpg_equip_stage                                                0000058F GR
+  8 _rpg_exp_to_next                                                00000F7F GR
+  8 _rpg_find_item                                                  000003AB GR
+  8 _rpg_hospital                                                   00000A9D GR
+  8 _rpg_hospital_cost                                              00000A60 GR
+  8 _rpg_item_discardable                                           000004A9 GR
+  8 _rpg_item_equippers                                             00000573 GR
+    _rpg_item_flags                                                 ******** GX
+  8 _rpg_knows_spell                                                00000D22 GR
+    _rpg_levels                                                     ******** GX
+  8 _rpg_magic_cost                                                 00000F37 GR
+    _rpg_map_encounter_window                                       ******** GX
+    _rpg_map_spells                                                 ******** GX
+  8 _rpg_new_game                                                   000001F8 GR
+  8 _rpg_physical_damage                                            00000E94 GR
+  8 _rpg_random                                                     0000034B GR
+  8 _rpg_recruit                                                    0000024F GR
+  8 _rpg_refresh_stats                                              000001CC GR
+  8 _rpg_remove_item                                                00000429 GR
+  8 _rpg_replace_item                                               00000522 GR
+  8 _rpg_rest                                                       000009F9 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _rpg_revival_cost                                               00000B38 GR
+  8 _rpg_revive                                                     00000B69 GR
+  8 _rpg_seed_rng                                                   0000032A GR
+  8 _rpg_sell                                                       000008CD GR
+  8 _rpg_sell_price                                                 000008B0 GR
+    _rpg_sell_prices                                                ******** GX
+  8 _rpg_shop_option                                                0000075C GR
+    _rpg_shops                                                      ******** GX
+    _rpg_spell_cost                                                 ******** GX
+  8 _rpg_spell_option                                               00001127 GR
+    _rpg_terrain_lookup                                             ******** GX
+  8 _rpg_use_item                                                   0000096A GR
+  8 _rpg_world_encounter                                            00000FFC GR
+    _rpg_world_regions                                              ******** GX
+  8 _scale                                                          00000E71 R
+  8 _word                                                           0000004D R
+    b_rpg_add_item                                              =   00000004 G
+    b_rpg_add_money                                             =   00000004 G
+    b_rpg_award_exp                                             =   00000004 G
+    b_rpg_buy                                                   =   00000004 G
+    b_rpg_cast_heal                                             =   00000004 G
+    b_rpg_drop_item                                             =   00000004 G
+    b_rpg_dungeon_encounter                                     =   00000004 G
+    b_rpg_dungeon_settings_get                                  =   00000004 G
+    b_rpg_encounter_from_pool                                   =   00000004 G
+    b_rpg_enemy_name                                            =   00000004 G
+    b_rpg_enemy_record                                          =   00000004 G
+    b_rpg_equip                                                 =   00000004 G
+    b_rpg_equip_finish                                          =   00000004 G
+    b_rpg_equip_stage                                           =   00000004 G
+    b_rpg_exp_to_next                                           =   00000004 G
+    b_rpg_find_item                                             =   00000004 G
+    b_rpg_hospital                                              =   00000004 G
+    b_rpg_hospital_cost                                         =   00000004 G
+    b_rpg_item_discardable                                      =   00000004 G
+    b_rpg_item_equippers                                        =   00000004 G
+    b_rpg_knows_spell                                           =   00000004 G
+    b_rpg_magic_cost                                            =   00000004 G
+    b_rpg_new_game                                              =   00000004 G
+    b_rpg_physical_damage                                       =   00000004 G
+    b_rpg_random                                                =   00000004 G
+    b_rpg_recruit                                               =   00000004 G
+    b_rpg_refresh_stats                                         =   00000004 G
+    b_rpg_remove_item                                           =   00000004 G
+    b_rpg_replace_item                                          =   00000004 G
+    b_rpg_rest                                                  =   00000004 G
+    b_rpg_revival_cost                                          =   00000004 G
+    b_rpg_revive                                                =   00000004 G
+    b_rpg_seed_rng                                              =   00000004 G
+    b_rpg_sell                                                  =   00000004 G
+    b_rpg_sell_price                                            =   00000004 G
+    b_rpg_shop_option                                           =   00000004 G
+    b_rpg_spell_option                                          =   00000004 G
+    b_rpg_use_item                                              =   00000004 G
+    b_rpg_world_encounter                                       =   00000004 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_4                                    size     11A2   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

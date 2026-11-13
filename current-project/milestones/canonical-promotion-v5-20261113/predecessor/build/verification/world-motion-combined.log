@@ -1,0 +1,13 @@
+dungeon: FAIL
+battle: FAIL
+field: PASS
+expansion: PASS
+chest: PASS
+audio: PASS
+travel: PASS
+dialogue: PASS
+save: PASS
+battle-vehicle: PASS
+services: FAIL
+enemy-magic: PASS
+story: PASS

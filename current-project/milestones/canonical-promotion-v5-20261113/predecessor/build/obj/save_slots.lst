@@ -1,0 +1,678 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module save_slots
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _memset
+                                     11 	.globl _memcpy
+                                     12 	.globl b_save_slot_offset
+                                     13 	.globl _save_slot_offset
+                                     14 	.globl b_save_label_encode
+                                     15 	.globl _save_label_encode
+                                     16 	.globl b_save_label_decode
+                                     17 	.globl _save_label_decode
+                                     18 	.globl b_save_name_character
+                                     19 	.globl _save_name_character
+                                     20 	.globl b_save_name_begin
+                                     21 	.globl _save_name_begin
+                                     22 	.globl b_save_name_move
+                                     23 	.globl _save_name_move
+                                     24 	.globl b_save_name_input
+                                     25 	.globl _save_name_input
+                                     26 ;--------------------------------------------------------
+                                     27 ; special function registers
+                                     28 ;--------------------------------------------------------
+                                     29 	.area _HRAM
+                                     30 ;--------------------------------------------------------
+                                     31 ; ram data
+                                     32 ;--------------------------------------------------------
+                                     33 	.area _DATA
+                                     34 ;--------------------------------------------------------
+                                     35 ; ram data
+                                     36 ;--------------------------------------------------------
+                                     37 	.area _INITIALIZED
+                                     38 ;--------------------------------------------------------
+                                     39 ; absolute external ram data
+                                     40 ;--------------------------------------------------------
+                                     41 	.area _DABS (ABS)
+                                     42 ;--------------------------------------------------------
+                                     43 ; global & static initialisations
+                                     44 ;--------------------------------------------------------
+                                     45 	.area _HOME
+                                     46 	.area _GSINIT
+                                     47 	.area _GSFINAL
+                                     48 	.area _GSINIT
+                                     49 ;--------------------------------------------------------
+                                     50 ; Home
+                                     51 ;--------------------------------------------------------
+                                     52 	.area _HOME
+                                     53 	.area _HOME
+                                     54 ;--------------------------------------------------------
+                                     55 ; code
+                                     56 ;--------------------------------------------------------
+                                     57 	.area _CODE_122
+                                     58 ;src/save_slots.c:7: static uint16_t checksum(const uint8_t *data) RPG_BANKED {
+                                     59 ;	---------------------------------
+                                     60 ; Function checksum
+                                     61 ; ---------------------------------
+                         0000007A    62 	b_checksum	= 122
+    00000000                         63 _checksum:
+    00000000 3B               [ 8]   64 	dec	sp
+    00000001 3B               [ 8]   65 	dec	sp
+                                     66 ;src/save_slots.c:8: uint16_t crc=65535u;uint8_t i,j;
+    00000002 01 FF FF         [12]   67 	ld	bc, #0xffff
+                                     68 ;src/save_slots.c:9: for(i=0;i<6u;++i){crc^=(uint16_t)data[i]<<8;for(j=0;j<8u;++j)crc=(crc&0x8000u)?(crc<<1)^0x1021u:crc<<1;}
+    00000005 F8 00            [12]   69 	ldhl	sp,	#0
+    00000007 36 00            [12]   70 	ld	(hl), #0x00
+    00000009                         71 00106$:
+    00000009 F8 08            [12]   72 	ldhl	sp,#8
+    0000000B 2A               [ 8]   73 	ld	a, (hl+)
+    0000000C 5F               [ 4]   74 	ld	e, a
+    0000000D 56               [ 8]   75 	ld	d, (hl)
+    0000000E F8 00            [12]   76 	ldhl	sp,	#0
+    00000010 6E               [ 8]   77 	ld	l, (hl)
+    00000011 26 00            [ 8]   78 	ld	h, #0x00
+    00000013 19               [ 8]   79 	add	hl, de
+    00000014 5D               [ 4]   80 	ld	e, l
+    00000015 54               [ 4]   81 	ld	d, h
+    00000016 1A               [ 8]   82 	ld	a, (de)
+    00000017 A8               [ 4]   83 	xor	a, b
+    00000018 47               [ 4]   84 	ld	b, a
+    00000019 F8 01            [12]   85 	ldhl	sp,	#1
+    0000001B 36 08            [12]   86 	ld	(hl), #0x08
+    0000001D                         87 00105$:
+    0000001D 59               [ 4]   88 	ld	e, c
+    0000001E 50               [ 4]   89 	ld	d, b
+    0000001F CB 23            [ 8]   90 	sla	e
+    00000021 CB 12            [ 8]   91 	rl	d
+    00000023 CB 78            [ 8]   92 	bit	7, b
+    00000025 28 0A            [12]   93 	jr	Z, 00110$
+    00000027 7B               [ 4]   94 	ld	a, e
+    00000028 EE 21            [ 8]   95 	xor	a, #0x21
+    0000002A 4F               [ 4]   96 	ld	c, a
+    0000002B 7A               [ 4]   97 	ld	a, d
+    0000002C EE 10            [ 8]   98 	xor	a, #0x10
+    0000002E 47               [ 4]   99 	ld	b, a
+    0000002F 18 02            [12]  100 	jr	00111$
+    00000031                        101 00110$:
+    00000031 4B               [ 4]  102 	ld	c, e
+    00000032 42               [ 4]  103 	ld	b, d
+    00000033                        104 00111$:
+    00000033 F8 01            [12]  105 	ldhl	sp,	#1
+    00000035 35               [12]  106 	dec	(hl)
+    00000036 20 E5            [12]  107 	jr	NZ, 00105$
+    00000038 2B               [ 8]  108 	dec	hl
+    00000039 34               [12]  109 	inc	(hl)
+    0000003A 7E               [ 8]  110 	ld	a, (hl)
+    0000003B D6 06            [ 8]  111 	sub	a, #0x06
+    0000003D 38 CA            [12]  112 	jr	C, 00106$
+                                    113 ;src/save_slots.c:10: return crc;
+                                    114 ;src/save_slots.c:11: }
+    0000003F 33               [ 8]  115 	inc	sp
+    00000040 33               [ 8]  116 	inc	sp
+    00000041 C9               [16]  117 	ret
+    00000042                        118 _characters:
+    00000042 41 42 43 44 45 46 47   119 	.ascii "ABCDEFGHIJKLMNOPQRSTUVWXYZ,;.!?-"
+             48 49 4A 4B 4C 4D 4E
+             4F 50 51 52 53 54 55
+             56 57 58 59 5A 2C 3B
+             2E 21 3F 2D
+    00000062 22                     120 	.db 0x22
+    00000063 5C                     121 	.db 0x5c
+    00000064 5D 5E                  122 	.ascii "]^"
+    00000066 00                     123 	.db 0x00
+                                    124 ;src/save_slots.c:12: static uint8_t valid_name(const char *name) RPG_BANKED {
+                                    125 ;	---------------------------------
+                                    126 ; Function valid_name
+                                    127 ; ---------------------------------
+                         0000007A   128 	b_valid_name	= 122
+    00000067                        129 _valid_name:
+    00000067 3B               [ 8]  130 	dec	sp
+    00000068 3B               [ 8]  131 	dec	sp
+                                    132 ;src/save_slots.c:14: for(i=0;i<5u;++i){
+    00000069 0E 00            [ 8]  133 	ld	c, #0x00
+    0000006B                        134 00112$:
+                                    135 ;src/save_slots.c:15: if(name[i]==' ')continue;
+    0000006B F8 08            [12]  136 	ldhl	sp,#8
+    0000006D 2A               [ 8]  137 	ld	a, (hl+)
+    0000006E 5F               [ 4]  138 	ld	e, a
+    0000006F 56               [ 8]  139 	ld	d, (hl)
+    00000070 69               [ 4]  140 	ld	l, c
+    00000071 26 00            [ 8]  141 	ld	h, #0x00
+    00000073 19               [ 8]  142 	add	hl, de
+    00000074 5D               [ 4]  143 	ld	e, l
+    00000075 54               [ 4]  144 	ld	d, h
+    00000076 1A               [ 8]  145 	ld	a, (de)
+    00000077 D6 20            [ 8]  146 	sub	a, #0x20
+    00000079 28 2E            [12]  147 	jr	Z, 00108$
+                                    148 ;src/save_slots.c:16: for(j=0;j<33u;++j)if(name[i]==characters[j])break;
+    0000007B 33               [ 8]  149 	inc	sp
+    0000007C 33               [ 8]  150 	inc	sp
+    0000007D D5               [16]  151 	push	de
+    0000007E 06 00            [ 8]  152 	ld	b, #0x00
+    00000080                        153 00110$:
+    00000080 D1               [12]  154 	pop	de
+    00000081 D5               [16]  155 	push	de
+    00000082 1A               [ 8]  156 	ld	a, (de)
+    00000083 5F               [ 4]  157 	ld	e, a
+    00000084 07               [ 4]  158 	rlca
+    00000085 9F               [ 4]  159 	sbc	a, a
+    00000086 57               [ 4]  160 	ld	d, a
+    00000087 3Er42            [ 8]  161 	ld	a, #<(_characters)
+    00000089 80               [ 4]  162 	add	a, b
+    0000008A 6F               [ 4]  163 	ld	l, a
+    0000008B 3Es00            [ 8]  164 	ld	a, #>(_characters)
+    0000008D CE 00            [ 8]  165 	adc	a, #0x00
+    0000008F 67               [ 4]  166 	ld	h, a
+    00000090 6E               [ 8]  167 	ld	l, (hl)
+    00000091 26 00            [ 8]  168 	ld	h, #0x00
+    00000093 7D               [ 4]  169 	ld	a, l
+    00000094 93               [ 4]  170 	sub	a, e
+    00000095 20 04            [12]  171 	jr	NZ, 00159$
+    00000097 7C               [ 4]  172 	ld	a, h
+    00000098 92               [ 4]  173 	sub	a, d
+    00000099 28 06            [12]  174 	jr	Z, 00105$
+    0000009B                        175 00159$:
+    0000009B 04               [ 4]  176 	inc	b
+    0000009C 78               [ 4]  177 	ld	a, b
+    0000009D D6 21            [ 8]  178 	sub	a, #0x21
+    0000009F 38 DF            [12]  179 	jr	C, 00110$
+    000000A1                        180 00105$:
+                                    181 ;src/save_slots.c:17: if(j==33u)return 0;
+    000000A1 78               [ 4]  182 	ld	a, b
+    000000A2 D6 21            [ 8]  183 	sub	a, #0x21
+    000000A4 20 03            [12]  184 	jr	NZ, 00108$
+    000000A6 AF               [ 4]  185 	xor	a, a
+    000000A7 18 08            [12]  186 	jr	00113$
+    000000A9                        187 00108$:
+                                    188 ;src/save_slots.c:14: for(i=0;i<5u;++i){
+    000000A9 0C               [ 4]  189 	inc	c
+    000000AA 79               [ 4]  190 	ld	a, c
+    000000AB D6 05            [ 8]  191 	sub	a, #0x05
+    000000AD 38 BC            [12]  192 	jr	C, 00112$
+                                    193 ;src/save_slots.c:19: return 1;
+    000000AF 3E 01            [ 8]  194 	ld	a, #0x01
+    000000B1                        195 00113$:
+                                    196 ;src/save_slots.c:20: }
+    000000B1 33               [ 8]  197 	inc	sp
+    000000B2 33               [ 8]  198 	inc	sp
+    000000B3 C9               [16]  199 	ret
+                                    200 ;src/save_slots.c:21: uint16_t save_slot_offset(uint8_t slot) RPG_BANKED {return slot<5u?(uint16_t)slot*1024u:65535u;}
+                                    201 ;	---------------------------------
+                                    202 ; Function save_slot_offset
+                                    203 ; ---------------------------------
+                         0000007A   204 	b_save_slot_offset	= 122
+    000000B4                        205 _save_slot_offset::
+    000000B4 F8 06            [12]  206 	ldhl	sp,	#6
+    000000B6 7E               [ 8]  207 	ld	a,(hl)
+    000000B7 FE 05            [ 8]  208 	cp	a,#0x05
+    000000B9 30 06            [12]  209 	jr	NC, 00103$
+    000000BB 87               [ 4]  210 	add	a, a
+    000000BC 87               [ 4]  211 	add	a, a
+    000000BD 47               [ 4]  212 	ld	b, a
+    000000BE 0E 00            [ 8]  213 	ld	c, #0x00
+    000000C0 C9               [16]  214 	ret
+    000000C1                        215 00103$:
+    000000C1 01 FF FF         [12]  216 	ld	bc, #0xffff
+    000000C4 C9               [16]  217 	ret
+                                    218 ;src/save_slots.c:22: uint8_t save_label_encode(uint8_t data[8],const char name[5]) RPG_BANKED {
+                                    219 ;	---------------------------------
+                                    220 ; Function save_label_encode
+                                    221 ; ---------------------------------
+                         0000007A   222 	b_save_label_encode	= 122
+    000000C5                        223 _save_label_encode::
+                                    224 ;src/save_slots.c:23: uint16_t crc;if(!valid_name(name))return 0;
+    000000C5 F8 08            [12]  225 	ldhl	sp,	#8
+    000000C7 2A               [ 8]  226 	ld	a, (hl+)
+    000000C8 5F               [ 4]  227 	ld	e, a
+    000000C9 56               [ 8]  228 	ld	d, (hl)
+    000000CA D5               [16]  229 	push	de
+    000000CB 1E 7A            [ 8]  230 	ld	e, #b_valid_name
+    000000CD 21r67r00         [12]  231 	ld	hl, #_valid_name
+    000000D0 CDr00r00         [24]  232 	call	___sdcc_bcall_ehl
+    000000D3 E1               [12]  233 	pop	hl
+    000000D4 B7               [ 4]  234 	or	a,a
+    000000D5 C8               [20]  235 	ret	Z
+                                    236 ;src/save_slots.c:24: memcpy(data,name,5u);data[5]=0xa5u;crc=checksum(data);data[6]=(uint8_t)crc;data[7]=crc>>8;return 1;
+    000000D6 F8 08            [12]  237 	ldhl	sp,	#8
+    000000D8 2A               [ 8]  238 	ld	a, (hl+)
+    000000D9 4F               [ 4]  239 	ld	c, a
+    000000DA 46               [ 8]  240 	ld	b, (hl)
+    000000DB F8 06            [12]  241 	ldhl	sp,	#6
+    000000DD 2A               [ 8]  242 	ld	a, (hl+)
+    000000DE 5F               [ 4]  243 	ld	e, a
+    000000DF 56               [ 8]  244 	ld	d, (hl)
+    000000E0 21 05 00         [12]  245 	ld	hl, #0x0005
+    000000E3 E5               [16]  246 	push	hl
+    000000E4 CDr00r00         [24]  247 	call	_memcpy
+    000000E7 F8 06            [12]  248 	ldhl	sp,#6
+    000000E9 2A               [ 8]  249 	ld	a, (hl+)
+    000000EA 5F               [ 4]  250 	ld	e, a
+    000000EB 56               [ 8]  251 	ld	d, (hl)
+    000000EC 21 05 00         [12]  252 	ld	hl, #0x0005
+    000000EF 19               [ 8]  253 	add	hl, de
+    000000F0 4D               [ 4]  254 	ld	c, l
+    000000F1 44               [ 4]  255 	ld	b, h
+    000000F2 36 A5            [12]  256 	ld	(hl), #0xa5
+    000000F4 F8 06            [12]  257 	ldhl	sp,	#6
+    000000F6 2A               [ 8]  258 	ld	a, (hl+)
+    000000F7 5F               [ 4]  259 	ld	e, a
+    000000F8 56               [ 8]  260 	ld	d, (hl)
+    000000F9 D5               [16]  261 	push	de
+    000000FA 1E 7A            [ 8]  262 	ld	e, #b_checksum
+    000000FC 21r00r00         [12]  263 	ld	hl, #_checksum
+    000000FF CDr00r00         [24]  264 	call	___sdcc_bcall_ehl
+    00000102 E1               [12]  265 	pop	hl
+    00000103 F8 06            [12]  266 	ldhl	sp,#6
+    00000105 2A               [ 8]  267 	ld	a, (hl+)
+    00000106 5F               [ 4]  268 	ld	e, a
+    00000107 56               [ 8]  269 	ld	d, (hl)
+    00000108 21 06 00         [12]  270 	ld	hl, #0x0006
+    0000010B 19               [ 8]  271 	add	hl, de
+    0000010C 5D               [ 4]  272 	ld	e, l
+    0000010D 54               [ 4]  273 	ld	d, h
+    0000010E 79               [ 4]  274 	ld	a, c
+    0000010F 12               [ 8]  275 	ld	(de), a
+    00000110 F8 06            [12]  276 	ldhl	sp,#6
+    00000112 2A               [ 8]  277 	ld	a, (hl+)
+    00000113 5F               [ 4]  278 	ld	e, a
+    00000114 56               [ 8]  279 	ld	d, (hl)
+    00000115 21 07 00         [12]  280 	ld	hl, #0x0007
+    00000118 19               [ 8]  281 	add	hl, de
+    00000119 5D               [ 4]  282 	ld	e, l
+    0000011A 54               [ 4]  283 	ld	d, h
+    0000011B 78               [ 4]  284 	ld	a, b
+    0000011C 12               [ 8]  285 	ld	(de), a
+    0000011D 3E 01            [ 8]  286 	ld	a, #0x01
+                                    287 ;src/save_slots.c:25: }
+    0000011F C9               [16]  288 	ret
+                                    289 ;src/save_slots.c:26: uint8_t save_label_decode(char name[5],const uint8_t data[8]) RPG_BANKED {
+                                    290 ;	---------------------------------
+                                    291 ; Function save_label_decode
+                                    292 ; ---------------------------------
+                         0000007A   293 	b_save_label_decode	= 122
+    00000120                        294 _save_label_decode::
+    00000120 3B               [ 8]  295 	dec	sp
+    00000121 3B               [ 8]  296 	dec	sp
+                                    297 ;src/save_slots.c:27: uint16_t crc=checksum(data);
+    00000122 F8 0A            [12]  298 	ldhl	sp,	#10
+    00000124 2A               [ 8]  299 	ld	a, (hl+)
+    00000125 5F               [ 4]  300 	ld	e, a
+    00000126 56               [ 8]  301 	ld	d, (hl)
+    00000127 D5               [16]  302 	push	de
+    00000128 1E 7A            [ 8]  303 	ld	e, #b_checksum
+    0000012A 21r00r00         [12]  304 	ld	hl, #_checksum
+    0000012D CDr00r00         [24]  305 	call	___sdcc_bcall_ehl
+    00000130 E1               [12]  306 	pop	hl
+                                    307 ;src/save_slots.c:28: if(data[5]!=0xa5u||data[6]!=(uint8_t)crc||data[7]!=(crc>>8)||!valid_name((const char *)data)){
+    00000131 F8 0A            [12]  308 	ldhl	sp,#10
+    00000133 2A               [ 8]  309 	ld	a, (hl+)
+    00000134 5F               [ 4]  310 	ld	e, a
+    00000135 56               [ 8]  311 	ld	d, (hl)
+    00000136 21 05 00         [12]  312 	ld	hl, #0x0005
+    00000139 19               [ 8]  313 	add	hl, de
+    0000013A 5D               [ 4]  314 	ld	e, l
+    0000013B 54               [ 4]  315 	ld	d, h
+    0000013C 1A               [ 8]  316 	ld	a, (de)
+    0000013D 5F               [ 4]  317 	ld	e, a
+                                    318 ;src/save_slots.c:29: memset(name,' ',5u);return 0;
+    0000013E F8 08            [12]  319 	ldhl	sp,	#8
+    00000140 7E               [ 8]  320 	ld	a, (hl)
+    00000141 F8 00            [12]  321 	ldhl	sp,	#0
+    00000143 77               [ 8]  322 	ld	(hl), a
+    00000144 F8 09            [12]  323 	ldhl	sp,	#9
+    00000146 7E               [ 8]  324 	ld	a, (hl)
+    00000147 F8 01            [12]  325 	ldhl	sp,	#1
+    00000149 77               [ 8]  326 	ld	(hl), a
+                                    327 ;src/save_slots.c:28: if(data[5]!=0xa5u||data[6]!=(uint8_t)crc||data[7]!=(crc>>8)||!valid_name((const char *)data)){
+    0000014A 7B               [ 4]  328 	ld	a, e
+    0000014B D6 A5            [ 8]  329 	sub	a, #0xa5
+    0000014D 20 3A            [12]  330 	jr	NZ, 00101$
+    0000014F F8 0A            [12]  331 	ldhl	sp,#10
+    00000151 2A               [ 8]  332 	ld	a, (hl+)
+    00000152 5F               [ 4]  333 	ld	e, a
+    00000153 56               [ 8]  334 	ld	d, (hl)
+    00000154 21 06 00         [12]  335 	ld	hl, #0x0006
+    00000157 19               [ 8]  336 	add	hl, de
+    00000158 5D               [ 4]  337 	ld	e, l
+    00000159 54               [ 4]  338 	ld	d, h
+    0000015A 1A               [ 8]  339 	ld	a, (de)
+    0000015B 59               [ 4]  340 	ld	e, c
+    0000015C 93               [ 4]  341 	sub	a, e
+    0000015D 20 2A            [12]  342 	jr	NZ, 00101$
+    0000015F F8 0A            [12]  343 	ldhl	sp,#10
+    00000161 2A               [ 8]  344 	ld	a, (hl+)
+    00000162 5F               [ 4]  345 	ld	e, a
+    00000163 56               [ 8]  346 	ld	d, (hl)
+    00000164 21 07 00         [12]  347 	ld	hl, #0x0007
+    00000167 19               [ 8]  348 	add	hl, de
+    00000168 5D               [ 4]  349 	ld	e, l
+    00000169 54               [ 4]  350 	ld	d, h
+    0000016A 1A               [ 8]  351 	ld	a, (de)
+    0000016B 5F               [ 4]  352 	ld	e, a
+    0000016C 0E 00            [ 8]  353 	ld	c, #0x00
+    0000016E 51               [ 4]  354 	ld	d, c
+    0000016F 78               [ 4]  355 	ld	a, b
+    00000170 93               [ 4]  356 	sub	a, e
+    00000171 20 16            [12]  357 	jr	NZ, 00101$
+    00000173 79               [ 4]  358 	ld	a, c
+    00000174 92               [ 4]  359 	sub	a, d
+    00000175 20 12            [12]  360 	jr	NZ, 00101$
+    00000177 F8 0A            [12]  361 	ldhl	sp,	#10
+    00000179 2A               [ 8]  362 	ld	a, (hl+)
+    0000017A 4F               [ 4]  363 	ld	c, a
+    0000017B 46               [ 8]  364 	ld	b, (hl)
+    0000017C C5               [16]  365 	push	bc
+    0000017D 1E 7A            [ 8]  366 	ld	e, #b_valid_name
+    0000017F 21r67r00         [12]  367 	ld	hl, #_valid_name
+    00000182 CDr00r00         [24]  368 	call	___sdcc_bcall_ehl
+    00000185 E1               [12]  369 	pop	hl
+    00000186 B7               [ 4]  370 	or	a, a
+    00000187 20 16            [12]  371 	jr	NZ, 00102$
+    00000189                        372 00101$:
+                                    373 ;src/save_slots.c:29: memset(name,' ',5u);return 0;
+    00000189 11 05 00         [12]  374 	ld	de, #0x0005
+    0000018C D5               [16]  375 	push	de
+    0000018D 11 20 00         [12]  376 	ld	de, #0x0020
+    00000190 D5               [16]  377 	push	de
+    00000191 F8 04            [12]  378 	ldhl	sp,	#4
+    00000193 2A               [ 8]  379 	ld	a, (hl+)
+    00000194 5F               [ 4]  380 	ld	e, a
+    00000195 56               [ 8]  381 	ld	d, (hl)
+    00000196 D5               [16]  382 	push	de
+    00000197 CDr00r00         [24]  383 	call	_memset
+    0000019A E8 06            [16]  384 	add	sp, #6
+    0000019C AF               [ 4]  385 	xor	a, a
+    0000019D 18 13            [12]  386 	jr	00106$
+    0000019F                        387 00102$:
+                                    388 ;src/save_slots.c:31: memcpy(name,data,5u);return 1;
+    0000019F F8 0A            [12]  389 	ldhl	sp,	#10
+    000001A1 2A               [ 8]  390 	ld	a, (hl+)
+    000001A2 4F               [ 4]  391 	ld	c, a
+    000001A3 46               [ 8]  392 	ld	b, (hl)
+    000001A4 11 05 00         [12]  393 	ld	de, #0x0005
+    000001A7 D5               [16]  394 	push	de
+    000001A8 F8 02            [12]  395 	ldhl	sp,	#2
+    000001AA 2A               [ 8]  396 	ld	a, (hl+)
+    000001AB 5F               [ 4]  397 	ld	e, a
+    000001AC 56               [ 8]  398 	ld	d, (hl)
+    000001AD CDr00r00         [24]  399 	call	_memcpy
+    000001B0 3E 01            [ 8]  400 	ld	a, #0x01
+    000001B2                        401 00106$:
+                                    402 ;src/save_slots.c:32: }
+    000001B2 33               [ 8]  403 	inc	sp
+    000001B3 33               [ 8]  404 	inc	sp
+    000001B4 C9               [16]  405 	ret
+                                    406 ;src/save_slots.c:33: uint8_t save_name_character(uint8_t option) RPG_BANKED {return option<36u?characters[option]:0;}
+                                    407 ;	---------------------------------
+                                    408 ; Function save_name_character
+                                    409 ; ---------------------------------
+                         0000007A   410 	b_save_name_character	= 122
+    000001B5                        411 _save_name_character::
+    000001B5 F8 06            [12]  412 	ldhl	sp,	#6
+    000001B7 7E               [ 8]  413 	ld	a, (hl)
+    000001B8 D6 24            [ 8]  414 	sub	a, #0x24
+    000001BA 30 0B            [12]  415 	jr	NC, 00103$
+    000001BC 01r42r00         [12]  416 	ld	bc, #_characters+0
+    000001BF 6E               [ 8]  417 	ld	l, (hl)
+    000001C0 26 00            [ 8]  418 	ld	h, #0x00
+    000001C2 09               [ 8]  419 	add	hl, bc
+    000001C3 4D               [ 4]  420 	ld	c, l
+    000001C4 44               [ 4]  421 	ld	b, h
+    000001C5 0A               [ 8]  422 	ld	a, (bc)
+    000001C6 C9               [16]  423 	ret
+    000001C7                        424 00103$:
+    000001C7 AF               [ 4]  425 	xor	a, a
+    000001C8 C9               [16]  426 	ret
+                                    427 ;src/save_slots.c:34: void save_name_begin(SaveName *e) RPG_BANKED {memset(e->name,' ',5u);e->cursor=e->option=0;}
+                                    428 ;	---------------------------------
+                                    429 ; Function save_name_begin
+                                    430 ; ---------------------------------
+                         0000007A   431 	b_save_name_begin	= 122
+    000001C9                        432 _save_name_begin::
+    000001C9 F8 06            [12]  433 	ldhl	sp,	#6
+    000001CB 2A               [ 8]  434 	ld	a, (hl+)
+    000001CC 4F               [ 4]  435 	ld	c, a
+    000001CD 46               [ 8]  436 	ld	b, (hl)
+    000001CE 59               [ 4]  437 	ld	e, c
+    000001CF 50               [ 4]  438 	ld	d, b
+    000001D0 21 05 00         [12]  439 	ld	hl, #0x0005
+    000001D3 E5               [16]  440 	push	hl
+    000001D4 2E 20            [ 8]  441 	ld	l, #0x20
+    000001D6 E5               [16]  442 	push	hl
+    000001D7 D5               [16]  443 	push	de
+    000001D8 CDr00r00         [24]  444 	call	_memset
+    000001DB E8 06            [16]  445 	add	sp, #6
+    000001DD 21 05 00         [12]  446 	ld	hl, #0x0005
+    000001E0 09               [ 8]  447 	add	hl, bc
+    000001E1 5D               [ 4]  448 	ld	e, l
+    000001E2 54               [ 4]  449 	ld	d, h
+    000001E3 21 06 00         [12]  450 	ld	hl, #0x0006
+    000001E6 09               [ 8]  451 	add	hl, bc
+    000001E7 36 00            [12]  452 	ld	(hl), #0x00
+    000001E9 AF               [ 4]  453 	xor	a, a
+    000001EA 12               [ 8]  454 	ld	(de), a
+    000001EB C9               [16]  455 	ret
+                                    456 ;src/save_slots.c:35: void save_name_move(SaveName *e,int8_t dx,int8_t dy) RPG_BANKED {
+                                    457 ;	---------------------------------
+                                    458 ; Function save_name_move
+                                    459 ; ---------------------------------
+                         0000007A   460 	b_save_name_move	= 122
+    000001EC                        461 _save_name_move::
+    000001EC 3B               [ 8]  462 	dec	sp
+    000001ED 3B               [ 8]  463 	dec	sp
+                                    464 ;src/save_slots.c:36: uint8_t x=e->option%6u,y=e->option/6u;
+    000001EE F8 08            [12]  465 	ldhl	sp,	#8
+    000001F0 2A               [ 8]  466 	ld	a, (hl+)
+    000001F1 4F               [ 4]  467 	ld	c, a
+    000001F2 46               [ 8]  468 	ld	b, (hl)
+    000001F3 21 06 00         [12]  469 	ld	hl, #0x0006
+    000001F6 09               [ 8]  470 	add	hl, bc
+    000001F7 33               [ 8]  471 	inc	sp
+    000001F8 33               [ 8]  472 	inc	sp
+    000001F9 5D               [ 4]  473 	ld	e, l
+    000001FA 54               [ 4]  474 	ld	d, h
+    000001FB D5               [16]  475 	push	de
+    000001FC 1A               [ 8]  476 	ld	a, (de)
+    000001FD 57               [ 4]  477 	ld	d, a
+    000001FE D5               [16]  478 	push	de
+    000001FF 1E 06            [ 8]  479 	ld	e, #0x06
+    00000201 7A               [ 4]  480 	ld	a, d
+    00000202 CDr00r00         [24]  481 	call	__moduchar
+    00000205 D1               [12]  482 	pop	de
+    00000206 41               [ 4]  483 	ld	b, c
+    00000207 C5               [16]  484 	push	bc
+    00000208 1E 06            [ 8]  485 	ld	e, #0x06
+    0000020A 7A               [ 4]  486 	ld	a, d
+    0000020B CDr00r00         [24]  487 	call	__divuchar
+    0000020E F1               [12]  488 	pop	af
+    0000020F 47               [ 4]  489 	ld	b, a
+                                    490 ;src/save_slots.c:37: if(dx<0&&x)--x;else if(dx>0&&x<5u)++x;
+    00000210 F8 0A            [12]  491 	ldhl	sp,	#10
+    00000212 CB 7E            [12]  492 	bit	7, (hl)
+    00000214 28 07            [12]  493 	jr	Z, 00105$
+    00000216 78               [ 4]  494 	ld	a, b
+    00000217 B7               [ 4]  495 	or	a, a
+    00000218 28 03            [12]  496 	jr	Z, 00105$
+    0000021A 05               [ 4]  497 	dec	b
+    0000021B 18 1E            [12]  498 	jr	00106$
+    0000021D                        499 00105$:
+    0000021D F8 0A            [12]  500 	ldhl	sp,	#10
+    0000021F 5E               [ 8]  501 	ld	e, (hl)
+    00000220 AF               [ 4]  502 	xor	a, a
+    00000221 57               [ 4]  503 	ld	d, a
+    00000222 96               [ 8]  504 	sub	a, (hl)
+    00000223 CB 7B            [ 8]  505 	bit	7, e
+    00000225 28 07            [12]  506 	jr	Z, 00173$
+    00000227 CB 7A            [ 8]  507 	bit	7, d
+    00000229 20 08            [12]  508 	jr	NZ, 00174$
+    0000022B BF               [ 4]  509 	cp	a, a
+    0000022C 18 05            [12]  510 	jr	00174$
+    0000022E                        511 00173$:
+    0000022E CB 7A            [ 8]  512 	bit	7, d
+    00000230 28 01            [12]  513 	jr	Z, 00174$
+    00000232 37               [ 4]  514 	scf
+    00000233                        515 00174$:
+    00000233 30 06            [12]  516 	jr	NC, 00106$
+    00000235 78               [ 4]  517 	ld	a, b
+    00000236 D6 05            [ 8]  518 	sub	a, #0x05
+    00000238 30 01            [12]  519 	jr	NC, 00106$
+    0000023A 04               [ 4]  520 	inc	b
+    0000023B                        521 00106$:
+                                    522 ;src/save_slots.c:38: if(dy<0&&y)--y;else if(dy>0&&y<5u)++y;
+    0000023B F8 0B            [12]  523 	ldhl	sp,	#11
+    0000023D CB 7E            [12]  524 	bit	7, (hl)
+    0000023F 28 07            [12]  525 	jr	Z, 00112$
+    00000241 79               [ 4]  526 	ld	a, c
+    00000242 B7               [ 4]  527 	or	a, a
+    00000243 28 03            [12]  528 	jr	Z, 00112$
+    00000245 0D               [ 4]  529 	dec	c
+    00000246 18 1E            [12]  530 	jr	00113$
+    00000248                        531 00112$:
+    00000248 F8 0B            [12]  532 	ldhl	sp,	#11
+    0000024A 5E               [ 8]  533 	ld	e, (hl)
+    0000024B AF               [ 4]  534 	xor	a, a
+    0000024C 57               [ 4]  535 	ld	d, a
+    0000024D 96               [ 8]  536 	sub	a, (hl)
+    0000024E CB 7B            [ 8]  537 	bit	7, e
+    00000250 28 07            [12]  538 	jr	Z, 00175$
+    00000252 CB 7A            [ 8]  539 	bit	7, d
+    00000254 20 08            [12]  540 	jr	NZ, 00176$
+    00000256 BF               [ 4]  541 	cp	a, a
+    00000257 18 05            [12]  542 	jr	00176$
+    00000259                        543 00175$:
+    00000259 CB 7A            [ 8]  544 	bit	7, d
+    0000025B 28 01            [12]  545 	jr	Z, 00176$
+    0000025D 37               [ 4]  546 	scf
+    0000025E                        547 00176$:
+    0000025E 30 06            [12]  548 	jr	NC, 00113$
+    00000260 79               [ 4]  549 	ld	a, c
+    00000261 D6 05            [ 8]  550 	sub	a, #0x05
+    00000263 30 01            [12]  551 	jr	NC, 00113$
+    00000265 0C               [ 4]  552 	inc	c
+    00000266                        553 00113$:
+                                    554 ;src/save_slots.c:39: e->option=y*6u+x;
+    00000266 79               [ 4]  555 	ld	a, c
+    00000267 87               [ 4]  556 	add	a, a
+    00000268 81               [ 4]  557 	add	a, c
+    00000269 87               [ 4]  558 	add	a, a
+    0000026A 80               [ 4]  559 	add	a, b
+    0000026B E1               [12]  560 	pop	hl
+    0000026C E5               [16]  561 	push	hl
+    0000026D 77               [ 8]  562 	ld	(hl), a
+                                    563 ;src/save_slots.c:40: }
+    0000026E 33               [ 8]  564 	inc	sp
+    0000026F 33               [ 8]  565 	inc	sp
+    00000270 C9               [16]  566 	ret
+                                    567 ;src/save_slots.c:41: uint8_t save_name_input(SaveName *e,uint8_t erase) RPG_BANKED {
+                                    568 ;	---------------------------------
+                                    569 ; Function save_name_input
+                                    570 ; ---------------------------------
+                         0000007A   571 	b_save_name_input	= 122
+    00000271                        572 _save_name_input::
+    00000271 3B               [ 8]  573 	dec	sp
+                                    574 ;src/save_slots.c:42: uint8_t c=save_name_character(e->option);
+    00000272 F8 07            [12]  575 	ldhl	sp,	#7
+    00000274 2A               [ 8]  576 	ld	a, (hl+)
+    00000275 5F               [ 4]  577 	ld	e, a
+    00000276 56               [ 8]  578 	ld	d, (hl)
+    00000277 21 06 00         [12]  579 	ld	hl, #0x0006
+    0000027A 19               [ 8]  580 	add	hl, de
+    0000027B 7E               [ 8]  581 	ld	a, (hl)
+    0000027C D5               [16]  582 	push	de
+    0000027D F5               [16]  583 	push	af
+    0000027E 33               [ 8]  584 	inc	sp
+    0000027F 1Er00            [ 8]  585 	ld	e, #b_save_name_character
+    00000281 21rB5r01         [12]  586 	ld	hl, #_save_name_character
+    00000284 CDr00r00         [24]  587 	call	___sdcc_bcall_ehl
+    00000287 33               [ 8]  588 	inc	sp
+    00000288 F8 02            [12]  589 	ldhl	sp,	#2
+    0000028A 77               [ 8]  590 	ld	(hl), a
+    0000028B D1               [12]  591 	pop	de
+                                    592 ;src/save_slots.c:43: if(erase){e->name[e->cursor]=' ';if(e->cursor)--e->cursor;return 0;}
+    0000028C 21 05 00         [12]  593 	ld	hl, #0x0005
+    0000028F 19               [ 8]  594 	add	hl, de
+    00000290 4D               [ 4]  595 	ld	c, l
+    00000291 44               [ 4]  596 	ld	b, h
+    00000292 F8 09            [12]  597 	ldhl	sp,	#9
+    00000294 7E               [ 8]  598 	ld	a, (hl)
+    00000295 B7               [ 4]  599 	or	a, a
+    00000296 28 10            [12]  600 	jr	Z, 00104$
+    00000298 0A               [ 8]  601 	ld	a, (bc)
+    00000299 6F               [ 4]  602 	ld	l, a
+    0000029A 26 00            [ 8]  603 	ld	h, #0x00
+    0000029C 19               [ 8]  604 	add	hl, de
+    0000029D 36 20            [12]  605 	ld	(hl), #0x20
+    0000029F 0A               [ 8]  606 	ld	a, (bc)
+    000002A0 B7               [ 4]  607 	or	a, a
+    000002A1 28 02            [12]  608 	jr	Z, 00102$
+    000002A3 3D               [ 4]  609 	dec	a
+    000002A4 02               [ 8]  610 	ld	(bc), a
+    000002A5                        611 00102$:
+    000002A5 AF               [ 4]  612 	xor	a, a
+    000002A6 18 42            [12]  613 	jr	00122$
+    000002A8                        614 00104$:
+                                    615 ;src/save_slots.c:44: if(c<0x5cu){e->name[e->cursor]=c;if(e->cursor<4u)++e->cursor;}
+    000002A8 F8 00            [12]  616 	ldhl	sp,	#0
+    000002AA 7E               [ 8]  617 	ld	a, (hl)
+    000002AB D6 5C            [ 8]  618 	sub	a, #0x5c
+    000002AD 30 12            [12]  619 	jr	NC, 00120$
+    000002AF 0A               [ 8]  620 	ld	a, (bc)
+    000002B0 83               [ 4]  621 	add	a, e
+    000002B1 5F               [ 4]  622 	ld	e, a
+    000002B2 3E 00            [ 8]  623 	ld	a, #0x00
+    000002B4 8A               [ 4]  624 	adc	a, d
+    000002B5 57               [ 4]  625 	ld	d, a
+    000002B6 7E               [ 8]  626 	ld	a, (hl)
+    000002B7 12               [ 8]  627 	ld	(de), a
+    000002B8 0A               [ 8]  628 	ld	a, (bc)
+    000002B9 FE 04            [ 8]  629 	cp	a, #0x04
+    000002BB 30 2C            [12]  630 	jr	NC, 00121$
+    000002BD 3C               [ 4]  631 	inc	a
+    000002BE 02               [ 8]  632 	ld	(bc), a
+    000002BF 18 28            [12]  633 	jr	00121$
+    000002C1                        634 00120$:
+                                    635 ;src/save_slots.c:45: else if(c==0x5cu){if(e->cursor<4u)++e->cursor;}
+    000002C1 F8 00            [12]  636 	ldhl	sp,	#0
+    000002C3 7E               [ 8]  637 	ld	a, (hl)
+    000002C4 D6 5C            [ 8]  638 	sub	a, #0x5c
+    000002C6 20 09            [12]  639 	jr	NZ, 00117$
+    000002C8 0A               [ 8]  640 	ld	a, (bc)
+    000002C9 FE 04            [ 8]  641 	cp	a, #0x04
+    000002CB 30 1C            [12]  642 	jr	NC, 00121$
+    000002CD 3C               [ 4]  643 	inc	a
+    000002CE 02               [ 8]  644 	ld	(bc), a
+    000002CF 18 18            [12]  645 	jr	00121$
+    000002D1                        646 00117$:
+                                    647 ;src/save_slots.c:46: else if(c==0x5du){if(e->cursor)--e->cursor;}
+    000002D1 F8 00            [12]  648 	ldhl	sp,	#0
+    000002D3 7E               [ 8]  649 	ld	a, (hl)
+    000002D4 D6 5D            [ 8]  650 	sub	a, #0x5d
+    000002D6 20 08            [12]  651 	jr	NZ, 00114$
+    000002D8 0A               [ 8]  652 	ld	a, (bc)
+    000002D9 B7               [ 4]  653 	or	a, a
+    000002DA 28 0D            [12]  654 	jr	Z, 00121$
+    000002DC 3D               [ 4]  655 	dec	a
+    000002DD 02               [ 8]  656 	ld	(bc), a
+    000002DE 18 09            [12]  657 	jr	00121$
+    000002E0                        658 00114$:
+                                    659 ;src/save_slots.c:47: else if(c==0x5eu)return 1;
+    000002E0 F8 00            [12]  660 	ldhl	sp,	#0
+    000002E2 7E               [ 8]  661 	ld	a, (hl)
+    000002E3 D6 5E            [ 8]  662 	sub	a, #0x5e
+                                    663 ;src/save_slots.c:48: return 0;
+    000002E5 3E 01            [ 8]  664 	ld	a, #0x01
+    000002E7 28 01            [12]  665 	jr	Z, 00122$
+    000002E9                        666 00121$:
+    000002E9 AF               [ 4]  667 	xor	a, a
+    000002EA                        668 00122$:
+                                    669 ;src/save_slots.c:49: }
+    000002EA 33               [ 8]  670 	inc	sp
+    000002EB C9               [16]  671 	ret
+                                    672 	.area _CODE_122
+                                    673 	.area _INITIALIZER
+                                    674 	.area _CABS (ABS)

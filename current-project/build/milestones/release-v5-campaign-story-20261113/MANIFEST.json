@@ -1,0 +1,28 @@
+{
+  "scope": "Completed story plus separate earned-SRAM title proof; independent full replay pending when frozen",
+  "run": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/campaign/release-v5-newgame-b72feead",
+  "ROM_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "phases": 51,
+  "final_frame": 3581580,
+  "checkpoints": 484,
+  "encounter_annotations": 1230,
+  "inherited_prefix_encounter_annotations": 501,
+  "fresh_b72_encounter_annotations": 729,
+  "natural_full_party_defeats": 1,
+  "actual_continues": 1,
+  "runner_assertions": 1,
+  "initial_sram_loaded": false,
+  "initial_emulator_state_loaded": false,
+  "state_injections": false,
+  "ending_title_differing_pixels": 0,
+  "evidence": {
+    "SHA256.json": "27a748fa2877af0def9b7267df318f383175c2258e27dd736383b65949797457",
+    "CAMPAIGN_CLOSED.json": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1",
+    "PREFIX_REPLAY_PROOF.json": "ab275e3f00351a17cdf023959aff3eea334869a4342e791eb040f148ed9da474",
+    "PREFIX_METADATA_PROVENANCE.json": "bbde80d335e443db114991c536cf026893ab991ca89306a58926067b801c7624",
+    "ENDING_TITLE_VISUAL_PROOF.json": "fddd1dc694833238b16964cba84f19725ec8a8933c226fdd0decab32f28a7ce1",
+    "driver-final/MANIFEST.json": "7e27a8c56adbaad006ea313088641b4487d2cfc5d3903350a5039d4ff8648a4a",
+    "verification-tooling/MANIFEST.json": "dd5a8d6c97b38bfde2b4483b0dab49814af7fd2323351469a750c9a36fe4fb81"
+  },
+  "summary_sha256": "f4b3721ab3b97b2af44f387f249883778ddcd160251765245d4e46e46846a619"
+}

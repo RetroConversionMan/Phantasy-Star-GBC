@@ -1,0 +1,457 @@
+{
+  "format": 1,
+  "request": "Remove original game disassembly code while retaining attribution.",
+  "original_archive_sha256": "98d2b5bd95faae988ce74070529a09d382ab3d2a2d709ae7b9063b63dabe09da",
+  "removed_files": [
+    {
+      "path": "current-project/upstream/ps1disasm/.gitignore",
+      "bytes": 48,
+      "sha256": "834082a92f7d1846850f27b3a3e716b040323317d1cce41dd86cfcadc59958fa"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank03.asm",
+      "bytes": 114263,
+      "sha256": "c0a8fa6c2f284547eba4be20cb1141d41814471be12508d5e94594e45c40be04"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank04.asm",
+      "bytes": 88376,
+      "sha256": "159e1379ef26e36679d2b065ef847a8335c46dcc2883bad7b5a7c54cabf3d557"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank05.asm",
+      "bytes": 88188,
+      "sha256": "90279b061c9037fe1bf3025af29ebde73cb99a19391054957055bd338a4ddeb6"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank06.asm",
+      "bytes": 88191,
+      "sha256": "b77f39ed34f5e2eed031b6615cfb7c9dc8f2b21511a227dc9985b5af4070d381"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank07.asm",
+      "bytes": 87934,
+      "sha256": "be70696dc3c903ff8f40010ace9170efb99c2309ebcefa080486335e3d05d81a"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank08.asm",
+      "bytes": 88199,
+      "sha256": "12da96a95502fbe9b0a3c3cfc9a160d4ea1f6c5888d07870fcc483c4325664e2"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank09.asm",
+      "bytes": 87154,
+      "sha256": "f86be3d1254328a6187a49d31ae4b1ec6319616b9eeb20a7edaab7a0a319bfea"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank10.asm",
+      "bytes": 88144,
+      "sha256": "6c1028a45ac7098601208144ef83d00d91b069b4a734074545b91523164af7b4"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank11.asm",
+      "bytes": 85761,
+      "sha256": "6f18cd88a46cd855ca5859833af768623ae633451ad973990cbaa84df2d05dfd"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank13.asm",
+      "bytes": 87861,
+      "sha256": "72eff786868b0d875f1210153ba9961b3e94ba7d75300ffecc2b47e0358688a6"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank14.asm",
+      "bytes": 87612,
+      "sha256": "61b638b3978e147de1a2a39fc799ac9b0c79e1c6af4e22c684571006e7b300ea"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank15.asm",
+      "bytes": 90533,
+      "sha256": "16308bd3d255b98f3edd977a18cc642e26d71e0db8433d6b11174adafc4adcae"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank16.asm",
+      "bytes": 85537,
+      "sha256": "a7d89a1f0292d201a03833995f641122682b1a2f92110bd1582d17194b8ee6fa"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank17.asm",
+      "bytes": 88069,
+      "sha256": "bee77895345508741c161921e82dbebcc01f133cd14bd06fc0ba7bf4393d5504"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank18.asm",
+      "bytes": 87806,
+      "sha256": "2bcc28a10cd7ea428d76ba0dbc2311958531c67d83c70fdca74d552ef0060bdf"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank19.asm",
+      "bytes": 87304,
+      "sha256": "0e0554b10954ca08c78f4aa575c3bb62f5b94819751d97a9e2c28d9683513615"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank20.asm",
+      "bytes": 87715,
+      "sha256": "a48e88baa4c18ad17a3de60353a5fa15bbe161e7d42250154facce803a5562ff"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank21.asm",
+      "bytes": 95000,
+      "sha256": "c416843cd04e8f4adddd3886beea79091c692f8e6c5d2d25359f802bd68116e0"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank22.asm",
+      "bytes": 88064,
+      "sha256": "d7c4c9d7b33b140e4d3d65bf7d3bff7de2f829e4c41a08fda2986a8791607dcf"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank23.asm",
+      "bytes": 87979,
+      "sha256": "f0ff550a6db89d9d12fa8b62e368fe9c3256d7ad2cebd7fa65135142fc4f98c7"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank24.asm",
+      "bytes": 87710,
+      "sha256": "0283b80d9e818ab141a355d268c637e4c94d205b561b116f11eff1645526848c"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank25.asm",
+      "bytes": 88176,
+      "sha256": "5fc25121745a7f01ba74e25ba302e6381a99a672e1adfc17f8c12583acd8983d"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank26.asm",
+      "bytes": 87978,
+      "sha256": "73ac3da2f6647b5dbd1e92885907ab568999fb2ee72a49bcca6d1fb7e8f247df"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank27.asm",
+      "bytes": 88429,
+      "sha256": "e4db56a86ca9ecea094bc5c70259d19a82bf2700c521757b1956ea617d7b6f4e"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank28.asm",
+      "bytes": 87746,
+      "sha256": "231e38d972fe2381623bffc364a90459e59adcb5aefe7c4413e87915fd75fac4"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank29.asm",
+      "bytes": 87081,
+      "sha256": "2889d64a6966988cf7dd3c241a69f23d97f6d11414ad17510d98e2dadc9c1c5e"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank30.asm",
+      "bytes": 87881,
+      "sha256": "508189f3b385608e2c7827adb6a4571017bc61a90860f71c21a7be6d4a683565"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/banks/bank31.asm",
+      "bytes": 88118,
+      "sha256": "d02ba25a3ae984e2b7c9f23c1baaf65efc570ee3551127c98a6b094c2c75aa58"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/LICENSE",
+      "bytes": 18123,
+      "sha256": "658f7e3b90a1de0a634efa561cc2ae2f25b68d3c8986a4dc35821c480bbdb334"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/Opcodes.dat",
+      "bytes": 29920,
+      "sha256": "d16cc248a53eb3e4eef6579d1a27007fcf31860fcb2c59f5613c905c466e9502"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/SMSExamine.txt",
+      "bytes": 2977,
+      "sha256": "5dcf310180c285563715586f0ff95fe6fb4cfdf6f0d17476c76cdc7e50a5cce1"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/smsexamine.exe",
+      "bytes": 70675,
+      "sha256": "15053a7a040c959fc309be29531f2275cd03d6b1e627f6e21c446e0b79df55dc"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-6502.exe",
+      "bytes": 86528,
+      "sha256": "b7a18843acf7f2205c22302e891470d498104232c9b7c01706a344ce1674bf3e"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-6510.exe",
+      "bytes": 87552,
+      "sha256": "ff762621549deb73b2ffecf4fc2437e76289231ceb1a53a744e6ce8afd36dc5c"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-65816.exe",
+      "bytes": 91136,
+      "sha256": "443daa1d02eb9b56c1812f2fbb46f774460802dc31da08885681d671140d7c0b"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-65c02.exe",
+      "bytes": 87040,
+      "sha256": "4f483a9b21aa2154ad974f8167a8177999ef4670486df1ea811f3e99b6d6cdb5"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-gb.exe",
+      "bytes": 87552,
+      "sha256": "b7b710a2637d51f215e7861a6bc932c7be5a9373793fc4c92c2835d5b52822d2"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-huc6280.exe",
+      "bytes": 88064,
+      "sha256": "376e7ae8bace5c51e610a62a59f644a8d6ad3a2ea41100732923897c99ab0a92"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-spc700.exe",
+      "bytes": 86528,
+      "sha256": "83fbf401ecae5af0325fa61c4117c02165b95ecbcdf51fe7fe64c6b162140594"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla-z80.exe",
+      "bytes": 93184,
+      "sha256": "9e4a285c125e563dad45073ae226d972857ccf04985f31c6a0d21ea0b5424fa6"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wla.txt",
+      "bytes": 88470,
+      "sha256": "f9f1db59ccebb289ce60efe1243c4bc82a76e15e1a6178c56ed4ecf32ef852de"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wlab.exe",
+      "bytes": 20480,
+      "sha256": "a2021bfd86cd994cff0d89072749df079d43ecae1551b19e737a4ffb725113bd"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wlad.exe",
+      "bytes": 24064,
+      "sha256": "094547da026721f646e43fcf331f7bf26c4da18aa1085cef863bfe5be506233d"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/binaries/wlalink.exe",
+      "bytes": 58368,
+      "sha256": "ae523b43ccc64130c157cea53a29569aff1ea8e7b5838dc5640740220f2b2794"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/build.bat",
+      "bytes": 512,
+      "sha256": "3e47d9c87eb5663fae3350a26a936504c2d35eb85842cd158be05ae22f6aa48c"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/chkbitperfect.bat",
+      "bytes": 539,
+      "sha256": "bf45098d0f2932f1b0d0cd9201d1643452eb2b5910b46c7db4e1580afa3651f3"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/link.txt",
+      "bytes": 15,
+      "sha256": "03db56d6c190559e77d71e652e496b70d0f03a9117b3718eec1d4eab6e280e2e"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/ps1.asm",
+      "bytes": 313509,
+      "sha256": "2d133a646a03f6dc8b87c760f603560052e26744dd2dd9999a6ffd8a946f39d4"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/ps1.constants.asm",
+      "bytes": 13672,
+      "sha256": "5b46d7286d6418371fe211747ab66f89b9aaf5497613fcb784e2a965fd526844"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/sound/sound_driver.asm",
+      "bytes": 95262,
+      "sha256": "b4fe87cb39eaa49afa7dbff8c7a43d55f76e23f2def086f9240b48e49f5b4dfe"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/.gitignore",
+      "bytes": 48,
+      "sha256": "834082a92f7d1846850f27b3a3e716b040323317d1cce41dd86cfcadc59958fa"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/README.md",
+      "bytes": 401,
+      "sha256": "91c8f38565666c525debf92f8a15fcc81acaa3d91232dd35996e83b536a9b9d2"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank03.asm",
+      "bytes": 114263,
+      "sha256": "c0a8fa6c2f284547eba4be20cb1141d41814471be12508d5e94594e45c40be04"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank04.asm",
+      "bytes": 88376,
+      "sha256": "159e1379ef26e36679d2b065ef847a8335c46dcc2883bad7b5a7c54cabf3d557"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank05.asm",
+      "bytes": 88188,
+      "sha256": "90279b061c9037fe1bf3025af29ebde73cb99a19391054957055bd338a4ddeb6"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank06.asm",
+      "bytes": 88191,
+      "sha256": "b77f39ed34f5e2eed031b6615cfb7c9dc8f2b21511a227dc9985b5af4070d381"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank07.asm",
+      "bytes": 87934,
+      "sha256": "be70696dc3c903ff8f40010ace9170efb99c2309ebcefa080486335e3d05d81a"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank08.asm",
+      "bytes": 88199,
+      "sha256": "12da96a95502fbe9b0a3c3cfc9a160d4ea1f6c5888d07870fcc483c4325664e2"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank09.asm",
+      "bytes": 87154,
+      "sha256": "f86be3d1254328a6187a49d31ae4b1ec6319616b9eeb20a7edaab7a0a319bfea"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank10.asm",
+      "bytes": 88144,
+      "sha256": "6c1028a45ac7098601208144ef83d00d91b069b4a734074545b91523164af7b4"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank11.asm",
+      "bytes": 85761,
+      "sha256": "6f18cd88a46cd855ca5859833af768623ae633451ad973990cbaa84df2d05dfd"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank13.asm",
+      "bytes": 87861,
+      "sha256": "72eff786868b0d875f1210153ba9961b3e94ba7d75300ffecc2b47e0358688a6"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank14.asm",
+      "bytes": 87612,
+      "sha256": "61b638b3978e147de1a2a39fc799ac9b0c79e1c6af4e22c684571006e7b300ea"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank15.asm",
+      "bytes": 90419,
+      "sha256": "eb4b3a83ee5bdd9f1ec1e4b63dca3d42b6fe6c16f885133320a8a6aaec71b8c9"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank16.asm",
+      "bytes": 85537,
+      "sha256": "a7d89a1f0292d201a03833995f641122682b1a2f92110bd1582d17194b8ee6fa"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank17.asm",
+      "bytes": 88069,
+      "sha256": "bee77895345508741c161921e82dbebcc01f133cd14bd06fc0ba7bf4393d5504"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank18.asm",
+      "bytes": 87806,
+      "sha256": "2bcc28a10cd7ea428d76ba0dbc2311958531c67d83c70fdca74d552ef0060bdf"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank19.asm",
+      "bytes": 87304,
+      "sha256": "0e0554b10954ca08c78f4aa575c3bb62f5b94819751d97a9e2c28d9683513615"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank20.asm",
+      "bytes": 87715,
+      "sha256": "a48e88baa4c18ad17a3de60353a5fa15bbe161e7d42250154facce803a5562ff"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank21.asm",
+      "bytes": 95000,
+      "sha256": "c416843cd04e8f4adddd3886beea79091c692f8e6c5d2d25359f802bd68116e0"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank22.asm",
+      "bytes": 88064,
+      "sha256": "d7c4c9d7b33b140e4d3d65bf7d3bff7de2f829e4c41a08fda2986a8791607dcf"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank23.asm",
+      "bytes": 87979,
+      "sha256": "f0ff550a6db89d9d12fa8b62e368fe9c3256d7ad2cebd7fa65135142fc4f98c7"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank24.asm",
+      "bytes": 87710,
+      "sha256": "0283b80d9e818ab141a355d268c637e4c94d205b561b116f11eff1645526848c"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank25.asm",
+      "bytes": 88176,
+      "sha256": "5fc25121745a7f01ba74e25ba302e6381a99a672e1adfc17f8c12583acd8983d"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank26.asm",
+      "bytes": 87978,
+      "sha256": "73ac3da2f6647b5dbd1e92885907ab568999fb2ee72a49bcca6d1fb7e8f247df"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank27.asm",
+      "bytes": 88429,
+      "sha256": "e4db56a86ca9ecea094bc5c70259d19a82bf2700c521757b1956ea617d7b6f4e"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank28.asm",
+      "bytes": 87746,
+      "sha256": "231e38d972fe2381623bffc364a90459e59adcb5aefe7c4413e87915fd75fac4"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank29.asm",
+      "bytes": 87081,
+      "sha256": "2889d64a6966988cf7dd3c241a69f23d97f6d11414ad17510d98e2dadc9c1c5e"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank30.asm",
+      "bytes": 87881,
+      "sha256": "508189f3b385608e2c7827adb6a4571017bc61a90860f71c21a7be6d4a683565"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/banks/bank31.asm",
+      "bytes": 88118,
+      "sha256": "d02ba25a3ae984e2b7c9f23c1baaf65efc570ee3551127c98a6b094c2c75aa58"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/build.bat",
+      "bytes": 512,
+      "sha256": "3e47d9c87eb5663fae3350a26a936504c2d35eb85842cd158be05ae22f6aa48c"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/chkbitperfect.bat",
+      "bytes": 539,
+      "sha256": "bf45098d0f2932f1b0d0cd9201d1643452eb2b5910b46c7db4e1580afa3651f3"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/link.txt",
+      "bytes": 15,
+      "sha256": "03db56d6c190559e77d71e652e496b70d0f03a9117b3718eec1d4eab6e280e2e"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/ps1.asm",
+      "bytes": 313509,
+      "sha256": "2d133a646a03f6dc8b87c760f603560052e26744dd2dd9999a6ffd8a946f39d4"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/ps1.constants.asm",
+      "bytes": 13672,
+      "sha256": "5b46d7286d6418371fe211747ab66f89b9aaf5497613fcb784e2a965fd526844"
+    },
+    {
+      "path": "current-project/build/sms-reference/source/sound/sound_driver.asm",
+      "bytes": 95262,
+      "sha256": "b4fe87cb39eaa49afa7dbff8c7a43d55f76e23f2def086f9240b48e49f5b4dfe"
+    },
+    {
+      "path": "current-project/build/sms-reference/ps1.o",
+      "bytes": 879454,
+      "sha256": "0619eedd796a3ac33407a648a99246575c48fc77fc743633aef98afe35190ecd"
+    }
+  ],
+  "removed_file_count": 88,
+  "removed_disassembly_asm_files": 62,
+  "original_disassembly_repository": "https://github.com/sung3r/ps1disasm",
+  "pinned_revision": "8efc4110adcf1a81c70d40522016393ba6f6b5ae",
+  "native_source_and_assembly_unchanged": true,
+  "native_production_C_files": 262,
+  "native_headers": 80,
+  "native_generated_assembly_modules": 262,
+  "reference_sms_rom_and_upstream_notice_retained": true,
+  "original_working_project_and_verified_baseline_modified": false
+}

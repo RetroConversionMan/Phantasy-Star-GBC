@@ -1,0 +1,48 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+palette 0 images 1430 elapsed 3.6
+palette 1 images 2860 elapsed 7.4
+palette 2 images 4290 elapsed 11.2
+palette 3 images 5720 elapsed 15.0
+palette 4 images 7150 elapsed 18.8
+palette 5 images 8580 elapsed 22.8
+palette 6 images 10010 elapsed 26.7
+palette 7 images 11440 elapsed 30.6
+palette 8 images 12870 elapsed 34.5
+palette 9 images 14300 elapsed 38.3
+palette 10 images 15730 elapsed 42.1
+palette 11 images 17160 elapsed 45.9
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "d43a760598d7bbab94f6051ec6b936f8e81a2ad1fd9a9f83d67da297f05fef70",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "exhaustive_all_image_palette_pairs": true,
+  "images": 17160,
+  "tile_attributes": 5148000,
+  "pattern_bytes": 46940896,
+  "protected_bytes": 52715520,
+  "command_frames": {
+    "min": 5,
+    "max": 7,
+    "mean": 5.0978438228438225
+  },
+  "source_path": {
+    "poses": 40,
+    "physical_frames": 197,
+    "audio_IRQ_ticks_including_two_drain_frames": 199,
+    "unmatched_frames": 0,
+    "visible_changes": 40
+  },
+  "guard_bytes": 64,
+  "guard_address": "DC00",
+  "production_changed": false
+}

@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "clock": 0,
+      "skip": null,
+      "frames": 277,
+      "phases": [
+        246,
+        277
+      ]
+    },
+    {
+      "clock": 0,
+      "skip": 248,
+      "button": 16,
+      "frames": 248,
+      "phases": [
+        246,
+        248
+      ]
+    },
+    {
+      "clock": 0,
+      "skip": 275,
+      "button": 16,
+      "frames": 275,
+      "phases": [
+        246,
+        275
+      ]
+    },
+    {
+      "clock": 0,
+      "skip": 248,
+      "button": 32,
+      "frames": 248,
+      "phases": [
+        246,
+        248
+      ]
+    },
+    {
+      "clock": 0,
+      "skip": 275,
+      "button": 32,
+      "frames": 275,
+      "phases": [
+        246,
+        275
+      ]
+    },
+    {
+      "clock": 1,
+      "skip": null,
+      "frames": 278,
+      "phases": [
+        247,
+        278
+      ]
+    },
+    {
+      "clock": 1,
+      "skip": 249,
+      "button": 16,
+      "frames": 249,
+      "phases": [
+        247,
+        249
+      ]
+    },
+    {
+      "clock": 1,
+      "skip": 276,
+      "button": 16,
+      "frames": 276,
+      "phases": [
+        247,
+        276
+      ]
+    },
+    {
+      "clock": 1,
+      "skip": 249,
+      "button": 32,
+      "frames": 249,
+      "phases": [
+        247,
+        249
+      ]
+    },
+    {
+      "clock": 1,
+      "skip": 276,
+      "button": 32,
+      "frames": 276,
+      "phases": [
+        247,
+        276
+      ]
+    },
+    {
+      "clock": 2,
+      "skip": null,
+      "frames": 279,
+      "phases": [
+        248,
+        279
+      ]
+    },
+    {
+      "clock": 2,
+      "skip": 250,
+      "button": 16,
+      "frames": 250,
+      "phases": [
+        248,
+        250
+      ]
+    },
+    {
+      "clock": 2,
+      "skip": 277,
+      "button": 16,
+      "frames": 277,
+      "phases": [
+        248,
+        277
+      ]
+    },
+    {
+      "clock": 2,
+      "skip": 250,
+      "button": 32,
+      "frames": 250,
+      "phases": [
+        248,
+        250
+      ]
+    },
+    {
+      "clock": 2,
+      "skip": 277,
+      "button": 32,
+      "frames": 277,
+      "phases": [
+        248,
+        277
+      ]
+    },
+    {
+      "clock": 3,
+      "skip": null,
+      "frames": 280,
+      "phases": [
+        249,
+        280
+      ]
+    },
+    {
+      "clock": 3,
+      "skip": 251,
+      "button": 16,
+      "frames": 251,
+      "phases": [
+        249,
+        251
+      ]
+    },
+    {
+      "clock": 3,
+      "skip": 278,
+      "button": 16,
+      "frames": 278,
+      "phases": [
+        249,
+        278
+      ]
+    },
+    {
+      "clock": 3,
+      "skip": 251,
+      "button": 32,
+      "frames": 251,
+      "phases": [
+        249,
+        251
+      ]
+    },
+    {
+      "clock": 3,
+      "skip": 278,
+      "button": 32,
+      "frames": 278,
+      "phases": [
+        249,
+        278
+      ]
+    }
+  ]
+}

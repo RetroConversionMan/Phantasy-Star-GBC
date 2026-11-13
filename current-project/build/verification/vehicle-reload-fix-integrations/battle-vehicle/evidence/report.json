@@ -1,0 +1,91 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Two actual combat Landrover selections board/reboard using original geometry, preserve item, and continue combat; neither acts as field-menu dismount",
+    "Victory restores vehicle art/world at the boarding coordinates; power-cycle Continue preserves mode, location and full party/RNG/inventory state"
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-vehicle-integration/boarded.png",
+      "sha256_pixels": "7b6553b1cb096c1e35bd3e2a9ebca14afaa39fe7fc63b3d48e55c2386d1fe417",
+      "unique_colors": 17,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-vehicle-integration/reboarded.png",
+      "sha256_pixels": "7b6553b1cb096c1e35bd3e2a9ebca14afaa39fe7fc63b3d48e55c2386d1fe417",
+      "unique_colors": 17,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-vehicle-integration/vehicle-after-battle.png",
+      "sha256_pixels": "cefb50d38e11b549f6e5f730d1489eca31a12d39b12e33f8d4dab7f008801373",
+      "unique_colors": 12,
+      "lcd_enabled": true,
+      "pc": "0x43b6"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-vehicle-integration/continued-vehicle.png",
+      "sha256_pixels": "cefb50d38e11b549f6e5f730d1489eca31a12d39b12e33f8d4dab7f008801373",
+      "unique_colors": 12,
+      "lcd_enabled": true,
+      "pc": "0x43b6"
+    }
+  ],
+  "boarding": [
+    {
+      "previous_mode": 0,
+      "from": [
+        1416,
+        592
+      ],
+      "source_expected": [
+        1,
+        1416,
+        592,
+        4
+      ],
+      "dialogues": [
+        "0xb2ac",
+        "0xb305"
+      ]
+    },
+    {
+      "previous_mode": 4,
+      "from": [
+        1416,
+        592
+      ],
+      "source_expected": [
+        1,
+        1416,
+        592,
+        4
+      ],
+      "dialogues": [
+        "0xb118",
+        "0xb2ac",
+        "0xb305",
+        "0xb118"
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "Alis level30 with200HP/maxHP/defense and40attack plus one Landrover; map, position, flags, RNG, encounter and outcomes are never injected"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

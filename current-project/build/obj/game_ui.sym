@@ -1,0 +1,221 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 ___str_10                                                       00000222 R
+  8 ___str_11                                                       00000229 R
+  8 ___str_12                                                       0000022F R
+  8 ___str_13                                                       00000236 R
+  8 ___str_14                                                       0000023B R
+  8 ___str_15                                                       00000241 R
+  8 ___str_16                                                       00000246 R
+  8 ___str_17                                                       0000024C R
+  8 ___str_18                                                       0000024E R
+  8 ___str_19                                                       000002EA R
+  8 ___str_20                                                       000002F8 R
+  8 ___str_21                                                       00000304 R
+  8 ___str_22                                                       00000316 R
+  8 ___str_23                                                       00000325 R
+  8 ___str_24                                                       00000331 R
+  8 ___str_25                                                       0000033D R
+  8 ___str_26                                                       00000351 R
+  8 ___str_27                                                       00000364 R
+  8 ___str_28                                                       00000377 R
+  8 ___str_29                                                       00000388 R
+  8 ___str_30                                                       000003D2 R
+  8 ___str_31                                                       000004CC R
+  8 ___str_32                                                       000004D1 R
+  8 ___str_33                                                       000004E0 R
+  8 ___str_34                                                       000004F2 R
+  8 ___str_35                                                       00000501 R
+  8 ___str_36                                                       0000050E R
+  8 ___str_37                                                       00000520 R
+  8 ___str_38                                                       0000052E R
+  8 ___str_39                                                       00000542 R
+  8 ___str_4                                                        0000013F R
+  8 ___str_40                                                       0000059B R
+  8 ___str_41                                                       0000059F R
+  8 ___str_42                                                       000005A2 R
+  8 ___str_43                                                       000005A4 R
+  8 ___str_44                                                       0000069A R
+  8 ___str_45                                                       0000069F R
+  8 ___str_46                                                       000006A6 R
+  8 ___str_47                                                       000006A8 R
+  8 ___str_48                                                       00000784 R
+  8 ___str_49                                                       00000798 R
+  8 ___str_5                                                        00000148 R
+  8 ___str_50                                                       000007A2 R
+  8 ___str_51                                                       000007A8 R
+  8 ___str_52                                                       000007AA R
+  8 ___str_53                                                       00000830 R
+  8 ___str_54                                                       00000834 R
+  8 ___str_55                                                       0000083A R
+  8 ___str_56                                                       0000083F R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 ___str_57                                                       00000841 R
+  8 ___str_58                                                       00000922 R
+  8 ___str_59                                                       00000933 R
+  8 ___str_6                                                        00000151 R
+  8 ___str_60                                                       00000935 R
+  8 ___str_61                                                       00000937 R
+  8 ___str_62                                                       00000A71 R
+  8 ___str_63                                                       00000A78 R
+  8 ___str_64                                                       00000A7B R
+  8 ___str_65                                                       00000A7E R
+  8 ___str_66                                                       00000A81 R
+  8 ___str_67                                                       00000A88 R
+  8 ___str_68                                                       00000AFB R
+  8 ___str_69                                                       00000B07 R
+  8 ___str_7                                                        00000159 R
+  8 ___str_70                                                       00000B0E R
+  8 ___str_71                                                       00000B12 R
+  8 ___str_72                                                       00000B18 R
+  8 ___str_73                                                       00000B1A R
+  8 ___str_74                                                       00000C1C R
+  8 ___str_75                                                       00000C1D R
+  8 ___str_76                                                       00000C22 R
+  8 ___str_77                                                       00000C27 R
+  8 ___str_78                                                       00000C2C R
+  8 ___str_79                                                       00000C31 R
+  8 ___str_8                                                        0000020D R
+  8 ___str_80                                                       00000C36 R
+  8 ___str_81                                                       00000C3B R
+  8 ___str_82                                                       00000C40 R
+  8 ___str_83                                                       00000C45 R
+  8 ___str_84                                                       00000C49 R
+  8 ___str_85                                                       00000C4E R
+  8 ___str_86                                                       00000C53 R
+  8 ___str_87                                                       00000C58 R
+  8 ___str_88                                                       00000C5D R
+  8 ___str_89                                                       00000C62 R
+  8 ___str_9                                                        0000021B R
+  8 ___str_90                                                       00000C67 R
+  8 ___str_91                                                       00000C6C R
+  8 ___str_92                                                       00000C71 R
+  8 ___str_93                                                       00000C75 R
+  8 ___str_94                                                       00000C7B R
+  8 ___str_95                                                       00000C7E R
+  8 ___str_96                                                       00000C80 R
+    __divuchar                                                      ******** GX
+  8 __str_0                                                         0000004C R
+  8 __str_1                                                         00000051 R
+  8 __str_2                                                         00000056 R
+  8 __str_3                                                         0000005B R
+    _audio_command                                                  ******** GX
+    _audio_stop                                                     ******** GX
+    _background_changed                                             ******** GX
+  8 _bank_text                                                      00000000 R
+    _choice                                                         ******** GX
+    _dialogue_item_name                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _display_off                                                    ******** GX
+    _game_map_music                                                 ******** GX
+    _game_rpg                                                       ******** GX
+    _game_transition_fade_in                                        ******** GX
+    _game_transition_fade_out                                       ******** GX
+    _game_transition_wait                                           ******** GX
+  8 _help_screen                                                    00000255 GR
+  8 _inventory_screen                                               000006B7 GR
+    _item_action                                                    ******** GX
+  2 _item_name                                                      00000001 R
+  8 _item_screen                                                    000007BB GR
+    _item_slot                                                      ******** GX
+    _magic_caster                                                   ******** GX
+    _magic_choice                                                   ******** GX
+  8 _map_magic_screen                                               00000B2B GR
+  8 _map_magic_screen_spells_10000_286                              00000BF6 R
+    _menu_choice                                                    ******** GX
+  8 _menu_screen                                                    0000015B GR
+    _movie_scene_show                                               ******** GX
+  8 _names                                                          00000044 R
+  8 _notice                                                         00000398 GR
+    _notice_return                                                  ******** GX
+    _party_choice                                                   ******** GX
+  8 _party_screen                                                   00000852 GR
+  8 _prompt_screen                                                  00000551 GR
+    _replace_source                                                 ******** GX
+  8 _result                                                         000003E2 GR
+    _rpg_magic_cost                                                 ******** GX
+    _rpg_shop_option                                                ******** GX
+    _rpg_spell_option                                               ******** GX
+    _saved_position_valid                                           ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_fade_begin                                               ******** GX
+    _screen_state                                                   ******** GX
+    _shop_count                                                     ******** GX
+    _shop_id                                                        ******** GX
+  8 _shop_screen                                                    000005B1 GR
+  8 _status_screen                                                  00000948 GR
+    _title_choice                                                   ******** GX
+  2 _title_loaded                                                   00000000 R
+  8 _title_screen                                                   00000060 GR
+  8 _travel_menu                                                    00000A98 GR
+    _ui_number                                                      ******** GX
+    _ui_panel                                                       ******** GX
+    _ui_text                                                        ******** GX
+    b_audio_command                                                 ******** GX
+    b_audio_stop                                                    ******** GX
+    b_dialogue_item_name                                            ******** GX
+    b_game_transition_fade_in                                       ******** GX
+    b_game_transition_fade_out                                      ******** GX
+    b_game_transition_wait                                          ******** GX
+    b_help_screen                                               =   0000000E G
+    b_inventory_screen                                          =   0000000E G
+    b_item_screen                                               =   0000000E G
+    b_map_magic_screen                                          =   0000000E G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_menu_screen                                               =   0000000E G
+    b_movie_scene_show                                              ******** GX
+    b_notice                                                    =   0000000E G
+    b_party_screen                                              =   0000000E G
+    b_prompt_screen                                             =   0000000E G
+    b_result                                                    =   0000000E G
+    b_rpg_magic_cost                                                ******** GX
+    b_rpg_shop_option                                               ******** GX
+    b_rpg_spell_option                                              ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_shop_screen                                               =   0000000E G
+    b_status_screen                                             =   0000000E G
+    b_title_screen                                              =   0000000E G
+    b_travel_menu                                               =   0000000E G
+    b_ui_number                                                     ******** GX
+    b_ui_panel                                                      ******** GX
+    b_ui_text                                                       ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        A   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_14                                   size      C90   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

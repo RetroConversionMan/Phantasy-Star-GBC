@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "source_interpreter_records": 534,
+  "source_glyphs_and_frame_positions": 27730,
+  "source_glyph_scroll_frames": 34234,
+  "extra_number_boundaries": 11,
+  "three_line_record_0x1e2_all_glyphs_visible": true,
+  "limits": [
+    "Logical source VBlank comparison; native cartridge integration is separate",
+    "8px GBC glyphs represent the two SMS half-glyph scroll images as one row shift with the same8frame delay",
+    "Controller waits are skipped in this interpreter harness and tested separately"
+  ]
+}

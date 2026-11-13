@@ -1,0 +1,309 @@
+enemy 1 assets 76 groups 1
+enemy 2 assets 144 groups 2
+enemy 3 assets 220 groups 3
+enemy 4 assets 220 groups 3
+enemy 5 assets 287 groups 4
+enemy 6 assets 287 groups 4
+enemy 7 assets 287 groups 4
+enemy 8 assets 354 groups 5
+enemy 9 assets 354 groups 5
+enemy 10 assets 354 groups 5
+enemy 11 assets 354 groups 5
+enemy 12 assets 354 groups 5
+enemy 13 assets 354 groups 5
+enemy 14 assets 419 groups 6
+enemy 15 assets 419 groups 6
+enemy 16 assets 419 groups 6
+enemy 17 assets 419 groups 6
+enemy 18 assets 495 groups 7
+enemy 19 assets 571 groups 8
+enemy 20 assets 647 groups 9
+enemy 21 assets 723 groups 10
+enemy 22 assets 723 groups 10
+enemy 23 assets 790 groups 11
+enemy 24 assets 790 groups 11
+enemy 25 assets 790 groups 11
+enemy 26 assets 790 groups 11
+enemy 27 assets 790 groups 11
+enemy 28 assets 790 groups 11
+enemy 29 assets 790 groups 11
+enemy 30 assets 866 groups 12
+enemy 31 assets 866 groups 12
+enemy 32 assets 942 groups 13
+enemy 33 assets 942 groups 13
+enemy 34 assets 942 groups 13
+enemy 35 assets 942 groups 13
+enemy 36 assets 942 groups 13
+enemy 37 assets 942 groups 13
+enemy 38 assets 1009 groups 14
+enemy 39 assets 1009 groups 14
+enemy 40 assets 1009 groups 14
+enemy 41 assets 1085 groups 15
+enemy 42 assets 1085 groups 15
+enemy 43 assets 1085 groups 15
+enemy 44 assets 1085 groups 15
+enemy 45 assets 1085 groups 15
+enemy 46 assets 1085 groups 15
+enemy 47 assets 1161 groups 16
+enemy 48 assets 1161 groups 16
+enemy 49 assets 1228 groups 17
+enemy 50 assets 1304 groups 18
+enemy 51 assets 1304 groups 18
+enemy 52 assets 1304 groups 18
+enemy 53 assets 1304 groups 18
+enemy 54 assets 1304 groups 18
+enemy 55 assets 1304 groups 18
+enemy 56 assets 1304 groups 18
+enemy 57 assets 1304 groups 18
+enemy 58 assets 1380 groups 19
+enemy 59 assets 1380 groups 19
+enemy 60 assets 1380 groups 19
+enemy 61 assets 1380 groups 19
+enemy 62 assets 1456 groups 20
+enemy 63 assets 1456 groups 20
+enemy 64 assets 1456 groups 20
+enemy 65 assets 1456 groups 20
+enemy 66 assets 1456 groups 20
+enemy 67 assets 1532 groups 21
+enemy 68 assets 1532 groups 21
+enemy 69 assets 1532 groups 21
+enemy 70 assets 1532 groups 21
+enemy 71 assets 1532 groups 21
+enemy 72 assets 1561 groups 22
+enemy 73 assets 1561 groups 22
+enemy 74 assets 1561 groups 22
+Raw sizes 120448 48196 3764 1561
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "effects": [
+    [
+      162,
+      3,
+      102,
+      107
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      162,
+      3,
+      106,
+      114
+    ],
+    [
+      162,
+      3,
+      113,
+      118
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      162,
+      3,
+      5,
+      10
+    ],
+    [
+      167,
+      3,
+      24,
+      33
+    ],
+    [
+      162,
+      3,
+      106,
+      114
+    ],
+    [
+      166,
+      3,
+      17,
+      25
+    ],
+    [
+      163,
+      3,
+      94,
+      99
+    ],
+    [
+      165,
+      3,
+      9,
+      18
+    ],
+    [
+      164,
+      3,
+      98,
+      103
+    ],
+    [
+      164,
+      3,
+      117,
+      122
+    ],
+    [
+      168,
+      3,
+      32,
+      41
+    ],
+    [
+      169,
+      3,
+      40,
+      50
+    ],
+    [
+      170,
+      3,
+      49,
+      58
+    ]
+  ],
+  "frames": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121
+  ],
+  "unique_assets": 1561,
+  "unique_groups": 22,
+  "pattern_pairs": 3764,
+  "native_banks": [
+    182,
+    147,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    213
+  ],
+  "bank_bytes": [
+    10216,
+    15795,
+    15800,
+    15785,
+    15783,
+    15796,
+    15788,
+    15796,
+    15790,
+    15792,
+    15800,
+    10719
+  ],
+  "combined_sprites_max": 38,
+  "combined_scanline_max": 10,
+  "scope": "Original actor11/12 weapon and offensive spell effects, original enemy anchors and source higher-priority enemy sprite occlusion. Two GBC palettes6/7 reserved. Extracted data alone does not implement per-hit battle choreography."
+}

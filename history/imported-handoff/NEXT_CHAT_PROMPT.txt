@@ -1,0 +1,11 @@
+Continue this Phantasy Star Sega Master System to native Game Boy Color port from the attached transfer ZIP.
+
+First read START_HERE.md, KNOWLEDGE_AND_NEXT_STEPS.md, and PROJECT_STATE.json. Verify the manifest and ROM hashes. The user tested the verified-baseline Camineet exploration ROM successfully and wants the rest of the original game ported.
+
+Preserve verified-baseline unchanged. Continue implementation in current-project. The latest expansion has extracted world and RPG data but is NOT integrated or playable. Current-project's Makefile still requests 4 ROM banks while world data uses banks32–53. src/rpg.h is only an API draft; src/rpg.c does not exist. Dialogue/events/dungeons/audio are research or remaining work. Do not describe these as implemented.
+
+Reproduce the verified baseline first using GBDK4.5.0, then integrate the11 world groups and original transitions, implement authentic state/inventory/shop/event behavior, and proceed to battles, dungeons, travel, audio, and the full story. Follow the original disassembly and ROM data, not invented generic RPG behavior. Preserve the source-specific formulas, flags, and edge cases in the handoff. Run meaningful emulator/logic tests and keep clear completion status as you work.
+
+The entire current project, original upstream source/reference ROM, extraction tools, installed toolchain snapshots, baseline source, test evidence, and technical research are included. Recreate the virtual environment on this machine and use an OS-appropriate GBDK binary. No prior account access is needed to understand the package.
+
+My goal is the complete original game running as a Game Boy Color ROM. Work autonomously on the authorized port, preserve existing working artifacts, and report honestly what is verified versus still unfinished.

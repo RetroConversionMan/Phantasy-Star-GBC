@@ -1,0 +1,2167 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "scope": "Initial poses converted to GBC; source scene30 supplies Lassic/DarkFalz background patterns. Static poses only, not animated or reference-emulator validated",
+  "enemies": [
+    {
+      "enemy": 1,
+      "name": "SWORM",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0x9cda",
+      "visual_descriptor": 18,
+      "scene": 1,
+      "decoded_tiles": 56,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 102,
+          "sprites": 19
+        }
+      ],
+      "source_bbox": [
+        104,
+        74,
+        152,
+        111
+      ],
+      "width": 48,
+      "height": 37,
+      "gbc_bank": 54,
+      "gbc_tiles": 21,
+      "gbc_bytes": 952
+    },
+    {
+      "enemy": 2,
+      "name": "GR.SLIME",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xb869",
+      "visual_descriptor": 2,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 9,
+          "sprites": 8
+        }
+      ],
+      "source_bbox": [
+        112,
+        108,
+        143,
+        124
+      ],
+      "width": 31,
+      "height": 16,
+      "gbc_bank": 54,
+      "gbc_tiles": 9,
+      "gbc_bytes": 760
+    },
+    {
+      "enemy": 3,
+      "name": "WING EYE",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xb7e4",
+      "visual_descriptor": 35,
+      "scene": 1,
+      "decoded_tiles": 78,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 211,
+          "sprites": 21
+        }
+      ],
+      "source_bbox": [
+        110,
+        48,
+        146,
+        96
+      ],
+      "width": 36,
+      "height": 48,
+      "gbc_bank": 54,
+      "gbc_tiles": 23,
+      "gbc_bytes": 984
+    },
+    {
+      "enemy": 4,
+      "name": "MANEATER",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xa180",
+      "visual_descriptor": 23,
+      "scene": 1,
+      "decoded_tiles": 52,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 130,
+          "sprites": 8
+        },
+        {
+          "index": 129,
+          "sprites": 20
+        }
+      ],
+      "source_bbox": [
+        104,
+        97,
+        152,
+        144
+      ],
+      "width": 48,
+      "height": 47,
+      "gbc_bank": 54,
+      "gbc_tiles": 29,
+      "gbc_bytes": 1080
+    },
+    {
+      "enemy": 5,
+      "name": "SCORPION",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xa4d0",
+      "visual_descriptor": 15,
+      "scene": 1,
+      "decoded_tiles": 53,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 80,
+          "sprites": 26
+        }
+      ],
+      "source_bbox": [
+        104,
+        80,
+        150,
+        128
+      ],
+      "width": 46,
+      "height": 48,
+      "gbc_bank": 54,
+      "gbc_tiles": 27,
+      "gbc_bytes": 1048
+    },
+    {
+      "enemy": 6,
+      "name": "G.SCORPI",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xa4d0",
+      "visual_descriptor": 15,
+      "scene": 1,
+      "decoded_tiles": 53,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 80,
+          "sprites": 26
+        }
+      ],
+      "source_bbox": [
+        104,
+        80,
+        150,
+        128
+      ],
+      "width": 46,
+      "height": 48,
+      "gbc_bank": 54,
+      "gbc_tiles": 27,
+      "gbc_bytes": 1048
+    },
+    {
+      "enemy": 7,
+      "name": "BL.SLIME",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xb869",
+      "visual_descriptor": 2,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 9,
+          "sprites": 8
+        }
+      ],
+      "source_bbox": [
+        112,
+        108,
+        143,
+        124
+      ],
+      "width": 31,
+      "height": 16,
+      "gbc_bank": 54,
+      "gbc_tiles": 9,
+      "gbc_bytes": 760
+    },
+    {
+      "enemy": 8,
+      "name": "N.FARMER",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x8dbe",
+      "visual_descriptor": 25,
+      "scene": 1,
+      "decoded_tiles": 91,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 153,
+          "sprites": 4
+        },
+        {
+          "index": 150,
+          "sprites": 30
+        }
+      ],
+      "source_bbox": [
+        110,
+        81,
+        145,
+        144
+      ],
+      "width": 35,
+      "height": 63,
+      "gbc_bank": 54,
+      "gbc_tiles": 34,
+      "gbc_bytes": 1160
+    },
+    {
+      "enemy": 9,
+      "name": "OWL BEAR",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xb7e4",
+      "visual_descriptor": 35,
+      "scene": 1,
+      "decoded_tiles": 78,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 211,
+          "sprites": 21
+        }
+      ],
+      "source_bbox": [
+        110,
+        48,
+        146,
+        96
+      ],
+      "width": 36,
+      "height": 48,
+      "gbc_bank": 54,
+      "gbc_tiles": 23,
+      "gbc_bytes": 984
+    },
+    {
+      "enemy": 10,
+      "name": "DEADTREE",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xa180",
+      "visual_descriptor": 23,
+      "scene": 1,
+      "decoded_tiles": 52,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 130,
+          "sprites": 8
+        },
+        {
+          "index": 129,
+          "sprites": 20
+        }
+      ],
+      "source_bbox": [
+        104,
+        97,
+        152,
+        144
+      ],
+      "width": 48,
+      "height": 47,
+      "gbc_bank": 54,
+      "gbc_tiles": 29,
+      "gbc_bytes": 1080
+    },
+    {
+      "enemy": 11,
+      "name": "SCORPIUS",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xa4d0",
+      "visual_descriptor": 15,
+      "scene": 1,
+      "decoded_tiles": 53,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 80,
+          "sprites": 26
+        }
+      ],
+      "source_bbox": [
+        104,
+        80,
+        150,
+        128
+      ],
+      "width": 46,
+      "height": 48,
+      "gbc_bank": 54,
+      "gbc_tiles": 27,
+      "gbc_bytes": 1048
+    },
+    {
+      "enemy": 12,
+      "name": "E.FARMER",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x8dbe",
+      "visual_descriptor": 27,
+      "scene": 1,
+      "decoded_tiles": 91,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 153,
+          "sprites": 4
+        },
+        {
+          "index": 152,
+          "sprites": 30
+        }
+      ],
+      "source_bbox": [
+        110,
+        81,
+        145,
+        144
+      ],
+      "width": 35,
+      "height": 63,
+      "gbc_bank": 54,
+      "gbc_tiles": 34,
+      "gbc_bytes": 1160
+    },
+    {
+      "enemy": 13,
+      "name": "GIANTFLY",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0x9cda",
+      "visual_descriptor": 18,
+      "scene": 1,
+      "decoded_tiles": 56,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 102,
+          "sprites": 19
+        }
+      ],
+      "source_bbox": [
+        104,
+        74,
+        152,
+        111
+      ],
+      "width": 48,
+      "height": 37,
+      "gbc_bank": 54,
+      "gbc_tiles": 21,
+      "gbc_bytes": 952
+    },
+    {
+      "enemy": 14,
+      "name": "CRAWLER",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xaa8c",
+      "visual_descriptor": 34,
+      "scene": 1,
+      "decoded_tiles": 151,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 206,
+          "sprites": 13
+        }
+      ],
+      "source_bbox": [
+        112,
+        114,
+        142,
+        142
+      ],
+      "width": 30,
+      "height": 28,
+      "gbc_bank": 54,
+      "gbc_tiles": 14,
+      "gbc_bytes": 840
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x8dbe",
+      "visual_descriptor": 26,
+      "scene": 1,
+      "decoded_tiles": 91,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 157,
+          "sprites": 4
+        },
+        {
+          "index": 151,
+          "sprites": 29
+        }
+      ],
+      "source_bbox": [
+        111,
+        83,
+        145,
+        144
+      ],
+      "width": 34,
+      "height": 61,
+      "gbc_bank": 54,
+      "gbc_tiles": 33,
+      "gbc_bytes": 1144
+    },
+    {
+      "enemy": 16,
+      "name": "GOLDLENS",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xb7e4",
+      "visual_descriptor": 35,
+      "scene": 1,
+      "decoded_tiles": 78,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 211,
+          "sprites": 21
+        }
+      ],
+      "source_bbox": [
+        110,
+        48,
+        146,
+        96
+      ],
+      "width": 36,
+      "height": 48,
+      "gbc_bank": 55,
+      "gbc_tiles": 23,
+      "gbc_bytes": 984
+    },
+    {
+      "enemy": 17,
+      "name": "RD.SLIME",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xb869",
+      "visual_descriptor": 2,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 9,
+          "sprites": 8
+        }
+      ],
+      "source_bbox": [
+        112,
+        108,
+        143,
+        124
+      ],
+      "width": 31,
+      "height": 16,
+      "gbc_bank": 55,
+      "gbc_tiles": 9,
+      "gbc_bytes": 760
+    },
+    {
+      "enemy": 18,
+      "name": "WERE BAT",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 36,
+      "scene": 1,
+      "decoded_tiles": 157,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 215,
+          "sprites": 34
+        }
+      ],
+      "source_bbox": [
+        112,
+        64,
+        143,
+        144
+      ],
+      "width": 31,
+      "height": 80,
+      "gbc_bank": 55,
+      "gbc_tiles": 39,
+      "gbc_bytes": 1240
+    },
+    {
+      "enemy": 19,
+      "name": "BIG CLUB",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0x8feb",
+      "visual_descriptor": 8,
+      "scene": 1,
+      "decoded_tiles": 74,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 45,
+          "sprites": 8
+        },
+        {
+          "index": 44,
+          "sprites": 24
+        }
+      ],
+      "source_bbox": [
+        110,
+        40,
+        146,
+        127
+      ],
+      "width": 36,
+      "height": 87,
+      "gbc_bank": 55,
+      "gbc_tiles": 39,
+      "gbc_bytes": 1240
+    },
+    {
+      "enemy": 20,
+      "name": "FISHMAN",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xa7b8",
+      "visual_descriptor": 7,
+      "scene": 1,
+      "decoded_tiles": 88,
+      "overlay_tiles": 18,
+      "initial_sprite_layers": [
+        {
+          "index": 40,
+          "sprites": 39
+        }
+      ],
+      "source_bbox": [
+        104,
+        80,
+        160,
+        144
+      ],
+      "width": 56,
+      "height": 64,
+      "gbc_bank": 55,
+      "gbc_tiles": 53,
+      "gbc_bytes": 1464
+    },
+    {
+      "enemy": 21,
+      "name": "EVILDEAD",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x9b85",
+      "visual_descriptor": 33,
+      "scene": 1,
+      "decoded_tiles": 68,
+      "overlay_tiles": 12,
+      "initial_sprite_layers": [
+        {
+          "index": 198,
+          "sprites": 20
+        }
+      ],
+      "source_bbox": [
+        112,
+        50,
+        144,
+        136
+      ],
+      "width": 32,
+      "height": 86,
+      "gbc_bank": 55,
+      "gbc_tiles": 31,
+      "gbc_bytes": 1112
+    },
+    {
+      "enemy": 22,
+      "name": "TARANTUL",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0xb28a",
+      "visual_descriptor": 17,
+      "scene": 1,
+      "decoded_tiles": 133,
+      "overlay_tiles": 48,
+      "initial_sprite_layers": [
+        {
+          "index": 93,
+          "sprites": 14
+        },
+        {
+          "index": 92,
+          "sprites": 16
+        }
+      ],
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "width": 64,
+      "height": 56,
+      "gbc_bank": 55,
+      "gbc_tiles": 45,
+      "gbc_bytes": 1336
+    },
+    {
+      "enemy": 23,
+      "name": "MANTICOR",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x9748",
+      "visual_descriptor": 20,
+      "scene": 1,
+      "decoded_tiles": 111,
+      "overlay_tiles": 16,
+      "initial_sprite_layers": [
+        {
+          "index": 112,
+          "sprites": 45
+        }
+      ],
+      "source_bbox": [
+        104,
+        56,
+        159,
+        144
+      ],
+      "width": 55,
+      "height": 88,
+      "gbc_bank": 55,
+      "gbc_tiles": 58,
+      "gbc_bytes": 1544
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xaa4a",
+      "visual_descriptor": 12,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 74,
+          "sprites": 8
+        },
+        {
+          "index": 71,
+          "sprites": 34
+        }
+      ],
+      "source_bbox": [
+        105,
+        57,
+        152,
+        144
+      ],
+      "width": 47,
+      "height": 87,
+      "gbc_bank": 55,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 25,
+      "name": "ANT LION",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0xb28a",
+      "visual_descriptor": 17,
+      "scene": 1,
+      "decoded_tiles": 133,
+      "overlay_tiles": 48,
+      "initial_sprite_layers": [
+        {
+          "index": 93,
+          "sprites": 14
+        },
+        {
+          "index": 92,
+          "sprites": 16
+        }
+      ],
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "width": 64,
+      "height": 56,
+      "gbc_bank": 55,
+      "gbc_tiles": 45,
+      "gbc_bytes": 1336
+    },
+    {
+      "enemy": 26,
+      "name": "MARMAN",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xa7b8",
+      "visual_descriptor": 7,
+      "scene": 1,
+      "decoded_tiles": 88,
+      "overlay_tiles": 18,
+      "initial_sprite_layers": [
+        {
+          "index": 40,
+          "sprites": 39
+        }
+      ],
+      "source_bbox": [
+        104,
+        80,
+        160,
+        144
+      ],
+      "width": 56,
+      "height": 64,
+      "gbc_bank": 55,
+      "gbc_tiles": 53,
+      "gbc_bytes": 1464
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x96ed",
+      "visual_descriptor": 10,
+      "scene": 1,
+      "decoded_tiles": 49,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 64,
+          "sprites": 5
+        },
+        {
+          "index": 63,
+          "sprites": 26
+        }
+      ],
+      "source_bbox": [
+        116,
+        56,
+        140,
+        144
+      ],
+      "width": 24,
+      "height": 88,
+      "gbc_bank": 55,
+      "gbc_tiles": 36,
+      "gbc_bytes": 1192
+    },
+    {
+      "enemy": 28,
+      "name": "LEECH",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xaa8c",
+      "visual_descriptor": 34,
+      "scene": 1,
+      "decoded_tiles": 151,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 206,
+          "sprites": 13
+        }
+      ],
+      "source_bbox": [
+        112,
+        114,
+        142,
+        142
+      ],
+      "width": 30,
+      "height": 28,
+      "gbc_bank": 55,
+      "gbc_tiles": 14,
+      "gbc_bytes": 840
+    },
+    {
+      "enemy": 29,
+      "name": "VAMPIRE",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 36,
+      "scene": 1,
+      "decoded_tiles": 157,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 215,
+          "sprites": 34
+        }
+      ],
+      "source_bbox": [
+        112,
+        64,
+        143,
+        144
+      ],
+      "width": 31,
+      "height": 80,
+      "gbc_bank": 56,
+      "gbc_tiles": 39,
+      "gbc_bytes": 1240
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x9c25",
+      "visual_descriptor": 3,
+      "scene": 1,
+      "decoded_tiles": 153,
+      "overlay_tiles": 80,
+      "initial_sprite_layers": [
+        {
+          "index": 22,
+          "sprites": 8
+        },
+        {
+          "index": 21,
+          "sprites": 36
+        }
+      ],
+      "source_bbox": [
+        89,
+        48,
+        167,
+        141
+      ],
+      "width": 78,
+      "height": 93,
+      "gbc_bank": 56,
+      "gbc_tiles": 88,
+      "gbc_bytes": 2024
+    },
+    {
+      "enemy": 31,
+      "name": "GHOUL",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xb326",
+      "visual_descriptor": 19,
+      "scene": 1,
+      "decoded_tiles": 116,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 105,
+          "sprites": 39
+        }
+      ],
+      "source_bbox": [
+        113,
+        57,
+        145,
+        144
+      ],
+      "width": 32,
+      "height": 87,
+      "gbc_bank": 56,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 32,
+      "name": "SHELFISH",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0xaba2",
+      "visual_descriptor": 9,
+      "scene": 1,
+      "decoded_tiles": 75,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 53,
+          "sprites": 11
+        },
+        {
+          "index": 52,
+          "sprites": 16
+        }
+      ],
+      "source_bbox": [
+        114,
+        48,
+        149,
+        96
+      ],
+      "width": 35,
+      "height": 48,
+      "gbc_bank": 56,
+      "gbc_tiles": 31,
+      "gbc_bytes": 1112
+    },
+    {
+      "enemy": 33,
+      "name": "EXECUTER",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0x8feb",
+      "visual_descriptor": 8,
+      "scene": 1,
+      "decoded_tiles": 74,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 45,
+          "sprites": 8
+        },
+        {
+          "index": 44,
+          "sprites": 24
+        }
+      ],
+      "source_bbox": [
+        110,
+        40,
+        146,
+        127
+      ],
+      "width": 36,
+      "height": 87,
+      "gbc_bank": 56,
+      "gbc_tiles": 39,
+      "gbc_bytes": 1240
+    },
+    {
+      "enemy": 34,
+      "name": "WIGHT",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x9b85",
+      "visual_descriptor": 33,
+      "scene": 1,
+      "decoded_tiles": 68,
+      "overlay_tiles": 12,
+      "initial_sprite_layers": [
+        {
+          "index": 198,
+          "sprites": 20
+        }
+      ],
+      "source_bbox": [
+        112,
+        50,
+        144,
+        136
+      ],
+      "width": 32,
+      "height": 86,
+      "gbc_bank": 56,
+      "gbc_tiles": 31,
+      "gbc_bytes": 1112
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xaa4a",
+      "visual_descriptor": 13,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 74,
+          "sprites": 8
+        },
+        {
+          "index": 72,
+          "sprites": 34
+        }
+      ],
+      "source_bbox": [
+        105,
+        57,
+        152,
+        144
+      ],
+      "width": 47,
+      "height": 87,
+      "gbc_bank": 56,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 36,
+      "name": "AMMONITE",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0xaba2",
+      "visual_descriptor": 9,
+      "scene": 1,
+      "decoded_tiles": 75,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 53,
+          "sprites": 11
+        },
+        {
+          "index": 52,
+          "sprites": 16
+        }
+      ],
+      "source_bbox": [
+        114,
+        48,
+        149,
+        96
+      ],
+      "width": 35,
+      "height": 48,
+      "gbc_bank": 56,
+      "gbc_tiles": 31,
+      "gbc_bytes": 1112
+    },
+    {
+      "enemy": 37,
+      "name": "SPHINX",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x9748",
+      "visual_descriptor": 20,
+      "scene": 1,
+      "decoded_tiles": 111,
+      "overlay_tiles": 16,
+      "initial_sprite_layers": [
+        {
+          "index": 112,
+          "sprites": 45
+        }
+      ],
+      "source_bbox": [
+        104,
+        56,
+        159,
+        144
+      ],
+      "width": 55,
+      "height": 88,
+      "gbc_bank": 56,
+      "gbc_tiles": 58,
+      "gbc_bytes": 1544
+    },
+    {
+      "enemy": 38,
+      "name": "SERPENT",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x9755",
+      "visual_descriptor": 16,
+      "scene": 1,
+      "decoded_tiles": 141,
+      "overlay_tiles": 54,
+      "initial_sprite_layers": [
+        {
+          "index": 84,
+          "sprites": 10
+        },
+        {
+          "index": 83,
+          "sprites": 36
+        }
+      ],
+      "source_bbox": [
+        104,
+        41,
+        168,
+        125
+      ],
+      "width": 64,
+      "height": 84,
+      "gbc_bank": 56,
+      "gbc_tiles": 61,
+      "gbc_bytes": 1592
+    },
+    {
+      "enemy": 39,
+      "name": "SANDWORM",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xaa8c",
+      "visual_descriptor": 34,
+      "scene": 1,
+      "decoded_tiles": 151,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 206,
+          "sprites": 13
+        }
+      ],
+      "source_bbox": [
+        112,
+        114,
+        142,
+        142
+      ],
+      "width": 30,
+      "height": 28,
+      "gbc_bank": 56,
+      "gbc_tiles": 14,
+      "gbc_bytes": 840
+    },
+    {
+      "enemy": 40,
+      "name": "LICH",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x9b85",
+      "visual_descriptor": 33,
+      "scene": 1,
+      "decoded_tiles": 68,
+      "overlay_tiles": 12,
+      "initial_sprite_layers": [
+        {
+          "index": 198,
+          "sprites": 20
+        }
+      ],
+      "source_bbox": [
+        112,
+        50,
+        144,
+        136
+      ],
+      "width": 32,
+      "height": 86,
+      "gbc_bank": 56,
+      "gbc_tiles": 31,
+      "gbc_bytes": 1112
+    },
+    {
+      "enemy": 41,
+      "name": "OCTOPUS",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xb17e",
+      "visual_descriptor": 5,
+      "scene": 1,
+      "decoded_tiles": 132,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [
+        {
+          "index": 32,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        105,
+        65,
+        167,
+        143
+      ],
+      "width": 62,
+      "height": 78,
+      "gbc_bank": 57,
+      "gbc_tiles": 63,
+      "gbc_bytes": 1624
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xaa4a",
+      "visual_descriptor": 14,
+      "scene": 1,
+      "decoded_tiles": 90,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 74,
+          "sprites": 8
+        },
+        {
+          "index": 73,
+          "sprites": 34
+        }
+      ],
+      "source_bbox": [
+        105,
+        57,
+        152,
+        144
+      ],
+      "width": 47,
+      "height": 87,
+      "gbc_bank": 57,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x96ed",
+      "visual_descriptor": 10,
+      "scene": 1,
+      "decoded_tiles": 49,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 64,
+          "sprites": 5
+        },
+        {
+          "index": 63,
+          "sprites": 26
+        }
+      ],
+      "source_bbox": [
+        116,
+        56,
+        140,
+        144
+      ],
+      "width": 24,
+      "height": 88,
+      "gbc_bank": 57,
+      "gbc_tiles": 36,
+      "gbc_bytes": 1192
+    },
+    {
+      "enemy": 44,
+      "name": "ZOMBIE",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xb326",
+      "visual_descriptor": 19,
+      "scene": 1,
+      "decoded_tiles": 116,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 105,
+          "sprites": 39
+        }
+      ],
+      "source_bbox": [
+        113,
+        57,
+        145,
+        144
+      ],
+      "width": 32,
+      "height": 87,
+      "gbc_bank": 57,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 45,
+      "name": "BATALION",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0xb326",
+      "visual_descriptor": 19,
+      "scene": 1,
+      "decoded_tiles": 116,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 105,
+          "sprites": 39
+        }
+      ],
+      "source_bbox": [
+        113,
+        57,
+        145,
+        144
+      ],
+      "width": 32,
+      "height": 87,
+      "gbc_bank": 57,
+      "gbc_tiles": 42,
+      "gbc_bytes": 1288
+    },
+    {
+      "enemy": 46,
+      "name": "ROBOTCOP",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0xaa0f",
+      "visual_descriptor": 21,
+      "scene": 1,
+      "decoded_tiles": 94,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 121,
+          "sprites": 11
+        },
+        {
+          "index": 120,
+          "sprites": 38
+        }
+      ],
+      "source_bbox": [
+        110,
+        65,
+        146,
+        144
+      ],
+      "width": 36,
+      "height": 79,
+      "gbc_bank": 57,
+      "gbc_tiles": 37,
+      "gbc_bytes": 1208
+    },
+    {
+      "enemy": 47,
+      "name": "SORCERER",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xa25f",
+      "visual_descriptor": 4,
+      "scene": 1,
+      "decoded_tiles": 102,
+      "overlay_tiles": 27,
+      "initial_sprite_layers": [
+        {
+          "index": 28,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        101,
+        57,
+        151,
+        143
+      ],
+      "width": 50,
+      "height": 86,
+      "gbc_bank": 57,
+      "gbc_tiles": 53,
+      "gbc_bytes": 1464
+    },
+    {
+      "enemy": 48,
+      "name": "NESSIE",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x9755",
+      "visual_descriptor": 16,
+      "scene": 1,
+      "decoded_tiles": 141,
+      "overlay_tiles": 54,
+      "initial_sprite_layers": [
+        {
+          "index": 84,
+          "sprites": 10
+        },
+        {
+          "index": 83,
+          "sprites": 36
+        }
+      ],
+      "source_bbox": [
+        104,
+        41,
+        168,
+        125
+      ],
+      "width": 64,
+      "height": 84,
+      "gbc_bank": 57,
+      "gbc_tiles": 61,
+      "gbc_bytes": 1592
+    },
+    {
+      "enemy": 49,
+      "name": "TARZIMAL",
+      "sms_graphics_bank": 17,
+      "sms_graphics_pointer": "0xb94a",
+      "visual_descriptor": 6,
+      "scene": 1,
+      "decoded_tiles": 71,
+      "overlay_tiles": 12,
+      "initial_sprite_layers": [
+        {
+          "index": 36,
+          "sprites": 17
+        }
+      ],
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "width": 31,
+      "height": 58,
+      "gbc_bank": 57,
+      "gbc_tiles": 30,
+      "gbc_bytes": 1096
+    },
+    {
+      "enemy": 50,
+      "name": "GOLEM",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0xb395",
+      "visual_descriptor": 31,
+      "scene": 1,
+      "decoded_tiles": 127,
+      "overlay_tiles": 78,
+      "initial_sprite_layers": [
+        {
+          "index": 187,
+          "sprites": 8
+        },
+        {
+          "index": 186,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        100,
+        32,
+        160,
+        144
+      ],
+      "width": 60,
+      "height": 112,
+      "gbc_bank": 57,
+      "gbc_tiles": 94,
+      "gbc_bytes": 2120
+    },
+    {
+      "enemy": 51,
+      "name": "ANDROCOP",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0xaa0f",
+      "visual_descriptor": 21,
+      "scene": 1,
+      "decoded_tiles": 94,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 121,
+          "sprites": 11
+        },
+        {
+          "index": 120,
+          "sprites": 38
+        }
+      ],
+      "source_bbox": [
+        110,
+        65,
+        146,
+        144
+      ],
+      "width": 36,
+      "height": 79,
+      "gbc_bank": 57,
+      "gbc_tiles": 37,
+      "gbc_bytes": 1208
+    },
+    {
+      "enemy": 52,
+      "name": "TENTACLE",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0xb17e",
+      "visual_descriptor": 5,
+      "scene": 1,
+      "decoded_tiles": 132,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [
+        {
+          "index": 32,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        105,
+        65,
+        167,
+        143
+      ],
+      "width": 62,
+      "height": 78,
+      "gbc_bank": 58,
+      "gbc_tiles": 60,
+      "gbc_bytes": 1576
+    },
+    {
+      "enemy": 53,
+      "name": "GIANT",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0xb395",
+      "visual_descriptor": 31,
+      "scene": 1,
+      "decoded_tiles": 127,
+      "overlay_tiles": 78,
+      "initial_sprite_layers": [
+        {
+          "index": 187,
+          "sprites": 8
+        },
+        {
+          "index": 186,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        100,
+        32,
+        160,
+        144
+      ],
+      "width": 60,
+      "height": 112,
+      "gbc_bank": 58,
+      "gbc_tiles": 94,
+      "gbc_bytes": 2120
+    },
+    {
+      "enemy": 54,
+      "name": "WYVERN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x9755",
+      "visual_descriptor": 16,
+      "scene": 1,
+      "decoded_tiles": 141,
+      "overlay_tiles": 54,
+      "initial_sprite_layers": [
+        {
+          "index": 84,
+          "sprites": 10
+        },
+        {
+          "index": 83,
+          "sprites": 36
+        }
+      ],
+      "source_bbox": [
+        104,
+        41,
+        168,
+        125
+      ],
+      "width": 64,
+      "height": 84,
+      "gbc_bank": 58,
+      "gbc_tiles": 61,
+      "gbc_bytes": 1592
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x8d7e",
+      "visual_descriptor": 30,
+      "scene": 1,
+      "decoded_tiles": 153,
+      "overlay_tiles": 55,
+      "initial_sprite_layers": [
+        {
+          "index": 181,
+          "sprites": 30
+        },
+        {
+          "index": 180,
+          "sprites": 23
+        }
+      ],
+      "source_bbox": [
+        96,
+        48,
+        156,
+        144
+      ],
+      "width": 60,
+      "height": 96,
+      "gbc_bank": 58,
+      "gbc_tiles": 68,
+      "gbc_bytes": 1704
+    },
+    {
+      "enemy": 56,
+      "name": "MAGICIAN",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xa25f",
+      "visual_descriptor": 4,
+      "scene": 1,
+      "decoded_tiles": 102,
+      "overlay_tiles": 27,
+      "initial_sprite_layers": [
+        {
+          "index": 28,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        101,
+        57,
+        151,
+        143
+      ],
+      "width": 50,
+      "height": 86,
+      "gbc_bank": 58,
+      "gbc_tiles": 53,
+      "gbc_bytes": 1464
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 29,
+      "scene": 1,
+      "decoded_tiles": 119,
+      "overlay_tiles": 30,
+      "initial_sprite_layers": [
+        {
+          "index": 173,
+          "sprites": 16
+        },
+        {
+          "index": 172,
+          "sprites": 40
+        }
+      ],
+      "source_bbox": [
+        103,
+        46,
+        152,
+        144
+      ],
+      "width": 49,
+      "height": 98,
+      "gbc_bank": 58,
+      "gbc_tiles": 69,
+      "gbc_bytes": 1720
+    },
+    {
+      "enemy": 58,
+      "name": "FROSTMAN",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x8a1f",
+      "visual_descriptor": 28,
+      "scene": 1,
+      "decoded_tiles": 129,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [
+        {
+          "index": 163,
+          "sprites": 21
+        },
+        {
+          "index": 171,
+          "sprites": 23
+        }
+      ],
+      "source_bbox": [
+        108,
+        32,
+        147,
+        144
+      ],
+      "width": 39,
+      "height": 112,
+      "gbc_bank": 58,
+      "gbc_tiles": 61,
+      "gbc_bytes": 1592
+    },
+    {
+      "enemy": 59,
+      "name": "AMUNDSEN",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x8a1f",
+      "visual_descriptor": 28,
+      "scene": 1,
+      "decoded_tiles": 129,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [
+        {
+          "index": 163,
+          "sprites": 21
+        },
+        {
+          "index": 171,
+          "sprites": 23
+        }
+      ],
+      "source_bbox": [
+        108,
+        32,
+        147,
+        144
+      ],
+      "width": 39,
+      "height": 112,
+      "gbc_bank": 58,
+      "gbc_tiles": 61,
+      "gbc_bytes": 1592
+    },
+    {
+      "enemy": 60,
+      "name": "RD.DRAGN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x893b",
+      "visual_descriptor": 1,
+      "scene": 1,
+      "decoded_tiles": 154,
+      "overlay_tiles": 91,
+      "initial_sprite_layers": [
+        {
+          "index": 2,
+          "sprites": 5
+        },
+        {
+          "index": 1,
+          "sprites": 51
+        }
+      ],
+      "source_bbox": [
+        96,
+        32,
+        173,
+        144
+      ],
+      "width": 77,
+      "height": 112,
+      "gbc_bank": 58,
+      "gbc_tiles": 109,
+      "gbc_bytes": 2360
+    },
+    {
+      "enemy": 61,
+      "name": "GR.DRAGN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x893b",
+      "visual_descriptor": 1,
+      "scene": 1,
+      "decoded_tiles": 154,
+      "overlay_tiles": 91,
+      "initial_sprite_layers": [
+        {
+          "index": 2,
+          "sprites": 5
+        },
+        {
+          "index": 1,
+          "sprites": 51
+        }
+      ],
+      "source_bbox": [
+        96,
+        32,
+        173,
+        144
+      ],
+      "width": 77,
+      "height": 112,
+      "gbc_bank": 59,
+      "gbc_tiles": 109,
+      "gbc_bytes": 2360
+    },
+    {
+      "enemy": 62,
+      "name": "SHADOW",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 24,
+      "scene": 1,
+      "decoded_tiles": 96,
+      "overlay_tiles": 36,
+      "initial_sprite_layers": [
+        {
+          "index": 141,
+          "sprites": 28
+        }
+      ],
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "width": 38,
+      "height": 80,
+      "gbc_bank": 59,
+      "gbc_tiles": 43,
+      "gbc_bytes": 1304
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0x9c25",
+      "visual_descriptor": 3,
+      "scene": 1,
+      "decoded_tiles": 153,
+      "overlay_tiles": 80,
+      "initial_sprite_layers": [
+        {
+          "index": 22,
+          "sprites": 8
+        },
+        {
+          "index": 21,
+          "sprites": 36
+        }
+      ],
+      "source_bbox": [
+        89,
+        48,
+        167,
+        141
+      ],
+      "width": 78,
+      "height": 93,
+      "gbc_bank": 59,
+      "gbc_tiles": 88,
+      "gbc_bytes": 2024
+    },
+    {
+      "enemy": 64,
+      "name": "CENTAUR",
+      "sms_graphics_bank": 26,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 29,
+      "scene": 1,
+      "decoded_tiles": 119,
+      "overlay_tiles": 30,
+      "initial_sprite_layers": [
+        {
+          "index": 173,
+          "sprites": 16
+        },
+        {
+          "index": 172,
+          "sprites": 40
+        }
+      ],
+      "source_bbox": [
+        103,
+        46,
+        152,
+        144
+      ],
+      "width": 49,
+      "height": 98,
+      "gbc_bank": 59,
+      "gbc_tiles": 69,
+      "gbc_bytes": 1720
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0x8d7e",
+      "visual_descriptor": 30,
+      "scene": 1,
+      "decoded_tiles": 153,
+      "overlay_tiles": 55,
+      "initial_sprite_layers": [
+        {
+          "index": 181,
+          "sprites": 30
+        },
+        {
+          "index": 180,
+          "sprites": 23
+        }
+      ],
+      "source_bbox": [
+        96,
+        48,
+        156,
+        144
+      ],
+      "width": 60,
+      "height": 96,
+      "gbc_bank": 59,
+      "gbc_tiles": 68,
+      "gbc_bytes": 1704
+    },
+    {
+      "enemy": 66,
+      "name": "TITAN",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0xb395",
+      "visual_descriptor": 31,
+      "scene": 1,
+      "decoded_tiles": 127,
+      "overlay_tiles": 78,
+      "initial_sprite_layers": [
+        {
+          "index": 187,
+          "sprites": 8
+        },
+        {
+          "index": 186,
+          "sprites": 41
+        }
+      ],
+      "source_bbox": [
+        100,
+        32,
+        160,
+        144
+      ],
+      "width": 60,
+      "height": 112,
+      "gbc_bank": 59,
+      "gbc_tiles": 94,
+      "gbc_bytes": 2120
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "sms_graphics_bank": 10,
+      "sms_graphics_pointer": "0xa044",
+      "visual_descriptor": 32,
+      "scene": 1,
+      "decoded_tiles": 111,
+      "overlay_tiles": 44,
+      "initial_sprite_layers": [
+        {
+          "index": 192,
+          "sprites": 2
+        },
+        {
+          "index": 191,
+          "sprites": 33
+        }
+      ],
+      "source_bbox": [
+        105,
+        50,
+        152,
+        144
+      ],
+      "width": 47,
+      "height": 94,
+      "gbc_bank": 59,
+      "gbc_tiles": 58,
+      "gbc_bytes": 1544
+    },
+    {
+      "enemy": 68,
+      "name": "WT.DRAGN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x893b",
+      "visual_descriptor": 1,
+      "scene": 1,
+      "decoded_tiles": 154,
+      "overlay_tiles": 91,
+      "initial_sprite_layers": [
+        {
+          "index": 2,
+          "sprites": 5
+        },
+        {
+          "index": 1,
+          "sprites": 51
+        }
+      ],
+      "source_bbox": [
+        96,
+        32,
+        173,
+        144
+      ],
+      "width": 77,
+      "height": 112,
+      "gbc_bank": 59,
+      "gbc_tiles": 109,
+      "gbc_bytes": 2360
+    },
+    {
+      "enemy": 69,
+      "name": "BL.DRAGN",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x893b",
+      "visual_descriptor": 1,
+      "scene": 1,
+      "decoded_tiles": 154,
+      "overlay_tiles": 91,
+      "initial_sprite_layers": [
+        {
+          "index": 2,
+          "sprites": 5
+        },
+        {
+          "index": 1,
+          "sprites": 51
+        }
+      ],
+      "source_bbox": [
+        96,
+        32,
+        173,
+        144
+      ],
+      "width": 77,
+      "height": 112,
+      "gbc_bank": 60,
+      "gbc_tiles": 109,
+      "gbc_bytes": 2360
+    },
+    {
+      "enemy": 70,
+      "name": "GD.DRAGN",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0x8aeb",
+      "visual_descriptor": 22,
+      "scene": 1,
+      "decoded_tiles": 148,
+      "overlay_tiles": 0,
+      "initial_sprite_layers": [
+        {
+          "index": 227,
+          "sprites": 25
+        }
+      ],
+      "source_bbox": [
+        114,
+        40,
+        141,
+        99
+      ],
+      "width": 27,
+      "height": 59,
+      "gbc_bank": 60,
+      "gbc_tiles": 28,
+      "gbc_bytes": 1064
+    },
+    {
+      "enemy": 71,
+      "name": "DR.MAD",
+      "sms_graphics_bank": 25,
+      "sms_graphics_pointer": "0x8000",
+      "visual_descriptor": 24,
+      "scene": 1,
+      "decoded_tiles": 96,
+      "overlay_tiles": 36,
+      "initial_sprite_layers": [
+        {
+          "index": 141,
+          "sprites": 28
+        }
+      ],
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "width": 38,
+      "height": 80,
+      "gbc_bank": 60,
+      "gbc_tiles": 43,
+      "gbc_bytes": 1304
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "sms_graphics_bank": 11,
+      "sms_graphics_pointer": "0xad79",
+      "visual_descriptor": 38,
+      "scene": 30,
+      "decoded_tiles": 159,
+      "overlay_tiles": 55,
+      "initial_sprite_layers": [
+        {
+          "index": 203,
+          "sprites": 31
+        }
+      ],
+      "source_bbox": [
+        106,
+        57,
+        159,
+        168
+      ],
+      "width": 53,
+      "height": 111,
+      "gbc_bank": 60,
+      "gbc_tiles": 63,
+      "gbc_bytes": 1624
+    },
+    {
+      "enemy": 73,
+      "name": "DARKFALZ",
+      "sms_graphics_bank": 20,
+      "sms_graphics_pointer": "0x97c4",
+      "visual_descriptor": 39,
+      "scene": 30,
+      "decoded_tiles": 154,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [],
+      "source_bbox": [
+        112,
+        72,
+        144,
+        120
+      ],
+      "width": 32,
+      "height": 48,
+      "gbc_bank": 60,
+      "gbc_tiles": 25,
+      "gbc_bytes": 1016
+    },
+    {
+      "enemy": 74,
+      "name": "SACCUBUS",
+      "sms_graphics_bank": 19,
+      "sms_graphics_pointer": "0xbd83",
+      "visual_descriptor": 37,
+      "scene": 1,
+      "decoded_tiles": 20,
+      "overlay_tiles": 24,
+      "initial_sprite_layers": [
+        {
+          "index": 223,
+          "sprites": 2
+        }
+      ],
+      "source_bbox": [
+        114,
+        73,
+        142,
+        119
+      ],
+      "width": 28,
+      "height": 46,
+      "gbc_bank": 60,
+      "gbc_tiles": 25,
+      "gbc_bytes": 1016
+    }
+  ],
+  "gbc_banks": [
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "bank_bytes": [
+    15000,
+    15800,
+    15504,
+    15368,
+    15720,
+    15136,
+    8384
+  ],
+  "max_width": 78,
+  "max_height": 112
+}

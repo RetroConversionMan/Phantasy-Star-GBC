@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "tool_sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+  "frozen_tools": "build/source-snapshots/replay-live-tools-20261113/tools",
+  "frozen_manifest_sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7",
+  "ingestion_test_report": "build/verification/live-replay-ingestion-final/report.json",
+  "ingestion_tests_passed": true,
+  "campaign_complete": false,
+  "scope": "Frozen proof-only replay tooling and complete-record publication tests. This records no full campaign acceptance; that requires the separate closed-marker-pinned replay, own native SRAM equality and title comparison.",
+  "files": {
+    "build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "build/source-snapshots/replay-live-tools-20261113/tools/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "build/source-snapshots/replay-live-tools-20261113/tools/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "build/source-snapshots/replay-live-tools-20261113/tools/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "build/source-snapshots/replay-live-tools-20261113/tools/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/LIVE_REPLAY_PROVENANCE.json": {
+      "bytes": 1389,
+      "sha256": "479b62290d6fa40f451876098861c54f8f8087c418a18f01b77e91a8d51063f4"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/initial-source-report.json": {
+      "bytes": 3829559,
+      "sha256": "77582a5a97cd1c9be996e8830ad68d75887b57d1dbcfa83411570093f33655a7"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/prefix-replay-report.json": {
+      "bytes": 3296,
+      "sha256": "6fbcbf9d16b6c7d24f83cac54e688bed3023ba8399561ea7ef99b8116508b88e"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/progress.json": {
+      "bytes": 487,
+      "sha256": "85582b8d2ef9479deeb384d53bccc314026812657b527d01932218a66b7c6538"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/recorded-controller.jsonl": {
+      "bytes": 50403,
+      "sha256": "3356c1d9c66986a1cc7efc74b6416bc1be199ec57b1b4fffbc2f7cca8cae4d56"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/verification-tooling/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/verification-tooling/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/verification-tooling/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/verification-tooling/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "build/verification/live-replay-ingestion-final/following-output/verification-tooling/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    },
+    "build/verification/live-replay-ingestion-final/following-output.log": {
+      "bytes": 241,
+      "sha256": "a603b31774f648eb67f5440479cc4aa7df498b8a7f4f9b5d8631eade9f6f87f6"
+    },
+    "build/verification/live-replay-ingestion-final/mutated-source/campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "build/verification/live-replay-ingestion-final/mutated-source/campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "build/verification/live-replay-ingestion-final/mutated-source/controller.jsonl": {
+      "bytes": 6042,
+      "sha256": "be4067cd3bf630aee90e2fbdbe365185ae9f45d13f1d21d452e799321bab76d3"
+    },
+    "build/verification/live-replay-ingestion-final/mutated-source/native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "build/verification/live-replay-ingestion-final/mutated-source/report.json": {
+      "bytes": 3829559,
+      "sha256": "77582a5a97cd1c9be996e8830ad68d75887b57d1dbcfa83411570093f33655a7"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/LIVE_REPLAY_PROVENANCE.json": {
+      "bytes": 1387,
+      "sha256": "2731a2927b40dc874c4b850f978d3003a9ba4930c50008caa9533b22ab9c676e"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/initial-source-report.json": {
+      "bytes": 3829559,
+      "sha256": "77582a5a97cd1c9be996e8830ad68d75887b57d1dbcfa83411570093f33655a7"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/progress.json": {
+      "bytes": 509,
+      "sha256": "52b5e4396340b2decb21bc76cbf88f5be324060eef6b8c49d6a63579fc3f10f6"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/recorded-controller.jsonl": {
+      "bytes": 6027,
+      "sha256": "4618581a596e3222dd48aa4d9fb858534846a8cc088400d0f00073ac47bf7835"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/replay-failure.json": {
+      "bytes": 2822,
+      "sha256": "a537d4f3735d6fefe34d90ffdc7643effbcd464b172864c42f67447ea26a6932"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/verification-tooling/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/verification-tooling/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/verification-tooling/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/verification-tooling/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output/verification-tooling/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    },
+    "build/verification/live-replay-ingestion-final/mutation-output.log": {
+      "bytes": 1298,
+      "sha256": "de0282dcb4abc67ea5f8562ddac212d34ad2efa67d0307444ca14876e7799798"
+    },
+    "build/verification/live-replay-ingestion-final/published-source/campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "build/verification/live-replay-ingestion-final/published-source/campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "build/verification/live-replay-ingestion-final/published-source/controller.jsonl": {
+      "bytes": 50403,
+      "sha256": "3356c1d9c66986a1cc7efc74b6416bc1be199ec57b1b4fffbc2f7cca8cae4d56"
+    },
+    "build/verification/live-replay-ingestion-final/published-source/native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "build/verification/live-replay-ingestion-final/published-source/report.json": {
+      "bytes": 3831432,
+      "sha256": "cef3d0129912c505be91551fb3be62883e00c16552470333d0d4cb6e646a473c"
+    },
+    "build/verification/live-replay-ingestion-final/report.json": {
+      "bytes": 899,
+      "sha256": "e96c0142bc09cc0d88f2c97d7bbe92c0d34822b2318c02ebb9b8fc2a9eec05a7"
+    },
+    "build/verification/live-replay-tool-acceptance/test_ingestion_final.py": {
+      "bytes": 5359,
+      "sha256": "a406e7991f46af057a203adaaaa1d66ee0a1697275cec6b2ca70b3db7f5adc1c"
+    }
+  }
+}

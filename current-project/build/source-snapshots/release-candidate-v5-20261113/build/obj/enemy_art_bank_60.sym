@@ -1,0 +1,52 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _enemy_69_attrs                                                 000007E8 GR
+  8 _enemy_69_map                                                   000006D0 GR
+  8 _enemy_69_palettes                                              00000900 GR
+  8 _enemy_69_tiles                                                 00000000 GR
+  8 _enemy_70_attrs                                                 00000C10 GR
+  8 _enemy_70_map                                                   00000AF8 GR
+  8 _enemy_70_palettes                                              00000D28 GR
+  8 _enemy_70_tiles                                                 00000938 GR
+  8 _enemy_71_attrs                                                 00001128 GR
+  8 _enemy_71_map                                                   00001010 GR
+  8 _enemy_71_palettes                                              00001240 GR
+  8 _enemy_71_tiles                                                 00000D60 GR
+  8 _enemy_72_attrs                                                 00001780 GR
+  8 _enemy_72_map                                                   00001668 GR
+  8 _enemy_72_palettes                                              00001898 GR
+  8 _enemy_72_tiles                                                 00001278 GR
+  8 _enemy_73_attrs                                                 00001B78 GR
+  8 _enemy_73_map                                                   00001A60 GR
+  8 _enemy_73_palettes                                              00001C90 GR
+  8 _enemy_73_tiles                                                 000018D0 GR
+  8 _enemy_74_attrs                                                 00001F70 GR
+  8 _enemy_74_map                                                   00001E58 GR
+  8 _enemy_74_palettes                                              00002088 GR
+  8 _enemy_74_tiles                                                 00001CC8 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_60                                   size     20C0   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

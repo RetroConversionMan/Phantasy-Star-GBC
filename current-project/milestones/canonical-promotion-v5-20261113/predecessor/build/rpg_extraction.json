@@ -1,0 +1,101 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "tables": {
+    "levels": {
+      "bank": 3,
+      "address": "0xb8af",
+      "bytes": 960,
+      "sha256": "f801f0aad98ebe0dfd49f907af913ca9ab0a12f5d0aaf2fda6f495b61dd30835"
+    },
+    "enemies": {
+      "bank": 3,
+      "address": "0x867f",
+      "bytes": 2400,
+      "sha256": "17e43df1f846817387ce41a52db3e91a766c043604d027bad4d31fc0ee37833e"
+    },
+    "shops": {
+      "bank": 3,
+      "address": "0xb70d",
+      "bytes": 290,
+      "sha256": "389bada1415b0b871e95f48150e3686d459b0b89be48de0a64933cb7cdaa2e47"
+    },
+    "sell_prices": {
+      "bank": 3,
+      "address": "0xb82f",
+      "bytes": 128,
+      "sha256": "0bc4dd954d159699e91c25bee9df462117bccdd894f6e7577f21631408a5728f"
+    },
+    "equip_boost": {
+      "bank": 0,
+      "address": "0x183a",
+      "bytes": 64,
+      "sha256": "7d3bfd6b083130c6708d01d8ad0d02b178fe994013c8f41eee8d3677ff5e4c19"
+    },
+    "item_flags": {
+      "bank": 1,
+      "address": "0x7fab",
+      "bytes": 64,
+      "sha256": "1ecd5b2bb1bee36b95c99c4af1cb64d90b763939ab264ce8597b55a7b607ff71"
+    },
+    "spell_cost": {
+      "bank": 0,
+      "address": "0x1ddc",
+      "bytes": 19,
+      "sha256": "3df90bc1e4433179af8ad224f528e88bf2428a2ef6bde0ee04f52e2e868a7b47"
+    },
+    "battle_spells": {
+      "bank": 0,
+      "address": "0x1a57",
+      "bytes": 15,
+      "sha256": "7b2808fbb5f6f51b8de8c540fa63f945a917ae450b74d539f0e98c04f4e25366"
+    },
+    "map_spells": {
+      "bank": 0,
+      "address": "0x1def",
+      "bytes": 15,
+      "sha256": "6171e9d0fb0686fae9940d8ff562f2bf87220976423e20eac883c8a494804e97"
+    },
+    "encounter_pools": {
+      "bank": 3,
+      "address": "0x8180",
+      "bytes": 752,
+      "sha256": "c679623f4608f5fc54c1cc3fac61deba1b5e08e7617f125bc54a220da7aa7aa2"
+    },
+    "map_encounters": {
+      "bank": 3,
+      "address": "0x8470",
+      "bytes": 304,
+      "sha256": "7c87794027378b2ed41771d204ff28558a2113b7dea9b25271a7b1c47e82eab6"
+    },
+    "terrain_encounters": {
+      "bank": 3,
+      "address": "0x85a0",
+      "bytes": 223,
+      "sha256": "2ee5f5e1f4ff4df4b4bed1cb440c215c25ecb7426db15838ed7f5773459f699c"
+    },
+    "world_regions": {
+      "bank": 3,
+      "address": "0x8000",
+      "bytes": 384,
+      "sha256": "ee416a13a99290ade73a12d56c922cbffcfb48a6eea0d71b543bee83f229994e"
+    },
+    "terrain_lookup": {
+      "bank": 3,
+      "address": "0x85a0",
+      "bytes": 256,
+      "sha256": "687449d51cf0a6539886034d40a70d679eacf2bea858fccee7671209677d1497"
+    },
+    "map_encounter_window": {
+      "bank": 3,
+      "address": "0x8470",
+      "bytes": 1504,
+      "sha256": "9c3c898799bb4b1d642fac7a39e44d76397e865b17b52b6d6a298b961b0aab0a"
+    },
+    "dungeon_settings": {
+      "bank": 3,
+      "address": "0xb619",
+      "bytes": 244,
+      "sha256": "90d9851208b33372abd8a632c2b5777b818f0cb9a5cbe2ff9a7b20048b4909d5"
+    }
+  }
+}

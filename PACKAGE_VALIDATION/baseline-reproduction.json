@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+  "baseline_unchanged": true,
+  "gbdk": "4.5.0",
+  "rebuild_path": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction"
+}

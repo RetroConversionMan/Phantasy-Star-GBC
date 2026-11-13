@@ -1,0 +1,26 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "7f0d421313822cb99afee48f62a932e2668e312b230edc8fea21a85cd264efae",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Five independent626-byte records fit original1024-byte slot strides; slot1 remains byte-identical while four controller-moved positions receive original five-character labels, including erase/back behavior",
+    "After a real power cycle, Continue loads every chosen file with its exact position, party, inventory, money and RNG",
+    "Delete invalidates only selected record and label; overwriting another existing file retains its label and all other records",
+    "A single-bit corruption invalidates only slot5; another valid file still loads normally"
+  ],
+  "injected_fixtures": [
+    "Final diagnostic flips one bit in temporary slot5 SRAM to verify isolated CRC rejection; no game-state fixtures used in normal save/name/load/delete/overwrite routes"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

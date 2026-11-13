@@ -1,0 +1,67 @@
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_rpg.py
+RPG logic checks passed: 68639
+Report: /private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/rpg-report.json
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_events.py
+{
+  "checks": 3168,
+  "dialogue_records": 534,
+  "rendered_pages": 1012,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false,
+  "dialogue_font_characters": 39
+}
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_services.py
+{
+  "checks": 81,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false
+}
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_story_events.py
+{
+  "checks": 80,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false
+}
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_battle.py
+Battle logic checks passed: 385470
+Report: /private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/battle-report.json
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_save.py
+{
+  "status": "passed",
+  "stdout": "5209 save assertions passed",
+  "save_version": 5,
+  "record_bytes": 628,
+  "checks": "explicit fields, 24 map IDs, every single-bit corruption, bounds, all12 vehicle phase/clock pairs, legacy v4 compatibility, invalid old format rejection",
+  "scope": "World/RPG/events, persistent vehicle mode/phase/clock and dungeon position/light; opened doors reload as in source; no mid-battle save",
+  "sha256": {
+    "tests/test_save.c": "f4b10aebe829298f81bafc3b9106713c9222223aa4661767bc885135585cb722",
+    "src/save.c": "e7dbf58d14f62dc7a2a2c90abaf95cb400438989c116f402739ba99fd224992c",
+    "src/rpg.c": "d875993bdea104e802b9259db7e3a8311844a78642e4f7a832b697e48a974f20",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "src/save.h": "2b497eae209f61011c6457341a00df604b31ea13f26527dd3a3a3f86adda2908"
+  }
+}
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_world_rules.py
+{
+  "status": "passed",
+  "stdout": "4370 world-rule assertions passed",
+  "source_route_bytes": 72,
+  "scope": "Original terrain side effects and route endpoint triples; ship presentation not covered",
+  "sources": {
+    "src/world_rules.c": "f6c40f19407a3d2233accf31254340dc7a7d62b556bc99ed40139c0c1a36568c",
+    "src/rpg.c": "d875993bdea104e802b9259db7e3a8311844a78642e4f7a832b697e48a974f20",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "files": {
+    "ACCEPTANCE.json": {
+      "bytes": 2242,
+      "sha256": "f8226b8ad4f9d977c10f9c0126de750bfb2a84c3813a080334252d5522c63c63"
+    },
+    "CAMPAIGN_CLOSED.json": {
+      "bytes": 553,
+      "sha256": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1"
+    },
+    "ENDING_TITLE_VISUAL_PROOF.json": {
+      "bytes": 1137,
+      "sha256": "cee96e937ea9e4163840a44422e4c44fea6592d5e00fd5660e98fda47d2e00c3"
+    },
+    "LIVE_REPLAY_PROVENANCE.json": {
+      "bytes": 1356,
+      "sha256": "0020f1cd0e91ba8b83ca7782a3cd53529bc59bb5efedd441689120b076d8ec71"
+    },
+    "REPRODUCE.txt": {
+      "bytes": 633,
+      "sha256": "38819d6c6a9db1eb37f04d7e54e67c2fbf046f4b0192b7db06e8277b47e2c49e"
+    },
+    "campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "campaign.gbc.ram": {
+      "bytes": 8192,
+      "sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60"
+    },
+    "campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "initial-source-report.json": {
+      "bytes": 11325309,
+      "sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb"
+    },
+    "native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "progress.json": {
+      "bytes": 507,
+      "sha256": "24d127920a304e9650d8a8b48a33d375d83779f4f825c4964991e62c929efb11"
+    },
+    "recorded-controller.jsonl": {
+      "bytes": 11721245,
+      "sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1"
+    },
+    "recorded-report.json": {
+      "bytes": 11325309,
+      "sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb"
+    },
+    "replay-ending-title-settled.png": {
+      "bytes": 3548,
+      "sha256": "3f977da445f64d6912c6a00c8fb7cc2aa7df26a47a7e2979b9c2da4bf76b4bd0"
+    },
+    "replay-report.json": {
+      "bytes": 39387,
+      "sha256": "b85bd705fabe42e57a1c787833b6c10f6b3df1b5dd44f26d32c668baa11844a0"
+    },
+    "runtime-environment.json": {
+      "bytes": 71550,
+      "sha256": "a5ba35f3439416acc1186d533bb5161fbc307e07d244a238a54a35e523e97abe"
+    },
+    "title-reference-native-earned-save-boot.png": {
+      "bytes": 3548,
+      "sha256": "3f977da445f64d6912c6a00c8fb7cc2aa7df26a47a7e2979b9c2da4bf76b4bd0"
+    },
+    "verification-tooling/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "verification-tooling/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "verification-tooling/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "verification-tooling/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "verification-tooling/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    }
+  }
+}

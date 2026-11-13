@@ -1,0 +1,8 @@
+@@ -30,6 +30,7 @@
+ #include "game_sequence.h"
+ #include "game_movie.h"
+ #include "save_ui.h"
++#include "inventory_menu.h"
+ 
+ #define STATE_TITLE 0u
+ #define STATE_WALK 1u

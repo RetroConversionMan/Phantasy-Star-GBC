@@ -1,0 +1,34 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "source_cases_passed": 184,
+  "item_handlers": [
+    "Cola",
+    "Burger",
+    "Escaper",
+    "Wand",
+    "MagicHat",
+    "Sphere"
+  ],
+  "hooks": [
+    "Dialogue recorded at entry and returned without waiting",
+    "UI close recorded and returned",
+    "LABEL687A geometry Z flag supplied explicitly; independent geometry tests cover its logic"
+  ],
+  "original_executed": [
+    "Item handler control flow",
+    "Alive checks and HP saturation",
+    "Inventory removal and movement",
+    "Escape/talk flags and outcome transitions",
+    "Original RNG and reply-table selection",
+    "Sound command stores"
+  ],
+  "port_validated": false,
+  "presentation_gaps_pending": [
+    "Use-item prefix for food/Wand/Escaper/Hat/Sphere",
+    "C1 after healed text",
+    "BC before escape text",
+    "Monster-only AC and D5",
+    "Failed Hat/Sphere retain use-item prefix"
+  ],
+  "state_chronology_note": "Current battle kernel computes final action state before playback. These traces record original commit boundaries; visual/audio ordering alone does not prove runtime state ordering."
+}

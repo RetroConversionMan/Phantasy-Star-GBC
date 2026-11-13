@@ -1,0 +1,59 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuchar                                                      ******** GX
+    __divuint                                                       ******** GX
+    __moduchar                                                      ******** GX
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+  8 _effect_palette                                                 00000000 R
+    _game_transition_vint16                                         ******** GX
+  2 _palette_index                                                  00000003 R
+  2 _presentation_active                                            00000000 GR
+    _presentation_assets                                            ******** GX
+  8 _presentation_begin                                             000000E1 GR
+  2 _presentation_frame                                             00000001 GR
+  8 _presentation_tick                                              00000376 GR
+    _scene_actor_hide                                               ******** GX
+    _scene_actor_show_data                                          ******** GX
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+    _set_bkg_palette                                                ******** GX
+    _set_bkg_tiles                                                  ******** GX
+    _set_sprite_palette                                             ******** GX
+    b_effect_palette                                            =   0000000C 
+    b_game_transition_vint16                                        ******** GX
+    b_presentation_begin                                        =   0000000C G
+    b_presentation_tick                                         =   0000000C G
+    b_scene_actor_hide                                              ******** GX
+    b_scene_actor_show_data                                         ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        4   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_12                                   size      474   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

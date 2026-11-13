@@ -1,0 +1,9 @@
+{
+  "suite": "battle",
+  "script": "verify_integrated_battle.py",
+  "script_sha256": "f16b78893c1d113989e3c2d3a5d2117086a86f2d20743040e0f904cd868b1822",
+  "returncode": 0,
+  "seconds": 2.93,
+  "passed": true,
+  "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+}

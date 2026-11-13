@@ -1,0 +1,2146 @@
+{
+  "source": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/campaign/release-v5-newgame-b72feead",
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "source_immutable_files": {
+    "campaign.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "campaign.noi": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c",
+    "native-layout.json": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+  },
+  "tooling_sha256": {
+    "native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+    "verify_campaign_title.py": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba",
+    "replay_campaign_live.py": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+    "verify_rom.py": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+  },
+  "frozen_manifest_sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7",
+  "initial_sram_loaded": false,
+  "save_states_loaded": false,
+  "state_injection": false,
+  "source_mutated": false,
+  "diagnostic_stop": null,
+  "finalization": "Only immutable CAMPAIGN_CLOSED.json after source process/emulator/log close; no transient campaign_complete acceptance",
+  "passed": true,
+  "diagnostic_prefix_only": false,
+  "campaign_complete": true,
+  "fresh_newgame_completion": true,
+  "frames": 3581580,
+  "checkpoints": [
+    {
+      "name": "000-01-nekise",
+      "frame": 4512
+    },
+    {
+      "name": "001-grind-town",
+      "frame": 5618
+    },
+    {
+      "name": "002-grind-town",
+      "frame": 8432
+    },
+    {
+      "name": "003-grind-town",
+      "frame": 11674
+    },
+    {
+      "name": "004-grind-town",
+      "frame": 14777
+    },
+    {
+      "name": "005-grind-town",
+      "frame": 19116
+    },
+    {
+      "name": "006-grind-town",
+      "frame": 24433
+    },
+    {
+      "name": "007-grind-town",
+      "frame": 27868
+    },
+    {
+      "name": "008-grind-town",
+      "frame": 32697
+    },
+    {
+      "name": "009-grind-town",
+      "frame": 35950
+    },
+    {
+      "name": "010-02-leather-shield",
+      "frame": 40861
+    },
+    {
+      "name": "011-grind-town",
+      "frame": 41055
+    },
+    {
+      "name": "012-grind-town",
+      "frame": 44992
+    },
+    {
+      "name": "013-grind-town",
+      "frame": 50034
+    },
+    {
+      "name": "014-grind-town",
+      "frame": 53184
+    },
+    {
+      "name": "015-grind-town",
+      "frame": 56521
+    },
+    {
+      "name": "016-grind-town",
+      "frame": 61414
+    },
+    {
+      "name": "017-grind-town",
+      "frame": 65846
+    },
+    {
+      "name": "018-grind-town",
+      "frame": 69908
+    },
+    {
+      "name": "019-grind-town",
+      "frame": 74145
+    },
+    {
+      "name": "020-grind-town",
+      "frame": 78891
+    },
+    {
+      "name": "021-grind-town",
+      "frame": 82514
+    },
+    {
+      "name": "022-grind-town",
+      "frame": 85793
+    },
+    {
+      "name": "023-grind-town",
+      "frame": 88991
+    },
+    {
+      "name": "024-grind-town",
+      "frame": 93536
+    },
+    {
+      "name": "025-grind-town",
+      "frame": 97588
+    },
+    {
+      "name": "026-grind-town",
+      "frame": 100567
+    },
+    {
+      "name": "027-grind-town",
+      "frame": 103531
+    },
+    {
+      "name": "028-grind-town",
+      "frame": 107636
+    },
+    {
+      "name": "029-grind-town",
+      "frame": 111143
+    },
+    {
+      "name": "030-grind-town",
+      "frame": 114730
+    },
+    {
+      "name": "031-grind-town",
+      "frame": 118588
+    },
+    {
+      "name": "032-grind-town",
+      "frame": 121853
+    },
+    {
+      "name": "033-grind-town",
+      "frame": 126203
+    },
+    {
+      "name": "034-grind-town",
+      "frame": 130513
+    },
+    {
+      "name": "035-grind-town",
+      "frame": 133907
+    },
+    {
+      "name": "036-grind-town",
+      "frame": 137135
+    },
+    {
+      "name": "037-grind-town",
+      "frame": 141637
+    },
+    {
+      "name": "038-grind-town",
+      "frame": 144882
+    },
+    {
+      "name": "039-grind-town",
+      "frame": 147993
+    },
+    {
+      "name": "040-grind-town",
+      "frame": 152236
+    },
+    {
+      "name": "041-grind-town",
+      "frame": 156125
+    },
+    {
+      "name": "042-grind-town",
+      "frame": 161375
+    },
+    {
+      "name": "043-grind-town",
+      "frame": 165298
+    },
+    {
+      "name": "044-grind-town",
+      "frame": 168500
+    },
+    {
+      "name": "045-grind-town",
+      "frame": 171353
+    },
+    {
+      "name": "046-grind-town",
+      "frame": 175655
+    },
+    {
+      "name": "047-grind-town",
+      "frame": 180084
+    },
+    {
+      "name": "048-grind-town",
+      "frame": 183013
+    },
+    {
+      "name": "049-grind-town",
+      "frame": 187171
+    },
+    {
+      "name": "050-grind-town",
+      "frame": 190729
+    },
+    {
+      "name": "051-grind-town",
+      "frame": 193561
+    },
+    {
+      "name": "052-funds-330",
+      "frame": 199442
+    },
+    {
+      "name": "053-04-roadpass",
+      "frame": 203978
+    },
+    {
+      "name": "054-05-passport",
+      "frame": 208861
+    },
+    {
+      "name": "055-06-myau",
+      "frame": 215517
+    },
+    {
+      "name": "056-07-return-palma",
+      "frame": 222935
+    },
+    {
+      "name": "057-08-odin-cave-lit",
+      "frame": 225147
+    },
+    {
+      "name": "058-09-odin",
+      "frame": 230794
+    },
+    {
+      "name": "059-10-compass",
+      "frame": 232296
+    },
+    {
+      "name": "060-11-cave-money-chest",
+      "frame": 234642
+    },
+    {
+      "name": "061-12-compass-camineet",
+      "frame": 237152
+    },
+    {
+      "name": "062-13-key-rumor",
+      "frame": 240880
+    },
+    {
+      "name": "063-14-return-from-eppi",
+      "frame": 250769
+    },
+    {
+      "name": "064-15-dungeon-key",
+      "frame": 252440
+    },
+    {
+      "name": "065-16-warehouse-treasures",
+      "frame": 253853
+    },
+    {
+      "name": "066-17-warehouse-return",
+      "frame": 256336
+    },
+    {
+      "name": "067-grind-town",
+      "frame": 257000
+    },
+    {
+      "name": "068-grind-town",
+      "frame": 260267
+    },
+    {
+      "name": "069-grind-town",
+      "frame": 264215
+    },
+    {
+      "name": "070-grind-town",
+      "frame": 268217
+    },
+    {
+      "name": "071-grind-town",
+      "frame": 271042
+    },
+    {
+      "name": "072-grind-town",
+      "frame": 274888
+    },
+    {
+      "name": "073-grind-town",
+      "frame": 280420
+    },
+    {
+      "name": "074-grind-town",
+      "frame": 284087
+    },
+    {
+      "name": "075-grind-town",
+      "frame": 287065
+    },
+    {
+      "name": "076-grind-town",
+      "frame": 291023
+    },
+    {
+      "name": "077-grind-town",
+      "frame": 295104
+    },
+    {
+      "name": "078-grind-town",
+      "frame": 300631
+    },
+    {
+      "name": "079-grind-town",
+      "frame": 304652
+    },
+    {
+      "name": "080-grind-town",
+      "frame": 309587
+    },
+    {
+      "name": "081-grind-town",
+      "frame": 312408
+    },
+    {
+      "name": "082-grind-town",
+      "frame": 316707
+    },
+    {
+      "name": "083-grind-town",
+      "frame": 321194
+    },
+    {
+      "name": "084-grind-town",
+      "frame": 325740
+    },
+    {
+      "name": "085-grind-town",
+      "frame": 329659
+    },
+    {
+      "name": "086-grind-town",
+      "frame": 333031
+    },
+    {
+      "name": "087-grind-town",
+      "frame": 338553
+    },
+    {
+      "name": "088-grind-town",
+      "frame": 343595
+    },
+    {
+      "name": "089-grind-town",
+      "frame": 346764
+    },
+    {
+      "name": "090-grind-town",
+      "frame": 349649
+    },
+    {
+      "name": "091-grind-town",
+      "frame": 352947
+    },
+    {
+      "name": "092-grind-town",
+      "frame": 356475
+    },
+    {
+      "name": "093-grind-town",
+      "frame": 360284
+    },
+    {
+      "name": "094-grind-town",
+      "frame": 364774
+    },
+    {
+      "name": "095-grind-town",
+      "frame": 368315
+    },
+    {
+      "name": "096-funds-800",
+      "frame": 371540
+    },
+    {
+      "name": "097-18-naula-prepared",
+      "frame": 378160
+    },
+    {
+      "name": "098-19-naula-entry",
+      "frame": 382655
+    },
+    {
+      "name": "099-20-cake-door",
+      "frame": 389390
+    },
+    {
+      "name": "100-21-cake-purchased",
+      "frame": 389947
+    },
+    {
+      "name": "101-22-cake-camineet",
+      "frame": 405504
+    },
+    {
+      "name": "102-grind-town",
+      "frame": 406169
+    },
+    {
+      "name": "103-grind-town",
+      "frame": 409623
+    },
+    {
+      "name": "104-grind-town",
+      "frame": 413352
+    },
+    {
+      "name": "105-grind-town",
+      "frame": 416966
+    },
+    {
+      "name": "106-grind-town",
+      "frame": 420976
+    },
+    {
+      "name": "107-grind-town",
+      "frame": 424409
+    },
+    {
+      "name": "108-grind-town",
+      "frame": 428406
+    },
+    {
+      "name": "109-grind-town",
+      "frame": 434015
+    },
+    {
+      "name": "110-grind-town",
+      "frame": 437917
+    },
+    {
+      "name": "111-grind-town",
+      "frame": 441740
+    },
+    {
+      "name": "112-grind-town",
+      "frame": 445271
+    },
+    {
+      "name": "113-grind-town",
+      "frame": 448702
+    },
+    {
+      "name": "114-grind-town",
+      "frame": 452368
+    },
+    {
+      "name": "115-grind-town",
+      "frame": 457664
+    },
+    {
+      "name": "116-grind-town",
+      "frame": 460597
+    },
+    {
+      "name": "117-grind-town",
+      "frame": 464420
+    },
+    {
+      "name": "118-grind-town",
+      "frame": 469836
+    },
+    {
+      "name": "119-grind-town",
+      "frame": 473990
+    },
+    {
+      "name": "120-grind-town",
+      "frame": 478456
+    },
+    {
+      "name": "121-grind-town",
+      "frame": 482614
+    },
+    {
+      "name": "122-grind-town",
+      "frame": 485775
+    },
+    {
+      "name": "123-grind-town",
+      "frame": 490241
+    },
+    {
+      "name": "124-grind-town",
+      "frame": 493618
+    },
+    {
+      "name": "125-grind-town",
+      "frame": 497805
+    },
+    {
+      "name": "126-grind-town",
+      "frame": 501982
+    },
+    {
+      "name": "127-grind-town",
+      "frame": 505505
+    },
+    {
+      "name": "128-grind-town",
+      "frame": 510847
+    },
+    {
+      "name": "129-grind-town",
+      "frame": 514313
+    },
+    {
+      "name": "130-grind-town",
+      "frame": 518252
+    },
+    {
+      "name": "131-grind-town",
+      "frame": 521398
+    },
+    {
+      "name": "132-grind-town",
+      "frame": 524893
+    },
+    {
+      "name": "133-grind-town",
+      "frame": 528200
+    },
+    {
+      "name": "134-funds-1000",
+      "frame": 531780
+    },
+    {
+      "name": "135-23-paseo-equipped",
+      "frame": 541266
+    },
+    {
+      "name": "136-24-governor-letter",
+      "frame": 546492
+    },
+    {
+      "name": "137-25-noah-cave-entry",
+      "frame": 561733
+    },
+    {
+      "name": "138-26-noah-door",
+      "frame": 570995
+    },
+    {
+      "name": "139-27-noah",
+      "frame": 572045
+    },
+    {
+      "name": "140-07-return-palma",
+      "frame": 600141
+    },
+    {
+      "name": "141-28-four-party-camineet",
+      "frame": 600338
+    },
+    {
+      "name": "142-grind-town",
+      "frame": 601004
+    },
+    {
+      "name": "143-grind-town",
+      "frame": 604652
+    },
+    {
+      "name": "144-grind-town",
+      "frame": 607743
+    },
+    {
+      "name": "145-grind-town",
+      "frame": 611652
+    },
+    {
+      "name": "146-grind-town",
+      "frame": 614878
+    },
+    {
+      "name": "147-grind-town",
+      "frame": 619232
+    },
+    {
+      "name": "148-grind-town",
+      "frame": 623336
+    },
+    {
+      "name": "149-grind-town",
+      "frame": 627656
+    },
+    {
+      "name": "150-grind-town",
+      "frame": 631506
+    },
+    {
+      "name": "151-grind-town",
+      "frame": 635349
+    },
+    {
+      "name": "152-grind-town",
+      "frame": 640292
+    },
+    {
+      "name": "153-grind-town",
+      "frame": 643420
+    },
+    {
+      "name": "154-grind-town",
+      "frame": 647353
+    },
+    {
+      "name": "155-grind-town",
+      "frame": 651564
+    },
+    {
+      "name": "156-grind-town",
+      "frame": 655377
+    },
+    {
+      "name": "157-grind-town",
+      "frame": 659378
+    },
+    {
+      "name": "158-grind-town",
+      "frame": 663637
+    },
+    {
+      "name": "159-grind-town",
+      "frame": 667216
+    },
+    {
+      "name": "160-grind-town",
+      "frame": 670641
+    },
+    {
+      "name": "161-grind-town",
+      "frame": 674711
+    },
+    {
+      "name": "162-grind-town",
+      "frame": 679269
+    },
+    {
+      "name": "163-grind-town",
+      "frame": 682702
+    },
+    {
+      "name": "164-grind-town",
+      "frame": 686366
+    },
+    {
+      "name": "165-grind-town",
+      "frame": 690769
+    },
+    {
+      "name": "166-grind-town",
+      "frame": 693856
+    },
+    {
+      "name": "167-grind-town",
+      "frame": 698587
+    },
+    {
+      "name": "168-grind-town",
+      "frame": 702129
+    },
+    {
+      "name": "169-grind-town",
+      "frame": 705330
+    },
+    {
+      "name": "170-grind-town",
+      "frame": 710574
+    },
+    {
+      "name": "171-grind-town",
+      "frame": 714793
+    },
+    {
+      "name": "172-grind-town",
+      "frame": 719295
+    },
+    {
+      "name": "173-grind-town",
+      "frame": 722531
+    },
+    {
+      "name": "174-grind-town",
+      "frame": 727142
+    },
+    {
+      "name": "175-grind-town",
+      "frame": 731149
+    },
+    {
+      "name": "176-grind-town",
+      "frame": 735585
+    },
+    {
+      "name": "177-grind-town",
+      "frame": 741980
+    },
+    {
+      "name": "178-grind-town",
+      "frame": 745330
+    },
+    {
+      "name": "179-grind-town",
+      "frame": 749196
+    },
+    {
+      "name": "180-grind-town",
+      "frame": 752112
+    },
+    {
+      "name": "181-grind-town",
+      "frame": 755889
+    },
+    {
+      "name": "182-grind-town",
+      "frame": 759530
+    },
+    {
+      "name": "183-grind-town",
+      "frame": 763239
+    },
+    {
+      "name": "184-grind-town",
+      "frame": 767332
+    },
+    {
+      "name": "185-grind-town",
+      "frame": 771406
+    },
+    {
+      "name": "186-grind-town",
+      "frame": 775539
+    },
+    {
+      "name": "187-grind-town",
+      "frame": 779723
+    },
+    {
+      "name": "188-grind-town",
+      "frame": 783579
+    },
+    {
+      "name": "189-grind-town",
+      "frame": 787825
+    },
+    {
+      "name": "190-grind-town",
+      "frame": 791815
+    },
+    {
+      "name": "191-grind-town",
+      "frame": 796481
+    },
+    {
+      "name": "192-grind-town",
+      "frame": 800649
+    },
+    {
+      "name": "193-grind-town",
+      "frame": 803489
+    },
+    {
+      "name": "194-grind-town",
+      "frame": 806423
+    },
+    {
+      "name": "195-grind-town",
+      "frame": 809352
+    },
+    {
+      "name": "196-grind-town",
+      "frame": 812760
+    },
+    {
+      "name": "197-grind-town",
+      "frame": 816972
+    },
+    {
+      "name": "198-grind-town",
+      "frame": 821525
+    },
+    {
+      "name": "199-grind-town",
+      "frame": 825993
+    },
+    {
+      "name": "200-grind-town",
+      "frame": 829534
+    },
+    {
+      "name": "201-grind-town",
+      "frame": 833465
+    },
+    {
+      "name": "202-grind-town",
+      "frame": 838615
+    },
+    {
+      "name": "203-grind-town",
+      "frame": 844041
+    },
+    {
+      "name": "204-grind-town",
+      "frame": 847880
+    },
+    {
+      "name": "205-grind-town",
+      "frame": 851985
+    },
+    {
+      "name": "206-grind-town",
+      "frame": 855947
+    },
+    {
+      "name": "207-grind-town",
+      "frame": 859022
+    },
+    {
+      "name": "208-grind-town",
+      "frame": 864205
+    },
+    {
+      "name": "209-grind-town",
+      "frame": 867331
+    },
+    {
+      "name": "210-grind-town",
+      "frame": 871477
+    },
+    {
+      "name": "211-grind-town",
+      "frame": 875024
+    },
+    {
+      "name": "212-grind-town",
+      "frame": 878883
+    },
+    {
+      "name": "213-grind-town",
+      "frame": 882056
+    },
+    {
+      "name": "214-grind-town",
+      "frame": 887618
+    },
+    {
+      "name": "215-grind-town",
+      "frame": 890712
+    },
+    {
+      "name": "216-grind-town",
+      "frame": 893709
+    },
+    {
+      "name": "217-grind-town",
+      "frame": 896584
+    },
+    {
+      "name": "218-grind-town",
+      "frame": 900606
+    },
+    {
+      "name": "219-grind-town",
+      "frame": 904136
+    },
+    {
+      "name": "220-grind-town",
+      "frame": 907369
+    },
+    {
+      "name": "221-grind-town",
+      "frame": 910555
+    },
+    {
+      "name": "222-grind-town",
+      "frame": 914804
+    },
+    {
+      "name": "223-grind-town",
+      "frame": 917733
+    },
+    {
+      "name": "224-grind-town",
+      "frame": 921202
+    },
+    {
+      "name": "225-grind-town",
+      "frame": 924546
+    },
+    {
+      "name": "226-grind-town",
+      "frame": 928522
+    },
+    {
+      "name": "227-grind-town",
+      "frame": 931832
+    },
+    {
+      "name": "228-grind-town",
+      "frame": 937993
+    },
+    {
+      "name": "229-grind-town",
+      "frame": 941282
+    },
+    {
+      "name": "230-grind-town",
+      "frame": 944512
+    },
+    {
+      "name": "231-grind-town",
+      "frame": 948246
+    },
+    {
+      "name": "232-grind-town",
+      "frame": 952500
+    },
+    {
+      "name": "233-grind-town",
+      "frame": 957965
+    },
+    {
+      "name": "234-grind-town",
+      "frame": 964113
+    },
+    {
+      "name": "235-grind-town",
+      "frame": 968512
+    },
+    {
+      "name": "236-grind-town",
+      "frame": 972806
+    },
+    {
+      "name": "237-grind-town",
+      "frame": 976195
+    },
+    {
+      "name": "238-grind-town",
+      "frame": 980049
+    },
+    {
+      "name": "239-grind-town",
+      "frame": 984885
+    },
+    {
+      "name": "240-grind-town",
+      "frame": 988409
+    },
+    {
+      "name": "241-grind-town",
+      "frame": 991766
+    },
+    {
+      "name": "242-grind-town",
+      "frame": 994748
+    },
+    {
+      "name": "243-grind-town",
+      "frame": 998218
+    },
+    {
+      "name": "244-grind-town",
+      "frame": 1002344
+    },
+    {
+      "name": "245-grind-town",
+      "frame": 1005708
+    },
+    {
+      "name": "246-grind-town",
+      "frame": 1009104
+    },
+    {
+      "name": "247-grind-town",
+      "frame": 1013171
+    },
+    {
+      "name": "248-grind-town",
+      "frame": 1016962
+    },
+    {
+      "name": "249-grind-town",
+      "frame": 1021326
+    },
+    {
+      "name": "250-grind-town",
+      "frame": 1024604
+    },
+    {
+      "name": "251-grind-town",
+      "frame": 1027794
+    },
+    {
+      "name": "252-grind-town",
+      "frame": 1030920
+    },
+    {
+      "name": "253-grind-town",
+      "frame": 1034858
+    },
+    {
+      "name": "254-grind-town",
+      "frame": 1038067
+    },
+    {
+      "name": "255-grind-town",
+      "frame": 1042092
+    },
+    {
+      "name": "256-grind-town",
+      "frame": 1045606
+    },
+    {
+      "name": "257-grind-town",
+      "frame": 1049256
+    },
+    {
+      "name": "258-grind-town",
+      "frame": 1052196
+    },
+    {
+      "name": "259-grind-town",
+      "frame": 1055897
+    },
+    {
+      "name": "260-grind-town",
+      "frame": 1058985
+    },
+    {
+      "name": "261-grind-town",
+      "frame": 1064093
+    },
+    {
+      "name": "262-grind-town",
+      "frame": 1067460
+    },
+    {
+      "name": "263-grind-town",
+      "frame": 1071887
+    },
+    {
+      "name": "264-grind-town",
+      "frame": 1076025
+    },
+    {
+      "name": "265-grind-town",
+      "frame": 1081479
+    },
+    {
+      "name": "266-grind-town",
+      "frame": 1085251
+    },
+    {
+      "name": "267-grind-town",
+      "frame": 1089143
+    },
+    {
+      "name": "268-grind-town",
+      "frame": 1092458
+    },
+    {
+      "name": "269-grind-town",
+      "frame": 1097037
+    },
+    {
+      "name": "270-grind-town",
+      "frame": 1100970
+    },
+    {
+      "name": "271-grind-town",
+      "frame": 1105172
+    },
+    {
+      "name": "272-grind-town",
+      "frame": 1108153
+    },
+    {
+      "name": "273-grind-town",
+      "frame": 1111801
+    },
+    {
+      "name": "274-grind-town",
+      "frame": 1115147
+    },
+    {
+      "name": "275-grind-town",
+      "frame": 1119888
+    },
+    {
+      "name": "276-grind-town",
+      "frame": 1123442
+    },
+    {
+      "name": "277-grind-town",
+      "frame": 1126407
+    },
+    {
+      "name": "278-grind-town",
+      "frame": 1130109
+    },
+    {
+      "name": "279-grind-town",
+      "frame": 1133717
+    },
+    {
+      "name": "280-grind-town",
+      "frame": 1136792
+    },
+    {
+      "name": "281-grind-town",
+      "frame": 1143667
+    },
+    {
+      "name": "282-grind-town",
+      "frame": 1146651
+    },
+    {
+      "name": "283-grind-town",
+      "frame": 1150091
+    },
+    {
+      "name": "284-grind-town",
+      "frame": 1153219
+    },
+    {
+      "name": "285-grind-town",
+      "frame": 1156886
+    },
+    {
+      "name": "286-grind-town",
+      "frame": 1160311
+    },
+    {
+      "name": "287-grind-town",
+      "frame": 1163536
+    },
+    {
+      "name": "288-grind-town",
+      "frame": 1166831
+    },
+    {
+      "name": "289-grind-town",
+      "frame": 1170839
+    },
+    {
+      "name": "290-grind-town",
+      "frame": 1175562
+    },
+    {
+      "name": "291-grind-town",
+      "frame": 1178840
+    },
+    {
+      "name": "292-grind-town",
+      "frame": 1182026
+    },
+    {
+      "name": "293-grind-town",
+      "frame": 1185205
+    },
+    {
+      "name": "294-grind-town",
+      "frame": 1188358
+    },
+    {
+      "name": "295-grind-town",
+      "frame": 1191598
+    },
+    {
+      "name": "296-grind-town",
+      "frame": 1194640
+    },
+    {
+      "name": "297-grind-town",
+      "frame": 1197692
+    },
+    {
+      "name": "298-grind-town",
+      "frame": 1201804
+    },
+    {
+      "name": "299-grind-town",
+      "frame": 1205723
+    },
+    {
+      "name": "300-grind-town",
+      "frame": 1209232
+    },
+    {
+      "name": "301-grind-town",
+      "frame": 1213358
+    },
+    {
+      "name": "302-grind-town",
+      "frame": 1218368
+    },
+    {
+      "name": "303-grind-town",
+      "frame": 1221700
+    },
+    {
+      "name": "304-grind-town",
+      "frame": 1225805
+    },
+    {
+      "name": "305-grind-town",
+      "frame": 1229238
+    },
+    {
+      "name": "306-grind-town",
+      "frame": 1233090
+    },
+    {
+      "name": "307-grind-town",
+      "frame": 1236960
+    },
+    {
+      "name": "308-grind-town",
+      "frame": 1240019
+    },
+    {
+      "name": "309-grind-town",
+      "frame": 1243635
+    },
+    {
+      "name": "310-grind-town",
+      "frame": 1246590
+    },
+    {
+      "name": "311-grind-town",
+      "frame": 1251034
+    },
+    {
+      "name": "312-grind-town",
+      "frame": 1255922
+    },
+    {
+      "name": "313-grind-town",
+      "frame": 1259007
+    },
+    {
+      "name": "314-grind-town",
+      "frame": 1262157
+    },
+    {
+      "name": "315-grind-town",
+      "frame": 1265710
+    },
+    {
+      "name": "316-grind-town",
+      "frame": 1269671
+    },
+    {
+      "name": "317-grind-town",
+      "frame": 1272965
+    },
+    {
+      "name": "318-grind-town",
+      "frame": 1277157
+    },
+    {
+      "name": "319-grind-town",
+      "frame": 1280269
+    },
+    {
+      "name": "320-funds-5000",
+      "frame": 1283981
+    },
+    {
+      "name": "321-29-western-palma-passage",
+      "frame": 1292212
+    },
+    {
+      "name": "322-29-luveno-freed",
+      "frame": 1297869
+    },
+    {
+      "name": "323-30-luveno-assistant",
+      "frame": 1312484
+    },
+    {
+      "name": "324-31-luveno-construction",
+      "frame": 1316339
+    },
+    {
+      "name": "325-32-bortevo-lava-arrival",
+      "frame": 1323290
+    },
+    {
+      "name": "326-33-abion-polymaterial",
+      "frame": 1341549
+    },
+    {
+      "name": "327-34-hapsby",
+      "frame": 1384869
+    },
+    {
+      "name": "328-35-luveno-ship",
+      "frame": 1395435
+    },
+    {
+      "name": "329-36-hapsby-uzo",
+      "frame": 1401333
+    },
+    {
+      "name": "330-37-casba-hovercraft-rumor",
+      "frame": 1435070
+    },
+    {
+      "name": "331-38-flute",
+      "frame": 1467068
+    },
+    {
+      "name": "332-39-hovercraft",
+      "frame": 1481364
+    },
+    {
+      "name": "333-40-hovercraft-gothic",
+      "frame": 1502033
+    },
+    {
+      "name": "334-41-earned-boss-equipment",
+      "frame": 1517733
+    },
+    {
+      "name": "335-29-western-palma-passage",
+      "frame": 1521595
+    },
+    {
+      "name": "336-42-equipped-gothic",
+      "frame": 1521790
+    },
+    {
+      "name": "337-43-blue-dragon-approach",
+      "frame": 1544742
+    },
+    {
+      "name": "338-44-amber-eye",
+      "frame": 1548068
+    },
+    {
+      "name": "339-45-amber-eye-uzo",
+      "frame": 1557354
+    },
+    {
+      "name": "340-46-party-revived",
+      "frame": 1557551
+    },
+    {
+      "name": "341-47-dezoris-skure",
+      "frame": 1561377
+    },
+    {
+      "name": "342-48-dezoris-passage-1",
+      "frame": 1566279
+    },
+    {
+      "name": "343-48-dezoris-passage-2",
+      "frame": 1572031
+    },
+    {
+      "name": "344-48-dezoris-passage-3",
+      "frame": 1575126
+    },
+    {
+      "name": "345-48-dezoris-passage-4",
+      "frame": 1580292
+    },
+    {
+      "name": "346-49-corona-entry",
+      "frame": 1582824
+    },
+    {
+      "name": "347-53-corona-return-passage",
+      "frame": 1619641
+    },
+    {
+      "name": "348-54-aukba-outside",
+      "frame": 1624950
+    },
+    {
+      "name": "349-55-aukba-town",
+      "frame": 1629714
+    },
+    {
+      "name": "350-56-aukba-rested",
+      "frame": 1633600
+    },
+    {
+      "name": "351-torch-continue-aukba-rested",
+      "frame": 1633795
+    },
+    {
+      "name": "352-torch-prepared-corona-entry",
+      "frame": 1654052
+    },
+    {
+      "name": "353-50-torch-door",
+      "frame": 1674460
+    },
+    {
+      "name": "354-51-eclipse-torch",
+      "frame": 1675412
+    },
+    {
+      "name": "355-52-torch-dezoris",
+      "frame": 1676297
+    },
+    {
+      "name": "356-53-corona-return-passage",
+      "frame": 1683313
+    },
+    {
+      "name": "357-54-aukba-outside",
+      "frame": 1692434
+    },
+    {
+      "name": "358-55-aukba-town",
+      "frame": 1699590
+    },
+    {
+      "name": "359-56-aukba-rested",
+      "frame": 1703477
+    },
+    {
+      "name": "360-ice-digger-funds-town",
+      "frame": 1703672
+    },
+    {
+      "name": "361-ice-digger-funds-town",
+      "frame": 1725144
+    },
+    {
+      "name": "362-ice-digger-funds-town",
+      "frame": 1746282
+    },
+    {
+      "name": "363-ice-digger-funds-town",
+      "frame": 1761304
+    },
+    {
+      "name": "364-ice-digger-funds-town",
+      "frame": 1784075
+    },
+    {
+      "name": "365-ice-digger-funds-town",
+      "frame": 1806369
+    },
+    {
+      "name": "366-ice-digger-funds-town",
+      "frame": 1828176
+    },
+    {
+      "name": "367-ice-digger-funds-town",
+      "frame": 1851010
+    },
+    {
+      "name": "368-ice-digger-funds-town",
+      "frame": 1867278
+    },
+    {
+      "name": "369-ice-digger-funds-town",
+      "frame": 1882580
+    },
+    {
+      "name": "370-ice-digger-funds-town",
+      "frame": 1906436
+    },
+    {
+      "name": "371-ice-digger-funds-town",
+      "frame": 1921322
+    },
+    {
+      "name": "372-ice-digger-funds-town",
+      "frame": 1943197
+    },
+    {
+      "name": "373-ice-digger-funds-town",
+      "frame": 1969987
+    },
+    {
+      "name": "374-ice-digger-funds-town",
+      "frame": 1992371
+    },
+    {
+      "name": "375-ice-digger-funds-town",
+      "frame": 2006667
+    },
+    {
+      "name": "376-ice-digger-funds-town",
+      "frame": 2028252
+    },
+    {
+      "name": "377-ice-digger-funds-town",
+      "frame": 2063933
+    },
+    {
+      "name": "378-ice-digger-funds-town",
+      "frame": 2079528
+    },
+    {
+      "name": "379-ice-digger-funds-town",
+      "frame": 2099740
+    },
+    {
+      "name": "380-ice-digger-funds-town",
+      "frame": 2115402
+    },
+    {
+      "name": "381-ice-digger-funds-town",
+      "frame": 2133260
+    },
+    {
+      "name": "382-ice-digger-funds-town",
+      "frame": 2154251
+    },
+    {
+      "name": "383-ice-digger-funds-town",
+      "frame": 2175591
+    },
+    {
+      "name": "384-57-earned-ice-digger-funds",
+      "frame": 2197512
+    },
+    {
+      "name": "385-58-ice-digger-purchased",
+      "frame": 2200082
+    },
+    {
+      "name": "386-59-ice-digger-active",
+      "frame": 2215988
+    },
+    {
+      "name": "387-60-laconia-cave",
+      "frame": 2229203
+    },
+    {
+      "name": "388-61-laconia-armor-earned",
+      "frame": 2235257
+    },
+    {
+      "name": "389-56-aukba-rested",
+      "frame": 2239802
+    },
+    {
+      "name": "390-62-laconia-armor-rested",
+      "frame": 2239998
+    },
+    {
+      "name": "391-63-diamond-shield-cave",
+      "frame": 2255244
+    },
+    {
+      "name": "392-64-diamond-shield-earned",
+      "frame": 2273431
+    },
+    {
+      "name": "393-56-aukba-rested",
+      "frame": 2277978
+    },
+    {
+      "name": "394-65-diamond-shield-rested",
+      "frame": 2278174
+    },
+    {
+      "name": "395-ice-digger-funds-town",
+      "frame": 2278369
+    },
+    {
+      "name": "396-ice-digger-funds-town",
+      "frame": 2301612
+    },
+    {
+      "name": "397-ice-digger-funds-town",
+      "frame": 2332479
+    },
+    {
+      "name": "398-57-earned-ice-digger-funds",
+      "frame": 2346423
+    },
+    {
+      "name": "399-66-skure-western-return",
+      "frame": 2356370
+    },
+    {
+      "name": "400-67-skure-southwest-return",
+      "frame": 2359553
+    },
+    {
+      "name": "401-68-skure-southern-return",
+      "frame": 2363403
+    },
+    {
+      "name": "402-69-skure-town",
+      "frame": 2367471
+    },
+    {
+      "name": "403-70-wand-purchased",
+      "frame": 2368417
+    },
+    {
+      "name": "404-71-gothic-wand-return",
+      "frame": 2385036
+    },
+    {
+      "name": "405-72-dr-mad-ready",
+      "frame": 2463429
+    },
+    {
+      "name": "406-73-dr-mad-laconia-pot",
+      "frame": 2471643
+    },
+    {
+      "name": "407-74-dr-mad-return",
+      "frame": 2477489
+    },
+    {
+      "name": "408-75-laerma-southwest-region",
+      "frame": 2519539
+    },
+    {
+      "name": "409-76-laerma-nuts",
+      "frame": 2523690
+    },
+    {
+      "name": "410-56-aukba-rested",
+      "frame": 2551057
+    },
+    {
+      "name": "411-77-prism-prepared-aukba",
+      "frame": 2551252
+    },
+    {
+      "name": "412-78-titan-cave",
+      "frame": 2569422
+    },
+    {
+      "name": "413-79-titan-ready",
+      "frame": 2576610
+    },
+    {
+      "name": "414-80-aero-prism-earned",
+      "frame": 2579977
+    },
+    {
+      "name": "415-56-aukba-rested",
+      "frame": 2584254
+    },
+    {
+      "name": "416-81-aero-prism-recovered",
+      "frame": 2584450
+    },
+    {
+      "name": "417-fresh-story-skure-return",
+      "frame": 2609862
+    },
+    {
+      "name": "418-82-myau-gloves",
+      "frame": 2614139
+    },
+    {
+      "name": "419-laser-gun-funds-skure",
+      "frame": 2614337
+    },
+    {
+      "name": "420-laser-gun-funds-skure",
+      "frame": 2635070
+    },
+    {
+      "name": "421-laser-gun-funds-skure",
+      "frame": 2662613
+    },
+    {
+      "name": "422-laser-gun-funds-skure",
+      "frame": 2686562
+    },
+    {
+      "name": "423-laser-gun-funds-skure",
+      "frame": 2716893
+    },
+    {
+      "name": "424-laser-gun-funds-skure",
+      "frame": 2740941
+    },
+    {
+      "name": "425-83-laser-gun-funds-earned",
+      "frame": 2761533
+    },
+    {
+      "name": "426-84-laser-gun-equipped",
+      "frame": 2763931
+    },
+    {
+      "name": "427-fresh-story-skure-funds",
+      "frame": 2764127
+    },
+    {
+      "name": "428-fresh-story-skure-funds",
+      "frame": 2787518
+    },
+    {
+      "name": "429-fresh-story-skure-funds",
+      "frame": 2806597
+    },
+    {
+      "name": "430-85-uzo-tarzimal-prepared",
+      "frame": 2832745
+    },
+    {
+      "name": "431-86-tarzimal-cave",
+      "frame": 2840338
+    },
+    {
+      "name": "432-87-tarzimal-noah-ready",
+      "frame": 2876526
+    },
+    {
+      "name": "433-88-noah-frade-mantle",
+      "frame": 2880275
+    },
+    {
+      "name": "434-89-tarzimal-return",
+      "frame": 2884286
+    },
+    {
+      "name": "435-90-drasgow-island",
+      "frame": 2899160
+    },
+    {
+      "name": "436-91-gas-shield-purchased",
+      "frame": 2902961
+    },
+    {
+      "name": "437-92-gas-shield-uzo",
+      "frame": 2905627
+    },
+    {
+      "name": "438-93-mirror-shield-information",
+      "frame": 2915238
+    },
+    {
+      "name": "439-94-odin-mirror-shield",
+      "frame": 2920002
+    },
+    {
+      "name": "440-95-mirror-shield-uzo",
+      "frame": 2922621
+    },
+    {
+      "name": "441-96-baya-camineet-prepared",
+      "frame": 2936906
+    },
+    {
+      "name": "442-97-baya-prison",
+      "frame": 2940680
+    },
+    {
+      "name": "443-98-baya-prison-crossed",
+      "frame": 2946580
+    },
+    {
+      "name": "444-99-baya-tower",
+      "frame": 2954572
+    },
+    {
+      "name": "445-100-crystal-earned",
+      "frame": 2969492
+    },
+    {
+      "name": "446-101-laconia-sword-cave",
+      "frame": 2978647
+    },
+    {
+      "name": "447-102-red-dragon-ready",
+      "frame": 3032467
+    },
+    {
+      "name": "448-103-laconia-sword-earned",
+      "frame": 3036212
+    },
+    {
+      "name": "449-104-laconia-sword-camineet",
+      "frame": 3044701
+    },
+    {
+      "name": "450-105-loar-armory",
+      "frame": 3059036
+    },
+    {
+      "name": "451-106-myau-silver-fang",
+      "frame": 3061298
+    },
+    {
+      "name": "452-107-final-expedition-prepared",
+      "frame": 3064999
+    },
+    {
+      "name": "453-108-final-baya-tower",
+      "frame": 3082520
+    },
+    {
+      "name": "454-109-miracle-key-earned",
+      "frame": 3091455
+    },
+    {
+      "name": "455-110-baya-summit-prepared",
+      "frame": 3119503
+    },
+    {
+      "name": "456-111-flying-castle-earned",
+      "frame": 3124133
+    },
+    {
+      "name": "457-113-flying-castle-dungeon",
+      "frame": 3126407
+    },
+    {
+      "name": "458-114-shadow-approach",
+      "frame": 3144900
+    },
+    {
+      "name": "459-115-shadow-defeated",
+      "frame": 3147702
+    },
+    {
+      "name": "460-116-lassic-approach",
+      "frame": 3173626
+    },
+    {
+      "name": "461-117-lassic-defeated",
+      "frame": 3178247
+    },
+    {
+      "name": "462-118-lassic-return-camineet",
+      "frame": 3183089
+    },
+    {
+      "name": "463-29-western-palma-passage",
+      "frame": 3193603
+    },
+    {
+      "name": "464-119-paseo-after-lassic",
+      "frame": 3209272
+    },
+    {
+      "name": "465-120-final-governor-ready",
+      "frame": 3213161
+    },
+    {
+      "name": "466-final-training-rested",
+      "frame": 3214116
+    },
+    {
+      "name": "467-final-training-rested",
+      "frame": 3234001
+    },
+    {
+      "name": "468-final-training-rested",
+      "frame": 3265283
+    },
+    {
+      "name": "469-final-training-rested",
+      "frame": 3286309
+    },
+    {
+      "name": "470-final-training-rested",
+      "frame": 3304981
+    },
+    {
+      "name": "471-final-training-rested",
+      "frame": 3323906
+    },
+    {
+      "name": "472-final-training-rested",
+      "frame": 3348878
+    },
+    {
+      "name": "473-final-training-rested",
+      "frame": 3383879
+    },
+    {
+      "name": "474-final-training-rested",
+      "frame": 3406093
+    },
+    {
+      "name": "475-final-training-rested",
+      "frame": 3430700
+    },
+    {
+      "name": "476-final-training-rested",
+      "frame": 3459549
+    },
+    {
+      "name": "477-final-training-rested",
+      "frame": 3479193
+    },
+    {
+      "name": "478-final-training-rested",
+      "frame": 3499731
+    },
+    {
+      "name": "479-final-training-rested",
+      "frame": 3520905
+    },
+    {
+      "name": "480-125-diamond-armor-funds-earned",
+      "frame": 3530302
+    },
+    {
+      "name": "481-126-diamond-armor-ready",
+      "frame": 3539012
+    },
+    {
+      "name": "482-121-original-governor-fall",
+      "frame": 3539562
+    },
+    {
+      "name": "483-122-dark-falz-approach",
+      "frame": 3558255
+    }
+  ],
+  "final": {
+    "frame": 3581580,
+    "vehicle": 0,
+    "dungeon": [
+      31,
+      222,
+      0,
+      6
+    ],
+    "object_flags": {
+      "0": 255,
+      "2": 255,
+      "4": 255,
+      "5": 255,
+      "49": 255,
+      "52": 255,
+      "60": 255,
+      "104": 255,
+      "129": 255,
+      "139": 255,
+      "203": 255,
+      "206": 255,
+      "216": 255
+    },
+    "screen": 0,
+    "map": 14,
+    "position": [
+      520,
+      272
+    ],
+    "cell": [
+      32,
+      16
+    ],
+    "party": [
+      [
+        1,
+        116,
+        9,
+        221,
+        60,
+        23,
+        200,
+        27,
+        109,
+        223,
+        14,
+        22,
+        32,
+        0,
+        5,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        57,
+        60,
+        23,
+        193,
+        48,
+        109,
+        178,
+        10,
+        20,
+        29,
+        0,
+        4,
+        3
+      ],
+      [
+        1,
+        66,
+        0,
+        57,
+        60,
+        22,
+        169,
+        0,
+        89,
+        186,
+        13,
+        23,
+        31,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        129,
+        0,
+        131,
+        57,
+        21,
+        161,
+        72,
+        65,
+        152,
+        1,
+        24,
+        0,
+        0,
+        5,
+        5
+      ]
+    ],
+    "items": [
+      51,
+      52,
+      53,
+      45,
+      57,
+      50,
+      38,
+      34,
+      35,
+      4,
+      56,
+      49,
+      48,
+      59,
+      60,
+      62,
+      21
+    ],
+    "money": 1036,
+    "joined": 15,
+    "rng": 46696,
+    "story_flags": {
+      "0": 255,
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 7,
+      "6": 1,
+      "7": 255,
+      "8": 1,
+      "9": 1,
+      "10": 255,
+      "17": 255,
+      "22": 1,
+      "23": 255,
+      "24": 255
+    },
+    "vehicle_cycle": [
+      1,
+      2
+    ],
+    "fade_clock": 3,
+    "map_music": 0
+  },
+  "consumed_rows": 144464,
+  "controller_log_sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+  "consumed_bytes": 11721245,
+  "source_final_hashes": {
+    "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "symbols_sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c",
+    "controller_sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+    "report_sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb",
+    "sram_sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60"
+  },
+  "source_closed_marker_sha256": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1",
+  "native_final_sram_sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60",
+  "native_sram_matches_source": true,
+  "post_log_display_settle": {
+    "frames": 4,
+    "screen": 0,
+    "capture": {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/campaign/release-v5-live-replay-b72feead/replay-ending-title-settled.png",
+      "sha256_pixels": "9efc025842be57e3232d782127e8575236f9df59f73994e1cf8df6ecb7d9f241",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    "capture_sha256": "3f977da445f64d6912c6a00c8fb7cc2aa7df26a47a7e2979b9c2da4bf76b4bd0",
+    "controller_inputs": 0
+  },
+  "caught_up_polls_without_ticks": 0,
+  "elapsed_seconds": 1469.1
+}

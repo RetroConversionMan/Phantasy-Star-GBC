@@ -1,0 +1,42 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "floors": 61,
+  "objects": 186,
+  "transitions": 65,
+  "data_bank": 16,
+  "data_bytes": 9845,
+  "tables": {
+    "dungeon_layouts": {
+      "bytes": 7808,
+      "sha256": "23b14a3d265350527c6cdb35c404d8728f912a27d0ad52c4449cfde0d31382aa"
+    },
+    "dungeon_objects": {
+      "bytes": 1302,
+      "sha256": "1d8892311a88a275401b7dd6e78a19ac934347ceefbaac9eaac1ddeed1a03fb3"
+    },
+    "dungeon_transitions": {
+      "bytes": 325,
+      "sha256": "e429d500d7561604ca2f7a13396048ccc50f3af0743016248ae6758ebd70eee3"
+    },
+    "dungeon_floor_info": {
+      "bytes": 244,
+      "sha256": "90d9851208b33372abd8a632c2b5777b818f0cb9a5cbe2ff9a7b20048b4909d5"
+    },
+    "dungeon_palette_colors": {
+      "bytes": 96,
+      "sha256": "ead8497ced8d6bac996dfb08a08f8e606d5c5e7e23e6f35ba1702c13b4bad3c2"
+    },
+    "dungeon_view_offsets": {
+      "bytes": 64,
+      "sha256": "d6d215bc9f5dda25dc20b13674b1c2a4050981a140f74191eff462f134596546"
+    },
+    "dungeon_naturally_lit": {
+      "bytes": 6,
+      "sha256": "51dbe44619928d9d1178e0050949676536b206de09abdaaf00a715e216ad1256"
+    }
+  },
+  "limits": [
+    "Data extraction only; not dungeon rendering or playable integration",
+    "Object and transition payloads require original native handler behavior"
+  ]
+}

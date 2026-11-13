@@ -1,0 +1,56 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    _audio_command                                                  ******** GX
+  8 _fade_wait                                                      0000007F R
+  2 _game_fade_clock                                                00000000 GR
+  2 _game_map_music                                                 00000001 GR
+  8 _game_transition_close                                          0000006B GR
+  8 _game_transition_fade_in                                        000000E4 GR
+  8 _game_transition_fade_out                                       000000D4 GR
+  8 _game_transition_interaction_music                              0000002C GR
+  8 _game_transition_interaction_music_tracks_10000_201             00000043 R
+  8 _game_transition_map_music                                      00000012 GR
+  8 _game_transition_vint16                                         00000000 GR
+  8 _game_transition_wait                                           00000053 GR
+    _joypad                                                         ******** GX
+    _last_keys                                                      ******** GX
+    _scene_fade_begin                                               ******** GX
+    _scene_fade_step                                                ******** GX
+    _vsync                                                          ******** GX
+    b_audio_command                                                 ******** GX
+    b_game_transition_close                                     =   0000001D G
+    b_game_transition_fade_in                                   =   0000001D G
+    b_game_transition_fade_out                                  =   0000001D G
+    b_game_transition_interaction_music                         =   0000001D G
+    b_game_transition_map_music                                 =   0000001D G
+    b_game_transition_vint16                                    =   0000001D G
+    b_game_transition_wait                                      =   0000001D G
+    b_scene_fade_begin                                              ******** GX
+    b_scene_fade_step                                               ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        2   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_29                                   size       E9   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

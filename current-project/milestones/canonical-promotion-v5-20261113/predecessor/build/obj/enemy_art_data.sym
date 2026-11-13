@@ -1,0 +1,349 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _enemy_01_attrs                                                 ******** GX
+    _enemy_01_map                                                   ******** GX
+    _enemy_01_palettes                                              ******** GX
+    _enemy_01_tiles                                                 ******** GX
+    _enemy_02_attrs                                                 ******** GX
+    _enemy_02_map                                                   ******** GX
+    _enemy_02_palettes                                              ******** GX
+    _enemy_02_tiles                                                 ******** GX
+    _enemy_03_attrs                                                 ******** GX
+    _enemy_03_map                                                   ******** GX
+    _enemy_03_palettes                                              ******** GX
+    _enemy_03_tiles                                                 ******** GX
+    _enemy_04_attrs                                                 ******** GX
+    _enemy_04_map                                                   ******** GX
+    _enemy_04_palettes                                              ******** GX
+    _enemy_04_tiles                                                 ******** GX
+    _enemy_05_attrs                                                 ******** GX
+    _enemy_05_map                                                   ******** GX
+    _enemy_05_palettes                                              ******** GX
+    _enemy_05_tiles                                                 ******** GX
+    _enemy_06_attrs                                                 ******** GX
+    _enemy_06_map                                                   ******** GX
+    _enemy_06_palettes                                              ******** GX
+    _enemy_06_tiles                                                 ******** GX
+    _enemy_07_attrs                                                 ******** GX
+    _enemy_07_map                                                   ******** GX
+    _enemy_07_palettes                                              ******** GX
+    _enemy_07_tiles                                                 ******** GX
+    _enemy_08_attrs                                                 ******** GX
+    _enemy_08_map                                                   ******** GX
+    _enemy_08_palettes                                              ******** GX
+    _enemy_08_tiles                                                 ******** GX
+    _enemy_09_attrs                                                 ******** GX
+    _enemy_09_map                                                   ******** GX
+    _enemy_09_palettes                                              ******** GX
+    _enemy_09_tiles                                                 ******** GX
+    _enemy_10_attrs                                                 ******** GX
+    _enemy_10_map                                                   ******** GX
+    _enemy_10_palettes                                              ******** GX
+    _enemy_10_tiles                                                 ******** GX
+    _enemy_11_attrs                                                 ******** GX
+    _enemy_11_map                                                   ******** GX
+    _enemy_11_palettes                                              ******** GX
+    _enemy_11_tiles                                                 ******** GX
+    _enemy_12_attrs                                                 ******** GX
+    _enemy_12_map                                                   ******** GX
+    _enemy_12_palettes                                              ******** GX
+    _enemy_12_tiles                                                 ******** GX
+    _enemy_13_attrs                                                 ******** GX
+    _enemy_13_map                                                   ******** GX
+    _enemy_13_palettes                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_13_tiles                                                 ******** GX
+    _enemy_14_attrs                                                 ******** GX
+    _enemy_14_map                                                   ******** GX
+    _enemy_14_palettes                                              ******** GX
+    _enemy_14_tiles                                                 ******** GX
+    _enemy_15_attrs                                                 ******** GX
+    _enemy_15_map                                                   ******** GX
+    _enemy_15_palettes                                              ******** GX
+    _enemy_15_tiles                                                 ******** GX
+    _enemy_16_attrs                                                 ******** GX
+    _enemy_16_map                                                   ******** GX
+    _enemy_16_palettes                                              ******** GX
+    _enemy_16_tiles                                                 ******** GX
+    _enemy_17_attrs                                                 ******** GX
+    _enemy_17_map                                                   ******** GX
+    _enemy_17_palettes                                              ******** GX
+    _enemy_17_tiles                                                 ******** GX
+    _enemy_18_attrs                                                 ******** GX
+    _enemy_18_map                                                   ******** GX
+    _enemy_18_palettes                                              ******** GX
+    _enemy_18_tiles                                                 ******** GX
+    _enemy_19_attrs                                                 ******** GX
+    _enemy_19_map                                                   ******** GX
+    _enemy_19_palettes                                              ******** GX
+    _enemy_19_tiles                                                 ******** GX
+    _enemy_20_attrs                                                 ******** GX
+    _enemy_20_map                                                   ******** GX
+    _enemy_20_palettes                                              ******** GX
+    _enemy_20_tiles                                                 ******** GX
+    _enemy_21_attrs                                                 ******** GX
+    _enemy_21_map                                                   ******** GX
+    _enemy_21_palettes                                              ******** GX
+    _enemy_21_tiles                                                 ******** GX
+    _enemy_22_attrs                                                 ******** GX
+    _enemy_22_map                                                   ******** GX
+    _enemy_22_palettes                                              ******** GX
+    _enemy_22_tiles                                                 ******** GX
+    _enemy_23_attrs                                                 ******** GX
+    _enemy_23_map                                                   ******** GX
+    _enemy_23_palettes                                              ******** GX
+    _enemy_23_tiles                                                 ******** GX
+    _enemy_24_attrs                                                 ******** GX
+    _enemy_24_map                                                   ******** GX
+    _enemy_24_palettes                                              ******** GX
+    _enemy_24_tiles                                                 ******** GX
+    _enemy_25_attrs                                                 ******** GX
+    _enemy_25_map                                                   ******** GX
+    _enemy_25_palettes                                              ******** GX
+    _enemy_25_tiles                                                 ******** GX
+    _enemy_26_attrs                                                 ******** GX
+    _enemy_26_map                                                   ******** GX
+    _enemy_26_palettes                                              ******** GX
+    _enemy_26_tiles                                                 ******** GX
+    _enemy_27_attrs                                                 ******** GX
+    _enemy_27_map                                                   ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_27_palettes                                              ******** GX
+    _enemy_27_tiles                                                 ******** GX
+    _enemy_28_attrs                                                 ******** GX
+    _enemy_28_map                                                   ******** GX
+    _enemy_28_palettes                                              ******** GX
+    _enemy_28_tiles                                                 ******** GX
+    _enemy_29_attrs                                                 ******** GX
+    _enemy_29_map                                                   ******** GX
+    _enemy_29_palettes                                              ******** GX
+    _enemy_29_tiles                                                 ******** GX
+    _enemy_30_attrs                                                 ******** GX
+    _enemy_30_map                                                   ******** GX
+    _enemy_30_palettes                                              ******** GX
+    _enemy_30_tiles                                                 ******** GX
+    _enemy_31_attrs                                                 ******** GX
+    _enemy_31_map                                                   ******** GX
+    _enemy_31_palettes                                              ******** GX
+    _enemy_31_tiles                                                 ******** GX
+    _enemy_32_attrs                                                 ******** GX
+    _enemy_32_map                                                   ******** GX
+    _enemy_32_palettes                                              ******** GX
+    _enemy_32_tiles                                                 ******** GX
+    _enemy_33_attrs                                                 ******** GX
+    _enemy_33_map                                                   ******** GX
+    _enemy_33_palettes                                              ******** GX
+    _enemy_33_tiles                                                 ******** GX
+    _enemy_34_attrs                                                 ******** GX
+    _enemy_34_map                                                   ******** GX
+    _enemy_34_palettes                                              ******** GX
+    _enemy_34_tiles                                                 ******** GX
+    _enemy_35_attrs                                                 ******** GX
+    _enemy_35_map                                                   ******** GX
+    _enemy_35_palettes                                              ******** GX
+    _enemy_35_tiles                                                 ******** GX
+    _enemy_36_attrs                                                 ******** GX
+    _enemy_36_map                                                   ******** GX
+    _enemy_36_palettes                                              ******** GX
+    _enemy_36_tiles                                                 ******** GX
+    _enemy_37_attrs                                                 ******** GX
+    _enemy_37_map                                                   ******** GX
+    _enemy_37_palettes                                              ******** GX
+    _enemy_37_tiles                                                 ******** GX
+    _enemy_38_attrs                                                 ******** GX
+    _enemy_38_map                                                   ******** GX
+    _enemy_38_palettes                                              ******** GX
+    _enemy_38_tiles                                                 ******** GX
+    _enemy_39_attrs                                                 ******** GX
+    _enemy_39_map                                                   ******** GX
+    _enemy_39_palettes                                              ******** GX
+    _enemy_39_tiles                                                 ******** GX
+    _enemy_40_attrs                                                 ******** GX
+    _enemy_40_map                                                   ******** GX
+    _enemy_40_palettes                                              ******** GX
+    _enemy_40_tiles                                                 ******** GX
+    _enemy_41_attrs                                                 ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_41_map                                                   ******** GX
+    _enemy_41_palettes                                              ******** GX
+    _enemy_41_tiles                                                 ******** GX
+    _enemy_42_attrs                                                 ******** GX
+    _enemy_42_map                                                   ******** GX
+    _enemy_42_palettes                                              ******** GX
+    _enemy_42_tiles                                                 ******** GX
+    _enemy_43_attrs                                                 ******** GX
+    _enemy_43_map                                                   ******** GX
+    _enemy_43_palettes                                              ******** GX
+    _enemy_43_tiles                                                 ******** GX
+    _enemy_44_attrs                                                 ******** GX
+    _enemy_44_map                                                   ******** GX
+    _enemy_44_palettes                                              ******** GX
+    _enemy_44_tiles                                                 ******** GX
+    _enemy_45_attrs                                                 ******** GX
+    _enemy_45_map                                                   ******** GX
+    _enemy_45_palettes                                              ******** GX
+    _enemy_45_tiles                                                 ******** GX
+    _enemy_46_attrs                                                 ******** GX
+    _enemy_46_map                                                   ******** GX
+    _enemy_46_palettes                                              ******** GX
+    _enemy_46_tiles                                                 ******** GX
+    _enemy_47_attrs                                                 ******** GX
+    _enemy_47_map                                                   ******** GX
+    _enemy_47_palettes                                              ******** GX
+    _enemy_47_tiles                                                 ******** GX
+    _enemy_48_attrs                                                 ******** GX
+    _enemy_48_map                                                   ******** GX
+    _enemy_48_palettes                                              ******** GX
+    _enemy_48_tiles                                                 ******** GX
+    _enemy_49_attrs                                                 ******** GX
+    _enemy_49_map                                                   ******** GX
+    _enemy_49_palettes                                              ******** GX
+    _enemy_49_tiles                                                 ******** GX
+    _enemy_50_attrs                                                 ******** GX
+    _enemy_50_map                                                   ******** GX
+    _enemy_50_palettes                                              ******** GX
+    _enemy_50_tiles                                                 ******** GX
+    _enemy_51_attrs                                                 ******** GX
+    _enemy_51_map                                                   ******** GX
+    _enemy_51_palettes                                              ******** GX
+    _enemy_51_tiles                                                 ******** GX
+    _enemy_52_attrs                                                 ******** GX
+    _enemy_52_map                                                   ******** GX
+    _enemy_52_palettes                                              ******** GX
+    _enemy_52_tiles                                                 ******** GX
+    _enemy_53_attrs                                                 ******** GX
+    _enemy_53_map                                                   ******** GX
+    _enemy_53_palettes                                              ******** GX
+    _enemy_53_tiles                                                 ******** GX
+    _enemy_54_attrs                                                 ******** GX
+    _enemy_54_map                                                   ******** GX
+    _enemy_54_palettes                                              ******** GX
+    _enemy_54_tiles                                                 ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_55_attrs                                                 ******** GX
+    _enemy_55_map                                                   ******** GX
+    _enemy_55_palettes                                              ******** GX
+    _enemy_55_tiles                                                 ******** GX
+    _enemy_56_attrs                                                 ******** GX
+    _enemy_56_map                                                   ******** GX
+    _enemy_56_palettes                                              ******** GX
+    _enemy_56_tiles                                                 ******** GX
+    _enemy_57_attrs                                                 ******** GX
+    _enemy_57_map                                                   ******** GX
+    _enemy_57_palettes                                              ******** GX
+    _enemy_57_tiles                                                 ******** GX
+    _enemy_58_attrs                                                 ******** GX
+    _enemy_58_map                                                   ******** GX
+    _enemy_58_palettes                                              ******** GX
+    _enemy_58_tiles                                                 ******** GX
+    _enemy_59_attrs                                                 ******** GX
+    _enemy_59_map                                                   ******** GX
+    _enemy_59_palettes                                              ******** GX
+    _enemy_59_tiles                                                 ******** GX
+    _enemy_60_attrs                                                 ******** GX
+    _enemy_60_map                                                   ******** GX
+    _enemy_60_palettes                                              ******** GX
+    _enemy_60_tiles                                                 ******** GX
+    _enemy_61_attrs                                                 ******** GX
+    _enemy_61_map                                                   ******** GX
+    _enemy_61_palettes                                              ******** GX
+    _enemy_61_tiles                                                 ******** GX
+    _enemy_62_attrs                                                 ******** GX
+    _enemy_62_map                                                   ******** GX
+    _enemy_62_palettes                                              ******** GX
+    _enemy_62_tiles                                                 ******** GX
+    _enemy_63_attrs                                                 ******** GX
+    _enemy_63_map                                                   ******** GX
+    _enemy_63_palettes                                              ******** GX
+    _enemy_63_tiles                                                 ******** GX
+    _enemy_64_attrs                                                 ******** GX
+    _enemy_64_map                                                   ******** GX
+    _enemy_64_palettes                                              ******** GX
+    _enemy_64_tiles                                                 ******** GX
+    _enemy_65_attrs                                                 ******** GX
+    _enemy_65_map                                                   ******** GX
+    _enemy_65_palettes                                              ******** GX
+    _enemy_65_tiles                                                 ******** GX
+    _enemy_66_attrs                                                 ******** GX
+    _enemy_66_map                                                   ******** GX
+    _enemy_66_palettes                                              ******** GX
+    _enemy_66_tiles                                                 ******** GX
+    _enemy_67_attrs                                                 ******** GX
+    _enemy_67_map                                                   ******** GX
+    _enemy_67_palettes                                              ******** GX
+    _enemy_67_tiles                                                 ******** GX
+    _enemy_68_attrs                                                 ******** GX
+    _enemy_68_map                                                   ******** GX
+    _enemy_68_palettes                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_68_tiles                                                 ******** GX
+    _enemy_69_attrs                                                 ******** GX
+    _enemy_69_map                                                   ******** GX
+    _enemy_69_palettes                                              ******** GX
+    _enemy_69_tiles                                                 ******** GX
+    _enemy_70_attrs                                                 ******** GX
+    _enemy_70_map                                                   ******** GX
+    _enemy_70_palettes                                              ******** GX
+    _enemy_70_tiles                                                 ******** GX
+    _enemy_71_attrs                                                 ******** GX
+    _enemy_71_map                                                   ******** GX
+    _enemy_71_palettes                                              ******** GX
+    _enemy_71_tiles                                                 ******** GX
+    _enemy_72_attrs                                                 ******** GX
+    _enemy_72_map                                                   ******** GX
+    _enemy_72_palettes                                              ******** GX
+    _enemy_72_tiles                                                 ******** GX
+    _enemy_73_attrs                                                 ******** GX
+    _enemy_73_map                                                   ******** GX
+    _enemy_73_palettes                                              ******** GX
+    _enemy_73_tiles                                                 ******** GX
+    _enemy_74_attrs                                                 ******** GX
+    _enemy_74_map                                                   ******** GX
+    _enemy_74_palettes                                              ******** GX
+    _enemy_74_tiles                                                 ******** GX
+  0 _enemy_art                                                      00000000 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size      2E4   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _INITIALIZER                               size        0   flags    0
+   9 _CABS                                      size        0   flags    8
+

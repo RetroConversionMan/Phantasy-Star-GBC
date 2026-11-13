@@ -1,0 +1,30 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "95c6d55f7c8c23c14a449c3d90721eff6e7dababc145ed2cdeef9f1b9cda365a",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Walked original Camineet exit and Palma cave entry; exact floor/position/direction match source transition",
+    "Original darkness prompt leads to menu; using Flash consumes it and lights the floor",
+    "Controller rotation retains position and follows source direction order",
+    "Money chest C602 opens once; save records its flag and dungeon floor/position/direction/light; Continue preserves RPG state",
+    "Original special stair returns to the stored outside world position"
+  ],
+  "controller_steps": 48,
+  "battles": 1,
+  "injected_fixtures": [
+    "Alis level30, HP/maxHP200 and attack/defense200 for integration coverage without grinding",
+    "One Flash item in inventory before walking to the dungeon; no source flags, coordinates, RNG or dungeon state modified"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

@@ -1,0 +1,49 @@
+--- initial/campaign_runner.py
++++ corrected/campaign_runner.py
+@@ -654,10 +654,31 @@
+    self.walk([(52,11),(53,11)],'Original Corona Tower entrance');self.drain((17,));assert self.dungeon_state()[:3]==(43,0xd1,0)
+    task['dezoris']=6;self.checkpoint('49-corona-entry')
+  def torch(self):
++  # The actual Corona defeat exhausted both escape casters. Keep Noah's
++  # source Tele available instead of spending it on ordinary field healing.
++  self.avoid_combat=True;self.mp_reserve=8;self.noah_reserve=40
++  task=self.report.setdefault('campaign_tasks',{})
++  if task.get('torch_preparation')==1:
++   assert self.map()==22 and self.state()==1
++   self.leave_aukba();task['aukba']=0
++   self.dezoris_passage([(94,43),(95,43)],(48,0x79,0),(48,0x2e,0),'Rested party return through original northeast Dezoris cave')
++   self.walk([(52,11),(53,11)],'Return to Corona after original hospital recovery');self.drain((17,))
++   assert self.dungeon_state()[:3]==(43,0xd1,0)
++   task['torch_preparation']=2;self.checkpoint('torch-prepared-corona-entry')
+   assert self.byte('game_dungeon',264)and 58 in self.items()
+   self.dungeon_multi_walk((46,0x2d,2));self.checkpoint('50-torch-door');self.use(45);self.drain((17,));self.dungeon_step('up');self.answer(True);self.drain((17,));assert 47 in self.items()and 58 not in self.items()
+   self.checkpoint('51-eclipse-torch');self.use(38);self.drain((1,));assert self.map()==2
+   self.report['milestones'].append('Original Dezoris four-cave route and203-command Corona Tower climb; AmberEye exchanged for EclipseTorch');self.checkpoint('52-torch-dezoris')
++ def torch_recover(self):
++  self.continue_game();self.avoid_combat=True;self.mp_reserve=8;self.noah_reserve=40
++  self.record('torch_preparation_after_defeat',reason='Original Corona encounters exhausted Alis and Noah MP. Use actual Continue, Flute and the original Aukba hospital route before returning; preserve Noah MP for native Tele and escape ordinary encounters.')
++  if self.byte('game_dungeon',264):self.use(38);self.drain((1,))
++  if self.map()==2:self.report.setdefault('campaign_tasks',{})['aukba']=0
++  else:assert self.map()==22
++  self.aukba()
++  assert self.map()==22 and all(p[0]&1 and p[1]==p[6] and p[2]==p[7] for p in self.party())
++  self.report.setdefault('campaign_tasks',{})['torch_preparation']=1
++  self.checkpoint('torch-continue-aukba-rested')
+  def aukba(self):
+   task=self.report.setdefault('campaign_tasks',{});stage=task.get('aukba',0)
+   if stage==0:
+--- initial/run_campaign_story.py
++++ corrected/run_campaign_story.py
+@@ -94,10 +94,11 @@
+   if a.continue_after_defeat:
+    assert a.resume and q.report.get('failure',{}).get('message')=='Natural defeat: failure checkpoint retained. Continue explicitly from actual save.'
+    phase=PHASES[driver['next_phase']][0]
+-   assert phase in('roadpass_funds','naula_funds','governor_funds','luveno_funds','ice_funds','wand_funds','laconia_shield','final_climb','final_training'),('Recovery needs a source-route decision for this phase',phase)
++   assert phase in('roadpass_funds','naula_funds','governor_funds','luveno_funds','ice_funds','wand_funds','laconia_shield','final_climb','final_training','torch'),('Recovery needs a source-route decision for this phase',phase)
+    q.record('story_native_defeat_recovery',phase=phase,death_count=len(q.report['deaths']))
+    if phase=='final_climb':q.final_recover()
+    elif phase=='laconia_shield':q.shield_recover()
++   elif phase=='torch':q.torch_recover()
+    else:q.continue_game()
+   for index,(name,method,args)in enumerate(PHASES):
+    if index<driver['next_phase']:continue

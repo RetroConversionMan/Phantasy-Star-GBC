@@ -1,0 +1,208 @@
+{
+  "handoff_date": "2026-11-11",
+  "timezone": "America/Chicago",
+  "objective": "Complete faithful native Game Boy Color port of original Phantasy Star for Sega Master System",
+  "latest_request": "Transfer all current progress and knowledge to another account in one ZIP; freeze implementation",
+  "status": "Incomplete; verified exploration ROM plus unintegrated world/RPG data and research",
+  "source": {
+    "repository": "https://github.com/sung3r/ps1disasm",
+    "commit": "8efc4110adcf1a81c70d40522016393ba6f6b5ae",
+    "rom_bytes": 524288,
+    "rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88"
+  },
+  "verified_rom": {
+    "path": "verified-baseline/build/phantasy-star-gbc-exploration.gbc",
+    "bytes": 65536,
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "user_reported_working": true,
+    "hardware_tested": false,
+    "cgb_flag": "0xc0",
+    "mapper": "MBC5 + RAM + battery",
+    "ram_bytes": 8192,
+    "features": [
+      "Camineet exploration",
+      "Alis animation",
+      "camera scrolling",
+      "source on-foot collision",
+      "title/menu/help",
+      "position/facing save and continue"
+    ],
+    "world_cell_transitions_tested": 144,
+    "visible_tile_attribute_comparisons": 59451
+  },
+  "expansion": {
+    "world": {
+      "generated": true,
+      "integrated": false,
+      "compiled": false,
+      "emulator_tested": false,
+      "groups": 11,
+      "map_ids": 24,
+      "banks": [
+        32,
+        53
+      ],
+      "format_header": "current-project/src/world_assets.h",
+      "manifest": "current-project/assets/world/manifest.json",
+      "group_summary": [
+        {
+          "group": 0,
+          "name": "Palma",
+          "map_bank": 32,
+          "asset_bank": 33,
+          "tile_count": 317,
+          "entrance_count": 46
+        },
+        {
+          "group": 1,
+          "name": "Motavia",
+          "map_bank": 34,
+          "asset_bank": 35,
+          "tile_count": 188,
+          "entrance_count": 24
+        },
+        {
+          "group": 2,
+          "name": "Dezolis",
+          "map_bank": 36,
+          "asset_bank": 37,
+          "tile_count": 120,
+          "entrance_count": 17
+        },
+        {
+          "group": 3,
+          "name": "Dezolis shared map",
+          "map_bank": 38,
+          "asset_bank": 39,
+          "tile_count": 120,
+          "entrance_count": 0
+        },
+        {
+          "group": 4,
+          "name": "Camineet / Parolit / Spaceport",
+          "map_bank": 40,
+          "asset_bank": 41,
+          "tile_count": 227,
+          "entrance_count": 96
+        },
+        {
+          "group": 5,
+          "name": "Palma town group 2",
+          "map_bank": 42,
+          "asset_bank": 43,
+          "tile_count": 154,
+          "entrance_count": 47
+        },
+        {
+          "group": 6,
+          "name": "Palma town group 3",
+          "map_bank": 44,
+          "asset_bank": 45,
+          "tile_count": 126,
+          "entrance_count": 120
+        },
+        {
+          "group": 7,
+          "name": "Town group 4",
+          "map_bank": 46,
+          "asset_bank": 47,
+          "tile_count": 333,
+          "entrance_count": 102
+        },
+        {
+          "group": 8,
+          "name": "Town group 5",
+          "map_bank": 48,
+          "asset_bank": 49,
+          "tile_count": 52,
+          "entrance_count": 42
+        },
+        {
+          "group": 9,
+          "name": "Town group 6",
+          "map_bank": 50,
+          "asset_bank": 51,
+          "tile_count": 186,
+          "entrance_count": 39
+        },
+        {
+          "group": 10,
+          "name": "Town group 7",
+          "map_bank": 52,
+          "asset_bank": 53,
+          "tile_count": 66,
+          "entrance_count": 6
+        }
+      ]
+    },
+    "rpg": {
+      "data_extracted": true,
+      "api_drafted": true,
+      "functions_implemented": false,
+      "code_compiled": false,
+      "bank": 4,
+      "table_bytes": 5490,
+      "files": [
+        "src/rpg.h",
+        "src/rpg_data.h",
+        "src/rpg_data.c",
+        "tools/extract_rpg.py",
+        "build/rpg_extraction.json"
+      ]
+    },
+    "dialogue_events": {
+      "research_only": true,
+      "files_created": false
+    },
+    "dungeons": {
+      "research_only": true,
+      "layout_count_verified_from_symbols": 61,
+      "files_created": false
+    },
+    "audio": {
+      "implemented": false
+    },
+    "bank_io_helpers": {
+      "planned": true,
+      "files_created": false
+    }
+  },
+  "critical_warnings": [
+    "current-project Makefile wildcard includes bank32..53 files but ROM size remains4 banks",
+    "rpg.h has no implementation; do not call its declared functions yet",
+    "Banked executing code must not switch out its own ROM bank",
+    "World exit shared suffixes require original tile/event gating",
+    "Do not treat generated data as tested gameplay",
+    "Archived Python venv and CMake cache contain original machine paths; recreate environment",
+    "Git internals omitted; bootstrap existing-checkout git rev-parse requires adaptation for source snapshots"
+  ],
+  "remaining": [
+    "world renderer and transitions",
+    "party/inventory/equipment logic",
+    "versioned full-state saving",
+    "dialogue and event handlers",
+    "shops/hospitals/churches",
+    "battles/encounters/spells/status/bosses/rewards",
+    "dungeon rendering/traversal/objects/lighting/traps",
+    "travel/vehicles/recruitment/story progression",
+    "music/sound effects",
+    "ending",
+    "full campaign and hardware validation"
+  ],
+  "toolchain": {
+    "gbdk": "4.5.0",
+    "included_gbdk_platform": "macOS ARM64",
+    "gbdk_archive_sha256": "289ee60e46c5a2785a21e35533f84a5131ed4a063b21b0dbdedc9a10af15bf78",
+    "pyboy": "2.9.0",
+    "pillow": "13.0.0",
+    "python_venv": "3.12",
+    "wla_dx_commit": "fceeb84ab70d52d48d0ae3f876e9d915c8eb1002",
+    "cmake": "4.4.4"
+  },
+  "baseline_rebuild_during_handoff": {
+    "passed": true,
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "method": "Extract prior delivered ZIP to temporary folder and force rebuild with included GBDK; compare ROM SHA"
+  },
+  "notes": "This is a file-based technical handoff, not a literal chat transcript or account migration. All material project findings are in KNOWLEDGE_AND_NEXT_STEPS.md."
+}

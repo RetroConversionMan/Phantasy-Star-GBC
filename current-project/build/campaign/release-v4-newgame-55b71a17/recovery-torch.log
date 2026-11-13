@@ -1,0 +1,14 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{"battle": 494, "enemy": 57, "count": 1, "result": 4, "level": 16, "hp": 150, "money": 1857}
+{"battle": 495, "enemy": 7, "count": 1, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"battle": 496, "enemy": 45, "count": 1, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"battle": 497, "enemy": 11, "count": 4, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"checkpoint": "347-53-corona-return-passage", "frame": 1619641, "level": 16, "hp": 150, "money": 1857, "items": [51, 52, 53, 45, 40, 2, 57, 50, 38, 34, 16, 19, 58, 39]}
+{"battle": 498, "enemy": 29, "count": 2, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"battle": 499, "enemy": 40, "count": 2, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"checkpoint": "348-54-aukba-outside", "frame": 1624950, "level": 16, "hp": 150, "money": 1857, "items": [51, 52, 53, 45, 40, 2, 57, 50, 38, 34, 16, 19, 58, 39]}
+{"battle": 500, "enemy": 7, "count": 2, "result": 3, "level": 16, "hp": 150, "money": 1857}
+{"battle": 501, "enemy": 43, "count": 2, "result": 4, "level": 16, "hp": 150, "money": 1857}
+{"checkpoint": "349-55-aukba-town", "frame": 1629714, "level": 16, "hp": 150, "money": 1857, "items": [51, 52, 53, 45, 40, 2, 57, 50, 38, 34, 16, 19, 58, 39]}
+{"checkpoint": "350-56-aukba-rested", "frame": 1633600, "level": 16, "hp": 153, "money": 1711, "items": [51, 52, 53, 45, 40, 2, 57, 50, 38, 34, 16, 19, 58, 39]}
+{"checkpoint": "351-torch-continue-aukba-rested", "frame": 1633795, "level": 16, "hp": 153, "money": 1711, "items": [51, 52, 53, 45, 40, 2, 57, 50, 38, 34, 16, 19, 58, 39]}

@@ -1,0 +1,204 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "aec590c09baa6ee2f8bb7e980b5784b1269d289d973aa12ec4bc35e6313b3bcf",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    {
+      "opening": "Original title, full unskipped pan/city/three-record narrative, then source newgame",
+      "pan_source_changes": 223,
+      "pan_emulator_frames": 224,
+      "story_records": [
+        [
+          4,
+          0,
+          62619
+        ],
+        [
+          4,
+          1,
+          62716
+        ],
+        [
+          4,
+          2,
+          62933
+        ]
+      ]
+    },
+    {
+      "myau": "Both original prompts, Pot exchange, Alsulin award and five original speaker records",
+      "story_records": [
+        [
+          1,
+          3,
+          62999
+        ],
+        [
+          1,
+          4,
+          63046
+        ],
+        [
+          1,
+          3,
+          63053
+        ],
+        [
+          1,
+          4,
+          63086
+        ],
+        [
+          1,
+          3,
+          63169
+        ]
+      ]
+    },
+    {
+      "odin": "Actual Alsulin use,111-frame revival/button wait and five-record recruitment",
+      "story_records": [
+        [
+          2,
+          5,
+          63219
+        ],
+        [
+          2,
+          3,
+          63302
+        ],
+        [
+          2,
+          5,
+          63366
+        ],
+        [
+          2,
+          3,
+          63417
+        ],
+        [
+          2,
+          5,
+          63441
+        ]
+      ]
+    },
+    {
+      "noah": "Opened original door, Letter recruitment and two-record narrative",
+      "story_records": [
+        [
+          3,
+          3,
+          63580
+        ],
+        [
+          3,
+          6,
+          63620
+        ]
+      ]
+    },
+    {
+      "flight": "Actual Prism/Nuts menus, Laerma narrative,507-frame outbound/GoldDragon to castle and571-frame return to original Palma destination",
+      "story_records": [
+        [
+          5,
+          7,
+          63785
+        ],
+        [
+          5,
+          8,
+          63868
+        ]
+      ]
+    },
+    {
+      "ending_real_audio_IRQ_frames": 6795,
+      "ending_measured_native_frames": 6794,
+      "difference_allowed_for_ISR_sampling": 2,
+      "stack_guard": "DBC0..DBFF unchanged through DarkFalz, complete ending and return to title",
+      "audio_fault": 0
+    },
+    {
+      "ending": "Actual MiracleKey/door, DarkFalz combat, ending choice, sky/text/story/bitmap",
+      "credits_verified": true,
+      "stopped_before_credits": false,
+      "story_records": [
+        [
+          6,
+          3,
+          63976
+        ],
+        [
+          6,
+          5,
+          63984
+        ],
+        [
+          6,
+          6,
+          63995
+        ],
+        [
+          6,
+          4,
+          64006
+        ],
+        [
+          6,
+          3,
+          64018
+        ],
+        [
+          6,
+          3,
+          64084
+        ]
+      ],
+      "closing_texts": [
+        48822,
+        48848,
+        48872,
+        48893,
+        48905,
+        48929
+      ],
+      "stages": [
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "SRAM fixture:map14 beside original event54, Laconian Pot56, Alis only; no recruitment flag injected",
+    "SRAM fixture:floor0/E2 facing original Odin objectE3, Myau joined, Alsulin43; C50A remains0",
+    "SRAM fixture:floor29/68 facing Noah room78, first3party joined, Letter55; C506 remains0",
+    "SRAM fixture:floor15/1C beside original Baya Malay event176, Prism/Nuts, living4party with level30/HP255/attack255/defense255 for GoldDragon battle",
+    "SRAM fixture:floor31/DE facing original DarkFalz doorCE, MiracleKey,4strong party, prior Shadow/Lassic flags; no DarkFalz outcome or ending state injected",
+    "Diagnostic64-byte guard atDBC0..DBFF, below the1KiB DC00..DFFF stack window; no game state changed"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "rom_sha256": "c66c30275402d6367823dd4d67bcc45247fabb8eeeb42565bf204276f09bdf2a",
+  "rom_banks": 256,
+  "wram_start": 49312,
+  "wram_bytes": 6866,
+  "wram_end": 56178,
+  "stack_address_space_reserved": 1166
+}

@@ -1,0 +1,296 @@
+mkdir -p build/obj
+mkdir -p build/obj
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/assets.o src/assets.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/assets_sprites.o src/assets_sprites.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/main.o src/main.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/font.o src/font.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/bank_io.o src/bank_io.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/ui.o src/ui.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/game_ui.o src/game_ui.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/game_flow.o src/game_flow.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/game_field.o src/game_field.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/field_actions.o src/field_actions.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/save.o src/save.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/rpg.o src/rpg.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/rpg_data.o src/rpg_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/events.o src/events.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/events_data.o src/events_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/services.o src/services.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dialogue.o src/dialogue.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dialogue_data.o src/dialogue_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world.o src/world.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_rules.o src/world_rules.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/battle.o src/battle.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/battle_view.o src/battle_view.c
+src/battle.c:247: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art.o src/enemy_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/chest_art.o src/chest_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/vehicle_art.o src/vehicle_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon.o src/dungeon.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_data.o src/dungeon_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_play.o src/dungeon_play.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_render.o src/dungeon_render.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_render_pixels.o src/dungeon_render_pixels.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics.o src/dungeon_graphics.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_view.o src/dungeon_view.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views.o src/dungeon_views.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_upload.o src/dungeon_upload.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene.o src/scene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_data.o src/scene_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor.o src/scene_actor.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor_data.o src/scene_actor_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/cutscene.o src/cutscene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/cutscene_art.o src/cutscene_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/cutscene_art_data.o src/cutscene_art_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/cutscene_art_bank_116.o src/cutscene_art_bank_116.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/cutscene_art_bank_117.o src/cutscene_art_bank_117.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio.o src/audio.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio_irq.o src/audio_irq.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio_data.o src/audio_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio_tables.o src/audio_tables.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio_low_62.o src/audio_low_62.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/audio_low_63.o src/audio_low_63.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dialogue_text_09.o src/dialogue_text_09.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dialogue_text_10.o src/dialogue_text_10.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets.o src/world_assets.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_00_map.o src/world_assets_00_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_00_tiles.o src/world_assets_00_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_01_map.o src/world_assets_01_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_01_tiles.o src/world_assets_01_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_02_map.o src/world_assets_02_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_02_tiles.o src/world_assets_02_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_03_map.o src/world_assets_03_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_03_tiles.o src/world_assets_03_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_04_map.o src/world_assets_04_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_04_tiles.o src/world_assets_04_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_05_map.o src/world_assets_05_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_05_tiles.o src/world_assets_05_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_06_map.o src/world_assets_06_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_06_tiles.o src/world_assets_06_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_07_map.o src/world_assets_07_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_07_tiles.o src/world_assets_07_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_08_map.o src/world_assets_08_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_08_tiles.o src/world_assets_08_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_09_map.o src/world_assets_09_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_09_tiles.o src/world_assets_09_tiles.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_10_map.o src/world_assets_10_map.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/world_assets_10_tiles.o src/world_assets_10_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_54.o src/enemy_art_bank_54.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_55.o src/enemy_art_bank_55.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_56.o src/enemy_art_bank_56.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_57.o src/enemy_art_bank_57.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_58.o src/enemy_art_bank_58.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_59.o src/enemy_art_bank_59.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_bank_60.o src/enemy_art_bank_60.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/enemy_art_data.o src/enemy_art_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_00.o src/dungeon_graphics_00.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_01.o src/dungeon_graphics_01.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_02.o src/dungeon_graphics_02.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_03.o src/dungeon_graphics_03.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_04.o src/dungeon_graphics_04.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_05.o src/dungeon_graphics_05.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_06.o src/dungeon_graphics_06.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_07.o src/dungeon_graphics_07.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_08.o src/dungeon_graphics_08.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_09.o src/dungeon_graphics_09.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_10.o src/dungeon_graphics_10.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_11.o src/dungeon_graphics_11.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_12.o src/dungeon_graphics_12.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_13.o src/dungeon_graphics_13.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_14.o src/dungeon_graphics_14.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_15.o src/dungeon_graphics_15.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_16.o src/dungeon_graphics_16.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_17.o src/dungeon_graphics_17.c
+mkdir -p build/obj
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_18.o src/dungeon_graphics_18.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_19.o src/dungeon_graphics_19.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_20.o src/dungeon_graphics_20.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_21.o src/dungeon_graphics_21.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_graphics_22.o src/dungeon_graphics_22.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_00.o src/dungeon_views_00.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_01.o src/dungeon_views_01.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_02.o src/dungeon_views_02.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_03.o src/dungeon_views_03.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_04.o src/dungeon_views_04.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_05.o src/dungeon_views_05.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_06.o src/dungeon_views_06.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_07.o src/dungeon_views_07.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_08.o src/dungeon_views_08.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_09.o src/dungeon_views_09.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_10.o src/dungeon_views_10.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_11.o src/dungeon_views_11.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_12.o src/dungeon_views_12.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_13.o src/dungeon_views_13.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_14.o src/dungeon_views_14.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_15.o src/dungeon_views_15.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_16.o src/dungeon_views_16.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_17.o src/dungeon_views_17.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/dungeon_views_18.o src/dungeon_views_18.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_097.o src/scene_bank_097.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_098.o src/scene_bank_098.c
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_099.o src/scene_bank_099.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_100.o src/scene_bank_100.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_101.o src/scene_bank_101.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_102.o src/scene_bank_102.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_103.o src/scene_bank_103.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_104.o src/scene_bank_104.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_105.o src/scene_bank_105.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_106.o src/scene_bank_106.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_107.o src/scene_bank_107.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_108.o src/scene_bank_108.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_109.o src/scene_bank_109.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_bank_110.o src/scene_bank_110.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor_bank_111.o src/scene_actor_bank_111.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor_bank_112.o src/scene_actor_bank_112.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor_bank_113.o src/scene_actor_bank_113.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -c -o build/obj/scene_actor_bank_114.o src/scene_actor_bank_114.c
+.tools/gbdk/bin/lcc -msm83:gb -Wm-yC -Wm-yt0x1b -Wm-yo128 -Wm-ya1 -Wm-ynPSGBC-WORLD -Wl-m -Wl-j -o build/phantasy-star-gbc-world.gbc build/obj/assets.o build/obj/assets_sprites.o build/obj/font.o build/obj/main.o build/obj/bank_io.o build/obj/ui.o build/obj/game_ui.o build/obj/game_flow.o build/obj/game_field.o build/obj/field_actions.o build/obj/save.o build/obj/rpg.o build/obj/rpg_data.o build/obj/events.o build/obj/events_data.o build/obj/services.o build/obj/dialogue.o build/obj/dialogue_data.o build/obj/world.o build/obj/world_rules.o build/obj/battle.o build/obj/battle_view.o build/obj/enemy_art.o build/obj/chest_art.o build/obj/vehicle_art.o build/obj/dungeon.o build/obj/dungeon_data.o build/obj/dungeon_play.o build/obj/dungeon_render.o build/obj/dungeon_render_pixels.o build/obj/dungeon_graphics.o build/obj/dungeon_view.o build/obj/dungeon_views.o build/obj/dungeon_upload.o build/obj/scene.o build/obj/scene_data.o build/obj/scene_actor.o build/obj/scene_actor_data.o build/obj/cutscene.o build/obj/cutscene_art.o build/obj/cutscene_art_data.o build/obj/cutscene_art_bank_116.o build/obj/cutscene_art_bank_117.o build/obj/audio.o build/obj/audio_irq.o build/obj/audio_data.o build/obj/audio_tables.o build/obj/audio_low_62.o build/obj/audio_low_63.o build/obj/dialogue_text_09.o build/obj/dialogue_text_10.o build/obj/world_assets.o build/obj/world_assets_00_map.o build/obj/world_assets_00_tiles.o build/obj/world_assets_01_map.o build/obj/world_assets_01_tiles.o build/obj/world_assets_02_map.o build/obj/world_assets_02_tiles.o build/obj/world_assets_03_map.o build/obj/world_assets_03_tiles.o build/obj/world_assets_04_map.o build/obj/world_assets_04_tiles.o build/obj/world_assets_05_map.o build/obj/world_assets_05_tiles.o build/obj/world_assets_06_map.o build/obj/world_assets_06_tiles.o build/obj/world_assets_07_map.o build/obj/world_assets_07_tiles.o build/obj/world_assets_08_map.o build/obj/world_assets_08_tiles.o build/obj/world_assets_09_map.o build/obj/world_assets_09_tiles.o build/obj/world_assets_10_map.o build/obj/world_assets_10_tiles.o build/obj/enemy_art_bank_54.o build/obj/enemy_art_bank_55.o build/obj/enemy_art_bank_56.o build/obj/enemy_art_bank_57.o build/obj/enemy_art_bank_58.o build/obj/enemy_art_bank_59.o build/obj/enemy_art_bank_60.o build/obj/enemy_art_data.o build/obj/dungeon_graphics_00.o build/obj/dungeon_graphics_01.o build/obj/dungeon_graphics_02.o build/obj/dungeon_graphics_03.o build/obj/dungeon_graphics_04.o build/obj/dungeon_graphics_05.o build/obj/dungeon_graphics_06.o build/obj/dungeon_graphics_07.o build/obj/dungeon_graphics_08.o build/obj/dungeon_graphics_09.o build/obj/dungeon_graphics_10.o build/obj/dungeon_graphics_11.o build/obj/dungeon_graphics_12.o build/obj/dungeon_graphics_13.o build/obj/dungeon_graphics_14.o build/obj/dungeon_graphics_15.o build/obj/dungeon_graphics_16.o build/obj/dungeon_graphics_17.o build/obj/dungeon_graphics_18.o build/obj/dungeon_graphics_19.o build/obj/dungeon_graphics_20.o build/obj/dungeon_graphics_21.o build/obj/dungeon_graphics_22.o build/obj/dungeon_views_00.o build/obj/dungeon_views_01.o build/obj/dungeon_views_02.o build/obj/dungeon_views_03.o build/obj/dungeon_views_04.o build/obj/dungeon_views_05.o build/obj/dungeon_views_06.o build/obj/dungeon_views_07.o build/obj/dungeon_views_08.o build/obj/dungeon_views_09.o build/obj/dungeon_views_10.o build/obj/dungeon_views_11.o build/obj/dungeon_views_12.o build/obj/dungeon_views_13.o build/obj/dungeon_views_14.o build/obj/dungeon_views_15.o build/obj/dungeon_views_16.o build/obj/dungeon_views_17.o build/obj/dungeon_views_18.o build/obj/scene_bank_097.o build/obj/scene_bank_098.o build/obj/scene_bank_099.o build/obj/scene_bank_100.o build/obj/scene_bank_101.o build/obj/scene_bank_102.o build/obj/scene_bank_103.o build/obj/scene_bank_104.o build/obj/scene_bank_105.o build/obj/scene_bank_106.o build/obj/scene_bank_107.o build/obj/scene_bank_108.o build/obj/scene_bank_109.o build/obj/scene_bank_110.o build/obj/scene_actor_bank_111.o build/obj/scene_actor_bank_112.o build/obj/scene_actor_bank_113.o build/obj/scene_actor_bank_114.o
+../../.venv-transfer/bin/python tools/verify_layout.py build/phantasy-star-gbc-world.gbc
+{
+  "passed": true,
+  "rom_sha256": "300a716531059e9a2a8ca33dbf410f439f76879b0ad4dbd15bb06a39b62887cb",
+  "rom_banks": 128,
+  "wram_start": 49312,
+  "wram_bytes": 6924,
+  "wram_end": 56236,
+  "stack_address_space_reserved": 1108
+}

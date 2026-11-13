@@ -1,0 +1,97 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "5d298e3647515398844606873b4255b721448bf1e328063b95a2c09c3ffc1221",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Actual Camineet guard accepts Road Pass; original road1 plays and arrives at Palma spaceport exit triple",
+    "Original Passport application answers and100-Meseta payment grant Passport; spaceport guard admits party through actual dialogue",
+    "Original ship81 prompt starts ascent, space transfer and descent; full route reaches Motavia spaceport",
+    "Original return ship82 accepts action-button skips and preserves its correct Palma destination",
+    "Power-cycle Continue restores post-travel map, coordinates, party and Road Pass"
+  ],
+  "routes": [
+    {
+      "map": 4,
+      "event": 11,
+      "from": [
+        105,
+        18
+      ],
+      "trigger": [
+        82,
+        24
+      ],
+      "controller_steps": 31
+    },
+    {
+      "map": 5,
+      "event": 29,
+      "from": [
+        44,
+        25
+      ],
+      "trigger": [
+        39,
+        23
+      ],
+      "controller_steps": 7
+    },
+    {
+      "map": 5,
+      "event": 26,
+      "from": [
+        39,
+        24
+      ],
+      "trigger": [
+        21,
+        24
+      ],
+      "controller_steps": 22
+    },
+    {
+      "map": 5,
+      "event": 179,
+      "from": [
+        23,
+        24
+      ],
+      "trigger": [
+        22,
+        19
+      ],
+      "controller_steps": 6
+    },
+    {
+      "map": 16,
+      "event": 180,
+      "from": [
+        23,
+        63
+      ],
+      "trigger": [
+        22,
+        63
+      ],
+      "controller_steps": 1
+    }
+  ],
+  "injected_fixtures": [
+    "One Road Pass and100 Meseta for an actual Passport purchase; no map, position, event, party-stat or RNG fixtures"
+  ],
+  "campaign_complete": false,
+  "road_ticks": 656,
+  "ship_full_ticks": 2330,
+  "ship_skip_ticks": 709,
+  "passed": true
+}

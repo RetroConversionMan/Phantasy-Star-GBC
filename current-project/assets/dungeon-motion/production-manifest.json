@@ -1,0 +1,23 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "bank": 20,
+  "bytes": 13072,
+  "sha256": "8b0a49567fa9f807f5c5bbc50492c3ba41cdd3a7d756eab2589a6268be0218e6",
+  "inputs": {
+    "assets/dungeon-views/dungeon_view_lookup.bin": "c120971b4c05213021349de4aa4837ce1977341d7962a4bbd4278964d34f10aa",
+    "assets/dungeon-views/dungeon_front_lookup.bin": "1380e1b5b307509cb3a4f291ff1933af9bb92ad439ad3a4c134525fdea956623",
+    "assets/dungeon-graphics/dungeon_colors_00.bin": "83a44e16b9bba5cd673cd1330b428374a92263d389d2103a92cc4c7f3ec0442a",
+    "assets/dungeon-graphics/dungeon_colors_01.bin": "d36c2227b23d6a9ccdb5760eaecdc27222cbab178b2545fba664ec0d4e948e85",
+    "assets/dungeon-graphics/dungeon_colors_02.bin": "172f65db0a814e589a52fa5f73b61020f2d965e198db9b7a4648d6d7d81d3762",
+    "assets/dungeon-graphics/dungeon_colors_03.bin": "e713f865347f345d8aa97b7462d8f34a6a4aeebb77109e3fde9b6487a172989d",
+    "assets/dungeon-graphics/dungeon_colors_04.bin": "58eaa1fd78579ae86202c2d48c44c3824c07876fdcfc3cb7f67695f180dceaa2",
+    "assets/dungeon-graphics/dungeon_colors_05.bin": "c80fe12955db6b42a2b4a39f73ad1a0ac4ea30e1eccd3297956adfb8abbdb426",
+    "assets/dungeon-graphics/dungeon_colors_06.bin": "ccf6a2fcce9da663b4a2c07c0d0d16c11625888d1f80f292dd28a4c4b31f717c",
+    "assets/dungeon-graphics/dungeon_colors_07.bin": "7d77b00b8837cf67c4788ad226b6749b5c8979ea9bc60c882aa4f337fb321024",
+    "assets/dungeon-graphics/dungeon_colors_08.bin": "26322ee297a218c6224372be7f4268f11e315d79b1166a965073220460dd604c",
+    "assets/dungeon-graphics/dungeon_colors_09.bin": "d4581786edd21aca725dbb8d1a0f87bad7f73adfe623bc4373cfddf37ab1f54a",
+    "assets/dungeon-graphics/dungeon_colors_10.bin": "55a248b977b409e94f065b9e7e35094e24cb87f1f7728497f9fc7bf8664dfe6a",
+    "assets/dungeon-graphics/dungeon_colors_11.bin": "e4583626255d05919366d71804d56bc3681d7642ccd9f7554153d718137ff844"
+  },
+  "purpose": "Production motion dependencies only; original raw/compositor/standing assets and probes remain separate."
+}

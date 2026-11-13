@@ -1,0 +1,1770 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _weapon_asset_0000                                              ******** GX
+    _weapon_asset_0001                                              ******** GX
+    _weapon_asset_0002                                              ******** GX
+    _weapon_asset_0003                                              ******** GX
+    _weapon_asset_0004                                              ******** GX
+    _weapon_asset_0005                                              ******** GX
+    _weapon_asset_0006                                              ******** GX
+    _weapon_asset_0007                                              ******** GX
+    _weapon_asset_0008                                              ******** GX
+    _weapon_asset_0009                                              ******** GX
+    _weapon_asset_0010                                              ******** GX
+    _weapon_asset_0011                                              ******** GX
+    _weapon_asset_0012                                              ******** GX
+    _weapon_asset_0013                                              ******** GX
+    _weapon_asset_0014                                              ******** GX
+    _weapon_asset_0015                                              ******** GX
+    _weapon_asset_0016                                              ******** GX
+    _weapon_asset_0017                                              ******** GX
+    _weapon_asset_0018                                              ******** GX
+    _weapon_asset_0019                                              ******** GX
+    _weapon_asset_0020                                              ******** GX
+    _weapon_asset_0021                                              ******** GX
+    _weapon_asset_0022                                              ******** GX
+    _weapon_asset_0023                                              ******** GX
+    _weapon_asset_0024                                              ******** GX
+    _weapon_asset_0025                                              ******** GX
+    _weapon_asset_0026                                              ******** GX
+    _weapon_asset_0027                                              ******** GX
+    _weapon_asset_0028                                              ******** GX
+    _weapon_asset_0029                                              ******** GX
+    _weapon_asset_0030                                              ******** GX
+    _weapon_asset_0031                                              ******** GX
+    _weapon_asset_0032                                              ******** GX
+    _weapon_asset_0033                                              ******** GX
+    _weapon_asset_0034                                              ******** GX
+    _weapon_asset_0035                                              ******** GX
+    _weapon_asset_0036                                              ******** GX
+    _weapon_asset_0037                                              ******** GX
+    _weapon_asset_0038                                              ******** GX
+    _weapon_asset_0039                                              ******** GX
+    _weapon_asset_0040                                              ******** GX
+    _weapon_asset_0041                                              ******** GX
+    _weapon_asset_0042                                              ******** GX
+    _weapon_asset_0043                                              ******** GX
+    _weapon_asset_0044                                              ******** GX
+    _weapon_asset_0045                                              ******** GX
+    _weapon_asset_0046                                              ******** GX
+    _weapon_asset_0047                                              ******** GX
+    _weapon_asset_0048                                              ******** GX
+    _weapon_asset_0049                                              ******** GX
+    _weapon_asset_0050                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0051                                              ******** GX
+    _weapon_asset_0052                                              ******** GX
+    _weapon_asset_0053                                              ******** GX
+    _weapon_asset_0054                                              ******** GX
+    _weapon_asset_0055                                              ******** GX
+    _weapon_asset_0056                                              ******** GX
+    _weapon_asset_0057                                              ******** GX
+    _weapon_asset_0058                                              ******** GX
+    _weapon_asset_0059                                              ******** GX
+    _weapon_asset_0060                                              ******** GX
+    _weapon_asset_0061                                              ******** GX
+    _weapon_asset_0062                                              ******** GX
+    _weapon_asset_0063                                              ******** GX
+    _weapon_asset_0064                                              ******** GX
+    _weapon_asset_0065                                              ******** GX
+    _weapon_asset_0066                                              ******** GX
+    _weapon_asset_0067                                              ******** GX
+    _weapon_asset_0068                                              ******** GX
+    _weapon_asset_0069                                              ******** GX
+    _weapon_asset_0070                                              ******** GX
+    _weapon_asset_0071                                              ******** GX
+    _weapon_asset_0072                                              ******** GX
+    _weapon_asset_0073                                              ******** GX
+    _weapon_asset_0074                                              ******** GX
+    _weapon_asset_0075                                              ******** GX
+    _weapon_asset_0076                                              ******** GX
+    _weapon_asset_0077                                              ******** GX
+    _weapon_asset_0078                                              ******** GX
+    _weapon_asset_0079                                              ******** GX
+    _weapon_asset_0080                                              ******** GX
+    _weapon_asset_0081                                              ******** GX
+    _weapon_asset_0082                                              ******** GX
+    _weapon_asset_0083                                              ******** GX
+    _weapon_asset_0084                                              ******** GX
+    _weapon_asset_0085                                              ******** GX
+    _weapon_asset_0086                                              ******** GX
+    _weapon_asset_0087                                              ******** GX
+    _weapon_asset_0088                                              ******** GX
+    _weapon_asset_0089                                              ******** GX
+    _weapon_asset_0090                                              ******** GX
+    _weapon_asset_0091                                              ******** GX
+    _weapon_asset_0092                                              ******** GX
+    _weapon_asset_0093                                              ******** GX
+    _weapon_asset_0094                                              ******** GX
+    _weapon_asset_0095                                              ******** GX
+    _weapon_asset_0096                                              ******** GX
+    _weapon_asset_0097                                              ******** GX
+    _weapon_asset_0098                                              ******** GX
+    _weapon_asset_0099                                              ******** GX
+    _weapon_asset_0100                                              ******** GX
+    _weapon_asset_0101                                              ******** GX
+    _weapon_asset_0102                                              ******** GX
+    _weapon_asset_0103                                              ******** GX
+    _weapon_asset_0104                                              ******** GX
+    _weapon_asset_0105                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0106                                              ******** GX
+    _weapon_asset_0107                                              ******** GX
+    _weapon_asset_0108                                              ******** GX
+    _weapon_asset_0109                                              ******** GX
+    _weapon_asset_0110                                              ******** GX
+    _weapon_asset_0111                                              ******** GX
+    _weapon_asset_0112                                              ******** GX
+    _weapon_asset_0113                                              ******** GX
+    _weapon_asset_0114                                              ******** GX
+    _weapon_asset_0115                                              ******** GX
+    _weapon_asset_0116                                              ******** GX
+    _weapon_asset_0117                                              ******** GX
+    _weapon_asset_0118                                              ******** GX
+    _weapon_asset_0119                                              ******** GX
+    _weapon_asset_0120                                              ******** GX
+    _weapon_asset_0121                                              ******** GX
+    _weapon_asset_0122                                              ******** GX
+    _weapon_asset_0123                                              ******** GX
+    _weapon_asset_0124                                              ******** GX
+    _weapon_asset_0125                                              ******** GX
+    _weapon_asset_0126                                              ******** GX
+    _weapon_asset_0127                                              ******** GX
+    _weapon_asset_0128                                              ******** GX
+    _weapon_asset_0129                                              ******** GX
+    _weapon_asset_0130                                              ******** GX
+    _weapon_asset_0131                                              ******** GX
+    _weapon_asset_0132                                              ******** GX
+    _weapon_asset_0133                                              ******** GX
+    _weapon_asset_0134                                              ******** GX
+    _weapon_asset_0135                                              ******** GX
+    _weapon_asset_0136                                              ******** GX
+    _weapon_asset_0137                                              ******** GX
+    _weapon_asset_0138                                              ******** GX
+    _weapon_asset_0139                                              ******** GX
+    _weapon_asset_0140                                              ******** GX
+    _weapon_asset_0141                                              ******** GX
+    _weapon_asset_0142                                              ******** GX
+    _weapon_asset_0143                                              ******** GX
+    _weapon_asset_0144                                              ******** GX
+    _weapon_asset_0145                                              ******** GX
+    _weapon_asset_0146                                              ******** GX
+    _weapon_asset_0147                                              ******** GX
+    _weapon_asset_0148                                              ******** GX
+    _weapon_asset_0149                                              ******** GX
+    _weapon_asset_0150                                              ******** GX
+    _weapon_asset_0151                                              ******** GX
+    _weapon_asset_0152                                              ******** GX
+    _weapon_asset_0153                                              ******** GX
+    _weapon_asset_0154                                              ******** GX
+    _weapon_asset_0155                                              ******** GX
+    _weapon_asset_0156                                              ******** GX
+    _weapon_asset_0157                                              ******** GX
+    _weapon_asset_0158                                              ******** GX
+    _weapon_asset_0159                                              ******** GX
+    _weapon_asset_0160                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0161                                              ******** GX
+    _weapon_asset_0162                                              ******** GX
+    _weapon_asset_0163                                              ******** GX
+    _weapon_asset_0164                                              ******** GX
+    _weapon_asset_0165                                              ******** GX
+    _weapon_asset_0166                                              ******** GX
+    _weapon_asset_0167                                              ******** GX
+    _weapon_asset_0168                                              ******** GX
+    _weapon_asset_0169                                              ******** GX
+    _weapon_asset_0170                                              ******** GX
+    _weapon_asset_0171                                              ******** GX
+    _weapon_asset_0172                                              ******** GX
+    _weapon_asset_0173                                              ******** GX
+    _weapon_asset_0174                                              ******** GX
+    _weapon_asset_0175                                              ******** GX
+    _weapon_asset_0176                                              ******** GX
+    _weapon_asset_0177                                              ******** GX
+    _weapon_asset_0178                                              ******** GX
+    _weapon_asset_0179                                              ******** GX
+    _weapon_asset_0180                                              ******** GX
+    _weapon_asset_0181                                              ******** GX
+    _weapon_asset_0182                                              ******** GX
+    _weapon_asset_0183                                              ******** GX
+    _weapon_asset_0184                                              ******** GX
+    _weapon_asset_0185                                              ******** GX
+    _weapon_asset_0186                                              ******** GX
+    _weapon_asset_0187                                              ******** GX
+    _weapon_asset_0188                                              ******** GX
+    _weapon_asset_0189                                              ******** GX
+    _weapon_asset_0190                                              ******** GX
+    _weapon_asset_0191                                              ******** GX
+    _weapon_asset_0192                                              ******** GX
+    _weapon_asset_0193                                              ******** GX
+    _weapon_asset_0194                                              ******** GX
+    _weapon_asset_0195                                              ******** GX
+    _weapon_asset_0196                                              ******** GX
+    _weapon_asset_0197                                              ******** GX
+    _weapon_asset_0198                                              ******** GX
+    _weapon_asset_0199                                              ******** GX
+    _weapon_asset_0200                                              ******** GX
+    _weapon_asset_0201                                              ******** GX
+    _weapon_asset_0202                                              ******** GX
+    _weapon_asset_0203                                              ******** GX
+    _weapon_asset_0204                                              ******** GX
+    _weapon_asset_0205                                              ******** GX
+    _weapon_asset_0206                                              ******** GX
+    _weapon_asset_0207                                              ******** GX
+    _weapon_asset_0208                                              ******** GX
+    _weapon_asset_0209                                              ******** GX
+    _weapon_asset_0210                                              ******** GX
+    _weapon_asset_0211                                              ******** GX
+    _weapon_asset_0212                                              ******** GX
+    _weapon_asset_0213                                              ******** GX
+    _weapon_asset_0214                                              ******** GX
+    _weapon_asset_0215                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0216                                              ******** GX
+    _weapon_asset_0217                                              ******** GX
+    _weapon_asset_0218                                              ******** GX
+    _weapon_asset_0219                                              ******** GX
+    _weapon_asset_0220                                              ******** GX
+    _weapon_asset_0221                                              ******** GX
+    _weapon_asset_0222                                              ******** GX
+    _weapon_asset_0223                                              ******** GX
+    _weapon_asset_0224                                              ******** GX
+    _weapon_asset_0225                                              ******** GX
+    _weapon_asset_0226                                              ******** GX
+    _weapon_asset_0227                                              ******** GX
+    _weapon_asset_0228                                              ******** GX
+    _weapon_asset_0229                                              ******** GX
+    _weapon_asset_0230                                              ******** GX
+    _weapon_asset_0231                                              ******** GX
+    _weapon_asset_0232                                              ******** GX
+    _weapon_asset_0233                                              ******** GX
+    _weapon_asset_0234                                              ******** GX
+    _weapon_asset_0235                                              ******** GX
+    _weapon_asset_0236                                              ******** GX
+    _weapon_asset_0237                                              ******** GX
+    _weapon_asset_0238                                              ******** GX
+    _weapon_asset_0239                                              ******** GX
+    _weapon_asset_0240                                              ******** GX
+    _weapon_asset_0241                                              ******** GX
+    _weapon_asset_0242                                              ******** GX
+    _weapon_asset_0243                                              ******** GX
+    _weapon_asset_0244                                              ******** GX
+    _weapon_asset_0245                                              ******** GX
+    _weapon_asset_0246                                              ******** GX
+    _weapon_asset_0247                                              ******** GX
+    _weapon_asset_0248                                              ******** GX
+    _weapon_asset_0249                                              ******** GX
+    _weapon_asset_0250                                              ******** GX
+    _weapon_asset_0251                                              ******** GX
+    _weapon_asset_0252                                              ******** GX
+    _weapon_asset_0253                                              ******** GX
+    _weapon_asset_0254                                              ******** GX
+    _weapon_asset_0255                                              ******** GX
+    _weapon_asset_0256                                              ******** GX
+    _weapon_asset_0257                                              ******** GX
+    _weapon_asset_0258                                              ******** GX
+    _weapon_asset_0259                                              ******** GX
+    _weapon_asset_0260                                              ******** GX
+    _weapon_asset_0261                                              ******** GX
+    _weapon_asset_0262                                              ******** GX
+    _weapon_asset_0263                                              ******** GX
+    _weapon_asset_0264                                              ******** GX
+    _weapon_asset_0265                                              ******** GX
+    _weapon_asset_0266                                              ******** GX
+    _weapon_asset_0267                                              ******** GX
+    _weapon_asset_0268                                              ******** GX
+    _weapon_asset_0269                                              ******** GX
+    _weapon_asset_0270                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0271                                              ******** GX
+    _weapon_asset_0272                                              ******** GX
+    _weapon_asset_0273                                              ******** GX
+    _weapon_asset_0274                                              ******** GX
+    _weapon_asset_0275                                              ******** GX
+    _weapon_asset_0276                                              ******** GX
+    _weapon_asset_0277                                              ******** GX
+    _weapon_asset_0278                                              ******** GX
+    _weapon_asset_0279                                              ******** GX
+    _weapon_asset_0280                                              ******** GX
+    _weapon_asset_0281                                              ******** GX
+    _weapon_asset_0282                                              ******** GX
+    _weapon_asset_0283                                              ******** GX
+    _weapon_asset_0284                                              ******** GX
+    _weapon_asset_0285                                              ******** GX
+    _weapon_asset_0286                                              ******** GX
+    _weapon_asset_0287                                              ******** GX
+    _weapon_asset_0288                                              ******** GX
+    _weapon_asset_0289                                              ******** GX
+    _weapon_asset_0290                                              ******** GX
+    _weapon_asset_0291                                              ******** GX
+    _weapon_asset_0292                                              ******** GX
+    _weapon_asset_0293                                              ******** GX
+    _weapon_asset_0294                                              ******** GX
+    _weapon_asset_0295                                              ******** GX
+    _weapon_asset_0296                                              ******** GX
+    _weapon_asset_0297                                              ******** GX
+    _weapon_asset_0298                                              ******** GX
+    _weapon_asset_0299                                              ******** GX
+    _weapon_asset_0300                                              ******** GX
+    _weapon_asset_0301                                              ******** GX
+    _weapon_asset_0302                                              ******** GX
+    _weapon_asset_0303                                              ******** GX
+    _weapon_asset_0304                                              ******** GX
+    _weapon_asset_0305                                              ******** GX
+    _weapon_asset_0306                                              ******** GX
+    _weapon_asset_0307                                              ******** GX
+    _weapon_asset_0308                                              ******** GX
+    _weapon_asset_0309                                              ******** GX
+    _weapon_asset_0310                                              ******** GX
+    _weapon_asset_0311                                              ******** GX
+    _weapon_asset_0312                                              ******** GX
+    _weapon_asset_0313                                              ******** GX
+    _weapon_asset_0314                                              ******** GX
+    _weapon_asset_0315                                              ******** GX
+    _weapon_asset_0316                                              ******** GX
+    _weapon_asset_0317                                              ******** GX
+    _weapon_asset_0318                                              ******** GX
+    _weapon_asset_0319                                              ******** GX
+    _weapon_asset_0320                                              ******** GX
+    _weapon_asset_0321                                              ******** GX
+    _weapon_asset_0322                                              ******** GX
+    _weapon_asset_0323                                              ******** GX
+    _weapon_asset_0324                                              ******** GX
+    _weapon_asset_0325                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0326                                              ******** GX
+    _weapon_asset_0327                                              ******** GX
+    _weapon_asset_0328                                              ******** GX
+    _weapon_asset_0329                                              ******** GX
+    _weapon_asset_0330                                              ******** GX
+    _weapon_asset_0331                                              ******** GX
+    _weapon_asset_0332                                              ******** GX
+    _weapon_asset_0333                                              ******** GX
+    _weapon_asset_0334                                              ******** GX
+    _weapon_asset_0335                                              ******** GX
+    _weapon_asset_0336                                              ******** GX
+    _weapon_asset_0337                                              ******** GX
+    _weapon_asset_0338                                              ******** GX
+    _weapon_asset_0339                                              ******** GX
+    _weapon_asset_0340                                              ******** GX
+    _weapon_asset_0341                                              ******** GX
+    _weapon_asset_0342                                              ******** GX
+    _weapon_asset_0343                                              ******** GX
+    _weapon_asset_0344                                              ******** GX
+    _weapon_asset_0345                                              ******** GX
+    _weapon_asset_0346                                              ******** GX
+    _weapon_asset_0347                                              ******** GX
+    _weapon_asset_0348                                              ******** GX
+    _weapon_asset_0349                                              ******** GX
+    _weapon_asset_0350                                              ******** GX
+    _weapon_asset_0351                                              ******** GX
+    _weapon_asset_0352                                              ******** GX
+    _weapon_asset_0353                                              ******** GX
+    _weapon_asset_0354                                              ******** GX
+    _weapon_asset_0355                                              ******** GX
+    _weapon_asset_0356                                              ******** GX
+    _weapon_asset_0357                                              ******** GX
+    _weapon_asset_0358                                              ******** GX
+    _weapon_asset_0359                                              ******** GX
+    _weapon_asset_0360                                              ******** GX
+    _weapon_asset_0361                                              ******** GX
+    _weapon_asset_0362                                              ******** GX
+    _weapon_asset_0363                                              ******** GX
+    _weapon_asset_0364                                              ******** GX
+    _weapon_asset_0365                                              ******** GX
+    _weapon_asset_0366                                              ******** GX
+    _weapon_asset_0367                                              ******** GX
+    _weapon_asset_0368                                              ******** GX
+    _weapon_asset_0369                                              ******** GX
+    _weapon_asset_0370                                              ******** GX
+    _weapon_asset_0371                                              ******** GX
+    _weapon_asset_0372                                              ******** GX
+    _weapon_asset_0373                                              ******** GX
+    _weapon_asset_0374                                              ******** GX
+    _weapon_asset_0375                                              ******** GX
+    _weapon_asset_0376                                              ******** GX
+    _weapon_asset_0377                                              ******** GX
+    _weapon_asset_0378                                              ******** GX
+    _weapon_asset_0379                                              ******** GX
+    _weapon_asset_0380                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0381                                              ******** GX
+    _weapon_asset_0382                                              ******** GX
+    _weapon_asset_0383                                              ******** GX
+    _weapon_asset_0384                                              ******** GX
+    _weapon_asset_0385                                              ******** GX
+    _weapon_asset_0386                                              ******** GX
+    _weapon_asset_0387                                              ******** GX
+    _weapon_asset_0388                                              ******** GX
+    _weapon_asset_0389                                              ******** GX
+    _weapon_asset_0390                                              ******** GX
+    _weapon_asset_0391                                              ******** GX
+    _weapon_asset_0392                                              ******** GX
+    _weapon_asset_0393                                              ******** GX
+    _weapon_asset_0394                                              ******** GX
+    _weapon_asset_0395                                              ******** GX
+    _weapon_asset_0396                                              ******** GX
+    _weapon_asset_0397                                              ******** GX
+    _weapon_asset_0398                                              ******** GX
+    _weapon_asset_0399                                              ******** GX
+    _weapon_asset_0400                                              ******** GX
+    _weapon_asset_0401                                              ******** GX
+    _weapon_asset_0402                                              ******** GX
+    _weapon_asset_0403                                              ******** GX
+    _weapon_asset_0404                                              ******** GX
+    _weapon_asset_0405                                              ******** GX
+    _weapon_asset_0406                                              ******** GX
+    _weapon_asset_0407                                              ******** GX
+    _weapon_asset_0408                                              ******** GX
+    _weapon_asset_0409                                              ******** GX
+    _weapon_asset_0410                                              ******** GX
+    _weapon_asset_0411                                              ******** GX
+    _weapon_asset_0412                                              ******** GX
+    _weapon_asset_0413                                              ******** GX
+    _weapon_asset_0414                                              ******** GX
+    _weapon_asset_0415                                              ******** GX
+    _weapon_asset_0416                                              ******** GX
+    _weapon_asset_0417                                              ******** GX
+    _weapon_asset_0418                                              ******** GX
+    _weapon_asset_0419                                              ******** GX
+    _weapon_asset_0420                                              ******** GX
+    _weapon_asset_0421                                              ******** GX
+    _weapon_asset_0422                                              ******** GX
+    _weapon_asset_0423                                              ******** GX
+    _weapon_asset_0424                                              ******** GX
+    _weapon_asset_0425                                              ******** GX
+    _weapon_asset_0426                                              ******** GX
+    _weapon_asset_0427                                              ******** GX
+    _weapon_asset_0428                                              ******** GX
+    _weapon_asset_0429                                              ******** GX
+    _weapon_asset_0430                                              ******** GX
+    _weapon_asset_0431                                              ******** GX
+    _weapon_asset_0432                                              ******** GX
+    _weapon_asset_0433                                              ******** GX
+    _weapon_asset_0434                                              ******** GX
+    _weapon_asset_0435                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 9
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0436                                              ******** GX
+    _weapon_asset_0437                                              ******** GX
+    _weapon_asset_0438                                              ******** GX
+    _weapon_asset_0439                                              ******** GX
+    _weapon_asset_0440                                              ******** GX
+    _weapon_asset_0441                                              ******** GX
+    _weapon_asset_0442                                              ******** GX
+    _weapon_asset_0443                                              ******** GX
+    _weapon_asset_0444                                              ******** GX
+    _weapon_asset_0445                                              ******** GX
+    _weapon_asset_0446                                              ******** GX
+    _weapon_asset_0447                                              ******** GX
+    _weapon_asset_0448                                              ******** GX
+    _weapon_asset_0449                                              ******** GX
+    _weapon_asset_0450                                              ******** GX
+    _weapon_asset_0451                                              ******** GX
+    _weapon_asset_0452                                              ******** GX
+    _weapon_asset_0453                                              ******** GX
+    _weapon_asset_0454                                              ******** GX
+    _weapon_asset_0455                                              ******** GX
+    _weapon_asset_0456                                              ******** GX
+    _weapon_asset_0457                                              ******** GX
+    _weapon_asset_0458                                              ******** GX
+    _weapon_asset_0459                                              ******** GX
+    _weapon_asset_0460                                              ******** GX
+    _weapon_asset_0461                                              ******** GX
+    _weapon_asset_0462                                              ******** GX
+    _weapon_asset_0463                                              ******** GX
+    _weapon_asset_0464                                              ******** GX
+    _weapon_asset_0465                                              ******** GX
+    _weapon_asset_0466                                              ******** GX
+    _weapon_asset_0467                                              ******** GX
+    _weapon_asset_0468                                              ******** GX
+    _weapon_asset_0469                                              ******** GX
+    _weapon_asset_0470                                              ******** GX
+    _weapon_asset_0471                                              ******** GX
+    _weapon_asset_0472                                              ******** GX
+    _weapon_asset_0473                                              ******** GX
+    _weapon_asset_0474                                              ******** GX
+    _weapon_asset_0475                                              ******** GX
+    _weapon_asset_0476                                              ******** GX
+    _weapon_asset_0477                                              ******** GX
+    _weapon_asset_0478                                              ******** GX
+    _weapon_asset_0479                                              ******** GX
+    _weapon_asset_0480                                              ******** GX
+    _weapon_asset_0481                                              ******** GX
+    _weapon_asset_0482                                              ******** GX
+    _weapon_asset_0483                                              ******** GX
+    _weapon_asset_0484                                              ******** GX
+    _weapon_asset_0485                                              ******** GX
+    _weapon_asset_0486                                              ******** GX
+    _weapon_asset_0487                                              ******** GX
+    _weapon_asset_0488                                              ******** GX
+    _weapon_asset_0489                                              ******** GX
+    _weapon_asset_0490                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 10
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0491                                              ******** GX
+    _weapon_asset_0492                                              ******** GX
+    _weapon_asset_0493                                              ******** GX
+    _weapon_asset_0494                                              ******** GX
+    _weapon_asset_0495                                              ******** GX
+    _weapon_asset_0496                                              ******** GX
+    _weapon_asset_0497                                              ******** GX
+    _weapon_asset_0498                                              ******** GX
+    _weapon_asset_0499                                              ******** GX
+    _weapon_asset_0500                                              ******** GX
+    _weapon_asset_0501                                              ******** GX
+    _weapon_asset_0502                                              ******** GX
+    _weapon_asset_0503                                              ******** GX
+    _weapon_asset_0504                                              ******** GX
+    _weapon_asset_0505                                              ******** GX
+    _weapon_asset_0506                                              ******** GX
+    _weapon_asset_0507                                              ******** GX
+    _weapon_asset_0508                                              ******** GX
+    _weapon_asset_0509                                              ******** GX
+    _weapon_asset_0510                                              ******** GX
+    _weapon_asset_0511                                              ******** GX
+    _weapon_asset_0512                                              ******** GX
+    _weapon_asset_0513                                              ******** GX
+    _weapon_asset_0514                                              ******** GX
+    _weapon_asset_0515                                              ******** GX
+    _weapon_asset_0516                                              ******** GX
+    _weapon_asset_0517                                              ******** GX
+    _weapon_asset_0518                                              ******** GX
+    _weapon_asset_0519                                              ******** GX
+    _weapon_asset_0520                                              ******** GX
+    _weapon_asset_0521                                              ******** GX
+    _weapon_asset_0522                                              ******** GX
+    _weapon_asset_0523                                              ******** GX
+    _weapon_asset_0524                                              ******** GX
+    _weapon_asset_0525                                              ******** GX
+    _weapon_asset_0526                                              ******** GX
+    _weapon_asset_0527                                              ******** GX
+    _weapon_asset_0528                                              ******** GX
+    _weapon_asset_0529                                              ******** GX
+    _weapon_asset_0530                                              ******** GX
+    _weapon_asset_0531                                              ******** GX
+    _weapon_asset_0532                                              ******** GX
+    _weapon_asset_0533                                              ******** GX
+    _weapon_asset_0534                                              ******** GX
+    _weapon_asset_0535                                              ******** GX
+    _weapon_asset_0536                                              ******** GX
+    _weapon_asset_0537                                              ******** GX
+    _weapon_asset_0538                                              ******** GX
+    _weapon_asset_0539                                              ******** GX
+    _weapon_asset_0540                                              ******** GX
+    _weapon_asset_0541                                              ******** GX
+    _weapon_asset_0542                                              ******** GX
+    _weapon_asset_0543                                              ******** GX
+    _weapon_asset_0544                                              ******** GX
+    _weapon_asset_0545                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 11
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0546                                              ******** GX
+    _weapon_asset_0547                                              ******** GX
+    _weapon_asset_0548                                              ******** GX
+    _weapon_asset_0549                                              ******** GX
+    _weapon_asset_0550                                              ******** GX
+    _weapon_asset_0551                                              ******** GX
+    _weapon_asset_0552                                              ******** GX
+    _weapon_asset_0553                                              ******** GX
+    _weapon_asset_0554                                              ******** GX
+    _weapon_asset_0555                                              ******** GX
+    _weapon_asset_0556                                              ******** GX
+    _weapon_asset_0557                                              ******** GX
+    _weapon_asset_0558                                              ******** GX
+    _weapon_asset_0559                                              ******** GX
+    _weapon_asset_0560                                              ******** GX
+    _weapon_asset_0561                                              ******** GX
+    _weapon_asset_0562                                              ******** GX
+    _weapon_asset_0563                                              ******** GX
+    _weapon_asset_0564                                              ******** GX
+    _weapon_asset_0565                                              ******** GX
+    _weapon_asset_0566                                              ******** GX
+    _weapon_asset_0567                                              ******** GX
+    _weapon_asset_0568                                              ******** GX
+    _weapon_asset_0569                                              ******** GX
+    _weapon_asset_0570                                              ******** GX
+    _weapon_asset_0571                                              ******** GX
+    _weapon_asset_0572                                              ******** GX
+    _weapon_asset_0573                                              ******** GX
+    _weapon_asset_0574                                              ******** GX
+    _weapon_asset_0575                                              ******** GX
+    _weapon_asset_0576                                              ******** GX
+    _weapon_asset_0577                                              ******** GX
+    _weapon_asset_0578                                              ******** GX
+    _weapon_asset_0579                                              ******** GX
+    _weapon_asset_0580                                              ******** GX
+    _weapon_asset_0581                                              ******** GX
+    _weapon_asset_0582                                              ******** GX
+    _weapon_asset_0583                                              ******** GX
+    _weapon_asset_0584                                              ******** GX
+    _weapon_asset_0585                                              ******** GX
+    _weapon_asset_0586                                              ******** GX
+    _weapon_asset_0587                                              ******** GX
+    _weapon_asset_0588                                              ******** GX
+    _weapon_asset_0589                                              ******** GX
+    _weapon_asset_0590                                              ******** GX
+    _weapon_asset_0591                                              ******** GX
+    _weapon_asset_0592                                              ******** GX
+    _weapon_asset_0593                                              ******** GX
+    _weapon_asset_0594                                              ******** GX
+    _weapon_asset_0595                                              ******** GX
+    _weapon_asset_0596                                              ******** GX
+    _weapon_asset_0597                                              ******** GX
+    _weapon_asset_0598                                              ******** GX
+    _weapon_asset_0599                                              ******** GX
+    _weapon_asset_0600                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 12
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0601                                              ******** GX
+    _weapon_asset_0602                                              ******** GX
+    _weapon_asset_0603                                              ******** GX
+    _weapon_asset_0604                                              ******** GX
+    _weapon_asset_0605                                              ******** GX
+    _weapon_asset_0606                                              ******** GX
+    _weapon_asset_0607                                              ******** GX
+    _weapon_asset_0608                                              ******** GX
+    _weapon_asset_0609                                              ******** GX
+    _weapon_asset_0610                                              ******** GX
+    _weapon_asset_0611                                              ******** GX
+    _weapon_asset_0612                                              ******** GX
+    _weapon_asset_0613                                              ******** GX
+    _weapon_asset_0614                                              ******** GX
+    _weapon_asset_0615                                              ******** GX
+    _weapon_asset_0616                                              ******** GX
+    _weapon_asset_0617                                              ******** GX
+    _weapon_asset_0618                                              ******** GX
+    _weapon_asset_0619                                              ******** GX
+    _weapon_asset_0620                                              ******** GX
+    _weapon_asset_0621                                              ******** GX
+    _weapon_asset_0622                                              ******** GX
+    _weapon_asset_0623                                              ******** GX
+    _weapon_asset_0624                                              ******** GX
+    _weapon_asset_0625                                              ******** GX
+    _weapon_asset_0626                                              ******** GX
+    _weapon_asset_0627                                              ******** GX
+    _weapon_asset_0628                                              ******** GX
+    _weapon_asset_0629                                              ******** GX
+    _weapon_asset_0630                                              ******** GX
+    _weapon_asset_0631                                              ******** GX
+    _weapon_asset_0632                                              ******** GX
+    _weapon_asset_0633                                              ******** GX
+    _weapon_asset_0634                                              ******** GX
+    _weapon_asset_0635                                              ******** GX
+    _weapon_asset_0636                                              ******** GX
+    _weapon_asset_0637                                              ******** GX
+    _weapon_asset_0638                                              ******** GX
+    _weapon_asset_0639                                              ******** GX
+    _weapon_asset_0640                                              ******** GX
+    _weapon_asset_0641                                              ******** GX
+    _weapon_asset_0642                                              ******** GX
+    _weapon_asset_0643                                              ******** GX
+    _weapon_asset_0644                                              ******** GX
+    _weapon_asset_0645                                              ******** GX
+    _weapon_asset_0646                                              ******** GX
+    _weapon_asset_0647                                              ******** GX
+    _weapon_asset_0648                                              ******** GX
+    _weapon_asset_0649                                              ******** GX
+    _weapon_asset_0650                                              ******** GX
+    _weapon_asset_0651                                              ******** GX
+    _weapon_asset_0652                                              ******** GX
+    _weapon_asset_0653                                              ******** GX
+    _weapon_asset_0654                                              ******** GX
+    _weapon_asset_0655                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 13
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0656                                              ******** GX
+    _weapon_asset_0657                                              ******** GX
+    _weapon_asset_0658                                              ******** GX
+    _weapon_asset_0659                                              ******** GX
+    _weapon_asset_0660                                              ******** GX
+    _weapon_asset_0661                                              ******** GX
+    _weapon_asset_0662                                              ******** GX
+    _weapon_asset_0663                                              ******** GX
+    _weapon_asset_0664                                              ******** GX
+    _weapon_asset_0665                                              ******** GX
+    _weapon_asset_0666                                              ******** GX
+    _weapon_asset_0667                                              ******** GX
+    _weapon_asset_0668                                              ******** GX
+    _weapon_asset_0669                                              ******** GX
+    _weapon_asset_0670                                              ******** GX
+    _weapon_asset_0671                                              ******** GX
+    _weapon_asset_0672                                              ******** GX
+    _weapon_asset_0673                                              ******** GX
+    _weapon_asset_0674                                              ******** GX
+    _weapon_asset_0675                                              ******** GX
+    _weapon_asset_0676                                              ******** GX
+    _weapon_asset_0677                                              ******** GX
+    _weapon_asset_0678                                              ******** GX
+    _weapon_asset_0679                                              ******** GX
+    _weapon_asset_0680                                              ******** GX
+    _weapon_asset_0681                                              ******** GX
+    _weapon_asset_0682                                              ******** GX
+    _weapon_asset_0683                                              ******** GX
+    _weapon_asset_0684                                              ******** GX
+    _weapon_asset_0685                                              ******** GX
+    _weapon_asset_0686                                              ******** GX
+    _weapon_asset_0687                                              ******** GX
+    _weapon_asset_0688                                              ******** GX
+    _weapon_asset_0689                                              ******** GX
+    _weapon_asset_0690                                              ******** GX
+    _weapon_asset_0691                                              ******** GX
+    _weapon_asset_0692                                              ******** GX
+    _weapon_asset_0693                                              ******** GX
+    _weapon_asset_0694                                              ******** GX
+    _weapon_asset_0695                                              ******** GX
+    _weapon_asset_0696                                              ******** GX
+    _weapon_asset_0697                                              ******** GX
+    _weapon_asset_0698                                              ******** GX
+    _weapon_asset_0699                                              ******** GX
+    _weapon_asset_0700                                              ******** GX
+    _weapon_asset_0701                                              ******** GX
+    _weapon_asset_0702                                              ******** GX
+    _weapon_asset_0703                                              ******** GX
+    _weapon_asset_0704                                              ******** GX
+    _weapon_asset_0705                                              ******** GX
+    _weapon_asset_0706                                              ******** GX
+    _weapon_asset_0707                                              ******** GX
+    _weapon_asset_0708                                              ******** GX
+    _weapon_asset_0709                                              ******** GX
+    _weapon_asset_0710                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 14
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0711                                              ******** GX
+    _weapon_asset_0712                                              ******** GX
+    _weapon_asset_0713                                              ******** GX
+    _weapon_asset_0714                                              ******** GX
+    _weapon_asset_0715                                              ******** GX
+    _weapon_asset_0716                                              ******** GX
+    _weapon_asset_0717                                              ******** GX
+    _weapon_asset_0718                                              ******** GX
+    _weapon_asset_0719                                              ******** GX
+    _weapon_asset_0720                                              ******** GX
+    _weapon_asset_0721                                              ******** GX
+    _weapon_asset_0722                                              ******** GX
+    _weapon_asset_0723                                              ******** GX
+    _weapon_asset_0724                                              ******** GX
+    _weapon_asset_0725                                              ******** GX
+    _weapon_asset_0726                                              ******** GX
+    _weapon_asset_0727                                              ******** GX
+    _weapon_asset_0728                                              ******** GX
+    _weapon_asset_0729                                              ******** GX
+    _weapon_asset_0730                                              ******** GX
+    _weapon_asset_0731                                              ******** GX
+    _weapon_asset_0732                                              ******** GX
+    _weapon_asset_0733                                              ******** GX
+    _weapon_asset_0734                                              ******** GX
+    _weapon_asset_0735                                              ******** GX
+    _weapon_asset_0736                                              ******** GX
+    _weapon_asset_0737                                              ******** GX
+    _weapon_asset_0738                                              ******** GX
+    _weapon_asset_0739                                              ******** GX
+    _weapon_asset_0740                                              ******** GX
+    _weapon_asset_0741                                              ******** GX
+    _weapon_asset_0742                                              ******** GX
+    _weapon_asset_0743                                              ******** GX
+    _weapon_asset_0744                                              ******** GX
+    _weapon_asset_0745                                              ******** GX
+    _weapon_asset_0746                                              ******** GX
+    _weapon_asset_0747                                              ******** GX
+    _weapon_asset_0748                                              ******** GX
+    _weapon_asset_0749                                              ******** GX
+    _weapon_asset_0750                                              ******** GX
+    _weapon_asset_0751                                              ******** GX
+    _weapon_asset_0752                                              ******** GX
+    _weapon_asset_0753                                              ******** GX
+    _weapon_asset_0754                                              ******** GX
+    _weapon_asset_0755                                              ******** GX
+    _weapon_asset_0756                                              ******** GX
+    _weapon_asset_0757                                              ******** GX
+    _weapon_asset_0758                                              ******** GX
+    _weapon_asset_0759                                              ******** GX
+    _weapon_asset_0760                                              ******** GX
+    _weapon_asset_0761                                              ******** GX
+    _weapon_asset_0762                                              ******** GX
+    _weapon_asset_0763                                              ******** GX
+    _weapon_asset_0764                                              ******** GX
+    _weapon_asset_0765                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 15
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0766                                              ******** GX
+    _weapon_asset_0767                                              ******** GX
+    _weapon_asset_0768                                              ******** GX
+    _weapon_asset_0769                                              ******** GX
+    _weapon_asset_0770                                              ******** GX
+    _weapon_asset_0771                                              ******** GX
+    _weapon_asset_0772                                              ******** GX
+    _weapon_asset_0773                                              ******** GX
+    _weapon_asset_0774                                              ******** GX
+    _weapon_asset_0775                                              ******** GX
+    _weapon_asset_0776                                              ******** GX
+    _weapon_asset_0777                                              ******** GX
+    _weapon_asset_0778                                              ******** GX
+    _weapon_asset_0779                                              ******** GX
+    _weapon_asset_0780                                              ******** GX
+    _weapon_asset_0781                                              ******** GX
+    _weapon_asset_0782                                              ******** GX
+    _weapon_asset_0783                                              ******** GX
+    _weapon_asset_0784                                              ******** GX
+    _weapon_asset_0785                                              ******** GX
+    _weapon_asset_0786                                              ******** GX
+    _weapon_asset_0787                                              ******** GX
+    _weapon_asset_0788                                              ******** GX
+    _weapon_asset_0789                                              ******** GX
+    _weapon_asset_0790                                              ******** GX
+    _weapon_asset_0791                                              ******** GX
+    _weapon_asset_0792                                              ******** GX
+    _weapon_asset_0793                                              ******** GX
+    _weapon_asset_0794                                              ******** GX
+    _weapon_asset_0795                                              ******** GX
+    _weapon_asset_0796                                              ******** GX
+    _weapon_asset_0797                                              ******** GX
+    _weapon_asset_0798                                              ******** GX
+    _weapon_asset_0799                                              ******** GX
+    _weapon_asset_0800                                              ******** GX
+    _weapon_asset_0801                                              ******** GX
+    _weapon_asset_0802                                              ******** GX
+    _weapon_asset_0803                                              ******** GX
+    _weapon_asset_0804                                              ******** GX
+    _weapon_asset_0805                                              ******** GX
+    _weapon_asset_0806                                              ******** GX
+    _weapon_asset_0807                                              ******** GX
+    _weapon_asset_0808                                              ******** GX
+    _weapon_asset_0809                                              ******** GX
+    _weapon_asset_0810                                              ******** GX
+    _weapon_asset_0811                                              ******** GX
+    _weapon_asset_0812                                              ******** GX
+    _weapon_asset_0813                                              ******** GX
+    _weapon_asset_0814                                              ******** GX
+    _weapon_asset_0815                                              ******** GX
+    _weapon_asset_0816                                              ******** GX
+    _weapon_asset_0817                                              ******** GX
+    _weapon_asset_0818                                              ******** GX
+    _weapon_asset_0819                                              ******** GX
+    _weapon_asset_0820                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 16
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0821                                              ******** GX
+    _weapon_asset_0822                                              ******** GX
+    _weapon_asset_0823                                              ******** GX
+    _weapon_asset_0824                                              ******** GX
+    _weapon_asset_0825                                              ******** GX
+    _weapon_asset_0826                                              ******** GX
+    _weapon_asset_0827                                              ******** GX
+    _weapon_asset_0828                                              ******** GX
+    _weapon_asset_0829                                              ******** GX
+    _weapon_asset_0830                                              ******** GX
+    _weapon_asset_0831                                              ******** GX
+    _weapon_asset_0832                                              ******** GX
+    _weapon_asset_0833                                              ******** GX
+    _weapon_asset_0834                                              ******** GX
+    _weapon_asset_0835                                              ******** GX
+    _weapon_asset_0836                                              ******** GX
+    _weapon_asset_0837                                              ******** GX
+    _weapon_asset_0838                                              ******** GX
+    _weapon_asset_0839                                              ******** GX
+    _weapon_asset_0840                                              ******** GX
+    _weapon_asset_0841                                              ******** GX
+    _weapon_asset_0842                                              ******** GX
+    _weapon_asset_0843                                              ******** GX
+    _weapon_asset_0844                                              ******** GX
+    _weapon_asset_0845                                              ******** GX
+    _weapon_asset_0846                                              ******** GX
+    _weapon_asset_0847                                              ******** GX
+    _weapon_asset_0848                                              ******** GX
+    _weapon_asset_0849                                              ******** GX
+    _weapon_asset_0850                                              ******** GX
+    _weapon_asset_0851                                              ******** GX
+    _weapon_asset_0852                                              ******** GX
+    _weapon_asset_0853                                              ******** GX
+    _weapon_asset_0854                                              ******** GX
+    _weapon_asset_0855                                              ******** GX
+    _weapon_asset_0856                                              ******** GX
+    _weapon_asset_0857                                              ******** GX
+    _weapon_asset_0858                                              ******** GX
+    _weapon_asset_0859                                              ******** GX
+    _weapon_asset_0860                                              ******** GX
+    _weapon_asset_0861                                              ******** GX
+    _weapon_asset_0862                                              ******** GX
+    _weapon_asset_0863                                              ******** GX
+    _weapon_asset_0864                                              ******** GX
+    _weapon_asset_0865                                              ******** GX
+    _weapon_asset_0866                                              ******** GX
+    _weapon_asset_0867                                              ******** GX
+    _weapon_asset_0868                                              ******** GX
+    _weapon_asset_0869                                              ******** GX
+    _weapon_asset_0870                                              ******** GX
+    _weapon_asset_0871                                              ******** GX
+    _weapon_asset_0872                                              ******** GX
+    _weapon_asset_0873                                              ******** GX
+    _weapon_asset_0874                                              ******** GX
+    _weapon_asset_0875                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 17
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0876                                              ******** GX
+    _weapon_asset_0877                                              ******** GX
+    _weapon_asset_0878                                              ******** GX
+    _weapon_asset_0879                                              ******** GX
+    _weapon_asset_0880                                              ******** GX
+    _weapon_asset_0881                                              ******** GX
+    _weapon_asset_0882                                              ******** GX
+    _weapon_asset_0883                                              ******** GX
+    _weapon_asset_0884                                              ******** GX
+    _weapon_asset_0885                                              ******** GX
+    _weapon_asset_0886                                              ******** GX
+    _weapon_asset_0887                                              ******** GX
+    _weapon_asset_0888                                              ******** GX
+    _weapon_asset_0889                                              ******** GX
+    _weapon_asset_0890                                              ******** GX
+    _weapon_asset_0891                                              ******** GX
+    _weapon_asset_0892                                              ******** GX
+    _weapon_asset_0893                                              ******** GX
+    _weapon_asset_0894                                              ******** GX
+    _weapon_asset_0895                                              ******** GX
+    _weapon_asset_0896                                              ******** GX
+    _weapon_asset_0897                                              ******** GX
+    _weapon_asset_0898                                              ******** GX
+    _weapon_asset_0899                                              ******** GX
+    _weapon_asset_0900                                              ******** GX
+    _weapon_asset_0901                                              ******** GX
+    _weapon_asset_0902                                              ******** GX
+    _weapon_asset_0903                                              ******** GX
+    _weapon_asset_0904                                              ******** GX
+    _weapon_asset_0905                                              ******** GX
+    _weapon_asset_0906                                              ******** GX
+    _weapon_asset_0907                                              ******** GX
+    _weapon_asset_0908                                              ******** GX
+    _weapon_asset_0909                                              ******** GX
+    _weapon_asset_0910                                              ******** GX
+    _weapon_asset_0911                                              ******** GX
+    _weapon_asset_0912                                              ******** GX
+    _weapon_asset_0913                                              ******** GX
+    _weapon_asset_0914                                              ******** GX
+    _weapon_asset_0915                                              ******** GX
+    _weapon_asset_0916                                              ******** GX
+    _weapon_asset_0917                                              ******** GX
+    _weapon_asset_0918                                              ******** GX
+    _weapon_asset_0919                                              ******** GX
+    _weapon_asset_0920                                              ******** GX
+    _weapon_asset_0921                                              ******** GX
+    _weapon_asset_0922                                              ******** GX
+    _weapon_asset_0923                                              ******** GX
+    _weapon_asset_0924                                              ******** GX
+    _weapon_asset_0925                                              ******** GX
+    _weapon_asset_0926                                              ******** GX
+    _weapon_asset_0927                                              ******** GX
+    _weapon_asset_0928                                              ******** GX
+    _weapon_asset_0929                                              ******** GX
+    _weapon_asset_0930                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 18
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0931                                              ******** GX
+    _weapon_asset_0932                                              ******** GX
+    _weapon_asset_0933                                              ******** GX
+    _weapon_asset_0934                                              ******** GX
+    _weapon_asset_0935                                              ******** GX
+    _weapon_asset_0936                                              ******** GX
+    _weapon_asset_0937                                              ******** GX
+    _weapon_asset_0938                                              ******** GX
+    _weapon_asset_0939                                              ******** GX
+    _weapon_asset_0940                                              ******** GX
+    _weapon_asset_0941                                              ******** GX
+    _weapon_asset_0942                                              ******** GX
+    _weapon_asset_0943                                              ******** GX
+    _weapon_asset_0944                                              ******** GX
+    _weapon_asset_0945                                              ******** GX
+    _weapon_asset_0946                                              ******** GX
+    _weapon_asset_0947                                              ******** GX
+    _weapon_asset_0948                                              ******** GX
+    _weapon_asset_0949                                              ******** GX
+    _weapon_asset_0950                                              ******** GX
+    _weapon_asset_0951                                              ******** GX
+    _weapon_asset_0952                                              ******** GX
+    _weapon_asset_0953                                              ******** GX
+    _weapon_asset_0954                                              ******** GX
+    _weapon_asset_0955                                              ******** GX
+    _weapon_asset_0956                                              ******** GX
+    _weapon_asset_0957                                              ******** GX
+    _weapon_asset_0958                                              ******** GX
+    _weapon_asset_0959                                              ******** GX
+    _weapon_asset_0960                                              ******** GX
+    _weapon_asset_0961                                              ******** GX
+    _weapon_asset_0962                                              ******** GX
+    _weapon_asset_0963                                              ******** GX
+    _weapon_asset_0964                                              ******** GX
+    _weapon_asset_0965                                              ******** GX
+    _weapon_asset_0966                                              ******** GX
+    _weapon_asset_0967                                              ******** GX
+    _weapon_asset_0968                                              ******** GX
+    _weapon_asset_0969                                              ******** GX
+    _weapon_asset_0970                                              ******** GX
+    _weapon_asset_0971                                              ******** GX
+    _weapon_asset_0972                                              ******** GX
+    _weapon_asset_0973                                              ******** GX
+    _weapon_asset_0974                                              ******** GX
+    _weapon_asset_0975                                              ******** GX
+    _weapon_asset_0976                                              ******** GX
+    _weapon_asset_0977                                              ******** GX
+    _weapon_asset_0978                                              ******** GX
+    _weapon_asset_0979                                              ******** GX
+    _weapon_asset_0980                                              ******** GX
+    _weapon_asset_0981                                              ******** GX
+    _weapon_asset_0982                                              ******** GX
+    _weapon_asset_0983                                              ******** GX
+    _weapon_asset_0984                                              ******** GX
+    _weapon_asset_0985                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 19
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_0986                                              ******** GX
+    _weapon_asset_0987                                              ******** GX
+    _weapon_asset_0988                                              ******** GX
+    _weapon_asset_0989                                              ******** GX
+    _weapon_asset_0990                                              ******** GX
+    _weapon_asset_0991                                              ******** GX
+    _weapon_asset_0992                                              ******** GX
+    _weapon_asset_0993                                              ******** GX
+    _weapon_asset_0994                                              ******** GX
+    _weapon_asset_0995                                              ******** GX
+    _weapon_asset_0996                                              ******** GX
+    _weapon_asset_0997                                              ******** GX
+    _weapon_asset_0998                                              ******** GX
+    _weapon_asset_0999                                              ******** GX
+    _weapon_asset_1000                                              ******** GX
+    _weapon_asset_1001                                              ******** GX
+    _weapon_asset_1002                                              ******** GX
+    _weapon_asset_1003                                              ******** GX
+    _weapon_asset_1004                                              ******** GX
+    _weapon_asset_1005                                              ******** GX
+    _weapon_asset_1006                                              ******** GX
+    _weapon_asset_1007                                              ******** GX
+    _weapon_asset_1008                                              ******** GX
+    _weapon_asset_1009                                              ******** GX
+    _weapon_asset_1010                                              ******** GX
+    _weapon_asset_1011                                              ******** GX
+    _weapon_asset_1012                                              ******** GX
+    _weapon_asset_1013                                              ******** GX
+    _weapon_asset_1014                                              ******** GX
+    _weapon_asset_1015                                              ******** GX
+    _weapon_asset_1016                                              ******** GX
+    _weapon_asset_1017                                              ******** GX
+    _weapon_asset_1018                                              ******** GX
+    _weapon_asset_1019                                              ******** GX
+    _weapon_asset_1020                                              ******** GX
+    _weapon_asset_1021                                              ******** GX
+    _weapon_asset_1022                                              ******** GX
+    _weapon_asset_1023                                              ******** GX
+    _weapon_asset_1024                                              ******** GX
+    _weapon_asset_1025                                              ******** GX
+    _weapon_asset_1026                                              ******** GX
+    _weapon_asset_1027                                              ******** GX
+    _weapon_asset_1028                                              ******** GX
+    _weapon_asset_1029                                              ******** GX
+    _weapon_asset_1030                                              ******** GX
+    _weapon_asset_1031                                              ******** GX
+    _weapon_asset_1032                                              ******** GX
+    _weapon_asset_1033                                              ******** GX
+    _weapon_asset_1034                                              ******** GX
+    _weapon_asset_1035                                              ******** GX
+    _weapon_asset_1036                                              ******** GX
+    _weapon_asset_1037                                              ******** GX
+    _weapon_asset_1038                                              ******** GX
+    _weapon_asset_1039                                              ******** GX
+    _weapon_asset_1040                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 20
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1041                                              ******** GX
+    _weapon_asset_1042                                              ******** GX
+    _weapon_asset_1043                                              ******** GX
+    _weapon_asset_1044                                              ******** GX
+    _weapon_asset_1045                                              ******** GX
+    _weapon_asset_1046                                              ******** GX
+    _weapon_asset_1047                                              ******** GX
+    _weapon_asset_1048                                              ******** GX
+    _weapon_asset_1049                                              ******** GX
+    _weapon_asset_1050                                              ******** GX
+    _weapon_asset_1051                                              ******** GX
+    _weapon_asset_1052                                              ******** GX
+    _weapon_asset_1053                                              ******** GX
+    _weapon_asset_1054                                              ******** GX
+    _weapon_asset_1055                                              ******** GX
+    _weapon_asset_1056                                              ******** GX
+    _weapon_asset_1057                                              ******** GX
+    _weapon_asset_1058                                              ******** GX
+    _weapon_asset_1059                                              ******** GX
+    _weapon_asset_1060                                              ******** GX
+    _weapon_asset_1061                                              ******** GX
+    _weapon_asset_1062                                              ******** GX
+    _weapon_asset_1063                                              ******** GX
+    _weapon_asset_1064                                              ******** GX
+    _weapon_asset_1065                                              ******** GX
+    _weapon_asset_1066                                              ******** GX
+    _weapon_asset_1067                                              ******** GX
+    _weapon_asset_1068                                              ******** GX
+    _weapon_asset_1069                                              ******** GX
+    _weapon_asset_1070                                              ******** GX
+    _weapon_asset_1071                                              ******** GX
+    _weapon_asset_1072                                              ******** GX
+    _weapon_asset_1073                                              ******** GX
+    _weapon_asset_1074                                              ******** GX
+    _weapon_asset_1075                                              ******** GX
+    _weapon_asset_1076                                              ******** GX
+    _weapon_asset_1077                                              ******** GX
+    _weapon_asset_1078                                              ******** GX
+    _weapon_asset_1079                                              ******** GX
+    _weapon_asset_1080                                              ******** GX
+    _weapon_asset_1081                                              ******** GX
+    _weapon_asset_1082                                              ******** GX
+    _weapon_asset_1083                                              ******** GX
+    _weapon_asset_1084                                              ******** GX
+    _weapon_asset_1085                                              ******** GX
+    _weapon_asset_1086                                              ******** GX
+    _weapon_asset_1087                                              ******** GX
+    _weapon_asset_1088                                              ******** GX
+    _weapon_asset_1089                                              ******** GX
+    _weapon_asset_1090                                              ******** GX
+    _weapon_asset_1091                                              ******** GX
+    _weapon_asset_1092                                              ******** GX
+    _weapon_asset_1093                                              ******** GX
+    _weapon_asset_1094                                              ******** GX
+    _weapon_asset_1095                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 21
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1096                                              ******** GX
+    _weapon_asset_1097                                              ******** GX
+    _weapon_asset_1098                                              ******** GX
+    _weapon_asset_1099                                              ******** GX
+    _weapon_asset_1100                                              ******** GX
+    _weapon_asset_1101                                              ******** GX
+    _weapon_asset_1102                                              ******** GX
+    _weapon_asset_1103                                              ******** GX
+    _weapon_asset_1104                                              ******** GX
+    _weapon_asset_1105                                              ******** GX
+    _weapon_asset_1106                                              ******** GX
+    _weapon_asset_1107                                              ******** GX
+    _weapon_asset_1108                                              ******** GX
+    _weapon_asset_1109                                              ******** GX
+    _weapon_asset_1110                                              ******** GX
+    _weapon_asset_1111                                              ******** GX
+    _weapon_asset_1112                                              ******** GX
+    _weapon_asset_1113                                              ******** GX
+    _weapon_asset_1114                                              ******** GX
+    _weapon_asset_1115                                              ******** GX
+    _weapon_asset_1116                                              ******** GX
+    _weapon_asset_1117                                              ******** GX
+    _weapon_asset_1118                                              ******** GX
+    _weapon_asset_1119                                              ******** GX
+    _weapon_asset_1120                                              ******** GX
+    _weapon_asset_1121                                              ******** GX
+    _weapon_asset_1122                                              ******** GX
+    _weapon_asset_1123                                              ******** GX
+    _weapon_asset_1124                                              ******** GX
+    _weapon_asset_1125                                              ******** GX
+    _weapon_asset_1126                                              ******** GX
+    _weapon_asset_1127                                              ******** GX
+    _weapon_asset_1128                                              ******** GX
+    _weapon_asset_1129                                              ******** GX
+    _weapon_asset_1130                                              ******** GX
+    _weapon_asset_1131                                              ******** GX
+    _weapon_asset_1132                                              ******** GX
+    _weapon_asset_1133                                              ******** GX
+    _weapon_asset_1134                                              ******** GX
+    _weapon_asset_1135                                              ******** GX
+    _weapon_asset_1136                                              ******** GX
+    _weapon_asset_1137                                              ******** GX
+    _weapon_asset_1138                                              ******** GX
+    _weapon_asset_1139                                              ******** GX
+    _weapon_asset_1140                                              ******** GX
+    _weapon_asset_1141                                              ******** GX
+    _weapon_asset_1142                                              ******** GX
+    _weapon_asset_1143                                              ******** GX
+    _weapon_asset_1144                                              ******** GX
+    _weapon_asset_1145                                              ******** GX
+    _weapon_asset_1146                                              ******** GX
+    _weapon_asset_1147                                              ******** GX
+    _weapon_asset_1148                                              ******** GX
+    _weapon_asset_1149                                              ******** GX
+    _weapon_asset_1150                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 22
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1151                                              ******** GX
+    _weapon_asset_1152                                              ******** GX
+    _weapon_asset_1153                                              ******** GX
+    _weapon_asset_1154                                              ******** GX
+    _weapon_asset_1155                                              ******** GX
+    _weapon_asset_1156                                              ******** GX
+    _weapon_asset_1157                                              ******** GX
+    _weapon_asset_1158                                              ******** GX
+    _weapon_asset_1159                                              ******** GX
+    _weapon_asset_1160                                              ******** GX
+    _weapon_asset_1161                                              ******** GX
+    _weapon_asset_1162                                              ******** GX
+    _weapon_asset_1163                                              ******** GX
+    _weapon_asset_1164                                              ******** GX
+    _weapon_asset_1165                                              ******** GX
+    _weapon_asset_1166                                              ******** GX
+    _weapon_asset_1167                                              ******** GX
+    _weapon_asset_1168                                              ******** GX
+    _weapon_asset_1169                                              ******** GX
+    _weapon_asset_1170                                              ******** GX
+    _weapon_asset_1171                                              ******** GX
+    _weapon_asset_1172                                              ******** GX
+    _weapon_asset_1173                                              ******** GX
+    _weapon_asset_1174                                              ******** GX
+    _weapon_asset_1175                                              ******** GX
+    _weapon_asset_1176                                              ******** GX
+    _weapon_asset_1177                                              ******** GX
+    _weapon_asset_1178                                              ******** GX
+    _weapon_asset_1179                                              ******** GX
+    _weapon_asset_1180                                              ******** GX
+    _weapon_asset_1181                                              ******** GX
+    _weapon_asset_1182                                              ******** GX
+    _weapon_asset_1183                                              ******** GX
+    _weapon_asset_1184                                              ******** GX
+    _weapon_asset_1185                                              ******** GX
+    _weapon_asset_1186                                              ******** GX
+    _weapon_asset_1187                                              ******** GX
+    _weapon_asset_1188                                              ******** GX
+    _weapon_asset_1189                                              ******** GX
+    _weapon_asset_1190                                              ******** GX
+    _weapon_asset_1191                                              ******** GX
+    _weapon_asset_1192                                              ******** GX
+    _weapon_asset_1193                                              ******** GX
+    _weapon_asset_1194                                              ******** GX
+    _weapon_asset_1195                                              ******** GX
+    _weapon_asset_1196                                              ******** GX
+    _weapon_asset_1197                                              ******** GX
+    _weapon_asset_1198                                              ******** GX
+    _weapon_asset_1199                                              ******** GX
+    _weapon_asset_1200                                              ******** GX
+    _weapon_asset_1201                                              ******** GX
+    _weapon_asset_1202                                              ******** GX
+    _weapon_asset_1203                                              ******** GX
+    _weapon_asset_1204                                              ******** GX
+    _weapon_asset_1205                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 23
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1206                                              ******** GX
+    _weapon_asset_1207                                              ******** GX
+    _weapon_asset_1208                                              ******** GX
+    _weapon_asset_1209                                              ******** GX
+    _weapon_asset_1210                                              ******** GX
+    _weapon_asset_1211                                              ******** GX
+    _weapon_asset_1212                                              ******** GX
+    _weapon_asset_1213                                              ******** GX
+    _weapon_asset_1214                                              ******** GX
+    _weapon_asset_1215                                              ******** GX
+    _weapon_asset_1216                                              ******** GX
+    _weapon_asset_1217                                              ******** GX
+    _weapon_asset_1218                                              ******** GX
+    _weapon_asset_1219                                              ******** GX
+    _weapon_asset_1220                                              ******** GX
+    _weapon_asset_1221                                              ******** GX
+    _weapon_asset_1222                                              ******** GX
+    _weapon_asset_1223                                              ******** GX
+    _weapon_asset_1224                                              ******** GX
+    _weapon_asset_1225                                              ******** GX
+    _weapon_asset_1226                                              ******** GX
+    _weapon_asset_1227                                              ******** GX
+    _weapon_asset_1228                                              ******** GX
+    _weapon_asset_1229                                              ******** GX
+    _weapon_asset_1230                                              ******** GX
+    _weapon_asset_1231                                              ******** GX
+    _weapon_asset_1232                                              ******** GX
+    _weapon_asset_1233                                              ******** GX
+    _weapon_asset_1234                                              ******** GX
+    _weapon_asset_1235                                              ******** GX
+    _weapon_asset_1236                                              ******** GX
+    _weapon_asset_1237                                              ******** GX
+    _weapon_asset_1238                                              ******** GX
+    _weapon_asset_1239                                              ******** GX
+    _weapon_asset_1240                                              ******** GX
+    _weapon_asset_1241                                              ******** GX
+    _weapon_asset_1242                                              ******** GX
+    _weapon_asset_1243                                              ******** GX
+    _weapon_asset_1244                                              ******** GX
+    _weapon_asset_1245                                              ******** GX
+    _weapon_asset_1246                                              ******** GX
+    _weapon_asset_1247                                              ******** GX
+    _weapon_asset_1248                                              ******** GX
+    _weapon_asset_1249                                              ******** GX
+    _weapon_asset_1250                                              ******** GX
+    _weapon_asset_1251                                              ******** GX
+    _weapon_asset_1252                                              ******** GX
+    _weapon_asset_1253                                              ******** GX
+    _weapon_asset_1254                                              ******** GX
+    _weapon_asset_1255                                              ******** GX
+    _weapon_asset_1256                                              ******** GX
+    _weapon_asset_1257                                              ******** GX
+    _weapon_asset_1258                                              ******** GX
+    _weapon_asset_1259                                              ******** GX
+    _weapon_asset_1260                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 24
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1261                                              ******** GX
+    _weapon_asset_1262                                              ******** GX
+    _weapon_asset_1263                                              ******** GX
+    _weapon_asset_1264                                              ******** GX
+    _weapon_asset_1265                                              ******** GX
+    _weapon_asset_1266                                              ******** GX
+    _weapon_asset_1267                                              ******** GX
+    _weapon_asset_1268                                              ******** GX
+    _weapon_asset_1269                                              ******** GX
+    _weapon_asset_1270                                              ******** GX
+    _weapon_asset_1271                                              ******** GX
+    _weapon_asset_1272                                              ******** GX
+    _weapon_asset_1273                                              ******** GX
+    _weapon_asset_1274                                              ******** GX
+    _weapon_asset_1275                                              ******** GX
+    _weapon_asset_1276                                              ******** GX
+    _weapon_asset_1277                                              ******** GX
+    _weapon_asset_1278                                              ******** GX
+    _weapon_asset_1279                                              ******** GX
+    _weapon_asset_1280                                              ******** GX
+    _weapon_asset_1281                                              ******** GX
+    _weapon_asset_1282                                              ******** GX
+    _weapon_asset_1283                                              ******** GX
+    _weapon_asset_1284                                              ******** GX
+    _weapon_asset_1285                                              ******** GX
+    _weapon_asset_1286                                              ******** GX
+    _weapon_asset_1287                                              ******** GX
+    _weapon_asset_1288                                              ******** GX
+    _weapon_asset_1289                                              ******** GX
+    _weapon_asset_1290                                              ******** GX
+    _weapon_asset_1291                                              ******** GX
+    _weapon_asset_1292                                              ******** GX
+    _weapon_asset_1293                                              ******** GX
+    _weapon_asset_1294                                              ******** GX
+    _weapon_asset_1295                                              ******** GX
+    _weapon_asset_1296                                              ******** GX
+    _weapon_asset_1297                                              ******** GX
+    _weapon_asset_1298                                              ******** GX
+    _weapon_asset_1299                                              ******** GX
+    _weapon_asset_1300                                              ******** GX
+    _weapon_asset_1301                                              ******** GX
+    _weapon_asset_1302                                              ******** GX
+    _weapon_asset_1303                                              ******** GX
+    _weapon_asset_1304                                              ******** GX
+    _weapon_asset_1305                                              ******** GX
+    _weapon_asset_1306                                              ******** GX
+    _weapon_asset_1307                                              ******** GX
+    _weapon_asset_1308                                              ******** GX
+    _weapon_asset_1309                                              ******** GX
+    _weapon_asset_1310                                              ******** GX
+    _weapon_asset_1311                                              ******** GX
+    _weapon_asset_1312                                              ******** GX
+    _weapon_asset_1313                                              ******** GX
+    _weapon_asset_1314                                              ******** GX
+    _weapon_asset_1315                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 25
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1316                                              ******** GX
+    _weapon_asset_1317                                              ******** GX
+    _weapon_asset_1318                                              ******** GX
+    _weapon_asset_1319                                              ******** GX
+    _weapon_asset_1320                                              ******** GX
+    _weapon_asset_1321                                              ******** GX
+    _weapon_asset_1322                                              ******** GX
+    _weapon_asset_1323                                              ******** GX
+    _weapon_asset_1324                                              ******** GX
+    _weapon_asset_1325                                              ******** GX
+    _weapon_asset_1326                                              ******** GX
+    _weapon_asset_1327                                              ******** GX
+    _weapon_asset_1328                                              ******** GX
+    _weapon_asset_1329                                              ******** GX
+    _weapon_asset_1330                                              ******** GX
+    _weapon_asset_1331                                              ******** GX
+    _weapon_asset_1332                                              ******** GX
+    _weapon_asset_1333                                              ******** GX
+    _weapon_asset_1334                                              ******** GX
+    _weapon_asset_1335                                              ******** GX
+    _weapon_asset_1336                                              ******** GX
+    _weapon_asset_1337                                              ******** GX
+    _weapon_asset_1338                                              ******** GX
+    _weapon_asset_1339                                              ******** GX
+    _weapon_asset_1340                                              ******** GX
+    _weapon_asset_1341                                              ******** GX
+    _weapon_asset_1342                                              ******** GX
+    _weapon_asset_1343                                              ******** GX
+    _weapon_asset_1344                                              ******** GX
+    _weapon_asset_1345                                              ******** GX
+    _weapon_asset_1346                                              ******** GX
+    _weapon_asset_1347                                              ******** GX
+    _weapon_asset_1348                                              ******** GX
+    _weapon_asset_1349                                              ******** GX
+    _weapon_asset_1350                                              ******** GX
+    _weapon_asset_1351                                              ******** GX
+    _weapon_asset_1352                                              ******** GX
+    _weapon_asset_1353                                              ******** GX
+    _weapon_asset_1354                                              ******** GX
+    _weapon_asset_1355                                              ******** GX
+    _weapon_asset_1356                                              ******** GX
+    _weapon_asset_1357                                              ******** GX
+    _weapon_asset_1358                                              ******** GX
+    _weapon_asset_1359                                              ******** GX
+    _weapon_asset_1360                                              ******** GX
+    _weapon_asset_1361                                              ******** GX
+    _weapon_asset_1362                                              ******** GX
+    _weapon_asset_1363                                              ******** GX
+    _weapon_asset_1364                                              ******** GX
+    _weapon_asset_1365                                              ******** GX
+    _weapon_asset_1366                                              ******** GX
+    _weapon_asset_1367                                              ******** GX
+    _weapon_asset_1368                                              ******** GX
+    _weapon_asset_1369                                              ******** GX
+    _weapon_asset_1370                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 26
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1371                                              ******** GX
+    _weapon_asset_1372                                              ******** GX
+    _weapon_asset_1373                                              ******** GX
+    _weapon_asset_1374                                              ******** GX
+    _weapon_asset_1375                                              ******** GX
+    _weapon_asset_1376                                              ******** GX
+    _weapon_asset_1377                                              ******** GX
+    _weapon_asset_1378                                              ******** GX
+    _weapon_asset_1379                                              ******** GX
+    _weapon_asset_1380                                              ******** GX
+    _weapon_asset_1381                                              ******** GX
+    _weapon_asset_1382                                              ******** GX
+    _weapon_asset_1383                                              ******** GX
+    _weapon_asset_1384                                              ******** GX
+    _weapon_asset_1385                                              ******** GX
+    _weapon_asset_1386                                              ******** GX
+    _weapon_asset_1387                                              ******** GX
+    _weapon_asset_1388                                              ******** GX
+    _weapon_asset_1389                                              ******** GX
+    _weapon_asset_1390                                              ******** GX
+    _weapon_asset_1391                                              ******** GX
+    _weapon_asset_1392                                              ******** GX
+    _weapon_asset_1393                                              ******** GX
+    _weapon_asset_1394                                              ******** GX
+    _weapon_asset_1395                                              ******** GX
+    _weapon_asset_1396                                              ******** GX
+    _weapon_asset_1397                                              ******** GX
+    _weapon_asset_1398                                              ******** GX
+    _weapon_asset_1399                                              ******** GX
+    _weapon_asset_1400                                              ******** GX
+    _weapon_asset_1401                                              ******** GX
+    _weapon_asset_1402                                              ******** GX
+    _weapon_asset_1403                                              ******** GX
+    _weapon_asset_1404                                              ******** GX
+    _weapon_asset_1405                                              ******** GX
+    _weapon_asset_1406                                              ******** GX
+    _weapon_asset_1407                                              ******** GX
+    _weapon_asset_1408                                              ******** GX
+    _weapon_asset_1409                                              ******** GX
+    _weapon_asset_1410                                              ******** GX
+    _weapon_asset_1411                                              ******** GX
+    _weapon_asset_1412                                              ******** GX
+    _weapon_asset_1413                                              ******** GX
+    _weapon_asset_1414                                              ******** GX
+    _weapon_asset_1415                                              ******** GX
+    _weapon_asset_1416                                              ******** GX
+    _weapon_asset_1417                                              ******** GX
+    _weapon_asset_1418                                              ******** GX
+    _weapon_asset_1419                                              ******** GX
+    _weapon_asset_1420                                              ******** GX
+    _weapon_asset_1421                                              ******** GX
+    _weapon_asset_1422                                              ******** GX
+    _weapon_asset_1423                                              ******** GX
+    _weapon_asset_1424                                              ******** GX
+    _weapon_asset_1425                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 27
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1426                                              ******** GX
+    _weapon_asset_1427                                              ******** GX
+    _weapon_asset_1428                                              ******** GX
+    _weapon_asset_1429                                              ******** GX
+    _weapon_asset_1430                                              ******** GX
+    _weapon_asset_1431                                              ******** GX
+    _weapon_asset_1432                                              ******** GX
+    _weapon_asset_1433                                              ******** GX
+    _weapon_asset_1434                                              ******** GX
+    _weapon_asset_1435                                              ******** GX
+    _weapon_asset_1436                                              ******** GX
+    _weapon_asset_1437                                              ******** GX
+    _weapon_asset_1438                                              ******** GX
+    _weapon_asset_1439                                              ******** GX
+    _weapon_asset_1440                                              ******** GX
+    _weapon_asset_1441                                              ******** GX
+    _weapon_asset_1442                                              ******** GX
+    _weapon_asset_1443                                              ******** GX
+    _weapon_asset_1444                                              ******** GX
+    _weapon_asset_1445                                              ******** GX
+    _weapon_asset_1446                                              ******** GX
+    _weapon_asset_1447                                              ******** GX
+    _weapon_asset_1448                                              ******** GX
+    _weapon_asset_1449                                              ******** GX
+    _weapon_asset_1450                                              ******** GX
+    _weapon_asset_1451                                              ******** GX
+    _weapon_asset_1452                                              ******** GX
+    _weapon_asset_1453                                              ******** GX
+    _weapon_asset_1454                                              ******** GX
+    _weapon_asset_1455                                              ******** GX
+    _weapon_asset_1456                                              ******** GX
+    _weapon_asset_1457                                              ******** GX
+    _weapon_asset_1458                                              ******** GX
+    _weapon_asset_1459                                              ******** GX
+    _weapon_asset_1460                                              ******** GX
+    _weapon_asset_1461                                              ******** GX
+    _weapon_asset_1462                                              ******** GX
+    _weapon_asset_1463                                              ******** GX
+    _weapon_asset_1464                                              ******** GX
+    _weapon_asset_1465                                              ******** GX
+    _weapon_asset_1466                                              ******** GX
+    _weapon_asset_1467                                              ******** GX
+    _weapon_asset_1468                                              ******** GX
+    _weapon_asset_1469                                              ******** GX
+    _weapon_asset_1470                                              ******** GX
+    _weapon_asset_1471                                              ******** GX
+    _weapon_asset_1472                                              ******** GX
+    _weapon_asset_1473                                              ******** GX
+    _weapon_asset_1474                                              ******** GX
+    _weapon_asset_1475                                              ******** GX
+    _weapon_asset_1476                                              ******** GX
+    _weapon_asset_1477                                              ******** GX
+    _weapon_asset_1478                                              ******** GX
+    _weapon_asset_1479                                              ******** GX
+    _weapon_asset_1480                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 28
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1481                                              ******** GX
+    _weapon_asset_1482                                              ******** GX
+    _weapon_asset_1483                                              ******** GX
+    _weapon_asset_1484                                              ******** GX
+    _weapon_asset_1485                                              ******** GX
+    _weapon_asset_1486                                              ******** GX
+    _weapon_asset_1487                                              ******** GX
+    _weapon_asset_1488                                              ******** GX
+    _weapon_asset_1489                                              ******** GX
+    _weapon_asset_1490                                              ******** GX
+    _weapon_asset_1491                                              ******** GX
+    _weapon_asset_1492                                              ******** GX
+    _weapon_asset_1493                                              ******** GX
+    _weapon_asset_1494                                              ******** GX
+    _weapon_asset_1495                                              ******** GX
+    _weapon_asset_1496                                              ******** GX
+    _weapon_asset_1497                                              ******** GX
+    _weapon_asset_1498                                              ******** GX
+    _weapon_asset_1499                                              ******** GX
+    _weapon_asset_1500                                              ******** GX
+    _weapon_asset_1501                                              ******** GX
+    _weapon_asset_1502                                              ******** GX
+    _weapon_asset_1503                                              ******** GX
+    _weapon_asset_1504                                              ******** GX
+    _weapon_asset_1505                                              ******** GX
+    _weapon_asset_1506                                              ******** GX
+    _weapon_asset_1507                                              ******** GX
+    _weapon_asset_1508                                              ******** GX
+    _weapon_asset_1509                                              ******** GX
+    _weapon_asset_1510                                              ******** GX
+    _weapon_asset_1511                                              ******** GX
+    _weapon_asset_1512                                              ******** GX
+    _weapon_asset_1513                                              ******** GX
+    _weapon_asset_1514                                              ******** GX
+    _weapon_asset_1515                                              ******** GX
+    _weapon_asset_1516                                              ******** GX
+    _weapon_asset_1517                                              ******** GX
+    _weapon_asset_1518                                              ******** GX
+    _weapon_asset_1519                                              ******** GX
+    _weapon_asset_1520                                              ******** GX
+    _weapon_asset_1521                                              ******** GX
+    _weapon_asset_1522                                              ******** GX
+    _weapon_asset_1523                                              ******** GX
+    _weapon_asset_1524                                              ******** GX
+    _weapon_asset_1525                                              ******** GX
+    _weapon_asset_1526                                              ******** GX
+    _weapon_asset_1527                                              ******** GX
+    _weapon_asset_1528                                              ******** GX
+    _weapon_asset_1529                                              ******** GX
+    _weapon_asset_1530                                              ******** GX
+    _weapon_asset_1531                                              ******** GX
+    _weapon_asset_1532                                              ******** GX
+    _weapon_asset_1533                                              ******** GX
+    _weapon_asset_1534                                              ******** GX
+    _weapon_asset_1535                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 29
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_asset_1536                                              ******** GX
+    _weapon_asset_1537                                              ******** GX
+    _weapon_asset_1538                                              ******** GX
+    _weapon_asset_1539                                              ******** GX
+    _weapon_asset_1540                                              ******** GX
+    _weapon_asset_1541                                              ******** GX
+    _weapon_asset_1542                                              ******** GX
+    _weapon_asset_1543                                              ******** GX
+    _weapon_asset_1544                                              ******** GX
+    _weapon_asset_1545                                              ******** GX
+    _weapon_asset_1546                                              ******** GX
+    _weapon_asset_1547                                              ******** GX
+    _weapon_asset_1548                                              ******** GX
+    _weapon_asset_1549                                              ******** GX
+    _weapon_asset_1550                                              ******** GX
+    _weapon_asset_1551                                              ******** GX
+    _weapon_asset_1552                                              ******** GX
+    _weapon_asset_1553                                              ******** GX
+    _weapon_asset_1554                                              ******** GX
+    _weapon_asset_1555                                              ******** GX
+    _weapon_asset_1556                                              ******** GX
+    _weapon_asset_1557                                              ******** GX
+    _weapon_asset_1558                                              ******** GX
+    _weapon_asset_1559                                              ******** GX
+    _weapon_asset_1560                                              ******** GX
+  8 _weapon_assets                                                  00000F2A GR
+  8 _weapon_effects                                                 00000000 GR
+  8 _weapon_enemy_groups                                            0000014C GR
+  8 _weapon_frame_indices                                           0000004C GR
+  8 _weapon_lookup                                                  00000196 GR
+    _weapon_pairs_00                                                ******** GX
+    _weapon_pairs_01                                                ******** GX
+    _weapon_pairs_02                                                ******** GX
+    _weapon_pairs_03                                                ******** GX
+    _weapon_pairs_04                                                ******** GX
+    _weapon_pairs_05                                                ******** GX
+    _weapon_pairs_06                                                ******** GX
+    _weapon_pairs_07                                                ******** GX
+    _weapon_pairs_08                                                ******** GX
+    _weapon_pairs_09                                                ******** GX
+    _weapon_pairs_10                                                ******** GX
+    _weapon_pairs_11                                                ******** GX
+    _weapon_pairs_12                                                ******** GX
+    _weapon_pairs_13                                                ******** GX
+    _weapon_pairs_14                                                ******** GX
+    _weapon_pairs_15                                                ******** GX
+    _weapon_pairs_16                                                ******** GX
+    _weapon_pairs_17                                                ******** GX
+    _weapon_pairs_18                                                ******** GX
+    _weapon_pairs_19                                                ******** GX
+    _weapon_pairs_20                                                ******** GX
+    _weapon_pairs_21                                                ******** GX
+    _weapon_pairs_22                                                ******** GX
+    _weapon_pairs_23                                                ******** GX
+    _weapon_pairs_24                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 30
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _weapon_pairs_25                                                ******** GX
+    _weapon_pairs_26                                                ******** GX
+    _weapon_pairs_27                                                ******** GX
+    _weapon_pairs_28                                                ******** GX
+    _weapon_pairs_29                                                ******** GX
+  8 _weapon_pools                                                   0000278E GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 31
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_182                                  size     27E8   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

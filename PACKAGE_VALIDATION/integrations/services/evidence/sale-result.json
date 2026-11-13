@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "screen": 5,
+  "money": 15,
+  "inventory_count": 0,
+  "service_bytes": [
+    32,
+    193,
+    26,
+    2,
+    22,
+    0,
+    0,
+    0,
+    2,
+    188,
+    184,
+    15,
+    0,
+    25,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,0 +1,11 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_chest_full.py", line 93, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_chest_full.py", line 72, in main
+    active[0]=False;e.memory[s['chest_probe_case']]=case;e.memory[s['chest_probe_command']]=1;wait(lambda:not value('chest_probe_command'),'fixture');events.clear();closes.clear();pending[0]=None;active[0]=True;drain(lambda:state()==6);press('a')
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_chest_full.py", line 60, in wait
+    raise AssertionError((why,state(),events))
+AssertionError: ('fixture', 57, [])

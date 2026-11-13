@@ -1,0 +1,65 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  2 _active                                                         0000000B R
+    _audio_command                                                  ******** GX
+  8 _commit                                                         00000000 R
+  2 _current_image                                                  00000005 R
+  2 _current_palette                                                0000000A R
+    _display_off                                                    ******** GX
+    _dungeon_invalidate_view_cache                                  ******** GX
+    _ending_images                                                  ******** GX
+    _ending_palettes                                                ******** GX
+    _ending_runs                                                    ******** GX
+    _ending_sounds                                                  ******** GX
+    _ending_upload_begin                                            ******** GX
+    _ending_upload_buffer                                           ******** GX
+    _ending_upload_commit                                           ******** GX
+    _ending_upload_fault                                            ******** GX
+    _ending_upload_home                                             ******** GX
+    _ending_upload_step                                             ******** GX
+  8 _ending_wait16                                                  00000044 R
+  8 _ending_walk_begin                                              0000034F GR
+  2 _ending_walk_busy                                               00000002 GR
+  2 _ending_walk_frame                                              00000000 GR
+  8 _ending_walk_tick                                               000003B3 GR
+    _game_transition_vint16                                         ******** GX
+  2 _lighting                                                       00000008 R
+  2 _pending_palette                                                0000000C R
+  8 _present                                                        000001FA R
+  2 _run_index                                                      00000003 R
+  2 _run_left                                                       00000007 R
+    _set_bkg_palette                                                ******** GX
+  8 _sound                                                          000002D7 R
+  2 _sound_index                                                    00000009 R
+    b_audio_command                                                 ******** GX
+    b_ending_walk_begin                                         =   00000088 G
+    b_ending_walk_tick                                          =   00000088 G
+    b_game_transition_vint16                                        ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        D   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_136                                  size      419   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

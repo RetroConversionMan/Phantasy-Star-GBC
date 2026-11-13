@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "original_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "corrected_rom_sha256": "0b9cee5c4cf9dca47887436237cf34ba19e76a26c79714bc64430d3f923e1133",
+  "corrected_rom": "ROM/Phantasy Star.gbc",
+  "production_change": "Restore reserved background palette 7 in main.c show_cutscene_record after loading each portrait.",
+  "additional_affected_scenes": [
+    "Myau Laerma transformation before flight: 4 pages",
+    "Final character dialogue: 6 pages"
+  ],
+  "narrative_sequences": {
+    "myau": {
+      "narrative_pages": 6,
+      "original_invisible_pages": 0,
+      "corrected_invisible_pages": 0
+    },
+    "odin": {
+      "narrative_pages": 9,
+      "original_invisible_pages": 0,
+      "corrected_invisible_pages": 0
+    },
+    "noah": {
+      "narrative_pages": 5,
+      "original_invisible_pages": 0,
+      "corrected_invisible_pages": 0
+    },
+    "opening": {
+      "narrative_pages": 8,
+      "original_invisible_pages": 8,
+      "corrected_invisible_pages": 0
+    },
+    "flight": {
+      "narrative_pages": 4,
+      "original_invisible_pages": 4,
+      "corrected_invisible_pages": 0
+    },
+    "ending": {
+      "narrative_pages": 6,
+      "original_invisible_pages": 6,
+      "corrected_invisible_pages": 0
+    }
+  },
+  "total_dialogue_screens_checked": 88,
+  "total_nonspace_glyphs_checked": 2687,
+  "original_invisible_screens": 18,
+  "corrected_invisible_screens": 0,
+  "unchanged_portrait_pixel_checks": 486400,
+  "closing_text_screens_checked": 6,
+  "other_scenes": [
+    {
+      "scene": "nightmare",
+      "text_ids": [
+        164,
+        170,
+        668,
+        672,
+        674
+      ],
+      "returned_to_walking": true
+    },
+    {
+      "scene": "guest-rest",
+      "text_ids": [
+        182,
+        184
+      ],
+      "returned_to_walking": true
+    }
+  ],
+  "ending_route": [
+    {
+      "ending_real_audio_IRQ_frames": 6794,
+      "ending_measured_native_frames": 6793,
+      "difference_allowed_for_ISR_sampling": 2,
+      "stack_guard": "DBC0..DBFF unchanged through DarkFalz, complete ending and return to title",
+      "audio_fault": 0
+    },
+    {
+      "ending": "Actual MiracleKey/door, DarkFalz combat, ending choice, sky/text/story/bitmap",
+      "credits_verified": true,
+      "stopped_before_credits": false,
+      "story_records": [
+        [
+          6,
+          3,
+          63976
+        ],
+        [
+          6,
+          5,
+          63984
+        ],
+        [
+          6,
+          6,
+          63995
+        ],
+        [
+          6,
+          4,
+          64006
+        ],
+        [
+          6,
+          3,
+          64018
+        ],
+        [
+          6,
+          3,
+          64084
+        ]
+      ],
+      "closing_texts": [
+        48822,
+        48848,
+        48872,
+        48893,
+        48905,
+        48929
+      ],
+      "stages": [
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "source_audit": [
+    "All 6 narrative sequences use show_cutscene_record; all 23 speaker records and 38 text pages exercised.",
+    "Nightmare, Governor return, guest-room rest and regular closing text use normal dialogue; all observed pages remained visible.",
+    "Road/spaceflight rendering hides the dialogue window and explicitly restores UI colors at the end of fade-in (travel_render.c).",
+    "Opening city caption and ending credit text are embedded image graphics, not palette-7 dialogue. Full opening and ending routes completed.",
+    "Ending walk updates palettes 0 through 6 and hides the dialogue window; reserved font VRAM is separate."
+  ],
+  "environment": {
+    "pyboy": "2.9.0",
+    "Pillow": "13.0.0",
+    "numpy": "2.5.4",
+    "PySDL2": "0.9.17",
+    "pysdl2-dll": "2.32.10"
+  },
+  "evidence": {
+    "before": "verification/cutscene-text/original-complete/visibility-report.json",
+    "after": "verification/cutscene-text/corrected-complete/visibility-report.json",
+    "routes": "verification/cutscene-text/corrected-complete/routes/report.json"
+  },
+  "limits": [
+    "Late-game routes start from documented SRAM fixtures; this is not an earned full campaign.",
+    "Real production ROM and controller-driven scene progression; pixel checks run in PyBoy.",
+    "Physical cartridge and audible playback remain unverified.",
+    "Road/spaceflight text handling was source-reviewed; those travel routes were not replayed in this audit.",
+    "This audit targets disappearing dialogue, not every gameplay branch or audible sound output."
+  ],
+  "diagnostics": "Initial PyBoy 2.7 attempts stalled during Odin departure in both ROMs. Both complete audits passed using the project-pinned PyBoy 2.9.0."
+}

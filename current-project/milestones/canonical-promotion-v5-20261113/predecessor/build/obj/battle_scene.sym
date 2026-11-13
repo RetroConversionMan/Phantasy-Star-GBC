@@ -1,0 +1,132 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _VBK_REG                                                        ******** GX
+    ___memcpy                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuchar                                                      ******** GX
+    __moduchar                                                      ******** GX
+  8 _background                                                     00000086 R
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+    _bank_read8                                                     ******** GX
+    _battle_animation_assets                                        ******** GX
+    _battle_animation_pools                                         ******** GX
+    _battle_motion_asset                                            ******** GX
+  8 _battle_scene_animation_frame                                   000005D3 GR
+    _battle_scene_assets                                            ******** GX
+  8 _battle_scene_begin                                             000004D2 GR
+  8 _battle_scene_boss_frame                                        00000CE1 GR
+  8 _battle_scene_boss_patch                                        00000D90 GR
+  8 _battle_scene_clear                                             000000CA GR
+  8 _battle_scene_clip                                              000001F0 GR
+  8 _battle_scene_configure                                         00000050 GR
+  2 _battle_scene_enemy                                             00000002 GR
+  8 _battle_scene_flash_enemy                                       00000779 GR
+  8 _battle_scene_flash_party                                       000007D9 GR
+  8 _battle_scene_hide                                              00000062 GR
+    _battle_scene_lookup                                            ******** GX
+  8 _battle_scene_magic_frame                                       00000C7A GR
+  2 _battle_scene_palette                                           00000001 GR
+    _battle_scene_pools                                             ******** GX
+  2 _battle_scene_type                                              00000000 GR
+  8 _battle_scene_weapon_clear                                      00000CA1 GR
+  8 _battle_scene_weapon_frame                                      00000C53 GR
+  8 _battle_scene_world_type                                        00000000 GR
+    _battle_weapon_asset                                            ******** GX
+    _boss_assets                                                    ******** GX
+    _boss_motion_asset                                              ******** GX
+    _boss_patch_cells                                               ******** GX
+    _boss_patches                                                   ******** GX
+    _boss_pools                                                     ******** GX
+  2 _current_animated                                               00000004 R
+  2 _current_asset                                                  00000005 R
+  2 _current_clip                                                   00000003 R
+  8 _current_descriptor                                             000000ED R
+  8 _current_pool                                                   0000014C R
+    _dungeon_graphic_palettes                                       ******** GX
+  8 _effect_frame                                                   000008CA R
+    _enemy_magic_asset                                              ******** GX
+    _enemy_magic_assets                                             ******** GX
+    _enemy_magic_pools                                              ******** GX
+    _enemy_magic_pose                                               ******** GX
+    _game_transition_vint16                                         ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _gold_scene_prepare                                             ******** GX
+    _gold_scene_show                                                ******** GX
+  8 _overlay_flash                                                  00000768 R
+  8 _overlay_prepare                                                00000691 R
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_palette_background                                       ******** GX
+    _scene_palette_capture                                          ******** GX
+    _scene_palette_commit                                           ******** GX
+    _scene_palette_prepare                                          ******** GX
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+    _scene_show                                                     ******** GX
+    _scene_show_room                                                ******** GX
+    _set_bkg_tiles                                                  ******** GX
+    _set_sprite_data                                                ******** GX
+    _set_sprite_palette                                             ******** GX
+    _shadow_OAM                                                     ******** GX
+    _weapon_assets                                                  ******** GX
+    _weapon_pools                                                   ******** GX
+    b_battle_motion_asset                                           ******** GX
+    b_battle_scene_animation_frame                              =   0000001F G
+    b_battle_scene_begin                                        =   0000001F G
+    b_battle_scene_boss_frame                                   =   0000001F G
+    b_battle_scene_boss_patch                                   =   0000001F G
+    b_battle_scene_clear                                        =   0000001F G
+    b_battle_scene_clip                                         =   0000001F G
+    b_battle_scene_configure                                    =   0000001F G
+    b_battle_scene_flash_enemy                                  =   0000001F G
+    b_battle_scene_flash_party                                  =   0000001F G
+    b_battle_scene_hide                                         =   0000001F G
+    b_battle_scene_magic_frame                                  =   0000001F G
+    b_battle_scene_weapon_clear                                 =   0000001F G
+    b_battle_scene_weapon_frame                                 =   0000001F G
+    b_battle_scene_world_type                                   =   0000001F G
+    b_battle_weapon_asset                                           ******** GX
+    b_boss_motion_asset                                             ******** GX
+    b_enemy_magic_asset                                             ******** GX
+    b_enemy_magic_pose                                              ******** GX
+    b_game_transition_vint16                                        ******** GX
+    b_gold_scene_prepare                                            ******** GX
+    b_gold_scene_show                                               ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_palette_capture                                         ******** GX
+    b_scene_palette_commit                                          ******** GX
+    b_scene_palette_prepare                                         ******** GX
+    b_scene_show                                                    ******** GX
+    b_scene_show_room                                               ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        7   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_31                                   size      E43   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

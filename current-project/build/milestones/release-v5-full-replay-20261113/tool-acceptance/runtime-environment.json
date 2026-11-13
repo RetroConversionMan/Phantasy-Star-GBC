@@ -1,0 +1,1061 @@
+{
+  "python": "3.12.12 (main, Oct  9 2025, 11:07:00) [Clang 17.0.0 (clang-1700.4.4.1)]",
+  "executable": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python",
+  "packages": {
+    "pyboy": {
+      "version": "2.9.0",
+      "record_sha256": "cabefadc9f2586eec6d01670b827afd7e732b8e4f0651c9a002033e41e328dfa"
+    },
+    "Pillow": {
+      "version": "13.0.0",
+      "record_sha256": "69d4961731b61796630a4901c31710fa9182b2a0bad37edbe7c5e0a34a73ba41"
+    },
+    "numpy": {
+      "version": "2.5.4",
+      "record_sha256": "efa5e7626d049430cef8b0b8ce2785dc97902da7485f5476ad04eb7010d014d1"
+    }
+  },
+  "modules": {
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/__init__.cpython-312-darwin.so": {
+      "bytes": 87744,
+      "sha256": "251c44724fb13d20b03abed87fa067649cf98e5c6814be2b4998f40def4b4c8c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/__init__.py": {
+      "bytes": 203,
+      "sha256": "7cb28bb7734f39ac0c934078946742c9499328eb31812c5e810364b6f559568c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/__main__.py": {
+      "bytes": 7511,
+      "sha256": "d17c344f0b0da889173ec6f2c3e1e2bd9a2f67d4c62c25a8357abd2b2a3dbeaa"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/_cython_utility.cpython-312-darwin.so": {
+      "bytes": 473000,
+      "sha256": "ba35b19d89a166ae19d5f95f67b98ebef9e830bcbbeb2e2c8fe285fc2d85f7c9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/__init__.cpython-312-darwin.so": {
+      "bytes": 88032,
+      "sha256": "abc96e967fde414c9377c4e9a2fbbf5d729e52726731cc50cd987093d3f1c6f1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/__init__.py": {
+      "bytes": 450,
+      "sha256": "fd5e673089ba63192e09463ddaf5dd07e4c4b2c781da4952088f0659cef537d3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/constants.cpython-312-darwin.so": {
+      "bytes": 89392,
+      "sha256": "15417f0438375429d9ce8e640736a29340c1c25db316f175cb34e8bf175c45e5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/constants.py": {
+      "bytes": 1002,
+      "sha256": "d9db7fc287949a74b4a585ab1f1faefb41ab2e09e9ade4c0ae0007d43ba05a61"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/gameshark.cpython-312-darwin.so": {
+      "bytes": 229472,
+      "sha256": "6abbd05c9e53f1f0e5439d758fc5d519f3d27c88eb0af715c646f645236b82f9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/gameshark.py": {
+      "bytes": 6119,
+      "sha256": "6f76619aaeb326dbf8683829ec830fddbcac95f9e075cb53f300b0c7b3bbe387"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/memory_scanner.cpython-312-darwin.so": {
+      "bytes": 281864,
+      "sha256": "42d8a542bdda1186c2445ae777868c7491699041e8fcdb33d940ba47d8be2dc3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/memory_scanner.py": {
+      "bytes": 7560,
+      "sha256": "a5565ed66747694ae1635c7c977e2fe56ecbbeba4bfe0308b237cb4d5c2fcf90"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/rumble.cpython-312-darwin.so": {
+      "bytes": 188272,
+      "sha256": "fc24daf6ec3f06c3cbdc06e42b975acfa54adbb0172e6eb1d64c12a4baf689fd"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/rumble.py": {
+      "bytes": 1353,
+      "sha256": "60f5d9cc28ff8494a4156e29498bd6194af0c306f7259c401f0edd65634a1217"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/screen.cpython-312-darwin.so": {
+      "bytes": 307248,
+      "sha256": "5fbdb1f54c4090120e7559f3130cb5604bd31901b276221b9967d26a86b969c5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/screen.py": {
+      "bytes": 12561,
+      "sha256": "1fe35fd85d2b8d59966c559648bf1e77fb4d58f63a8a6afd4bcd4c7b19d43372"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sgb.cpython-312-darwin.so": {
+      "bytes": 147464,
+      "sha256": "5063829dbdfe3b348e086a4331b10669adbad37e24333404f6b81327d2c1a9a6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sgb.py": {
+      "bytes": 3556,
+      "sha256": "e1a70ca8363720e56c1f3bf6a12eb1faf8693cc2ab89dceeac44ca643681a614"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sound.cpython-312-darwin.so": {
+      "bytes": 241080,
+      "sha256": "6ee1981d69ed2e0434bf41d45c72de3c33a0d0b0427b7354c58140ba738cef05"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sound.py": {
+      "bytes": 6080,
+      "sha256": "3305fcfac9e37e28690759eaa599b138a4c9ddf0ef4da090d126b35f4fb7ec17"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sprite.cpython-312-darwin.so": {
+      "bytes": 288400,
+      "sha256": "f504d73b1d200a57342a019b4e4da7eda47ed4cc042256b3007ae7f92badd5e5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/sprite.py": {
+      "bytes": 7220,
+      "sha256": "69a1de84d218fba833853b929f23151579706d8a1a759d3f3bff273713efab0a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/tile.cpython-312-darwin.so": {
+      "bytes": 306312,
+      "sha256": "7b2e10037213fc273c438f2df536a8a85e2513aef8391971c3a75e8dbec61d40"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/tile.py": {
+      "bytes": 7690,
+      "sha256": "46ad7e88dd814708d57ed09a2de4876785fd7bb25d6ca565195c3eaf4eabbf64"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/tilemap.cpython-312-darwin.so": {
+      "bytes": 349056,
+      "sha256": "28168e60978fecec5af901490b231d09a16a5c8d4f8fb16d0e98990a8c1087fb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/tilemap.py": {
+      "bytes": 9674,
+      "sha256": "3bbe432e44436af6b9cfa9f878dea8bc05940c8ef9eb3283824fe3124d348d00"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/torch_cuda.py": {
+      "bytes": 16095,
+      "sha256": "91a671e9276f35de7af8403ee0848d033a0e20bdbc67ca402174f433b3f35f4e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/torch_renderer.cpython-312-darwin.so": {
+      "bytes": 573304,
+      "sha256": "d03be3ad0d79610748aea884343d6a55738d8d88d17f3acf38449c62078295c6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/api/torch_renderer.py": {
+      "bytes": 15223,
+      "sha256": "49297a57a64878b896351bdb3eafbd5466580e6298e115c1bed987ee587dd38a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/conftest.py": {
+      "bytes": 4345,
+      "sha256": "9b08f7bbd79fb909c412c97c63b74e46a09ad611e87e63a6e4c263fb00d4574e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/__init__.cpython-312-darwin.so": {
+      "bytes": 87296,
+      "sha256": "cc6d22a2227e15112a273488ba360d793c1281e5685cc97870773a288d46bfc1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/__init__.py": {
+      "bytes": 80,
+      "sha256": "57f7840e66a40f606542b7bb0d795f4d2ad849ed6cf1e637fe4793f8f2431c0e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/bootrom.cpython-312-darwin.so": {
+      "bytes": 188048,
+      "sha256": "bcaf1ff7ec95c570fcb021348f21b4456c4f1838e2df2f044022a9b792fbaeeb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/bootrom.py": {
+      "bytes": 666,
+      "sha256": "7b639b3f1fca263d5566127ba39e4fba6ae890975ca5aa7c632151c8cb1370c8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/__init__.cpython-312-darwin.so": {
+      "bytes": 87824,
+      "sha256": "6f9a40ae3e2c3296a36346d465c12d46ac8bb6144bd8f55c98aa67441557eee2"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/__init__.py": {
+      "bytes": 156,
+      "sha256": "28a39544a55f90b16a3f7dcc3d227356f694e14a8fe35b0ebe2a329bbec70991"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/base_mbc.cpython-312-darwin.so": {
+      "bytes": 289280,
+      "sha256": "a6edb716a730a1b626042d8ec81563ceade734ea7eab0be64f1057db88df0756"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/base_mbc.py": {
+      "bytes": 6879,
+      "sha256": "2a5df8c0834eac509c1b5d55c28aad29b0d0bbdbe1395d55dedcad33f607e473"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/cartridge.cpython-312-darwin.so": {
+      "bytes": 208816,
+      "sha256": "9a1490a603724f1707ba4fdd1ccafcacb8de04f1998a02ae763b2e0d18450b26"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/cartridge.py": {
+      "bytes": 3886,
+      "sha256": "d111ce45650330ca0b40dd8668f3fd311bd1e2ddae52b3ef08d6f52848e8ec6c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc1.cpython-312-darwin.so": {
+      "bytes": 249672,
+      "sha256": "10baaa6b31e2e55d1bd58c6a0ec4576e7de7aab5e4156acfb52830fab75f88a2"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc1.py": {
+      "bytes": 4082,
+      "sha256": "ad57cb81822c2e3132f3927306f5a0e2ba384ac57b55b18b5c40126f3e6aa6bc"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc2.cpython-312-darwin.so": {
+      "bytes": 187752,
+      "sha256": "0126e31065abb961ad85b585a61436a436559e5f19a9ac5b7921595d2e99266c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc2.py": {
+      "bytes": 1732,
+      "sha256": "ee9a9f7b1e319de4adcf09f8d334b0e90545f20dd62bb1fd9f04e1eb88fe9c3d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc3.cpython-312-darwin.so": {
+      "bytes": 209112,
+      "sha256": "085721225da05e712588822cb4bbf6397144bbc79017d2f47415dbb1d55ba5b9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc3.py": {
+      "bytes": 3921,
+      "sha256": "b5555277c211f109955b399122ef43db4489ee76afbb9b505e826f84dbfcbdab"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc5.cpython-312-darwin.so": {
+      "bytes": 188312,
+      "sha256": "eabb737afa3837c89b6b1928e2a2be6fc97ff23412d85e4091b8d32b8d1c0cbc"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/mbc5.py": {
+      "bytes": 2654,
+      "sha256": "ef217831520228483933916f86164d7642f1cf1024c48d56a35c5673721d81f0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/rtc.cpython-312-darwin.so": {
+      "bytes": 251464,
+      "sha256": "936e5e4a58c26823f94975f5b8e0476d887b7268711531c5172dea71cc98e501"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cartridge/rtc.py": {
+      "bytes": 8795,
+      "sha256": "40ddcfb880a2d4690ccf13697e14ccbaf9e5d47a2c838856bb3d15ecc58bb8e7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cpu.cpython-312-darwin.so": {
+      "bytes": 363288,
+      "sha256": "e67e414766ee86788858eb0f2715793ff0e121a585ae3c972ddd2794e340367d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/cpu.py": {
+      "bytes": 14346,
+      "sha256": "4c5800d3258af12c406e431d892dcef1fa553b3748fc9d95c9d1071e27badcfb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/interaction.cpython-312-darwin.so": {
+      "bytes": 187456,
+      "sha256": "b44b64ea0d3c63f31bf2a658215cf887f488591cd1a7b50bfe9abd9106bb6cfb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/interaction.py": {
+      "bytes": 3644,
+      "sha256": "46b3a0ba51942f9d6ce7788723b6a0a2f5ca50e8d57540d6ce284633815c9fae"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/lcd.cpython-312-darwin.so": {
+      "bytes": 1143624,
+      "sha256": "93786af12bf104b34cf7ab6915fe0131de88bdf169ee3d939cd3b4d99e414828"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/lcd.py": {
+      "bytes": 171040,
+      "sha256": "ebf92dad5d30c1e5a5a34ea91406703635ef285b4d392e7ecc694ab0409b66e9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/mb.cpython-312-darwin.so": {
+      "bytes": 439528,
+      "sha256": "47094c16225bc9400949e8c8a0828c882572370df02740f0212213b8150ea774"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/mb.py": {
+      "bytes": 63846,
+      "sha256": "5ba2c1473b5ce4de4eac6f588f9f79ee7d5576a3b36561f68460c2203a0a9ce9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/opcodes.cpython-312-darwin.so": {
+      "bytes": 410896,
+      "sha256": "da593e98c439b4936b56b8d190d194625c2709b7c8e03f06b773e89eea56e4d2"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/opcodes.py": {
+      "bytes": 151824,
+      "sha256": "249cfdcc45fce7708aea6de74beb5eb7b8715edc2088e51e22470f999bf35b38"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/opcodes_gen.py": {
+      "bytes": 56318,
+      "sha256": "2a339b7ea8f64d8c7da1a3eb4574f2c1e683b834aecd113514492b8d6705833a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/ram.cpython-312-darwin.so": {
+      "bytes": 188248,
+      "sha256": "5b0a03986387555e6aba0ad37fc263e6507c236879113e02e090a81ccc0a00a8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/ram.py": {
+      "bytes": 1853,
+      "sha256": "0312e2453356c3f98ec916aa624f02de53c3faa42a284287f77c533f188a3cfb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/serial.cpython-312-darwin.so": {
+      "bytes": 288192,
+      "sha256": "6e7ce0a1ea2ebbd613892ba60d29a47b8016e17f436d544256b8fe792738128c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/serial.py": {
+      "bytes": 9165,
+      "sha256": "de27be3b96ca39fd4a480b950076c9e0091265afabe3585eb8e98b7326844cd1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/serial_printer.cpython-312-darwin.so": {
+      "bytes": 212280,
+      "sha256": "27770a9d09426dad8d9ccbca5c9a1669e52707b4154821c51d395e3fff62f18d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/serial_printer.py": {
+      "bytes": 1558,
+      "sha256": "6de83db5953ede95d7d7bfbf535f6c1921cf2bb99cc3693595301df9b7a826fb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sgb.cpython-312-darwin.so": {
+      "bytes": 418136,
+      "sha256": "27a49c673fb52e4cd12e29ffc1d2d8247d62f2ababaa440b211faf22eda58edf"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sgb.py": {
+      "bytes": 18403,
+      "sha256": "99091e7222ec730bfbfc8ee1fde331a9f428b6af999a875647073626eb6fda98"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sgb_border.cpython-312-darwin.so": {
+      "bytes": 355600,
+      "sha256": "979cb7d1d7111378b37ce4f4e15314d48f1ce5da112ce87a9e8a61dc036daac8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sgb_border.py": {
+      "bytes": 11365,
+      "sha256": "9095053bdb5a8fd7d7915040ae87ef4bc985058a64ad3c4790de7350d3cd0d6a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sound.cpython-312-darwin.so": {
+      "bytes": 501560,
+      "sha256": "d7b7c8753907613819bf78783d64dc5db9f1cec2e7febb507e092ae2d91e299c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/sound.py": {
+      "bytes": 62083,
+      "sha256": "8cc67d6b7b0ca2cdf9d3f013ded095ab52e37cbc0e339686edd57b0b76cd7668"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/timer.cpython-312-darwin.so": {
+      "bytes": 188136,
+      "sha256": "4f235fcb9208199d070030837ed3aaea77676b714e3ad86d25a4fed3f6bc41ba"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/core/timer.py": {
+      "bytes": 8083,
+      "sha256": "8dc162bb9d0fd37ee5af0b33b5787ea1356210ca0d3ad326e2d64a58289c0a3d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/logging/__init__.cpython-312-darwin.so": {
+      "bytes": 148688,
+      "sha256": "feec6c306aaddb2f4413c3f8b86885850af07415f4501d400e6ba520151261f1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/logging/__init__.py": {
+      "bytes": 1270,
+      "sha256": "1e73a3b3d43c991c06bcc38b498c52a35c5881b456db6b5f48929e7bd06c9a8f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/logging/_logging.cpython-312-darwin.so": {
+      "bytes": 130592,
+      "sha256": "c3e042e8b2ce016406978b8883d8d44be5fe6e335ba0acc7df8c177bb07ddb6e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/logging/_logging.py": {
+      "bytes": 566,
+      "sha256": "1f884b0e9408b6cc1bd2e6ccc6e3b94a372a70141eaf68b3efe115e0ed1648d4"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/logging/logging.cpython-312-darwin.so": {
+      "bytes": 245904,
+      "sha256": "290b7d8aa03bd5e3fed16b2a938a29631a0b3d7be22aecaf5eab19d08d8ef154"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/__init__.cpython-312-darwin.so": {
+      "bytes": 87408,
+      "sha256": "061a3a9f1427d483cfcaf373a76513b3ba0eac2760ac142f9f23a175fff9e714"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/__init__.py": {
+      "bytes": 181,
+      "sha256": "eafa374bc088b8fb99376dbbab2884c17c411de654f69aabad6090475f2f5127"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/auto_pause.cpython-312-darwin.so": {
+      "bytes": 209024,
+      "sha256": "a6575524daaf8927e9e8183261eeb1071437bce8fa3418111a095bf1837f4b40"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/auto_pause.py": {
+      "bytes": 700,
+      "sha256": "7e93162030b23dd1ebef500de3fce195181f7ec4b696f7145140631fb325be83"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/base_plugin.cpython-312-darwin.so": {
+      "bytes": 582000,
+      "sha256": "be5e0d6bebac5a9543251dba14790cb099ecc35d866e3e4104bad904c1fec565"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/base_plugin.py": {
+      "bytes": 10821,
+      "sha256": "08fb85b905150782e518ca76451642453a7cfe61067aa17d816353ced54e5bd3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/debug.cpython-312-darwin.so": {
+      "bytes": 1259656,
+      "sha256": "baa74be5d19876f3d76537e4ff65d99bc612884f51aefad6632eb0998934ada9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/debug.py": {
+      "bytes": 45267,
+      "sha256": "e11205411c4c749eb547ba11b2aa516921085f26c1eb30701d02226567d487f8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/debug_prompt.cpython-312-darwin.so": {
+      "bytes": 299136,
+      "sha256": "665087076adf65c21324c65e56f7ea6082004be6e9a5ec7af5e218e723677185"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/debug_prompt.py": {
+      "bytes": 4450,
+      "sha256": "d00fa2b4129b74bac12181e5e809fe7d2a9ba559088ec791d58be9c460b3a479"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_boy_printer.cpython-312-darwin.so": {
+      "bytes": 327464,
+      "sha256": "ca650e65b2f1b24a5383a49b26f07a4ea2c561cb0d095464bae0a718823f2913"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_boy_printer.py": {
+      "bytes": 11711,
+      "sha256": "1bd8a187e7708bbe1a308117987e805bc8d44eac7ee8891b10c185f83409eb58"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper2048.cpython-312-darwin.so": {
+      "bytes": 309576,
+      "sha256": "56bc6a99dcf2d2c6c632fe774a0f0b37d07151060ce284cda170960fda8f778b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper2048.py": {
+      "bytes": 4648,
+      "sha256": "6353434b7034b40bc9d5a6ce49f2cb5a4adbde82d878482b336736bfa45818bf"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_kirby_dream_land.cpython-312-darwin.so": {
+      "bytes": 310576,
+      "sha256": "77263fceb7fb4005269382c414cef09d2f24270a32d3b0f80137539d5a0c085d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_kirby_dream_land.py": {
+      "bytes": 5555,
+      "sha256": "602766a89995caaea966df839599f148e9f436f609565fd332dd82d4c95dd8e4"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pandoras_blocks.cpython-312-darwin.so": {
+      "bytes": 353184,
+      "sha256": "e0c2941ebfb68a81fc5fd4409428b8486d091f16d19e7e98c7b1f504d90da0c4"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pandoras_blocks.py": {
+      "bytes": 5509,
+      "sha256": "48bd9fcb4bf5205042d9955eea0dadc745ce804540a4a4e1fa5960aaf219ca7b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_gen1.cpython-312-darwin.so": {
+      "bytes": 1044704,
+      "sha256": "6594b8d592d52b1a33d6b0be22c7fc4aa0a876b731c74496cb22a64f5e28ca46"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_gen1.py": {
+      "bytes": 27826,
+      "sha256": "dab470f62c43ed0032ae6621a12a4980d887f4cdcc74ee1c268f3cec1546ddf6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_gen1_constants.cpython-312-darwin.so": {
+      "bytes": 261624,
+      "sha256": "1888dbd5d73cea5829d7e67661f2226c0ee0a96ee9b6a623c776f9f0aa1df9a2"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_gen1_constants.py": {
+      "bytes": 39348,
+      "sha256": "fe65bcd96c162d456f899fb5a3c70da72beaca48ddd114dcf210f69f70c44196"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_pinball.cpython-312-darwin.so": {
+      "bytes": 1461600,
+      "sha256": "dd829aefb5f2705d7d5e2392490d2d04ff7df4e791a3cbd98ddf31686a55e2d3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_pokemon_pinball.py": {
+      "bytes": 49800,
+      "sha256": "1c7943bf3e266b6cc4a32f97c7ce1b711262a7d642e456886b2814026ab2b874"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_super_mario_bros_deluxe.cpython-312-darwin.so": {
+      "bytes": 977976,
+      "sha256": "3347d7a6321357338ddf081a8a1a8fadb987cf41dc22b8bbce1caf0cdfd6a2fd"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_super_mario_bros_deluxe.py": {
+      "bytes": 27558,
+      "sha256": "aabc17970a24c99c37a6e6d28199e9cb44e46554ec69459663017dfe5f86c0c5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_super_mario_land.cpython-312-darwin.so": {
+      "bytes": 530896,
+      "sha256": "6fc2b173652f432a8487fe1ecbba8745ff82bac438f6c4faef28698aa156e549"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_super_mario_land.py": {
+      "bytes": 21248,
+      "sha256": "3b036c6b336587d61a74d04ccf321502e6905f455c23f168376db9d1bcefb8c8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_tetris.cpython-312-darwin.so": {
+      "bytes": 346696,
+      "sha256": "e1370826f49cefd5451495e5287510b8c2a5534143d8160bfcf96f56685167b3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/game_wrapper_tetris.py": {
+      "bytes": 9118,
+      "sha256": "2eec78c9327c8817628897d552a607457ed8e579045665eb6d985bc9ca81b650"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/manager.cpython-312-darwin.so": {
+      "bytes": 439120,
+      "sha256": "0149ff0ce11df0e3941a8954ae6ee4586d416ffbcfd1da603c1a360e77c32f78"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/manager.py": {
+      "bytes": 18234,
+      "sha256": "aedd661a5f1f6f42a682092968e1693edb0ab021eded420089e631edbc682d84"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/manager_gen.py": {
+      "bytes": 12108,
+      "sha256": "f75c72fac1446741db86bf944a42062e03f380a9255d04955c05b0d5a6ccb781"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/record_replay.cpython-312-darwin.so": {
+      "bytes": 285392,
+      "sha256": "624aaa08a01a1123b4e02e6520fa990664fa5f123d24f5dc07f44ccbb2ae8336"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/record_replay.py": {
+      "bytes": 2177,
+      "sha256": "ca2aace7fe37f1a8cff0fd29d9f833df77c050b7dd0c8179b3cb1c05dacb4117"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/rewind.cpython-312-darwin.so": {
+      "bytes": 451488,
+      "sha256": "ab6058a4566ac35b2b740700df53eb5f134944c84fbe4205ccf6254e3a2a9969"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/rewind.py": {
+      "bytes": 10704,
+      "sha256": "3b5468d1f92163fc97a7465976006eef15a63f2c832b2dc032b991ba79bf1d66"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/screen_recorder.cpython-312-darwin.so": {
+      "bytes": 341976,
+      "sha256": "bbf51e7e90f341a4cef685151a0d5824fb46b0b854fd53587147c92d060806a7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/screen_recorder.py": {
+      "bytes": 7542,
+      "sha256": "1b017b83728aede3f2b5032a91eddf03a59edee04182342c21dbf821b784057b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/screenshot_recorder.cpython-312-darwin.so": {
+      "bytes": 210824,
+      "sha256": "b7458d13888cae29eec0a51054c92b00bb109dca381bfd62b46a45c3c7eb22d7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/screenshot_recorder.py": {
+      "bytes": 1189,
+      "sha256": "1c373edd90e268eb9415eacad6d1722efebd0d6f5661ee3119637ccb6fd5bcd8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_glfw.cpython-312-darwin.so": {
+      "bytes": 614336,
+      "sha256": "945a5da43091281b4c2c1e54ef430b3dfa397946f11635f46e5ac202d7b5f964"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_glfw.py": {
+      "bytes": 10414,
+      "sha256": "399008b37b473cd61ec8bb3c2e598bbddb8e05321797b9f910fd33d88b75deb7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_metal.cpython-312-darwin.so": {
+      "bytes": 342720,
+      "sha256": "27af383035e1b4792c361fdd2e04c83f578743b3a82917a7a4d2cda5924d1145"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_metal.py": {
+      "bytes": 4076,
+      "sha256": "36aa36673bdcb0355bdf748dc45d7403b35f48968275aa0f1282d7eb01f0059b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_null.cpython-312-darwin.so": {
+      "bytes": 211136,
+      "sha256": "aa2347be06df02132560d5fb0bbc2aece824eb28c1dc3921b90e050687547085"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_null.py": {
+      "bytes": 855,
+      "sha256": "adf3b481974c0e0f440359b45ccd0608745be59a57376f111bca7f55ea77a317"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_open_gl.cpython-312-darwin.so": {
+      "bytes": 467128,
+      "sha256": "9f0031f7bf2ea5f5b6d5ee68bce790b99355ae8000ae42487efa6b8a9136d4f6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_open_gl.py": {
+      "bytes": 6705,
+      "sha256": "66f3336b83062c4a4d722cd87278a379adede4fac3da47eafe45180d589c7bff"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_openal.cpython-312-darwin.so": {
+      "bytes": 379152,
+      "sha256": "302b7ef6a0bf22f3d2351db05ac76ed1849a1a98c968ade033c0efb8ac63a1f9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_openal.py": {
+      "bytes": 5690,
+      "sha256": "a9470cc34b6f76a490e1025d2b0d5c339057a194a284c6e842ead46e16400a77"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_sdl2.cpython-312-darwin.so": {
+      "bytes": 653792,
+      "sha256": "03cf968d9d8ad89c9fc45e0beea7424c20fb6c2adcd54b2195c787ff1098a5c0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/plugins/window_sdl2.py": {
+      "bytes": 15706,
+      "sha256": "e76ae76b72e91127892bc03600cb83b2a085f48a9ac2705cb9dbdc388f142387"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/pyboy.cpython-312-darwin.so": {
+      "bytes": 1397880,
+      "sha256": "8c735810adedfc5c86cb6818bdd576c97e8e945dc8f9a7e5af278a2aaf032460"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/pyboy.py": {
+      "bytes": 93463,
+      "sha256": "dbbe895edf3b4f7d306555ec9aa0c58898db4b5bd17e79157084e5351d209759"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/utils.cpython-312-darwin.so": {
+      "bytes": 582104,
+      "sha256": "4d2ec4e75bb9335be40a8359154cbbeb0c9e8733df98d8193693a6e683b01f0a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/pyboy/utils.py": {
+      "bytes": 14475,
+      "sha256": "941453a265fc3575e67dc95ad894d21fd2241f711a3b8b933bd414bfbf80b453"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libXau.6.dylib": {
+      "bytes": 69584,
+      "sha256": "c30323abc362ae0e5ff8b043e13a179a1bf6a9f76011ffc57195fd43020de535"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libavif.16.4.2.dylib": {
+      "bytes": 2999136,
+      "sha256": "5e27779af8078c5586c045176db72779a09e5f87c6d516373913a6c092b76340"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libbrotlicommon.1.2.0.dylib": {
+      "bytes": 183712,
+      "sha256": "3f4843c17f3cccc986279a4c9ac8a11dc3077c412fd856d1bad8231bf027a25f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libbrotlidec.1.2.0.dylib": {
+      "bytes": 104080,
+      "sha256": "351fa4a2f4faed4147dfead81a8b0f5500ada31db64f74c8368bc1ab894f0dd1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libfreetype.6.dylib": {
+      "bytes": 769872,
+      "sha256": "b1e5b0bd6f696d9458bbd370c1417f8b1a6bb6953c26c4c0543750f96ec32c33"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libharfbuzz.0.dylib": {
+      "bytes": 1625248,
+      "sha256": "2c88b14217bd5c823d615282dc79b860c79b7d066ddae72ad4d10e0ecca8bcb5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libjpeg.62.4.0.dylib": {
+      "bytes": 701120,
+      "sha256": "172444d18ef193c128e3f9f4323e9d22b0d824b8172a1389ecd048b279280629"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/liblcms2.2.dylib": {
+      "bytes": 421168,
+      "sha256": "188685d4468afb124af58f471fb2382f94b98ef560995bc910eefab50134e8fb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/liblzma.5.dylib": {
+      "bytes": 216944,
+      "sha256": "f08e18e2363a8e4fc8099de9c8b0b96b30a6a2e4a60e890f2cebb1a9e25a92fa"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libopenjp2.2.5.4.dylib": {
+      "bytes": 430576,
+      "sha256": "2af52733d40803561752e12d6e917a5e16932a1fb7426760a2e6d8c10989c47a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libpng16.16.dylib": {
+      "bytes": 257296,
+      "sha256": "4777ff2529c03d4181470fb9afa10081d36153055c2989aa16bb15d6b513e772"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libsharpyuv.0.dylib": {
+      "bytes": 85856,
+      "sha256": "6b2d464413fc35783c79936f1e6be631585448a37765cf79c238be2ea5e5505b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libtiff.6.dylib": {
+      "bytes": 572544,
+      "sha256": "d17ccc4d89a37c1db72aca63fdf26b2f07eaaeb737a5232a337585e3c920b3ed"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libwebp.7.dylib": {
+      "bytes": 512672,
+      "sha256": "0a2ba0179e6bcc1bccc1a88c38b7d8efd0302d45a1bfc1eb4cf1f1f03ede73f0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libwebpdemux.2.dylib": {
+      "bytes": 69616,
+      "sha256": "f5ec6b6750ee91ff032ba62b18afc5f37c7bc842bfc9b2d325df41bc656ea066"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libwebpmux.3.dylib": {
+      "bytes": 105792,
+      "sha256": "f9c291035190c3af29494ce9fb62987c25ee78c4365c92c323ccc5ec8740143d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libxcb.1.1.0.dylib": {
+      "bytes": 193760,
+      "sha256": "125bcffc8971652784b6a8b4061501f891aeafdf361aa4b777ba3bacc548bc84"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/.dylibs/libz.1.3.1.zlib-ng.dylib": {
+      "bytes": 176320,
+      "sha256": "39ffbe6a87460a579cf414c3ee668e449b32c2cdc2cc0b64921d53fd59cb56ed"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/AvifImagePlugin.py": {
+      "bytes": 9419,
+      "sha256": "7d5c9addebc40cdbb6d9d7643e303c388bb9fd302838a750319565f6090dddb9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/BdfFontFile.py": {
+      "bytes": 3260,
+      "sha256": "77ca2d9ac0cfd7fe08f70cb82298f743ccc546f478cd28feecbbe55056dc4556"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/BlpImagePlugin.py": {
+      "bytes": 16529,
+      "sha256": "8f603c8fbe741c044577f8a5852c678ffe9c57a573b9db2b904e8094a3aa0e32"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/BmpImagePlugin.py": {
+      "bytes": 20391,
+      "sha256": "778ffbc6dfb15b7cba970a5962dafaf721cf8784ff13a140dccab25436c0ac9c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/BufrStubImagePlugin.py": {
+      "bytes": 1675,
+      "sha256": "20cd04cee3c05601e94ff56ea735dc397269c504fa667dc68a6740d05cb9b618"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ContainerIO.py": {
+      "bytes": 4647,
+      "sha256": "b90898580337cba237436dacf897048e414d3d96e009a80877c441046b514d3c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/CurImagePlugin.py": {
+      "bytes": 2747,
+      "sha256": "ac6d237f4fafcfa8fe76e4b087cca78f2a42103ef99062ab8e755ad2de6b5ee0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/DcxImagePlugin.py": {
+      "bytes": 2318,
+      "sha256": "1b5cf45c25491a78e417ddf8c67b7e56de97885c2b5bfa69868790b226078e3d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/DdsImagePlugin.py": {
+      "bytes": 19182,
+      "sha256": "133b4bfe48e78e3096e065431cfe873d00b7abb4b5039833b297692e7fa38c9c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/EpsImagePlugin.py": {
+      "bytes": 17133,
+      "sha256": "a6f288068186c0a0cf3ca3709552df4e7c7b332069d8907fd7618c7a43a04460"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ExifTags.py": {
+      "bytes": 9918,
+      "sha256": "8bf09947c265a4cdadb0daaeeab597ec52820f79e1d3dc236e518e873dd0ec4f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/FitsImagePlugin.py": {
+      "bytes": 5365,
+      "sha256": "0033984c0c8f97e8d03a46f75cb421293b43fc7ed79e2031695e576d6213c464"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/FliImagePlugin.py": {
+      "bytes": 5170,
+      "sha256": "fdec8e67a3019152ab5365234d60686524f4c3bebbafb946bf1cf72ced6cda19"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/FontFile.py": {
+      "bytes": 4323,
+      "sha256": "f1ad4c036be09fce0a08765d42e0ccf65c784c1e238f41b5c3f7a85f8f04fe3f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/FpxImagePlugin.py": {
+      "bytes": 7498,
+      "sha256": "40a859a4573cf5e94ba4e9041b4485ebeed9f5dedd38054e3a99473c55d90864"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/FtexImagePlugin.py": {
+      "bytes": 3713,
+      "sha256": "7f95e8baf6ad63c1569870d93beb4dd49b763d93430290654ec2ac3e5f942b63"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GbrImagePlugin.py": {
+      "bytes": 3065,
+      "sha256": "3545646e393680d5cc635aa3643d634131a9c6213b9cc3c4cc276fc269fb7044"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GdImageFile.py": {
+      "bytes": 2932,
+      "sha256": "5f73e93245a796a0cd8ee1ed1ae20dd7a3c2d7ebe7fa98c0b3e37f64a381a77c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GifImagePlugin.py": {
+      "bytes": 39604,
+      "sha256": "10de47f8b414ee9d1478b469a0f7ed38fe5cf4da2a14313989ecc75469c798cb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GimpGradientFile.py": {
+      "bytes": 4027,
+      "sha256": "3456596b4ad84c9492482deb3820573a15b817a1ce3b55eab0069f9e542021d7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GimpPaletteFile.py": {
+      "bytes": 1888,
+      "sha256": "0f5b7cebe76f5bc92951c4eac9a6bc5875c2a7a683c42de438e6ecdbc176d98f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/GribStubImagePlugin.py": {
+      "bytes": 1704,
+      "sha256": "b192ff430da9a39cb25c51b4a401d443558634e4fc7b25d4b58097d89f0da1d8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/Hdf5StubImagePlugin.py": {
+      "bytes": 1686,
+      "sha256": "9f8a32aa127b0215c53f06f8a11dccc5aa807c0daf4e8ab14d531f1723c46b38"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/IcnsImagePlugin.py": {
+      "bytes": 12479,
+      "sha256": "c4d2de3c0cddbb8458aaf6b872d1e8a3dbcefa39bac9a4aec71fdbe335e113a8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/IcoImagePlugin.py": {
+      "bytes": 13817,
+      "sha256": "b771b2582490349e83ad296df2727036bca5f4b8ea87e1b756193cc59f08741b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImImagePlugin.py": {
+      "bytes": 11832,
+      "sha256": "10e53c037685b09bdf0dfb546b0fe0f2f56a6162ee15b9c902327d552238a37e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/Image.py": {
+      "bytes": 153846,
+      "sha256": "04050c2d4dd67931ce8c3cfdbc49ac4a6944d379d037c8f1d5eeeb67fba29a10"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageChops.py": {
+      "bytes": 7077,
+      "sha256": "9443089e2ab9bba37caf454bb6509c8c05b947275b9895b891f8fab9fe8b476a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageCms.py": {
+      "bytes": 40163,
+      "sha256": "9e161faa0807179b599d8fd7fa1de1078010ba34087201e092a77d7c9194b1fc"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageColor.py": {
+      "bytes": 9488,
+      "sha256": "a20b0d2eab7e6d2d095fd36e3da71446d874f408f296e2641875ddfc78295070"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageDraw.py": {
+      "bytes": 35407,
+      "sha256": "9f4f14b890236731df684c3c9334487af7704bf1b83434481aa8636c5892ffe1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageDraw2.py": {
+      "bytes": 7334,
+      "sha256": "d4da845bca46ba0812fcc04b686616fb08e2d506f18551db6f0f065c4e8d3047"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageEnhance.py": {
+      "bytes": 3582,
+      "sha256": "cdd4a9458df340bce21680153f5b8065c091c1d79d9530974317ad5d1034caf5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageFile.py": {
+      "bytes": 30240,
+      "sha256": "55a48a69263e4b4d52fc3b419103c92836cf259a4f6383f93d65e1f22aab0c04"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageFilter.py": {
+      "bytes": 18937,
+      "sha256": "d54985fcaec43ced7bfeb4eba4600dea4482559a2811ff0e7caad1a72f6b5f43"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageFont.py": {
+      "bytes": 63900,
+      "sha256": "9182befa0e4047e8df244ca9e8534fdb52312bcf10219629c608c91efe8a6821"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageGrab.py": {
+      "bytes": 8096,
+      "sha256": "54b1f0c2a04541f23503c8ec6dc0aeac3dde9df9063f6d3147c82af2232680ab"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageMath.py": {
+      "bytes": 10338,
+      "sha256": "5cfa1434c498968fbd4a7708760c5d2c7cfafbc334b68de87758549f3047b839"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageMode.py": {
+      "bytes": 2395,
+      "sha256": "b673e835526da9d855402d4c025d4eca56272d132e63b145d309d2ebe5476001"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageMorph.py": {
+      "bytes": 10385,
+      "sha256": "4c5a1a35a50288d9c356ede25d8d67a056407c1e107398db357e4496024dd1ed"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageOps.py": {
+      "bytes": 27782,
+      "sha256": "ab8f2f995bb77b95e71e69f985ba8d1087e138e8f362a1183fc7a252c457604d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImagePalette.py": {
+      "bytes": 10096,
+      "sha256": "62299569a0a3304fcbcbbed5bbe442cf5760e12ca7834a99aba4651e333a73ab"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImagePath.py": {
+      "bytes": 371,
+      "sha256": "e72506e570948a5d4a2934c0ffc3e01a172683e9a7b9ef862b41704c19618f0e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageQt.py": {
+      "bytes": 7055,
+      "sha256": "47febee43f5d77222f464edce61e7eae03d627db558af78cb88410aff501745e"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageSequence.py": {
+      "bytes": 2317,
+      "sha256": "023ad8b469f345224cedec8e31655d72a5b8b30dfec1830bbe4284c12fd7055b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageShow.py": {
+      "bytes": 10406,
+      "sha256": "aa6687ceef56beaf630785b7c14796b8ccb3b32d5321c89c29faef6d2505cf70"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageStat.py": {
+      "bytes": 5507,
+      "sha256": "e761e894621ed0b9460f85cf07c0289e931ab4abd70bd5e7367b4f97f1991a12"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageText.py": {
+      "bytes": 18657,
+      "sha256": "8d5880474c51cc437b8f3ef6c7920a5189aff77339db53a5b9f508de719e3590"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageTk.py": {
+      "bytes": 8172,
+      "sha256": "c04c6493e880620007f07bf3fcf30e190b805ec573e6e43c6b4fed70357947f5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageTransform.py": {
+      "bytes": 3964,
+      "sha256": "51c71f789a92fa3909ef0dd375abe150159f6bf257f2e5d6d63512c69e6a48a0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImageWin.py": {
+      "bytes": 8098,
+      "sha256": "c451019b8890649af73ec1aeb07788724ce4331f188bcc3946b50f24a1a4d202"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/ImtImagePlugin.py": {
+      "bytes": 2665,
+      "sha256": "86d45657568be5006a8432cc70a33535a592fffd3046341c2cc6b4dbb8b7d57d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/IptcImagePlugin.py": {
+      "bytes": 6491,
+      "sha256": "6337bf6c2e5849799dac3f30b3d6f4bdb9f7aa05084312136eddc669ceeef835"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/Jpeg2KImagePlugin.py": {
+      "bytes": 14834,
+      "sha256": "f50e79ef315d2fb9b14a70225082373e5a3905e15646aa8c4c781a943a1360df"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/JpegImagePlugin.py": {
+      "bytes": 32038,
+      "sha256": "43ede4e4c76826e9c4ce9b7dbcfbae61abb09b9955816a88a0d775de28220bba"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/JpegPresets.py": {
+      "bytes": 12371,
+      "sha256": "c4a931b287992b806da20472a6fd53beae5b43d6bf8d914ae33b469b99a1b018"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/McIdasImagePlugin.py": {
+      "bytes": 1908,
+      "sha256": "bdd9412edd3924ad3696d87463eadef11ce9a2faec7b7c0f3e439880bf0bab44"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/MicImagePlugin.py": {
+      "bytes": 2688,
+      "sha256": "63a00f44c8a639fe4a937f851d59e6618db4c0cf70c867a3a255e804b40e4c65"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/MpegImagePlugin.py": {
+      "bytes": 2091,
+      "sha256": "d5aec9c58619b3cb4f1784c3fd7cc12c83b874ef8ac5e6604ebcffe455d4883a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/MpoImagePlugin.py": {
+      "bytes": 6997,
+      "sha256": "73480afd2311cc30d20fce9ee0d6eba750de90876d4b1f4520ed0f0b5c7c6dfa"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/MspImagePlugin.py": {
+      "bytes": 6142,
+      "sha256": "8e28773c59bae649f034c22b68d64ae4cdc9c26605947e34114e254dd458f8e6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PSDraw.py": {
+      "bytes": 7496,
+      "sha256": "9a107fec78589c500caed175d40e7ce03cf65cb6cded1e360e2b06280ace4026"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PaletteFile.py": {
+      "bytes": 1296,
+      "sha256": "8954b01a8d43c1f232131d3d285636f3cd34986b5f429e3c9aa0246de74a658b"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PalmImagePlugin.py": {
+      "bytes": 8822,
+      "sha256": "d2dded0bdcbff2961cbcea04c260463484ce9db40a21fb13c5693a0fd234e698"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PcdImagePlugin.py": {
+      "bytes": 1774,
+      "sha256": "fa09cc52a407d11f9a963b1dde7652f5e048d63ef98a3583fc765f69d13746c4"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PcfFontFile.py": {
+      "bytes": 7009,
+      "sha256": "062b00838e08338a8757943a9292a89b37eeabba76304a38bf04f555ac8561b3"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PcxImagePlugin.py": {
+      "bytes": 6444,
+      "sha256": "f6c031982ad43a0c28d39ca5dc03a96a33a8b32b9e669355bba4dc43ef5e0c34"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PdfImagePlugin.py": {
+      "bytes": 9173,
+      "sha256": "7de6837a2807fe1326ec521650ac869d2cce410973cf6bdda8319f0a1275ecce"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PdfParser.py": {
+      "bytes": 39984,
+      "sha256": "1931bff76826dcbeb0702383a35c0fbf85310d7c49a7d92401fe3fc60fa3fff1"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PixarImagePlugin.py": {
+      "bytes": 1794,
+      "sha256": "2f60af2f631b194149cbbc95efad2045e2b96d04992741c396fe4c746bf320cd"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PngImagePlugin.py": {
+      "bytes": 54151,
+      "sha256": "67608f9c458e2d1350997580bb6604a3ca4f351b3103f78430393b3c23d5e50d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PpmImagePlugin.py": {
+      "bytes": 12433,
+      "sha256": "1a6b4dcb85493f97b2dca8ec4069cd66cb4947e6e1b30905404604e7be14e3e9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/PsdImagePlugin.py": {
+      "bytes": 8984,
+      "sha256": "7154b3a26d27236e33d318e68663c6dd763ae4a00b143c4f63bcab2108e12969"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/QoiImagePlugin.py": {
+      "bytes": 9020,
+      "sha256": "40ce66160adbd3bc0f5abf5c831de81b23b2851e4fbeb28e9e88bf97e40972ee"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/SgiImagePlugin.py": {
+      "bytes": 6462,
+      "sha256": "b8d23659cfb6fd3cc7eb5c4174141a5e6931cb64f15b10f22c4fd0ba8a0c13b9"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/SpiderImagePlugin.py": {
+      "bytes": 10294,
+      "sha256": "f3b2147519e8ab919f528358e1386473432a2f7173e2b667a49b0a96934a8ebb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/SunImagePlugin.py": {
+      "bytes": 4625,
+      "sha256": "f2151329b8c9deb24d753fc46eadce72fc8f0c5037e1181ec80785cd5ca12d59"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/TarIO.py": {
+      "bytes": 1640,
+      "sha256": "f058a10a3fe047a39d80b7d8b10494005cf9520dca78b39dd7d7827ade66f2c8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/TgaImagePlugin.py": {
+      "bytes": 8088,
+      "sha256": "eeb961e08ffd2e8a5e5d31a66fef4404a498e7874942e5b7f1c6e698880e8296"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/TiffImagePlugin.py": {
+      "bytes": 88129,
+      "sha256": "e3322c6660610c41196adddb6b2d46f303dd0d0034d76544f9364fb32a13f709"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/TiffTags.py": {
+      "bytes": 17323,
+      "sha256": "1aedff2bce1102bd7857bb5f894986bc788bc6c811c5b2753c38d493d25be964"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/WalImageFile.py": {
+      "bytes": 5847,
+      "sha256": "41bfdc25f89430ce348362c9256a7c2ace8629a0bf44bff342b356ec9940ce07"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/WebPImagePlugin.py": {
+      "bytes": 11105,
+      "sha256": "99cf0cad0c42b71a91ed83122c8c1aac20d60db32e3c897d3abd995e75dd6ec7"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/WmfImagePlugin.py": {
+      "bytes": 5522,
+      "sha256": "0e116aa192a249d9d7469f4aad4d141afcd8295bb15c6da24c016d4d278bd7ab"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/XVThumbImagePlugin.py": {
+      "bytes": 2126,
+      "sha256": "3ef75a7f971b193da344dc8b4c918e0368629ecfbc04b5e5ad3ae80b1b69d69a"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/XbmImagePlugin.py": {
+      "bytes": 3721,
+      "sha256": "208212c895882d4f86f6611359ef471070db41f6b956c96e90336fb7aa056395"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/XpmImagePlugin.py": {
+      "bytes": 5125,
+      "sha256": "b47dd3e03c01803b10acd2dc0e69e96405579dd2b9b7d287233e69cf5ac763fd"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/__init__.py": {
+      "bytes": 2035,
+      "sha256": "7361b6ad3878589affe5956e4a4da24d71398b0891fd3a8c15e9362217b4ca01"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/__main__.py": {
+      "bytes": 133,
+      "sha256": "2e98f8bde7fc988ee3035b1109402855869e78f0ff51cf3df3117973b5cbc750"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_avif.cpython-312-darwin.so": {
+      "bytes": 73680,
+      "sha256": "e8a87d29c9ea3e81527efb1818ab7b6ead5bed54e4c2664c73e47f67746fd5f8"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_binary.py": {
+      "bytes": 2613,
+      "sha256": "7590dd4a52c7379e18107f2e434478ff5c2876e22f461748e44cddc947fcdbaa"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_deprecate.py": {
+      "bytes": 2067,
+      "sha256": "6a0bbb052f12bd49c2194391e9be9e9b38c9abcf9ce6be7a0d0df8179e3943f5"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imaging.cpython-312-darwin.so": {
+      "bytes": 634480,
+      "sha256": "058a696be42c06bf77d5efd929c13f734a5e1a0c0a9e4b3e684ee5af13b4aa8f"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imagingcms.cpython-312-darwin.so": {
+      "bytes": 97856,
+      "sha256": "c940dbd46ca213366037fd958d11678497a5cd41971fc54126ac37baad396a81"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imagingft.cpython-312-darwin.so": {
+      "bytes": 117344,
+      "sha256": "bbd5e4c25140c7c3b476e14ee613457c55da2694029e9a4b0805ed6711fdfd2c"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imagingmath.cpython-312-darwin.so": {
+      "bytes": 72160,
+      "sha256": "3209a70da6bb99bc9f2dc4d98d168baae82440a5062e91a19acccf6c2b653ff6"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imagingmorph.cpython-312-darwin.so": {
+      "bytes": 51472,
+      "sha256": "0237c1c8ca6ab8ad087d8c6cc929d8cfbd49396491b990503e47963f616a021d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_imagingtk.cpython-312-darwin.so": {
+      "bytes": 52784,
+      "sha256": "1e11150b6f16eae297ea7da2193fa66ff4597d85db9e5d60c7238f190c5dd745"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_tkinter_finder.py": {
+      "bytes": 538,
+      "sha256": "188678b2d985854a2c987292addc5c8d2b62a1c0cd7f2267ed10627b6496c54d"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_typing.py": {
+      "bytes": 955,
+      "sha256": "3c65612aa24fbc54c76dc23d000e41168b05453063922dd39be6ee69ca577bdb"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_util.py": {
+      "bytes": 684,
+      "sha256": "7f185676b2c04727363ec3203779bdfd4d5d637a1429b57b9a4a0771782879e0"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_version.py": {
+      "bytes": 87,
+      "sha256": "10a1ea208d5c54ec96416511a6a6811a1da3d97ce2bad18c4f2fe9d73e71dbad"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/_webp.cpython-312-darwin.so": {
+      "bytes": 75760,
+      "sha256": "3c4c8cb49c955900e361ca1bcaf44f8863ffa9edb9f7b3372e15e8938a053320"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/features.py": {
+      "bytes": 10867,
+      "sha256": "28a2482eb1e320ab6ffff78bf3f04057f9fe42cb6a1b87d2b492a2e51b28c627"
+    },
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/lib/python3.12/site-packages/PIL/report.py": {
+      "bytes": 100,
+      "sha256": "e0963af8853bb07d512ae45b3afcb57d4b74740a22efd157e2d609377a750d3d"
+    }
+  },
+  "scope": "Read-only runtime provenance from the same virtual environment while frozen replay runs. No emulator input/state/file mutation."
+}

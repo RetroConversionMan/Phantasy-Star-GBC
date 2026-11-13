@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "stdout": "4370 world-rule assertions passed",
+  "source_route_bytes": 72,
+  "scope": "Original terrain side effects and route endpoint triples; ship presentation not covered",
+  "sources": {
+    "src/world_rules.c": "f6c40f19407a3d2233accf31254340dc7a7d62b556bc99ed40139c0c1a36568c",
+    "src/rpg.c": "d875993bdea104e802b9259db7e3a8311844a78642e4f7a832b697e48a974f20",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c"
+  }
+}

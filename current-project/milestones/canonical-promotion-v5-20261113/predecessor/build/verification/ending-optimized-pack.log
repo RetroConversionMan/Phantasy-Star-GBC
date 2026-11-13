@@ -1,0 +1,63 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/ending-walk/main.c:
+src/ending_walk.c:
+src/ending_walk_data.c:
+src/ending_upload.c:
+src/bank_io.c:
+src/font.c:
+src/ending_walk_bank_137.c:
+src/ending_walk_bank_138.c:
+src/ending_walk_bank_139.c:
+src/ending_walk_bank_193.c:
+src/ending_walk_bank_194.c:
+src/ending_walk_bank_195.c:
+src/ending_walk_bank_196.c:
+src/ending_walk_bank_197.c:
+src/ending_walk_bank_198.c:
+src/ending_walk_bank_199.c:
+src/ending_walk_bank_200.c:
+src/ending_walk_bank_201.c:
+src/ending_walk_bank_202.c:
+src/ending_walk_bank_203.c:
+src/ending_walk_bank_204.c:
+src/ending_walk_bank_205.c:
+src/ending_walk_bank_206.c:
+src/ending_walk_bank_207.c:
+src/ending_walk_bank_208.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "3ea882ba0d5f63f3f09ce97f110031df582e9a586af7b7292d495c7fa032be4a",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "palette_bytes": 391888,
+  "pattern_bytes": 3352832,
+  "map_attribute_pairs": 388800,
+  "protected_vram_bytes": 3981312,
+  "image_changes": 1296,
+  "logical_frames": 6998,
+  "audio_commands": 14,
+  "source_frames_per_run": 3499,
+  "free_running_emulator_frames": 6253,
+  "visible_native_images": 334,
+  "unmatched_display_frames": 0,
+  "double_buffered": true,
+  "command_roundtrip_frames": {
+    "min": 1,
+    "max": 7
+  },
+  "limits": [
+    "Original indexed art is scaled from256x192 to160x120; seven4-color GBC palettes quantize the original colors.",
+    "Source trace calls VBlank handlers at WaitForVInt; it records logical VBlanks rather than a full SMS CPU/PPU timing simulation.",
+    "Standalone controller/render/audio-command probe; full main ending trigger and APU playback are separate integration checks.",
+    "The source trace is quantized and scaled; screenshot colors are not claimed pixel-identical to original SMS hardware."
+  ]
+}

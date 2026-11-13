@@ -1,0 +1,9 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_services_emulator.py", line 98, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_services_emulator.py", line 79, in main
+    assert sale_state==5 and sale['money']==15 and not sale['inventory_count'],sale
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'screen': 9, 'money': 0, 'inventory_count': 1, 'service_bytes': [32, 193, 26, 2, 20, 0, 0, 0, 5, 130, 184, 15, 0, 25, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0]}

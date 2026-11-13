@@ -1,0 +1,226 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "records": [
+    {
+      "frame": 0,
+      "mode": 4,
+      "source_facing": 0,
+      "sprites": 28,
+      "tiles": 28,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 60,
+      "quantized_static_pixels": 98,
+      "sha256": "9dc96bab2087d29d2c1ea8d9cb2c662be4f02e838336ebf1a6e07bfb6a5f4bdb"
+    },
+    {
+      "frame": 1,
+      "mode": 4,
+      "source_facing": 1,
+      "sprites": 28,
+      "tiles": 28,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 60,
+      "quantized_static_pixels": 98,
+      "sha256": "20387bdd12162494532627f036202cc0db203a3ba282debc42c44b8b8fd8eff4"
+    },
+    {
+      "frame": 2,
+      "mode": 4,
+      "source_facing": 2,
+      "sprites": 28,
+      "tiles": 28,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 60,
+      "quantized_static_pixels": 98,
+      "sha256": "1f1de9b9ef5cfc7623f4bedc6714310430f4697c80df9efee27dcb060faffc28"
+    },
+    {
+      "frame": 3,
+      "mode": 4,
+      "source_facing": 3,
+      "sprites": 28,
+      "tiles": 28,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 60,
+      "quantized_static_pixels": 98,
+      "sha256": "e9fcd0a632aa22294095c19537d366002ade13580520dfa21e4ddd82871667be"
+    },
+    {
+      "frame": 4,
+      "mode": 8,
+      "source_facing": 0,
+      "sprites": 32,
+      "tiles": 32,
+      "animated_indices": [
+        7,
+        8,
+        9
+      ],
+      "cycling_pixels": 143,
+      "quantized_static_pixels": 144,
+      "sha256": "4d96991331a1a7ac84f3db7c39380d5bf3a344d9645f3cfccdb6b14f40669833"
+    },
+    {
+      "frame": 5,
+      "mode": 8,
+      "source_facing": 1,
+      "sprites": 32,
+      "tiles": 32,
+      "animated_indices": [
+        7,
+        8,
+        9
+      ],
+      "cycling_pixels": 143,
+      "quantized_static_pixels": 144,
+      "sha256": "5328098cfa9b1e015ca1d77fac0df56de777e5ff6c30e84daddaff0b5b38e5ed"
+    },
+    {
+      "frame": 6,
+      "mode": 8,
+      "source_facing": 2,
+      "sprites": 32,
+      "tiles": 32,
+      "animated_indices": [
+        7,
+        8,
+        9
+      ],
+      "cycling_pixels": 143,
+      "quantized_static_pixels": 144,
+      "sha256": "0efcbe687a5ea8bb17a98fb0990d147edadea6926f18389d4cf232cc8dde04d7"
+    },
+    {
+      "frame": 7,
+      "mode": 8,
+      "source_facing": 3,
+      "sprites": 32,
+      "tiles": 32,
+      "animated_indices": [
+        7,
+        8,
+        9
+      ],
+      "cycling_pixels": 143,
+      "quantized_static_pixels": 144,
+      "sha256": "a6b187a6d855dbcecc11a9c38295222d8ac12b77f2b08ed5a5a482df4d41b08f"
+    },
+    {
+      "frame": 8,
+      "mode": 12,
+      "source_facing": 0,
+      "sprites": 26,
+      "tiles": 26,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 146,
+      "quantized_static_pixels": 138,
+      "sha256": "6f957501c669b6b2cdad3eab6c6ba51ca3b13e77df15f44bc2f581e2661a3ddc"
+    },
+    {
+      "frame": 9,
+      "mode": 12,
+      "source_facing": 1,
+      "sprites": 26,
+      "tiles": 26,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 146,
+      "quantized_static_pixels": 138,
+      "sha256": "cd2675844094f532274ebeb26edcd47b983e68a684fd9a5acc102c5a2b55e58d"
+    },
+    {
+      "frame": 10,
+      "mode": 12,
+      "source_facing": 2,
+      "sprites": 26,
+      "tiles": 26,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 146,
+      "quantized_static_pixels": 138,
+      "sha256": "436c5ab552b819fca97faba001ce4bac15b46c7b1e1ec946fe14613fe787cc41"
+    },
+    {
+      "frame": 11,
+      "mode": 12,
+      "source_facing": 3,
+      "sprites": 26,
+      "tiles": 26,
+      "animated_indices": [
+        13,
+        14,
+        15
+      ],
+      "cycling_pixels": 146,
+      "quantized_static_pixels": 138,
+      "sha256": "239bfd260b0114164c05376baf382dd50ab3ac1187ed85fb4ec5b350dcd4a9a3"
+    }
+  ],
+  "static_palettes_sms": [
+    [
+      0,
+      11,
+      56
+    ],
+    [
+      0,
+      3,
+      11
+    ],
+    [
+      0,
+      42,
+      52
+    ],
+    [
+      0,
+      15,
+      42
+    ],
+    [
+      0,
+      37,
+      47
+    ],
+    [
+      0,
+      3,
+      63
+    ],
+    [
+      0,
+      52,
+      56
+    ]
+  ],
+  "limits": [
+    "Static pixels use7 shared GBC palettes with3 opaque colors; source cycling indices use exact separate palette7.",
+    "Two disjoint layers add sprites without altering original alpha, coordinates or cycling ownership. Maximum8 sprites per scanline."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Five independent628-byte records fit original1024-byte slot strides and pass CRC; slot1 remains byte-identical while four controller-moved positions receive original five-character labels, including erase/back behavior",
+    "After a real power cycle, Continue loads every chosen file with its exact position, party, inventory, money and RNG",
+    "Delete invalidates only selected record and label; overwriting another existing file retains its label and all other records",
+    "A single-bit corruption invalidates only slot5; another valid file still loads normally"
+  ],
+  "screenshots": [
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/save-ui/five-files-created.png",
+      "sha256_pixels": "8ea6a0ae03fcc1305dbaa67ea3fbf7d0a354c839037e13c2148c322c8e30826d",
+      "unique_colors": 17,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/save-ui/uncorrupted-file-loaded.png",
+      "sha256_pixels": "8ea6a0ae03fcc1305dbaa67ea3fbf7d0a354c839037e13c2148c322c8e30826d",
+      "unique_colors": 17,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    }
+  ],
+  "injected_fixtures": [
+    "Final diagnostic flips one bit in temporary slot5 SRAM to verify isolated CRC rejection; no game-state fixtures used in normal save/name/load/delete/overwrite routes"
+  ],
+  "campaign_complete": false,
+  "save_version": 5,
+  "record_bytes": 628,
+  "passed": true
+}

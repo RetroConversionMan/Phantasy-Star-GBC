@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "layout_cells": 15616,
+  "relative_samples": 999424,
+  "commands": 374784,
+  "outcome_0": 149994,
+  "outcome_2": 124664,
+  "outcome_14": 62129,
+  "outcome_8": 108,
+  "outcome_1": 36074,
+  "outcome_3": 203,
+  "opened_door_commands": 580,
+  "door_reset_checks": 61,
+  "outcome_13": 40,
+  "outcome_4": 776,
+  "outcome_5": 792,
+  "outcome_12": 4,
+  "transition_records": 64,
+  "inactive_transition_records": 1,
+  "object_flag_cases": 855,
+  "object_records": 171,
+  "inactive_object_records": 5,
+  "limits": [
+    "Host traversal kernel only; not playable dungeon integration",
+    "No renderer, movement/door animations, object effects, battle or event dispatch",
+    "Runtime guards reject out-of-range floor/direction instead of reading unrelated ROM"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "checks": [
+    "Original floor37/pool80 produces a natural GiantFly encounter; Compass actions allow its actual Fire decision, native animation and per-hit playback before a controller-driven victory",
+    "Full party/inventory/money/RNG and dungeon location survive combat, save and power-cycle Continue; real audio runs and1KiB stack guard remains intact"
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/enemy-magic-integration/natural-giantfly-magic-hit-1.png",
+      "sha256_pixels": "a1ae0c9ace1426acf60314655638e0f3d19da8ed7265d25907195c925205bbd5",
+      "unique_colors": 11,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/enemy-magic-integration/natural-giantfly-magic-hit-2.png",
+      "sha256_pixels": "12d9114bb29d937bd4316daed190e397e1ca6cb3d78e916c6ca6385ebb783776",
+      "unique_colors": 11,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/enemy-magic-integration/continued-after-enemy-magic.png",
+      "sha256_pixels": "35541b839b23b6e6d1a1c4c5a13d54cb6c3084e0ea4ae622499fe710115ef006",
+      "unique_colors": 7,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    }
+  ],
+  "encounters": [
+    11,
+    13
+  ],
+  "hit_presentations": [
+    {
+      "enemy": 13,
+      "rng": 49031,
+      "mode": 128,
+      "hit_cursor": 0,
+      "action_hits": [
+        [
+          0,
+          9,
+          209
+        ],
+        [
+          3,
+          7,
+          172
+        ]
+      ],
+      "frames": 61,
+      "audio_start": 6580,
+      "audio_ticks": 64
+    },
+    {
+      "enemy": 13,
+      "rng": 49031,
+      "mode": 128,
+      "hit_cursor": 1,
+      "action_hits": [
+        [
+          0,
+          9,
+          209
+        ],
+        [
+          3,
+          7,
+          172
+        ]
+      ],
+      "frames": 61,
+      "audio_start": 6650,
+      "audio_ticks": 64
+    }
+  ],
+  "injected_fixtures": [
+    "Valid SRAM at source floor37/AC with four living level30 party members using original unequipped stats/full HP/MP/EXP, Compass53 and fixed seed1234. No encounter, turn, damage, spell choice or outcome is injected; no RNG search/retries. Subsequent actions are controller-only.",
+    "Diagnostic64-byte unused-WRAM guard atDBC0..DBFF;1KiB stack window aboveDC00"
+  ],
+  "campaign_complete": false,
+  "save_records": [
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "6e9b79d78d48095c646894272df564ff901ba721281b9396af502227caa8539b"
+    }
+  ],
+  "controller_turns": 64,
+  "passed": true
+}

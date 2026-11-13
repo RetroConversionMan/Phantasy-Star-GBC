@@ -1,0 +1,17 @@
+Building all native modules. Log: /private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/package-rebuild-20261113T141941541944Z/build.log
+{
+  "passed": true,
+  "expected_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "actual_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "rom_bytes": 4194304,
+  "command": [
+    "make",
+    "-B",
+    "-j4",
+    "GBDK_HOME=.tools/gbdk",
+    "PYTHON=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3"
+  ],
+  "host": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.2 (v3.14.2:df793163d58, Dec  5 2025, 12:18:06) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "log": "build.log"
+}

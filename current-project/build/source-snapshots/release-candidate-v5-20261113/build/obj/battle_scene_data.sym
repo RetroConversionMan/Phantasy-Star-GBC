@@ -1,0 +1,490 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _battle_overlay_000                                             ******** GX
+    _battle_overlay_001                                             ******** GX
+    _battle_overlay_002                                             ******** GX
+    _battle_overlay_003                                             ******** GX
+    _battle_overlay_004                                             ******** GX
+    _battle_overlay_005                                             ******** GX
+    _battle_overlay_006                                             ******** GX
+    _battle_overlay_007                                             ******** GX
+    _battle_overlay_008                                             ******** GX
+    _battle_overlay_009                                             ******** GX
+    _battle_overlay_010                                             ******** GX
+    _battle_overlay_011                                             ******** GX
+    _battle_overlay_012                                             ******** GX
+    _battle_overlay_013                                             ******** GX
+    _battle_overlay_014                                             ******** GX
+    _battle_overlay_015                                             ******** GX
+    _battle_overlay_016                                             ******** GX
+    _battle_overlay_017                                             ******** GX
+    _battle_overlay_018                                             ******** GX
+    _battle_overlay_019                                             ******** GX
+    _battle_overlay_020                                             ******** GX
+    _battle_overlay_021                                             ******** GX
+    _battle_overlay_022                                             ******** GX
+    _battle_overlay_023                                             ******** GX
+    _battle_overlay_024                                             ******** GX
+    _battle_overlay_025                                             ******** GX
+    _battle_overlay_026                                             ******** GX
+    _battle_overlay_027                                             ******** GX
+    _battle_overlay_028                                             ******** GX
+    _battle_overlay_029                                             ******** GX
+    _battle_overlay_030                                             ******** GX
+    _battle_overlay_031                                             ******** GX
+    _battle_overlay_032                                             ******** GX
+    _battle_overlay_033                                             ******** GX
+    _battle_overlay_034                                             ******** GX
+    _battle_overlay_035                                             ******** GX
+    _battle_overlay_036                                             ******** GX
+    _battle_overlay_037                                             ******** GX
+    _battle_overlay_038                                             ******** GX
+    _battle_overlay_039                                             ******** GX
+    _battle_overlay_040                                             ******** GX
+    _battle_overlay_041                                             ******** GX
+    _battle_overlay_042                                             ******** GX
+    _battle_overlay_043                                             ******** GX
+    _battle_overlay_044                                             ******** GX
+    _battle_overlay_045                                             ******** GX
+    _battle_overlay_046                                             ******** GX
+    _battle_overlay_047                                             ******** GX
+    _battle_overlay_048                                             ******** GX
+    _battle_overlay_049                                             ******** GX
+    _battle_overlay_050                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_051                                             ******** GX
+    _battle_overlay_052                                             ******** GX
+    _battle_overlay_053                                             ******** GX
+    _battle_overlay_054                                             ******** GX
+    _battle_overlay_055                                             ******** GX
+    _battle_overlay_056                                             ******** GX
+    _battle_overlay_057                                             ******** GX
+    _battle_overlay_058                                             ******** GX
+    _battle_overlay_059                                             ******** GX
+    _battle_overlay_060                                             ******** GX
+    _battle_overlay_061                                             ******** GX
+    _battle_overlay_062                                             ******** GX
+    _battle_overlay_063                                             ******** GX
+    _battle_overlay_064                                             ******** GX
+    _battle_overlay_065                                             ******** GX
+    _battle_overlay_066                                             ******** GX
+    _battle_overlay_067                                             ******** GX
+    _battle_overlay_068                                             ******** GX
+    _battle_overlay_069                                             ******** GX
+    _battle_overlay_070                                             ******** GX
+    _battle_overlay_071                                             ******** GX
+    _battle_overlay_072                                             ******** GX
+    _battle_overlay_073                                             ******** GX
+    _battle_overlay_074                                             ******** GX
+    _battle_overlay_075                                             ******** GX
+    _battle_overlay_076                                             ******** GX
+    _battle_overlay_077                                             ******** GX
+    _battle_overlay_078                                             ******** GX
+    _battle_overlay_079                                             ******** GX
+    _battle_overlay_080                                             ******** GX
+    _battle_overlay_081                                             ******** GX
+    _battle_overlay_082                                             ******** GX
+    _battle_overlay_083                                             ******** GX
+    _battle_overlay_084                                             ******** GX
+    _battle_overlay_085                                             ******** GX
+    _battle_overlay_086                                             ******** GX
+    _battle_overlay_087                                             ******** GX
+    _battle_overlay_088                                             ******** GX
+    _battle_overlay_089                                             ******** GX
+    _battle_overlay_090                                             ******** GX
+    _battle_overlay_091                                             ******** GX
+    _battle_overlay_092                                             ******** GX
+    _battle_overlay_093                                             ******** GX
+    _battle_overlay_094                                             ******** GX
+    _battle_overlay_095                                             ******** GX
+    _battle_overlay_096                                             ******** GX
+    _battle_overlay_097                                             ******** GX
+    _battle_overlay_098                                             ******** GX
+    _battle_overlay_099                                             ******** GX
+    _battle_overlay_100                                             ******** GX
+    _battle_overlay_101                                             ******** GX
+    _battle_overlay_102                                             ******** GX
+    _battle_overlay_103                                             ******** GX
+    _battle_overlay_104                                             ******** GX
+    _battle_overlay_105                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_106                                             ******** GX
+    _battle_overlay_107                                             ******** GX
+    _battle_overlay_108                                             ******** GX
+    _battle_overlay_109                                             ******** GX
+    _battle_overlay_110                                             ******** GX
+    _battle_overlay_111                                             ******** GX
+    _battle_overlay_112                                             ******** GX
+    _battle_overlay_113                                             ******** GX
+    _battle_overlay_114                                             ******** GX
+    _battle_overlay_115                                             ******** GX
+    _battle_overlay_116                                             ******** GX
+    _battle_overlay_117                                             ******** GX
+    _battle_overlay_118                                             ******** GX
+    _battle_overlay_119                                             ******** GX
+    _battle_overlay_120                                             ******** GX
+    _battle_overlay_121                                             ******** GX
+    _battle_overlay_122                                             ******** GX
+    _battle_overlay_123                                             ******** GX
+    _battle_overlay_124                                             ******** GX
+    _battle_overlay_125                                             ******** GX
+    _battle_overlay_126                                             ******** GX
+    _battle_overlay_127                                             ******** GX
+    _battle_overlay_128                                             ******** GX
+    _battle_overlay_129                                             ******** GX
+    _battle_overlay_130                                             ******** GX
+    _battle_overlay_131                                             ******** GX
+    _battle_overlay_132                                             ******** GX
+    _battle_overlay_133                                             ******** GX
+    _battle_overlay_134                                             ******** GX
+    _battle_overlay_135                                             ******** GX
+    _battle_overlay_136                                             ******** GX
+    _battle_overlay_137                                             ******** GX
+    _battle_overlay_138                                             ******** GX
+    _battle_overlay_139                                             ******** GX
+    _battle_overlay_140                                             ******** GX
+    _battle_overlay_141                                             ******** GX
+    _battle_overlay_142                                             ******** GX
+    _battle_overlay_143                                             ******** GX
+    _battle_overlay_144                                             ******** GX
+    _battle_overlay_145                                             ******** GX
+    _battle_overlay_146                                             ******** GX
+    _battle_overlay_147                                             ******** GX
+    _battle_overlay_148                                             ******** GX
+    _battle_overlay_149                                             ******** GX
+    _battle_overlay_150                                             ******** GX
+    _battle_overlay_151                                             ******** GX
+    _battle_overlay_152                                             ******** GX
+    _battle_overlay_153                                             ******** GX
+    _battle_overlay_154                                             ******** GX
+    _battle_overlay_155                                             ******** GX
+    _battle_overlay_156                                             ******** GX
+    _battle_overlay_157                                             ******** GX
+    _battle_overlay_158                                             ******** GX
+    _battle_overlay_159                                             ******** GX
+    _battle_overlay_160                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_161                                             ******** GX
+    _battle_overlay_162                                             ******** GX
+    _battle_overlay_163                                             ******** GX
+    _battle_overlay_164                                             ******** GX
+    _battle_overlay_165                                             ******** GX
+    _battle_overlay_166                                             ******** GX
+    _battle_overlay_167                                             ******** GX
+    _battle_overlay_168                                             ******** GX
+    _battle_overlay_169                                             ******** GX
+    _battle_overlay_170                                             ******** GX
+    _battle_overlay_171                                             ******** GX
+    _battle_overlay_172                                             ******** GX
+    _battle_overlay_173                                             ******** GX
+    _battle_overlay_174                                             ******** GX
+    _battle_overlay_175                                             ******** GX
+    _battle_overlay_176                                             ******** GX
+    _battle_overlay_177                                             ******** GX
+    _battle_overlay_178                                             ******** GX
+    _battle_overlay_179                                             ******** GX
+    _battle_overlay_180                                             ******** GX
+    _battle_overlay_181                                             ******** GX
+    _battle_overlay_182                                             ******** GX
+    _battle_overlay_183                                             ******** GX
+    _battle_overlay_184                                             ******** GX
+    _battle_overlay_185                                             ******** GX
+    _battle_overlay_186                                             ******** GX
+    _battle_overlay_187                                             ******** GX
+    _battle_overlay_188                                             ******** GX
+    _battle_overlay_189                                             ******** GX
+    _battle_overlay_190                                             ******** GX
+    _battle_overlay_191                                             ******** GX
+    _battle_overlay_192                                             ******** GX
+    _battle_overlay_193                                             ******** GX
+    _battle_overlay_194                                             ******** GX
+    _battle_overlay_195                                             ******** GX
+    _battle_overlay_196                                             ******** GX
+    _battle_overlay_197                                             ******** GX
+    _battle_overlay_198                                             ******** GX
+    _battle_overlay_199                                             ******** GX
+    _battle_overlay_200                                             ******** GX
+    _battle_overlay_201                                             ******** GX
+    _battle_overlay_202                                             ******** GX
+    _battle_overlay_203                                             ******** GX
+    _battle_overlay_204                                             ******** GX
+    _battle_overlay_205                                             ******** GX
+    _battle_overlay_206                                             ******** GX
+    _battle_overlay_207                                             ******** GX
+    _battle_overlay_208                                             ******** GX
+    _battle_overlay_209                                             ******** GX
+    _battle_overlay_210                                             ******** GX
+    _battle_overlay_211                                             ******** GX
+    _battle_overlay_212                                             ******** GX
+    _battle_overlay_213                                             ******** GX
+    _battle_overlay_214                                             ******** GX
+    _battle_overlay_215                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_216                                             ******** GX
+    _battle_overlay_217                                             ******** GX
+    _battle_overlay_218                                             ******** GX
+    _battle_overlay_219                                             ******** GX
+    _battle_overlay_220                                             ******** GX
+    _battle_overlay_221                                             ******** GX
+    _battle_overlay_222                                             ******** GX
+    _battle_overlay_223                                             ******** GX
+    _battle_overlay_224                                             ******** GX
+    _battle_overlay_225                                             ******** GX
+    _battle_overlay_226                                             ******** GX
+    _battle_overlay_227                                             ******** GX
+    _battle_overlay_228                                             ******** GX
+    _battle_overlay_229                                             ******** GX
+    _battle_overlay_230                                             ******** GX
+    _battle_overlay_231                                             ******** GX
+    _battle_overlay_232                                             ******** GX
+    _battle_overlay_233                                             ******** GX
+    _battle_overlay_234                                             ******** GX
+    _battle_overlay_235                                             ******** GX
+    _battle_overlay_236                                             ******** GX
+    _battle_overlay_237                                             ******** GX
+    _battle_overlay_238                                             ******** GX
+    _battle_overlay_239                                             ******** GX
+    _battle_overlay_240                                             ******** GX
+    _battle_overlay_241                                             ******** GX
+    _battle_overlay_242                                             ******** GX
+    _battle_overlay_243                                             ******** GX
+    _battle_overlay_244                                             ******** GX
+    _battle_overlay_245                                             ******** GX
+    _battle_overlay_246                                             ******** GX
+    _battle_overlay_247                                             ******** GX
+    _battle_overlay_248                                             ******** GX
+    _battle_overlay_249                                             ******** GX
+    _battle_overlay_250                                             ******** GX
+    _battle_overlay_251                                             ******** GX
+    _battle_overlay_252                                             ******** GX
+    _battle_overlay_253                                             ******** GX
+    _battle_overlay_254                                             ******** GX
+    _battle_overlay_255                                             ******** GX
+    _battle_overlay_256                                             ******** GX
+    _battle_overlay_257                                             ******** GX
+    _battle_overlay_258                                             ******** GX
+    _battle_overlay_259                                             ******** GX
+    _battle_overlay_260                                             ******** GX
+    _battle_overlay_261                                             ******** GX
+    _battle_overlay_262                                             ******** GX
+    _battle_overlay_263                                             ******** GX
+    _battle_overlay_264                                             ******** GX
+    _battle_overlay_265                                             ******** GX
+    _battle_overlay_266                                             ******** GX
+    _battle_overlay_267                                             ******** GX
+    _battle_overlay_268                                             ******** GX
+    _battle_overlay_269                                             ******** GX
+    _battle_overlay_270                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_271                                             ******** GX
+    _battle_overlay_272                                             ******** GX
+    _battle_overlay_273                                             ******** GX
+    _battle_overlay_274                                             ******** GX
+    _battle_overlay_275                                             ******** GX
+    _battle_overlay_276                                             ******** GX
+    _battle_overlay_277                                             ******** GX
+    _battle_overlay_278                                             ******** GX
+    _battle_overlay_279                                             ******** GX
+    _battle_overlay_280                                             ******** GX
+    _battle_overlay_281                                             ******** GX
+    _battle_overlay_282                                             ******** GX
+    _battle_overlay_283                                             ******** GX
+    _battle_overlay_284                                             ******** GX
+    _battle_overlay_285                                             ******** GX
+    _battle_overlay_286                                             ******** GX
+    _battle_overlay_287                                             ******** GX
+    _battle_overlay_288                                             ******** GX
+    _battle_overlay_289                                             ******** GX
+    _battle_overlay_290                                             ******** GX
+    _battle_overlay_291                                             ******** GX
+    _battle_overlay_292                                             ******** GX
+    _battle_overlay_293                                             ******** GX
+    _battle_overlay_294                                             ******** GX
+    _battle_overlay_295                                             ******** GX
+    _battle_overlay_296                                             ******** GX
+    _battle_overlay_297                                             ******** GX
+    _battle_overlay_298                                             ******** GX
+    _battle_overlay_299                                             ******** GX
+    _battle_overlay_300                                             ******** GX
+    _battle_overlay_301                                             ******** GX
+    _battle_overlay_302                                             ******** GX
+    _battle_overlay_303                                             ******** GX
+    _battle_overlay_304                                             ******** GX
+    _battle_overlay_305                                             ******** GX
+    _battle_overlay_306                                             ******** GX
+    _battle_overlay_307                                             ******** GX
+    _battle_overlay_308                                             ******** GX
+    _battle_overlay_309                                             ******** GX
+    _battle_overlay_310                                             ******** GX
+    _battle_overlay_311                                             ******** GX
+    _battle_overlay_312                                             ******** GX
+    _battle_overlay_313                                             ******** GX
+    _battle_overlay_314                                             ******** GX
+    _battle_overlay_315                                             ******** GX
+    _battle_overlay_316                                             ******** GX
+    _battle_overlay_317                                             ******** GX
+    _battle_overlay_318                                             ******** GX
+    _battle_overlay_319                                             ******** GX
+    _battle_overlay_320                                             ******** GX
+    _battle_overlay_321                                             ******** GX
+    _battle_overlay_322                                             ******** GX
+    _battle_overlay_323                                             ******** GX
+    _battle_overlay_324                                             ******** GX
+    _battle_overlay_325                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_326                                             ******** GX
+    _battle_overlay_327                                             ******** GX
+    _battle_overlay_328                                             ******** GX
+    _battle_overlay_329                                             ******** GX
+    _battle_overlay_330                                             ******** GX
+    _battle_overlay_331                                             ******** GX
+    _battle_overlay_332                                             ******** GX
+    _battle_overlay_333                                             ******** GX
+    _battle_overlay_334                                             ******** GX
+    _battle_overlay_335                                             ******** GX
+    _battle_overlay_336                                             ******** GX
+    _battle_overlay_337                                             ******** GX
+    _battle_overlay_338                                             ******** GX
+    _battle_overlay_339                                             ******** GX
+    _battle_overlay_340                                             ******** GX
+    _battle_overlay_341                                             ******** GX
+    _battle_overlay_342                                             ******** GX
+    _battle_overlay_343                                             ******** GX
+    _battle_overlay_344                                             ******** GX
+    _battle_overlay_345                                             ******** GX
+    _battle_overlay_346                                             ******** GX
+    _battle_overlay_347                                             ******** GX
+    _battle_overlay_348                                             ******** GX
+    _battle_overlay_349                                             ******** GX
+    _battle_overlay_350                                             ******** GX
+    _battle_overlay_351                                             ******** GX
+    _battle_overlay_352                                             ******** GX
+    _battle_overlay_353                                             ******** GX
+    _battle_overlay_354                                             ******** GX
+    _battle_overlay_355                                             ******** GX
+    _battle_overlay_356                                             ******** GX
+    _battle_overlay_357                                             ******** GX
+    _battle_overlay_358                                             ******** GX
+    _battle_overlay_359                                             ******** GX
+    _battle_overlay_360                                             ******** GX
+    _battle_overlay_361                                             ******** GX
+    _battle_overlay_362                                             ******** GX
+    _battle_overlay_363                                             ******** GX
+    _battle_overlay_364                                             ******** GX
+    _battle_overlay_365                                             ******** GX
+    _battle_overlay_366                                             ******** GX
+    _battle_overlay_367                                             ******** GX
+    _battle_overlay_368                                             ******** GX
+    _battle_overlay_369                                             ******** GX
+    _battle_overlay_370                                             ******** GX
+    _battle_overlay_371                                             ******** GX
+    _battle_overlay_372                                             ******** GX
+    _battle_overlay_373                                             ******** GX
+    _battle_overlay_374                                             ******** GX
+    _battle_overlay_375                                             ******** GX
+    _battle_overlay_376                                             ******** GX
+    _battle_overlay_377                                             ******** GX
+    _battle_overlay_378                                             ******** GX
+    _battle_overlay_379                                             ******** GX
+    _battle_overlay_380                                             ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _battle_overlay_381                                             ******** GX
+    _battle_overlay_382                                             ******** GX
+    _battle_overlay_383                                             ******** GX
+    _battle_overlay_384                                             ******** GX
+    _battle_overlay_385                                             ******** GX
+    _battle_overlay_386                                             ******** GX
+    _battle_overlay_387                                             ******** GX
+    _battle_overlay_388                                             ******** GX
+    _battle_overlay_389                                             ******** GX
+    _battle_overlay_390                                             ******** GX
+    _battle_overlay_391                                             ******** GX
+    _battle_overlay_392                                             ******** GX
+    _battle_overlay_393                                             ******** GX
+    _battle_overlay_394                                             ******** GX
+    _battle_overlay_395                                             ******** GX
+    _battle_overlay_396                                             ******** GX
+    _battle_overlay_397                                             ******** GX
+    _battle_overlay_398                                             ******** GX
+    _battle_overlay_399                                             ******** GX
+    _battle_overlay_400                                             ******** GX
+    _battle_overlay_401                                             ******** GX
+    _battle_overlay_402                                             ******** GX
+    _battle_overlay_403                                             ******** GX
+    _battle_overlay_404                                             ******** GX
+    _battle_overlay_405                                             ******** GX
+    _battle_overlay_406                                             ******** GX
+    _battle_overlay_407                                             ******** GX
+    _battle_overlay_408                                             ******** GX
+    _battle_overlay_409                                             ******** GX
+    _battle_overlay_410                                             ******** GX
+    _battle_overlay_411                                             ******** GX
+    _battle_overlay_412                                             ******** GX
+    _battle_overlay_413                                             ******** GX
+    _battle_overlay_414                                             ******** GX
+    _battle_overlay_415                                             ******** GX
+    _battle_overlay_416                                             ******** GX
+    _battle_overlay_417                                             ******** GX
+    _battle_overlay_418                                             ******** GX
+    _battle_overlay_419                                             ******** GX
+    _battle_overlay_420                                             ******** GX
+    _battle_overlay_421                                             ******** GX
+    _battle_pairs_00                                                ******** GX
+    _battle_pairs_01                                                ******** GX
+    _battle_pairs_02                                                ******** GX
+  8 _battle_scene_assets                                            00000000 GR
+  8 _battle_scene_lookup                                            000006A1 GR
+  8 _battle_scene_pools                                             00000698 GR
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 9
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_31                                   size      D91   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

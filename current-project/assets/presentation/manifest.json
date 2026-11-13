@@ -1,0 +1,226 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_banks": [
+    128
+  ],
+  "bank_bytes": [
+    14852
+  ],
+  "records": [
+    {
+      "kind": 1,
+      "name": "odin",
+      "bank": 128,
+      "tiles": 30,
+      "sprites": 31,
+      "palettes": 7,
+      "duration_frames": 111,
+      "data_sha256": "465bc17685e20db72bebcb53fb0642b4a9624f030d559e4cd2aeac0889c49a97",
+      "source_index_palette_refs": [
+        [
+          1,
+          10,
+          13
+        ],
+        [
+          1,
+          9,
+          10
+        ],
+        [
+          1,
+          13,
+          14
+        ],
+        [
+          1,
+          9,
+          13
+        ],
+        [
+          1,
+          11,
+          15
+        ],
+        [
+          1,
+          8,
+          14
+        ],
+        [
+          1,
+          10,
+          14
+        ],
+        [
+          1,
+          8,
+          10
+        ]
+      ]
+    },
+    {
+      "kind": 2,
+      "name": "torch",
+      "bank": 128,
+      "tiles": 245,
+      "sprites": 0,
+      "palettes": 2,
+      "duration_frames": 1,
+      "data_sha256": "2d75ff2f40409a8d6dc2f0eecd2749122f5fa494efd7cb5387c969f19d7d9a4a",
+      "source_index_palette_refs": [
+        [
+          2,
+          4,
+          5,
+          9
+        ],
+        [
+          0,
+          4,
+          24,
+          27
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          5,
+          24,
+          27,
+          31
+        ],
+        [
+          0,
+          17,
+          20,
+          22
+        ],
+        [
+          17,
+          24,
+          27,
+          31
+        ],
+        [
+          0,
+          24,
+          27,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": 3,
+      "name": "prism",
+      "bank": 128,
+      "tiles": 181,
+      "sprites": 0,
+      "palettes": 38,
+      "duration_frames": 320,
+      "data_sha256": "5c5f4334b8e3966bcd1ee589926427fc7c8c31ede1767b26c9fe708fc4062e88",
+      "source_index_palette_refs": [
+        [
+          0,
+          2,
+          7,
+          9
+        ],
+        [
+          0,
+          10,
+          12,
+          13
+        ],
+        [
+          5,
+          6,
+          8,
+          9
+        ],
+        [
+          0,
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          2,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": 4,
+      "name": "ending-sky",
+      "bank": 128,
+      "tiles": 149,
+      "sprites": 0,
+      "palettes": 10,
+      "duration_frames": 216,
+      "data_sha256": "49d063b0e38c88dab93dc4ae6481ea9ec295980a9a47be1f2666a04a97e4715d",
+      "source_index_palette_refs": [
+        [
+          0,
+          2,
+          8,
+          9
+        ],
+        [
+          0,
+          2,
+          5,
+          7
+        ],
+        [
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          7,
+          9
+        ]
+      ]
+    }
+  ],
+  "scope": "Original source palette-write sequences; fixed native graphics retain distinct SMS palette indices across all frames"
+}

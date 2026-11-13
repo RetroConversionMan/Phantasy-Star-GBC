@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": 13967,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "tested": [
+    "every active first-match object across front/rear views and five flag values",
+    "fake-wall intermediate callbacks and dynamically resumed second step",
+    "backward front/rear fixed battles with original facing changes",
+    "item chest trap updates even from rear; money chest retains trap",
+    "all eight escape geometry combinations, four directions and32 seeds",
+    "escape bypasses current-cell fall and does not repeat backward collision check",
+    "movement/turn versus door/stair/fall encounter latches",
+    "entry object callbacks before dynamic light check and dark-menu continuation",
+    "special transition payloads including rawFF/FE/FD/FC kind"
+  ],
+  "limits": [
+    "Host controller evidence, not integrated emulator campaign evidence",
+    "Fixed battle/drop and chest flag completion still depend on caller battle UI",
+    "Callback replacement of the entire DungeonPlay object can discard pending continuations"
+  ],
+  "inputs_sha256": {
+    "src/dungeon_play.c": "4fa20bc3c892bc8440e03acbe84aaefe52c09302c849b238532735bf53a1c923",
+    "src/dungeon.c": "340513e6b552130bc9f49ee00d78f0b3dd8f23db3a3024b292acd0e61ab16327",
+    "src/dungeon_data.c": "5f9c450b65762b5d97df6b847fba2780fb991bef3ea5368cad3a910cf65bb211",
+    "src/bank_io.c": "534a7caaa9cc1a4ef0fb1f97d1fa39481c1a30e4cdf371bff37976bc03991a03",
+    "src/rpg.c": "f6f23ab3848aa108bf29048ae13746732533db1ead092893cdc3300005bd426b",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "tests/test_dungeon_play.c": "e4156bab6f7333640da587344caeb8be3443f4d9676b3ed1a0ab984a35a21c85"
+  }
+}

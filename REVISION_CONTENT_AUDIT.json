@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "audited_at_UTC": "2026-11-13T14:30:02.893277+00:00",
+  "scope": "Independent read-only audit of revised native-source package. Validates declared removals, unchanged native source/assembly and retained artifacts, baseline and immutable proof manifest closure. Packaging guides and fresh test reports are being finalized separately. No native build or emulator replay was repeated by this audit.",
+  "passed": true,
+  "removal": {
+    "records": 88,
+    "original_game_assembly_files": 62,
+    "removed_paths_all_absent": true,
+    "issues": [],
+    "upstream_remaining": [
+      "README.md",
+      "ps1original.sms"
+    ],
+    "original_disassembly_assembly_path_remnants": [],
+    "original_object_absent": true,
+    "temporary_source_tree_absent": true
+  },
+  "native_production": {
+    "source_Makefile_count": 343,
+    "file_set_exact": true,
+    "hash_failures": [],
+    "C_files": 262,
+    "headers": 80,
+    "generated_artifact_counts": {
+      ".sym": 262,
+      ".o": 262,
+      ".lst": 262,
+      ".asm": 262
+    },
+    "native_assembly_index_identical_to_original_package": true,
+    "assembly_index_hash_failures": []
+  },
+  "baseline": {
+    "files": 45,
+    "file_set_exact": true,
+    "hash_failures": []
+  },
+  "retained_artifacts": {
+    "paths": [
+      "ROM/Phantasy-Star-GBC.gbc",
+      "current-project/build/phantasy-star-gbc-world.gbc",
+      "current-project/build/phantasy-star-gbc-world.noi",
+      "current-project/build/sms-reference/ps1built.sym",
+      "current-project/upstream/ps1disasm/ps1original.sms",
+      "current-project/upstream/ps1disasm/README.md",
+      "current-project/docs/UPSTREAM_README.md",
+      "current-project/docs/GBDK-LICENSE.txt"
+    ],
+    "changed_or_missing": []
+  },
+  "immutable_manifests": [
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/SHA256.json",
+      "entries": 1084,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-live-replay-b72feead/SHA256.json",
+      "entries": 22,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/SHA256.json",
+      "entries": 443,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/SHA256.json",
+      "entries": 37,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/independent-tool-review/SHA256.json",
+      "entries": 10,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/replay/SHA256.json",
+      "entries": 22,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/verification/release-v5-final-independent-audit/SHA256.json",
+      "entries": 2,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/verification/release-v5-story-independent-audit/SHA256.json",
+      "entries": 2,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/canonical-promotion-v5-20261113/SHA256.json",
+      "entries": 2003,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/canonical-promotion-v5-20261113/predecessor/SHA256.json",
+      "entries": 1725,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/milestones/completed-native-release-20261113/SHA256.json",
+      "entries": 28,
+      "hash_failures": [],
+      "unlisted_files": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-live-replay-b72feead/verification-tooling/FROZEN_TOOLS.json",
+      "entries": 4,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json",
+      "entries": 4,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-full-replay-20261113/replay/verification-tooling/FROZEN_TOOLS.json",
+      "entries": 4,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json",
+      "entries": 4,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/driver-correction-001-torch-recovery/MANIFEST.json",
+      "entries": 2,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v4-newgame-55b71a17/driver-initial/MANIFEST.json",
+      "entries": 8,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/driver-final/MANIFEST.json",
+      "entries": 9,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/campaign/release-v5-newgame-b72feead/verification-tooling/MANIFEST.json",
+      "entries": 10,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/source-snapshots/release-candidate-v5-20261113/MANIFEST.json",
+      "entries": 343,
+      "hash_failures": [],
+      "passed": true
+    },
+    {
+      "path": "current-project/build/milestones/release-v5-campaign-story-20261113/MANIFEST.json",
+      "entries": 7,
+      "hash_failures": [],
+      "summary_match": true,
+      "passed": true
+    }
+  ],
+  "symlinks": [],
+  "prior_delivery_preservation": {
+    "original_archive_sha256": "98d2b5bd95faae988ce74070529a09d382ab3d2a2d709ae7b9063b63dabe09da",
+    "original_archive_unchanged": true,
+    "old_staging_removal_sources_intact": true
+  },
+  "secondary_source_remnant_scan": {
+    "passed": true,
+    "removed_original_and_patched_assembly_files_compared": 62,
+    "remaining_exact_source_hash_duplicates": 0,
+    "assembly_files_scanned": 803,
+    "listing_files_scanned": 792,
+    "unique_assembly_contents": 296,
+    "unique_listing_contents": 285,
+    "original_source_snippets": 73303,
+    "snippet_method": "12-line chunks of original and label-patched original assembly, minimum 140 characters, whitespace/comments normalized and listing prefixes stripped.",
+    "snippet_matches": 0,
+    "remaining_assembly_classification": {
+      "final_frozen_and_promotion_native_objects": 786,
+      "historical_native_probe_assembly": 6,
+      "WLA_namespace_test_assembly": 11,
+      "WLA_S_files": 326,
+      "GBDK_S_files": 11
+    },
+    "all_88_removal_paths_absent": true,
+    "performed_read_only_by": "independent package audit subagent"
+  }
+}

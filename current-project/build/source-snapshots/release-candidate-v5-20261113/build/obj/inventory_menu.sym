@@ -1,0 +1,74 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _close_rows                                                     00000000 R
+    _dialogue_item_name                                             ******** GX
+    _field_action                                                   ******** GX
+    _field_active                                                   ******** GX
+  8 _finish                                                         0000000A R
+    _game_rpg                                                       ******** GX
+  8 _inventory_action_advance                                       00000151 GR
+    _inventory_dialogue_overlay                                     ******** GX
+  8 _inventory_drop_begin                                           00000123 GR
+  8 _inventory_equip_begin                                          00000070 GR
+  8 _inventory_equip_select                                         000000B2 GR
+  8 _inventory_equipment_done                                       00000230 GR
+    _inventory_screen                                               ******** GX
+    _memset                                                         ******** GX
+    _party_choice                                                   ******** GX
+    _party_screen                                                   ******** GX
+    _rpg_equip_finish                                               ******** GX
+    _rpg_equip_stage                                                ******** GX
+    _rpg_item_discardable                                           ******** GX
+    _rpg_item_equippers                                             ******** GX
+    _rpg_refresh_stats                                              ******** GX
+    _rpg_remove_item                                                ******** GX
+    _screen_state                                                   ******** GX
+    _show_dialogue                                                  ******** GX
+  8 _start                                                          00000047 R
+    _ui_panel                                                       ******** GX
+    _ui_text                                                        ******** GX
+    _vsync                                                          ******** GX
+    b_dialogue_item_name                                            ******** GX
+    b_inventory_action_advance                                  =   00000013 G
+    b_inventory_drop_begin                                      =   00000013 G
+    b_inventory_equip_begin                                     =   00000013 G
+    b_inventory_equip_select                                    =   00000013 G
+    b_inventory_equipment_done                                  =   00000013 G
+    b_inventory_screen                                              ******** GX
+    b_party_screen                                                  ******** GX
+    b_rpg_equip_finish                                              ******** GX
+    b_rpg_equip_stage                                               ******** GX
+    b_rpg_item_discardable                                          ******** GX
+    b_rpg_item_equippers                                            ******** GX
+    b_rpg_refresh_stats                                             ******** GX
+    b_rpg_remove_item                                               ******** GX
+    b_ui_panel                                                      ******** GX
+    b_ui_text                                                       ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_19                                   size      26C   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

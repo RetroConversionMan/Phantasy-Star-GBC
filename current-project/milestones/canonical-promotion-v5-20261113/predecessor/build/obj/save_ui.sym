@@ -1,0 +1,118 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 ___str_0                                                        0000023A R
+  8 ___str_1                                                        00000246 R
+  8 ___str_10                                                       00000352 R
+  8 ___str_11                                                       000003C3 R
+  8 ___str_12                                                       000003D3 R
+  8 ___str_13                                                       000003E4 R
+  8 ___str_14                                                       000003E8 R
+  8 ___str_15                                                       000003EB R
+  8 ___str_16                                                       000003ED R
+  8 ___str_17                                                       000004FB R
+  8 ___str_18                                                       0000050A R
+  8 ___str_19                                                       0000050C R
+  8 ___str_2                                                        0000024F R
+  8 ___str_20                                                       0000050E R
+  8 ___str_21                                                       00000510 R
+  8 ___str_22                                                       00000514 R
+  8 ___str_3                                                        00000256 R
+  8 ___str_4                                                        00000258 R
+  8 ___str_5                                                        00000316 R
+  8 ___str_6                                                        00000327 R
+  8 ___str_7                                                        00000338 R
+  8 ___str_8                                                        0000034A R
+  8 ___str_9                                                        00000350 R
+    __divuchar                                                      ******** GX
+    __moduchar                                                      ******** GX
+  8 _action_screen                                                  000001E2 R
+  2 _answer                                                         00000026 R
+  8 _back                                                           000001C0 R
+  8 _confirm_screen                                                 00000363 R
+  2 _editor                                                         0000001E R
+    _game_read_slot                                                 ******** GX
+    _game_write_slot                                                ******** GX
+  2 _labels                                                         00000000 R
+    _menu_screen                                                    ******** GX
+  2 _name_keys                                                      00000028 R
+  2 _name_repeat                                                    00000027 R
+  8 _name_screen                                                    000003FE R
+    _notice                                                         ******** GX
+    _rRAMB                                                          ******** GX
+    _rRAMG                                                          ******** GX
+  8 _read_label                                                     00000044 R
+  2 _return_state                                                   00000025 R
+  2 _save_active_slot                                               00000029 GR
+    _save_label_decode                                              ******** GX
+    _save_label_encode                                              ******** GX
+    _save_name_begin                                                ******** GX
+    _save_name_character                                            ******** GX
+    _save_name_input                                                ******** GX
+    _save_name_move                                                 ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _save_slot_offset                                               ******** GX
+  2 _save_ui_choice                                                 0000002B GR
+  2 _save_ui_mode                                                   0000002C GR
+  8 _save_ui_open                                                   00000525 GR
+  8 _save_ui_scan                                                   00000155 GR
+  8 _save_ui_tick                                                   00000558 GR
+  2 _save_valid_mask                                                0000002A GR
+    _saved_position_valid                                           ******** GX
+    _screen_state                                                   ******** GX
+  8 _slot_screen                                                    00000269 R
+    _start_game                                                     ******** GX
+  8 _text                                                           00000000 R
+    _title_choice                                                   ******** GX
+    _title_screen                                                   ******** GX
+    _ui_number                                                      ******** GX
+    _ui_panel                                                       ******** GX
+    _ui_text                                                        ******** GX
+  8 _write_label                                                    000000BE R
+    b_menu_screen                                                   ******** GX
+    b_notice                                                        ******** GX
+    b_save_label_decode                                             ******** GX
+    b_save_label_encode                                             ******** GX
+    b_save_name_begin                                               ******** GX
+    b_save_name_character                                           ******** GX
+    b_save_name_input                                               ******** GX
+    b_save_name_move                                                ******** GX
+    b_save_slot_offset                                              ******** GX
+    b_save_ui_open                                              =   0000007A G
+    b_save_ui_scan                                              =   0000007A G
+    b_save_ui_tick                                              =   0000007A G
+    b_title_screen                                                  ******** GX
+    b_ui_number                                                     ******** GX
+    b_ui_panel                                                      ******** GX
+    b_ui_text                                                       ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       2D   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_122                                  size      83B   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

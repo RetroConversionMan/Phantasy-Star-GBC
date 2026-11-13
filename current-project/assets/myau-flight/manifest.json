@@ -1,0 +1,62 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_bank": 131,
+  "tiles": 22,
+  "data_bytes": 1056,
+  "data_sha256": "0273d802269bb81c106aa0d6f1c19fd1546c4bd86eb12cd9365ba0b5e5a26651",
+  "battle_palette_offset": 992,
+  "frames": [
+    {
+      "pose": 132,
+      "sprites": 4,
+      "quantized_pixels": 15,
+      "offset": 352
+    },
+    {
+      "pose": 133,
+      "sprites": 4,
+      "quantized_pixels": 15,
+      "offset": 432
+    },
+    {
+      "pose": 134,
+      "sprites": 4,
+      "quantized_pixels": 13,
+      "offset": 512
+    },
+    {
+      "pose": 135,
+      "sprites": 4,
+      "quantized_pixels": 15,
+      "offset": 592
+    },
+    {
+      "pose": 136,
+      "sprites": 4,
+      "quantized_pixels": 11,
+      "offset": 672
+    },
+    {
+      "pose": 137,
+      "sprites": 4,
+      "quantized_pixels": 9,
+      "offset": 752
+    },
+    {
+      "pose": 138,
+      "sprites": 4,
+      "quantized_pixels": 7,
+      "offset": 832
+    },
+    {
+      "pose": 139,
+      "sprites": 4,
+      "quantized_pixels": 9,
+      "offset": 912
+    }
+  ],
+  "limits": [
+    "Original source trajectory; native anchors and artwork scaled5/8",
+    "Nearest-neighbor poses use fixed pixel phase while moving on native pixel grid"
+  ]
+}

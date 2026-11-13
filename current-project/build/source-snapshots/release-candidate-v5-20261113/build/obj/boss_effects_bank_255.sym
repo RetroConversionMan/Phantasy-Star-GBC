@@ -1,0 +1,76 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _boss_asset_0                                                   00001AE0 GR
+  8 _boss_asset_1                                                   00001B3A GR
+  8 _boss_asset_10                                                  00001EB9 GR
+  8 _boss_asset_11                                                  00001F13 GR
+  8 _boss_asset_12                                                  00001F6D GR
+  8 _boss_asset_13                                                  00001FD1 GR
+  8 _boss_asset_14                                                  00002058 GR
+  8 _boss_asset_15                                                  000020AD GR
+  8 _boss_asset_16                                                  00002107 GR
+  8 _boss_asset_17                                                  00002166 GR
+  8 _boss_asset_18                                                  000021CA GR
+  8 _boss_asset_19                                                  00002238 GR
+  8 _boss_asset_2                                                   00001BA3 GR
+  8 _boss_asset_20                                                  00002292 GR
+  8 _boss_asset_21                                                  000022EC GR
+  8 _boss_asset_22                                                  00002346 GR
+  8 _boss_asset_23                                                  000023AA GR
+  8 _boss_asset_24                                                  00002418 GR
+  8 _boss_asset_25                                                  00002472 GR
+  8 _boss_asset_26                                                  000024CC GR
+  8 _boss_asset_27                                                  00002526 GR
+  8 _boss_asset_28                                                  00002580 GR
+  8 _boss_asset_29                                                  000025DA GR
+  8 _boss_asset_3                                                   00001C1B GR
+  8 _boss_asset_30                                                  00002634 GR
+  8 _boss_asset_31                                                  0000268E GR
+  8 _boss_asset_32                                                  000026E8 GR
+  8 _boss_asset_33                                                  0000274C GR
+  8 _boss_asset_34                                                  0000280F GR
+  8 _boss_asset_35                                                  000028DC GR
+  8 _boss_asset_36                                                  00002977 GR
+  8 _boss_asset_37                                                  00002A3A GR
+  8 _boss_asset_38                                                  00002AF8 GR
+  8 _boss_asset_4                                                   00001C75 GR
+  8 _boss_asset_5                                                   00001CCF GR
+  8 _boss_asset_6                                                   00001D29 GR
+  8 _boss_asset_7                                                   00001D8D GR
+  8 _boss_asset_8                                                   00001DF6 GR
+  8 _boss_asset_9                                                   00001E5F GR
+  8 _boss_pairs_0                                                   00000000 GR
+  8 _boss_patch_0                                                   00002BB0 GR
+  8 _boss_patch_1                                                   00002C5A GR
+  8 _boss_patch_2                                                   00002D04 GR
+  8 _boss_sequence_0                                                00002B66 GR
+  8 _boss_sequence_1                                                00002B76 GR
+  8 _boss_sequence_2                                                00002B81 GR
+  8 _boss_sequence_3                                                00002B8C GR
+  8 _boss_sequence_4                                                00002B97 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_255                                  size     2DAE   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

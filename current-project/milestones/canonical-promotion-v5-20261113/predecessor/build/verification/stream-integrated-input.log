@@ -1,0 +1,23 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "d1341b26003df6d2475810056c985b8d56ed97496fa7d49151386dd5e920a974",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "A press and release entirely during typing is ignored; first Suelo page remains at its original61 wait",
+    "Holding the page-advance button through the next reveal does not advance again; release must be sampled at the next original input wait",
+    "Armory default YES accepts B; simultaneous Down+B selects and confirms NO, matching source CheckOptionSelect order, without changing money/inventory"
+  ],
+  "injected_fixtures": [],
+  "campaign_complete": false,
+  "passed": true
+}

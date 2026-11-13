@@ -1,0 +1,9 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_world_motion_native.py", line 131, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/tools/verify_world_motion_native.py", line 125, in main
+    assert abs((last_audio-first_audio)-sum(local_frames))<=1,'Production audio lost frame cadence'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Production audio lost frame cadence

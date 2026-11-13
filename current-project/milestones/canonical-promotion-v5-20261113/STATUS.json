@@ -1,0 +1,18 @@
+{
+  "promotion_complete": true,
+  "candidate_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "changed_production_files": [
+    "src/game_field.c"
+  ],
+  "changed_object_files": [
+    "game_field.o"
+  ],
+  "source_entries_identical": 343,
+  "objects_identical": 262,
+  "baseline_unchanged_files": 45,
+  "original_SMS_unchanged": true,
+  "ROM_layout_passed": true,
+  "campaign_complete": false,
+  "campaign_status": "Parent-owned b72 clean-power-on prefix replay and remaining full campaign/replay/title comparison are separate pending gates. Exact promotion does not establish campaign completion.",
+  "tests_not_repeated": "Per authorization, no repeated seven host or thirteen integration suites; frozen v5 proof and exact source/object/ROM equivalence establish reproduction."
+}

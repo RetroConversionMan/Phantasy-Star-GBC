@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "rom_sha256": "dee6a047ca806ffcc83cffc1c0d608d3312257e17addd8326c9053c04a5eb704",
+  "cases": [
+    {
+      "scene": 1,
+      "enemy": 1,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 2369,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 2369,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 14348,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 14348,
+      "mixed_frames": []
+    },
+    {
+      "scene": 30,
+      "enemy": 72,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 826,
+      "mixed_frames": []
+    },
+    {
+      "scene": 30,
+      "enemy": 72,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 826,
+      "mixed_frames": []
+    },
+    {
+      "scene": 30,
+      "enemy": 72,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 4993,
+      "mixed_frames": []
+    },
+    {
+      "scene": 30,
+      "enemy": 72,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 4993,
+      "mixed_frames": []
+    },
+    {
+      "scene": 31,
+      "enemy": 73,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 5456,
+      "mixed_frames": []
+    },
+    {
+      "scene": 31,
+      "enemy": 73,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 5456,
+      "mixed_frames": []
+    },
+    {
+      "scene": 31,
+      "enemy": 73,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 13455,
+      "mixed_frames": []
+    },
+    {
+      "scene": 31,
+      "enemy": 73,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 13455,
+      "mixed_frames": []
+    },
+    {
+      "scene": 32,
+      "enemy": 73,
+      "effect": "enemy",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 502,
+      "mixed_frames": []
+    },
+    {
+      "scene": 32,
+      "enemy": 73,
+      "effect": "enemy",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 502,
+      "mixed_frames": []
+    },
+    {
+      "scene": 32,
+      "enemy": 73,
+      "effect": "party_with_index16",
+      "white": 1,
+      "physical_frames": 5,
+      "changed_pixels": 18600,
+      "mixed_frames": []
+    },
+    {
+      "scene": 32,
+      "enemy": 73,
+      "effect": "party_with_index16",
+      "white": 0,
+      "physical_frames": 5,
+      "changed_pixels": 18600,
+      "mixed_frames": []
+    }
+  ],
+  "mixed_frames": 0,
+  "scope": "24live-PPU before/after transitions in the production battle renderer, including real source14 Gold and original Lassic/DarkFalz contexts. Separate art probe has no production audio IRQ; full-main audio/PPU integration is separately verified."
+}

@@ -1,0 +1,146 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/dungeon-native-blocks-continuous/src/main.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_data.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_upload.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_data.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_view.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_upload.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_production_data.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_production_tables.c:
+build/verification/dungeon-native-blocks-continuous/src/bank_io.c:
+build/verification/dungeon-native-blocks-continuous/src/font.c:
+build/verification/dungeon-native-blocks-continuous/src/audio.c:
+build/verification/dungeon-native-blocks-continuous/src/audio_tables.c:
+build/verification/dungeon-native-blocks-continuous/src/audio_data.c:
+build/verification/dungeon-native-blocks-continuous/src/audio_low_62.c:
+build/verification/dungeon-native-blocks-continuous/src/audio_low_63.c:
+build/verification/dungeon-native-blocks-continuous/src/audio_irq.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_209.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_210.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_211.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_212.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_214.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_215.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_216.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_217.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_218.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_219.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_220.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_221.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_222.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_223.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_224.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_225.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_226.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_227.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_228.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_229.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_230.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_231.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_232.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_233.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_234.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_235.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_236.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_237.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_238.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_239.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_240.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_241.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_242.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_243.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_244.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_245.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_246.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_247.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_248.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_249.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_250.c:
+build/verification/dungeon-native-blocks-continuous/src/dungeon_motion_bank_251.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_21.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_22.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_23.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_24.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_25.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_26.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_27.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_28.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_29.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_64.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_65.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_66.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_67.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_68.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_69.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_70.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_71.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_72.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_73.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_74.c:
+build/verification/dungeon-native-blocks-continuous/src/native_blocks_75.c:
+build/verification/dungeon-native-blocks-continuous/src/native_lookup_76.c:
+build/verification/dungeon-native-blocks-continuous/src/native_lookup_78.c:
+build/verification/dungeon-native-blocks-continuous/src/native_lookup_79.c:
+build/verification/dungeon-native-blocks-continuous/src/native_lookup_80.c:
+build/verification/dungeon-native-blocks-continuous/src/native_tables.c:
+{
+  "passed": true,
+  "diagnostic_header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "ad1f960dbebf06f338efacf92fcead6f0ad612c046ff2fe37f97cfddd387babf",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "production_reference": "30fcd2fe47b494532202629444ace2aa25cc881fec2ea8273a70258f29bad9f5",
+  "original_uploader_sha256": "2e3d60b668d67bad1f27d29c79495c92b6071ee58f2ac12e113186c64ae1367b",
+  "diagnostic_uploader_sha256": "86254a5d1349bd89c33152061c8072caec5dc801d993e3f7c1f7b86285e8eba6",
+  "extra_production_WRAM": 0,
+  "CPU_cycles_per_physical_frame": 140448,
+  "source_palette": 4,
+  "summary": {
+    "source_path": {
+      "poses": 40,
+      "mean_dirty_patterns": 119.55,
+      "mean_frame_equivalents": 3.9124125000000003,
+      "mean_cycles": {
+        "palette_and_entry": 23200.8,
+        "begin_cache": 322,
+        "pattern_uploads": 149794.1,
+        "map_packing": 75741.3,
+        "map_uploads": 83803.1,
+        "final_VBlank_wait": 47856.8,
+        "commit_palette_and_registers": 3912,
+        "native_block_expansion": 164860.8
+      },
+      "mean_gap_after_pose_cycles": 816
+    },
+    "same_image": {
+      "poses": 4,
+      "mean_dirty_patterns": 0,
+      "mean_frame_equivalents": 3.025275,
+      "mean_cycles": {
+        "palette_and_entry": 2440,
+        "begin_cache": 322,
+        "pattern_uploads": 32236,
+        "map_packing": 76926,
+        "map_uploads": 78090,
+        "final_VBlank_wait": 41892,
+        "commit_palette_and_registers": 3912,
+        "native_block_expansion": 189073
+      }
+    }
+  },
+  "notes": [
+    "Diagnostic symbol exports and zero-instruction labels only; production uploader unchanged.",
+    "Measured emulator CPU cycle counter includes actual score IRQ and HBlank DMA stalls.",
+    "This diagnostic is not a replacement for source-image/PPU correctness tests."
+  ]
+}

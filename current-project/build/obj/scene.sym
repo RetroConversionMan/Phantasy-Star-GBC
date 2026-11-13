@@ -1,0 +1,56 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  9 __xinit__active_scene                                           00000000 R
+  3 _active_scene                                                   00000000 R
+  2 _attribute_row                                                  0000007C R
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+  2 _map_row                                                        00000068 R
+    _scene_assets                                                   ******** GX
+    _scene_palette_background                                       ******** GX
+    _scene_palette_capture                                          ******** GX
+    _scene_palette_commit                                           ******** GX
+  8 _scene_palette_flash                                            000003F5 GR
+  8 _scene_palette_prepare                                          000002CF GR
+    _scene_pattern_pools                                            ******** GX
+  2 _scene_shared_bytes                                             00000000 GR
+  2 _scene_shared_colors                                            00000028 GR
+  8 _scene_show                                                     00000000 GR
+  8 _scene_show_room                                                000002AB GR
+    _set_bkg_palette                                                ******** GX
+    _set_bkg_tiles                                                  ******** GX
+    b_scene_palette_capture                                         ******** GX
+    b_scene_palette_commit                                          ******** GX
+    b_scene_palette_flash                                       =   0000000D G
+    b_scene_palette_prepare                                     =   0000000D G
+    b_scene_show                                                =   0000000D G
+    b_scene_show_room                                           =   0000000D G
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       90   flags    0
+   3 _INITIALIZED                               size        2   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_13                                   size      414   flags    0
+   9 _INITIALIZER                               size        2   flags    0
+   A _CABS                                      size        0   flags    8
+

@@ -1,0 +1,21 @@
+{
+  "status": "frozen isolated patch, not canonical",
+  "snapshot": "build/source-snapshots/world-motion-work",
+  "source": "62BC/630A; bank14 actual pattern bytes and pointer tables6345..6395",
+  "runtime": "source first-expired-slot early return; fullbyte signedcounter decrement; phaseincrement normal/decrement roadtag>=4; roadonlyslot3reload0",
+  "memory": "13B added, WRAMendDBA6 beforeotherpatches",
+  "banks": {
+    "21": "runtime",
+    "24": "group0 phasebytes",
+    "25": "group1 phasebytes"
+  },
+  "source_proof": "build/verification/world-motion-source-atomic/report.json",
+  "priority_proof": "build/milestones/world-priority-20261113; helperpassed sourcezero masks andnativePPU",
+  "native_negative_control": "build/verification/world-motion-native-v2/report.json:2944steps/745472patternbytes/35328counterbytes correct;2mixedcompletedframes among856sampled, ordinaryset_bkg_data insufficientatomicity",
+  "current_fix": "Native atomic CGB GP DMA proof passed; zero mixed frames among453 sampled completedframes",
+  "canonical_modified": false,
+  "next": "merge with party, vehicle, service and transition patches; reverify combined ROM then run fresh campaign",
+  "native_proof": "build/verification/world-motion-native-atomic/report.json",
+  "integration_proof": "build/verification/world-motion-acceptance.json",
+  "frozen_patch": "build/source-snapshots/world-motion-files/MANIFEST.json"
+}

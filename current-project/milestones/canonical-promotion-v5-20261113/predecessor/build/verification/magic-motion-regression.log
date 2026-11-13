@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "flash_cases": [
+    {
+      "first_source_index": 19,
+      "colors": 13,
+      "frames": 10,
+      "alternation": "white,original repeated5 times; final original"
+    },
+    {
+      "first_source_index": 3,
+      "colors": 13,
+      "frames": 10,
+      "alternation": "white,original repeated5 times; final original"
+    },
+    {
+      "first_source_index": 3,
+      "colors": 14,
+      "frames": 10,
+      "alternation": "white,original repeated5 times; final original"
+    }
+  ],
+  "checks": 16575,
+  "physical_enemies": 72,
+  "source_actor_updates": 4548,
+  "asset_lookups": 2693,
+  "reference": "Pinned original Z80 LABEL5DA0/LABEL5DB1 machine code; compare frame,timer,sequence cursor and impact marker every actor update. C2ED0 isolates movement from native damage-flash subroutine. One final source VBlank added after actor exits.",
+  "chest_cases": [
+    {
+      "visual": 61,
+      "frames": 49,
+      "flash_block_frames": 0,
+      "frame_changes": [
+        [
+          8,
+          59
+        ],
+        [
+          16,
+          60
+        ],
+        [
+          24,
+          61
+        ]
+      ]
+    },
+    {
+      "visual": 62,
+      "frames": 79,
+      "flash_block_frames": 10,
+      "frame_changes": [
+        [
+          8,
+          59
+        ],
+        [
+          16,
+          60
+        ],
+        [
+          24,
+          61
+        ],
+        [
+          48,
+          62
+        ],
+        [
+          52,
+          63
+        ],
+        [
+          56,
+          64
+        ],
+        [
+          60,
+          65
+        ],
+        [
+          74,
+          66
+        ],
+        [
+          78,
+          61
+        ]
+      ]
+    },
+    {
+      "visual": 67,
+      "frames": 75,
+      "flash_block_frames": 10,
+      "frame_changes": [
+        [
+          8,
+          59
+        ],
+        [
+          16,
+          60
+        ],
+        [
+          24,
+          61
+        ],
+        [
+          48,
+          67
+        ],
+        [
+          52,
+          68
+        ],
+        [
+          56,
+          69
+        ],
+        [
+          60,
+          70
+        ],
+        [
+          74,
+          61
+        ]
+      ]
+    }
+  ],
+  "scope": "Ordinary physical enemy attack motion and original safe/party/single chest frame timelines; excludes Lassic/Dark Falz special handlers, magic overlays, native VRAM timing and campaign playthrough."
+}

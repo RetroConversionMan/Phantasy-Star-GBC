@@ -1,0 +1,110 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "26362dd91e5b21db4ffaaac141d2ddbaaa499fd4448b27265f522ed2d94252f3",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    {
+      "opening": "Original title, full unskipped pan/city/three-record narrative, then source newgame",
+      "pan_source_changes": 223,
+      "pan_emulator_frames": 224,
+      "story_records": [
+        [
+          4,
+          0,
+          62619
+        ],
+        [
+          4,
+          1,
+          62716
+        ],
+        [
+          4,
+          2,
+          62933
+        ]
+      ]
+    },
+    {
+      "ending_real_audio_IRQ_frames": 6795,
+      "ending_measured_native_frames": 6794,
+      "difference_allowed_for_ISR_sampling": 2,
+      "stack_guard": "DBC0..DBFF unchanged through DarkFalz, complete ending and return to title",
+      "audio_fault": 0
+    },
+    {
+      "ending": "Actual MiracleKey/door, DarkFalz combat, ending choice, sky/text/story/bitmap",
+      "credits_verified": true,
+      "stopped_before_credits": false,
+      "story_records": [
+        [
+          6,
+          3,
+          63976
+        ],
+        [
+          6,
+          5,
+          63984
+        ],
+        [
+          6,
+          6,
+          63995
+        ],
+        [
+          6,
+          4,
+          64006
+        ],
+        [
+          6,
+          3,
+          64018
+        ],
+        [
+          6,
+          3,
+          64084
+        ]
+      ],
+      "closing_texts": [
+        48822,
+        48848,
+        48872,
+        48893,
+        48905,
+        48929
+      ],
+      "stages": [
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "SRAM fixture:floor31/DE facing original DarkFalz doorCE, MiracleKey,4strong party, prior Shadow/Lassic flags; no DarkFalz outcome or ending state injected",
+    "Diagnostic64-byte guard atDBC0..DBFF, below the1KiB DC00..DFFF stack window; no game state changed"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

@@ -1,0 +1,45 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "pan_bytes": 3160,
+  "native_banks": [
+    129,
+    130
+  ],
+  "pan_viewport": "Native pixel-size160x144 centered crop of original256x192; source224-pixel vertical scroll ring preserved",
+  "static_images": [
+    {
+      "id": 1,
+      "name": "city",
+      "bank": 130,
+      "tiles": 217,
+      "bytes": 4728,
+      "source_sha256": "2674d96e3b6aa5dcafe2fcbb606349f339cd128b93d8c603aa2a57684d407fa6",
+      "data_sha256": "c2ab22b8b8a9e5911e8dff953e15d59bcd84fa55e285e73ad08d10f8332313e7",
+      "color_quantized_pixels": 1305,
+      "caption_map_offset": 4128
+    },
+    {
+      "id": 2,
+      "name": "ending",
+      "bank": 130,
+      "tiles": 75,
+      "bytes": 1856,
+      "source_sha256": "73c80ef1519b83cbc665eee96cba8ecdc07d6253f71eecd351a1210cc3680348",
+      "data_sha256": "571e48705e5e90213d9ec4b6cc489b7bc130b440735d66a33c8bc02252204e3c",
+      "color_quantized_pixels": 1349,
+      "caption_map_offset": 0
+    },
+    {
+      "id": 3,
+      "name": "title",
+      "bank": 130,
+      "tiles": 178,
+      "bytes": 3504,
+      "source_sha256": "100ac94b5b0bd83d5bd1a772c55e80af4561936237b0127f4c64e5c7c118306a",
+      "data_sha256": "b30d10e9eada20330dfa8d6a0d83d2633c56f9bfce0101df521033f0c8a0cf14",
+      "color_quantized_pixels": 677,
+      "caption_map_offset": 0
+    }
+  ],
+  "bank130_bytes": 10088
+}

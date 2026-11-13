@@ -1,0 +1,28 @@
+XL4
+H B areas 6 global symbols
+M presentation_data
+S _presentation_odin Ref00000000
+S _presentation_ending_sky Ref00000000
+S _presentation_prism Ref00000000
+S .__.ABS. Def00000000
+S _presentation_torch Ref00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_12 size 1C flags 0 addr 0
+S _presentation_assets Def00000000
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 80 1E 00 1F 07 00 00 80 F5 00 00 02
+R 00 00 08 00 02 09 00 00
+T 0C 00 00 00 00 00 80 B5 00 00 26 00 00 80 95 00
+R 00 00 08 00 02 04 04 00 02 0B 02 00
+T 18 00 00 00 00 0A 00 00
+R 00 00 08 00 02 06 01 00

@@ -1,0 +1,52 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _ending_images                                                  00000000 GR
+  8 _ending_palettes                                                000003FF GR
+  8 _ending_patterns                                                000003EA GR
+  8 _ending_runs                                                    0000093F GR
+  8 _ending_sounds                                                  00001682 GR
+    _ending_walk_bank_137                                           ******** GX
+    _ending_walk_bank_138                                           ******** GX
+    _ending_walk_bank_139                                           ******** GX
+    _ending_walk_bank_193                                           ******** GX
+    _ending_walk_bank_194                                           ******** GX
+    _ending_walk_bank_195                                           ******** GX
+    _ending_walk_bank_196                                           ******** GX
+    _ending_walk_bank_197                                           ******** GX
+    _ending_walk_bank_198                                           ******** GX
+    _ending_walk_bank_199                                           ******** GX
+    _ending_walk_bank_200                                           ******** GX
+    _ending_walk_bank_201                                           ******** GX
+    _ending_walk_bank_202                                           ******** GX
+    _ending_walk_bank_203                                           ******** GX
+    _ending_walk_bank_204                                           ******** GX
+    _ending_walk_bank_205                                           ******** GX
+    _ending_walk_bank_206                                           ******** GX
+    _ending_walk_bank_207                                           ******** GX
+    _ending_walk_bank_208                                           ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_136                                  size     1697   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

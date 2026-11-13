@@ -1,0 +1,322 @@
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "defines.h"
+#include "check.h"
+#include "memory.h"
+#include "files.h"
+#include "main.h"
+
+
+/* read an integer from t */
+#define READ_T (t[3] + (t[2] << 8) + (t[1] << 16) + (t[0] << 24)); t += 4;
+#define READ_T_FINAL (t[3] + (t[2] << 8) + (t[1] << 16) + (t[0] << 24));
+
+/* NOTE: the largest byte check_headers() reads out of an object file header is
+   OBJ_SMS_CHECKSUM_SIZE + 7 = 15 (the SNES ROM header base address, read by
+   READ_T_FINAL after t has been advanced by four), so an object file must be at
+   least 16 bytes long. The equivalent for a library is LIB_MISC_BITS = 4, i.e. 5
+   bytes. See the per-file length check inside check_headers(). */
+#define CHECK_HEADERS_OBJ_MIN_SIZE 16
+#define CHECK_HEADERS_LIB_MIN_SIZE 5
+
+extern struct object_file *g_obj_first;
+extern int g_emptyfill, g_sms_checksum, g_smstag_defined, g_snes_rom_mode, g_snes_rom_speed, g_smc_status, g_sms_header;
+extern int g_gb_checksum, g_gb_complement_check, g_snes_checksum, g_snes_mode, g_snes_sramsize, g_sms_checksum_already_written;
+extern int g_sms_checksum_size_defined, g_sms_checksum_size, g_smd_checksum, g_romheader_baseaddress;
+
+
+int check_file_types(void) {
+
+  struct object_file *o;
+  
+  o = g_obj_first;
+  while (o != NULL) {
+    /* NOTE: strncmp() below reads four bytes from o->data and the error message
+       reads o->data[0..3], but o->size is whatever the file happened to be, and
+       load_file_data() allocates exactly that many bytes. A file shorter than
+       four bytes therefore made this read past the end of the heap allocation
+       (heap buffer over-read); the format is unknowable anyway, so reject it. */
+    if (o->size < 4) {
+      print_text(NO, "CHECK_FILE_TYPES: File \"%s\" is too short to be a WLA object or library file (%d bytes, need at least 4).\n", o->name, o->size);
+      return FAILED;
+    }
+    if (strncmp((char *)o->data, "WLAo", 4) == 0)
+      o->format = WLA_VERSION_OBJ;
+    else if (strncmp((char *)o->data, "WLAK", 4) == 0)
+      o->format = WLA_VERSION_LIB;
+    else {
+      print_text(NO, "CHECK_FILE_TYPES: File \"%s\" is of unknown format (\"%c%c%c%c\").\n", o->name, o->data[0], o->data[1], o->data[2], o->data[3]);
+      return FAILED;
+    }
+    o = o->next;
+  }
+
+  return SUCCEEDED;
+}
+
+
+static char *_get_snes_rom_speed(int speed) {
+
+  if (speed == 0)
+    return "\"200ns\"";
+  else
+    return "\"120ns\"";
+}
+
+
+static char *_get_snes_rom_mode(int mode) {
+
+  if (mode == SNES_ROM_MODE_LOROM)
+    return "\"LoROM\"";
+  else if (mode == SNES_ROM_MODE_HIROM)
+    return "\"HiROM\"";
+  else if (mode == SNES_ROM_MODE_EXHIROM)
+    return "\"ExHiROM\"";
+  else if (mode == SNES_ROM_MODE_EXLOROM)
+    return "\"ExLoROM\"";
+  else
+    return "\"???\"";
+}
+
+
+int check_headers(void) {
+
+  int count = 0, misc_bits, e, files_count = 0, sh2_files_count = 0, cp1610_files_count = 0;
+  char *first_sh2_file = NULL, *first_non_sh2_file = NULL;
+  char *first_cp1610_file = NULL, *first_non_cp1610_file = NULL;
+  struct object_file *o;
+  unsigned char *t;
+  
+  o = g_obj_first;
+  while (o != NULL) {
+    /* NOTE: the header fields below are read from fixed offsets of o->data
+       (OBJ_MISC_BITS = 5 .. OBJ_SMS_CHECKSUM_SIZE + 7 = 15 for objects, and
+       LIB_MISC_BITS = 4 for libraries) with no regard for o->size. A truncated
+       file that still carries a valid "WLAo"/"WLAK" magic therefore made these
+       reads run past the end of the heap buffer, crashing the linker on a
+       shortened .o/.lib file. Validate the length before touching the bytes. */
+    if (o->format == WLA_VERSION_OBJ && o->size < CHECK_HEADERS_OBJ_MIN_SIZE) {
+      print_text(NO, "CHECK_HEADERS: Object file \"%s\" is too short (%d bytes, need at least %d).\n", o->name, o->size, CHECK_HEADERS_OBJ_MIN_SIZE);
+      return FAILED;
+    }
+    if (o->format == WLA_VERSION_LIB && o->size < CHECK_HEADERS_LIB_MIN_SIZE) {
+      print_text(NO, "CHECK_HEADERS: Library file \"%s\" is too short (%d bytes, need at least %d).\n", o->name, o->size, CHECK_HEADERS_LIB_MIN_SIZE);
+      return FAILED;
+    }
+
+    if (o->format == WLA_VERSION_OBJ) {
+      int extr_bits, more_bits;
+
+      /* object file */
+      misc_bits = *(o->data + OBJ_MISC_BITS);
+      more_bits = *(o->data + OBJ_MORE_BITS);
+      extr_bits = *(o->data + OBJ_EXTR_BITS);
+      t = o->data + OBJ_SMS_CHECKSUM_SIZE;
+
+      if ((misc_bits & 128) != 0)
+        o->cpu_65816 = YES;
+      else
+        o->cpu_65816 = NO;
+
+      if ((extr_bits & 1) != 0)
+        o->cpu_65ce02 = YES;
+      else
+        o->cpu_65ce02 = NO;
+
+      if ((extr_bits & 16) != 0)
+        o->cpu_sh2 = YES;
+      else
+        o->cpu_sh2 = NO;
+
+      if ((extr_bits & 32) != 0)
+        o->cpu_cp1610 = YES;
+      else
+        o->cpu_cp1610 = NO;
+      
+      if (((more_bits >> 7) & 1) != 0)
+        o->little_endian = NO;
+      else
+        o->little_endian = YES;
+      
+      if (count == 0) {
+        /* empty fill */
+        g_emptyfill = *(o->data + OBJ_EMPTY_FILL);
+        /* misc bits */
+        g_sms_checksum = misc_bits & 1;
+        g_snes_rom_mode = misc_bits & 2;
+        g_snes_mode = misc_bits & 4;
+        g_snes_rom_speed = misc_bits & 8;
+        g_gb_checksum = misc_bits & 16;
+        g_gb_complement_check = misc_bits & 32;
+        g_snes_checksum = misc_bits & 64;
+        /* more bits */
+        g_smc_status = more_bits & 1;
+        g_snes_sramsize = (more_bits >> 1) & 3;
+        g_smstag_defined = (more_bits >> 3) & 1;
+        g_sms_header = (more_bits >> 4) & 1;
+        if (((more_bits >> 5) & 1) == 1)
+          g_snes_rom_mode = SNES_ROM_MODE_EXHIROM;
+        if (((more_bits >> 6) & 1) == 1)
+          g_snes_rom_mode = SNES_ROM_MODE_EXLOROM;
+        /* extr bits */
+        g_sms_checksum_already_written = (extr_bits >> 1) & 1;
+        g_sms_checksum_size_defined = (extr_bits >> 2) & 1;
+        g_smd_checksum = (extr_bits >> 3) & 1;
+        /* sms checksum size */
+        g_sms_checksum_size = READ_T;
+        /* ROM header base address */
+        g_romheader_baseaddress = READ_T_FINAL;
+      }
+      else {
+        e = *(o->data + OBJ_EMPTY_FILL);
+        if (e != g_emptyfill) {
+          print_text(YES, "CHECK_HEADERS: Conflicting empty fill in file \"%s\". Old $%.2x, new $%.2x. Using $%.2x.\n", o->name, g_emptyfill, e, e);
+          g_emptyfill = e;
+        }
+
+        if (g_sms_checksum == 0 && (misc_bits & 1) != 0)
+          g_sms_checksum = misc_bits & 1;
+        if (g_gb_checksum == 0 && (misc_bits & 16) != 0)
+          g_gb_checksum = misc_bits & 16;
+        if (g_gb_complement_check == 0 && (misc_bits & 32) != 0)
+          g_gb_complement_check = misc_bits & 32;
+        if (g_snes_checksum == 0 && (misc_bits & 64) != 0)
+          g_snes_checksum = misc_bits & 64;
+
+        if (g_smc_status == 0 && (more_bits & 1) != 0)
+          g_smc_status = more_bits & 1;
+        if (g_smstag_defined == 0 && (more_bits & 8) != 0)
+          g_smstag_defined = more_bits & 8;
+        if (g_sms_header == 0 && (more_bits & 16) != 0)
+          g_sms_header = more_bits & 16;
+
+        if (g_smd_checksum == 0 && ((extr_bits >> 3) & 1) != 0)
+          g_smd_checksum = 1;
+        
+        e = (more_bits >> 1) & 3;
+        if (g_snes_sramsize < e) {
+          print_text(YES, "CHECK_HEADERS: Conflicting SNES SRAM size in file \"%s\". Old $%.2x, new $%.2x. Using $%.2x as it's bigger.\n", o->name, g_snes_sramsize, e, e);
+          g_snes_sramsize = e;
+        }
+
+        if (o->cpu_65816) {
+          e = misc_bits & 8;
+          if (g_snes_rom_speed != e) {
+            print_text(YES, "CHECK_HEADERS: Conflicting SNES ROM speed in file \"%s\". Old %s, new %s. Using %s.\n", o->name, _get_snes_rom_speed(g_snes_rom_speed), _get_snes_rom_speed(e), _get_snes_rom_speed(e));
+            g_snes_rom_speed = e;
+          }
+
+          e = misc_bits & 4;
+          if (g_snes_mode == 0 && e != 0) {
+            /* previously snes_mode was 0, so here we get the real bits first time */
+            g_snes_mode = e;
+            g_snes_rom_mode = misc_bits & 2;
+            if (((more_bits >> 5) & 1) == 1)
+              g_snes_rom_mode = SNES_ROM_MODE_EXHIROM;
+            if (((more_bits >> 6) & 1) == 1)
+              g_snes_rom_mode = SNES_ROM_MODE_EXLOROM;
+          }
+          else if (g_snes_mode != 0 && e == 0) {
+            /* don't do anything */
+          }
+          else {
+            /* check that the SNES ROM mode is the same */
+            e = misc_bits & 2;
+            if (((more_bits >> 5) & 1) == 1)
+              e = SNES_ROM_MODE_EXHIROM;
+            if (((more_bits >> 6) & 1) == 1)
+              e = SNES_ROM_MODE_EXLOROM;
+
+            if (g_snes_rom_mode != e) {
+              print_text(YES, "CHECK_HEADERS: Conflicting SNES ROM mode in file \"%s\". Old %s, new %s. Using %s.\n", o->name, _get_snes_rom_mode(g_snes_rom_mode), _get_snes_rom_mode(e), _get_snes_rom_mode(e));
+              g_snes_rom_mode = e;
+            }
+          }
+        }
+
+        if (g_sms_checksum_already_written == 0 && ((extr_bits >> 1) & 1) != 0)
+          g_sms_checksum_already_written = (extr_bits >> 1) & 1;
+        if (g_sms_checksum_size_defined == 0 && ((extr_bits >> 2) & 1) != 0) {
+          g_sms_checksum_size_defined = (extr_bits >> 2) & 1;
+          g_sms_checksum_size = READ_T_FINAL;
+        }
+        
+        t += 4;
+        e = READ_T_FINAL;
+        if (e != -1)
+          g_romheader_baseaddress = e;
+      }
+
+      count++;
+    }
+    else {
+      /* library file */
+      misc_bits = *(o->data + LIB_MISC_BITS);
+
+      if ((misc_bits & 4) != 0)
+        o->cpu_65ce02 = YES;
+      else
+        o->cpu_65ce02 = NO;
+
+      if ((misc_bits & 8) != 0)
+        o->cpu_sh2 = YES;
+      else
+        o->cpu_sh2 = NO;
+
+      if ((misc_bits & 16) != 0)
+        o->cpu_cp1610 = YES;
+      else
+        o->cpu_cp1610 = NO;
+
+      if ((misc_bits & 2) != 0)
+        o->cpu_65816 = YES;
+      else
+        o->cpu_65816 = NO;
+
+      if ((misc_bits & 1) != 0)
+        o->little_endian = NO;
+      else
+        o->little_endian = YES;
+    }
+    
+    files_count++;
+    if (o->cpu_sh2 == YES) {
+      sh2_files_count++;
+      if (first_sh2_file == NULL)
+        first_sh2_file = o->name;
+    }
+    else if (first_non_sh2_file == NULL)
+      first_non_sh2_file = o->name;
+
+    if (o->cpu_cp1610 == YES) {
+      cp1610_files_count++;
+      if (first_cp1610_file == NULL)
+        first_cp1610_file = o->name;
+    }
+    else if (first_non_cp1610_file == NULL)
+      first_non_cp1610_file = o->name;
+
+    o = o->next;
+  }
+
+  if (sh2_files_count != 0 && sh2_files_count != files_count) {
+    print_text(NO, "CHECK_HEADERS: Cannot mix SH-2 file \"%s\" with non-SH-2 file \"%s\".\n", first_sh2_file, first_non_sh2_file);
+    return FAILED;
+  }
+
+  if (cp1610_files_count != 0 && cp1610_files_count != files_count) {
+    print_text(NO, "CHECK_HEADERS: Cannot mix CP1610 file \"%s\" with non-CP1610 file \"%s\".\n", first_cp1610_file, first_non_cp1610_file);
+    return FAILED;
+  }
+
+  if (count == 0) {
+    print_text(NO, "CHECK_HEADERS: There's nothing to link.\n");
+    return FAILED;
+  }
+
+  return SUCCEEDED;
+}

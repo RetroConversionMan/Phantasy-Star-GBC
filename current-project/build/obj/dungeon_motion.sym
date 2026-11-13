@@ -1,0 +1,68 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+    _bank_copy                                                      ******** GX
+    _dungeon_graphic_palettes                                       ******** GX
+    _dungeon_motion_active                                          ******** GX
+    _dungeon_motion_buffer                                          ******** GX
+  8 _dungeon_motion_door_image                                      0000027E GR
+    _dungeon_motion_expand_map                                      ******** GX
+    _dungeon_motion_fault                                           ******** GX
+    _dungeon_motion_home                                            ******** GX
+    _dungeon_motion_prepare_variant                                 ******** GX
+  8 _dungeon_motion_render                                          000002BE GR
+  8 _dungeon_motion_render_image                                    000001F2 GR
+  8 _dungeon_motion_scene                                           00000033 GR
+  8 _dungeon_motion_sequence_frame                                  0000034E GR
+  8 _dungeon_motion_turn_sequence                                   00000376 GR
+    _dungeon_motion_upload_begin                                    ******** GX
+    _dungeon_motion_upload_end                                      ******** GX
+    _dungeon_render_palette                                         ******** GX
+    _dungeon_sample                                                 ******** GX
+    _dungeon_sample_position                                        ******** GX
+    _dungeon_view_front                                             ******** GX
+    _dungeon_view_index                                             ******** GX
+    _dungeon_view_scene_id                                          ******** GX
+  2 _last_image                                                     00000000 R
+  2 _last_palette                                                   00000002 R
+    _motion_fixed                                                   ******** GX
+    _motion_lookup                                                  ******** GX
+    _motion_maps                                                    ******** GX
+    _motion_sequences                                               ******** GX
+    _motion_variants                                                ******** GX
+  8 _word                                                           00000000 R
+    b_dungeon_motion_door_image                                 =   0000004D G
+    b_dungeon_motion_render                                     =   0000004D G
+    b_dungeon_motion_render_image                               =   0000004D G
+    b_dungeon_motion_scene                                      =   0000004D G
+    b_dungeon_motion_sequence_frame                             =   0000004D G
+    b_dungeon_motion_turn_sequence                              =   0000004D G
+    b_dungeon_sample                                                ******** GX
+    b_dungeon_sample_position                                       ******** GX
+    b_dungeon_view_scene_id                                         ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        3   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_77                                   size      3C1   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

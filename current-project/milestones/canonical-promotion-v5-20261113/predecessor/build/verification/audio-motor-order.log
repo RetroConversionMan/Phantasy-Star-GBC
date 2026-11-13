@@ -1,0 +1,37 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "passed": true,
+  "header": {
+    "title": "PSMOTOR-ORDER",
+    "bytes": 1048576,
+    "sha256": "17a4a9f9aba7fef95cc9e8a6eda55637710f8065b62381078ab7b65faa0e3453",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "timeline_cases": 86,
+  "score_ticks": 2304,
+  "exact_source_driver_bytes": 1179648,
+  "later_command_before_irq_cases": 38,
+  "continuous_irq_frames": 1200,
+  "guard_bytes": 64,
+  "source_trace_sha256": "8e9ee200c5bf9414ab91f21e90f30728a0b447b4db93e0566c24b19b5dc830ce",
+  "helper_files": {
+    "audio_irq.c": "85029c9819ac4e23a9a49ec62cae4d3b9cbd5c54299ae10d3a5f38ee86216973",
+    "audio.h": "edc4f956b8c777e6cf0544574ef8358c782cfe0fcdb5079e72d481a2c8a2eb74"
+  },
+  "production_objects": {
+    "audio.o": "35845db6fd342eb54efd2572cb0760e7777a84b00e8f28a23d6e16b89f3b6b73",
+    "audio_data.o": "10b64c42e823c521fb10f6c6bca51120391586b847615661be831c91d4e56be3",
+    "audio_tables.o": "06c859911343c1dba83f8014e47451b34ca5c4e96788f3dd29eedd07d155b233",
+    "audio_low_62.o": "6e99c3856cef3f502f57fb8fc2602675fb47dc09d3edbf02a83ce065fd83d6da",
+    "audio_low_63.o": "663f1cc55c7d830219aaa3f16c2ad4bbb6bede3df936ad0f8a47c95c5f8ceb1f",
+    "bank_io.o": "9c07710e51289493dd1cb125bd2e196a486dbe1b52681e54feeda7022023a63f"
+  },
+  "test_script_sha256": "f0d5d39fc3f565e8978a05a8abcaf06350138d2163c2f03cb6f5aef870c48265",
+  "scope": "Compare the native motor/IRQ mailbox chronology with original source traces.\n\nExplicit fixture commands control the LCD between requests. Each request runs\none real installed scanline IRQ; production score objects are unchanged. This\ntests scheduling, not vehicle art, whole-game integration or earned gameplay.\n"
+}

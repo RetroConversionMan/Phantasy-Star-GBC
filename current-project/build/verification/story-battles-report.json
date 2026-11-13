@@ -1,0 +1,10 @@
+{
+  "checks": 297,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false,
+  "battle_outcomes": "Injected callbacks for event-branch tests; battle engine verified separately"
+}

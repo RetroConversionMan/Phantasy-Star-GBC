@@ -1,0 +1,88 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _dplay_enter                                                    000004A8 GR
+  8 _dplay_escape                                                   000009F0 GR
+  8 _dplay_escape_blocked                                           00000053 GR
+  8 _dplay_mark_object                                              00000030 GR
+  8 _dplay_resume                                                   0000009A GR
+  8 _dplay_scene_fall                                               0000055A GR
+  8 _dplay_show_opening                                             00000B4A GR
+  8 _dplay_step                                                     00000627 GR
+    _dungeon_active_object                                          ******** GX
+    _dungeon_enter                                                  ******** GX
+    _dungeon_load_floor                                             ******** GX
+    _dungeon_present_door                                           ******** GX
+    _dungeon_present_fall                                           ******** GX
+    _dungeon_present_frame                                          ******** GX
+    _dungeon_present_prepare                                        ******** GX
+    _dungeon_present_scene_fall                                     ******** GX
+    _dungeon_present_sequence                                       ******** GX
+    _dungeon_present_transition                                     ******** GX
+    _dungeon_present_turn                                           ******** GX
+    _dungeon_refresh_light                                          ******** GX
+    _dungeon_sample                                                 ******** GX
+    _dungeon_sample_position                                        ******** GX
+    _dungeon_step                                                   ******** GX
+    _memset                                                         ******** GX
+  8 _queue                                                          00000000 R
+    _rpg_dungeon_encounter                                          ******** GX
+    _rpg_find_item                                                  ******** GX
+    _rpg_random                                                     ******** GX
+    b_dplay_enter                                               =   0000000B G
+    b_dplay_escape                                              =   0000000B G
+    b_dplay_escape_blocked                                      =   0000000B G
+    b_dplay_mark_object                                         =   0000000B G
+    b_dplay_resume                                              =   0000000B G
+    b_dplay_scene_fall                                          =   0000000B G
+    b_dplay_show_opening                                        =   0000000B G
+    b_dplay_step                                                =   0000000B G
+    b_dungeon_active_object                                         ******** GX
+    b_dungeon_enter                                                 ******** GX
+    b_dungeon_load_floor                                            ******** GX
+    b_dungeon_present_door                                          ******** GX
+    b_dungeon_present_fall                                          ******** GX
+    b_dungeon_present_frame                                         ******** GX
+    b_dungeon_present_prepare                                       ******** GX
+    b_dungeon_present_scene_fall                                    ******** GX
+    b_dungeon_present_sequence                                      ******** GX
+    b_dungeon_present_transition                                    ******** GX
+    b_dungeon_present_turn                                          ******** GX
+    b_dungeon_refresh_light                                         ******** GX
+    b_dungeon_sample                                                ******** GX
+    b_dungeon_sample_position                                       ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_dungeon_step                                                  ******** GX
+    b_queue                                                     =   0000000B 
+    b_rpg_dungeon_encounter                                         ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_rpg_random                                                    ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_11                                   size      B96   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

@@ -1,0 +1,50 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _actor_show                                                     00000040 R
+    _alis_palettes                                                  ******** GX
+    _bank_copy                                                      ******** GX
+  8 _clear_actors                                                   00000000 R
+  2 _scene_actor_active                                             00000000 GR
+  8 _scene_actor_hide                                               0000001F GR
+  8 _scene_actor_show_data                                          000000C8 GR
+    _scene_actors                                                   ******** GX
+  8 _scene_enemy_show                                               00000234 GR
+  8 _scene_portrait_show                                            0000021F GR
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+    _set_sprite_data                                                ******** GX
+    _set_sprite_palette                                             ******** GX
+    _shadow_OAM                                                     ******** GX
+    b_actor_show                                                =   0000000D 
+    b_scene_actor_hide                                          =   0000000D G
+    b_scene_actor_show_data                                     =   0000000D G
+    b_scene_enemy_show                                          =   0000000D G
+    b_scene_portrait_show                                       =   0000000D G
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        1   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_13                                   size      251   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

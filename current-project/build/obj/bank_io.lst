@@ -1,0 +1,296 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module bank_io
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _set_bkg_data
+                                     11 	.globl _memcpy
+                                     12 	.globl _bank_read8
+                                     13 	.globl _bank_copy
+                                     14 	.globl _bank_bkg_data
+                                     15 	.globl _bank_bkg_phase
+                                     16 ;--------------------------------------------------------
+                                     17 ; special function registers
+                                     18 ;--------------------------------------------------------
+                                     19 	.area _HRAM
+                                     20 ;--------------------------------------------------------
+                                     21 ; ram data
+                                     22 ;--------------------------------------------------------
+                                     23 	.area _DATA
+                                     24 ;--------------------------------------------------------
+                                     25 ; ram data
+                                     26 ;--------------------------------------------------------
+                                     27 	.area _INITIALIZED
+                                     28 ;--------------------------------------------------------
+                                     29 ; absolute external ram data
+                                     30 ;--------------------------------------------------------
+                                     31 	.area _DABS (ABS)
+                                     32 ;--------------------------------------------------------
+                                     33 ; global & static initialisations
+                                     34 ;--------------------------------------------------------
+                                     35 	.area _HOME
+                                     36 	.area _GSINIT
+                                     37 	.area _GSFINAL
+                                     38 	.area _GSINIT
+                                     39 ;--------------------------------------------------------
+                                     40 ; Home
+                                     41 ;--------------------------------------------------------
+                                     42 	.area _HOME
+                                     43 ;src/bank_io.c:8: uint8_t bank_read8(uint8_t bank, const void *address) BANK_IO_FIXED {
+                                     44 ;	---------------------------------
+                                     45 ; Function bank_read8
+                                     46 ; ---------------------------------
+    00000000                         47 _bank_read8::
+    00000000 47               [ 4]   48 	ld	b, a
+    00000001 6B               [ 4]   49 	ld	l, e
+    00000002 62               [ 4]   50 	ld	h, d
+                                     51 ;src/bank_io.c:10: uint8_t saved = CURRENT_BANK;
+    00000003 F0r00            [12]   52 	ldh	a, (__current_bank + 0)
+    00000005 4F               [ 4]   53 	ld	c, a
+                                     54 ;src/bank_io.c:12: SWITCH_ROM_MBC5(bank);
+    00000006 78               [ 4]   55 	ld	a, b
+    00000007 E0r00            [12]   56 	ldh	(__current_bank + 0), a
+    00000009 AF               [ 4]   57 	xor	a, a
+    0000000A EAr00r00         [16]   58 	ld	(_rROMB1), a
+    0000000D 78               [ 4]   59 	ld	a, b
+    0000000E EAr00r00         [16]   60 	ld	(_rROMB0), a
+                                     61 ;src/bank_io.c:13: value = *(const uint8_t *)address;
+    00000011 6E               [ 8]   62 	ld	l, (hl)
+                                     63 ;src/bank_io.c:14: SWITCH_ROM_MBC5(saved);
+    00000012 79               [ 4]   64 	ld	a, c
+    00000013 E0r00            [12]   65 	ldh	(__current_bank + 0), a
+    00000015 AF               [ 4]   66 	xor	a, a
+    00000016 EAr00r00         [16]   67 	ld	(_rROMB1), a
+    00000019 79               [ 4]   68 	ld	a, c
+    0000001A EAr00r00         [16]   69 	ld	(_rROMB0), a
+                                     70 ;src/bank_io.c:15: return value;
+    0000001D 7D               [ 4]   71 	ld	a, l
+                                     72 ;src/bank_io.c:20: }
+    0000001E C9               [16]   73 	ret
+                                     74 ;src/bank_io.c:21: void bank_copy(void *destination, uint8_t bank, const void *source, uint16_t length) BANK_IO_FIXED {
+                                     75 ;	---------------------------------
+                                     76 ; Function bank_copy
+                                     77 ; ---------------------------------
+    0000001F                         78 _bank_copy::
+    0000001F 3B               [ 8]   79 	dec	sp
+    00000020 4F               [ 4]   80 	ld	c, a
+                                     81 ;src/bank_io.c:23: uint8_t saved = CURRENT_BANK;
+    00000021 F0r00            [12]   82 	ldh	a, (__current_bank + 0)
+    00000023 F8 00            [12]   83 	ldhl	sp,	#0
+    00000025 77               [ 8]   84 	ld	(hl), a
+                                     85 ;src/bank_io.c:24: SWITCH_ROM_MBC5(bank);
+    00000026 79               [ 4]   86 	ld	a, c
+    00000027 E0r00            [12]   87 	ldh	(__current_bank + 0), a
+    00000029 AF               [ 4]   88 	xor	a, a
+    0000002A EAr00r00         [16]   89 	ld	(#_rROMB1),a
+    0000002D 21r00r00         [12]   90 	ld	hl, #_rROMB0
+    00000030 71               [ 8]   91 	ld	(hl), c
+                                     92 ;src/bank_io.c:25: memcpy(destination, source, length);
+    00000031 F8 05            [12]   93 	ldhl	sp,	#5
+    00000033 2A               [ 8]   94 	ld	a, (hl+)
+    00000034 4F               [ 4]   95 	ld	c, a
+    00000035 46               [ 8]   96 	ld	b, (hl)
+    00000036 C5               [16]   97 	push	bc
+    00000037 F8 05            [12]   98 	ldhl	sp,	#5
+    00000039 2A               [ 8]   99 	ld	a, (hl+)
+    0000003A 4F               [ 4]  100 	ld	c, a
+    0000003B 46               [ 8]  101 	ld	b, (hl)
+    0000003C CDr00r00         [24]  102 	call	_memcpy
+                                    103 ;src/bank_io.c:26: SWITCH_ROM_MBC5(saved);
+    0000003F F8 00            [12]  104 	ldhl	sp,	#0
+    00000041 7E               [ 8]  105 	ld	a, (hl)
+    00000042 E0r00            [12]  106 	ldh	(__current_bank + 0), a
+    00000044 AF               [ 4]  107 	xor	a, a
+    00000045 EAr00r00         [16]  108 	ld	(#_rROMB1),a
+    00000048 F8 00            [12]  109 	ldhl	sp,	#0
+    0000004A 7E               [ 8]  110 	ld	a, (hl)
+    0000004B EAr00r00         [16]  111 	ld	(#_rROMB0),a
+                                    112 ;src/bank_io.c:31: }
+    0000004E 33               [ 8]  113 	inc	sp
+    0000004F E1               [12]  114 	pop	hl
+    00000050 E8 04            [16]  115 	add	sp, #4
+    00000052 E9               [ 4]  116 	jp	(hl)
+                                    117 ;src/bank_io.c:32: void bank_bkg_data(uint8_t bank, uint8_t first, uint8_t count, const uint8_t *source, uint8_t vram_bank) BANK_IO_FIXED {
+                                    118 ;	---------------------------------
+                                    119 ; Function bank_bkg_data
+                                    120 ; ---------------------------------
+    00000053                        121 _bank_bkg_data::
+    00000053 57               [ 4]  122 	ld	d, a
+                                    123 ;src/bank_io.c:34: uint8_t saved = CURRENT_BANK, saved_vram = VBK_REG;
+    00000054 F0r00            [12]  124 	ldh	a, (__current_bank + 0)
+    00000056 4F               [ 4]  125 	ld	c, a
+    00000057 F0r00            [12]  126 	ldh	a, (_VBK_REG + 0)
+    00000059 47               [ 4]  127 	ld	b, a
+                                    128 ;src/bank_io.c:35: SWITCH_ROM_MBC5(bank);
+    0000005A 7A               [ 4]  129 	ld	a, d
+    0000005B E0r00            [12]  130 	ldh	(__current_bank + 0), a
+    0000005D AF               [ 4]  131 	xor	a, a
+    0000005E EAr00r00         [16]  132 	ld	(#_rROMB1),a
+    00000061 21r00r00         [12]  133 	ld	hl, #_rROMB0
+    00000064 72               [ 8]  134 	ld	(hl), d
+                                    135 ;src/bank_io.c:36: VBK_REG = vram_bank;
+    00000065 F8 05            [12]  136 	ldhl	sp,	#5
+                                    137 ;src/bank_io.c:37: set_bkg_data(first, count, source);
+    00000067 3A               [ 8]  138 	ld	a, (hl-)
+    00000068 E0r00            [12]  139 	ldh	(_VBK_REG + 0), a
+    0000006A 3A               [ 8]  140 	ld	a, (hl-)
+    0000006B 6E               [ 8]  141 	ld	l, (hl)
+    0000006C 67               [ 4]  142 	ld	h, a
+    0000006D E5               [16]  143 	push	hl
+    0000006E F8 04            [12]  144 	ldhl	sp,	#4
+    00000070 56               [ 8]  145 	ld	d, (hl)
+    00000071 D5               [16]  146 	push	de
+    00000072 CDr00r00         [24]  147 	call	_set_bkg_data
+    00000075 E8 04            [16]  148 	add	sp, #4
+                                    149 ;src/bank_io.c:38: VBK_REG = saved_vram;
+    00000077 78               [ 4]  150 	ld	a, b
+    00000078 E0r00            [12]  151 	ldh	(_VBK_REG + 0), a
+                                    152 ;src/bank_io.c:39: SWITCH_ROM_MBC5(saved);
+    0000007A 79               [ 4]  153 	ld	a, c
+    0000007B E0r00            [12]  154 	ldh	(__current_bank + 0), a
+    0000007D AF               [ 4]  155 	xor	a, a
+    0000007E EAr00r00         [16]  156 	ld	(#_rROMB1),a
+    00000081 21r00r00         [12]  157 	ld	hl, #_rROMB0
+    00000084 71               [ 8]  158 	ld	(hl), c
+                                    159 ;src/bank_io.c:43: }
+    00000085 E1               [12]  160 	pop	hl
+    00000086 E8 04            [16]  161 	add	sp, #4
+    00000088 E9               [ 4]  162 	jp	(hl)
+                                    163 ;src/bank_io.c:44: void bank_bkg_phase(uint8_t bank,uint8_t first,uint8_t count,const uint8_t *source,uint8_t vram_bank) BANK_IO_FIXED {
+                                    164 ;	---------------------------------
+                                    165 ; Function bank_bkg_phase
+                                    166 ; ---------------------------------
+    00000089                        167 _bank_bkg_phase::
+    00000089 E8 FD            [16]  168 	add	sp, #-3
+    0000008B 4F               [ 4]  169 	ld	c, a
+                                    170 ;src/bank_io.c:46: uint16_t from=(uint16_t)source;
+    0000008C F8 06            [12]  171 	ldhl	sp,	#6
+    0000008E 7E               [ 8]  172 	ld	a, (hl)
+    0000008F F8 00            [12]  173 	ldhl	sp,	#0
+    00000091 77               [ 8]  174 	ld	(hl), a
+    00000092 F8 07            [12]  175 	ldhl	sp,	#7
+    00000094 7E               [ 8]  176 	ld	a, (hl)
+    00000095 F8 01            [12]  177 	ldhl	sp,	#1
+    00000097 77               [ 8]  178 	ld	(hl), a
+                                    179 ;src/bank_io.c:47: uint16_t destination=(LCDC_REG&LCDCF_BG8000)?0x8000u+(uint16_t)first*16u:
+    00000098 F0r00            [12]  180 	ldh	a, (_LCDC_REG + 0)
+    0000009A CB 67            [ 8]  181 	bit	4, a
+    0000009C 28 0E            [12]  182 	jr	Z, 00113$
+    0000009E 6B               [ 4]  183 	ld	l, e
+    0000009F 26 00            [ 8]  184 	ld	h, #0x00
+    000000A1 29               [ 8]  185 	add	hl, hl
+    000000A2 29               [ 8]  186 	add	hl, hl
+    000000A3 29               [ 8]  187 	add	hl, hl
+    000000A4 29               [ 8]  188 	add	hl, hl
+    000000A5 5D               [ 4]  189 	ld	e, l
+    000000A6 7C               [ 4]  190 	ld	a, h
+    000000A7 C6 80            [ 8]  191 	add	a, #0x80
+    000000A9 57               [ 4]  192 	ld	d, a
+    000000AA 18 0E            [12]  193 	jr	00114$
+    000000AC                        194 00113$:
+    000000AC 7B               [ 4]  195 	ld	a, e
+    000000AD 6F               [ 4]  196 	ld	l, a
+    000000AE 07               [ 4]  197 	rlca
+    000000AF 9F               [ 4]  198 	sbc	a, a
+    000000B0 67               [ 4]  199 	ld	h, a
+    000000B1 29               [ 8]  200 	add	hl, hl
+    000000B2 29               [ 8]  201 	add	hl, hl
+    000000B3 29               [ 8]  202 	add	hl, hl
+    000000B4 29               [ 8]  203 	add	hl, hl
+    000000B5 5D               [ 4]  204 	ld	e, l
+    000000B6 7C               [ 4]  205 	ld	a, h
+    000000B7 C6 90            [ 8]  206 	add	a, #0x90
+    000000B9 57               [ 4]  207 	ld	d, a
+    000000BA                        208 00114$:
+                                    209 ;src/bank_io.c:49: uint8_t saved=CURRENT_BANK,saved_vram=VBK_REG;
+    000000BA F0r00            [12]  210 	ldh	a, (__current_bank + 0)
+    000000BC 47               [ 4]  211 	ld	b, a
+    000000BD F0r00            [12]  212 	ldh	a, (_VBK_REG + 0)
+    000000BF F8 02            [12]  213 	ldhl	sp,	#2
+    000000C1 77               [ 8]  214 	ld	(hl), a
+                                    215 ;src/bank_io.c:50: if(!count||count>16u||(from&15u))return;
+    000000C2 F8 05            [12]  216 	ldhl	sp,	#5
+    000000C4 7E               [ 8]  217 	ld	a, (hl)
+    000000C5 B7               [ 4]  218 	or	a, a
+    000000C6 28 59            [12]  219 	jr	Z, 00111$
+    000000C8 3E 10            [ 8]  220 	ld	a, #0x10
+    000000CA 96               [ 8]  221 	sub	a, (hl)
+    000000CB 38 54            [12]  222 	jr	C, 00111$
+    000000CD F8 00            [12]  223 	ldhl	sp,	#0
+    000000CF 7E               [ 8]  224 	ld	a, (hl)
+    000000D0 E6 0F            [ 8]  225 	and	a, #0x0f
+    000000D2 20 4D            [12]  226 	jr	NZ, 00111$
+                                    227 ;src/bank_io.c:53: if(LCDC_REG&LCDCF_ON)while(LY_REG<144u||LY_REG>149u){}
+    000000D4 F0r00            [12]  228 	ldh	a, (_LCDC_REG + 0)
+    000000D6 07               [ 4]  229 	rlca
+    000000D7 30 10            [12]  230 	jr	NC, 00110$
+    000000D9                        231 00106$:
+    000000D9 F0r00            [12]  232 	ldh	a, (_LY_REG + 0)
+    000000DB D6 90            [ 8]  233 	sub	a, #0x90
+    000000DD 38 FA            [12]  234 	jr	C, 00106$
+    000000DF C5               [16]  235 	push	bc
+    000000E0 F0r00            [12]  236 	ldh	a, (_LY_REG + 0)
+    000000E2 4F               [ 4]  237 	ld	c, a
+    000000E3 3E 95            [ 8]  238 	ld	a, #0x95
+    000000E5 91               [ 4]  239 	sub	a, c
+    000000E6 C1               [12]  240 	pop	bc
+    000000E7 38 F0            [12]  241 	jr	C, 00106$
+    000000E9                        242 00110$:
+                                    243 ;src/bank_io.c:60: }
+    000000E9 F3               [ 4]  244 	di
+                                    245 ;src/bank_io.c:55: SWITCH_ROM_MBC5(bank);VBK_REG=vram_bank;
+    000000EA 79               [ 4]  246 	ld	a, c
+    000000EB E0r00            [12]  247 	ldh	(__current_bank + 0), a
+    000000ED AF               [ 4]  248 	xor	a, a
+    000000EE EAr00r00         [16]  249 	ld	(#_rROMB1),a
+    000000F1 21r00r00         [12]  250 	ld	hl, #_rROMB0
+    000000F4 71               [ 8]  251 	ld	(hl), c
+    000000F5 F8 08            [12]  252 	ldhl	sp,	#8
+    000000F7 7E               [ 8]  253 	ld	a, (hl)
+    000000F8 E0r00            [12]  254 	ldh	(_VBK_REG + 0), a
+                                    255 ;src/bank_io.c:56: HDMA1_REG=(uint8_t)(from>>8);HDMA2_REG=(uint8_t)from;
+    000000FA F8 01            [12]  256 	ldhl	sp,	#1
+    000000FC 3A               [ 8]  257 	ld	a, (hl-)
+    000000FD E0r00            [12]  258 	ldh	(_HDMA1_REG + 0), a
+    000000FF 7E               [ 8]  259 	ld	a, (hl)
+    00000100 E0r00            [12]  260 	ldh	(_HDMA2_REG + 0), a
+                                    261 ;src/bank_io.c:57: HDMA3_REG=(uint8_t)(destination>>8)&31u;HDMA4_REG=(uint8_t)destination;
+    00000102 7A               [ 4]  262 	ld	a, d
+    00000103 E6 1F            [ 8]  263 	and	a, #0x1f
+    00000105 E0r00            [12]  264 	ldh	(_HDMA3_REG + 0), a
+    00000107 7B               [ 4]  265 	ld	a, e
+    00000108 E0r00            [12]  266 	ldh	(_HDMA4_REG + 0), a
+                                    267 ;src/bank_io.c:58: HDMA5_REG=count-1u;
+    0000010A F8 05            [12]  268 	ldhl	sp,	#5
+    0000010C 7E               [ 8]  269 	ld	a, (hl)
+    0000010D 3D               [ 4]  270 	dec	a
+    0000010E E0r00            [12]  271 	ldh	(_HDMA5_REG + 0), a
+                                    272 ;src/bank_io.c:59: VBK_REG=saved_vram;SWITCH_ROM_MBC5(saved);
+    00000110 F8 02            [12]  273 	ldhl	sp,	#2
+    00000112 7E               [ 8]  274 	ld	a, (hl)
+    00000113 E0r00            [12]  275 	ldh	(_VBK_REG + 0), a
+    00000115 78               [ 4]  276 	ld	a, b
+    00000116 E0r00            [12]  277 	ldh	(__current_bank + 0), a
+    00000118 AF               [ 4]  278 	xor	a, a
+    00000119 EAr00r00         [16]  279 	ld	(#_rROMB1),a
+    0000011C 21r00r00         [12]  280 	ld	hl, #_rROMB0
+    0000011F 70               [ 8]  281 	ld	(hl), b
+    00000120 FB               [ 4]  282 	ei
+    00000121                        283 00111$:
+                                    284 ;src/bank_io.c:64: }
+    00000121 E8 03            [16]  285 	add	sp, #3
+    00000123 E1               [12]  286 	pop	hl
+    00000124 E8 04            [16]  287 	add	sp, #4
+    00000126 E9               [ 4]  288 	jp	(hl)
+                                    289 	.area _HOME
+                                    290 ;--------------------------------------------------------
+                                    291 ; code
+                                    292 ;--------------------------------------------------------
+                                    293 	.area _CODE_0
+                                    294 	.area _CODE_0
+                                    295 	.area _INITIALIZER
+                                    296 	.area _CABS (ABS)

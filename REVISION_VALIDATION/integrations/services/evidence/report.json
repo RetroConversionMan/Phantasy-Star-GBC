@@ -1,0 +1,88 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Armory welcome declined through original dialogue and farewell, no mutation",
+    "Armory selection without funds shows original failure and exits",
+    "Leather Shield costs30, enters shared inventory, and original another-purchase prompt works",
+    "Camineet tools SELL quotes15 for the actually purchased Leather Shield; No preserves it/money, Yes removes it once and credits15; decline another sale returns outside",
+    "Church entry records C317 before prompt; decline shows blessing and EXP-to-next guidance",
+    "Parolit hospital quotes15 and changes HP/money only after explicit yes",
+    "Already-healed single-member hospital branch shows source careful farewell without charging"
+  ],
+  "injected_fixtures": [
+    "Set money30 for actual Leather Shield purchase; no battle reward claimed",
+    "Set AlisHP1 and money15 for hospital fee; Camineet-to-Parolit travel uses only controller input"
+  ],
+  "walking_steps": 100,
+  "screenshots": [
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/insufficient-money.png",
+      "sha256_pixels": "119c05d19f13c715809f8fdbbdebd334b5a5baaa47dc735e8c3850e233566105",
+      "unique_colors": 19,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/armory-stock.png",
+      "sha256_pixels": "895fa9ee7b5204ba1349d90834f339da489eef9257ff91ee2b978f893b75c83e",
+      "unique_colors": 2,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/sale-price-confirmation.png",
+      "sha256_pixels": "9e60fc857c386106847e7a641e03ffa7d6f45a9ff7da814e8fb11ced8feb418c",
+      "unique_colors": 19,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/sale-completed.png",
+      "sha256_pixels": "9e60fc857c386106847e7a641e03ffa7d6f45a9ff7da814e8fb11ced8feb418c",
+      "unique_colors": 19,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/church-blessing.png",
+      "sha256_pixels": "090067eb20ca8bb22d0876dc186837eafb69350c3bbdb116cb2273175362e3a8",
+      "unique_colors": 15,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/hospital-fee-confirmation.png",
+      "sha256_pixels": "e7aaaf2c56242fb79a485cb37b12c346d38dcf501f7b02f75cc47e06fd4856d5",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x45ac"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/hospital-healed.png",
+      "sha256_pixels": "fc6945d477d9b38bb7752127b0f5257dd3896b58be15a988529c2503c4f613be",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/services-emulator/hospital-already-healed.png",
+      "sha256_pixels": "e00ed28203eba6d7f121a9b65a4b9c5e759633dfc4ccc3488faeb90d014e8773",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x45ae"
+    }
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

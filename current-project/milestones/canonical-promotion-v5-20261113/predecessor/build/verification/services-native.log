@@ -1,0 +1,35 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/services-native/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/services.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/events.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/events_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg_data.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 524288,
+    "sha256": "fcd4c4cc1ac48ba76af15623ae55e9b3e7639ee8338675f6cc3aff6cbfac87a5",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": 324,
+  "state_addresses": 4,
+  "source_acceptance_cases_per_address": 81,
+  "scope": "Existing source-derived hospital/church/buy/sell/Secrets acceptance cases compiled natively with GBDK4.5.0 and executed on CGB CPU. Explicit fixtures include alive/dead, single/multiple party, refusal, insufficient money, source byte-wrapped hospital cost, revival, original EXP guidance, full/protected inventory and sale cancellation. Main UI separately tested.",
+  "inputs_sha256": {
+    "tests/test_services.c": "f35e0265e684692a6902e14273d30b6b36fee91b5cf416c2f49c82aee279ac77",
+    "src/services.c": "d14670ff5e7125da303e86a41d9d34cf22c09dcbad3f748fc228c11ed0237d8a",
+    "src/events.c": "839289a716f80015a15f6eaacf25c642c56fc22092646a48fa7afb590dd4e261",
+    "src/events_data.c": "776d9b202df325689f135f7f6ca295b29f09f473946848b0b5ae08eea50b7d6e",
+    "src/rpg.c": "f6f23ab3848aa108bf29048ae13746732533db1ead092893cdc3300005bd426b",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c"
+  },
+  "campaign_complete": false
+}

@@ -1,0 +1,53 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    _bank_copy                                                      ******** GX
+  8 _draw_flight                                                    00000000 R
+  8 _myau_battle_palette                                            00000296 GR
+  8 _myau_flight_begin                                              00000158 GR
+    _myau_flight_data                                               ******** GX
+  2 _myau_flight_frame                                              00000000 GR
+    _myau_flight_frames                                             ******** GX
+  8 _myau_flight_tick                                               000001D1 GR
+  2 _returning                                                      00000002 R
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+    _scene_show                                                     ******** GX
+    _set_sprite_data                                                ******** GX
+    _set_sprite_palette                                             ******** GX
+    _shadow_OAM                                                     ******** GX
+    b_draw_flight                                               =   00000084 
+    b_myau_battle_palette                                       =   00000084 G
+    b_myau_flight_begin                                         =   00000084 G
+    b_myau_flight_tick                                          =   00000084 G
+    b_scene_actor_hide                                              ******** GX
+    b_scene_show                                                    ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        3   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_132                                  size      2D0   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

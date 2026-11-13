@@ -1,0 +1,4717 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "enemy_obj_palettes": 6,
+  "reserved_effect_palettes": [
+    6,
+    7
+  ],
+  "native_banks": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "bank_bytes": [
+    15695,
+    15787,
+    15755,
+    15765,
+    15770,
+    15790,
+    1120
+  ],
+  "pattern_pairs": 676,
+  "unique_assets": 422,
+  "records": [
+    {
+      "enemy": 1,
+      "palette": 0,
+      "asset": 0,
+      "sprites": 8,
+      "quantized_pixels": 70,
+      "name": "01-00",
+      "source_sha256": "d1a5dfd3509bc8444efcf83d05429f1b5b6afbabef84bb7a1d5b31a15f5796e1",
+      "native_sha256": "96cf83240b0d90c6fb301a45e73c700aa38e16d920d092cf2e0e4f8d9f9b3178"
+    },
+    {
+      "enemy": 2,
+      "palette": 0,
+      "asset": 1,
+      "sprites": 4,
+      "quantized_pixels": 20,
+      "name": "02-00",
+      "source_sha256": "4462983dc3f5ac7c92f00e213bfda87c59acfa6030215828603c684ae32f8d9d",
+      "native_sha256": "db4bff1c51cd8df45f4bf420067884902c88664a52d12c36243c60487107fb89"
+    },
+    {
+      "enemy": 3,
+      "palette": 0,
+      "asset": 2,
+      "sprites": 12,
+      "quantized_pixels": 80,
+      "name": "03-00",
+      "source_sha256": "85a089280032fe2656f0602f1b85102b6dbffe9ada3fd50db0be51177c32fc7d",
+      "native_sha256": "00ae0844bd0f8fcbc24e3a2461dc33a450a8d144033a35ceaf0851a92338ceaa"
+    },
+    {
+      "enemy": 4,
+      "palette": 0,
+      "asset": 3,
+      "sprites": 12,
+      "quantized_pixels": 71,
+      "name": "04-00",
+      "source_sha256": "57a797991a432ec39b8d5dac3b92d91e656b3446220e1cb39d843edef3f9385e",
+      "native_sha256": "63d018fd56560461ff108f2efe56c258ef7e28128cb9a86641cba8ac29dc77dc"
+    },
+    {
+      "enemy": 5,
+      "palette": 0,
+      "asset": 4,
+      "sprites": 7,
+      "quantized_pixels": 129,
+      "name": "05-00",
+      "source_sha256": "da2ddea92848a336f606f83faaaab59cb64f1bb451ee550c11d6202161a520f8",
+      "native_sha256": "6bb29f5b83b53f391cc84d738eabb649fd9802f2d6f92c328ca6562c2bc61b57"
+    },
+    {
+      "enemy": 6,
+      "palette": 0,
+      "asset": 5,
+      "sprites": 7,
+      "quantized_pixels": 131,
+      "name": "06-00",
+      "source_sha256": "48f798a8810d15b6839fc3fcfbd5e8fc32eeb96713d1a957f2426cdf5bafe20d",
+      "native_sha256": "c814a2460764a705f95b0c9de2b2f75a7f69f5d221ff740051c47efd2f21554e"
+    },
+    {
+      "enemy": 7,
+      "palette": 0,
+      "asset": 6,
+      "sprites": 4,
+      "quantized_pixels": 26,
+      "name": "07-00",
+      "source_sha256": "714b14ee2383c54a216f597af1f52eb340d6e5bf85384b68c9d85e04a5990c39",
+      "native_sha256": "353376b02349cd8fc4ec6de4a0f531f980e86e0488090990b2b7607fc8431ed4"
+    },
+    {
+      "enemy": 8,
+      "palette": 0,
+      "asset": 7,
+      "sprites": 12,
+      "quantized_pixels": 255,
+      "name": "08-00",
+      "source_sha256": "406b8048f396b550230e97a83cadae274ca54f3d98c1613d80ff051c8a5239cc",
+      "native_sha256": "1186f37671d7ae6595cf8d50711cfefcdcc72e538a3f6ee8318731260f46a82a"
+    },
+    {
+      "enemy": 9,
+      "palette": 0,
+      "asset": 8,
+      "sprites": 12,
+      "quantized_pixels": 77,
+      "name": "09-00",
+      "source_sha256": "2a6869c8d6b36ed7911889545fa23bb023851c2951e0cef496831b443fb7c8e2",
+      "native_sha256": "1b44d6b10ab5637ff1873138548beef6d7c273d63f83e737c5cd7a0d97a21fe7"
+    },
+    {
+      "enemy": 10,
+      "palette": 0,
+      "asset": 9,
+      "sprites": 12,
+      "quantized_pixels": 72,
+      "name": "10-00",
+      "source_sha256": "8089a18bca8870e76d681304f8aae4bf3585d757ff202089770cb584d8dce517",
+      "native_sha256": "a7fa904bf82eccc2a14a542d89ab5181da04d5cc624ddf870693fad66d2fb4ff"
+    },
+    {
+      "enemy": 11,
+      "palette": 0,
+      "asset": 10,
+      "sprites": 7,
+      "quantized_pixels": 142,
+      "name": "11-00",
+      "source_sha256": "dcab6801ff131a9422292430d01cb289ab38a37e2e2b81b3d71c6697e1752295",
+      "native_sha256": "791a115bacb7314d64f01c297d376b07518addf4aedf7efd11958b6671684405"
+    },
+    {
+      "enemy": 12,
+      "palette": 0,
+      "asset": 11,
+      "sprites": 12,
+      "quantized_pixels": 245,
+      "name": "12-00",
+      "source_sha256": "f238bee71557f8b69190b33138fb8d38abd3f10fe15937dff04f0d33d5c25a0e",
+      "native_sha256": "88ee7eb8469327f28d3252c3b9645de73730094d7444034f24e3d769b2cb676d"
+    },
+    {
+      "enemy": 13,
+      "palette": 0,
+      "asset": 12,
+      "sprites": 8,
+      "quantized_pixels": 68,
+      "name": "13-00",
+      "source_sha256": "023e5a763eca8b5d1d76894ac1f6c3d2b9d6505b5c9a07e4e94aabb4ebb02552",
+      "native_sha256": "681c8ed607dd089792d961dcbb6b8df6b706bc96ee7d7d653d6d222f3c45d84a"
+    },
+    {
+      "enemy": 14,
+      "palette": 0,
+      "asset": 13,
+      "sprites": 6,
+      "quantized_pixels": 61,
+      "name": "14-00",
+      "source_sha256": "f9e6ec813060239efbce7fead9c205696a62fb4cfa68224118c78fb36123d9e1",
+      "native_sha256": "1b9e94d396cea50ff9d2e388b7e6777c33fc3fa8ae6f695b663c79022c531ac7"
+    },
+    {
+      "enemy": 15,
+      "palette": 0,
+      "asset": 14,
+      "sprites": 12,
+      "quantized_pixels": 228,
+      "name": "15-00",
+      "source_sha256": "2b9bf0fc8d42fb17d072e4210722d15d43adc6fdadddc503097de0a4f558b313",
+      "native_sha256": "1b7df09c211d8bed0a5f5e91dcf6d7c2ef8ceb4139550155257cb0e7f104bc58"
+    },
+    {
+      "enemy": 16,
+      "palette": 0,
+      "asset": 15,
+      "sprites": 12,
+      "quantized_pixels": 89,
+      "name": "16-00",
+      "source_sha256": "91ae198afb336d493a524b1fd6943a3de91fd0d37362bc2fc8f0caad841f8d4a",
+      "native_sha256": "a9a30b2b394e57290ef7190989bae28f4dec360a50ee731257de649bdacafd86"
+    },
+    {
+      "enemy": 17,
+      "palette": 0,
+      "asset": 16,
+      "sprites": 4,
+      "quantized_pixels": 20,
+      "name": "17-00",
+      "source_sha256": "25672ed54c17c7fac4fc14c42921ce001feea207d58f9ffd9e33ca7a3e079b45",
+      "native_sha256": "95cdba3026f194f07036a43ee007f39acf94bab0e81fe0f417f37a0ebdffe613"
+    },
+    {
+      "enemy": 18,
+      "palette": 0,
+      "asset": 17,
+      "sprites": 12,
+      "quantized_pixels": 124,
+      "name": "18-00",
+      "source_sha256": "acddb4da3af8cb5377c48c531d1d39439b1a66c523fccf5f45f89eba7367c7a9",
+      "native_sha256": "90978699224a708e8be235a1425813dd6f99183c90a33a355bef2c5fb18f2e7f"
+    },
+    {
+      "enemy": 19,
+      "palette": 0,
+      "asset": 18,
+      "sprites": 12,
+      "quantized_pixels": 168,
+      "name": "19-00",
+      "source_sha256": "bb7ae38edcea73a5e2dd7d7e563e75db3416454ac1f72e068024efc1fca14c54",
+      "native_sha256": "1c0a17711113aab494ea2f1f9af5b073c523aecb790e90e1ff0fec2bc2b7e401"
+    },
+    {
+      "enemy": 20,
+      "palette": 0,
+      "asset": 19,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-00",
+      "source_sha256": "49376f73a33a1bf114d296795008345cabd84d641e86c486dbc5df139d92b3f9",
+      "native_sha256": "ecde066ea1d403ad9e4410381d0c210769845fab6457aeeea718bb80e7d3b3b7"
+    },
+    {
+      "enemy": 20,
+      "palette": 1,
+      "asset": 20,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-01",
+      "source_sha256": "c5331a0826e0081938af9431380e189952b465e38a011a751432c042693e718f",
+      "native_sha256": "fc60fef5eb0724ad8ee2df087bc50b5eeafd8e911b2f836d926ac926ccbb8541"
+    },
+    {
+      "enemy": 20,
+      "palette": 2,
+      "asset": 21,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-02",
+      "source_sha256": "179b2ab68aa57ca6e3b64d4e4463d84bb49f3e9828d57612d3dd19f42a446de5",
+      "native_sha256": "1e277fa6736bbdedb5f09f6d8b3b533189653e5af231c6d9ca3b46bcb50ecb9f"
+    },
+    {
+      "enemy": 20,
+      "palette": 3,
+      "asset": 22,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-03",
+      "source_sha256": "f642738fbf7115f1aa9efb23d6b961e65a92844e06a0aa3d4867d06eb470a988",
+      "native_sha256": "d0d87c73654c52944918321781917edb35f5a549b3d4a44dca8e01ad2d7a5f32"
+    },
+    {
+      "enemy": 20,
+      "palette": 4,
+      "asset": 23,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-04",
+      "source_sha256": "3df52041f331a3ebb8561de49d30e9b98204a7b17efb309ff18adb9ff7a43244",
+      "native_sha256": "291a78f2adb1b731c8eb4715e453e51a33f1d775170c10abd7b76ed476c6594a"
+    },
+    {
+      "enemy": 20,
+      "palette": 5,
+      "asset": 24,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-05",
+      "source_sha256": "6fcd808d24fdc9c5033bea3cf9c98e7464848b84aafd492a564319506e6504ed",
+      "native_sha256": "f51507e04270c85f3317c6cda5ed3d56a26b886d208267272261bc6e0593e533"
+    },
+    {
+      "enemy": 20,
+      "palette": 6,
+      "asset": 25,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-06",
+      "source_sha256": "c4d3b8226c5b26cde9a8d793579aa2389c24d23d56337439921fc1f5e9ad9537",
+      "native_sha256": "95084e7cf774cb8bf4f3103d344c76bcab3275edc3382c595b5dd1a3218f0d9a"
+    },
+    {
+      "enemy": 20,
+      "palette": 7,
+      "asset": 26,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-07",
+      "source_sha256": "73daeaba1f8d7976d2ef67b5e397fc945bbe86edc004b0b412fa1f51bb6724cc",
+      "native_sha256": "ec675ea1ba36336720de55b270960edd2937cc6ad818fd2e021ffd0eb612bcd2"
+    },
+    {
+      "enemy": 20,
+      "palette": 8,
+      "asset": 27,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-08",
+      "source_sha256": "4ec871cf6867e05607d09928683d47d19df557eb38873aa8b84587081d212cfe",
+      "native_sha256": "b5966d9b7f8cb7df25d45bf0fb8e9ebe98d88cf0992d99b368832bbd96b5b8d0"
+    },
+    {
+      "enemy": 20,
+      "palette": 9,
+      "asset": 19,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-09",
+      "source_sha256": "49376f73a33a1bf114d296795008345cabd84d641e86c486dbc5df139d92b3f9",
+      "native_sha256": "ecde066ea1d403ad9e4410381d0c210769845fab6457aeeea718bb80e7d3b3b7"
+    },
+    {
+      "enemy": 20,
+      "palette": 10,
+      "asset": 28,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-10",
+      "source_sha256": "8144e006c66d549a9d4b321a72d723492b852ea698b7a5df5b1185985a9da6a1",
+      "native_sha256": "7aa37c115a145ad4e4ab114891d11d9f89c5c9edf5274c5e9dbe6088736c58b1"
+    },
+    {
+      "enemy": 20,
+      "palette": 11,
+      "asset": 29,
+      "sprites": 14,
+      "quantized_pixels": 337,
+      "name": "20-11",
+      "source_sha256": "254c7958bd5697c569b44bdbce49382c358abcbd00def5e648cdf1136a17a692",
+      "native_sha256": "7920d7ec8b646851ff6d6c5c3f81a8f09208e5e13ee06983518a90cb847eb95a"
+    },
+    {
+      "enemy": 21,
+      "palette": 0,
+      "asset": 30,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-00",
+      "source_sha256": "46da93d066205e0017ec35b3beb1e516b885e285992e9c9cb6b677adb800b045",
+      "native_sha256": "5de856ea142b02bd6bac8690d7361b266d774bfd873e2e55720671910feb106a"
+    },
+    {
+      "enemy": 21,
+      "palette": 1,
+      "asset": 31,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-01",
+      "source_sha256": "2b864591df33f2e6cc402b7a383ed67cc86f9bbd1dc5e4e2eac6bd1edc3c617e",
+      "native_sha256": "c87ee45f96f23339456c5d6a6deb45c9acfbacda58f82fa08a4145974ad87bba"
+    },
+    {
+      "enemy": 21,
+      "palette": 2,
+      "asset": 32,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-02",
+      "source_sha256": "270e10aaf0d923112d0e90b5b80373706db75af2dfa06f47f2f5f0cd96b8a6d2",
+      "native_sha256": "11d3737357fda6a5c86b9e8050f6d511fba401946092714245b32331766a393c"
+    },
+    {
+      "enemy": 21,
+      "palette": 3,
+      "asset": 33,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-03",
+      "source_sha256": "edf9c26ac60068b1f95813aaec8abf5c8ee477b92781ac22dd127c08cd189ff8",
+      "native_sha256": "fa36d3d7aa2112afbfc6573bacc5d66265f78b130c369baf5a0c46e69a37d4e4"
+    },
+    {
+      "enemy": 21,
+      "palette": 4,
+      "asset": 34,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-04",
+      "source_sha256": "2cc14e340615ec84194723ee9e9b4bfeeb0f4e1e6b82fa70ed865b65a15df427",
+      "native_sha256": "12453ae7e6098dd9b75605636d4ab8db9af57eb0f89940caf798035b98ffcfd4"
+    },
+    {
+      "enemy": 21,
+      "palette": 5,
+      "asset": 35,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-05",
+      "source_sha256": "554531569ea3a02790933f2fbde95030f1bcd4a6d266375824c704c7851f6a56",
+      "native_sha256": "17beaa36d3594d70b5d96f7d8ac93f66f49f59b841071704751f11bf9fb2046f"
+    },
+    {
+      "enemy": 21,
+      "palette": 6,
+      "asset": 36,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-06",
+      "source_sha256": "029cbf945be09a2a762040ee4bb874b19090578b69e9a6db9410fdaf89774024",
+      "native_sha256": "89872b3688e513927c43d19a19a9b476875b81ddd80fda2fc0dfa259fb900808"
+    },
+    {
+      "enemy": 21,
+      "palette": 7,
+      "asset": 37,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-07",
+      "source_sha256": "008864f02098be88ba5dc4691dbfb9607dbe57c1a0b4361b35f72c8ef7720451",
+      "native_sha256": "b5f0940c340c921797d90d6a9d58cbaf3cd00169cf8705e62a2cfae2181a7b21"
+    },
+    {
+      "enemy": 21,
+      "palette": 8,
+      "asset": 38,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-08",
+      "source_sha256": "8dc11e92ce01e167e1599f88a60f47ffefa8a39b0c2a92ea8392d5de99fd7862",
+      "native_sha256": "22334b3530a6e377a399ef686634feeb0983653e9f85cbd5ca81b1592f790a1e"
+    },
+    {
+      "enemy": 21,
+      "palette": 9,
+      "asset": 30,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-09",
+      "source_sha256": "46da93d066205e0017ec35b3beb1e516b885e285992e9c9cb6b677adb800b045",
+      "native_sha256": "5de856ea142b02bd6bac8690d7361b266d774bfd873e2e55720671910feb106a"
+    },
+    {
+      "enemy": 21,
+      "palette": 10,
+      "asset": 39,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-10",
+      "source_sha256": "27c5b26bb31c332419f22019b5c5b4f7e5be4379a4496c417d4bcf1f278e5acc",
+      "native_sha256": "468db8d83bd1b3ed2460912c40b953523b4573d94cf2f74560f16019bc55b536"
+    },
+    {
+      "enemy": 21,
+      "palette": 11,
+      "asset": 40,
+      "sprites": 13,
+      "quantized_pixels": 123,
+      "name": "21-11",
+      "source_sha256": "24bd7f05600eb445aab96705de6b1d82764a3895410d4599c8e73656e955a104",
+      "native_sha256": "e38294dc8ca23fc523f4d527714670b925ff53bd916465c1f33c30ea191eb867"
+    },
+    {
+      "enemy": 22,
+      "palette": 0,
+      "asset": 41,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-00",
+      "source_sha256": "b64e686635aebe47b8f87d306a63cf1a561d9d44754399d7f6a7626e9a2f19b0",
+      "native_sha256": "86314b13e51d2669445137ec3b3b53ddcb39eef687b61e21641cb64c56fae8b5"
+    },
+    {
+      "enemy": 22,
+      "palette": 1,
+      "asset": 42,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-01",
+      "source_sha256": "119bcf54c00046b002ea334373d459db9eba924209d4b6151c0de2208f58ede0",
+      "native_sha256": "482a886fafce682f55d234a42b735525a63076afacbf0a371153e9bea89e2a8f"
+    },
+    {
+      "enemy": 22,
+      "palette": 2,
+      "asset": 43,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-02",
+      "source_sha256": "98998c118aa1a74b33a12fa58cc27548cf73f1eb385dcb7f9789da9ddf3d966e",
+      "native_sha256": "f6a5fabf528b1d639187227ee97c300dd49a11fd5f1668e3df91994d5ba837f1"
+    },
+    {
+      "enemy": 22,
+      "palette": 3,
+      "asset": 44,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-03",
+      "source_sha256": "d6c3a183c12bdf0b7bdfb08eb3a2f6e8a6c0debf77e3d2bb992d29a92e5f8a9b",
+      "native_sha256": "af1e561bab2d00eda3ddd18b44a099e6dc64cfd40e275cd50d1fbce9e2542cab"
+    },
+    {
+      "enemy": 22,
+      "palette": 4,
+      "asset": 45,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-04",
+      "source_sha256": "4c30628cfd4a412a3e5c8e6df5673909a9294ac9e13d92d5b809bbdf3d6e47ec",
+      "native_sha256": "8a18f77326ac3df4fb7f17ae29ff10501ad03b6d06d6215896f13f5bc16e4e07"
+    },
+    {
+      "enemy": 22,
+      "palette": 5,
+      "asset": 46,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-05",
+      "source_sha256": "76929271544b74fe351805e37612a100d74b2e26f64e3b22b80635c0cf0bf5b4",
+      "native_sha256": "5f58581772f17d2eb92aa262663c600db82507be3b1a2538aae9b2c9a61a91dd"
+    },
+    {
+      "enemy": 22,
+      "palette": 6,
+      "asset": 47,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-06",
+      "source_sha256": "45f898cbcd5b7bae0067e4b476eceb8d967b9b42a41d5b204087b22052e96225",
+      "native_sha256": "addc6c77923f063ccd925e0fb1fb95b054a303bbc0c6b9f1d8cb4974da4f79cb"
+    },
+    {
+      "enemy": 22,
+      "palette": 7,
+      "asset": 48,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-07",
+      "source_sha256": "de574bab2516f0964a9947b6e7ee589da16631dbd2bdbaa03d0c13e255038994",
+      "native_sha256": "47c242078bebe106f8b1fd76bb42fd805aa5c853c97b40c3887aa6dc8702a6a3"
+    },
+    {
+      "enemy": 22,
+      "palette": 8,
+      "asset": 49,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-08",
+      "source_sha256": "fce02677a5d8b56a695295ffb6e8cd9c2c75b8b86bd2db088aaff8f34b636385",
+      "native_sha256": "3d0e4f68903700c27e1087590977187bdd828685909d298e0b0868e2243b75e2"
+    },
+    {
+      "enemy": 22,
+      "palette": 9,
+      "asset": 41,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-09",
+      "source_sha256": "b64e686635aebe47b8f87d306a63cf1a561d9d44754399d7f6a7626e9a2f19b0",
+      "native_sha256": "86314b13e51d2669445137ec3b3b53ddcb39eef687b61e21641cb64c56fae8b5"
+    },
+    {
+      "enemy": 22,
+      "palette": 10,
+      "asset": 50,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-10",
+      "source_sha256": "6ff40cbdc0a023a9306d3584ebfa4606b66a3c64e5cdbd212ee5fafad204dc18",
+      "native_sha256": "7bac1a631812b2b087c108601012bfdaded4e07deecc08c47b09b017c64b8e2c"
+    },
+    {
+      "enemy": 22,
+      "palette": 11,
+      "asset": 51,
+      "sprites": 18,
+      "quantized_pixels": 238,
+      "name": "22-11",
+      "source_sha256": "05b0ce62d3edf669d8b51e64bcd62516bcdc5e5cc55982ade9b7c1adc04dc907",
+      "native_sha256": "ba8ee0b66538b55b76c1d771442dc396af234ed025860f489676ac64792689b7"
+    },
+    {
+      "enemy": 23,
+      "palette": 0,
+      "asset": 52,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-00",
+      "source_sha256": "7c052cf2c575f3806dbf2e850f7d70b951f2ac322ee212ec0f408c4fa019aa0f",
+      "native_sha256": "e1169b6664268a70dc5a0b52ebe4556b9c9d13ce2b4b30cf086c960bca8c8c3a"
+    },
+    {
+      "enemy": 23,
+      "palette": 1,
+      "asset": 53,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-01",
+      "source_sha256": "b0b6bd31a642a9aeb32ac17cf1fd11631997bd8e54d8e396bbad32cdeb954f21",
+      "native_sha256": "3d77f8cafb88d9b4ce0ffc76ebb1258ed55ab390888da824970c0b8a053ec9e6"
+    },
+    {
+      "enemy": 23,
+      "palette": 2,
+      "asset": 54,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-02",
+      "source_sha256": "9bb527cdcb65384fcbf988c4ecd1173ad701f0eb28655c3119d561b856a7b4af",
+      "native_sha256": "1a103a4c1a948aba8dbbe40ee66851fb7a622772d5fc9bf030c61a5a430704f1"
+    },
+    {
+      "enemy": 23,
+      "palette": 3,
+      "asset": 55,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-03",
+      "source_sha256": "4501adc9843da9c6a0a0c6561861d949d0aadaba196bd8d4e41de07651d8a2aa",
+      "native_sha256": "d221f6e140d121fc83cef137336cdfdbf06d0db864cbf73f381d5c4d75193025"
+    },
+    {
+      "enemy": 23,
+      "palette": 4,
+      "asset": 56,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-04",
+      "source_sha256": "83bf289fcd8d1fff31e8965b5ec2b4714ede7293db950f67b4c6c96f9ca9f9c6",
+      "native_sha256": "23e795c7e8ca68bb29cdc4bd14e6b03679cb27f03f9688c6fe5cb4cdb1bf366b"
+    },
+    {
+      "enemy": 23,
+      "palette": 5,
+      "asset": 57,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-05",
+      "source_sha256": "6ac8a714926e9a4affaba897eeea82e6d2aea131cd11ffd716b272900fbecf66",
+      "native_sha256": "7bbff4cf8f328086b86b1dd2fae670589e2fb9fad4a47d5ac14752ddf23d13c7"
+    },
+    {
+      "enemy": 23,
+      "palette": 6,
+      "asset": 58,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-06",
+      "source_sha256": "a971b6476fa127ad163e54616c0f4b8377ec02597e4b0074c143ae94c60f14ee",
+      "native_sha256": "849b87c0a90400d3923e57c5a42d897dcf03ffb82024e5010fd476fc29aef588"
+    },
+    {
+      "enemy": 23,
+      "palette": 7,
+      "asset": 59,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-07",
+      "source_sha256": "74569ed21cf5c345d974b8c05ce26c9b9c568ddb621215dd891a54cf6fafba2a",
+      "native_sha256": "b7c81cd1f792ac734da698e54f8548b6516d65014b68804dfdfa93963c1ddce1"
+    },
+    {
+      "enemy": 23,
+      "palette": 8,
+      "asset": 60,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-08",
+      "source_sha256": "e7ff71540c768aec1bb1e84c9f27f5c7be4a9b00865069431b57bfdaeb7cfd8b",
+      "native_sha256": "d8370d9170d46e6f3e55157225c0e683ca39dd9da4800f735bf68cfccc54f0b6"
+    },
+    {
+      "enemy": 23,
+      "palette": 9,
+      "asset": 52,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-09",
+      "source_sha256": "7c052cf2c575f3806dbf2e850f7d70b951f2ac322ee212ec0f408c4fa019aa0f",
+      "native_sha256": "e1169b6664268a70dc5a0b52ebe4556b9c9d13ce2b4b30cf086c960bca8c8c3a"
+    },
+    {
+      "enemy": 23,
+      "palette": 10,
+      "asset": 61,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-10",
+      "source_sha256": "abe2bea3d7a371a8bae7ab3be4f2e4db0b93ad6fe0525b41a0e873984080faa9",
+      "native_sha256": "b0770449496e2dd3012f07b2d0767ef79247f802510f2145427c7c2e9dd91f0b"
+    },
+    {
+      "enemy": 23,
+      "palette": 11,
+      "asset": 62,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "23-11",
+      "source_sha256": "bf601b1226395f520d0bdb0c8bd50b030c9ec7c32e73c4bae12dcb0cffde992d",
+      "native_sha256": "026fce6bfa5abb49559a477c3443e9695175dc3f606649aa462cf84e270d39c7"
+    },
+    {
+      "enemy": 24,
+      "palette": 0,
+      "asset": 63,
+      "sprites": 14,
+      "quantized_pixels": 118,
+      "name": "24-00",
+      "source_sha256": "9108f6c6a873e279c59f03c3346b53f0a95b7265c38eb29adc2918683d1e63e2",
+      "native_sha256": "0f2e93245f91e9bc1b2793da6a1167d8f152ba36279eb3d96eb7d76ae192b511"
+    },
+    {
+      "enemy": 25,
+      "palette": 0,
+      "asset": 64,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-00",
+      "source_sha256": "10ee8ab7594ece5dfc3e7be5242410b2fa2cacfe70e64a933bbfd7dca38616c0",
+      "native_sha256": "7bdaae5fc84089fadc623127d65f003f34ce4ca0839ad3b0a35865f8f8040c24"
+    },
+    {
+      "enemy": 25,
+      "palette": 1,
+      "asset": 65,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-01",
+      "source_sha256": "b94345050291848a0f30a95949cd1050664f094b8ce78ce231b2b106a702f8ef",
+      "native_sha256": "e257eefc8366b8a18bab9100f3cb3a5c2a0db1826d5d04c0ccc2e6f06030b208"
+    },
+    {
+      "enemy": 25,
+      "palette": 2,
+      "asset": 66,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-02",
+      "source_sha256": "320ab2290337decf3d0db4b6abedaa94235aed788141d2ab07436caa328fc40c",
+      "native_sha256": "4776dae3105be3f6956925775d9cadb6e72526e682d7e91be5165b5927256553"
+    },
+    {
+      "enemy": 25,
+      "palette": 3,
+      "asset": 67,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-03",
+      "source_sha256": "659aaabdfe522c8ef9a04d7affc33915fe670e4381843dda158f2980a5ed853c",
+      "native_sha256": "dc93fe9663f86e0f85fd08a7d4fbce96f683618a4a83caa92b2574aff9051f3e"
+    },
+    {
+      "enemy": 25,
+      "palette": 4,
+      "asset": 68,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-04",
+      "source_sha256": "5e77b6b5eccddba0c4a89494f98b0d6c4be9057f5f3c7cddf76ced0c2ccfdb36",
+      "native_sha256": "91c89b6bd0d3c60267541025aa9c7156ba4242c09a48da05baffbb5539c33fb2"
+    },
+    {
+      "enemy": 25,
+      "palette": 5,
+      "asset": 69,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-05",
+      "source_sha256": "9daf76feee45aa9bc9fd0502ddcb515fe8b8f88920a8fd5b82eee07b5c98c6ef",
+      "native_sha256": "50a1da0b2fdc3a2b0b875cae1728bfb8f41d2b80d4100f6ff1789648de316b08"
+    },
+    {
+      "enemy": 25,
+      "palette": 6,
+      "asset": 70,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-06",
+      "source_sha256": "c9fafab87adc3a87345f79ae96f4023585d5bf8f53e5a4d97fb3567457784c04",
+      "native_sha256": "6eaed521fc865c910cb455b73fc05b9195aadcc896a17d5fe5ae47ec4fae00d1"
+    },
+    {
+      "enemy": 25,
+      "palette": 7,
+      "asset": 71,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-07",
+      "source_sha256": "b3eac213688d82e4b5d7c683907bc2d6b2627024e078b329fc8d6ff6d96c22ec",
+      "native_sha256": "eb7f7abea3c9534a45fcfd7b9e9672a9adda86191b314100e2994fb244dafae1"
+    },
+    {
+      "enemy": 25,
+      "palette": 8,
+      "asset": 72,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-08",
+      "source_sha256": "702a25270771cf8678a17f514a084f360f6f5e968c29dcd3c9813e62c9a93c5a",
+      "native_sha256": "2f32132d05d3487a4fb991532e845a77bcc221ad80ba01c6e3eb9e2390fa6ded"
+    },
+    {
+      "enemy": 25,
+      "palette": 9,
+      "asset": 64,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-09",
+      "source_sha256": "10ee8ab7594ece5dfc3e7be5242410b2fa2cacfe70e64a933bbfd7dca38616c0",
+      "native_sha256": "7bdaae5fc84089fadc623127d65f003f34ce4ca0839ad3b0a35865f8f8040c24"
+    },
+    {
+      "enemy": 25,
+      "palette": 10,
+      "asset": 73,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-10",
+      "source_sha256": "19e6090f295c2eb4709da6db00121de0ca33d7e13f53a6b985474660590ed60a",
+      "native_sha256": "883a41efc09da4bcef61699b37460f3d027ee19b786aca54b8f935b98ba787f5"
+    },
+    {
+      "enemy": 25,
+      "palette": 11,
+      "asset": 74,
+      "sprites": 18,
+      "quantized_pixels": 239,
+      "name": "25-11",
+      "source_sha256": "4e9193dca271d7c6d5bc2f20eb44f2d0c06a402bb7d71bc25cace5949d891305",
+      "native_sha256": "662bab457994359fd6d1816ab2b1f5ed4b0d158cdf6280d53a22aaaa9d6f11a9"
+    },
+    {
+      "enemy": 26,
+      "palette": 0,
+      "asset": 75,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-00",
+      "source_sha256": "2cc3db049900726c6a43f61c5913ffd7dd1b92c0cb653875c6b2be3db6f7c270",
+      "native_sha256": "41c79d059f2e55c8e4618a784392ffd0351bd45f5987105931e54b96bfe146af"
+    },
+    {
+      "enemy": 26,
+      "palette": 1,
+      "asset": 76,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-01",
+      "source_sha256": "181a16e43b294176677bae422b0d8a82dbb44aaf56c7ccbc7abb435c7d116560",
+      "native_sha256": "00f4f81ba2183033f39c271262759f91a76545ec000a4fae60e56a8b722c2c5d"
+    },
+    {
+      "enemy": 26,
+      "palette": 2,
+      "asset": 77,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-02",
+      "source_sha256": "d28d5331a93d5f9cbc27bfc727d26981ba93321bb136bd83c44ea063d891b1b9",
+      "native_sha256": "aaeb6eb24b943d79263dbb4cf60987095b4505b9a84d78cd2d9a6fdfb865ca7b"
+    },
+    {
+      "enemy": 26,
+      "palette": 3,
+      "asset": 78,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-03",
+      "source_sha256": "510edb676ac870cbb4bc34d6582b33905c94b1d4c8191bdc4faf7e1d163c280e",
+      "native_sha256": "94ea4efef40c6a91811f5e85a7425578b6bb349f28849ace6ceee7d29d342d2d"
+    },
+    {
+      "enemy": 26,
+      "palette": 4,
+      "asset": 79,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-04",
+      "source_sha256": "a8474c7eca5d6013c8866f64d55bf3f8f36f3b98be6e835b76f56877c506b5ce",
+      "native_sha256": "58d344797fa88b69df49a0c6f3c52a6384405fbc7220c7f552f02286a8871d2f"
+    },
+    {
+      "enemy": 26,
+      "palette": 5,
+      "asset": 80,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-05",
+      "source_sha256": "e600eeb771b264f0c97410e7c7768c6beab31e566b4077c2ff1c1b0b17969a30",
+      "native_sha256": "7ffac999b91e76458ed36f33b92c4d81a99ce8f4e91f218421231a8984d3db66"
+    },
+    {
+      "enemy": 26,
+      "palette": 6,
+      "asset": 81,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-06",
+      "source_sha256": "b6fffadb9be7903fc29b010e3f04f5a7a2f4648ff61add484155a55c8e0b69f8",
+      "native_sha256": "f7ace7f35e4bee2ded9e9d881d09cd87fe63f46e75207ce0ae00454a88ad2228"
+    },
+    {
+      "enemy": 26,
+      "palette": 7,
+      "asset": 82,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-07",
+      "source_sha256": "8199be536b2298ef3a651d7c4d3bbcf6512889079f5ef6aad534993f939ef022",
+      "native_sha256": "a9ab378f816cfb058eda57eb4245cd80b8dd67def3528b65c3a2ce1c9ae79fc5"
+    },
+    {
+      "enemy": 26,
+      "palette": 8,
+      "asset": 83,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-08",
+      "source_sha256": "a8dd099ee44847e5e9985ff19028ff3f9105dec70099f56623ba2adacbce961e",
+      "native_sha256": "99238445deddedc0784a15ec77f41949f1d23d8b8845b5a06ba13440d6d3b4a5"
+    },
+    {
+      "enemy": 26,
+      "palette": 9,
+      "asset": 75,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-09",
+      "source_sha256": "2cc3db049900726c6a43f61c5913ffd7dd1b92c0cb653875c6b2be3db6f7c270",
+      "native_sha256": "41c79d059f2e55c8e4618a784392ffd0351bd45f5987105931e54b96bfe146af"
+    },
+    {
+      "enemy": 26,
+      "palette": 10,
+      "asset": 84,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-10",
+      "source_sha256": "e9f23ebe7dc65344de509ce278a46458837e6bb9c3ea8498837e63cb3071d471",
+      "native_sha256": "3c882ac9c584288e249e39b0774a54fb9e0c08f21d2779ecb9e233b2675e4cdb"
+    },
+    {
+      "enemy": 26,
+      "palette": 11,
+      "asset": 85,
+      "sprites": 14,
+      "quantized_pixels": 329,
+      "name": "26-11",
+      "source_sha256": "a7da8bc15f32e285b08ab6d674cb2a3a1cbc6df4834fb660a97982d0a203b59c",
+      "native_sha256": "2a6a3da05be9cb5fcf898b3527a3975ba6d0e978e4df9441187a768b47df49c3"
+    },
+    {
+      "enemy": 27,
+      "palette": 0,
+      "asset": 86,
+      "sprites": 8,
+      "quantized_pixels": 145,
+      "name": "27-00",
+      "source_sha256": "a6b58ef5fb6b7acf92cdc9ad6d1373bc068afe46fda9097e6e9c23fed01b6c1a",
+      "native_sha256": "021895f5f17cf31aa93d284112ff6950e2f6cd2bd133a7e0fdd2898a2dd2e623"
+    },
+    {
+      "enemy": 28,
+      "palette": 0,
+      "asset": 87,
+      "sprites": 6,
+      "quantized_pixels": 51,
+      "name": "28-00",
+      "source_sha256": "573088c32dfc6a526c3ae5f237ce83a6188f1d1c7b2b89a9530622201923a484",
+      "native_sha256": "761d16f098bed5156659fe9d6e89126935ec631f3d5211ce395ffb6d9074c7a7"
+    },
+    {
+      "enemy": 29,
+      "palette": 0,
+      "asset": 88,
+      "sprites": 12,
+      "quantized_pixels": 132,
+      "name": "29-00",
+      "source_sha256": "30c2939a8cd549f807f241e6f9a610e05d4c8d5de98f315a4b6850a5b1da3e2d",
+      "native_sha256": "8cf498ac5ec224bb914a7d42d311f0c90ccf0a1da9d8fa2d5a0060184a5f7e1b"
+    },
+    {
+      "enemy": 30,
+      "palette": 0,
+      "asset": 89,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-00",
+      "source_sha256": "fe32ae80b9af465da693c202eabd8329df4d35ffdbcb154f10667719375ee09a",
+      "native_sha256": "1f169eb0b9e758447b785256eb571c30076c87329b61f63e0540513cb11b5888"
+    },
+    {
+      "enemy": 30,
+      "palette": 1,
+      "asset": 90,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-01",
+      "source_sha256": "64c8b57adaaf805c7de26846f30a4e3e266120264c60ab29483a2dcb2faea4b2",
+      "native_sha256": "2dacd45bdf063bdccc68c016f612c784925e6de54b63cf6f81750a372d703616"
+    },
+    {
+      "enemy": 30,
+      "palette": 2,
+      "asset": 91,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-02",
+      "source_sha256": "4591fda00a00d472317110ea746b649f2c3db4f59aadfb73dd52c11dc58e604c",
+      "native_sha256": "b1ab7b10443eeebf40a26aed337dc7dd6e54863b84c598bca33fa0329b80c8b7"
+    },
+    {
+      "enemy": 30,
+      "palette": 3,
+      "asset": 92,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-03",
+      "source_sha256": "dbbb29e8d7aea36e7f78cc2a5c8c4615196659ed67f04bb4a196c1a0cbf41859",
+      "native_sha256": "1c4f67c0487934fdc3e2c3d923da7bdb2fd403f81dc7ea7906771bd85222ea8c"
+    },
+    {
+      "enemy": 30,
+      "palette": 4,
+      "asset": 93,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-04",
+      "source_sha256": "bd9592e922822e056fac871ef96752ee9917b75db6d2d0d3a600879e35dd2acd",
+      "native_sha256": "aab16b4baddfc8477d82aab2d788c1460e6bf24bb499ae5e27e4bd93a6860167"
+    },
+    {
+      "enemy": 30,
+      "palette": 5,
+      "asset": 94,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-05",
+      "source_sha256": "f380266776cd3de0621e457a19f8d68422e4c163225b548cee29a9c630d791c7",
+      "native_sha256": "bede60b13bf3796d37b49e868a03ddb57672ba0fdea2714dc25f14dd1fc5676d"
+    },
+    {
+      "enemy": 30,
+      "palette": 6,
+      "asset": 95,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-06",
+      "source_sha256": "cdd2400cea696a3080f2ec226b920087093b8cee47f1a19d067a58cc0db53d15",
+      "native_sha256": "3d48bb0950968113d70ba16c01b12a3fedf47a8c1f6b2c8a62d273c3121abe03"
+    },
+    {
+      "enemy": 30,
+      "palette": 7,
+      "asset": 96,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-07",
+      "source_sha256": "33ed82271735e46954bfd705141d029532b702b4868f421624c40e45afad5e18",
+      "native_sha256": "1891ed67f62f275839e3bca27e3c53da7589197366bc533139463c651640f4dd"
+    },
+    {
+      "enemy": 30,
+      "palette": 8,
+      "asset": 97,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-08",
+      "source_sha256": "48ed1f1093c36f62bec228538b35b9f41a04b9d8edbc1fbb42af4dc74b0ee359",
+      "native_sha256": "98484d87b5a0d6444984400ebf41f7a9672ba9bfd36730c1c29a6e458e6b4275"
+    },
+    {
+      "enemy": 30,
+      "palette": 9,
+      "asset": 89,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-09",
+      "source_sha256": "fe32ae80b9af465da693c202eabd8329df4d35ffdbcb154f10667719375ee09a",
+      "native_sha256": "1f169eb0b9e758447b785256eb571c30076c87329b61f63e0540513cb11b5888"
+    },
+    {
+      "enemy": 30,
+      "palette": 10,
+      "asset": 98,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-10",
+      "source_sha256": "009ce00e11494ace9b8589457e1ce023d0fd5afe03942d329ded3790ef846d90",
+      "native_sha256": "13cbd92a82527aaf618edb3dc959e57a61c0d74e6e0d9a124a465c2ad7855f68"
+    },
+    {
+      "enemy": 30,
+      "palette": 11,
+      "asset": 99,
+      "sprites": 25,
+      "quantized_pixels": 892,
+      "name": "30-11",
+      "source_sha256": "81e926a13ffa3e5bd90399c1c95fdcc6179147a530f2b1cc95dbb70f43ef3614",
+      "native_sha256": "828d67f6e9780e24fca4ddb2c6a27e3bb18af0da0e1ac0d500cece6867e72db8"
+    },
+    {
+      "enemy": 31,
+      "palette": 0,
+      "asset": 100,
+      "sprites": 15,
+      "quantized_pixels": 201,
+      "name": "31-00",
+      "source_sha256": "c1744b54c0fe05fb7bfe1249fa8c28eb304c78e8a42d79b427bfaa2db2b22e49",
+      "native_sha256": "524a002ec4f328d878e96baaadedebccadbffd1eb5907cfcbbf66b129ec90d5d"
+    },
+    {
+      "enemy": 32,
+      "palette": 0,
+      "asset": 101,
+      "sprites": 10,
+      "quantized_pixels": 74,
+      "name": "32-00",
+      "source_sha256": "7a556fd99f54eda9db52d8a5a2182fd8a59d2f3f27e74f6e3728c303b13ea257",
+      "native_sha256": "284c3b42419aed84276a1d56914072cebbf294ff77f7c283a53ee0d3e771c631"
+    },
+    {
+      "enemy": 33,
+      "palette": 0,
+      "asset": 102,
+      "sprites": 12,
+      "quantized_pixels": 157,
+      "name": "33-00",
+      "source_sha256": "b2f4a4f99f314f580a4c0073495820a8a4188661f245bf1a7e41af67f8bc1d89",
+      "native_sha256": "9ac081d18ab2c947d3bb0e838c77a6cbd6abfc57a20a8147f2b4234b6bd897dc"
+    },
+    {
+      "enemy": 34,
+      "palette": 0,
+      "asset": 103,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-00",
+      "source_sha256": "6ccc5c1d53bd89577aae5a44767c8e0ec4c2a04ec500cae09ca7d8ad7e8298f6",
+      "native_sha256": "2ac7213ab1331d65fb38173c3c26638d56ceaad8d8689c2477a635fc721abb9b"
+    },
+    {
+      "enemy": 34,
+      "palette": 1,
+      "asset": 104,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-01",
+      "source_sha256": "ea7220f8c195cacf73746ac3d83bb6ba96e0cf4c08b4fdfa6d2c2420a1bb9af5",
+      "native_sha256": "64bda3317366922671ac47d39fd6b0ef706309eaf3da1b2978de2b665af74384"
+    },
+    {
+      "enemy": 34,
+      "palette": 2,
+      "asset": 105,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-02",
+      "source_sha256": "e84c0235bd87c62b00b8b245ccfa04e35f2661d362eaf6de85ceecb72858153d",
+      "native_sha256": "04f68bfb803c65ff6bb02589fd62131502789fe33570f6676f868abe685babd3"
+    },
+    {
+      "enemy": 34,
+      "palette": 3,
+      "asset": 106,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-03",
+      "source_sha256": "cbba88c613316ebcc55aef572fd3de728d4d334b5b3115ac5c21b48e2e4fafb8",
+      "native_sha256": "6b34fc514c600d08602dd49074d2d2c8f1dc270ac5460e574b7c2ecee08ff37b"
+    },
+    {
+      "enemy": 34,
+      "palette": 4,
+      "asset": 107,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-04",
+      "source_sha256": "01d1cbe84eec2fb8e1c0a90386c0368fdbaa7c0af164149a1caf724c9a83bb29",
+      "native_sha256": "e9f0834883f782f63205328a69c339eea9dae26386df68347cfabdbb8071ddf9"
+    },
+    {
+      "enemy": 34,
+      "palette": 5,
+      "asset": 108,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-05",
+      "source_sha256": "d5cc381b39304048410396cd1943b4c1b191a233ffae088588955a717f3e99c3",
+      "native_sha256": "9aa60fe7949223329ede4bb6a4832c2f05b345a41a6cc1b4d67d836f494ad7f6"
+    },
+    {
+      "enemy": 34,
+      "palette": 6,
+      "asset": 109,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-06",
+      "source_sha256": "41600b0bbd835977aa6eac61acade0fa88b9820f731a0ce9f564a23b5a350038",
+      "native_sha256": "3b2ecc3eab04d48e4b2c8c06c7f83a3348c6c9e3bcae3e868aa4d8105f647538"
+    },
+    {
+      "enemy": 34,
+      "palette": 7,
+      "asset": 110,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-07",
+      "source_sha256": "fbb1118830e15db45e5eb188e03ee5df170ae31f61005cd165c600f2038d8395",
+      "native_sha256": "9d48e877b327e5cc19624bd0afa34c02481c72572566399d99afd60c21d91fa5"
+    },
+    {
+      "enemy": 34,
+      "palette": 8,
+      "asset": 111,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-08",
+      "source_sha256": "b42fb2ad9195aed4d903685b42bacb7dca1143ebe7c22db44464f7ee89f98336",
+      "native_sha256": "ea92167d3d62527bf7d44bccf63513fbe5a5f2391d66dd63c533f429276980ab"
+    },
+    {
+      "enemy": 34,
+      "palette": 9,
+      "asset": 103,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-09",
+      "source_sha256": "6ccc5c1d53bd89577aae5a44767c8e0ec4c2a04ec500cae09ca7d8ad7e8298f6",
+      "native_sha256": "2ac7213ab1331d65fb38173c3c26638d56ceaad8d8689c2477a635fc721abb9b"
+    },
+    {
+      "enemy": 34,
+      "palette": 10,
+      "asset": 112,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-10",
+      "source_sha256": "ab39361eba991a4aae12bcd6811d211f5b77c54bbc6828fc3f608454f829f638",
+      "native_sha256": "1402d3357c292472d84efc3c35f94831bb093107d1b99a5d4e25c87d71f86b14"
+    },
+    {
+      "enemy": 34,
+      "palette": 11,
+      "asset": 113,
+      "sprites": 13,
+      "quantized_pixels": 122,
+      "name": "34-11",
+      "source_sha256": "407fbede1741a9fc22cda1f98931d3d3c31fecdbfee7a611a8a8b1325dfd71da",
+      "native_sha256": "ac2bf9a8500ec758b716edf73949c0bf0bb3741ec349ca8fb3256dc72b0207c0"
+    },
+    {
+      "enemy": 35,
+      "palette": 0,
+      "asset": 114,
+      "sprites": 14,
+      "quantized_pixels": 59,
+      "name": "35-00",
+      "source_sha256": "0c8f693a9e0f64cc74f969f3a48ff92058fcf9de8df12ee01455bbff20f7fa1a",
+      "native_sha256": "771842fb0379a964cedce87314398e02943e008c5bce9fab9b02087f11c20a0a"
+    },
+    {
+      "enemy": 36,
+      "palette": 0,
+      "asset": 115,
+      "sprites": 10,
+      "quantized_pixels": 139,
+      "name": "36-00",
+      "source_sha256": "b1230984f24ab7972dfb0eca1ac5ab11fc76f24fdc8904127e27d86ddcf444eb",
+      "native_sha256": "72c43e8467a7c7c31823ab8e21d67edbbe6e57ff98908c96df947063ff67d730"
+    },
+    {
+      "enemy": 37,
+      "palette": 0,
+      "asset": 116,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-00",
+      "source_sha256": "cad5fb1a18ad5243a584a5db83c4074ef3193a770c4a3cd47f80b1476a90bbbc",
+      "native_sha256": "a73d4d6909c09cc91a57ebc17d294109bc0e2e52532fb47ea090bd9dfc2839eb"
+    },
+    {
+      "enemy": 37,
+      "palette": 1,
+      "asset": 117,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-01",
+      "source_sha256": "0edc91290cd7e586004e6956e4f9294fd47f06dae2bbcecf932cbe24a187547c",
+      "native_sha256": "7daf324b641e3c2afdece4af3a2f307f7a26144f9c1d31b1c92ccad5ef3090e4"
+    },
+    {
+      "enemy": 37,
+      "palette": 2,
+      "asset": 118,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-02",
+      "source_sha256": "df880194e7801b1634613ec46c3906c26d47af49cafa40b5d1b313e020c3ff2c",
+      "native_sha256": "60d2ae68cb12543e894285d502a9b8e9ecef434191a6e6170e7a8035bc87f43e"
+    },
+    {
+      "enemy": 37,
+      "palette": 3,
+      "asset": 119,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-03",
+      "source_sha256": "cb7502cfaa3584357b7318028639b17d4ce2ca4457fee2f16152eb320b6b59ee",
+      "native_sha256": "37c6d508db7131fcf904d6ce3ac970701ec96e21ee0cbea180f998abefc93bff"
+    },
+    {
+      "enemy": 37,
+      "palette": 4,
+      "asset": 120,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-04",
+      "source_sha256": "661c765d4cf8d48cacbf72572116fc735cf8b8bbdc5b71dfacb1c0296434e8a1",
+      "native_sha256": "22d838e91af87a809ee56bb79cc6fd38f40d00765ab631d7c187349ebb755038"
+    },
+    {
+      "enemy": 37,
+      "palette": 5,
+      "asset": 121,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-05",
+      "source_sha256": "775eb6b1fbdfe98190dacd67aa1336ba08030327fa33105d1dea436bab684721",
+      "native_sha256": "d62a8a0f01a5efc4a92355a7aeefa8ece9ee0ce12762dc9716d7b0ed7da5d8df"
+    },
+    {
+      "enemy": 37,
+      "palette": 6,
+      "asset": 122,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-06",
+      "source_sha256": "4f4249a45a3132003da1cd5d099ed4f35d2dfba5dba93776975f5ef406fc2b29",
+      "native_sha256": "ee304454ee0452b9e86dfbf0171294c9f8b4ce85c13e7e829ee878ad555b8a10"
+    },
+    {
+      "enemy": 37,
+      "palette": 7,
+      "asset": 123,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-07",
+      "source_sha256": "4253c9e8e36342c5c15470b267ff34d3c672343d39145828713eec552a284f07",
+      "native_sha256": "ccc9c8622d101109da5d11e17e41b662e7b9c40dea9c5f56c8ada81ec191dafd"
+    },
+    {
+      "enemy": 37,
+      "palette": 8,
+      "asset": 124,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-08",
+      "source_sha256": "6bd112aa3bbe530ad6739172e87e5623749c2ec78cf0e8b0dd95171cb6def1c1",
+      "native_sha256": "c40f73f83cc3d32dd4a4f5865f329b59b788ac0026db1269819270f272ae0e96"
+    },
+    {
+      "enemy": 37,
+      "palette": 9,
+      "asset": 116,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-09",
+      "source_sha256": "cad5fb1a18ad5243a584a5db83c4074ef3193a770c4a3cd47f80b1476a90bbbc",
+      "native_sha256": "a73d4d6909c09cc91a57ebc17d294109bc0e2e52532fb47ea090bd9dfc2839eb"
+    },
+    {
+      "enemy": 37,
+      "palette": 10,
+      "asset": 125,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-10",
+      "source_sha256": "ccc8b11d2d0b73280df60303bc8de94f5f4925e1da88917557a1bc2a44177d80",
+      "native_sha256": "ee876345f6454d99ecfef8d9e536585aa94648005c20c7a748d880549a274e3b"
+    },
+    {
+      "enemy": 37,
+      "palette": 11,
+      "asset": 126,
+      "sprites": 18,
+      "quantized_pixels": 356,
+      "name": "37-11",
+      "source_sha256": "0cf0d7ee2b2f39a54d0f9b5a8dfe5f0d1479e4703800ff09160aa4c1dc6823dc",
+      "native_sha256": "22becc0521cc03ee16c0fadede6c41c86c85b5feb632ded27cffacf74032c494"
+    },
+    {
+      "enemy": 38,
+      "palette": 0,
+      "asset": 127,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-00",
+      "source_sha256": "d09b8e2d654da90a07b8beb59c022c7d813472b9e4a7cbff99dbf18bc8c6c9b7",
+      "native_sha256": "1fa070a60222c01fe4c8940e5a77d66c052ef94af45423946103b28aa4b26565"
+    },
+    {
+      "enemy": 38,
+      "palette": 1,
+      "asset": 128,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-01",
+      "source_sha256": "6c216df64d95ad41d2903a1a9dbb5cb8af92ed4849e72853edd82f196a66ceeb",
+      "native_sha256": "8086907c8a20128e9eac125fab50dd489faa20648671914f423e1e01b39eb5a2"
+    },
+    {
+      "enemy": 38,
+      "palette": 2,
+      "asset": 129,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-02",
+      "source_sha256": "bb420872916b5823b04df57b3b0187c608c2df29d167bb70a5d2a009f28a2c9e",
+      "native_sha256": "2d5427d0eb06f81c3c36c9505cf1175204102257a6af28a99058c5ed05b33bbc"
+    },
+    {
+      "enemy": 38,
+      "palette": 3,
+      "asset": 130,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-03",
+      "source_sha256": "916bdfb64fecad25c819fedd1fe7d8a3cc28dda93bfbc2cf56f173e7e19b75b9",
+      "native_sha256": "51b5736e545f4f257c58a075f9eaa55bcb50be2e988a48e7ef180c39d8272978"
+    },
+    {
+      "enemy": 38,
+      "palette": 4,
+      "asset": 131,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-04",
+      "source_sha256": "34a3b9294fc6313b429507fc9c847dadbc99f0f6be65f20355381efece792706",
+      "native_sha256": "235ef8638a3a52f2fa1ac34bf6054746959d16cd5a78444912cb713e7628030e"
+    },
+    {
+      "enemy": 38,
+      "palette": 5,
+      "asset": 132,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-05",
+      "source_sha256": "9481ae7814f98f765784119b9120578d734909e77df864a0668d7ee91803baba",
+      "native_sha256": "6d92ce0e8d7a26d1096295b50b9982dc27179b97744870a053b644f84d2139b2"
+    },
+    {
+      "enemy": 38,
+      "palette": 6,
+      "asset": 133,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-06",
+      "source_sha256": "63e30af8c369da383cb4d2f11d4df08caa510de54b376862dcb068171fbb8ebd",
+      "native_sha256": "1887996a00cc1c73383910d9153fcbab40a8a6f78fdaaa998e0dcb7ab7e50f57"
+    },
+    {
+      "enemy": 38,
+      "palette": 7,
+      "asset": 134,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-07",
+      "source_sha256": "ff35f5f23ffb9fccf15e9e327c70fc8b16506cbacf0eb75ce8e97324db616511",
+      "native_sha256": "1589339739383db1a9d07f5a1b3a34b79744cccb028a67a7f01be045bbc01a9f"
+    },
+    {
+      "enemy": 38,
+      "palette": 8,
+      "asset": 135,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-08",
+      "source_sha256": "651f500465a867e60abe59ace423b71d9b8c2c4e9a298decbeecf60c298abdb5",
+      "native_sha256": "e593d38d1e8b1f220b15b6527bcb27e7f71f60c8b5ac168dc4587777c0584be0"
+    },
+    {
+      "enemy": 38,
+      "palette": 9,
+      "asset": 127,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-09",
+      "source_sha256": "d09b8e2d654da90a07b8beb59c022c7d813472b9e4a7cbff99dbf18bc8c6c9b7",
+      "native_sha256": "1fa070a60222c01fe4c8940e5a77d66c052ef94af45423946103b28aa4b26565"
+    },
+    {
+      "enemy": 38,
+      "palette": 10,
+      "asset": 136,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-10",
+      "source_sha256": "1fc4dd4b26a50d645fae5afb9913d972b8df1a2dc2b059fc0df2f9f3f6d72251",
+      "native_sha256": "8e360984401ce932f2ff814a833f432634a9dbaa4c3ee9877eee2f3c8e6f6eb6"
+    },
+    {
+      "enemy": 38,
+      "palette": 11,
+      "asset": 137,
+      "sprites": 21,
+      "quantized_pixels": 450,
+      "name": "38-11",
+      "source_sha256": "00ffb400b290105899828815468aefa240b9534230a68147cf5defd2fe41f646",
+      "native_sha256": "88e7928f8a859966266898b715a9a759ce1cb58ef9aff2f27d41852ff593e6f5"
+    },
+    {
+      "enemy": 39,
+      "palette": 0,
+      "asset": 138,
+      "sprites": 6,
+      "quantized_pixels": 66,
+      "name": "39-00",
+      "source_sha256": "a13e2074ed0f7e8b6f0a5d7502b480dad65c0673d4f24d7442f67d56c1baee88",
+      "native_sha256": "f8117aff268879716d149083c00ded7762d2b05588f19e0205886b817960ec4d"
+    },
+    {
+      "enemy": 40,
+      "palette": 0,
+      "asset": 139,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-00",
+      "source_sha256": "238db1e120f9d1ec8e23a5bbe2b9480de5ae989fc2162326834bbc6d0ca9c5de",
+      "native_sha256": "006d5c8978e1d6a77073b962e4c96e9d9bafbdd3d6a644bb85988828a84e69ad"
+    },
+    {
+      "enemy": 40,
+      "palette": 1,
+      "asset": 140,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-01",
+      "source_sha256": "3ac25ef0fc0e922c7cb3d81d5ff3f77b4dda1d8f320c95025c5aed20ff10bb16",
+      "native_sha256": "cffa29ecdc63c722f2856288d818f333aa789d506dd81ab01864c542b3735f2e"
+    },
+    {
+      "enemy": 40,
+      "palette": 2,
+      "asset": 141,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-02",
+      "source_sha256": "1461416218cbb936a3d5a3c7704cf446fd4bafe4f98553069f9907e513186162",
+      "native_sha256": "a04b02d6b154cfc806a7592c13194e058733e6429e6147394d9e3c773f56c7b4"
+    },
+    {
+      "enemy": 40,
+      "palette": 3,
+      "asset": 142,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-03",
+      "source_sha256": "328becafd7b1fd4fd73e2ee12a074d903636f3fe57045f9af24ee8e347350038",
+      "native_sha256": "5ee8fadf4409fa62fca60090205847180c1111afcccb7dcb856e2d080ee0dddf"
+    },
+    {
+      "enemy": 40,
+      "palette": 4,
+      "asset": 143,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-04",
+      "source_sha256": "e2cf67a34a9c55387613e8f78731a158734c584d93257b38d53923ee4d1fec9d",
+      "native_sha256": "94007b8de75ab9753da40575902319d88a20da03ccbc34b6bcccd683f5257fad"
+    },
+    {
+      "enemy": 40,
+      "palette": 5,
+      "asset": 144,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-05",
+      "source_sha256": "5a233b1bfd53013748ca54919d2a490d1e5e369c1cba6a630dcb4fd2a0c798f0",
+      "native_sha256": "508353c7f1d4ddd747bff29dc64f6f8a0be316bda472db9175383777e0f51bbb"
+    },
+    {
+      "enemy": 40,
+      "palette": 6,
+      "asset": 145,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-06",
+      "source_sha256": "3b6ebb97a0c9584edad9680181574ecfd2cca96b5ea24240cd3396f3aa5f5235",
+      "native_sha256": "53ef5f609ba34f5466f8d4f5d635ddd8316dd94d601a816662375ba345d17d2a"
+    },
+    {
+      "enemy": 40,
+      "palette": 7,
+      "asset": 146,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-07",
+      "source_sha256": "a0f8f52b4465d77e1e2406c4869728d0cb0e558bfd33bdbfc316c91ed3f01556",
+      "native_sha256": "004e126be8177427aea521d47b823c312c60eccba7a9cb6237ce15d9384a7636"
+    },
+    {
+      "enemy": 40,
+      "palette": 8,
+      "asset": 147,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-08",
+      "source_sha256": "c0839abbf02681f7708ed1e2a512e84af56de23506d20df12c1780c3f62f3b55",
+      "native_sha256": "3467dae0ac4223b9d2002b2baa5cc2e900a833047acbc7ccffddb07a277fcede"
+    },
+    {
+      "enemy": 40,
+      "palette": 9,
+      "asset": 139,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-09",
+      "source_sha256": "238db1e120f9d1ec8e23a5bbe2b9480de5ae989fc2162326834bbc6d0ca9c5de",
+      "native_sha256": "006d5c8978e1d6a77073b962e4c96e9d9bafbdd3d6a644bb85988828a84e69ad"
+    },
+    {
+      "enemy": 40,
+      "palette": 10,
+      "asset": 148,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-10",
+      "source_sha256": "905b7412fbf841175b5d37db345773990b30427336f61dbe316810fdabaf37a7",
+      "native_sha256": "05dfd1efd5737524672f26da1f77c5a6e2343225e657f07732e83c26350dc7ad"
+    },
+    {
+      "enemy": 40,
+      "palette": 11,
+      "asset": 149,
+      "sprites": 13,
+      "quantized_pixels": 125,
+      "name": "40-11",
+      "source_sha256": "17214d41b1dc22e300be328de4d44301d4e56ff976d3651ab24bdad4ea2f8581",
+      "native_sha256": "f94d9bf4d8e0a6b2fffa3474508c99da221cab0ad6e3491d245062bac9f21104"
+    },
+    {
+      "enemy": 41,
+      "palette": 0,
+      "asset": 150,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-00",
+      "source_sha256": "9e1e2d2fe555405674320f3fd57b92196f83e9cd0c131a8e6e7c1a56f90a53e3",
+      "native_sha256": "9b671d3a7d1e43ef8613bf38225058773c013b96d72f367ffab3217dcf7f0a9d"
+    },
+    {
+      "enemy": 41,
+      "palette": 1,
+      "asset": 151,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-01",
+      "source_sha256": "ac0f3d9df5f54dadea468b6bef2780c28453655b630cad758140c0cb9a3877e9",
+      "native_sha256": "4081b0f03a5b896fd5d31da4dd6b91b640800da7f57d20ba26a92008a68cfa66"
+    },
+    {
+      "enemy": 41,
+      "palette": 2,
+      "asset": 152,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-02",
+      "source_sha256": "5e906e145a2a4dd5de9ab3824392f74bc1a00d8689d25f9c24e5f1f605638754",
+      "native_sha256": "cafdff726a25fe6ae633e606921aa7c83f1560ac057678ca9ac0357ee5d04a9a"
+    },
+    {
+      "enemy": 41,
+      "palette": 3,
+      "asset": 153,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-03",
+      "source_sha256": "3ca9999a3028743b03e108bd087bf4d299b4e9d6fa28fcbbf8880cf7a4553233",
+      "native_sha256": "a12729c1c4349662a3ffc63641eb3bcfacbc2569e5b11b7be8dedd7da150bb0a"
+    },
+    {
+      "enemy": 41,
+      "palette": 4,
+      "asset": 154,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-04",
+      "source_sha256": "129968c1de467438d13419dd9eca317bec874283ae72b881be2fb9629cf7ac46",
+      "native_sha256": "671ab3f0ead88c2cf62793480819d153f50a1d9d18428d071797cce896f126d3"
+    },
+    {
+      "enemy": 41,
+      "palette": 5,
+      "asset": 155,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-05",
+      "source_sha256": "70a320c7a57ddfdfb7aae8ea44ffee07a3eb7f7286ddf0492c724831e5bcf34f",
+      "native_sha256": "d2a5d1b807419367323f3ebcb51cc1fd0349ed7599890c48ae40a257ed22c532"
+    },
+    {
+      "enemy": 41,
+      "palette": 6,
+      "asset": 156,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-06",
+      "source_sha256": "f9512b34783328740e88bd3dbe9e50d7a120fd01e262f1e0223a466fc90aa3c9",
+      "native_sha256": "0f40288d2af36b070d17037ac2a8c0a2ab929fa3a249ed013baf8a0f2164c857"
+    },
+    {
+      "enemy": 41,
+      "palette": 7,
+      "asset": 157,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-07",
+      "source_sha256": "8d08792bd14f34e5f4033b19fa8254aff3b3a55dcf44def2f4f1cb6a73ea7f46",
+      "native_sha256": "ca1164383e3c0f4f1169b52429adbf84acb46848fbec188ca68c665ac741ee4d"
+    },
+    {
+      "enemy": 41,
+      "palette": 8,
+      "asset": 158,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-08",
+      "source_sha256": "00f511249a1b6ea9bc2a05752984b812c274d85305eb547b97c2c0bb34319d63",
+      "native_sha256": "f59e03cee64b0649a0bb2aad0b1ec0b9904d29d4ded5cb138f52b1de665f34e9"
+    },
+    {
+      "enemy": 41,
+      "palette": 9,
+      "asset": 150,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-09",
+      "source_sha256": "9e1e2d2fe555405674320f3fd57b92196f83e9cd0c131a8e6e7c1a56f90a53e3",
+      "native_sha256": "9b671d3a7d1e43ef8613bf38225058773c013b96d72f367ffab3217dcf7f0a9d"
+    },
+    {
+      "enemy": 41,
+      "palette": 10,
+      "asset": 159,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-10",
+      "source_sha256": "31903d999b24ac4e9e67f7bdcaab84d942d0ffe0df22a43276224dd50adc952c",
+      "native_sha256": "30d16bd00ef42841ec8e5f718ace56c5d4c69a01ea53983c97f4ab20b0effd95"
+    },
+    {
+      "enemy": 41,
+      "palette": 11,
+      "asset": 160,
+      "sprites": 18,
+      "quantized_pixels": 402,
+      "name": "41-11",
+      "source_sha256": "1a3469bd34af5d510160093e55fbf23822ae18913eff4811a3195136e83de62d",
+      "native_sha256": "cdbde273d901919a6b895d4256bb9d0f5adce5bb78d7adb737d2fa9939a6a217"
+    },
+    {
+      "enemy": 42,
+      "palette": 0,
+      "asset": 161,
+      "sprites": 14,
+      "quantized_pixels": 69,
+      "name": "42-00",
+      "source_sha256": "73d81f62642ca4da9157444abe49f135ff87411975dc28eb22714a2416672d53",
+      "native_sha256": "01a94329f1565a7efbf3c866ef40d382ca7b33ff614c485503d827081d675daa"
+    },
+    {
+      "enemy": 43,
+      "palette": 0,
+      "asset": 162,
+      "sprites": 8,
+      "quantized_pixels": 174,
+      "name": "43-00",
+      "source_sha256": "d87976c7ba04501829733797e67c3f6463bec4f7d476969039470f2578165c82",
+      "native_sha256": "2bcd79fd6e04d086a109bae18a472dcf5572e0c220ffd6b6d495c1aedbb69d2a"
+    },
+    {
+      "enemy": 44,
+      "palette": 0,
+      "asset": 163,
+      "sprites": 15,
+      "quantized_pixels": 195,
+      "name": "44-00",
+      "source_sha256": "2932fae87fcfda8f96420c2dca92ea09b2937f2ef37c0f6af8058962dca8a33d",
+      "native_sha256": "304979cf9a69b0b9ddd6228fd635c6234e6b494e8e938eb47043ed70793744eb"
+    },
+    {
+      "enemy": 45,
+      "palette": 0,
+      "asset": 164,
+      "sprites": 15,
+      "quantized_pixels": 173,
+      "name": "45-00",
+      "source_sha256": "175b6fa2c24cc17e2af1d9907ac3a2b38e82d415d85eb5368ed1f035f79c591a",
+      "native_sha256": "76a42df9f959a5ffe8b61562cfad45952c8fba573ea0840ba929bdcafbc27198"
+    },
+    {
+      "enemy": 46,
+      "palette": 0,
+      "asset": 165,
+      "sprites": 14,
+      "quantized_pixels": 138,
+      "name": "46-00",
+      "source_sha256": "5d7bd4e12670ebd048e310f716c7dade11067b99ce75f30dcd5a5f82a39b6535",
+      "native_sha256": "081d7b29a199a6e7e00bba74d05176d18525bda92c94fed322bf2f8512a9b70a"
+    },
+    {
+      "enemy": 47,
+      "palette": 0,
+      "asset": 166,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-00",
+      "source_sha256": "57340e2f61cd0c786682e3c3b70e0e0e67938350afada322f4ad34479ef75da0",
+      "native_sha256": "b523bb445633f7808e930f8e43e4c7db559df8d772532ab809aeda09892054e3"
+    },
+    {
+      "enemy": 47,
+      "palette": 1,
+      "asset": 167,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-01",
+      "source_sha256": "919211267dde6894fa7fb91f07a1d62dd3aaca1192e3539de040e6cf1e24d93c",
+      "native_sha256": "38ddab786bf031258634fde237633568a7346f2b2500347fdab36b6c898ad051"
+    },
+    {
+      "enemy": 47,
+      "palette": 2,
+      "asset": 168,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-02",
+      "source_sha256": "1ed3555201f646cf71923a8bd21ffc6ae7479438d1f5ce5228402aef3f3e4ed0",
+      "native_sha256": "d4184f1305c4239f732e580d89ed42d8f41e45af067d8a6bea22d91b2799c814"
+    },
+    {
+      "enemy": 47,
+      "palette": 3,
+      "asset": 169,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-03",
+      "source_sha256": "5c7b5b974516176eddc8e91599ffb512df68326ae5b297ce06f7d8e7596dd945",
+      "native_sha256": "25cad3ecea4fcf49e45b2e32228d10e00ffeb253ea458cbf4ccf9e935e5b7f7d"
+    },
+    {
+      "enemy": 47,
+      "palette": 4,
+      "asset": 170,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-04",
+      "source_sha256": "29df2b28fa1f9e25ee78afe1d3dddf2f2d69e43167277c9d9550325f3dea6a73",
+      "native_sha256": "677c9330fc8888b4334d5bb43f189a79f733a313b1c6f7c00b77ccc989097c1d"
+    },
+    {
+      "enemy": 47,
+      "palette": 5,
+      "asset": 171,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-05",
+      "source_sha256": "d59f916dc1e9b558445a366ecba6fd2747334ef0810524ac369fc5a8e18ebdad",
+      "native_sha256": "1639abaa5c8ff6c76a8347a64fccadb376f4745310315168ff60d65e87910331"
+    },
+    {
+      "enemy": 47,
+      "palette": 6,
+      "asset": 172,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-06",
+      "source_sha256": "cc289e9ea32fc411004284d3a8b3ee8f3daa39bac3af18a41d0437b945cb5b20",
+      "native_sha256": "3bb8b09ff5eac1cfa5e825a6cdd07cb77226e8f7ddcb98daa9ae2eb03892b0fe"
+    },
+    {
+      "enemy": 47,
+      "palette": 7,
+      "asset": 173,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-07",
+      "source_sha256": "0cd3ac445fcb2b83fcf413d56cc7976765e932af2e5d2c5ac1fb39e41f1ca6d6",
+      "native_sha256": "588c7bd8790b240250cd7dc58939589a8695d78581ba848c7ddf4c5c3870a28b"
+    },
+    {
+      "enemy": 47,
+      "palette": 8,
+      "asset": 174,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-08",
+      "source_sha256": "46c42224a829dcf83c144d2ebf01f4a9dff0c402628d1267763842274f9f7b7f",
+      "native_sha256": "bc2128cfca9c7dbe00a8972db1f83a047b32a861eafab00e4d4a290aa8bf4f9d"
+    },
+    {
+      "enemy": 47,
+      "palette": 9,
+      "asset": 166,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-09",
+      "source_sha256": "57340e2f61cd0c786682e3c3b70e0e0e67938350afada322f4ad34479ef75da0",
+      "native_sha256": "b523bb445633f7808e930f8e43e4c7db559df8d772532ab809aeda09892054e3"
+    },
+    {
+      "enemy": 47,
+      "palette": 10,
+      "asset": 175,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-10",
+      "source_sha256": "59c2bc92a096e0ed8d1b618ed85655a9ce3f57368be32562b4870ce739f4a7f8",
+      "native_sha256": "3681d89605dd35db2b553a136fe3cf654ed64f03a8f8c0d41229ed80cc1b637c"
+    },
+    {
+      "enemy": 47,
+      "palette": 11,
+      "asset": 176,
+      "sprites": 17,
+      "quantized_pixels": 504,
+      "name": "47-11",
+      "source_sha256": "956a5c863d17ce8e43a9802838f348043d85e7825cf967ce74b48b1103b9a665",
+      "native_sha256": "d598f08963181cca0974b798f16dd6f7bd6bb979d8b54e3b7ee484747881403b"
+    },
+    {
+      "enemy": 48,
+      "palette": 0,
+      "asset": 177,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-00",
+      "source_sha256": "a731a44bad12d69685d6b9d9e933996ceba74ea31b56c5145ccc4c4d7035d3d9",
+      "native_sha256": "da8510b67270200eb237248cfe927332abc7c67e120ecd27e706717cf40561c9"
+    },
+    {
+      "enemy": 48,
+      "palette": 1,
+      "asset": 178,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-01",
+      "source_sha256": "63d66900a155cbc8eacf2d4cacb76fce566f51da2cd70abaed6959c4bf14b81f",
+      "native_sha256": "49f7705a1cf7de5fe9e2977fa62b1ef574ec37479f645dbbaa2ef9485b5d4273"
+    },
+    {
+      "enemy": 48,
+      "palette": 2,
+      "asset": 179,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-02",
+      "source_sha256": "0df84bcd0e93c9c14f7ca8833d92ea19b3495891ad5f927a4e8bac422aee4381",
+      "native_sha256": "4657ef123089400832c4f39b302a65d92cf175a11b09b745755a3469b48e58ed"
+    },
+    {
+      "enemy": 48,
+      "palette": 3,
+      "asset": 180,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-03",
+      "source_sha256": "2e52303ec3b8709fd330cfe0b1500820f6b711f68df93ef92f0c0122db4a4088",
+      "native_sha256": "cfe8031db11675d3110e60150ad17620cd8f60e8b7f3f3bd39ebb24919f246a7"
+    },
+    {
+      "enemy": 48,
+      "palette": 4,
+      "asset": 181,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-04",
+      "source_sha256": "f09e88677e6abcd22cdb24ae2ad4eacdcf353f8b497e5dd4a7fea2f1aefdca29",
+      "native_sha256": "6af165247d88971bb73cd15d50b445107800c48b2ffeaa3720a43770b6fc6972"
+    },
+    {
+      "enemy": 48,
+      "palette": 5,
+      "asset": 182,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-05",
+      "source_sha256": "33a3daa95469c6328ae5c8aaaadadf6c9d8660978a835290c4eeb4463751df6e",
+      "native_sha256": "7b7f0b5174f88349d1fa0d3dafba1e4df95a147f982f6c4062ad0eac456c430c"
+    },
+    {
+      "enemy": 48,
+      "palette": 6,
+      "asset": 183,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-06",
+      "source_sha256": "2a2a1ecc10bb5d8857a884f71007e19ab0335889803fbe0b5f970776d9850e9e",
+      "native_sha256": "8a3ad788330d9fa28780409336116f6001e71b8a61e7fb6eee14508daf59b203"
+    },
+    {
+      "enemy": 48,
+      "palette": 7,
+      "asset": 184,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-07",
+      "source_sha256": "13da7fc7b1a5e2581a4d996caddc1a0b2faacbefc0d60e5610f62333fec790da",
+      "native_sha256": "ea822bb5121d77a6ee3c34dbe84c63dbbd2236d3665bbc8f98813232d7c2e1a5"
+    },
+    {
+      "enemy": 48,
+      "palette": 8,
+      "asset": 185,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-08",
+      "source_sha256": "be2e2edcb9f686aa53d4c385c3bd5fe5c20ef651604773e8e57277d9b3140eef",
+      "native_sha256": "d6ce89abb4679640c0136b566f5a560e433663700964a2340b2e9e8e04071141"
+    },
+    {
+      "enemy": 48,
+      "palette": 9,
+      "asset": 177,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-09",
+      "source_sha256": "a731a44bad12d69685d6b9d9e933996ceba74ea31b56c5145ccc4c4d7035d3d9",
+      "native_sha256": "da8510b67270200eb237248cfe927332abc7c67e120ecd27e706717cf40561c9"
+    },
+    {
+      "enemy": 48,
+      "palette": 10,
+      "asset": 186,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-10",
+      "source_sha256": "68e7a04707f70fda63443b7690ebd979886734eeef05336ccddd273f118e13d1",
+      "native_sha256": "95bba8fb5ae6098dc90d4c982728d3e312c64d4d1bfb49f0251c748f2ed76755"
+    },
+    {
+      "enemy": 48,
+      "palette": 11,
+      "asset": 187,
+      "sprites": 21,
+      "quantized_pixels": 455,
+      "name": "48-11",
+      "source_sha256": "0a8c8eb5e79bcd92511d17c46040557e91e916226840464b112de57c7f07f2bf",
+      "native_sha256": "f4f8f4ddbcce21f39b4431034593d822bdf0578e936c77398f38ec10aa05e83c"
+    },
+    {
+      "enemy": 49,
+      "palette": 0,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-00",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 1,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-01",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 2,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-02",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 3,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-03",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 4,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-04",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 5,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-05",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 6,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-06",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 7,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-07",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 8,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-08",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 9,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-09",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 10,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-10",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 49,
+      "palette": 11,
+      "asset": 188,
+      "sprites": 10,
+      "quantized_pixels": 248,
+      "name": "49-11",
+      "source_sha256": "bcd025f333c1b595b6c46f17e98219e17daebbe62dae6f82433d3c251d16fab4",
+      "native_sha256": "162c070cb8df5529a5c30ebc0486ac448bdd4e5a46a496becadaac9369d889d8"
+    },
+    {
+      "enemy": 50,
+      "palette": 0,
+      "asset": 189,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-00",
+      "source_sha256": "35a54e87deb8b860f1135a182c588a706b2c25cb062f11ada592fa4ece216f7f",
+      "native_sha256": "57127e3d1648d55f77f88734d8f010e4daa498cb67861f1cffe15c93ada0f023"
+    },
+    {
+      "enemy": 50,
+      "palette": 1,
+      "asset": 190,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-01",
+      "source_sha256": "9b06e042d88f576aaeb64d5be6f0d53eb669a9386dab75487380603c14f7177c",
+      "native_sha256": "3bcbd346b5dbdf457a64b2498e8b5900d697e920958622ea3f5ac5d1de79db80"
+    },
+    {
+      "enemy": 50,
+      "palette": 2,
+      "asset": 191,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-02",
+      "source_sha256": "7a47089f165b7f6753a40a9ed3c564e3c6f98caf48b6b18963c4498164e60306",
+      "native_sha256": "563328c1cff954bcbbd8d4e8f915c4b71073a84e8b4773ce5b46ef73ac7049fe"
+    },
+    {
+      "enemy": 50,
+      "palette": 3,
+      "asset": 192,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-03",
+      "source_sha256": "824178421e5fb4d2a086587d1a392e9a5698e24c4187c98d648b4ab385f1d734",
+      "native_sha256": "bd604dd104783291953c5eb220d99e7f1241b12304a44156ed74ac45a54da98e"
+    },
+    {
+      "enemy": 50,
+      "palette": 4,
+      "asset": 193,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-04",
+      "source_sha256": "80a029e0e1df29a1653aa248f391f50ac5f6606e8b9358a825b85e7a1fbc699b",
+      "native_sha256": "f6f9d321ffd269348cdf47b49bf16a1fb373ec17360f2114c54111b7c8a0b436"
+    },
+    {
+      "enemy": 50,
+      "palette": 5,
+      "asset": 194,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-05",
+      "source_sha256": "bb8a3903aef8fe8784267e508167d7828820132304d87bc1bb67efa29d717179",
+      "native_sha256": "3afc8ab0264ebec8e0450110925e215baf396fd242acc53eba4304956a9c0156"
+    },
+    {
+      "enemy": 50,
+      "palette": 6,
+      "asset": 195,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-06",
+      "source_sha256": "e3c2a3d7b01c63be808e0591045dc15a64b9445e4e9d33712bb17c4b0b9ca0d4",
+      "native_sha256": "958e20cce108b0c44c58f1d369168f5e07cdeda6bf972372ff340c2c5edb09b6"
+    },
+    {
+      "enemy": 50,
+      "palette": 7,
+      "asset": 196,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-07",
+      "source_sha256": "aa713dc8fb132904e0e26dfe9a2509ac005e80d3b730d577815102368e7b3697",
+      "native_sha256": "325014d407623617e718306ec02b1b2a3b73ac09d1d62b5486db572e1f759f07"
+    },
+    {
+      "enemy": 50,
+      "palette": 8,
+      "asset": 197,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-08",
+      "source_sha256": "45f873e4c5e9d5506b44f775c3739d2c7cf3dfa7180c5c45057fc96c2d064069",
+      "native_sha256": "f65763df9b23e4e8c987c9c50211062db31313e4fa79115f6858cf14d4555308"
+    },
+    {
+      "enemy": 50,
+      "palette": 9,
+      "asset": 189,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-09",
+      "source_sha256": "35a54e87deb8b860f1135a182c588a706b2c25cb062f11ada592fa4ece216f7f",
+      "native_sha256": "57127e3d1648d55f77f88734d8f010e4daa498cb67861f1cffe15c93ada0f023"
+    },
+    {
+      "enemy": 50,
+      "palette": 10,
+      "asset": 198,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-10",
+      "source_sha256": "626d33500c102b28cb319a65dd7c030ad474a7763a27a9e0ffa34f86c60fa1b1",
+      "native_sha256": "bd1e10ee0caa3655f5aacc986b0b6f9a07227903c7cb034ac36cae3fa05570f5"
+    },
+    {
+      "enemy": 50,
+      "palette": 11,
+      "asset": 199,
+      "sprites": 25,
+      "quantized_pixels": 639,
+      "name": "50-11",
+      "source_sha256": "a52d204febf436fbf8f570bdbd9881dc96a5787afa207e36a1b2aa05940f3f60",
+      "native_sha256": "b1e163788e2a43741c4fab73e16efa06f16f26ce8f35a722b398121a0b1ff0ec"
+    },
+    {
+      "enemy": 51,
+      "palette": 0,
+      "asset": 200,
+      "sprites": 14,
+      "quantized_pixels": 110,
+      "name": "51-00",
+      "source_sha256": "15b875294dfd5e556d019998ad93de3cdd3d1e5c25e26f2d7068806aaf6c829e",
+      "native_sha256": "f08ba64ca81c80689e2a314ec5f56f47a69da089e43fae26891aa1203ae62ddb"
+    },
+    {
+      "enemy": 52,
+      "palette": 0,
+      "asset": 201,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-00",
+      "source_sha256": "f9bd76cd32e87e8138de92dae899fb3d7c7bd9471a1816462d00decd8d165963",
+      "native_sha256": "82a781a88e471f89a8c302cbb759043ed0c42a5811c5cc5535c6cb499ca6009e"
+    },
+    {
+      "enemy": 52,
+      "palette": 1,
+      "asset": 202,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-01",
+      "source_sha256": "4b8a770072dca5b4b4963635394045c557d41273544f08c26d16eb2bfd52b853",
+      "native_sha256": "ecc31fcfbe7f8881bb16942ad9164285d11e92a52a8bbf7908f43e8e8df99039"
+    },
+    {
+      "enemy": 52,
+      "palette": 2,
+      "asset": 203,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-02",
+      "source_sha256": "85aae05f83a92a2e792c75faf40bb88b1bca918675abae69bd5d240cc34d2dfe",
+      "native_sha256": "c4e3a852fa61d2f1e70289ce137b26a019709d404b8a9811e60593a1b9bd906d"
+    },
+    {
+      "enemy": 52,
+      "palette": 3,
+      "asset": 204,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-03",
+      "source_sha256": "245776d6b8f94dda8165c3af889f0c79451b1b94b4d1c79f1b3795dc9a6a428d",
+      "native_sha256": "e4544809a4c31254fcbc9fc91c67af5260d207301fbe972977087a033d3497f1"
+    },
+    {
+      "enemy": 52,
+      "palette": 4,
+      "asset": 205,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-04",
+      "source_sha256": "488038ab4e41e28233d094306e08d8878aecf2880983747bb943c56f98a75447",
+      "native_sha256": "9bf7315b23b4dd65ddf6e5c8a9a14b32a1c9dd4ee8bd52f287bb833f9d87182e"
+    },
+    {
+      "enemy": 52,
+      "palette": 5,
+      "asset": 206,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-05",
+      "source_sha256": "5bb15d0e73130667e5c0bcf2a108d46ddf3f67a2d606373cba81af1095f08e0f",
+      "native_sha256": "96ecf86b38cf48952f2f330b2cfbe4e4ecbca50a72d6e57d7ccde5cbc952a05b"
+    },
+    {
+      "enemy": 52,
+      "palette": 6,
+      "asset": 207,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-06",
+      "source_sha256": "d3e9ca0ef2a19ab1285e31483d317301473cc714f33b1ee28abbc506cc7af2c2",
+      "native_sha256": "6be106188130f1773e7eaddf5c42fd409bdf6a4c73198e4c031ecba9cfb1bb41"
+    },
+    {
+      "enemy": 52,
+      "palette": 7,
+      "asset": 208,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-07",
+      "source_sha256": "a5a3f582a0d1d4ff01e696da4563fe209df77ca5e53cf76191074ee371e404a5",
+      "native_sha256": "710d6595e7af086058824c014f6b7b640d9cbbb3b4b2eed2cf1ec608bc03198d"
+    },
+    {
+      "enemy": 52,
+      "palette": 8,
+      "asset": 209,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-08",
+      "source_sha256": "777c7ee8475857186d78f8225bdcd03f1cd75f7a82370a7bd38880a9cee659c1",
+      "native_sha256": "c5cfa46a4c94419d0f362d19094eece11b14bf89cb794c89f347dca462339eaf"
+    },
+    {
+      "enemy": 52,
+      "palette": 9,
+      "asset": 201,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-09",
+      "source_sha256": "f9bd76cd32e87e8138de92dae899fb3d7c7bd9471a1816462d00decd8d165963",
+      "native_sha256": "82a781a88e471f89a8c302cbb759043ed0c42a5811c5cc5535c6cb499ca6009e"
+    },
+    {
+      "enemy": 52,
+      "palette": 10,
+      "asset": 210,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-10",
+      "source_sha256": "6dd54f0cd72cf5efe06b0839a6887bd7c917912032c2152ad7e14735bdf705ee",
+      "native_sha256": "8115fa59dbc29ea2c2774b3e3da70eb9d299844efa51d7f1e715dccb44e6b00b"
+    },
+    {
+      "enemy": 52,
+      "palette": 11,
+      "asset": 211,
+      "sprites": 18,
+      "quantized_pixels": 322,
+      "name": "52-11",
+      "source_sha256": "ff25c6e20a20f8f45efe2eafec04db060a19da163d251d8e087087ed38cb9300",
+      "native_sha256": "1dabe62ca2380fc50836381668932fe7bd8f3d0985043f06be8161d6ebc88b4b"
+    },
+    {
+      "enemy": 53,
+      "palette": 0,
+      "asset": 212,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-00",
+      "source_sha256": "220f0cdcb15ce38d088191a409c3a0fc236621cda8535eb9606efa5caa168955",
+      "native_sha256": "09fe83c0f531f171050b3f8966174f043d3c73f8b19ac187bf8bd89e69dadeba"
+    },
+    {
+      "enemy": 53,
+      "palette": 1,
+      "asset": 213,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-01",
+      "source_sha256": "31aab6ceedf4678a56512e1ad56ab4efb57f195a12e6333c00353f2cd6d4b028",
+      "native_sha256": "9322bf340bf9300893c2965e8fcb4aa76ef0bc3025910ea63cc4111f550a5a74"
+    },
+    {
+      "enemy": 53,
+      "palette": 2,
+      "asset": 214,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-02",
+      "source_sha256": "6f01be235d21e4d6895b0431482e817c4d034a49048aa9e446f5d008e21491e6",
+      "native_sha256": "155333074df6e169b1c1884a863d7741247855c36c949cd427434e615425b367"
+    },
+    {
+      "enemy": 53,
+      "palette": 3,
+      "asset": 215,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-03",
+      "source_sha256": "d2187a04509259624d3be63933abc492540f5257c6ed5fe7e2f9bbbc7aed97c2",
+      "native_sha256": "bb597add2a5a97e718fa5c14d3a86530b41ef381f1970fb17b978106d801cbfa"
+    },
+    {
+      "enemy": 53,
+      "palette": 4,
+      "asset": 216,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-04",
+      "source_sha256": "a150e9450903a3a3a700ab6ab8886b301caa33cf7d83121343324c9743af7770",
+      "native_sha256": "3ca64ebc96723616aef2434aedad8fc5f2f70992943e3fdb7bc54e8037625b0e"
+    },
+    {
+      "enemy": 53,
+      "palette": 5,
+      "asset": 217,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-05",
+      "source_sha256": "74dc50ab4903e8c4219345aa0ba8f43a10cbe7c5c8c8da29b171e5b4a9e35579",
+      "native_sha256": "1ac81a3949b0ad56d9dc00afe300ca2734a21e220d53e2968f561744f5fb8e2b"
+    },
+    {
+      "enemy": 53,
+      "palette": 6,
+      "asset": 218,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-06",
+      "source_sha256": "caa661027c5b118c2857c1c8fff765352d52cb71c9ccf79875fd6e00f7eb799a",
+      "native_sha256": "70596a077317860750a17a0ee905955827968d867488a3f0a4387a510f1f0f5d"
+    },
+    {
+      "enemy": 53,
+      "palette": 7,
+      "asset": 219,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-07",
+      "source_sha256": "42b263bbd80af2a8b4caeaa90f5a24ca46c2ddf1b08ffa676b2e6365018b40ee",
+      "native_sha256": "271ba8d2eddb8bb7449ff3bbb14323c672c7e26a06c04181342a88b482935729"
+    },
+    {
+      "enemy": 53,
+      "palette": 8,
+      "asset": 220,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-08",
+      "source_sha256": "c4b45489250a7b3ea49eb3b20cb18db4d12fefc7bd0073363fede25839d8ba5b",
+      "native_sha256": "40049a813d048c253b7b4d81558edbba61e0989ab0eb2f68713473e7b3874dd7"
+    },
+    {
+      "enemy": 53,
+      "palette": 9,
+      "asset": 212,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-09",
+      "source_sha256": "220f0cdcb15ce38d088191a409c3a0fc236621cda8535eb9606efa5caa168955",
+      "native_sha256": "09fe83c0f531f171050b3f8966174f043d3c73f8b19ac187bf8bd89e69dadeba"
+    },
+    {
+      "enemy": 53,
+      "palette": 10,
+      "asset": 221,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-10",
+      "source_sha256": "ec90e2a4ec89783395085d7d54f0143dba374f3eab7dadf100b8286ad9acde3a",
+      "native_sha256": "9801c1b4d5a2aefe4d1fda65b9e6f27e5937047a1b5dca894a641a9a0ee675f3"
+    },
+    {
+      "enemy": 53,
+      "palette": 11,
+      "asset": 222,
+      "sprites": 25,
+      "quantized_pixels": 613,
+      "name": "53-11",
+      "source_sha256": "90ccf418f6e65f3266c7fe45fbc19929e143ec5c28b8a735763ac3ae7638e69a",
+      "native_sha256": "fc87a57cdd0a3f1af860434fd334f68093fd3a23b8a9b1e55e2a437abac63794"
+    },
+    {
+      "enemy": 54,
+      "palette": 0,
+      "asset": 223,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-00",
+      "source_sha256": "1a661e3411603c7a815c9564c35af23a640f85aecccb914fde10f32e502a8317",
+      "native_sha256": "fd8fd6b4b260c6afd96f46bf76e01d899a8458ec91d1e3ee7ae7a5f259bac2a2"
+    },
+    {
+      "enemy": 54,
+      "palette": 1,
+      "asset": 224,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-01",
+      "source_sha256": "9fc25febef385eabae8ebddb539720773660a12e6c0741dd1902ab8d1fa7b31e",
+      "native_sha256": "ed310c8157e9a751a8ed39916b74687ff355a8db5ae2361eed5778c74621091e"
+    },
+    {
+      "enemy": 54,
+      "palette": 2,
+      "asset": 225,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-02",
+      "source_sha256": "5f4d7a150949604c86887dc303866afb7c752f6620cd0919684330c237f744d2",
+      "native_sha256": "727b424ebe7360f385c07d3c6fa8b0e92e8bed25326598869c5d74fbc823589a"
+    },
+    {
+      "enemy": 54,
+      "palette": 3,
+      "asset": 226,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-03",
+      "source_sha256": "e8b1594bc293bd24eb95ae51b3a0942fa8e6f07dd15cccf64108bec5cb82a1a4",
+      "native_sha256": "67c9782a79aca60b484d1a3e42d13950d443f0a5cd04caa4ec1984bc5f64f26a"
+    },
+    {
+      "enemy": 54,
+      "palette": 4,
+      "asset": 227,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-04",
+      "source_sha256": "3534d7c0729f022fc5ef162a59bb301cdc0badecb93071b9a16106aeb8297fa0",
+      "native_sha256": "83b2ef829d0e6e95bdcd9e8053ec3beb1d95f8a58957a7e985f96ad068aac815"
+    },
+    {
+      "enemy": 54,
+      "palette": 5,
+      "asset": 228,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-05",
+      "source_sha256": "433d11c00dbe2fdfaf79fad94116ef5454ca4713df3c67ad5232ffe787c27a7b",
+      "native_sha256": "46fb46d569fb037609011ad43a3bb1ca837a66fc6f38c70c8245b8b326400f66"
+    },
+    {
+      "enemy": 54,
+      "palette": 6,
+      "asset": 229,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-06",
+      "source_sha256": "24598511240d7cf8295703e1b0bebf2b2c45c40e7d1f2e8c414bc5ab04a79c75",
+      "native_sha256": "03253e003c1965f0a5a9952e4b32ee1cd2cc01f1a83183ef8b22a7f291da3ff1"
+    },
+    {
+      "enemy": 54,
+      "palette": 7,
+      "asset": 230,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-07",
+      "source_sha256": "37fe4956aa894661d3e82e6c02eda46870854d4f4888bc51fe09f4b08a13fe83",
+      "native_sha256": "59d252ba3d77dad8c6a6d69e9d6b93b9bb718b61c455ca7332002e373d3ba6cd"
+    },
+    {
+      "enemy": 54,
+      "palette": 8,
+      "asset": 231,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-08",
+      "source_sha256": "d97efb6b27f6d72beb1abef8b25ad9b3b107c5e4819cfbb333d63ebd04764cb4",
+      "native_sha256": "ca59abb7cf4f43291bf8b319c0d7fd07fe29da8f290c381d8406e92a3597baae"
+    },
+    {
+      "enemy": 54,
+      "palette": 9,
+      "asset": 223,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-09",
+      "source_sha256": "1a661e3411603c7a815c9564c35af23a640f85aecccb914fde10f32e502a8317",
+      "native_sha256": "fd8fd6b4b260c6afd96f46bf76e01d899a8458ec91d1e3ee7ae7a5f259bac2a2"
+    },
+    {
+      "enemy": 54,
+      "palette": 10,
+      "asset": 232,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-10",
+      "source_sha256": "216cdd5a10b2bd698123bca41d16c902a828427d8dd93c2524c1d9b91e6c785f",
+      "native_sha256": "0d847a108104a3e70c0f373ed51893a583a83c98bf40130b1a130a83c46f1609"
+    },
+    {
+      "enemy": 54,
+      "palette": 11,
+      "asset": 233,
+      "sprites": 21,
+      "quantized_pixels": 447,
+      "name": "54-11",
+      "source_sha256": "6c0fc59f154b20bbcf21aaf03538ed23ebb36f5434bd5d9a3afa42ecb64faa9b",
+      "native_sha256": "872d18688fe8b7ffe0fa6dcc525964504dd962be906a4481fcf2754b771071bd"
+    },
+    {
+      "enemy": 55,
+      "palette": 0,
+      "asset": 234,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-00",
+      "source_sha256": "4fdc6dad2bb6e0cae833f352afd1eb1e0ce940ee89ad0f1f9ba7483cca2dc997",
+      "native_sha256": "5727561a89ddcb892321d7bc73a7aefd5cdeee07c50d076f5de92dba6bd5293a"
+    },
+    {
+      "enemy": 55,
+      "palette": 1,
+      "asset": 235,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-01",
+      "source_sha256": "c7fa68cba35a3ebb34ba14754184019c1754bb00d21e3e1fe88c3bd485991c59",
+      "native_sha256": "675925a97725bc2715bc0f0f5b26c632ecef8b5075882710ec087e3749bbe8f7"
+    },
+    {
+      "enemy": 55,
+      "palette": 2,
+      "asset": 236,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-02",
+      "source_sha256": "d1212617985207c23172827ab44a5410fea791660f9aadd44559ff3e423822d2",
+      "native_sha256": "e00d7e87d8f6393dc0ebc25dc8be9a6c2dffb07f799c53de64683e5984507324"
+    },
+    {
+      "enemy": 55,
+      "palette": 3,
+      "asset": 237,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-03",
+      "source_sha256": "e54ba0cdad5f1d8ee846fb643610d7a8a19c175dc4738c61eb126aa8423430ea",
+      "native_sha256": "780bf899ad3692324f0cf34d127685185472381f1e325f16bc89a7edc6014cde"
+    },
+    {
+      "enemy": 55,
+      "palette": 4,
+      "asset": 238,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-04",
+      "source_sha256": "0e28a5b2c8fe72281453a67dadb44748b81f02796996b2c4fd92f28f9f9301e4",
+      "native_sha256": "65050c65c3407a27f148dd749439be0bd8fee8592bf1ba481df66c781f9b3e73"
+    },
+    {
+      "enemy": 55,
+      "palette": 5,
+      "asset": 239,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-05",
+      "source_sha256": "68d3a93b4c91bba5d760ab3474c877cf96b1c8320500626714ec21a78b39204d",
+      "native_sha256": "cec55eab73b9a185a09d99baed7ea0a0273c9014db374123eb4b4d482edb5b3f"
+    },
+    {
+      "enemy": 55,
+      "palette": 6,
+      "asset": 240,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-06",
+      "source_sha256": "b5463989b752285cd05e7a21968a8a7dfea7352b69ed11e8ca2e37fdfd9f2538",
+      "native_sha256": "eb7d0f5680b4f1f0a55c62d87966b37eff65c9d687a6e29789e0e265540e83e0"
+    },
+    {
+      "enemy": 55,
+      "palette": 7,
+      "asset": 241,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-07",
+      "source_sha256": "8b5ab0273725620b13bda042c2bff82cce96fcc94af04493eba7260dda008e09",
+      "native_sha256": "3c8c80e808dad60998d6e8975408ce46710e5b485bdc0aaa6934bf491d0223a4"
+    },
+    {
+      "enemy": 55,
+      "palette": 8,
+      "asset": 242,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-08",
+      "source_sha256": "7ddc740e2478a33a226d049e0841e2489cc90a952947e867d8883de86c00c949",
+      "native_sha256": "34d28fc15e19ba0d8f5420ffd224d818e6c39f193a5bd03213d45a0bdceb9c41"
+    },
+    {
+      "enemy": 55,
+      "palette": 9,
+      "asset": 234,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-09",
+      "source_sha256": "4fdc6dad2bb6e0cae833f352afd1eb1e0ce940ee89ad0f1f9ba7483cca2dc997",
+      "native_sha256": "5727561a89ddcb892321d7bc73a7aefd5cdeee07c50d076f5de92dba6bd5293a"
+    },
+    {
+      "enemy": 55,
+      "palette": 10,
+      "asset": 243,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-10",
+      "source_sha256": "b317ef222be6a54a1c4e7d22eb31da2a24ec7719f8428f5050b81cafaf1f4d2e",
+      "native_sha256": "f931ed444cdfd2f6b9d1ea83b583c17e8ad9b77c1d11c2663e11b08ece315faf"
+    },
+    {
+      "enemy": 55,
+      "palette": 11,
+      "asset": 244,
+      "sprites": 20,
+      "quantized_pixels": 414,
+      "name": "55-11",
+      "source_sha256": "bf761c968d945d96a3fa73da491b0d7e6986d886a40f2412626a0c4d337b2ac0",
+      "native_sha256": "eacc83f0aee716a11255b544d2f3a457d73293ca6dac9b16b6ee70c2e6e1c80e"
+    },
+    {
+      "enemy": 56,
+      "palette": 0,
+      "asset": 245,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-00",
+      "source_sha256": "338f80958c55127c4a1fe32a2281088b73c9918932c7621b7192ea03613fa8a4",
+      "native_sha256": "70a692959c5ff7d4391337a485928223a52ae937833007bc1c9fe19fdea1e183"
+    },
+    {
+      "enemy": 56,
+      "palette": 1,
+      "asset": 246,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-01",
+      "source_sha256": "957175720ad3f07bfcea72da75a15158be945e09d3b4849c9c6a33d922e4fce0",
+      "native_sha256": "f044c3107673a162126665ecc83d6c871b2526556fff61a8d32445f126f106b7"
+    },
+    {
+      "enemy": 56,
+      "palette": 2,
+      "asset": 247,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-02",
+      "source_sha256": "152f82b4f9241f30a273396ead4b2857694a0d7035e5cbf29351aa9b28694f85",
+      "native_sha256": "749894bd44a181d4b5ad3c37f1b7c92f6069714d6bb1aa75b8606f0eb227af83"
+    },
+    {
+      "enemy": 56,
+      "palette": 3,
+      "asset": 248,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-03",
+      "source_sha256": "f808239014bcd2ac083ab45801d2554a8033a992627e86f7cc0a62224dec7fbf",
+      "native_sha256": "2ec56afb130c930efba5bfcd82f6a4c08fa59851d7d1bdb741484eb8f82975e1"
+    },
+    {
+      "enemy": 56,
+      "palette": 4,
+      "asset": 249,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-04",
+      "source_sha256": "ac8c5e2b49ddeeaac8d15d754429730478c7c8066c3a701f9c7dd2fa9b57ae04",
+      "native_sha256": "2559d4dc2b861f85a14cba9f488007865bf705e1c052d4820c8d52f2ba5b1fc8"
+    },
+    {
+      "enemy": 56,
+      "palette": 5,
+      "asset": 250,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-05",
+      "source_sha256": "e9f2e9bf831e650ab56a788ca0d0469b0363652f7ccb3b05198467c39b65b97f",
+      "native_sha256": "58bbc396057dc1cfaf4e6c20afdcacb9adf70214148b95362eaa0b294642df50"
+    },
+    {
+      "enemy": 56,
+      "palette": 6,
+      "asset": 251,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-06",
+      "source_sha256": "9584eb7d88a95c496abee9b7106bd0b9a444d407214b05f5dfb687159c06ed29",
+      "native_sha256": "82a2d5d63c1a2b57938e146b19f9e4589c7cb9a5f0a1143abf1cdddc6c863b70"
+    },
+    {
+      "enemy": 56,
+      "palette": 7,
+      "asset": 252,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-07",
+      "source_sha256": "fdab4d3d29de03ce03ba64b57f2c5e06f39a064c8546f2ef5a58502e7f6f7734",
+      "native_sha256": "1ca7d8eaa9da9942ea82fd2023abe754ea3bc47ee87088f41e03e7cf99072fe5"
+    },
+    {
+      "enemy": 56,
+      "palette": 8,
+      "asset": 253,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-08",
+      "source_sha256": "5ed039efad181d6eb2818b4def9b7080b42abfdfbe1375ec57d120804782cbe2",
+      "native_sha256": "edb07db7f76740243b54579cfd2b911877c6c7a4a0b7708a7f50ecdda67c512a"
+    },
+    {
+      "enemy": 56,
+      "palette": 9,
+      "asset": 245,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-09",
+      "source_sha256": "338f80958c55127c4a1fe32a2281088b73c9918932c7621b7192ea03613fa8a4",
+      "native_sha256": "70a692959c5ff7d4391337a485928223a52ae937833007bc1c9fe19fdea1e183"
+    },
+    {
+      "enemy": 56,
+      "palette": 10,
+      "asset": 254,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-10",
+      "source_sha256": "3a444e4c65c20d7e4530ba25fd6a3424a234cb31deefc8348b3259c8a930fff4",
+      "native_sha256": "f35f2cae7bf81c1d322c27df52f32f8ec0ca13860744dd870a08f8e9972913a0"
+    },
+    {
+      "enemy": 56,
+      "palette": 11,
+      "asset": 255,
+      "sprites": 17,
+      "quantized_pixels": 474,
+      "name": "56-11",
+      "source_sha256": "af567cc6f0a483a5d6661c2c3cc6d6a4078fdd0b9d2fef4739e52095b625942c",
+      "native_sha256": "98e857d2d47e5fe4eef5be144e7b81eb34469fd443d44a9f90b2aa4ebba6281f"
+    },
+    {
+      "enemy": 57,
+      "palette": 0,
+      "asset": 256,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-00",
+      "source_sha256": "88c4f86bcce9024b9d5e84e3f8c9226f41d9d52c1703c2197d8a8cb1b39126ad",
+      "native_sha256": "67df6c0805a77e094ca5ac0aed729794a04381601b0d2b877157433951572c9f"
+    },
+    {
+      "enemy": 57,
+      "palette": 1,
+      "asset": 257,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-01",
+      "source_sha256": "5e3ac2945375a7be0cefbc8edd07cd1d1a38b0381bd1aeb469ed2427cd98721a",
+      "native_sha256": "815c03c3b6d0b522c66022f7987cbc8b8a050b1c193601bb063d5d0c4c076132"
+    },
+    {
+      "enemy": 57,
+      "palette": 2,
+      "asset": 258,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-02",
+      "source_sha256": "bad262101953bfac7912689aae80811b85c0d06b1238212f8f6e37648db4159d",
+      "native_sha256": "2e14c30bc4fae6f06e025cec2cbc19b9e8b4b3a57f63e4cc35508e4a0b539038"
+    },
+    {
+      "enemy": 57,
+      "palette": 3,
+      "asset": 259,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-03",
+      "source_sha256": "37f198da112a6dec1ba70901ddf9e896d57ed98f6ebfe382865d67bac66a8474",
+      "native_sha256": "2af6dab63de6c7067d7e4946db259bc267eacc66ffb4101555d69e9f99022929"
+    },
+    {
+      "enemy": 57,
+      "palette": 4,
+      "asset": 260,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-04",
+      "source_sha256": "9cf981ad885e6ef571da39d76c6d532fadd3b0b1bb4bc5d3652a97e267524b98",
+      "native_sha256": "e3cd9189fdd508eafd2d92882a23498e96adb42e1101daf0814595f409177d48"
+    },
+    {
+      "enemy": 57,
+      "palette": 5,
+      "asset": 261,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-05",
+      "source_sha256": "63c78f5810ab211837c553c6000c7de51d0f2f168e772e1e97b99f0bbf135491",
+      "native_sha256": "40645b06a53a7742a00039f89d13f72927fece3efc99dd16e07cf2b41dd1fcd8"
+    },
+    {
+      "enemy": 57,
+      "palette": 6,
+      "asset": 262,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-06",
+      "source_sha256": "b8e5ff3b66946a4f93481618cf7db2c364abad9374b60ee5dbe0267cedd24648",
+      "native_sha256": "4102324e8a1ce2ea472fcdf5c644864115dd2c557e3e04d5d80c1889bbbdac57"
+    },
+    {
+      "enemy": 57,
+      "palette": 7,
+      "asset": 263,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-07",
+      "source_sha256": "e02ed74dd69c6ae8aa554c1d504c80cf84cd5db2becb44fb63de23b0425e7ca1",
+      "native_sha256": "b8c56a1c5ac884d5a11144609fbeadd6c39fb7fffb71935c3a8f112519845640"
+    },
+    {
+      "enemy": 57,
+      "palette": 8,
+      "asset": 264,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-08",
+      "source_sha256": "9f409b0325a62f8bde1446a8761e6263bd12fae3fc6427d2e71483048e58b2a8",
+      "native_sha256": "7b215fb2564e89b81e7261292d9c1f690de34aa2c1f774c08b963967dce15b56"
+    },
+    {
+      "enemy": 57,
+      "palette": 9,
+      "asset": 256,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-09",
+      "source_sha256": "88c4f86bcce9024b9d5e84e3f8c9226f41d9d52c1703c2197d8a8cb1b39126ad",
+      "native_sha256": "67df6c0805a77e094ca5ac0aed729794a04381601b0d2b877157433951572c9f"
+    },
+    {
+      "enemy": 57,
+      "palette": 10,
+      "asset": 265,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-10",
+      "source_sha256": "3b76c4437cc5cbddc27d5c1d308841db8e641ba61c0e8b98885e44b339f3ce1f",
+      "native_sha256": "72e74ed12c789a78acf36091f34f34f08813b278841e6bc0c35159e39ff10906"
+    },
+    {
+      "enemy": 57,
+      "palette": 11,
+      "asset": 266,
+      "sprites": 18,
+      "quantized_pixels": 484,
+      "name": "57-11",
+      "source_sha256": "5daa3eba29027c99b80a4c79b1b72d48dde8b2a4dfabfa01f279110523ecf0d4",
+      "native_sha256": "85aeeb953724437e8216ddb54ef08a71751cdf20eb8cb7df2e20521faef8cfac"
+    },
+    {
+      "enemy": 58,
+      "palette": 0,
+      "asset": 267,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-00",
+      "source_sha256": "6c16166e2e1edf72bbe74704355662408d9121d558824dc3a9a658038a0137fb",
+      "native_sha256": "e1e83983a61e13498e450db6da1c13adfa100a8abf92dadcf297b65c68ebfad6"
+    },
+    {
+      "enemy": 58,
+      "palette": 1,
+      "asset": 268,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-01",
+      "source_sha256": "a2a3776fc10cdb1ccdb3645203bdf8127a646abecce922a8a12b133d7fbf9699",
+      "native_sha256": "16304beedee52acea0a1f90bae1bd1a1e7b0af1ab1534b58a4cf284582df148a"
+    },
+    {
+      "enemy": 58,
+      "palette": 2,
+      "asset": 269,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-02",
+      "source_sha256": "a14321695c59459f6129cb5513f2cd16fb4643faf98d25f722a7dbf8d160ea97",
+      "native_sha256": "0e337599ed2a516fb78492579c011f9e76bb9aa8487a6a861a026d5bc567c0c8"
+    },
+    {
+      "enemy": 58,
+      "palette": 3,
+      "asset": 270,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-03",
+      "source_sha256": "525552e695376f699c6ba6737f656d06205d7b6b81190daf326fe5222e3b5eb1",
+      "native_sha256": "8779b82e033f5fbeef1bcb7282281b1c287a7f0507f292d8b5e6df0626bc5e41"
+    },
+    {
+      "enemy": 58,
+      "palette": 4,
+      "asset": 271,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-04",
+      "source_sha256": "acb4b51f3d5fe3c889f918ae948d34da994d256532479c8b0cea6f2c0039f6c2",
+      "native_sha256": "00756be7d3de66448a40c3ebcd10b8668db67d58fc994adc628ce55c425d04e6"
+    },
+    {
+      "enemy": 58,
+      "palette": 5,
+      "asset": 272,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-05",
+      "source_sha256": "9de1366fbe29996162a0fd768162706277e6f521ecda1c934e81c77f9c029f1c",
+      "native_sha256": "bd69587a65fda6a361f3a97f95ab64d06121087afe0c531b395ef1d43fdf664f"
+    },
+    {
+      "enemy": 58,
+      "palette": 6,
+      "asset": 273,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-06",
+      "source_sha256": "e96bf089713f66558389793d02a1822ccd2946126c599b29d3ea24a9789eb1e1",
+      "native_sha256": "a653580e520788ef873b92c60b42764642711faed31f114f20e50ec292f238c4"
+    },
+    {
+      "enemy": 58,
+      "palette": 7,
+      "asset": 274,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-07",
+      "source_sha256": "d73277c105ff3cd5ba906cbc6563f3c19c0669c8872bc98629eb735d1d7074cb",
+      "native_sha256": "be1150e192663121e84a029dc73da040a0a68d76aea34855407a27dce022661b"
+    },
+    {
+      "enemy": 58,
+      "palette": 8,
+      "asset": 275,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-08",
+      "source_sha256": "dda7a6c96a95da85d8e238ea342dbb8e449d01e4449bf4dbbf4a8ce153ba178c",
+      "native_sha256": "0577c2e830f98d60e35f82bff9605871af3a7db58b8fb81921af54a23f1a369b"
+    },
+    {
+      "enemy": 58,
+      "palette": 9,
+      "asset": 267,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-09",
+      "source_sha256": "6c16166e2e1edf72bbe74704355662408d9121d558824dc3a9a658038a0137fb",
+      "native_sha256": "e1e83983a61e13498e450db6da1c13adfa100a8abf92dadcf297b65c68ebfad6"
+    },
+    {
+      "enemy": 58,
+      "palette": 10,
+      "asset": 276,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-10",
+      "source_sha256": "2db1e60a6a72dd9137c956ea04e71f7ee8c6996221aad229adab8b4e822097a6",
+      "native_sha256": "6b360cd78fa26028ca1e511c9345c5da57dd8daacc4fb0128de0dacff8938c84"
+    },
+    {
+      "enemy": 58,
+      "palette": 11,
+      "asset": 277,
+      "sprites": 18,
+      "quantized_pixels": 304,
+      "name": "58-11",
+      "source_sha256": "0ec8cf69fbd1d434da5f2ac7159f4f8140df99e87b8f5cf1be174c3c6ea9ff62",
+      "native_sha256": "912f9f1697cea7319904a1c3cf2de70d052ed4cc10cde083aa6f58ca760fcf56"
+    },
+    {
+      "enemy": 59,
+      "palette": 0,
+      "asset": 278,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-00",
+      "source_sha256": "bfe975938e2b7a0ee77acb963cb233a7b8ebd8d07566ed23fb259162c951b1bb",
+      "native_sha256": "0389e3459193fa25201f01bc6ca479beb61367bc47ac7849d376fa38953940c3"
+    },
+    {
+      "enemy": 59,
+      "palette": 1,
+      "asset": 279,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-01",
+      "source_sha256": "707e165c74c9a28991b06883953aeacd34e3c7a2401092f36bf0334df428d8e6",
+      "native_sha256": "afedeb964eff02f3216ad221b923f80e5a0de7b8e837d13a627872f8218e6fca"
+    },
+    {
+      "enemy": 59,
+      "palette": 2,
+      "asset": 280,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-02",
+      "source_sha256": "ae59401a298d9ac12b43a98778adc1a41fc7262a0e2bd0d59cf74fb340342068",
+      "native_sha256": "d17aeb989c64a200b6e83ac2fce4fd1ef3176d8b9262d3be6680b89c082ab0ef"
+    },
+    {
+      "enemy": 59,
+      "palette": 3,
+      "asset": 281,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-03",
+      "source_sha256": "7d079ad3f7011bc72c5091299683af6830b6bd7f5e8fcd4f3f07eafd43d50005",
+      "native_sha256": "986f86cd4bed7acc7dcf3a974e713ba23f3a1589933d30cee027c6d305fb8a5f"
+    },
+    {
+      "enemy": 59,
+      "palette": 4,
+      "asset": 282,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-04",
+      "source_sha256": "764d217d72ba63344de9e6d917872799e96ccad667d066c4f430f610d8d9a1ef",
+      "native_sha256": "d6a737e9c0e68e7f7b5d6cf3040706af99e44826cfc4c7052c386cf903bf14fe"
+    },
+    {
+      "enemy": 59,
+      "palette": 5,
+      "asset": 283,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-05",
+      "source_sha256": "f6bc316546716fc1f99da81b67f54b5b7dcec11605c9cdea51bf0294ebfacadb",
+      "native_sha256": "031740ef9b8ec039da4661578f19999ef7476c2e6f44a77a455bd069ef6d1fb2"
+    },
+    {
+      "enemy": 59,
+      "palette": 6,
+      "asset": 284,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-06",
+      "source_sha256": "a1127dcfc25127f92074d7fea6552ff232a8aa71b48a10db5ff338f18bc6fbf0",
+      "native_sha256": "9933fb0e6563b93cf9a58f168bab8010a15989a240c24d0bd4e8cf57d2158f72"
+    },
+    {
+      "enemy": 59,
+      "palette": 7,
+      "asset": 285,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-07",
+      "source_sha256": "7b65655f34bc9ef044a9d6fc52fcb7785115e4440e1a0002bfb841496e10601c",
+      "native_sha256": "840b59173fd460c30901de1c06998c2a9bfc40192cc189821b1dc76fbd482e3a"
+    },
+    {
+      "enemy": 59,
+      "palette": 8,
+      "asset": 286,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-08",
+      "source_sha256": "7b33af054c7f74fefcd30b99eb0b08f6207364e5c21991a7d64411c448a35f98",
+      "native_sha256": "23862a181e38c4cdadc650cbea5161266e903c00b510a1f8eeb784243b89a292"
+    },
+    {
+      "enemy": 59,
+      "palette": 9,
+      "asset": 278,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-09",
+      "source_sha256": "bfe975938e2b7a0ee77acb963cb233a7b8ebd8d07566ed23fb259162c951b1bb",
+      "native_sha256": "0389e3459193fa25201f01bc6ca479beb61367bc47ac7849d376fa38953940c3"
+    },
+    {
+      "enemy": 59,
+      "palette": 10,
+      "asset": 287,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-10",
+      "source_sha256": "caa3a9b4e3616e6064a808ce81c88c00d6267b9f78306e22e9c4fb5e8fe7aade",
+      "native_sha256": "cceffcbe4edffdeb85dc37fff2ce3524adcd9576fdd45dfb5922a930b394d721"
+    },
+    {
+      "enemy": 59,
+      "palette": 11,
+      "asset": 288,
+      "sprites": 18,
+      "quantized_pixels": 379,
+      "name": "59-11",
+      "source_sha256": "ea821c6822f379316f399c50b29275f5bd6cb5a9815d3dd4b3816557d6ff7c0e",
+      "native_sha256": "c8a332af63b59ca52cc9e1c13b254fcaeff11aeb30be2023495b16b3e23e3dfc"
+    },
+    {
+      "enemy": 60,
+      "palette": 0,
+      "asset": 289,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-00",
+      "source_sha256": "39ca0d867908aecd387f5f1f890392798f28fcf1cc25daf58ceed1e27662217f",
+      "native_sha256": "83b1e9362adc6fa0a1be77889386bedababa97d59929ca227439beec78ba7004"
+    },
+    {
+      "enemy": 60,
+      "palette": 1,
+      "asset": 290,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-01",
+      "source_sha256": "3dce2f763d6e0a5307890c3440b83ccc613a41164ddd9af8dce2963aebfb974d",
+      "native_sha256": "e8f0afee32b74977c8c22f25068eeeefdb3f9bac1e28bb7cddf818ba3a8dc25f"
+    },
+    {
+      "enemy": 60,
+      "palette": 2,
+      "asset": 291,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-02",
+      "source_sha256": "3a7a27f5191340fd56dc6a2628f586aea893b6143d0392f8b1341171172f7580",
+      "native_sha256": "6b03577a6fd217a611b12bbd50b693fc2ca9cd46ae040d53eefcc7aa1c21b418"
+    },
+    {
+      "enemy": 60,
+      "palette": 3,
+      "asset": 292,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-03",
+      "source_sha256": "44bfd9ba8c021c2ed4ff028e31ee2819fe918b36b342ae7418f94516f50a0746",
+      "native_sha256": "afedc1aa1d12cb632cb259e54a606fa7256528b3656070a415fc93050bce306c"
+    },
+    {
+      "enemy": 60,
+      "palette": 4,
+      "asset": 293,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-04",
+      "source_sha256": "37791245bc0ba600bc6e163ffce9dd92f9a2bdcfb94d4083387a2a8d0708bf6d",
+      "native_sha256": "20575776a642bcb8b436f417f97f9570f951636182277ea9862c5ddc370120e3"
+    },
+    {
+      "enemy": 60,
+      "palette": 5,
+      "asset": 294,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-05",
+      "source_sha256": "1eb3b37dcd764ee473bea6f28d0dcd8b50094d5a84089368fa1efb42e945e4ab",
+      "native_sha256": "08b46f72bc4db68370ba377c66349f249302830ace6307977be3727135fe3376"
+    },
+    {
+      "enemy": 60,
+      "palette": 6,
+      "asset": 295,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-06",
+      "source_sha256": "6946a11ed5682f797e5cf3abbac8d0848239c21627d2c2f0d9f5ed9c8cc27449",
+      "native_sha256": "0fdafbed1bca4b73364f6efee637bb7ea894585b00ef58b69e45143de7d20414"
+    },
+    {
+      "enemy": 60,
+      "palette": 7,
+      "asset": 296,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-07",
+      "source_sha256": "8010d6ddd050c110cc674f7ebffad91bc1383e943e46a765ef49646ef361bfa3",
+      "native_sha256": "261427715e5790e2ce51d2b35423d6aac270945f2a900e6021279c3863390ee5"
+    },
+    {
+      "enemy": 60,
+      "palette": 8,
+      "asset": 297,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-08",
+      "source_sha256": "8eee45ba49a179cdfce826682137128b1f0e6a89735375a4c5c0075a33cb6544",
+      "native_sha256": "cae39392de2d7231ac21a6340fe1650aa928e4bd6f452316761450a2281047ad"
+    },
+    {
+      "enemy": 60,
+      "palette": 9,
+      "asset": 289,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-09",
+      "source_sha256": "39ca0d867908aecd387f5f1f890392798f28fcf1cc25daf58ceed1e27662217f",
+      "native_sha256": "83b1e9362adc6fa0a1be77889386bedababa97d59929ca227439beec78ba7004"
+    },
+    {
+      "enemy": 60,
+      "palette": 10,
+      "asset": 298,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-10",
+      "source_sha256": "4cabc0c7aebd30d2803ece7225a22153209c9afa20781fb8e519290d116726c9",
+      "native_sha256": "255aa03d56c60fcdbf22bd2f9bf705fc6b4326ccae11f4fcac00f4425ab115a2"
+    },
+    {
+      "enemy": 60,
+      "palette": 11,
+      "asset": 299,
+      "sprites": 32,
+      "quantized_pixels": 810,
+      "name": "60-11",
+      "source_sha256": "040570db04b4b598120650fe4e811f923a6e5aef1315132f7b59a2e32cf64525",
+      "native_sha256": "60e429d33bd5aadded344ee55cd1eead51d57af2d08cc034b19b1f8fb903350e"
+    },
+    {
+      "enemy": 61,
+      "palette": 0,
+      "asset": 300,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-00",
+      "source_sha256": "3b5f1844feb8fb88cc2a1eb308777663888071e70705f616e90b5a56ec548b0f",
+      "native_sha256": "523eb1d13dcdcd6a33fdbbc6abcc964aa0012526df10afe17aa2f409591a841c"
+    },
+    {
+      "enemy": 61,
+      "palette": 1,
+      "asset": 301,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-01",
+      "source_sha256": "a16113d9aa116c9dceacb8f756fb175bb9f1fabb31dace93ccee2aa3ffb54a77",
+      "native_sha256": "6e954bf805de8b367f0df9598f1ce10a00e6013a5d8ba000190b4e2d2d35beea"
+    },
+    {
+      "enemy": 61,
+      "palette": 2,
+      "asset": 302,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-02",
+      "source_sha256": "d8849b41ccda4baed65faa8a63056dd65f82c9abf116048f0df8848ab0b35a95",
+      "native_sha256": "627635986f6ba7e4e2438cb3151808c71e6a6dde34391aa915b82ce21ce3628d"
+    },
+    {
+      "enemy": 61,
+      "palette": 3,
+      "asset": 303,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-03",
+      "source_sha256": "6a4f304bd49c99cb92023cff67fc11b96b617d1d23f114b44e645d0bfa4b9ba2",
+      "native_sha256": "a6ecf3421321cf4279cbef05d095985c53507462abdefc1fcc4deeca45c84f35"
+    },
+    {
+      "enemy": 61,
+      "palette": 4,
+      "asset": 304,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-04",
+      "source_sha256": "e251292b5598b554e6bb420aa2462baa72c391051cc4391343176f55496fcbcf",
+      "native_sha256": "e2bdec20b06670404b16258476516f7c571338e2c48105f02a13fbb5164c1c10"
+    },
+    {
+      "enemy": 61,
+      "palette": 5,
+      "asset": 305,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-05",
+      "source_sha256": "47d236f83fa22b4dc4dfc12e6cef30ed0034af44e1288c72bc2ebb3db896cb7b",
+      "native_sha256": "14fdec2b1bdd59cdfebf4b3840dd56284ba864590bcba511fdc6001b5a9fcd13"
+    },
+    {
+      "enemy": 61,
+      "palette": 6,
+      "asset": 306,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-06",
+      "source_sha256": "f547b0021fa2f9532599dc94ca3384394784d4eb436d3fcc09eaeb571977f8cb",
+      "native_sha256": "af2bfff7eb7aaa2cadfa5213aa6c92c8118a6de1431068ecb487749b036db358"
+    },
+    {
+      "enemy": 61,
+      "palette": 7,
+      "asset": 307,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-07",
+      "source_sha256": "e78cb151bb048f85c67f6e3dc1d81d620538ee57b62c80a9b4e0423ba6602e7f",
+      "native_sha256": "6be7ffc12b3f83322f6fa62bbb262afdbc4f41016273464e858911c1e704d476"
+    },
+    {
+      "enemy": 61,
+      "palette": 8,
+      "asset": 308,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-08",
+      "source_sha256": "879431bba50b4f5c8a478e58b07fc18ea5fec0eb3e5b8f064df815dba6c5b8fe",
+      "native_sha256": "013f677ff78cd7ffb9f8e2ea233c97611a0366b40e720c0f7d8a98a1820fc7ba"
+    },
+    {
+      "enemy": 61,
+      "palette": 9,
+      "asset": 300,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-09",
+      "source_sha256": "3b5f1844feb8fb88cc2a1eb308777663888071e70705f616e90b5a56ec548b0f",
+      "native_sha256": "523eb1d13dcdcd6a33fdbbc6abcc964aa0012526df10afe17aa2f409591a841c"
+    },
+    {
+      "enemy": 61,
+      "palette": 10,
+      "asset": 309,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-10",
+      "source_sha256": "1edcc7963e3455039eefc6eef45c1a8f1a60d38781977243e42ff5becb69cf57",
+      "native_sha256": "3e02863e070e33da18c471a15fe500845c0c7d6993449db75df2995dc10c08a4"
+    },
+    {
+      "enemy": 61,
+      "palette": 11,
+      "asset": 310,
+      "sprites": 32,
+      "quantized_pixels": 619,
+      "name": "61-11",
+      "source_sha256": "19a2037bc2eb6a5764e51b3a73c4f560b3605010510b54ad48f1981705e191b8",
+      "native_sha256": "2571458ba741ca3d8f43f5c7329eb03e1aa76103f927bb813bb8a63b3f4ca70d"
+    },
+    {
+      "enemy": 62,
+      "palette": 0,
+      "asset": 311,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-00",
+      "source_sha256": "01d1d20ca66f2b04a2cd88f79e5ce1ad583ddd0537f61d94e37327a9add79bdb",
+      "native_sha256": "85d50ab905a238802fea82b49e1a6535b1c1b6338634bcf158f5d47719413472"
+    },
+    {
+      "enemy": 62,
+      "palette": 1,
+      "asset": 312,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-01",
+      "source_sha256": "1066fddc6ee6a048f274c10e88ca8a3b5754e882dfe47a1113d82e0c26324c8e",
+      "native_sha256": "6fbcd74e6d75e8d7f913c07b3c4b126cc97cfba68eb0dc28d1e1664f7d01f66d"
+    },
+    {
+      "enemy": 62,
+      "palette": 2,
+      "asset": 313,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-02",
+      "source_sha256": "492176be58b494791f4b24e106171782cec574e8720d6c976c14503d8df82464",
+      "native_sha256": "bb30103a26aad92ed1867b5797e636c12a9212cf2708ff1154f2d69e0d1f667c"
+    },
+    {
+      "enemy": 62,
+      "palette": 3,
+      "asset": 314,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-03",
+      "source_sha256": "79bda705e8161d45caff4acd0691a54a6f7231d61594394b5dc17276d8817d7c",
+      "native_sha256": "e5185ca395e4e2cb5cbbc3c46ce84786b30b7e2f831afe43b81cf841588f1b15"
+    },
+    {
+      "enemy": 62,
+      "palette": 4,
+      "asset": 315,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-04",
+      "source_sha256": "68e3a2e6bc09b41263e7b4325ca8693627d56f15bcc1a9fa678d89200ca1a37c",
+      "native_sha256": "b1cc1cc0fae9b9e9ad251ff2be24cb5e273c06ea4689f779a83d3573d38be760"
+    },
+    {
+      "enemy": 62,
+      "palette": 5,
+      "asset": 316,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-05",
+      "source_sha256": "5e5ca7485faad7ef6383ea5e2a486cd30fb2b18b2ecf3733a9ea6df19976cfd3",
+      "native_sha256": "0ac02159bd115e7e1e61134cee63d3ad5aeba79a3f69a6412fa104800a7f8cdc"
+    },
+    {
+      "enemy": 62,
+      "palette": 6,
+      "asset": 317,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-06",
+      "source_sha256": "30490da1dc27b99f784222d6dc5b635019e8230bdbb8390539731c409894d34c",
+      "native_sha256": "eaa6fed1a1c40eba41aaf40114a20e90401080bdca5c69a64284cb2965ba9367"
+    },
+    {
+      "enemy": 62,
+      "palette": 7,
+      "asset": 318,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-07",
+      "source_sha256": "84ad736bfe8cfd2e62faee4394720e1a1039016be47704a88392f813e3a019d2",
+      "native_sha256": "c1658de896a64b712d778019140e3cbc3ce3f5429daeec454867e36e8c105ddf"
+    },
+    {
+      "enemy": 62,
+      "palette": 8,
+      "asset": 319,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-08",
+      "source_sha256": "961dda99b0bc408a5d34d4eac645ed9f7a783416130a89d3edde77c347b8b564",
+      "native_sha256": "997983b77a1545baf32047030f06c640d77fcf831ad7746829c7c774af9976dd"
+    },
+    {
+      "enemy": 62,
+      "palette": 9,
+      "asset": 311,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-09",
+      "source_sha256": "01d1d20ca66f2b04a2cd88f79e5ce1ad583ddd0537f61d94e37327a9add79bdb",
+      "native_sha256": "85d50ab905a238802fea82b49e1a6535b1c1b6338634bcf158f5d47719413472"
+    },
+    {
+      "enemy": 62,
+      "palette": 10,
+      "asset": 320,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-10",
+      "source_sha256": "209b795706b23801bc4e8374ecfd73ad324fda5eea1f428709309e654b3094cc",
+      "native_sha256": "7eadaa2e4a208e17e0fdf1b2f3073bf8633087507ebfbb431c34b92ce25f7b42"
+    },
+    {
+      "enemy": 62,
+      "palette": 11,
+      "asset": 321,
+      "sprites": 16,
+      "quantized_pixels": 376,
+      "name": "62-11",
+      "source_sha256": "1b339418770942832979394879b32e1d24cf2c7e09f9295bc3c3cbb7cb0c2dde",
+      "native_sha256": "d607a2df8c2e4f549f5e5b03033d924a51f72de8f9c75df1fc590d5fe4a14482"
+    },
+    {
+      "enemy": 63,
+      "palette": 0,
+      "asset": 322,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-00",
+      "source_sha256": "14eb91c7199a2b06d50e39b83b67c81caf6ab5b9812073d7fae7bc9030aaf583",
+      "native_sha256": "7256b717c79fbfa41ee094b2721a07f8b03f58e943777359db71105c3624ab46"
+    },
+    {
+      "enemy": 63,
+      "palette": 1,
+      "asset": 323,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-01",
+      "source_sha256": "6f3067ef2968c808c7236b64f68d32de883c71b39e4b20f7e89c0c6660a8197c",
+      "native_sha256": "1a20e1f7620f030624d40022c553b2292b8989845a79aa287e8fa2e2bccb7787"
+    },
+    {
+      "enemy": 63,
+      "palette": 2,
+      "asset": 324,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-02",
+      "source_sha256": "bb2d61373cf03bb1846c3be095ef5d6f20141975a159d253a63e909ab48199f8",
+      "native_sha256": "fae48a2286ea9fa33318c3479a3efc46e062211326aaad74d49f2cc3eaab3c05"
+    },
+    {
+      "enemy": 63,
+      "palette": 3,
+      "asset": 325,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-03",
+      "source_sha256": "9781c8b466b63d5f5973f878b0c0248a6f7b13165d42e908cec919138a576a68",
+      "native_sha256": "f32727bd5f6357a81c2cee80b60df5749de5884c43c6df8416504fb917462174"
+    },
+    {
+      "enemy": 63,
+      "palette": 4,
+      "asset": 326,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-04",
+      "source_sha256": "5d93b971d06936d164ae44741f4bc67684a279868af0b40a9c136f662496136b",
+      "native_sha256": "80f903850ab9df26c23a7a4b30f53e478ce4ccef9dab848eecec8ca5bf70a5f1"
+    },
+    {
+      "enemy": 63,
+      "palette": 5,
+      "asset": 327,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-05",
+      "source_sha256": "6561ee909d43cc00b68d2f6a0ad26727e3810becf5dcba3ab18e3ccab4bf9a31",
+      "native_sha256": "8d611e158031226f508eb6b9a8439599c0397499f74108b11d6d4dbc4d4be05d"
+    },
+    {
+      "enemy": 63,
+      "palette": 6,
+      "asset": 328,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-06",
+      "source_sha256": "e7e203cad48cf9333ea726026649113c1cb5223bae574f789f8ef067ef569ec0",
+      "native_sha256": "2535e85313ba5991de457927818f8bfa5a28a0f6b396e07c5732da7ded70e8b5"
+    },
+    {
+      "enemy": 63,
+      "palette": 7,
+      "asset": 329,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-07",
+      "source_sha256": "b4a05fb9ae1a02bd9fb210c8de14b7fe2a29ac52f86c8aab7e215ff9f3822686",
+      "native_sha256": "cb09ce3a091b6014f988651509894e45126e27c7ef9e60c53c8cea1d3577d8e0"
+    },
+    {
+      "enemy": 63,
+      "palette": 8,
+      "asset": 330,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-08",
+      "source_sha256": "9766ff0ed876bfc0e4ceb3fd6a531145dfd174347fd06ad52c00fabb05ad8d17",
+      "native_sha256": "4b10cdd1ead3b9bdd1711523cbb3c650461a46772a92cde93604a177fe68e362"
+    },
+    {
+      "enemy": 63,
+      "palette": 9,
+      "asset": 322,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-09",
+      "source_sha256": "14eb91c7199a2b06d50e39b83b67c81caf6ab5b9812073d7fae7bc9030aaf583",
+      "native_sha256": "7256b717c79fbfa41ee094b2721a07f8b03f58e943777359db71105c3624ab46"
+    },
+    {
+      "enemy": 63,
+      "palette": 10,
+      "asset": 331,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-10",
+      "source_sha256": "bb79a3f9e4973ddbf2590ab4b1de4796b541dda554d9be899df908d51ab3ed6c",
+      "native_sha256": "1fe03b1d57a37d9d489568f0ecaeedaee2000e40005f28aa0f812bd8730bf295"
+    },
+    {
+      "enemy": 63,
+      "palette": 11,
+      "asset": 332,
+      "sprites": 25,
+      "quantized_pixels": 778,
+      "name": "63-11",
+      "source_sha256": "5327f88460f49af16466fae4c21906126c92c6082e60984e1b0a98d3593621c4",
+      "native_sha256": "cc3cf36da0ec9f4bd347ca848d6b853211b20ea686c44813c86be2c5d4e8c77f"
+    },
+    {
+      "enemy": 64,
+      "palette": 0,
+      "asset": 333,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-00",
+      "source_sha256": "84faa17cb5acd68762599519284b5663f68fa5cb87a455e7353f163deaf655bb",
+      "native_sha256": "0a2215d29c682f6864c4a27d122213ba232a67beb467e7b958beb286cac291a8"
+    },
+    {
+      "enemy": 64,
+      "palette": 1,
+      "asset": 334,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-01",
+      "source_sha256": "fddca266491359bfa2f13668a88c9dc9083adb86554b7930fed39161a730602a",
+      "native_sha256": "d8934d3118c1c9bb4efcb441bd114a9b7c1eb316c462aaa16c4de2f998b176d9"
+    },
+    {
+      "enemy": 64,
+      "palette": 2,
+      "asset": 335,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-02",
+      "source_sha256": "447f2d38a436d175ecdce07425cb9c2365a9144d372df4ece5cdc2d8af7bb3b9",
+      "native_sha256": "d8129f6472cbf4db03e66e91ff98894f041f492b1ae8e55b9730156679aa34da"
+    },
+    {
+      "enemy": 64,
+      "palette": 3,
+      "asset": 336,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-03",
+      "source_sha256": "e0f0c6e9b87cc63c23967eabb5454189a67ac2ffa053cb456fc5279b87ae905f",
+      "native_sha256": "1344d8c2ecb731c5aba8a8cd86d6bd0df6c141a38c176589194e8b0049a368bc"
+    },
+    {
+      "enemy": 64,
+      "palette": 4,
+      "asset": 337,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-04",
+      "source_sha256": "dcee257da68c3194ec2309a6467d078280d3455058e12147f12e6d4d96bc2d6e",
+      "native_sha256": "82a133c3743fc99bf4d1a63d24dc8fd9f25b15a55f2f4e902af1a11618fdf944"
+    },
+    {
+      "enemy": 64,
+      "palette": 5,
+      "asset": 338,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-05",
+      "source_sha256": "515c63a56dcbb74cee89d1e326c96990cf6f5064f2cd557166cabd62c0a504b7",
+      "native_sha256": "cecdcb4624a17a612f783d9e9aa4ce15528d9c6bf67ed19c554872bc3503d6a8"
+    },
+    {
+      "enemy": 64,
+      "palette": 6,
+      "asset": 339,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-06",
+      "source_sha256": "93e03486b3e81cb499e88ff7adca530ae435bc79e234fa9287dbe1616217dd14",
+      "native_sha256": "04647643508a8a9adab60bee98fc696e88db103adbcacd9a076c7b1c23713d96"
+    },
+    {
+      "enemy": 64,
+      "palette": 7,
+      "asset": 340,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-07",
+      "source_sha256": "157a49c5346af054af56587d7315913eed8c4806a816ae6429fb0a670f995237",
+      "native_sha256": "36a659a82805fe872521ae0f83e22d0bdb5f110e256beb25f940e3ffaff9a3e3"
+    },
+    {
+      "enemy": 64,
+      "palette": 8,
+      "asset": 341,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-08",
+      "source_sha256": "449dbe961fdd506c8b49c15d16f8277e259e6759c53cb443278b8724ddc66172",
+      "native_sha256": "8c83f1293a6e579fa8df1e766d616070f5f4a0a2398436144178bcd2b2222129"
+    },
+    {
+      "enemy": 64,
+      "palette": 9,
+      "asset": 333,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-09",
+      "source_sha256": "84faa17cb5acd68762599519284b5663f68fa5cb87a455e7353f163deaf655bb",
+      "native_sha256": "0a2215d29c682f6864c4a27d122213ba232a67beb467e7b958beb286cac291a8"
+    },
+    {
+      "enemy": 64,
+      "palette": 10,
+      "asset": 342,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-10",
+      "source_sha256": "4681e44f2cd8948d6106c293514f79ada5ade844168bda0af61fef82dfeda9d5",
+      "native_sha256": "65fd4de77ebf070c02822d50b4e7fe2aba75d88c84f87a7eeb2e9cdc5f5174b2"
+    },
+    {
+      "enemy": 64,
+      "palette": 11,
+      "asset": 343,
+      "sprites": 18,
+      "quantized_pixels": 466,
+      "name": "64-11",
+      "source_sha256": "8e0ad365f55e533fbfc46a52ff611039e15c0887b19a725e9c20d5d8223e52a2",
+      "native_sha256": "56318e8a3f0d17b4ec3f4b34efc63151039ad66986ef0403ef8faa3cb7de378f"
+    },
+    {
+      "enemy": 65,
+      "palette": 0,
+      "asset": 344,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-00",
+      "source_sha256": "22d114d9e7af3f4e2400706c190f68c75ad0494d6d8c1eb4ba1203ca99175297",
+      "native_sha256": "9fe07f34d93cd5aa4640154ec7e1eb218bbe731c60f59ff2b4ae2c261a5f8540"
+    },
+    {
+      "enemy": 65,
+      "palette": 1,
+      "asset": 345,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-01",
+      "source_sha256": "02ac18fc07a70fd0aad3b17c8148badae70f23f25420f459e4f4c72bdd526387",
+      "native_sha256": "729791ba8d4703d27381bdf5c0ac40ff5902324432a2cd9bfa00cf14149e9352"
+    },
+    {
+      "enemy": 65,
+      "palette": 2,
+      "asset": 346,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-02",
+      "source_sha256": "5ecf7080336245dafe98ae239750d4ac35b4dbed511cb9ce8f513392d26aea51",
+      "native_sha256": "843078ffc5afe6f6bc68abe5909a1f7e8f11bd8374a361f293e74b851afd0c83"
+    },
+    {
+      "enemy": 65,
+      "palette": 3,
+      "asset": 347,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-03",
+      "source_sha256": "16de0c435174417757fa54383341a39bc8bf3cf084fce7c68c578e8738f3b863",
+      "native_sha256": "e78b193b9952cda24cb79ef37f5de33ecd862419a8b810c4b4e7e3f54d479783"
+    },
+    {
+      "enemy": 65,
+      "palette": 4,
+      "asset": 348,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-04",
+      "source_sha256": "7c0d97998d1d0331a4f14f24ef9ca652356e2f155916762b492aabe69de29598",
+      "native_sha256": "7acc939cf54ac8a7fb74c328f6ad01c20e71c4dd58e647e8cdbdc771a996671e"
+    },
+    {
+      "enemy": 65,
+      "palette": 5,
+      "asset": 349,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-05",
+      "source_sha256": "a783948474bad943a5c858e0d7976cd586d1910cb3697fda49ba60b4e71dc592",
+      "native_sha256": "0f2da250b821b963fe615dd87e6fedea5fff72a174731e3c9cbb9351e68fc4bb"
+    },
+    {
+      "enemy": 65,
+      "palette": 6,
+      "asset": 350,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-06",
+      "source_sha256": "5003ec54d2600920271ca2b98b50574c1b7714df1de2691829f93214951c295e",
+      "native_sha256": "9c89dacf56627a1d08916a370c8feeb6ec7cd8da6e39e15e2ec6b87c3042613c"
+    },
+    {
+      "enemy": 65,
+      "palette": 7,
+      "asset": 351,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-07",
+      "source_sha256": "1d00d46832a6e406951bdeefc3503bac58fe0140bbd8114c1ffe0d1ae1326e2a",
+      "native_sha256": "9eeedd1aeb9a578160c2e443404661b9691d578b5cab46cd11de5a7c683c9b36"
+    },
+    {
+      "enemy": 65,
+      "palette": 8,
+      "asset": 352,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-08",
+      "source_sha256": "435657719c2794f7dbe32527bf9ec6c784722528a8ad9c63a6b4719ee58ab2eb",
+      "native_sha256": "d26444e25ced6f5fd218ca31b7498bd2faa5b867ea89d5154d9a57b63543bb03"
+    },
+    {
+      "enemy": 65,
+      "palette": 9,
+      "asset": 344,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-09",
+      "source_sha256": "22d114d9e7af3f4e2400706c190f68c75ad0494d6d8c1eb4ba1203ca99175297",
+      "native_sha256": "9fe07f34d93cd5aa4640154ec7e1eb218bbe731c60f59ff2b4ae2c261a5f8540"
+    },
+    {
+      "enemy": 65,
+      "palette": 10,
+      "asset": 353,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-10",
+      "source_sha256": "4f6a53f027c1b4c9119808e54690409b72d9241b04a1bd0613be0fc86b05a63a",
+      "native_sha256": "5bb0e683d119076cfa85748d2e44d70903d6567eb745a96fa115ba18a5a4c9d7"
+    },
+    {
+      "enemy": 65,
+      "palette": 11,
+      "asset": 354,
+      "sprites": 20,
+      "quantized_pixels": 454,
+      "name": "65-11",
+      "source_sha256": "6cfe31eb176bad2441a4e5136def663dec0555edc07eab0ef77b366c39052672",
+      "native_sha256": "36eac1af5e7b72d361ae3620731424f6c9428198f0c26cf73425cccf412c709b"
+    },
+    {
+      "enemy": 66,
+      "palette": 0,
+      "asset": 355,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-00",
+      "source_sha256": "25a11506856ef7aa73c382f979f687ed1bb1473a871cc17ae604cc810884cea6",
+      "native_sha256": "5c9e59a20a1c22bc777a228a8279c7c071a5af1562e8e9dccd5e18f7ca9ef08c"
+    },
+    {
+      "enemy": 66,
+      "palette": 1,
+      "asset": 356,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-01",
+      "source_sha256": "b8cae91a3f05cd4db41e311ecac5ebae9f38a874fc7dec6feedca35d6537206e",
+      "native_sha256": "f1132907d0f89304c2f54ff86810cf2f9fd3bc2bd58595ebbc6ec4b30c037a26"
+    },
+    {
+      "enemy": 66,
+      "palette": 2,
+      "asset": 357,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-02",
+      "source_sha256": "beeba569fcc9df837c673018c3226a79242491564d14b53a6f512c2c64cf86bd",
+      "native_sha256": "43178b9cfefaf24b6e5be39026d5aa84fbfdb48b8479f725d15d304aef1f2d69"
+    },
+    {
+      "enemy": 66,
+      "palette": 3,
+      "asset": 358,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-03",
+      "source_sha256": "8724ea064f062bfda97f352ee8421e64038fa53677da3cc316be9bd3381210b2",
+      "native_sha256": "1a09f5030943b1d4676ebb71e976570cfbf0306d1200c40f4408f103be83c93a"
+    },
+    {
+      "enemy": 66,
+      "palette": 4,
+      "asset": 359,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-04",
+      "source_sha256": "f35931097eabe49232eb3d53fd8c4f2ea914eee399321e65060985cd66d06ad3",
+      "native_sha256": "84f236607ece9e4709661c1174566a394a7beca523e2049b990ed6ead031734e"
+    },
+    {
+      "enemy": 66,
+      "palette": 5,
+      "asset": 360,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-05",
+      "source_sha256": "22ee94e3fe5057fadaedcda36ad3e76a9171e9acb42b5ecb14413acc3e2fd7f8",
+      "native_sha256": "1439909ee999578239097289ff2cc3d52a20767019cb7aaa4658e615e6eec78c"
+    },
+    {
+      "enemy": 66,
+      "palette": 6,
+      "asset": 361,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-06",
+      "source_sha256": "a436bfeb9832d754f927c03d07eadd64280133cfbae7250d24770ab7c14a949e",
+      "native_sha256": "21650629e693d7c02aba7dda7fdd6c73c98d0ae9de89b9943103e7304de1add8"
+    },
+    {
+      "enemy": 66,
+      "palette": 7,
+      "asset": 362,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-07",
+      "source_sha256": "9f3fd3b2d60baed45d1fe82052d16a9ecf672ea37308e82f4e4d01d48865171b",
+      "native_sha256": "a41f0c29824c7d05269046ec88a8e86de16de3b39b6810a88461eda32160a827"
+    },
+    {
+      "enemy": 66,
+      "palette": 8,
+      "asset": 363,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-08",
+      "source_sha256": "615955fa4008a7a6c2d4b68fcedd142cb9be2c46242b4f0736c3a28e7710ca5b",
+      "native_sha256": "0ebc1f87e7bcc4e3281142e1588e3ae432b222cd4e9c9c7022ba97f2017d0c85"
+    },
+    {
+      "enemy": 66,
+      "palette": 9,
+      "asset": 355,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-09",
+      "source_sha256": "25a11506856ef7aa73c382f979f687ed1bb1473a871cc17ae604cc810884cea6",
+      "native_sha256": "5c9e59a20a1c22bc777a228a8279c7c071a5af1562e8e9dccd5e18f7ca9ef08c"
+    },
+    {
+      "enemy": 66,
+      "palette": 10,
+      "asset": 364,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-10",
+      "source_sha256": "9ea91cbfe2451df64ec66092a69897d186a17153d57a62c3c44875ce98d0d395",
+      "native_sha256": "30bc4a50a011ae287d5e4dbbc0b8b26330a386e1bf4ca46648bdef590b6eb317"
+    },
+    {
+      "enemy": 66,
+      "palette": 11,
+      "asset": 365,
+      "sprites": 25,
+      "quantized_pixels": 597,
+      "name": "66-11",
+      "source_sha256": "70da7620deca608e8f28912e74471b9e65009566042877e4ae8574d0710bcefb",
+      "native_sha256": "b8c53d96fcedcb258cb8a4b179baab01a967cb85017701e29e97170c25258a83"
+    },
+    {
+      "enemy": 67,
+      "palette": 0,
+      "asset": 366,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-00",
+      "source_sha256": "7d200d06dcff6df7c9bd09b01f685e763dd3407978f8a60bb681c93bebf0737b",
+      "native_sha256": "17ef36dabc9f7929a59cefe66dcf3ffa7de201cf7551e296aa9cbc7ae74f3e5a"
+    },
+    {
+      "enemy": 67,
+      "palette": 1,
+      "asset": 367,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-01",
+      "source_sha256": "8602bbe064d9d00206bf9afb06d598c2df22f37a3fbf9e2300a8365f95eef11a",
+      "native_sha256": "0e488a5162ba0a89f29d558045f619b86f1d4adcda90e55afcebfee509bb8459"
+    },
+    {
+      "enemy": 67,
+      "palette": 2,
+      "asset": 368,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-02",
+      "source_sha256": "15a68d9655baa5f9a7f4e0c0e725f14839c4af2b757a830359c7b173b360e22a",
+      "native_sha256": "ddea1bfb1625844f8f49ab5fa6b610bc5550e12de0683720ba5dc00e5068f80e"
+    },
+    {
+      "enemy": 67,
+      "palette": 3,
+      "asset": 369,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-03",
+      "source_sha256": "b550111001416b64537ae3ce8ae575e4e37839022ca68b7c83404c9087b8a611",
+      "native_sha256": "3683aad5677d2ff630cc063ba03b2323276fb4bc233c90801b3bf8c98f0bdb65"
+    },
+    {
+      "enemy": 67,
+      "palette": 4,
+      "asset": 370,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-04",
+      "source_sha256": "ca414d705ca61d9aa77047e098163697137f87a08b75154ab8568ae3738d57ed",
+      "native_sha256": "9c5e384243f6c027b09cb87d1e1dd0b477880315c0f01c2e848abe453a7377c2"
+    },
+    {
+      "enemy": 67,
+      "palette": 5,
+      "asset": 371,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-05",
+      "source_sha256": "931067179f9e4f7173237b9bc0af182d942d228844bfbbc49c72db233ef98265",
+      "native_sha256": "8233d1c07b5015a837a4ead4f13e9296fd80a6e1cb26ba48a0b5ff2408f89fea"
+    },
+    {
+      "enemy": 67,
+      "palette": 6,
+      "asset": 372,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-06",
+      "source_sha256": "5a372fb039acfecf2ef98b524d6db15f8014bf669ec3add296fc1290d9e81ab9",
+      "native_sha256": "b770d501e054455a34ab8306e837c88b88f16f630a5ea211cda87c7f6ef32344"
+    },
+    {
+      "enemy": 67,
+      "palette": 7,
+      "asset": 373,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-07",
+      "source_sha256": "a1bf18cd621bdca552487fa4dfa58bd91566f9f1633edbc6289ff873fa4f4646",
+      "native_sha256": "3966da43f32797e4ac20ddeb6284c5b93d25498dddb3c1a4c4e93891e29e9701"
+    },
+    {
+      "enemy": 67,
+      "palette": 8,
+      "asset": 374,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-08",
+      "source_sha256": "0e061fa551bf3c33e9aef452e75b2e62ecfc21a835ca1359461943dfbca73a56",
+      "native_sha256": "b4207fb969d0571c0a382cdfe8d6eeca2f7f2ce828ecd9b781b8ddf98d21478a"
+    },
+    {
+      "enemy": 67,
+      "palette": 9,
+      "asset": 366,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-09",
+      "source_sha256": "7d200d06dcff6df7c9bd09b01f685e763dd3407978f8a60bb681c93bebf0737b",
+      "native_sha256": "17ef36dabc9f7929a59cefe66dcf3ffa7de201cf7551e296aa9cbc7ae74f3e5a"
+    },
+    {
+      "enemy": 67,
+      "palette": 10,
+      "asset": 375,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-10",
+      "source_sha256": "a37660332266a6379b7474971034aa7a044a3e9c8364ad45e9e87ca2d352cba0",
+      "native_sha256": "66ea2cd0d8f1d6cc17b74e3c501200c13ab7c2ce7b122294cd4fd1205bba8e78"
+    },
+    {
+      "enemy": 67,
+      "palette": 11,
+      "asset": 376,
+      "sprites": 17,
+      "quantized_pixels": 569,
+      "name": "67-11",
+      "source_sha256": "ccb0ff9171fa8725603c1ef96ea5336c5cb3a739888d4e9b892ace2aa65c9413",
+      "native_sha256": "e21ac8462503a09aea9b8c0fc3cb854fc5898d7291300a2d69bac0015f6e437f"
+    },
+    {
+      "enemy": 68,
+      "palette": 0,
+      "asset": 377,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-00",
+      "source_sha256": "b7e671face1e6115db2e3015ffc9259cf61364141ed6ef64b4d3e0c3f682b8d1",
+      "native_sha256": "20f05b098b816a8d72b178fff07c43fe35273147bdda5a980ebe54309649a372"
+    },
+    {
+      "enemy": 68,
+      "palette": 1,
+      "asset": 378,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-01",
+      "source_sha256": "76431d0fdd6f532c6ee91895cbc0e361ddea6f2c4aed0afbfeffa5f7e9bfc475",
+      "native_sha256": "a26ada3e0eac0f6e61442ad4e89fda7c4e2593cc17ae39b71a0ad53ef9d99fd5"
+    },
+    {
+      "enemy": 68,
+      "palette": 2,
+      "asset": 379,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-02",
+      "source_sha256": "1f3ccc3890048a51ecc38ac67c0fd0337e3d14a28bf6371f718c109513803783",
+      "native_sha256": "e2890027c298b6686abdecd9be7292c0501e5395d3aba6768376991b46a9b4ab"
+    },
+    {
+      "enemy": 68,
+      "palette": 3,
+      "asset": 380,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-03",
+      "source_sha256": "1ad968b4c29be34f309a3c1c23bf731d0be3c355c1c74e05d877d3f3b6b54ae8",
+      "native_sha256": "5cca86d2b2a159171912f1fe8417fb75c2bd1b6d9ca078c912a525cd06af9ef0"
+    },
+    {
+      "enemy": 68,
+      "palette": 4,
+      "asset": 381,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-04",
+      "source_sha256": "30df0949d09112bbd735f52687340738c0d5574177584dd59e611ac2ef87ce79",
+      "native_sha256": "b293bc3233ec82e3dfb5ea91da5fe0da4905bdca8e92574a342f08768bc179af"
+    },
+    {
+      "enemy": 68,
+      "palette": 5,
+      "asset": 382,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-05",
+      "source_sha256": "7baf3245f14d90101d570f25acbae7c29eb4c4e3c8467017d19fac204f0c5dce",
+      "native_sha256": "320681b9d3fe37f6068a5f9d8d21747a358e7335fb02e2c9414afb0dc8e44aec"
+    },
+    {
+      "enemy": 68,
+      "palette": 6,
+      "asset": 383,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-06",
+      "source_sha256": "af199b58f5c9fe2454d1ead2d3d91bd300b520eae4ffe055cfd6f22904efb1b9",
+      "native_sha256": "081ae9c6442d876e790ff622570f16ce76fd5460c3f964cc29485d2602ea5c1b"
+    },
+    {
+      "enemy": 68,
+      "palette": 7,
+      "asset": 384,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-07",
+      "source_sha256": "55122ff06dc84b0cea65782a186de42f1af20e19976a6c12d260e9f9e7e9d154",
+      "native_sha256": "12faa44c546bbf6a20c89353248749cb3914965dd8626956194dc962c24f701b"
+    },
+    {
+      "enemy": 68,
+      "palette": 8,
+      "asset": 385,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-08",
+      "source_sha256": "5a571f67891c7ad332f517a1889ea802f4f52c1a9f7f4020b9c966c278961618",
+      "native_sha256": "58e1f076619ad33f28d09d73128a704beb087f98768e13bcab6300b2f39ef71d"
+    },
+    {
+      "enemy": 68,
+      "palette": 9,
+      "asset": 377,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-09",
+      "source_sha256": "b7e671face1e6115db2e3015ffc9259cf61364141ed6ef64b4d3e0c3f682b8d1",
+      "native_sha256": "20f05b098b816a8d72b178fff07c43fe35273147bdda5a980ebe54309649a372"
+    },
+    {
+      "enemy": 68,
+      "palette": 10,
+      "asset": 386,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-10",
+      "source_sha256": "1ec6d979e2635c7df53ec61422db157f6d3215e14e4846ba44180ad3402a1b19",
+      "native_sha256": "38bbe01d797354083e0984f89a7868fb6364abe5a28d63951686c51b0ed110dc"
+    },
+    {
+      "enemy": 68,
+      "palette": 11,
+      "asset": 387,
+      "sprites": 32,
+      "quantized_pixels": 723,
+      "name": "68-11",
+      "source_sha256": "7d3cb1f2d557e718c1f9934789d8ea1c55a76833777ff2c114bd635b78d86741",
+      "native_sha256": "8979a3630ef74879c19898e8a21347c91a7e57c8a8fe09f7e9774dc236bdcbdb"
+    },
+    {
+      "enemy": 69,
+      "palette": 0,
+      "asset": 388,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-00",
+      "source_sha256": "3885db730f6d09736d8a62624d749d4404d30b15dddb24df5f2de916ec89bd87",
+      "native_sha256": "053e1237e9654d2efd202259972716e5f444348b659ce44a78e0440c9ba57285"
+    },
+    {
+      "enemy": 69,
+      "palette": 1,
+      "asset": 389,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-01",
+      "source_sha256": "193c2f275b09e365e9b8b469d33200be80f5e7d24fad15fc92064a51bd5de68f",
+      "native_sha256": "719cbab706428aff6dcdf901a8141cfe253d4833feae0c04924700a1b2e11cba"
+    },
+    {
+      "enemy": 69,
+      "palette": 2,
+      "asset": 390,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-02",
+      "source_sha256": "814d033058dbaac5211c496290d01956fb506f8e55b78b1f0409ee0ac8c88f1e",
+      "native_sha256": "91d1d5c1e7c30a3b70dc0f99b593c865d6cdcfac4c2d53099a5c7fa67b2170b8"
+    },
+    {
+      "enemy": 69,
+      "palette": 3,
+      "asset": 391,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-03",
+      "source_sha256": "08e4d9f0550d4fbbabbcd4a811ec78ddf8af1ca3bb40de8e92cae44c2c26974a",
+      "native_sha256": "5be8678c4a81e4b66100d69c6993328b2e06a1a6783f87d57f211d07f4360f2b"
+    },
+    {
+      "enemy": 69,
+      "palette": 4,
+      "asset": 392,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-04",
+      "source_sha256": "6e54554605e45465201a1fe0b0820317ec8285d5db42ffe5262afea783d57309",
+      "native_sha256": "802785817a00dbf5c34ef0bc2211268cf6836948e31600f9320a0ad12a464a1d"
+    },
+    {
+      "enemy": 69,
+      "palette": 5,
+      "asset": 393,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-05",
+      "source_sha256": "614ceabb10d398a08ee702cd1d42b1bd9da1449ba9153fb967c9ca76a160a776",
+      "native_sha256": "606902cb7be7581ba1ac1f79d6c511da8f9697debaf943e7782bb76476ed0692"
+    },
+    {
+      "enemy": 69,
+      "palette": 6,
+      "asset": 394,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-06",
+      "source_sha256": "7de701c4c51e4a504b66ad88b33363bb69dc0efc19e71cf782e1667d26a90654",
+      "native_sha256": "604ca92bc0db9376a7bd7a1b86b7171d79ec6c0d0717d19218db8b56528cbf49"
+    },
+    {
+      "enemy": 69,
+      "palette": 7,
+      "asset": 395,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-07",
+      "source_sha256": "7b1ac2a98b1308dc569d5e3ae7d77a3e8099277df851aede6fc5796e00adf877",
+      "native_sha256": "0e3c12bd93ba24d07c3f992b4198fd251578170a95e7198c44e324bd071a24ce"
+    },
+    {
+      "enemy": 69,
+      "palette": 8,
+      "asset": 396,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-08",
+      "source_sha256": "d54680c8651dfc594ff2ef0849e75f9815fa1b58bd7fe1d4c5f46e3aa4ba9f64",
+      "native_sha256": "dba253bbad978b3c11c460fa1341c84ed266bdaf332a9793f2c36caa47eef13d"
+    },
+    {
+      "enemy": 69,
+      "palette": 9,
+      "asset": 388,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-09",
+      "source_sha256": "3885db730f6d09736d8a62624d749d4404d30b15dddb24df5f2de916ec89bd87",
+      "native_sha256": "053e1237e9654d2efd202259972716e5f444348b659ce44a78e0440c9ba57285"
+    },
+    {
+      "enemy": 69,
+      "palette": 10,
+      "asset": 397,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-10",
+      "source_sha256": "f9e5636de5ba7f9e7b132f9309ae2a9cb1785113d9944899167a43ab883389e4",
+      "native_sha256": "a86dedd992c1ad884fcf730b375734c5ce93b864842f122a39b3e5a2d534280a"
+    },
+    {
+      "enemy": 69,
+      "palette": 11,
+      "asset": 398,
+      "sprites": 32,
+      "quantized_pixels": 629,
+      "name": "69-11",
+      "source_sha256": "4876edcba48f51f17d457892343f6d24c65bc9e1748c8347ea60dfc2ee7a27d9",
+      "native_sha256": "79dfcb1e41f864027a74bcd999b00e561fa1cf1819014bf2636be97f153589d8"
+    },
+    {
+      "enemy": 70,
+      "palette": 0,
+      "asset": 399,
+      "sprites": 8,
+      "quantized_pixels": 161,
+      "name": "70-00",
+      "source_sha256": "9156c0a2fd515c8aa7338005aecc48033572fc3ca6a6cf92d110a2c6a83c90f0",
+      "native_sha256": "c6c00c96f8b9819c4c2c43be493e601cc14d6777eb4ac30a07c37443593f0d62"
+    },
+    {
+      "enemy": 71,
+      "palette": 0,
+      "asset": 400,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-00",
+      "source_sha256": "82fec68c751ee2de8743b7252999bfad44cbe9f36778411bb5a3e40f945bb083",
+      "native_sha256": "8d6137d7f7c934117a62088cf83896a0e7ba7c26d32b8959ef2c330679ce7520"
+    },
+    {
+      "enemy": 71,
+      "palette": 1,
+      "asset": 401,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-01",
+      "source_sha256": "281c8e0930da32d9c3440abe45075fb6291a1c5d5d33259b61607a3aa56ee601",
+      "native_sha256": "35a2c9d44942e81b208d0edd3cd4ce66644ce9f3fa0effd12c1ac1ca9e31d7a7"
+    },
+    {
+      "enemy": 71,
+      "palette": 2,
+      "asset": 402,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-02",
+      "source_sha256": "e8f21624131d5c3a7913027667688e36094cfc46f7690263004cbaa46e4759a4",
+      "native_sha256": "6cd1b12c50c0fdc1dd59478698e7583687505a9aab44e9609006447d3c98e2cf"
+    },
+    {
+      "enemy": 71,
+      "palette": 3,
+      "asset": 403,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-03",
+      "source_sha256": "cf217af84855da36444cd543b6fe7f1079502e0f664c77cc5f79cd0777fa1f6f",
+      "native_sha256": "50e436ab9ad625759be15751ad453e532cfc3d0015bab2be9b94850f63fffe3c"
+    },
+    {
+      "enemy": 71,
+      "palette": 4,
+      "asset": 404,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-04",
+      "source_sha256": "920da2336ab348de1edc34ace4e6256d50b984061972a93ce9f5fd5c7fc62ae8",
+      "native_sha256": "e321a79c4656008e16fd0e5052be28553549eecd2b8c8a1a0813b30cf9cd1ce9"
+    },
+    {
+      "enemy": 71,
+      "palette": 5,
+      "asset": 405,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-05",
+      "source_sha256": "9701e613bae358f27b550ae32ec035e8f265288dc84125f448ade4ed5194cf9b",
+      "native_sha256": "eb6cefa16725447204d34475c5c2466adf1278ecc9d366e635a4024b67d154a0"
+    },
+    {
+      "enemy": 71,
+      "palette": 6,
+      "asset": 406,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-06",
+      "source_sha256": "d5f3ecee774af1bbaccb102ec40546a647be838dea307171c07d9b319ed0453b",
+      "native_sha256": "ff61da4b039da75b443a953302ce95039a90e2db7cac4dbc9eb1d228d8c00b38"
+    },
+    {
+      "enemy": 71,
+      "palette": 7,
+      "asset": 407,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-07",
+      "source_sha256": "16867a126732eafdad265f6264f8169c6f30c35f5cd43ddef10d10160d89cdcb",
+      "native_sha256": "fe74508697c4d924fca6ea3fe47ab2ae9cd856ef9f58a9352e60605e2c107cbb"
+    },
+    {
+      "enemy": 71,
+      "palette": 8,
+      "asset": 408,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-08",
+      "source_sha256": "8e5543fbe33d9416ae6ebc2edf82a95b05729b00c3f5f757d660f030dc6570e1",
+      "native_sha256": "7bb769ea01c2e475881747a2d37624b83a6187c9ba77cb6ee6b83cef02678701"
+    },
+    {
+      "enemy": 71,
+      "palette": 9,
+      "asset": 400,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-09",
+      "source_sha256": "82fec68c751ee2de8743b7252999bfad44cbe9f36778411bb5a3e40f945bb083",
+      "native_sha256": "8d6137d7f7c934117a62088cf83896a0e7ba7c26d32b8959ef2c330679ce7520"
+    },
+    {
+      "enemy": 71,
+      "palette": 10,
+      "asset": 409,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-10",
+      "source_sha256": "12db92cb7e88901aef9a71c8bdcc4463510c28be8514f6f43fce72c83706b6cd",
+      "native_sha256": "e23ff50847f379b2b9f98558156581c59c21e7c23d32f0ecba197f42d2911fbe"
+    },
+    {
+      "enemy": 71,
+      "palette": 11,
+      "asset": 410,
+      "sprites": 16,
+      "quantized_pixels": 336,
+      "name": "71-11",
+      "source_sha256": "db6701782638eb5b86c6f6ec948ef0fa147bad2a30efd0901c672ad93b4a767e",
+      "native_sha256": "f2b830fad7ba94a6c2d35d07774b037f77dab84bde7b4c980bb668f4e3cd2ac4"
+    },
+    {
+      "enemy": 74,
+      "palette": 0,
+      "asset": 411,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-00",
+      "source_sha256": "2473556a2f528bf790887e7154f599206ae3be5b5e646290d6aa4355fbe3189b",
+      "native_sha256": "41bc2f448aa4c4487be74b0a8bfab03794337500c1a3fc29404f15b5d9ad467c"
+    },
+    {
+      "enemy": 74,
+      "palette": 1,
+      "asset": 412,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-01",
+      "source_sha256": "62ef9639893bd6aa3e20403edbd4331d3fba8c2e97aa4d2b6ca9b5f8e029ae04",
+      "native_sha256": "b4e8d66968030383e78fc86bd0545e2353d9f611cff22eec371bb4e43858701f"
+    },
+    {
+      "enemy": 74,
+      "palette": 2,
+      "asset": 413,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-02",
+      "source_sha256": "c4b9e821d3a07030d01cac89951e4e39b93b46150c1a9dd2ee6b3b00f6c77a55",
+      "native_sha256": "6791406170e5f84cbbcce1c848ddae7b5ee37c23f7194b3fe1d1936755f28443"
+    },
+    {
+      "enemy": 74,
+      "palette": 3,
+      "asset": 414,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-03",
+      "source_sha256": "fcb9c3ad775c66b2e87a50358b23c8faf427c75862eb86c38f2d4d72d80f9b7a",
+      "native_sha256": "4e140d03c35b329189bac9e4324b88040267a1c01109a8c45f9995d9a5c8ae69"
+    },
+    {
+      "enemy": 74,
+      "palette": 4,
+      "asset": 415,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-04",
+      "source_sha256": "68ca8a5ba4f931fd0606afceb4731c04c241547119a3ab127b7d72dfa05d145d",
+      "native_sha256": "a3c1c9b683e0865cb4dac8201535d5e78a8dbb7d92a5d496f9da3f5d4d4d60a8"
+    },
+    {
+      "enemy": 74,
+      "palette": 5,
+      "asset": 416,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-05",
+      "source_sha256": "273e6b757e14d9527de018e916dc5e9fdb69136a64526f66e6acb7fb316f76c9",
+      "native_sha256": "09c2a8cc12d8b996698473fd650f15ee1ad13f863a8c79a8677913c2e9e587c6"
+    },
+    {
+      "enemy": 74,
+      "palette": 6,
+      "asset": 417,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-06",
+      "source_sha256": "e58467c47145a0c8a6f399c0c7da65e4f286d3599f13475a9452bb6b4f2b5c07",
+      "native_sha256": "47374bf036658b7a292125590e5cdc3f71242ad4bd45824eba6faddf16593592"
+    },
+    {
+      "enemy": 74,
+      "palette": 7,
+      "asset": 418,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-07",
+      "source_sha256": "a21ab37404baea79d3156374d5b6fd7833c0036df7940e9485c6024258f25d99",
+      "native_sha256": "d63066ccd47898c6d4ce58219232c301836a1c652fadaf81a7037884c82fd96a"
+    },
+    {
+      "enemy": 74,
+      "palette": 8,
+      "asset": 419,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-08",
+      "source_sha256": "4264d8c9b926e3f45ad6cbcb60a1167527f2a8ac48af4b186b9a52a3f1d47ef3",
+      "native_sha256": "1f6f9e54da4af604c2b2b27d2d9e7adcb17034fafa58179dffb4c957d60f7647"
+    },
+    {
+      "enemy": 74,
+      "palette": 9,
+      "asset": 411,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-09",
+      "source_sha256": "2473556a2f528bf790887e7154f599206ae3be5b5e646290d6aa4355fbe3189b",
+      "native_sha256": "41bc2f448aa4c4487be74b0a8bfab03794337500c1a3fc29404f15b5d9ad467c"
+    },
+    {
+      "enemy": 74,
+      "palette": 10,
+      "asset": 420,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-10",
+      "source_sha256": "35ab9df0f1db51dc7b712cec08f75413f84befe74d2ef7be71f5832a87cbe4a9",
+      "native_sha256": "288823daf60c688a561d6f66cbcb92c1e5c87a021eb13cb11c906c62e405971f"
+    },
+    {
+      "enemy": 74,
+      "palette": 11,
+      "asset": 421,
+      "sprites": 12,
+      "quantized_pixels": 239,
+      "name": "74-11",
+      "source_sha256": "c0b58136a9c2be9d99d5d14e1dd20a48181f0b29a393690a5cd49cbd71430be8",
+      "native_sha256": "47f1039748d764c67a2d0989a6d1fa6dd864b52b13f900654c699d9a2bbfaf9f"
+    }
+  ],
+  "scope": "Source initial enemy poses1..71,74 at original256x192 coordinates scaled5/8;8x16OBJ;all12 original floor palette variants; Lassic/Dark Falz use source precomposed scenes.",
+  "limits": [
+    "This manifest contains initial poses; physical frame assets are in battle-animation",
+    "GBC8 palettes of3 opaque colors per8x16 sprite quantize source colors",
+    "Original transparent composition verified before quantization; not pixel-identical RGB to SMS hardware",
+    "Append8 enemy-hit masks then8 source-index0 masks after64 palette bytes; exact source flash classes retained"
+  ]
+}

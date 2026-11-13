@@ -1,0 +1,1473 @@
+{
+  "rom_sha256": "0b9cee5c4cf9dca47887436237cf34ba19e76a26c79714bc64430d3f923e1133",
+  "passed": true,
+  "pages": [
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62619,
+      "portrait": 0,
+      "frame": 1249,
+      "lines": [
+        "SCUM! DO NOT SNIFF",
+        "AROUND IN LASSIC'S",
+        "AFFAIRS! LEARN    ",
+        "THIS LESSON WELL! "
+      ],
+      "glyphs": 59,
+      "visible_glyphs": 59,
+      "visible": true,
+      "image": "page-001-f49b.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62619,
+      "portrait": 0,
+      "frame": 1326,
+      "lines": [
+        "NERO! WHAT HAPP-  ",
+        "ENED! DON'T DIE!  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 28,
+      "visible_glyphs": 28,
+      "visible": true,
+      "image": "page-002-f49b.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62716,
+      "portrait": 1,
+      "frame": 1456,
+      "lines": [
+        "ALIS,LISTEN!      ",
+        "LASSIC IS LEADING ",
+        "OUR WORLD TO      ",
+        "DESTRUCTION. I    "
+      ],
+      "glyphs": 50,
+      "visible_glyphs": 50,
+      "visible": true,
+      "image": "page-003-f4fc.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62716,
+      "portrait": 1,
+      "frame": 1592,
+      "lines": [
+        "TRIED TO DISCOVER ",
+        "HIS PLANS, BUT I  ",
+        "COULD NOT DO MUCH ",
+        "BY MYSELF.        "
+      ],
+      "glyphs": 51,
+      "visible_glyphs": 51,
+      "visible": true,
+      "image": "page-004-f4fc.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62716,
+      "portrait": 1,
+      "frame": 1727,
+      "lines": [
+        "I HAVE HEARD OF A ",
+        "MAN WITH GREAT    ",
+        "STRENGTH NAMED    ",
+        "\"ODIN.\" MAYBE THE "
+      ],
+      "glyphs": 53,
+      "visible_glyphs": 53,
+      "visible": true,
+      "image": "page-005-f4fc.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62716,
+      "portrait": 1,
+      "frame": 1874,
+      "lines": [
+        "TWO OF YOU CAN    ",
+        "STOP LASSIC.      ",
+        "ALIS,IT'S TOO LATE",
+        "FOR ME. BE STRONG."
+      ],
+      "glyphs": 53,
+      "visible_glyphs": 53,
+      "visible": true,
+      "image": "page-006-f4fc.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62933,
+      "portrait": 2,
+      "frame": 2030,
+      "lines": [
+        "I WILL MAKE SURE  ",
+        "THAT MY BROTHER   ",
+        "DIED NOT IN VAIN! ",
+        "WATCH OVER AND    "
+      ],
+      "glyphs": 52,
+      "visible_glyphs": 52,
+      "visible": true,
+      "image": "page-007-f5d5.png"
+    },
+    {
+      "session": "opening",
+      "state": 18,
+      "text_id": 62933,
+      "portrait": 2,
+      "frame": 2090,
+      "lines": [
+        "PROTECT ME, NERO! ",
+        "                  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 15,
+      "visible_glyphs": 15,
+      "visible": true,
+      "image": "page-008-f5d5.png"
+    },
+    {
+      "session": "myau",
+      "state": 4,
+      "text_id": 146,
+      "portrait": null,
+      "frame": 1025,
+      "lines": [
+        "I HAVE AN RARE    ",
+        "ANIMAL HERE. WOULD"
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-009-0092.png"
+    },
+    {
+      "session": "myau",
+      "state": 4,
+      "text_id": 150,
+      "portrait": null,
+      "frame": 1171,
+      "lines": [
+        "I SEE YOU HAVE A  ",
+        "STRANGE POT.      "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-010-0096.png"
+    },
+    {
+      "session": "myau",
+      "state": 4,
+      "text_id": 154,
+      "portrait": null,
+      "frame": 1276,
+      "lines": [
+        "ALL RIGHT, THERE  ",
+        "YOU GO WITH HIM.  "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-011-009a.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 62999,
+      "portrait": 3,
+      "frame": 1401,
+      "lines": [
+        "WE WILL BE FELLOW ",
+        "TRAVELERS.        ",
+        "I'M ALIS; WHAT'S  ",
+        "YOUR NAME?        "
+      ],
+      "glyphs": 47,
+      "visible_glyphs": 47,
+      "visible": true,
+      "image": "page-012-f617.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 63046,
+      "portrait": 4,
+      "frame": 1444,
+      "lines": [
+        "I'M MYAU.         ",
+        "                  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 8,
+      "visible_glyphs": 8,
+      "visible": true,
+      "image": "page-013-f646.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 63053,
+      "portrait": 3,
+      "frame": 1552,
+      "lines": [
+        "MYAU, HAVE YOU    ",
+        "EVER HEARD OF A   ",
+        "MAN NAMED ODIN?   ",
+        "                  "
+      ],
+      "glyphs": 37,
+      "visible_glyphs": 37,
+      "visible": true,
+      "image": "page-014-f64d.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 63086,
+      "portrait": 4,
+      "frame": 1699,
+      "lines": [
+        "YES, BUT HE IS    ",
+        "TURNED TO STONE!  ",
+        "IF HE DRINKS THIS ",
+        "MEDICINE, HE'LL BE"
+      ],
+      "glyphs": 55,
+      "visible_glyphs": 55,
+      "visible": true,
+      "image": "page-015-f66e.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 63086,
+      "portrait": 4,
+      "frame": 1788,
+      "lines": [
+        "O.K., BUT I CANNOT",
+        "OPEN THE BOTTLE.  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 29,
+      "visible_glyphs": 29,
+      "visible": true,
+      "image": "page-016-f66e.png"
+    },
+    {
+      "session": "myau",
+      "state": 18,
+      "text_id": 63169,
+      "portrait": 3,
+      "frame": 1902,
+      "lines": [
+        "WELL, THEN, WE'D  ",
+        "BETTER GO SAVE    ",
+        "ODIN TOGETHER,    ",
+        "O.K.?             "
+      ],
+      "glyphs": 44,
+      "visible_glyphs": 44,
+      "visible": true,
+      "image": "page-017-f6c1.png"
+    },
+    {
+      "session": "odin",
+      "state": 4,
+      "text_id": 45926,
+      "portrait": null,
+      "frame": 1039,
+      "lines": [
+        "ALIS TAKES OUT    ",
+        "ALSULIN.          "
+      ],
+      "glyphs": 20,
+      "visible_glyphs": 20,
+      "visible": true,
+      "image": "page-018-b366.png"
+    },
+    {
+      "session": "odin",
+      "state": 4,
+      "text_id": 46001,
+      "portrait": null,
+      "frame": 1089,
+      "lines": [
+        "THE BOTTLECAP     ",
+        "OPENS AND THE     "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-019-b3b1.png"
+    },
+    {
+      "session": "odin",
+      "state": 4,
+      "text_id": 46001,
+      "portrait": null,
+      "frame": 1158,
+      "lines": [
+        "CONTENTS QUIETLY  ",
+        "LEAK OUT.         "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-020-b3b1.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63219,
+      "portrait": 5,
+      "frame": 1421,
+      "lines": [
+        "THANKS FOR SAVING ",
+        "ME. I GUESS IF    ",
+        "MEDUSA CAN STOP   ",
+        "ME, I DON'T HAVE  "
+      ],
+      "glyphs": 52,
+      "visible_glyphs": 52,
+      "visible": true,
+      "image": "page-021-f6f3.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63219,
+      "portrait": 5,
+      "frame": 1500,
+      "lines": [
+        "MUCH HOPE OF      ",
+        "KILLING LASSIC,   ",
+        "DO I?             ",
+        "                  "
+      ],
+      "glyphs": 28,
+      "visible_glyphs": 28,
+      "visible": true,
+      "image": "page-022-f6f3.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63302,
+      "portrait": 3,
+      "frame": 1645,
+      "lines": [
+        "MY BROTHER DIED   ",
+        "TRYING TO KILL    ",
+        "LASSIC. BEFORE HE ",
+        "DIED, HE TOLD ME  "
+      ],
+      "glyphs": 53,
+      "visible_glyphs": 53,
+      "visible": true,
+      "image": "page-023-f746.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63302,
+      "portrait": 3,
+      "frame": 1707,
+      "lines": [
+        "TO SEEK YOUR HELP.",
+        "                  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 15,
+      "visible_glyphs": 15,
+      "visible": true,
+      "image": "page-024-f746.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63366,
+      "portrait": 5,
+      "frame": 1845,
+      "lines": [
+        "IS THAT SO? WELL, ",
+        "I MUST NOT LET    ",
+        "YOUR BROTHER DIE  ",
+        "UNAVENGED.        "
+      ],
+      "glyphs": 49,
+      "visible_glyphs": 49,
+      "visible": true,
+      "image": "page-025-f786.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63417,
+      "portrait": 3,
+      "frame": 1923,
+      "lines": [
+        "WHY DID YOU TRY TO",
+        "KILL MEDUSA?      ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-026-f7b9.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63441,
+      "portrait": 5,
+      "frame": 2078,
+      "lines": [
+        "BECAUSE MEDUSA HAS",
+        "A MYSTIC AXE.     ",
+        "UNFORTUNATELY, SHE",
+        "GOT AWAY FROM ME. "
+      ],
+      "glyphs": 58,
+      "visible_glyphs": 58,
+      "visible": true,
+      "image": "page-027-f7d1.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63441,
+      "portrait": 5,
+      "frame": 2220,
+      "lines": [
+        "ANYHOW, I HAVE    ",
+        "STASHED A COMPASS ",
+        "IN ONE OF THE     ",
+        "PASSAGES OF THIS  "
+      ],
+      "glyphs": 51,
+      "visible_glyphs": 51,
+      "visible": true,
+      "image": "page-028-f7d1.png"
+    },
+    {
+      "session": "odin",
+      "state": 18,
+      "text_id": 63441,
+      "portrait": 5,
+      "frame": 2295,
+      "lines": [
+        "CAVE. LET'S GO AND",
+        "GET IT            ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 20,
+      "visible_glyphs": 20,
+      "visible": true,
+      "image": "page-029-f7d1.png"
+    },
+    {
+      "session": "noah",
+      "state": 4,
+      "text_id": 174,
+      "portrait": null,
+      "frame": 1043,
+      "lines": [
+        "WHO ARE YOU? I'M  ",
+        "BUSY WITH MY      "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-030-00ae.png"
+    },
+    {
+      "session": "noah",
+      "state": 4,
+      "text_id": 174,
+      "portrait": null,
+      "frame": 1111,
+      "lines": [
+        "TRAINING NOW! DO  ",
+        "NOT BE A NUISANCE!"
+      ],
+      "glyphs": 29,
+      "visible_glyphs": 29,
+      "visible": true,
+      "image": "page-031-00ae.png"
+    },
+    {
+      "session": "noah",
+      "state": 18,
+      "text_id": 63580,
+      "portrait": 3,
+      "frame": 1257,
+      "lines": [
+        "I'VE RECEIVED A   ",
+        "LETTER FROM THE   ",
+        "GOVERNOR. PLEASE  ",
+        "READ IT.          "
+      ],
+      "glyphs": 48,
+      "visible_glyphs": 48,
+      "visible": true,
+      "image": "page-032-f85c.png"
+    },
+    {
+      "session": "noah",
+      "state": 18,
+      "text_id": 63620,
+      "portrait": 6,
+      "frame": 1415,
+      "lines": [
+        "LET ME SEE IT.....",
+        "OUR DUTY IS CLEAR;",
+        "WE MUST PROTECT   ",
+        "THE PLANETS OF THE"
+      ],
+      "glyphs": 58,
+      "visible_glyphs": 58,
+      "visible": true,
+      "image": "page-033-f884.png"
+    },
+    {
+      "session": "noah",
+      "state": 18,
+      "text_id": 63620,
+      "portrait": 6,
+      "frame": 1531,
+      "lines": [
+        "ALGOL SYSTEM FROM ",
+        "EVIL.             ",
+        "WE MUST FIRST GO  ",
+        "TO THE GOTHIC     "
+      ],
+      "glyphs": 44,
+      "visible_glyphs": 44,
+      "visible": true,
+      "image": "page-034-f884.png"
+    },
+    {
+      "session": "noah",
+      "state": 18,
+      "text_id": 63620,
+      "portrait": 6,
+      "frame": 1684,
+      "lines": [
+        "FORESTS AND FIND  ",
+        "DR.LUVENO. WE CAN ",
+        "USE AN UNDERGROUND",
+        "PASSAGE FROM A    "
+      ],
+      "glyphs": 57,
+      "visible_glyphs": 57,
+      "visible": true,
+      "image": "page-035-f884.png"
+    },
+    {
+      "session": "noah",
+      "state": 18,
+      "text_id": 63620,
+      "portrait": 6,
+      "frame": 1753,
+      "lines": [
+        "MANHOLE IN THE    ",
+        "SPACEPORT.        ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 22,
+      "visible_glyphs": 22,
+      "visible": true,
+      "image": "page-036-f884.png"
+    },
+    {
+      "session": "flight",
+      "state": 4,
+      "text_id": 46168,
+      "portrait": null,
+      "frame": 1199,
+      "lines": [
+        "ALIS RAISES       ",
+        "PRISM TOWARDS     "
+      ],
+      "glyphs": 22,
+      "visible_glyphs": 22,
+      "visible": true,
+      "image": "page-037-b458.png"
+    },
+    {
+      "session": "flight",
+      "state": 4,
+      "text_id": 46168,
+      "portrait": null,
+      "frame": 1235,
+      "lines": [
+        "PRISM TOWARDS     ",
+        "THE SKY.          "
+      ],
+      "glyphs": 19,
+      "visible_glyphs": 19,
+      "visible": true,
+      "image": "page-038-b458.png"
+    },
+    {
+      "session": "flight",
+      "state": 4,
+      "text_id": 46293,
+      "portrait": null,
+      "frame": 1280,
+      "lines": [
+        "A VISION OF A     ",
+        "CELESTIAL CASTLE  "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-039-b4d5.png"
+    },
+    {
+      "session": "flight",
+      "state": 4,
+      "text_id": 46293,
+      "portrait": null,
+      "frame": 1340,
+      "lines": [
+        "APPEAR IN THE     ",
+        "SKY.              "
+      ],
+      "glyphs": 15,
+      "visible_glyphs": 15,
+      "visible": true,
+      "image": "page-040-b4d5.png"
+    },
+    {
+      "session": "flight",
+      "state": 4,
+      "text_id": 46915,
+      "portrait": null,
+      "frame": 1857,
+      "lines": [
+        "MYAU ATE THE NUT  ",
+        "OF LAERMA.        "
+      ],
+      "glyphs": 22,
+      "visible_glyphs": 22,
+      "visible": true,
+      "image": "page-041-b743.png"
+    },
+    {
+      "session": "flight",
+      "state": 18,
+      "text_id": 63785,
+      "portrait": 7,
+      "frame": 2062,
+      "lines": [
+        "WHEN MYAU EATS THE",
+        "NUTS OF LAERMA, HE",
+        "BECOMES CLOTHED IN",
+        "FLAME AND EMITS A "
+      ],
+      "glyphs": 60,
+      "visible_glyphs": 60,
+      "visible": true,
+      "image": "page-042-f929.png"
+    },
+    {
+      "session": "flight",
+      "state": 18,
+      "text_id": 63785,
+      "portrait": 7,
+      "frame": 2109,
+      "lines": [
+        "BLINDING LIGHT.   ",
+        "                  ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 14,
+      "visible_glyphs": 14,
+      "visible": true,
+      "image": "page-043-f929.png"
+    },
+    {
+      "session": "flight",
+      "state": 18,
+      "text_id": 63868,
+      "portrait": 8,
+      "frame": 2243,
+      "lines": [
+        "WHEN HE IS VISIBLE",
+        "AGAIN, HE HAS BEEN",
+        "TRANSFORMED INTO  ",
+        "                  "
+      ],
+      "glyphs": 45,
+      "visible_glyphs": 45,
+      "visible": true,
+      "image": "page-044-f97c.png"
+    },
+    {
+      "session": "flight",
+      "state": 18,
+      "text_id": 63868,
+      "portrait": 8,
+      "frame": 2369,
+      "lines": [
+        "A BEAUTIFUL       ",
+        "WINGED BEAST.     ",
+        "MYAU FLAPS HIS    ",
+        "WINGS PLOUDLY.    "
+      ],
+      "glyphs": 47,
+      "visible_glyphs": 47,
+      "visible": true,
+      "image": "page-045-f97c.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 45740,
+      "portrait": null,
+      "frame": 1083,
+      "lines": [
+        "ALIS USES         ",
+        "MRCL KEY.         "
+      ],
+      "glyphs": 16,
+      "visible_glyphs": 16,
+      "visible": true,
+      "image": "page-046-b2ac.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3072,
+      "lines": [
+        "I'M SORRY, I MUST ",
+        "HAVE BEEN         "
+      ],
+      "glyphs": 22,
+      "visible_glyphs": 22,
+      "visible": true,
+      "image": "page-047-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3149,
+      "lines": [
+        "POSSESSED BODY AND",
+        "SOUL BY EVIL.     "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-048-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3206,
+      "lines": [
+        "YOU RESCUED OUR   ",
+        "WORLD JUST IN THE "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-049-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3284,
+      "lines": [
+        "NICK OF TIME! IF  ",
+        "YOU HAD COME ANY  "
+      ],
+      "glyphs": 26,
+      "visible_glyphs": 26,
+      "visible": true,
+      "image": "page-050-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3340,
+      "lines": [
+        "LATER, IT MIGHT   ",
+        "HAVE BEEN TOO LATE"
+      ],
+      "glyphs": 28,
+      "visible_glyphs": 28,
+      "visible": true,
+      "image": "page-051-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3417,
+      "lines": [
+        "WE ALL THANK YOU  ",
+        "FROM THE BOTTOM   "
+      ],
+      "glyphs": 26,
+      "visible_glyphs": 26,
+      "visible": true,
+      "image": "page-052-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3472,
+      "lines": [
+        "OF OUR HEARTS.    ",
+        "ALIS, YOUR FATHER "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-053-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3527,
+      "lines": [
+        "WAS ONCE KING OF  ",
+        "ALGOL. THE DARK   "
+      ],
+      "glyphs": 26,
+      "visible_glyphs": 26,
+      "visible": true,
+      "image": "page-054-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3583,
+      "lines": [
+        "CASTLE HAS BEEN   ",
+        "DESTROYED, LASSIC "
+      ],
+      "glyphs": 29,
+      "visible_glyphs": 29,
+      "visible": true,
+      "image": "page-055-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3635,
+      "lines": [
+        "KILLED... DO YOU, ",
+        "ALIS,WISH TO      "
+      ],
+      "glyphs": 26,
+      "visible_glyphs": 26,
+      "visible": true,
+      "image": "page-056-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 626,
+      "portrait": null,
+      "frame": 3688,
+      "lines": [
+        "ASCEND YOUR       ",
+        "FATHER'S THRONE   "
+      ],
+      "glyphs": 24,
+      "visible_glyphs": 24,
+      "visible": true,
+      "image": "page-057-0272.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 530,
+      "portrait": null,
+      "frame": 3788,
+      "lines": [
+        "THEN YOU ARE THE  ",
+        "VERY QUEEN OF THE "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-058-0212.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 530,
+      "portrait": null,
+      "frame": 3849,
+      "lines": [
+        "ENTIRE SYSTEM. I  ",
+        "WILL ASSIST YOU IN"
+      ],
+      "glyphs": 29,
+      "visible_glyphs": 29,
+      "visible": true,
+      "image": "page-059-0212.png"
+    },
+    {
+      "session": "ending",
+      "state": 4,
+      "text_id": 530,
+      "portrait": null,
+      "frame": 3903,
+      "lines": [
+        "WILL ASSIST YOU IN",
+        "ALL WAYS POSSIBLE."
+      ],
+      "glyphs": 31,
+      "visible_glyphs": 31,
+      "visible": true,
+      "image": "page-060-0212.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48822,
+      "portrait": null,
+      "frame": 4428,
+      "lines": [
+        "THE SKY GRADUALLY ",
+        "CLEARS AND        "
+      ],
+      "glyphs": 24,
+      "visible_glyphs": 24,
+      "visible": true,
+      "image": "page-061-beb6.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48848,
+      "portrait": null,
+      "frame": 4696,
+      "lines": [
+        "THE PEACE IS      ",
+        "RETURNED TO THE   "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-062-bed0.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48872,
+      "portrait": null,
+      "frame": 4964,
+      "lines": [
+        "ALGOL SYSTEM.     ",
+        "A GENTLE BREEZE   "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-063-bee8.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48893,
+      "portrait": null,
+      "frame": 5214,
+      "lines": [
+        "CARESSES          ",
+        "BAYA MALAY.       "
+      ],
+      "glyphs": 18,
+      "visible_glyphs": 18,
+      "visible": true,
+      "image": "page-064-befd.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48905,
+      "portrait": null,
+      "frame": 5482,
+      "lines": [
+        "BUT DOES THE      ",
+        "BREEZE KNOWS OF   "
+      ],
+      "glyphs": 23,
+      "visible_glyphs": 23,
+      "visible": true,
+      "image": "page-065-bf09.png"
+    },
+    {
+      "session": "ending",
+      "state": 24,
+      "text_id": 48929,
+      "portrait": null,
+      "frame": 5756,
+      "lines": [
+        "THE HARDSHIPS THAT",
+        "THEY ENDURED?     "
+      ],
+      "glyphs": 28,
+      "visible_glyphs": 28,
+      "visible": true,
+      "image": "page-066-bf21.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 63976,
+      "portrait": 3,
+      "frame": 6028,
+      "lines": [
+        "                  ",
+        "     ALIS         ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 4,
+      "visible_glyphs": 4,
+      "visible": true,
+      "image": "page-067-f9e8.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 63984,
+      "portrait": 5,
+      "frame": 6261,
+      "lines": [
+        "                  ",
+        "     ODIN         ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 4,
+      "visible_glyphs": 4,
+      "visible": true,
+      "image": "page-068-f9f0.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 63995,
+      "portrait": 6,
+      "frame": 6495,
+      "lines": [
+        "                  ",
+        "     NOAH         ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 4,
+      "visible_glyphs": 4,
+      "visible": true,
+      "image": "page-069-f9fb.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 64006,
+      "portrait": 4,
+      "frame": 6736,
+      "lines": [
+        "                  ",
+        "     AND MYAU     ",
+        "                  ",
+        "                  "
+      ],
+      "glyphs": 7,
+      "visible_glyphs": 7,
+      "visible": true,
+      "image": "page-070-fa06.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 64018,
+      "portrait": 3,
+      "frame": 7082,
+      "lines": [
+        "EVEN THOUGH THE   ",
+        "MEMORIES OF EVIL  ",
+        "FADE AWAY, THEIR  ",
+        "NAMES WILL BE KEPT"
+      ],
+      "glyphs": 56,
+      "visible_glyphs": 56,
+      "visible": true,
+      "image": "page-071-fa12.png"
+    },
+    {
+      "session": "ending",
+      "state": 18,
+      "text_id": 64084,
+      "portrait": 3,
+      "frame": 7398,
+      "lines": [
+        "IN THE HEARTS OF  ",
+        "THE PEOPLE OF THE ",
+        "ALGOL FOREVER!!!  ",
+        "                  "
+      ],
+      "glyphs": 42,
+      "visible_glyphs": 42,
+      "visible": true,
+      "image": "page-072-fa54.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1083,
+      "lines": [
+        "I'M THE GOVERNOR. ",
+        "I'M TOLD THAT YOU "
+      ],
+      "glyphs": 29,
+      "visible_glyphs": 29,
+      "visible": true,
+      "image": "page-073-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1144,
+      "lines": [
+        "INTEND TO TRY TO  ",
+        "KILL LASSIC.      "
+      ],
+      "glyphs": 24,
+      "visible_glyphs": 24,
+      "visible": true,
+      "image": "page-074-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1201,
+      "lines": [
+        "I ADMIRE YOUR     ",
+        "COURAGE. IN THE   "
+      ],
+      "glyphs": 24,
+      "visible_glyphs": 24,
+      "visible": true,
+      "image": "page-075-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1258,
+      "lines": [
+        "MAHARU CAVE LIVES ",
+        "AN ESPAR NAMED    "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-076-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1313,
+      "lines": [
+        "NOAH. I WILL GIVE ",
+        "YOU A LETTER OF   "
+      ],
+      "glyphs": 26,
+      "visible_glyphs": 26,
+      "visible": true,
+      "image": "page-077-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1366,
+      "lines": [
+        "INTRODUCTION TO   ",
+        "PRESENT TO HER.   "
+      ],
+      "glyphs": 27,
+      "visible_glyphs": 27,
+      "visible": true,
+      "image": "page-078-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1421,
+      "lines": [
+        "I HAVE FAITH THAT ",
+        "YOU WILL KILL     "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-079-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 164,
+      "portrait": null,
+      "frame": 1479,
+      "lines": [
+        "LASSIC AND RETURN ",
+        "HERE EVENTUALLY.  "
+      ],
+      "glyphs": 30,
+      "visible_glyphs": 30,
+      "visible": true,
+      "image": "page-080-00a4.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 668,
+      "portrait": null,
+      "frame": 1542,
+      "lines": [
+        "YOU SHOULD REST   ",
+        "HERE AWHILE AFTER "
+      ],
+      "glyphs": 28,
+      "visible_glyphs": 28,
+      "visible": true,
+      "image": "page-081-029c.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 668,
+      "portrait": null,
+      "frame": 1590,
+      "lines": [
+        "HERE AWHILE AFTER ",
+        "YOUR LONG JOURNEY."
+      ],
+      "glyphs": 31,
+      "visible_glyphs": 31,
+      "visible": true,
+      "image": "page-082-029c.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 672,
+      "portrait": null,
+      "frame": 1761,
+      "lines": [
+        "YOU FELL INTO A   ",
+        "DEEP SLEEP.       "
+      ],
+      "glyphs": 22,
+      "visible_glyphs": 22,
+      "visible": true,
+      "image": "page-083-02a0.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 674,
+      "portrait": null,
+      "frame": 2289,
+      "lines": [
+        "YOU HAD A BAD     ",
+        "DREAM.            "
+      ],
+      "glyphs": 16,
+      "visible_glyphs": 16,
+      "visible": true,
+      "image": "page-084-02a2.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 170,
+      "portrait": null,
+      "frame": 2428,
+      "lines": [
+        "I HAVE FAITH THAT ",
+        "YOU WILL KILL     "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-085-00aa.png"
+    },
+    {
+      "session": "nightmare",
+      "state": 4,
+      "text_id": 170,
+      "portrait": null,
+      "frame": 2487,
+      "lines": [
+        "LASSIC AND RETURN ",
+        "HERE EVENTUALLY.  "
+      ],
+      "glyphs": 30,
+      "visible_glyphs": 30,
+      "visible": true,
+      "image": "page-086-00aa.png"
+    },
+    {
+      "session": "guest-rest",
+      "state": 4,
+      "text_id": 182,
+      "portrait": null,
+      "frame": 1020,
+      "lines": [
+        "PLEASE REST YOUR  ",
+        "WEARY BONES.      "
+      ],
+      "glyphs": 25,
+      "visible_glyphs": 25,
+      "visible": true,
+      "image": "page-087-00b6.png"
+    },
+    {
+      "session": "guest-rest",
+      "state": 4,
+      "text_id": 184,
+      "portrait": null,
+      "frame": 1382,
+      "lines": [
+        "I AM PRAYING FOR  ",
+        "YOUR SAFETY.      "
+      ],
+      "glyphs": 24,
+      "visible_glyphs": 24,
+      "visible": true,
+      "image": "page-088-00b8.png"
+    }
+  ],
+  "limits": [
+    "Late-game routes start from documented SRAM fixtures; this is not an earned full campaign.",
+    "Real production ROM and controller-driven scene progression; pixel checks run in PyBoy.",
+    "Physical cartridge and audible playback remain unverified."
+  ],
+  "extra_scenes": {
+    "checks": [
+      {
+        "scene": "nightmare",
+        "text_ids": [
+          164,
+          170,
+          668,
+          672,
+          674
+        ],
+        "returned_to_walking": true
+      },
+      {
+        "scene": "guest-rest",
+        "text_ids": [
+          182,
+          184
+        ],
+        "returned_to_walking": true
+      }
+    ],
+    "screenshots": [],
+    "injected_fixtures": [],
+    "save_records": [
+      {
+        "version": 5,
+        "bytes": 628,
+        "sha256": "29537961418d58ca89422a52ddd2b577a6eeb6db2444ab404f0a66166308144d"
+      },
+      {
+        "version": 5,
+        "bytes": 628,
+        "sha256": "05093d0d773d97c6bbafc0b797016c18677d3e20369e1f26027664bf153ffc50"
+      }
+    ]
+  },
+  "coverage": {
+    "myau": {
+      "pages": 6,
+      "invisible_pages": 0
+    },
+    "odin": {
+      "pages": 9,
+      "invisible_pages": 0
+    },
+    "noah": {
+      "pages": 5,
+      "invisible_pages": 0
+    },
+    "opening": {
+      "pages": 8,
+      "invisible_pages": 0
+    },
+    "flight": {
+      "pages": 4,
+      "invisible_pages": 0
+    },
+    "ending": {
+      "pages": 6,
+      "invisible_pages": 0
+    }
+  },
+  "closing_text_pages": 6,
+  "invisible_pages": [],
+  "route_report": "verification/cutscene-text/corrected-complete/routes/report.json"
+}

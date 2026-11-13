@@ -1,0 +1,24 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "d1341b26003df6d2475810056c985b8d56ed97496fa7d49151386dd5e920a974",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "NO opens full field menu; Noah Tele costs4MP and reopens question; Myau Trap costs2MP, disarms/opens with no RNG reroll or HP loss, and retains field menu after rewards",
+    "Saving before leaving post-open menu persists C602; cancel completes once; power-cycle restores dungeon and money without reopening/rewarding the chest"
+  ],
+  "injected_fixtures": [
+    "Valid SRAM fixture:floor0/9C facing original money chest7C, Alis/Myau/Noah joined with32HP/60MP and learned mapspells,10000Meseta and RNG1234; C602 remains0. All subsequent chest, spell and save actions use controller input."
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

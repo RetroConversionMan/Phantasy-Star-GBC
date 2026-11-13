@@ -1,0 +1,59 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+  2 _displayed_cycle                                                00000001 R
+  8 _frames                                                         00001E15 R
+  2 _loaded_frame                                                   00000000 R
+    _scene_actor_active                                             ******** GX
+    _scene_actor_show_data                                          ******** GX
+    _set_sprite_palette                                             ******** GX
+    _shadow_OAM                                                     ******** GX
+  8 _vehicle_cycle_counts                                           00001E2D GR
+  8 _vehicle_cycle_frame_00                                         00000005 GR
+  8 _vehicle_cycle_frame_01                                         00000275 GR
+  8 _vehicle_cycle_frame_02                                         000004E5 GR
+  8 _vehicle_cycle_frame_03                                         00000755 GR
+  8 _vehicle_cycle_frame_04                                         000009C5 GR
+  8 _vehicle_cycle_frame_05                                         00000C85 GR
+  8 _vehicle_cycle_frame_06                                         00000F45 GR
+  8 _vehicle_cycle_frame_07                                         00001205 GR
+  8 _vehicle_cycle_frame_08                                         000014C5 GR
+  8 _vehicle_cycle_frame_09                                         0000170D GR
+  8 _vehicle_cycle_frame_0a                                         00001955 GR
+  8 _vehicle_cycle_frame_0b                                         00001B9D GR
+  8 _vehicle_cycle_palettes                                         00001DE5 GR
+  8 _vehicle_palette_cycle                                          00001E39 GR
+  8 _vehicle_palette_reset                                          00000000 GR
+  8 _vehicle_sprite_draw                                            00001EEC GR
+  8 _vehicle_sprite_load                                            00001E6D GR
+  8 _vehicle_sprite_load_order_10000_153                            00001EE8 R
+    b_scene_actor_show_data                                         ******** GX
+    b_vehicle_palette_cycle                                     =   00000076 G
+    b_vehicle_palette_reset                                     =   00000076 G
+    b_vehicle_sprite_draw                                       =   00000076 G
+    b_vehicle_sprite_load                                       =   00000076 G
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        2   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_118                                  size     1F6D   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

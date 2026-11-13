@@ -1,0 +1,27 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_banks": [
+    252,
+    253
+  ],
+  "data_bank_bytes": [
+    14332
+  ],
+  "assets": 100,
+  "pattern_pairs": 166,
+  "effects": [
+    [
+      168,
+      3,
+      70,
+      79
+    ],
+    [
+      169,
+      3,
+      121,
+      130
+    ]
+  ],
+  "scope": "Seven ordinary enemy casters. Actor17/18 overlays and four missing alternate poses; special bosses and integrated choreography remain separate."
+}

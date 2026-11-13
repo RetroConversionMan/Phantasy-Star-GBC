@@ -1,0 +1,49 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    __moduchar                                                      ******** GX
+    __moduint                                                       ******** GX
+  8 _arrive_begin                                                   0000033C R
+  8 _destination                                                    00000000 R
+  8 _fade_in                                                        00000123 R
+  8 _fade_tick                                                      00000457 R
+  8 _finish                                                         00000149 R
+  8 _map_music                                                      0000010B R
+    _memset                                                         ******** GX
+  8 _move_ship                                                      0000039E R
+  8 _roads                                                          00000093 R
+  8 _routes                                                         000000C3 R
+  8 _space_begin                                                    000002FD R
+  8 _travel_begin                                                   0000016B GR
+  8 _travel_fade_color                                              00000B1A GR
+  8 _travel_space_row                                               00000A38 GR
+  8 _travel_step                                                    0000046D GR
+    b_travel_begin                                              =   00000077 G
+    b_travel_fade_color                                         =   00000077 G
+    b_travel_space_row                                          =   00000077 G
+    b_travel_step                                               =   00000077 G
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_119                                  size      B9A   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

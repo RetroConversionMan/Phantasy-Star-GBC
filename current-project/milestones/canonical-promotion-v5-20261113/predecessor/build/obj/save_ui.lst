@@ -1,0 +1,1469 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module save_ui
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _start_game
+                                     11 	.globl b_ui_number
+                                     12 	.globl _ui_number
+                                     13 	.globl b_ui_text
+                                     14 	.globl _ui_text
+                                     15 	.globl b_ui_panel
+                                     16 	.globl _ui_panel
+                                     17 	.globl b_notice
+                                     18 	.globl _notice
+                                     19 	.globl b_menu_screen
+                                     20 	.globl _menu_screen
+                                     21 	.globl b_title_screen
+                                     22 	.globl _title_screen
+                                     23 	.globl _game_write_slot
+                                     24 	.globl _game_read_slot
+                                     25 	.globl b_save_name_input
+                                     26 	.globl _save_name_input
+                                     27 	.globl b_save_name_move
+                                     28 	.globl _save_name_move
+                                     29 	.globl b_save_name_begin
+                                     30 	.globl _save_name_begin
+                                     31 	.globl b_save_name_character
+                                     32 	.globl _save_name_character
+                                     33 	.globl b_save_label_encode
+                                     34 	.globl _save_label_encode
+                                     35 	.globl b_save_label_decode
+                                     36 	.globl _save_label_decode
+                                     37 	.globl b_save_slot_offset
+                                     38 	.globl _save_slot_offset
+                                     39 	.globl _save_ui_mode
+                                     40 	.globl _save_ui_choice
+                                     41 	.globl _save_valid_mask
+                                     42 	.globl _save_active_slot
+                                     43 	.globl b_save_ui_scan
+                                     44 	.globl _save_ui_scan
+                                     45 	.globl b_save_ui_open
+                                     46 	.globl _save_ui_open
+                                     47 	.globl b_save_ui_tick
+                                     48 	.globl _save_ui_tick
+                                     49 ;--------------------------------------------------------
+                                     50 ; special function registers
+                                     51 ;--------------------------------------------------------
+                                     52 	.area _HRAM
+                                     53 ;--------------------------------------------------------
+                                     54 ; ram data
+                                     55 ;--------------------------------------------------------
+                                     56 	.area _DATA
+    00000000                         57 _labels:
+    00000000                         58 	.ds 30
+    0000001E                         59 _editor:
+    0000001E                         60 	.ds 7
+    00000025                         61 _return_state:
+    00000025                         62 	.ds 1
+    00000026                         63 _answer:
+    00000026                         64 	.ds 1
+    00000027                         65 _name_repeat:
+    00000027                         66 	.ds 1
+    00000028                         67 _name_keys:
+    00000028                         68 	.ds 1
+    00000029                         69 _save_active_slot::
+    00000029                         70 	.ds 1
+    0000002A                         71 _save_valid_mask::
+    0000002A                         72 	.ds 1
+    0000002B                         73 _save_ui_choice::
+    0000002B                         74 	.ds 1
+    0000002C                         75 _save_ui_mode::
+    0000002C                         76 	.ds 1
+                                     77 ;--------------------------------------------------------
+                                     78 ; ram data
+                                     79 ;--------------------------------------------------------
+                                     80 	.area _INITIALIZED
+                                     81 ;--------------------------------------------------------
+                                     82 ; absolute external ram data
+                                     83 ;--------------------------------------------------------
+                                     84 	.area _DABS (ABS)
+                                     85 ;--------------------------------------------------------
+                                     86 ; global & static initialisations
+                                     87 ;--------------------------------------------------------
+                                     88 	.area _HOME
+                                     89 	.area _GSINIT
+                                     90 	.area _GSFINAL
+                                     91 	.area _GSINIT
+                                     92 ;--------------------------------------------------------
+                                     93 ; Home
+                                     94 ;--------------------------------------------------------
+                                     95 	.area _HOME
+                                     96 	.area _HOME
+                                     97 ;--------------------------------------------------------
+                                     98 ; code
+                                     99 ;--------------------------------------------------------
+                                    100 	.area _CODE_122
+                                    101 ;src/save_ui.c:12: static void text(uint8_t x,uint8_t y,const char *s) {
+                                    102 ;	---------------------------------
+                                    103 ; Function text
+                                    104 ; ---------------------------------
+    00000000                        105 _text:
+    00000000 E8 E9            [16]  106 	add	sp, #-23
+    00000002 F8 16            [12]  107 	ldhl	sp,	#22
+    00000004 32               [ 8]  108 	ld	(hl-), a
+    00000005 73               [ 8]  109 	ld	(hl), e
+                                    110 ;src/save_ui.c:13: char copy[21];uint8_t i=0;while(s[i]&&i<20u){copy[i]=s[i];++i;}copy[i]=0;ui_text(x,y,copy);
+    00000006 0E 00            [ 8]  111 	ld	c, #0x00
+    00000008                        112 00102$:
+    00000008 F8 19            [12]  113 	ldhl	sp,#25
+    0000000A 2A               [ 8]  114 	ld	a, (hl+)
+    0000000B 5F               [ 4]  115 	ld	e, a
+    0000000C 56               [ 8]  116 	ld	d, (hl)
+    0000000D 69               [ 4]  117 	ld	l, c
+    0000000E 26 00            [ 8]  118 	ld	h, #0x00
+    00000010 19               [ 8]  119 	add	hl, de
+    00000011 5D               [ 4]  120 	ld	e, l
+    00000012 54               [ 4]  121 	ld	d, h
+    00000013 1A               [ 8]  122 	ld	a, (de)
+    00000014 47               [ 4]  123 	ld	b, a
+    00000015 59               [ 4]  124 	ld	e, c
+    00000016 16 00            [ 8]  125 	ld	d, #0x00
+    00000018 21 00 00         [12]  126 	ld	hl, #0
+    0000001B 39               [ 8]  127 	add	hl, sp
+    0000001C 19               [ 8]  128 	add	hl, de
+    0000001D 78               [ 4]  129 	ld	a, b
+    0000001E B7               [ 4]  130 	or	a, a
+    0000001F 28 09            [12]  131 	jr	Z, 00104$
+    00000021 79               [ 4]  132 	ld	a, c
+    00000022 D6 14            [ 8]  133 	sub	a, #0x14
+    00000024 30 04            [12]  134 	jr	NC, 00104$
+    00000026 70               [ 8]  135 	ld	(hl), b
+    00000027 0C               [ 4]  136 	inc	c
+    00000028 18 DE            [12]  137 	jr	00102$
+    0000002A                        138 00104$:
+    0000002A 36 00            [12]  139 	ld	(hl), #0x00
+    0000002C 21 00 00         [12]  140 	ld	hl, #0
+    0000002F 39               [ 8]  141 	add	hl, sp
+    00000030 E5               [16]  142 	push	hl
+    00000031 F8 17            [12]  143 	ldhl	sp,	#23
+    00000033 2A               [ 8]  144 	ld	a, (hl+)
+    00000034 57               [ 4]  145 	ld	d, a
+    00000035 5E               [ 8]  146 	ld	e, (hl)
+    00000036 D5               [16]  147 	push	de
+    00000037 1Er00            [ 8]  148 	ld	e, #b_ui_text
+    00000039 21r00r00         [12]  149 	ld	hl, #_ui_text
+    0000003C CDr00r00         [24]  150 	call	___sdcc_bcall_ehl
+                                    151 ;src/save_ui.c:14: }
+    0000003F E8 1B            [16]  152 	add	sp, #27
+    00000041 E1               [12]  153 	pop	hl
+    00000042 F1               [12]  154 	pop	af
+    00000043 E9               [ 4]  155 	jp	(hl)
+                                    156 ;src/save_ui.c:15: static void read_label(uint8_t slot) {
+                                    157 ;	---------------------------------
+                                    158 ; Function read_label
+                                    159 ; ---------------------------------
+    00000044                        160 _read_label:
+    00000044 E8 F4            [16]  161 	add	sp, #-12
+    00000046 F8 0A            [12]  162 	ldhl	sp,	#10
+    00000048 77               [ 8]  163 	ld	(hl), a
+                                    164 ;src/save_ui.c:16: uint8_t data[8],i;uint16_t address=0xa000u+SAVE_LABEL_OFFSET+(uint16_t)slot*SAVE_LABEL_BYTES;
+    00000049 4E               [ 8]  165 	ld	c, (hl)
+    0000004A 06 00            [ 8]  166 	ld	b, #0x00
+    0000004C 69               [ 4]  167 	ld	l, c
+    0000004D 60               [ 4]  168 	ld	h, b
+    0000004E 29               [ 8]  169 	add	hl, hl
+    0000004F 29               [ 8]  170 	add	hl, hl
+    00000050 29               [ 8]  171 	add	hl, hl
+    00000051 4D               [ 4]  172 	ld	c, l
+    00000052 7C               [ 4]  173 	ld	a, h
+    00000053 C6 B4            [ 8]  174 	add	a, #0xb4
+    00000055 F8 08            [12]  175 	ldhl	sp,	#8
+    00000057 71               [ 8]  176 	ld	(hl), c
+    00000058 23               [ 8]  177 	inc	hl
+    00000059 77               [ 8]  178 	ld	(hl), a
+                                    179 ;src/save_ui.c:17: ENABLE_RAM_MBC5;SWITCH_RAM_MBC5(0);
+    0000005A 21r00r00         [12]  180 	ld	hl, #_rRAMG
+    0000005D 36 0A            [12]  181 	ld	(hl), #0x0a
+    0000005F AF               [ 4]  182 	xor	a, a
+    00000060 EAr00r00         [16]  183 	ld	(#_rRAMB),a
+                                    184 ;src/save_ui.c:18: for(i=0;i<8u;++i)data[i]=*(volatile uint8_t *)(address+i);
+    00000063 F8 0B            [12]  185 	ldhl	sp,	#11
+    00000065 36 00            [12]  186 	ld	(hl), #0x00
+    00000067                        187 00102$:
+    00000067 E5               [16]  188 	push	hl
+    00000068 21 02 00         [12]  189 	ld	hl, #2
+    0000006B 39               [ 8]  190 	add	hl, sp
+    0000006C 5D               [ 4]  191 	ld	e, l
+    0000006D 54               [ 4]  192 	ld	d, h
+    0000006E E1               [12]  193 	pop	hl
+    0000006F F8 0B            [12]  194 	ldhl	sp,	#11
+    00000071 6E               [ 8]  195 	ld	l, (hl)
+    00000072 26 00            [ 8]  196 	ld	h, #0x00
+    00000074 19               [ 8]  197 	add	hl, de
+    00000075 4D               [ 4]  198 	ld	c, l
+    00000076 44               [ 4]  199 	ld	b, h
+    00000077 F8 0B            [12]  200 	ldhl	sp,	#11
+    00000079 7E               [ 8]  201 	ld	a, (hl)
+    0000007A F8 08            [12]  202 	ldhl	sp,	#8
+    0000007C 5E               [ 8]  203 	ld	e, (hl)
+    0000007D 23               [ 8]  204 	inc	hl
+    0000007E 56               [ 8]  205 	ld	d, (hl)
+    0000007F 6F               [ 4]  206 	ld	l, a
+    00000080 26 00            [ 8]  207 	ld	h, #0x00
+    00000082 19               [ 8]  208 	add	hl, de
+    00000083 7E               [ 8]  209 	ld	a, (hl)
+    00000084 02               [ 8]  210 	ld	(bc), a
+    00000085 F8 0B            [12]  211 	ldhl	sp,	#11
+    00000087 34               [12]  212 	inc	(hl)
+    00000088 7E               [ 8]  213 	ld	a, (hl)
+    00000089 D6 08            [ 8]  214 	sub	a, #0x08
+    0000008B 38 DA            [12]  215 	jr	C, 00102$
+                                    216 ;src/save_ui.c:19: DISABLE_RAM_MBC5;save_label_decode(labels[slot],data);labels[slot][5]=0;
+    0000008D AF               [ 4]  217 	xor	a, a
+    0000008E EAr00r00         [16]  218 	ld	(#_rRAMG),a
+    00000091 F8 0A            [12]  219 	ldhl	sp,	#10
+    00000093 4E               [ 8]  220 	ld	c, (hl)
+    00000094 06 00            [ 8]  221 	ld	b, #0x00
+    00000096 69               [ 4]  222 	ld	l, c
+    00000097 60               [ 4]  223 	ld	h, b
+    00000098 29               [ 8]  224 	add	hl, hl
+    00000099 09               [ 8]  225 	add	hl, bc
+    0000009A 29               [ 8]  226 	add	hl, hl
+    0000009B 4D               [ 4]  227 	ld	c, l
+    0000009C 44               [ 4]  228 	ld	b, h
+    0000009D 21r00r00         [12]  229 	ld	hl, #_labels
+    000000A0 09               [ 8]  230 	add	hl, bc
+    000000A1 5D               [ 4]  231 	ld	e, l
+    000000A2 54               [ 4]  232 	ld	d, h
+    000000A3 C5               [16]  233 	push	bc
+    000000A4 21 02 00         [12]  234 	ld	hl, #2
+    000000A7 39               [ 8]  235 	add	hl, sp
+    000000A8 E5               [16]  236 	push	hl
+    000000A9 D5               [16]  237 	push	de
+    000000AA 1Er00            [ 8]  238 	ld	e, #b_save_label_decode
+    000000AC 21r00r00         [12]  239 	ld	hl, #_save_label_decode
+    000000AF CDr00r00         [24]  240 	call	___sdcc_bcall_ehl
+    000000B2 E8 04            [16]  241 	add	sp, #4
+    000000B4 C1               [12]  242 	pop	bc
+    000000B5 21r05r00         [12]  243 	ld	hl, #_labels + 0x0005
+    000000B8 09               [ 8]  244 	add	hl, bc
+    000000B9 36 00            [12]  245 	ld	(hl), #0x00
+                                    246 ;src/save_ui.c:20: }
+    000000BB E8 0C            [16]  247 	add	sp, #12
+    000000BD C9               [16]  248 	ret
+                                    249 ;src/save_ui.c:21: static void write_label(uint8_t slot) {
+                                    250 ;	---------------------------------
+                                    251 ; Function write_label
+                                    252 ; ---------------------------------
+    000000BE                        253 _write_label:
+    000000BE E8 F3            [16]  254 	add	sp, #-13
+    000000C0 F8 0C            [12]  255 	ldhl	sp,	#12
+    000000C2 77               [ 8]  256 	ld	(hl), a
+                                    257 ;src/save_ui.c:22: uint8_t data[8],i;uint16_t address=0xa000u+SAVE_LABEL_OFFSET+(uint16_t)slot*SAVE_LABEL_BYTES;
+    000000C3 4E               [ 8]  258 	ld	c, (hl)
+    000000C4 06 00            [ 8]  259 	ld	b, #0x00
+    000000C6 69               [ 4]  260 	ld	l, c
+    000000C7 60               [ 4]  261 	ld	h, b
+    000000C8 29               [ 8]  262 	add	hl, hl
+    000000C9 29               [ 8]  263 	add	hl, hl
+    000000CA 29               [ 8]  264 	add	hl, hl
+    000000CB 4D               [ 4]  265 	ld	c, l
+    000000CC 7C               [ 4]  266 	ld	a, h
+    000000CD C6 B4            [ 8]  267 	add	a, #0xb4
+    000000CF 47               [ 4]  268 	ld	b, a
+    000000D0 F8 0A            [12]  269 	ldhl	sp,	#10
+    000000D2 71               [ 8]  270 	ld	(hl), c
+    000000D3 23               [ 8]  271 	inc	hl
+    000000D4 70               [ 8]  272 	ld	(hl), b
+                                    273 ;src/save_ui.c:23: if(!save_label_encode(data,editor.name))return;
+    000000D5 01r1Er00         [12]  274 	ld	bc, #_editor+0
+    000000D8 21 00 00         [12]  275 	ld	hl, #0
+    000000DB 39               [ 8]  276 	add	hl, sp
+    000000DC C5               [16]  277 	push	bc
+    000000DD E5               [16]  278 	push	hl
+    000000DE 1Er00            [ 8]  279 	ld	e, #b_save_label_encode
+    000000E0 21r00r00         [12]  280 	ld	hl, #_save_label_encode
+    000000E3 CDr00r00         [24]  281 	call	___sdcc_bcall_ehl
+    000000E6 E8 04            [16]  282 	add	sp, #4
+    000000E8 F8 09            [12]  283 	ldhl	sp,#9
+    000000EA 77               [ 8]  284 	ld	(hl), a
+    000000EB 7E               [ 8]  285 	ld	a, (hl)
+    000000EC B7               [ 4]  286 	or	a, a
+    000000ED 28 63            [12]  287 	jr	Z, 00108$
+                                    288 ;src/save_ui.c:24: ENABLE_RAM_MBC5;SWITCH_RAM_MBC5(0);*(volatile uint8_t *)(address+5u)=0;
+    000000EF 21r00r00         [12]  289 	ld	hl, #_rRAMG
+    000000F2 36 0A            [12]  290 	ld	(hl), #0x0a
+    000000F4 AF               [ 4]  291 	xor	a, a
+    000000F5 EAr00r00         [16]  292 	ld	(#_rRAMB),a
+    000000F8 F8 0A            [12]  293 	ldhl	sp,	#10
+    000000FA 3A               [ 8]  294 	ld	a, (hl-)
+    000000FB 2B               [ 8]  295 	dec	hl
+    000000FC 77               [ 8]  296 	ld	(hl), a
+    000000FD F8 0B            [12]  297 	ldhl	sp,	#11
+    000000FF 3A               [ 8]  298 	ld	a, (hl-)
+    00000100 2B               [ 8]  299 	dec	hl
+    00000101 32               [ 8]  300 	ld	(hl-), a
+    00000102 2A               [ 8]  301 	ld	a, (hl+)
+    00000103 5F               [ 4]  302 	ld	e, a
+    00000104 56               [ 8]  303 	ld	d, (hl)
+    00000105 21 05 00         [12]  304 	ld	hl, #0x0005
+    00000108 19               [ 8]  305 	add	hl, de
+    00000109 E5               [16]  306 	push	hl
+    0000010A 7D               [ 4]  307 	ld	a, l
+    0000010B F8 0C            [12]  308 	ldhl	sp,	#12
+    0000010D 77               [ 8]  309 	ld	(hl), a
+    0000010E E1               [12]  310 	pop	hl
+    0000010F 7C               [ 4]  311 	ld	a, h
+    00000110 F8 0B            [12]  312 	ldhl	sp,	#11
+    00000112 32               [ 8]  313 	ld	(hl-), a
+    00000113 2A               [ 8]  314 	ld	a, (hl+)
+    00000114 66               [ 8]  315 	ld	h, (hl)
+    00000115 6F               [ 4]  316 	ld	l, a
+    00000116 36 00            [12]  317 	ld	(hl), #0x00
+                                    318 ;src/save_ui.c:25: for(i=0;i<8u;++i)if(i!=5u)*(volatile uint8_t *)(address+i)=data[i];
+    00000118 1E 00            [ 8]  319 	ld	e, #0x00
+    0000011A                        320 00106$:
+    0000011A 7B               [ 4]  321 	ld	a, e
+    0000011B D6 05            [ 8]  322 	sub	a, #0x05
+    0000011D 28 16            [12]  323 	jr	Z, 00107$
+    0000011F 4B               [ 4]  324 	ld	c, e
+    00000120 06 00            [ 8]  325 	ld	b, #0x00
+    00000122 F8 08            [12]  326 	ldhl	sp,	#8
+    00000124 2A               [ 8]  327 	ld	a,	(hl+)
+    00000125 66               [ 8]  328 	ld	h, (hl)
+    00000126 6F               [ 4]  329 	ld	l, a
+    00000127 09               [ 8]  330 	add	hl, bc
+    00000128 4D               [ 4]  331 	ld	c, l
+    00000129 44               [ 4]  332 	ld	b, h
+    0000012A D5               [16]  333 	push	de
+    0000012B 16 00            [ 8]  334 	ld	d, #0x00
+    0000012D 21 02 00         [12]  335 	ld	hl, #2
+    00000130 39               [ 8]  336 	add	hl, sp
+    00000131 19               [ 8]  337 	add	hl, de
+    00000132 D1               [12]  338 	pop	de
+    00000133 7E               [ 8]  339 	ld	a, (hl)
+    00000134 02               [ 8]  340 	ld	(bc), a
+    00000135                        341 00107$:
+    00000135 1C               [ 4]  342 	inc	e
+    00000136 7B               [ 4]  343 	ld	a, e
+    00000137 D6 08            [ 8]  344 	sub	a, #0x08
+    00000139 38 DF            [12]  345 	jr	C, 00106$
+                                    346 ;src/save_ui.c:26: *(volatile uint8_t *)(address+5u)=data[5];DISABLE_RAM_MBC5;read_label(slot);
+    0000013B F8 05            [12]  347 	ldhl	sp,	#5
+    0000013D 7E               [ 8]  348 	ld	a, (hl)
+    0000013E F8 09            [12]  349 	ldhl	sp,	#9
+    00000140 22               [ 8]  350 	ld	(hl+), a
+    00000141 2A               [ 8]  351 	ld	a, (hl+)
+    00000142 5F               [ 4]  352 	ld	e, a
+    00000143 3A               [ 8]  353 	ld	a, (hl-)
+    00000144 2B               [ 8]  354 	dec	hl
+    00000145 57               [ 4]  355 	ld	d, a
+    00000146 7E               [ 8]  356 	ld	a, (hl)
+    00000147 12               [ 8]  357 	ld	(de), a
+    00000148 AF               [ 4]  358 	xor	a, a
+    00000149 EAr00r00         [16]  359 	ld	(#_rRAMG),a
+    0000014C F8 0C            [12]  360 	ldhl	sp,	#12
+    0000014E 7E               [ 8]  361 	ld	a, (hl)
+    0000014F CDr44r00         [24]  362 	call	_read_label
+    00000152                        363 00108$:
+                                    364 ;src/save_ui.c:27: }
+    00000152 E8 0D            [16]  365 	add	sp, #13
+    00000154 C9               [16]  366 	ret
+                                    367 ;src/save_ui.c:28: void save_ui_scan(void) RPG_BANKED {
+                                    368 ;	---------------------------------
+                                    369 ; Function save_ui_scan
+                                    370 ; ---------------------------------
+                         0000007A   371 	b_save_ui_scan	= 122
+    00000155                        372 _save_ui_scan::
+                                    373 ;src/save_ui.c:29: uint8_t i,first=255;save_valid_mask=0;
+    00000155 1E FF            [ 8]  374 	ld	e, #0xff
+    00000157 AF               [ 4]  375 	xor	a, a
+    00000158 EAr2Ar00         [16]  376 	ld	(#_save_valid_mask),a
+                                    377 ;src/save_ui.c:30: for(i=0;i<5u;++i){if(game_read_slot(i)){save_valid_mask|=1u<<i;if(first==255u)first=i;}read_label(i);}
+    0000015B 16 00            [ 8]  378 	ld	d, #0x00
+    0000015D                        379 00111$:
+    0000015D D5               [16]  380 	push	de
+    0000015E 7A               [ 4]  381 	ld	a, d
+    0000015F CDr00r00         [24]  382 	call	_game_read_slot
+    00000162 D1               [12]  383 	pop	de
+    00000163 B7               [ 4]  384 	or	a, a
+    00000164 28 14            [12]  385 	jr	Z, 00104$
+    00000166 42               [ 4]  386 	ld	b, d
+    00000167 3E 01            [ 8]  387 	ld	a, #0x01
+    00000169 04               [ 4]  388 	inc	b
+    0000016A 18 01            [12]  389 	jr	00159$
+    0000016C                        390 00158$:
+    0000016C 87               [ 4]  391 	add	a, a
+    0000016D                        392 00159$:
+    0000016D 05               [ 4]  393 	dec	b
+    0000016E 20 FC            [12]  394 	jr	NZ,00158$
+    00000170 21r2Ar00         [12]  395 	ld	hl, #_save_valid_mask
+    00000173 B6               [ 8]  396 	or	a, (hl)
+    00000174 77               [ 8]  397 	ld	(hl), a
+    00000175 7B               [ 4]  398 	ld	a, e
+    00000176 3C               [ 4]  399 	inc	a
+    00000177 20 01            [12]  400 	jr	NZ, 00104$
+    00000179 5A               [ 4]  401 	ld	e, d
+    0000017A                        402 00104$:
+    0000017A D5               [16]  403 	push	de
+    0000017B 7A               [ 4]  404 	ld	a, d
+    0000017C CDr44r00         [24]  405 	call	_read_label
+    0000017F D1               [12]  406 	pop	de
+    00000180 14               [ 4]  407 	inc	d
+    00000181 7A               [ 4]  408 	ld	a, d
+    00000182 D6 05            [ 8]  409 	sub	a, #0x05
+    00000184 38 D7            [12]  410 	jr	C, 00111$
+                                    411 ;src/save_ui.c:31: if(first==255u)save_active_slot=0;
+    00000186 7B               [ 4]  412 	ld	a, e
+    00000187 3C               [ 4]  413 	inc	a
+    00000188 20 05            [12]  414 	jr	NZ, 00109$
+    0000018A EAr29r00         [16]  415 	ld	(#_save_active_slot),a
+    0000018D 18 1D            [12]  416 	jr	00110$
+    0000018F                        417 00109$:
+                                    418 ;src/save_ui.c:32: else if(!(save_valid_mask&(1u<<save_active_slot)))save_active_slot=first;
+    0000018F 21r29r00         [12]  419 	ld	hl, #_save_active_slot
+    00000192 7E               [ 8]  420 	ld	a, (hl)
+    00000193 F5               [16]  421 	push	af
+    00000194 01 01 00         [12]  422 	ld	bc, #0x0001
+    00000197 F1               [12]  423 	pop	af
+    00000198 3C               [ 4]  424 	inc	a
+    00000199 18 04            [12]  425 	jr	00165$
+    0000019B                        426 00164$:
+    0000019B CB 21            [ 8]  427 	sla	c
+    0000019D CB 10            [ 8]  428 	rl	b
+    0000019F                        429 00165$:
+    0000019F 3D               [ 4]  430 	dec	a
+    000001A0 20 F9            [12]  431 	jr	NZ,00164$
+    000001A2 FAr2Ar00         [16]  432 	ld	a, (_save_valid_mask)
+    000001A5 A1               [ 4]  433 	and	a, c
+    000001A6 0E 00            [ 8]  434 	ld	c, #0x00
+    000001A8 B1               [ 4]  435 	or	a, c
+    000001A9 20 01            [12]  436 	jr	NZ, 00110$
+    000001AB 73               [ 8]  437 	ld	(hl), e
+    000001AC                        438 00110$:
+                                    439 ;src/save_ui.c:33: game_read_slot(save_active_slot);saved_position_valid=!!save_valid_mask;
+    000001AC FAr29r00         [16]  440 	ld	a, (_save_active_slot)
+    000001AF CDr00r00         [24]  441 	call	_game_read_slot
+    000001B2 FAr2Ar00         [16]  442 	ld	a, (#_save_valid_mask)
+    000001B5 D6 01            [ 8]  443 	sub	a, #0x01
+    000001B7 3E 00            [ 8]  444 	ld	a, #0x00
+    000001B9 17               [ 4]  445 	rla
+    000001BA EE 01            [ 8]  446 	xor	a, #0x01
+    000001BC EAr00r00         [16]  447 	ld	(#_saved_position_valid),a
+                                    448 ;src/save_ui.c:34: }
+    000001BF C9               [16]  449 	ret
+                                    450 ;src/save_ui.c:35: static void back(void) {
+                                    451 ;	---------------------------------
+                                    452 ; Function back
+                                    453 ; ---------------------------------
+    000001C0                        454 _back:
+                                    455 ;src/save_ui.c:36: if(return_state==0u){title_choice=saved_position_valid?1u:0u;title_screen();}
+    000001C0 FAr25r00         [16]  456 	ld	a, (#_return_state)
+    000001C3 B7               [ 4]  457 	or	a, a
+    000001C4 20 14            [12]  458 	jr	NZ, 00102$
+    000001C6 FAr00r00         [16]  459 	ld	a, (#_saved_position_valid)
+    000001C9 B7               [ 4]  460 	or	a, a
+    000001CA 3E 01            [ 8]  461 	ld	a, #0x01
+    000001CC 20 01            [12]  462 	jr	NZ, 00107$
+    000001CE AF               [ 4]  463 	xor	a, a
+    000001CF                        464 00107$:
+    000001CF EAr00r00         [16]  465 	ld	(#_title_choice),a
+    000001D2 1Er00            [ 8]  466 	ld	e, #b_title_screen
+    000001D4 21r00r00         [12]  467 	ld	hl, #_title_screen
+    000001D7 C3r00r00         [16]  468 	jp  ___sdcc_bcall_ehl
+    000001DA                        469 00102$:
+                                    470 ;src/save_ui.c:37: else menu_screen();
+    000001DA 1Er00            [ 8]  471 	ld	e, #b_menu_screen
+    000001DC 21r00r00         [12]  472 	ld	hl, #_menu_screen
+                                    473 ;src/save_ui.c:38: }
+    000001DF C3r00r00         [16]  474 	jp  ___sdcc_bcall_ehl
+                                    475 ;src/save_ui.c:39: static void action_screen(void) {
+                                    476 ;	---------------------------------
+                                    477 ; Function action_screen
+                                    478 ; ---------------------------------
+    000001E2                        479 _action_screen:
+                                    480 ;src/save_ui.c:40: screen_state=STATE_SAVE_ACTION;HIDE_SPRITES;ui_panel(40,13);
+    000001E2 21r00r00         [12]  481 	ld	hl, #_screen_state
+    000001E5 36 19            [12]  482 	ld	(hl), #0x19
+    000001E7 F0r00            [12]  483 	ldh	a, (_LCDC_REG + 0)
+    000001E9 E6 FD            [ 8]  484 	and	a, #0xfd
+    000001EB E0r00            [12]  485 	ldh	(_LCDC_REG + 0), a
+    000001ED 3E 0D            [ 8]  486 	ld	a, #0x0d
+    000001EF F5               [16]  487 	push	af
+    000001F0 33               [ 8]  488 	inc	sp
+    000001F1 3E 28            [ 8]  489 	ld	a, #0x28
+    000001F3 F5               [16]  490 	push	af
+    000001F4 33               [ 8]  491 	inc	sp
+    000001F5 1Er00            [ 8]  492 	ld	e, #b_ui_panel
+    000001F7 21r00r00         [12]  493 	ld	hl, #_ui_panel
+    000001FA CDr00r00         [24]  494 	call	___sdcc_bcall_ehl
+    000001FD E1               [12]  495 	pop	hl
+                                    496 ;src/save_ui.c:41: text(4,1,"SAVED GAMES");text(4,4,"CONTINUE");text(4,6,"DELETE");
+    000001FE 11r3Ar02         [12]  497 	ld	de, #___str_0
+    00000201 D5               [16]  498 	push	de
+    00000202 1E 01            [ 8]  499 	ld	e, #0x01
+    00000204 3E 04            [ 8]  500 	ld	a, #0x04
+    00000206 CDr00r00         [24]  501 	call	_text
+    00000209 11r46r02         [12]  502 	ld	de, #___str_1
+    0000020C D5               [16]  503 	push	de
+    0000020D 3E 04            [ 8]  504 	ld	a,#0x04
+    0000020F 5F               [ 4]  505 	ld	e,a
+    00000210 CDr00r00         [24]  506 	call	_text
+    00000213 11r4Fr02         [12]  507 	ld	de, #___str_2
+    00000216 D5               [16]  508 	push	de
+    00000217 1E 06            [ 8]  509 	ld	e, #0x06
+    00000219 3E 04            [ 8]  510 	ld	a, #0x04
+    0000021B CDr00r00         [24]  511 	call	_text
+                                    512 ;src/save_ui.c:42: text(2,4+save_ui_choice*2u,">");text(1,10,"A:CHOOSE  B:BACK");
+    0000021E 01r56r02         [12]  513 	ld	bc, #___str_3+0
+    00000221 FAr2Br00         [16]  514 	ld	a, (_save_ui_choice)
+    00000224 87               [ 4]  515 	add	a, a
+    00000225 C6 04            [ 8]  516 	add	a, #0x04
+    00000227 C5               [16]  517 	push	bc
+    00000228 5F               [ 4]  518 	ld	e, a
+    00000229 3E 02            [ 8]  519 	ld	a, #0x02
+    0000022B CDr00r00         [24]  520 	call	_text
+    0000022E 11r58r02         [12]  521 	ld	de, #___str_4
+    00000231 D5               [16]  522 	push	de
+    00000232 1E 0A            [ 8]  523 	ld	e, #0x0a
+    00000234 3E 01            [ 8]  524 	ld	a, #0x01
+    00000236 CDr00r00         [24]  525 	call	_text
+                                    526 ;src/save_ui.c:43: }
+    00000239 C9               [16]  527 	ret
+    0000023A                        528 ___str_0:
+    0000023A 53 41 56 45 44 20 47   529 	.ascii "SAVED GAMES"
+             41 4D 45 53
+    00000245 00                     530 	.db 0x00
+    00000246                        531 ___str_1:
+    00000246 43 4F 4E 54 49 4E 55   532 	.ascii "CONTINUE"
+             45
+    0000024E 00                     533 	.db 0x00
+    0000024F                        534 ___str_2:
+    0000024F 44 45 4C 45 54 45      535 	.ascii "DELETE"
+    00000255 00                     536 	.db 0x00
+    00000256                        537 ___str_3:
+    00000256 3E                     538 	.ascii ">"
+    00000257 00                     539 	.db 0x00
+    00000258                        540 ___str_4:
+    00000258 41 3A 43 48 4F 4F 53   541 	.ascii "A:CHOOSE  B:BACK"
+             45 20 20 42 3A 42 41
+             43 4B
+    00000268 00                     542 	.db 0x00
+                                    543 ;src/save_ui.c:44: static void slot_screen(void) {
+                                    544 ;	---------------------------------
+                                    545 ; Function slot_screen
+                                    546 ; ---------------------------------
+    00000269                        547 _slot_screen:
+                                    548 ;src/save_ui.c:45: uint8_t i;screen_state=STATE_SAVE_SELECT;HIDE_SPRITES;ui_panel(0,18);
+    00000269 21r00r00         [12]  549 	ld	hl, #_screen_state
+    0000026C 36 1A            [12]  550 	ld	(hl), #0x1a
+    0000026E F0r00            [12]  551 	ldh	a, (_LCDC_REG + 0)
+    00000270 E6 FD            [ 8]  552 	and	a, #0xfd
+    00000272 E0r00            [12]  553 	ldh	(_LCDC_REG + 0), a
+    00000274 3E 12            [ 8]  554 	ld	a, #0x12
+    00000276 F5               [16]  555 	push	af
+    00000277 33               [ 8]  556 	inc	sp
+    00000278 AF               [ 4]  557 	xor	a, a
+    00000279 F5               [16]  558 	push	af
+    0000027A 33               [ 8]  559 	inc	sp
+    0000027B 1Er00            [ 8]  560 	ld	e, #b_ui_panel
+    0000027D 21r00r00         [12]  561 	ld	hl, #_ui_panel
+    00000280 CDr00r00         [24]  562 	call	___sdcc_bcall_ehl
+    00000283 E1               [12]  563 	pop	hl
+                                    564 ;src/save_ui.c:46: text(3,1,save_ui_mode==SAVE_UI_SAVE?"SAVE WHICH FILE?":save_ui_mode==SAVE_UI_LOAD?"LOAD WHICH FILE?":"ERASE WHICH FILE?");
+    00000284 FAr2Cr00         [16]  565 	ld	a, (#_save_ui_mode)
+    00000287 3D               [ 4]  566 	dec	a
+    00000288 20 05            [12]  567 	jr	NZ, 00106$
+    0000028A 01r16r03         [12]  568 	ld	bc, #___str_5+0
+    0000028D 18 0F            [12]  569 	jr	00107$
+    0000028F                        570 00106$:
+    0000028F FAr2Cr00         [16]  571 	ld	a, (#_save_ui_mode)
+    00000292 D6 02            [ 8]  572 	sub	a, #0x02
+    00000294 20 05            [12]  573 	jr	NZ, 00108$
+    00000296 01r27r03         [12]  574 	ld	bc, #___str_6+0
+    00000299 18 03            [12]  575 	jr	00109$
+    0000029B                        576 00108$:
+    0000029B 01r38r03         [12]  577 	ld	bc, #___str_7+0
+    0000029E                        578 00109$:
+    0000029E                        579 00107$:
+    0000029E C5               [16]  580 	push	bc
+    0000029F 1E 01            [ 8]  581 	ld	e, #0x01
+    000002A1 3E 03            [ 8]  582 	ld	a, #0x03
+    000002A3 CDr00r00         [24]  583 	call	_text
+                                    584 ;src/save_ui.c:47: for(i=0;i<5u;++i){ui_number(3,4+i*2u,i+1u);text(6,4+i*2u,(save_valid_mask&(1u<<i))?labels[i]:"EMPTY");}
+    000002A6 0E 00            [ 8]  585 	ld	c, #0x00
+    000002A8                        586 00102$:
+    000002A8 59               [ 4]  587 	ld	e, c
+    000002A9 1C               [ 4]  588 	inc	e
+    000002AA 16 00            [ 8]  589 	ld	d, #0x00
+    000002AC 79               [ 4]  590 	ld	a, c
+    000002AD 87               [ 4]  591 	add	a, a
+    000002AE C6 04            [ 8]  592 	add	a, #0x04
+    000002B0 47               [ 4]  593 	ld	b, a
+    000002B1 C5               [16]  594 	push	bc
+    000002B2 D5               [16]  595 	push	de
+    000002B3 C5               [16]  596 	push	bc
+    000002B4 33               [ 8]  597 	inc	sp
+    000002B5 3E 03            [ 8]  598 	ld	a, #0x03
+    000002B7 F5               [16]  599 	push	af
+    000002B8 33               [ 8]  600 	inc	sp
+    000002B9 1Er00            [ 8]  601 	ld	e, #b_ui_number
+    000002BB 21r00r00         [12]  602 	ld	hl, #_ui_number
+    000002BE CDr00r00         [24]  603 	call	___sdcc_bcall_ehl
+    000002C1 E8 04            [16]  604 	add	sp, #4
+    000002C3 C1               [12]  605 	pop	bc
+    000002C4 79               [ 4]  606 	ld	a, c
+    000002C5 F5               [16]  607 	push	af
+    000002C6 21 01 00         [12]  608 	ld	hl, #0x0001
+    000002C9 F1               [12]  609 	pop	af
+    000002CA 3C               [ 4]  610 	inc	a
+    000002CB 18 01            [12]  611 	jr	00153$
+    000002CD                        612 00152$:
+    000002CD 29               [ 8]  613 	add	hl, hl
+    000002CE                        614 00153$:
+    000002CE 3D               [ 4]  615 	dec	a
+    000002CF 20 FC            [12]  616 	jr	NZ,00152$
+    000002D1 FAr2Ar00         [16]  617 	ld	a, (_save_valid_mask)
+    000002D4 A5               [ 4]  618 	and	a, l
+    000002D5 1E 00            [ 8]  619 	ld	e, #0x00
+    000002D7 B3               [ 4]  620 	or	a, e
+    000002D8 28 0E            [12]  621 	jr	Z, 00110$
+    000002DA 59               [ 4]  622 	ld	e, c
+    000002DB 16 00            [ 8]  623 	ld	d, #0x00
+    000002DD 6B               [ 4]  624 	ld	l, e
+    000002DE 62               [ 4]  625 	ld	h, d
+    000002DF 29               [ 8]  626 	add	hl, hl
+    000002E0 19               [ 8]  627 	add	hl, de
+    000002E1 29               [ 8]  628 	add	hl, hl
+    000002E2 11r00r00         [12]  629 	ld	de, #_labels
+    000002E5 19               [ 8]  630 	add	hl, de
+    000002E6 18 03            [12]  631 	jr	00111$
+    000002E8                        632 00110$:
+    000002E8 21r4Ar03         [12]  633 	ld	hl, #___str_8
+    000002EB                        634 00111$:
+    000002EB C5               [16]  635 	push	bc
+    000002EC E5               [16]  636 	push	hl
+    000002ED 58               [ 4]  637 	ld	e, b
+    000002EE 3E 06            [ 8]  638 	ld	a, #0x06
+    000002F0 CDr00r00         [24]  639 	call	_text
+    000002F3 C1               [12]  640 	pop	bc
+    000002F4 0C               [ 4]  641 	inc	c
+    000002F5 79               [ 4]  642 	ld	a, c
+    000002F6 D6 05            [ 8]  643 	sub	a, #0x05
+    000002F8 38 AE            [12]  644 	jr	C, 00102$
+                                    645 ;src/save_ui.c:48: text(1,4+save_ui_choice*2u,">");text(1,16,"A:CHOOSE  B:BACK");
+    000002FA 01r50r03         [12]  646 	ld	bc, #___str_9
+    000002FD FAr2Br00         [16]  647 	ld	a, (_save_ui_choice)
+    00000300 87               [ 4]  648 	add	a, a
+    00000301 C6 04            [ 8]  649 	add	a, #0x04
+    00000303 5F               [ 4]  650 	ld	e, a
+    00000304 C5               [16]  651 	push	bc
+    00000305 3E 01            [ 8]  652 	ld	a, #0x01
+    00000307 CDr00r00         [24]  653 	call	_text
+    0000030A 11r52r03         [12]  654 	ld	de, #___str_10
+    0000030D D5               [16]  655 	push	de
+    0000030E 1E 10            [ 8]  656 	ld	e, #0x10
+    00000310 3E 01            [ 8]  657 	ld	a, #0x01
+    00000312 CDr00r00         [24]  658 	call	_text
+                                    659 ;src/save_ui.c:49: }
+    00000315 C9               [16]  660 	ret
+    00000316                        661 ___str_5:
+    00000316 53 41 56 45 20 57 48   662 	.ascii "SAVE WHICH FILE?"
+             49 43 48 20 46 49 4C
+             45 3F
+    00000326 00                     663 	.db 0x00
+    00000327                        664 ___str_6:
+    00000327 4C 4F 41 44 20 57 48   665 	.ascii "LOAD WHICH FILE?"
+             49 43 48 20 46 49 4C
+             45 3F
+    00000337 00                     666 	.db 0x00
+    00000338                        667 ___str_7:
+    00000338 45 52 41 53 45 20 57   668 	.ascii "ERASE WHICH FILE?"
+             48 49 43 48 20 46 49
+             4C 45 3F
+    00000349 00                     669 	.db 0x00
+    0000034A                        670 ___str_8:
+    0000034A 45 4D 50 54 59         671 	.ascii "EMPTY"
+    0000034F 00                     672 	.db 0x00
+    00000350                        673 ___str_9:
+    00000350 3E                     674 	.ascii ">"
+    00000351 00                     675 	.db 0x00
+    00000352                        676 ___str_10:
+    00000352 41 3A 43 48 4F 4F 53   677 	.ascii "A:CHOOSE  B:BACK"
+             45 20 20 42 3A 42 41
+             43 4B
+    00000362 00                     678 	.db 0x00
+                                    679 ;src/save_ui.c:50: static void confirm_screen(void) {
+                                    680 ;	---------------------------------
+                                    681 ; Function confirm_screen
+                                    682 ; ---------------------------------
+    00000363                        683 _confirm_screen:
+                                    684 ;src/save_ui.c:51: screen_state=STATE_SAVE_CONFIRM;ui_panel(64,10);
+    00000363 21r00r00         [12]  685 	ld	hl, #_screen_state
+    00000366 36 1B            [12]  686 	ld	(hl), #0x1b
+    00000368 3E 0A            [ 8]  687 	ld	a, #0x0a
+    0000036A F5               [16]  688 	push	af
+    0000036B 33               [ 8]  689 	inc	sp
+    0000036C 3E 40            [ 8]  690 	ld	a, #0x40
+    0000036E F5               [16]  691 	push	af
+    0000036F 33               [ 8]  692 	inc	sp
+    00000370 1Er00            [ 8]  693 	ld	e, #b_ui_panel
+    00000372 21r00r00         [12]  694 	ld	hl, #_ui_panel
+    00000375 CDr00r00         [24]  695 	call	___sdcc_bcall_ehl
+    00000378 E1               [12]  696 	pop	hl
+                                    697 ;src/save_ui.c:52: text(2,1,save_ui_mode==SAVE_UI_SAVE?"SAVE THIS FILE?":"ERASE THIS FILE?");
+    00000379 FAr2Cr00         [16]  698 	ld	a, (#_save_ui_mode)
+    0000037C 3D               [ 4]  699 	dec	a
+    0000037D 20 05            [12]  700 	jr	NZ, 00103$
+    0000037F 01rC3r03         [12]  701 	ld	bc, #___str_11+0
+    00000382 18 03            [12]  702 	jr	00104$
+    00000384                        703 00103$:
+    00000384 01rD3r03         [12]  704 	ld	bc, #___str_12+0
+    00000387                        705 00104$:
+    00000387 C5               [16]  706 	push	bc
+    00000388 1E 01            [ 8]  707 	ld	e, #0x01
+    0000038A 3E 02            [ 8]  708 	ld	a, #0x02
+    0000038C CDr00r00         [24]  709 	call	_text
+                                    710 ;src/save_ui.c:53: text(4,4,"YES");text(12,4,"NO");text(answer?10:2,4,">");
+    0000038F 11rE4r03         [12]  711 	ld	de, #___str_13
+    00000392 D5               [16]  712 	push	de
+    00000393 3E 04            [ 8]  713 	ld	a,#0x04
+    00000395 5F               [ 4]  714 	ld	e,a
+    00000396 CDr00r00         [24]  715 	call	_text
+    00000399 11rE8r03         [12]  716 	ld	de, #___str_14
+    0000039C D5               [16]  717 	push	de
+    0000039D 1E 04            [ 8]  718 	ld	e, #0x04
+    0000039F 3E 0C            [ 8]  719 	ld	a, #0x0c
+    000003A1 CDr00r00         [24]  720 	call	_text
+    000003A4 01rEBr03         [12]  721 	ld	bc, #___str_15+0
+    000003A7 FAr26r00         [16]  722 	ld	a, (#_answer)
+    000003AA B7               [ 4]  723 	or	a, a
+    000003AB 3E 0A            [ 8]  724 	ld	a, #0x0a
+    000003AD 20 02            [12]  725 	jr	NZ, 00106$
+    000003AF 3E 02            [ 8]  726 	ld	a, #0x02
+    000003B1                        727 00106$:
+    000003B1 C5               [16]  728 	push	bc
+    000003B2 1E 04            [ 8]  729 	ld	e, #0x04
+    000003B4 CDr00r00         [24]  730 	call	_text
+                                    731 ;src/save_ui.c:54: text(1,7,"A:CHOOSE  B:BACK");
+    000003B7 11rEDr03         [12]  732 	ld	de, #___str_16
+    000003BA D5               [16]  733 	push	de
+    000003BB 1E 07            [ 8]  734 	ld	e, #0x07
+    000003BD 3E 01            [ 8]  735 	ld	a, #0x01
+    000003BF CDr00r00         [24]  736 	call	_text
+                                    737 ;src/save_ui.c:55: }
+    000003C2 C9               [16]  738 	ret
+    000003C3                        739 ___str_11:
+    000003C3 53 41 56 45 20 54 48   740 	.ascii "SAVE THIS FILE?"
+             49 53 20 46 49 4C 45
+             3F
+    000003D2 00                     741 	.db 0x00
+    000003D3                        742 ___str_12:
+    000003D3 45 52 41 53 45 20 54   743 	.ascii "ERASE THIS FILE?"
+             48 49 53 20 46 49 4C
+             45 3F
+    000003E3 00                     744 	.db 0x00
+    000003E4                        745 ___str_13:
+    000003E4 59 45 53               746 	.ascii "YES"
+    000003E7 00                     747 	.db 0x00
+    000003E8                        748 ___str_14:
+    000003E8 4E 4F                  749 	.ascii "NO"
+    000003EA 00                     750 	.db 0x00
+    000003EB                        751 ___str_15:
+    000003EB 3E                     752 	.ascii ">"
+    000003EC 00                     753 	.db 0x00
+    000003ED                        754 ___str_16:
+    000003ED 41 3A 43 48 4F 4F 53   755 	.ascii "A:CHOOSE  B:BACK"
+             45 20 20 42 3A 42 41
+             43 4B
+    000003FD 00                     756 	.db 0x00
+                                    757 ;src/save_ui.c:56: static void name_screen(void) {
+                                    758 ;	---------------------------------
+                                    759 ; Function name_screen
+                                    760 ; ---------------------------------
+    000003FE                        761 _name_screen:
+    000003FE E8 F6            [16]  762 	add	sp, #-10
+                                    763 ;src/save_ui.c:57: uint8_t i,c;char one[2],name[6];screen_state=STATE_SAVE_NAME;HIDE_SPRITES;ui_panel(0,18);
+    00000400 21r00r00         [12]  764 	ld	hl, #_screen_state
+    00000403 36 1C            [12]  765 	ld	(hl), #0x1c
+    00000405 F0r00            [12]  766 	ldh	a, (_LCDC_REG + 0)
+    00000407 E6 FD            [ 8]  767 	and	a, #0xfd
+    00000409 E0r00            [12]  768 	ldh	(_LCDC_REG + 0), a
+    0000040B 3E 12            [ 8]  769 	ld	a, #0x12
+    0000040D F5               [16]  770 	push	af
+    0000040E 33               [ 8]  771 	inc	sp
+    0000040F AF               [ 4]  772 	xor	a, a
+    00000410 F5               [16]  773 	push	af
+    00000411 33               [ 8]  774 	inc	sp
+    00000412 1Er00            [ 8]  775 	ld	e, #b_ui_panel
+    00000414 21r00r00         [12]  776 	ld	hl, #_ui_panel
+    00000417 CDr00r00         [24]  777 	call	___sdcc_bcall_ehl
+    0000041A E1               [12]  778 	pop	hl
+                                    779 ;src/save_ui.c:58: text(3,0,"NAME THIS FILE");for(i=0;i<5u;++i)name[i]=editor.name[i];name[5]=0;text(7,2,name);
+    0000041B 11rFBr04         [12]  780 	ld	de, #___str_17
+    0000041E D5               [16]  781 	push	de
+    0000041F 1E 00            [ 8]  782 	ld	e, #0x00
+    00000421 3E 03            [ 8]  783 	ld	a, #0x03
+    00000423 CDr00r00         [24]  784 	call	_text
+    00000426 0E 00            [ 8]  785 	ld	c, #0x00
+    00000428                        786 00103$:
+    00000428 59               [ 4]  787 	ld	e, c
+    00000429 16 00            [ 8]  788 	ld	d, #0x00
+    0000042B 21 02 00         [12]  789 	ld	hl, #2
+    0000042E 39               [ 8]  790 	add	hl, sp
+    0000042F 19               [ 8]  791 	add	hl, de
+    00000430 5D               [ 4]  792 	ld	e, l
+    00000431 54               [ 4]  793 	ld	d, h
+    00000432 21r1Er00         [12]  794 	ld	hl, #_editor
+    00000435 06 00            [ 8]  795 	ld	b, #0x00
+    00000437 09               [ 8]  796 	add	hl, bc
+    00000438 7E               [ 8]  797 	ld	a, (hl)
+    00000439 12               [ 8]  798 	ld	(de), a
+    0000043A 0C               [ 4]  799 	inc	c
+    0000043B 79               [ 4]  800 	ld	a, c
+    0000043C D6 05            [ 8]  801 	sub	a, #0x05
+    0000043E 38 E8            [12]  802 	jr	C, 00103$
+    00000440 F8 07            [12]  803 	ldhl	sp,	#7
+    00000442 36 00            [12]  804 	ld	(hl), #0x00
+    00000444 21 02 00         [12]  805 	ld	hl, #2
+    00000447 39               [ 8]  806 	add	hl, sp
+    00000448 E5               [16]  807 	push	hl
+    00000449 1E 02            [ 8]  808 	ld	e, #0x02
+    0000044B 3E 07            [ 8]  809 	ld	a, #0x07
+    0000044D CDr00r00         [24]  810 	call	_text
+                                    811 ;src/save_ui.c:59: text(7+editor.cursor,3,"^");one[1]=0;
+    00000450 01r0Ar05         [12]  812 	ld	bc, #___str_18+0
+    00000453 FAr23r00         [16]  813 	ld	a, (#(_editor + 5) + 0)
+    00000456 C6 07            [ 8]  814 	add	a, #0x07
+    00000458 C5               [16]  815 	push	bc
+    00000459 1E 03            [ 8]  816 	ld	e, #0x03
+    0000045B CDr00r00         [24]  817 	call	_text
+    0000045E F8 01            [12]  818 	ldhl	sp,	#1
+    00000460 36 00            [12]  819 	ld	(hl), #0x00
+                                    820 ;src/save_ui.c:60: for(i=0;i<36u;++i){c=save_name_character(i);one[0]=c;
+    00000462 F8 09            [12]  821 	ldhl	sp,	#9
+    00000464 36 00            [12]  822 	ld	(hl), #0x00
+    00000466                        823 00105$:
+    00000466 F8 09            [12]  824 	ldhl	sp,	#9
+    00000468 7E               [ 8]  825 	ld	a, (hl)
+    00000469 F5               [16]  826 	push	af
+    0000046A 33               [ 8]  827 	inc	sp
+    0000046B 1Er00            [ 8]  828 	ld	e, #b_save_name_character
+    0000046D 21r00r00         [12]  829 	ld	hl, #_save_name_character
+    00000470 CDr00r00         [24]  830 	call	___sdcc_bcall_ehl
+    00000473 33               [ 8]  831 	inc	sp
+    00000474 F8 00            [12]  832 	ldhl	sp,	#0
+    00000476 77               [ 8]  833 	ld	(hl), a
+                                    834 ;src/save_ui.c:61: text(1+(i%6u)*3u,5+(i/6u)*2u,c==0x5cu?">":c==0x5du?"<":c==0x5eu?"END":one);}
+    00000477 FE 5C            [ 8]  835 	cp	a, #0x5c
+    00000479 20 05            [12]  836 	jr	NZ, 00109$
+    0000047B 01r0Cr05         [12]  837 	ld	bc, #___str_19
+    0000047E 18 18            [12]  838 	jr	00110$
+    00000480                        839 00109$:
+    00000480 FE 5D            [ 8]  840 	cp	a, #0x5d
+    00000482 20 05            [12]  841 	jr	NZ, 00111$
+    00000484 01r0Er05         [12]  842 	ld	bc, #___str_20
+    00000487 18 0F            [12]  843 	jr	00112$
+    00000489                        844 00111$:
+    00000489 D6 5E            [ 8]  845 	sub	a, #0x5e
+    0000048B 20 05            [12]  846 	jr	NZ, 00113$
+    0000048D 01r10r05         [12]  847 	ld	bc, #___str_21
+    00000490 18 06            [12]  848 	jr	00114$
+    00000492                        849 00113$:
+    00000492 21 00 00         [12]  850 	ld	hl, #0
+    00000495 39               [ 8]  851 	add	hl, sp
+    00000496 4D               [ 4]  852 	ld	c, l
+    00000497 44               [ 4]  853 	ld	b, h
+    00000498                        854 00114$:
+    00000498                        855 00112$:
+    00000498                        856 00110$:
+    00000498 F8 09            [12]  857 	ldhl	sp,	#9
+    0000049A 56               [ 8]  858 	ld	d, (hl)
+    0000049B C5               [16]  859 	push	bc
+    0000049C D5               [16]  860 	push	de
+    0000049D 1E 06            [ 8]  861 	ld	e, #0x06
+    0000049F 7A               [ 4]  862 	ld	a, d
+    000004A0 CDr00r00         [24]  863 	call	__divuchar
+    000004A3 79               [ 4]  864 	ld	a, c
+    000004A4 D1               [12]  865 	pop	de
+    000004A5 C1               [12]  866 	pop	bc
+    000004A6 87               [ 4]  867 	add	a, a
+    000004A7 C6 05            [ 8]  868 	add	a, #0x05
+    000004A9 F8 08            [12]  869 	ldhl	sp,	#8
+    000004AB 77               [ 8]  870 	ld	(hl), a
+    000004AC C5               [16]  871 	push	bc
+    000004AD 1E 06            [ 8]  872 	ld	e, #0x06
+    000004AF 7A               [ 4]  873 	ld	a, d
+    000004B0 CDr00r00         [24]  874 	call	__moduchar
+    000004B3 79               [ 4]  875 	ld	a, c
+    000004B4 C1               [12]  876 	pop	bc
+    000004B5 5F               [ 4]  877 	ld	e, a
+    000004B6 87               [ 4]  878 	add	a, a
+    000004B7 83               [ 4]  879 	add	a, e
+    000004B8 3C               [ 4]  880 	inc	a
+    000004B9 C5               [16]  881 	push	bc
+    000004BA F8 0A            [12]  882 	ldhl	sp,	#10
+    000004BC 5E               [ 8]  883 	ld	e, (hl)
+    000004BD CDr00r00         [24]  884 	call	_text
+                                    885 ;src/save_ui.c:60: for(i=0;i<36u;++i){c=save_name_character(i);one[0]=c;
+    000004C0 F8 09            [12]  886 	ldhl	sp,	#9
+    000004C2 34               [12]  887 	inc	(hl)
+    000004C3 7E               [ 8]  888 	ld	a, (hl)
+    000004C4 D6 24            [ 8]  889 	sub	a, #0x24
+    000004C6 38 9E            [12]  890 	jr	C, 00105$
+                                    891 ;src/save_ui.c:62: text((editor.option%6u)*3u,5+(editor.option/6u)*2u,">");
+    000004C8 21r24r00         [12]  892 	ld	hl, #(_editor + 6)
+    000004CB 4E               [ 8]  893 	ld	c, (hl)
+    000004CC C5               [16]  894 	push	bc
+    000004CD 1E 06            [ 8]  895 	ld	e, #0x06
+    000004CF 79               [ 4]  896 	ld	a, c
+    000004D0 CDr00r00         [24]  897 	call	__divuchar
+    000004D3 79               [ 4]  898 	ld	a, c
+    000004D4 C1               [12]  899 	pop	bc
+    000004D5 87               [ 4]  900 	add	a, a
+    000004D6 C6 05            [ 8]  901 	add	a, #0x05
+    000004D8 47               [ 4]  902 	ld	b, a
+    000004D9 C5               [16]  903 	push	bc
+    000004DA 1E 06            [ 8]  904 	ld	e, #0x06
+    000004DC 79               [ 4]  905 	ld	a, c
+    000004DD CDr00r00         [24]  906 	call	__moduchar
+    000004E0 79               [ 4]  907 	ld	a, c
+    000004E1 C1               [12]  908 	pop	bc
+    000004E2 5F               [ 4]  909 	ld	e, a
+    000004E3 87               [ 4]  910 	add	a, a
+    000004E4 83               [ 4]  911 	add	a, e
+    000004E5 11r0Cr05         [12]  912 	ld	de, #___str_19
+    000004E8 D5               [16]  913 	push	de
+    000004E9 58               [ 4]  914 	ld	e, b
+    000004EA CDr00r00         [24]  915 	call	_text
+                                    916 ;src/save_ui.c:63: text(1,17,"A:ENTER  B:ERASE");
+    000004ED 11r14r05         [12]  917 	ld	de, #___str_22
+    000004F0 D5               [16]  918 	push	de
+    000004F1 1E 11            [ 8]  919 	ld	e, #0x11
+    000004F3 3E 01            [ 8]  920 	ld	a, #0x01
+    000004F5 CDr00r00         [24]  921 	call	_text
+                                    922 ;src/save_ui.c:64: }
+    000004F8 E8 0A            [16]  923 	add	sp, #10
+    000004FA C9               [16]  924 	ret
+    000004FB                        925 ___str_17:
+    000004FB 4E 41 4D 45 20 54 48   926 	.ascii "NAME THIS FILE"
+             49 53 20 46 49 4C 45
+    00000509 00                     927 	.db 0x00
+    0000050A                        928 ___str_18:
+    0000050A 5E                     929 	.ascii "^"
+    0000050B 00                     930 	.db 0x00
+    0000050C                        931 ___str_19:
+    0000050C 3E                     932 	.ascii ">"
+    0000050D 00                     933 	.db 0x00
+    0000050E                        934 ___str_20:
+    0000050E 3C                     935 	.ascii "<"
+    0000050F 00                     936 	.db 0x00
+    00000510                        937 ___str_21:
+    00000510 45 4E 44               938 	.ascii "END"
+    00000513 00                     939 	.db 0x00
+    00000514                        940 ___str_22:
+    00000514 41 3A 45 4E 54 45 52   941 	.ascii "A:ENTER  B:ERASE"
+             20 20 42 3A 45 52 41
+             53 45
+    00000524 00                     942 	.db 0x00
+                                    943 ;src/save_ui.c:65: void save_ui_open(uint8_t mode,uint8_t returning) RPG_BANKED {
+                                    944 ;	---------------------------------
+                                    945 ; Function save_ui_open
+                                    946 ; ---------------------------------
+                         0000007A   947 	b_save_ui_open	= 122
+    00000525                        948 _save_ui_open::
+                                    949 ;src/save_ui.c:66: save_ui_scan();save_ui_mode=mode;return_state=returning;
+    00000525 1Er00            [ 8]  950 	ld	e, #b_save_ui_scan
+    00000527 21r55r01         [12]  951 	ld	hl, #_save_ui_scan
+    0000052A CDr00r00         [24]  952 	call	___sdcc_bcall_ehl
+    0000052D F8 06            [12]  953 	ldhl	sp,	#6
+    0000052F 4E               [ 8]  954 	ld	c, (hl)
+    00000530 21r2Cr00         [12]  955 	ld	hl, #_save_ui_mode
+    00000533 71               [ 8]  956 	ld	(hl), c
+    00000534 F8 07            [12]  957 	ldhl	sp,	#7
+    00000536 7E               [ 8]  958 	ld	a, (hl)
+    00000537 EAr25r00         [16]  959 	ld	(#_return_state),a
+                                    960 ;src/save_ui.c:67: save_ui_choice=mode==SAVE_UI_LOAD?0u:save_active_slot;
+    0000053A 79               [ 4]  961 	ld	a, c
+    0000053B D6 02            [ 8]  962 	sub	a, #0x02
+    0000053D 3E 01            [ 8]  963 	ld	a, #0x01
+    0000053F 28 01            [12]  964 	jr	Z, 00123$
+    00000541 AF               [ 4]  965 	xor	a, a
+    00000542                        966 00123$:
+    00000542 B7               [ 4]  967 	or	a, a
+    00000543 28 04            [12]  968 	jr	Z, 00106$
+    00000545 0E 00            [ 8]  969 	ld	c, #0x00
+    00000547 18 04            [12]  970 	jr	00107$
+    00000549                        971 00106$:
+    00000549 21r29r00         [12]  972 	ld	hl, #_save_active_slot
+    0000054C 4E               [ 8]  973 	ld	c, (hl)
+    0000054D                        974 00107$:
+    0000054D 21r2Br00         [12]  975 	ld	hl, #_save_ui_choice
+    00000550 71               [ 8]  976 	ld	(hl), c
+                                    977 ;src/save_ui.c:68: if(mode==SAVE_UI_LOAD)action_screen();else slot_screen();
+    00000551 B7               [ 4]  978 	or	a, a
+    00000552 CAr69r02         [16]  979 	jp	Z, _slot_screen
+                                    980 ;src/save_ui.c:69: }
+    00000555 C3rE2r01         [16]  981 	jp	_action_screen
+                                    982 ;src/save_ui.c:70: void save_ui_tick(uint8_t keys,uint8_t pressed) RPG_BANKED {
+                                    983 ;	---------------------------------
+                                    984 ; Function save_ui_tick
+                                    985 ; ---------------------------------
+                         0000007A   986 	b_save_ui_tick	= 122
+    00000558                        987 _save_ui_tick::
+    00000558 E8 F2            [16]  988 	add	sp, #-14
+                                    989 ;src/save_ui.c:71: uint8_t was_valid,move=0;uint16_t offset;
+    0000055A F8 0C            [12]  990 	ldhl	sp,	#12
+    0000055C 36 00            [12]  991 	ld	(hl), #0x00
+                                    992 ;src/save_ui.c:73: if(pressed&J_B){back();return;}
+    0000055E F8 15            [12]  993 	ldhl	sp,	#21
+    00000560 4E               [ 8]  994 	ld	c, (hl)
+    00000561 79               [ 4]  995 	ld	a, c
+    00000562 E6 20            [ 8]  996 	and	a, #0x20
+    00000564 5F               [ 4]  997 	ld	e, a
+                                    998 ;src/save_ui.c:75: else if(pressed&J_A){save_ui_mode=save_ui_choice?SAVE_UI_DELETE:SAVE_UI_LOAD;save_ui_choice=save_active_slot;slot_screen();}
+    00000565 79               [ 4]  999 	ld	a, c
+    00000566 E6 10            [ 8] 1000 	and	a, #0x10
+    00000568 47               [ 4] 1001 	ld	b, a
+                                   1002 ;src/save_ui.c:72: if(screen_state==STATE_SAVE_ACTION) {
+    00000569 FAr00r00         [16] 1003 	ld	a, (#_screen_state)
+                                   1004 ;src/save_ui.c:73: if(pressed&J_B){back();return;}
+    0000056C D6 19            [ 8] 1005 	sub	a, #0x19
+    0000056E 20 39            [12] 1006 	jr	NZ, 00181$
+    00000570 B3               [ 4] 1007 	or	a, e
+    00000571 28 06            [12] 1008 	jr	Z, 00102$
+    00000573 CDrC0r01         [24] 1009 	call	_back
+    00000576 C3r38r08         [16] 1010 	jp	00183$
+    00000579                       1011 00102$:
+                                   1012 ;src/save_ui.c:74: if(pressed&(J_UP|J_DOWN)){save_ui_choice^=1u;action_screen();}
+    00000579 79               [ 4] 1013 	ld	a, c
+    0000057A E6 0C            [ 8] 1014 	and	a, #0x0c
+    0000057C 28 0D            [12] 1015 	jr	Z, 00106$
+    0000057E 21r2Br00         [12] 1016 	ld	hl, #_save_ui_choice
+    00000581 7E               [ 8] 1017 	ld	a, (hl)
+    00000582 EE 01            [ 8] 1018 	xor	a, #0x01
+    00000584 77               [ 8] 1019 	ld	(hl), a
+    00000585 CDrE2r01         [24] 1020 	call	_action_screen
+    00000588 C3r38r08         [16] 1021 	jp	00183$
+    0000058B                       1022 00106$:
+                                   1023 ;src/save_ui.c:75: else if(pressed&J_A){save_ui_mode=save_ui_choice?SAVE_UI_DELETE:SAVE_UI_LOAD;save_ui_choice=save_active_slot;slot_screen();}
+    0000058B 78               [ 4] 1024 	ld	a, b
+    0000058C B7               [ 4] 1025 	or	a, a
+    0000058D CAr38r08         [16] 1026 	jp	Z, 00183$
+    00000590 FAr2Br00         [16] 1027 	ld	a, (#_save_ui_choice)
+    00000593 B7               [ 4] 1028 	or	a, a
+    00000594 3E 03            [ 8] 1029 	ld	a, #0x03
+    00000596 20 02            [12] 1030 	jr	NZ, 00186$
+    00000598 3E 02            [ 8] 1031 	ld	a, #0x02
+    0000059A                       1032 00186$:
+    0000059A EAr2Cr00         [16] 1033 	ld	(#_save_ui_mode),a
+    0000059D FAr29r00         [16] 1034 	ld	a, (#_save_active_slot)
+    000005A0 EAr2Br00         [16] 1035 	ld	(#_save_ui_choice),a
+    000005A3 CDr69r02         [24] 1036 	call	_slot_screen
+    000005A6 C3r38r08         [16] 1037 	jp	00183$
+    000005A9                       1038 00181$:
+                                   1039 ;src/save_ui.c:76: } else if(screen_state==STATE_SAVE_SELECT) {
+    000005A9 FAr00r00         [16] 1040 	ld	a, (#_screen_state)
+                                   1041 ;src/save_ui.c:77: if(pressed&J_B){if(return_state==0u){save_ui_choice=0;action_screen();}else back();return;}
+    000005AC D6 1A            [ 8] 1042 	sub	a, #0x1a
+    000005AE C2r3Dr06         [16] 1043 	jp	NZ, 00178$
+    000005B1 B3               [ 4] 1044 	or	a, e
+    000005B2 28 15            [12] 1045 	jr	Z, 00112$
+    000005B4 FAr25r00         [16] 1046 	ld	a, (#_return_state)
+    000005B7 B7               [ 4] 1047 	or	a,a
+    000005B8 20 09            [12] 1048 	jr	NZ, 00109$
+    000005BA EAr2Br00         [16] 1049 	ld	(#_save_ui_choice),a
+    000005BD CDrE2r01         [24] 1050 	call	_action_screen
+    000005C0 C3r38r08         [16] 1051 	jp	00183$
+    000005C3                       1052 00109$:
+    000005C3 CDrC0r01         [24] 1053 	call	_back
+    000005C6 C3r38r08         [16] 1054 	jp	00183$
+    000005C9                       1055 00112$:
+                                   1056 ;src/save_ui.c:78: if(pressed&J_UP){if(save_ui_choice)--save_ui_choice;slot_screen();}
+    000005C9 CB 51            [ 8] 1057 	bit	2, c
+    000005CB 28 0E            [12] 1058 	jr	Z, 00131$
+    000005CD 21r2Br00         [12] 1059 	ld	hl, #_save_ui_choice
+    000005D0 7E               [ 8] 1060 	ld	a, (hl)
+    000005D1 B7               [ 4] 1061 	or	a, a
+    000005D2 28 01            [12] 1062 	jr	Z, 00114$
+    000005D4 35               [12] 1063 	dec	(hl)
+    000005D5                       1064 00114$:
+    000005D5 CDr69r02         [24] 1065 	call	_slot_screen
+    000005D8 C3r38r08         [16] 1066 	jp	00183$
+    000005DB                       1067 00131$:
+                                   1068 ;src/save_ui.c:79: else if(pressed&J_DOWN){if(save_ui_choice<4u)++save_ui_choice;slot_screen();}
+    000005DB CB 59            [ 8] 1069 	bit	3, c
+    000005DD 28 0F            [12] 1070 	jr	Z, 00128$
+    000005DF 21r2Br00         [12] 1071 	ld	hl, #_save_ui_choice
+    000005E2 7E               [ 8] 1072 	ld	a, (hl)
+    000005E3 D6 04            [ 8] 1073 	sub	a, #0x04
+    000005E5 30 01            [12] 1074 	jr	NC, 00116$
+    000005E7 34               [12] 1075 	inc	(hl)
+    000005E8                       1076 00116$:
+    000005E8 CDr69r02         [24] 1077 	call	_slot_screen
+    000005EB C3r38r08         [16] 1078 	jp	00183$
+    000005EE                       1079 00128$:
+                                   1080 ;src/save_ui.c:80: else if(pressed&J_A) {
+    000005EE 78               [ 4] 1081 	ld	a, b
+    000005EF B7               [ 4] 1082 	or	a, a
+    000005F0 CAr38r08         [16] 1083 	jp	Z, 00183$
+                                   1084 ;src/save_ui.c:81: if(save_ui_mode==SAVE_UI_LOAD){if(save_valid_mask&(1u<<save_ui_choice)){save_active_slot=save_ui_choice;start_game(1);}}
+    000005F3 FAr2Br00         [16] 1085 	ld	a, (#_save_ui_choice)
+    000005F6 F5               [16] 1086 	push	af
+    000005F7 01 01 00         [12] 1087 	ld	bc, #0x0001
+    000005FA F1               [12] 1088 	pop	af
+    000005FB 3C               [ 4] 1089 	inc	a
+    000005FC 18 04            [12] 1090 	jr	00462$
+    000005FE                       1091 00461$:
+    000005FE CB 21            [ 8] 1092 	sla	c
+    00000600 CB 10            [ 8] 1093 	rl	b
+    00000602                       1094 00462$:
+    00000602 3D               [ 4] 1095 	dec	a
+    00000603 20 F9            [12] 1096 	jr	NZ,00461$
+    00000605 FAr2Ar00         [16] 1097 	ld	a, (_save_valid_mask)
+    00000608 5F               [ 4] 1098 	ld	e, a
+    00000609 79               [ 4] 1099 	ld	a, c
+    0000060A A3               [ 4] 1100 	and	a, e
+    0000060B 4F               [ 4] 1101 	ld	c, a
+    0000060C 06 00            [ 8] 1102 	ld	b, #0x00
+    0000060E FAr2Cr00         [16] 1103 	ld	a, (#_save_ui_mode)
+    00000611 D6 02            [ 8] 1104 	sub	a, #0x02
+    00000613 20 13            [12] 1105 	jr	NZ, 00123$
+    00000615 78               [ 4] 1106 	ld	a, b
+    00000616 B1               [ 4] 1107 	or	a, c
+    00000617 CAr38r08         [16] 1108 	jp	Z, 00183$
+    0000061A FAr2Br00         [16] 1109 	ld	a, (#_save_ui_choice)
+    0000061D EAr29r00         [16] 1110 	ld	(#_save_active_slot),a
+    00000620 3E 01            [ 8] 1111 	ld	a, #0x01
+    00000622 CDr00r00         [24] 1112 	call	_start_game
+    00000625 C3r38r08         [16] 1113 	jp	00183$
+    00000628                       1114 00123$:
+                                   1115 ;src/save_ui.c:82: else if(save_ui_mode==SAVE_UI_SAVE||(save_valid_mask&(1u<<save_ui_choice))){answer=0;confirm_screen();}
+    00000628 FAr2Cr00         [16] 1116 	ld	a, (#_save_ui_mode)
+    0000062B 3D               [ 4] 1117 	dec	a
+    0000062C 28 05            [12] 1118 	jr	Z, 00119$
+    0000062E 78               [ 4] 1119 	ld	a, b
+    0000062F B1               [ 4] 1120 	or	a, c
+    00000630 CAr38r08         [16] 1121 	jp	Z, 00183$
+    00000633                       1122 00119$:
+    00000633 AF               [ 4] 1123 	xor	a, a
+    00000634 EAr26r00         [16] 1124 	ld	(#_answer),a
+    00000637 CDr63r03         [24] 1125 	call	_confirm_screen
+    0000063A C3r38r08         [16] 1126 	jp	00183$
+    0000063D                       1127 00178$:
+                                   1128 ;src/save_ui.c:98: else {save_name_begin(&editor);name_keys=keys;name_repeat=24;name_screen();}
+    0000063D F8 14            [12] 1129 	ldhl	sp,	#20
+    0000063F 7E               [ 8] 1130 	ld	a, (hl)
+    00000640 F8 0D            [12] 1131 	ldhl	sp,	#13
+    00000642 77               [ 8] 1132 	ld	(hl), a
+                                   1133 ;src/save_ui.c:85: if(pressed&(J_UP|J_DOWN|J_LEFT|J_RIGHT)){answer^=1u;confirm_screen();}
+    00000643 79               [ 4] 1134 	ld	a, c
+    00000644 E6 0F            [ 8] 1135 	and	a, #0x0f
+    00000646 4F               [ 4] 1136 	ld	c, a
+                                   1137 ;src/save_ui.c:84: } else if(screen_state==STATE_SAVE_CONFIRM) {
+    00000647 FAr00r00         [16] 1138 	ld	a, (#_screen_state)
+                                   1139 ;src/save_ui.c:85: if(pressed&(J_UP|J_DOWN|J_LEFT|J_RIGHT)){answer^=1u;confirm_screen();}
+    0000064A D6 1B            [ 8] 1140 	sub	a, #0x1b
+    0000064C C2r71r07         [16] 1141 	jp	NZ, 00175$
+    0000064F B1               [ 4] 1142 	or	a, c
+    00000650 28 0D            [12] 1143 	jr	Z, 00149$
+    00000652 21r26r00         [12] 1144 	ld	hl, #_answer
+    00000655 7E               [ 8] 1145 	ld	a, (hl)
+    00000656 EE 01            [ 8] 1146 	xor	a, #0x01
+    00000658 77               [ 8] 1147 	ld	(hl), a
+    00000659 CDr63r03         [24] 1148 	call	_confirm_screen
+    0000065C C3r38r08         [16] 1149 	jp	00183$
+    0000065F                       1150 00149$:
+                                   1151 ;src/save_ui.c:86: else if(pressed&J_B){slot_screen();}
+    0000065F 7B               [ 4] 1152 	ld	a, e
+    00000660 B7               [ 4] 1153 	or	a, a
+    00000661 28 06            [12] 1154 	jr	Z, 00146$
+    00000663 CDr69r02         [24] 1155 	call	_slot_screen
+    00000666 C3r38r08         [16] 1156 	jp	00183$
+    00000669                       1157 00146$:
+                                   1158 ;src/save_ui.c:87: else if(pressed&J_A) {
+    00000669 78               [ 4] 1159 	ld	a, b
+    0000066A B7               [ 4] 1160 	or	a, a
+    0000066B CAr38r08         [16] 1161 	jp	Z, 00183$
+                                   1162 ;src/save_ui.c:88: if(answer){slot_screen();return;}
+    0000066E FAr26r00         [16] 1163 	ld	a, (#_answer)
+    00000671 B7               [ 4] 1164 	or	a, a
+    00000672 28 06            [12] 1165 	jr	Z, 00134$
+    00000674 CDr69r02         [24] 1166 	call	_slot_screen
+    00000677 C3r38r08         [16] 1167 	jp	00183$
+    0000067A                       1168 00134$:
+                                   1169 ;src/save_ui.c:89: if(save_ui_mode==SAVE_UI_DELETE) {
+    0000067A FAr2Cr00         [16] 1170 	ld	a, (#_save_ui_mode)
+    0000067D D6 03            [ 8] 1171 	sub	a, #0x03
+    0000067F 20 3E            [12] 1172 	jr	NZ, 00141$
+                                   1173 ;src/save_ui.c:90: offset=save_slot_offset(save_ui_choice);ENABLE_RAM_MBC5;SWITCH_RAM_MBC5(0);
+    00000681 FAr2Br00         [16] 1174 	ld	a, (_save_ui_choice)
+    00000684 F5               [16] 1175 	push	af
+    00000685 33               [ 8] 1176 	inc	sp
+    00000686 1Er00            [ 8] 1177 	ld	e, #b_save_slot_offset
+    00000688 21r00r00         [12] 1178 	ld	hl, #_save_slot_offset
+    0000068B CDr00r00         [24] 1179 	call	___sdcc_bcall_ehl
+    0000068E 33               [ 8] 1180 	inc	sp
+    0000068F 21r00r00         [12] 1181 	ld	hl, #_rRAMG
+    00000692 36 0A            [12] 1182 	ld	(hl), #0x0a
+    00000694 AF               [ 4] 1183 	xor	a, a
+    00000695 EAr00r00         [16] 1184 	ld	(#_rRAMB),a
+                                   1185 ;src/save_ui.c:91: *(volatile uint8_t *)(0xa000u+offset)=0;
+    00000698 21 00 A0         [12] 1186 	ld	hl, #0xa000
+    0000069B 09               [ 8] 1187 	add	hl, bc
+    0000069C 36 00            [12] 1188 	ld	(hl), #0x00
+                                   1189 ;src/save_ui.c:92: *(volatile uint8_t *)(0xa000u+SAVE_LABEL_OFFSET+(uint16_t)save_ui_choice*8u+5u)=0;
+    0000069E FAr2Br00         [16] 1190 	ld	a, (_save_ui_choice)
+    000006A1 6F               [ 4] 1191 	ld	l, a
+    000006A2 26 00            [ 8] 1192 	ld	h, #0x00
+    000006A4 29               [ 8] 1193 	add	hl, hl
+    000006A5 29               [ 8] 1194 	add	hl, hl
+    000006A6 29               [ 8] 1195 	add	hl, hl
+    000006A7 01 05 B4         [12] 1196 	ld	bc, #0xb405
+    000006AA 09               [ 8] 1197 	add	hl, bc
+    000006AB 36 00            [12] 1198 	ld	(hl), #0x00
+                                   1199 ;src/save_ui.c:93: DISABLE_RAM_MBC5;save_ui_scan();back();
+    000006AD AF               [ 4] 1200 	xor	a, a
+    000006AE EAr00r00         [16] 1201 	ld	(#_rRAMG),a
+    000006B1 1Er00            [ 8] 1202 	ld	e, #b_save_ui_scan
+    000006B3 21r55r01         [12] 1203 	ld	hl, #_save_ui_scan
+    000006B6 CDr00r00         [24] 1204 	call	___sdcc_bcall_ehl
+    000006B9 CDrC0r01         [24] 1205 	call	_back
+    000006BC C3r38r08         [16] 1206 	jp	00183$
+    000006BF                       1207 00141$:
+                                   1208 ;src/save_ui.c:95: was_valid=save_valid_mask&(1u<<save_ui_choice);
+    000006BF 21r2Br00         [12] 1209 	ld	hl, #_save_ui_choice
+    000006C2 46               [ 8] 1210 	ld	b, (hl)
+    000006C3 3E 01            [ 8] 1211 	ld	a, #0x01
+    000006C5 04               [ 4] 1212 	inc	b
+    000006C6 18 01            [12] 1213 	jr	00471$
+    000006C8                       1214 00470$:
+    000006C8 87               [ 4] 1215 	add	a, a
+    000006C9                       1216 00471$:
+    000006C9 05               [ 4] 1217 	dec	b
+    000006CA 20 FC            [12] 1218 	jr	NZ,00470$
+    000006CC 21r2Ar00         [12] 1219 	ld	hl, #_save_valid_mask
+    000006CF A6               [ 8] 1220 	and	a, (hl)
+    000006D0 4F               [ 4] 1221 	ld	c, a
+                                   1222 ;src/save_ui.c:96: if(!game_write_slot(save_ui_choice)){char failed[]="SAVE FAILED";notice(failed,return_state);return;}
+    000006D1 C5               [16] 1223 	push	bc
+    000006D2 FAr2Br00         [16] 1224 	ld	a, (_save_ui_choice)
+    000006D5 CDr00r00         [24] 1225 	call	_game_write_slot
+    000006D8 C1               [12] 1226 	pop	bc
+    000006D9 B7               [ 4] 1227 	or	a, a
+    000006DA 20 3B            [12] 1228 	jr	NZ, 00136$
+    000006DC F8 00            [12] 1229 	ldhl	sp,	#0
+    000006DE 4D               [ 4] 1230 	ld	c, l
+    000006DF 44               [ 4] 1231 	ld	b, h
+    000006E0 36 53            [12] 1232 	ld	(hl), #0x53
+    000006E2 F8 01            [12] 1233 	ldhl	sp,	#1
+    000006E4 3E 41            [ 8] 1234 	ld	a, #0x41
+    000006E6 22               [ 8] 1235 	ld	(hl+), a
+    000006E7 3E 56            [ 8] 1236 	ld	a, #0x56
+    000006E9 22               [ 8] 1237 	ld	(hl+), a
+    000006EA 3E 45            [ 8] 1238 	ld	a, #0x45
+    000006EC 22               [ 8] 1239 	ld	(hl+), a
+    000006ED 3E 20            [ 8] 1240 	ld	a, #0x20
+    000006EF 22               [ 8] 1241 	ld	(hl+), a
+    000006F0 3E 46            [ 8] 1242 	ld	a, #0x46
+    000006F2 22               [ 8] 1243 	ld	(hl+), a
+    000006F3 3E 41            [ 8] 1244 	ld	a, #0x41
+    000006F5 22               [ 8] 1245 	ld	(hl+), a
+    000006F6 3E 49            [ 8] 1246 	ld	a, #0x49
+    000006F8 22               [ 8] 1247 	ld	(hl+), a
+    000006F9 3E 4C            [ 8] 1248 	ld	a, #0x4c
+    000006FB 22               [ 8] 1249 	ld	(hl+), a
+    000006FC 3E 45            [ 8] 1250 	ld	a, #0x45
+    000006FE 22               [ 8] 1251 	ld	(hl+), a
+    000006FF 3E 44            [ 8] 1252 	ld	a, #0x44
+    00000701 22               [ 8] 1253 	ld	(hl+), a
+    00000702 36 00            [12] 1254 	ld	(hl), #0x00
+    00000704 FAr25r00         [16] 1255 	ld	a, (_return_state)
+    00000707 F5               [16] 1256 	push	af
+    00000708 33               [ 8] 1257 	inc	sp
+    00000709 C5               [16] 1258 	push	bc
+    0000070A 1Er00            [ 8] 1259 	ld	e, #b_notice
+    0000070C 21r00r00         [12] 1260 	ld	hl, #_notice
+    0000070F CDr00r00         [24] 1261 	call	___sdcc_bcall_ehl
+    00000712 E8 03            [16] 1262 	add	sp, #3
+    00000714 C3r38r08         [16] 1263 	jp	00183$
+    00000717                       1264 00136$:
+                                   1265 ;src/save_ui.c:97: if(was_valid){char saved[]="GAME SAVED";notice(saved,return_state);}
+    00000717 79               [ 4] 1266 	ld	a, c
+    00000718 B7               [ 4] 1267 	or	a, a
+    00000719 28 38            [12] 1268 	jr	Z, 00138$
+    0000071B F8 01            [12] 1269 	ldhl	sp,	#1
+    0000071D 4D               [ 4] 1270 	ld	c, l
+    0000071E 44               [ 4] 1271 	ld	b, h
+    0000071F 36 47            [12] 1272 	ld	(hl), #0x47
+    00000721 F8 02            [12] 1273 	ldhl	sp,	#2
+    00000723 3E 41            [ 8] 1274 	ld	a, #0x41
+    00000725 22               [ 8] 1275 	ld	(hl+), a
+    00000726 3E 4D            [ 8] 1276 	ld	a, #0x4d
+    00000728 22               [ 8] 1277 	ld	(hl+), a
+    00000729 3E 45            [ 8] 1278 	ld	a, #0x45
+    0000072B 22               [ 8] 1279 	ld	(hl+), a
+    0000072C 3E 20            [ 8] 1280 	ld	a, #0x20
+    0000072E 22               [ 8] 1281 	ld	(hl+), a
+    0000072F 3E 53            [ 8] 1282 	ld	a, #0x53
+    00000731 22               [ 8] 1283 	ld	(hl+), a
+    00000732 3E 41            [ 8] 1284 	ld	a, #0x41
+    00000734 22               [ 8] 1285 	ld	(hl+), a
+    00000735 3E 56            [ 8] 1286 	ld	a, #0x56
+    00000737 22               [ 8] 1287 	ld	(hl+), a
+    00000738 3E 45            [ 8] 1288 	ld	a, #0x45
+    0000073A 22               [ 8] 1289 	ld	(hl+), a
+    0000073B 3E 44            [ 8] 1290 	ld	a, #0x44
+    0000073D 22               [ 8] 1291 	ld	(hl+), a
+    0000073E 36 00            [12] 1292 	ld	(hl), #0x00
+    00000740 FAr25r00         [16] 1293 	ld	a, (_return_state)
+    00000743 F5               [16] 1294 	push	af
+    00000744 33               [ 8] 1295 	inc	sp
+    00000745 C5               [16] 1296 	push	bc
+    00000746 1Er00            [ 8] 1297 	ld	e, #b_notice
+    00000748 21r00r00         [12] 1298 	ld	hl, #_notice
+    0000074B CDr00r00         [24] 1299 	call	___sdcc_bcall_ehl
+    0000074E E8 03            [16] 1300 	add	sp, #3
+    00000750 C3r38r08         [16] 1301 	jp	00183$
+    00000753                       1302 00138$:
+                                   1303 ;src/save_ui.c:98: else {save_name_begin(&editor);name_keys=keys;name_repeat=24;name_screen();}
+    00000753 11r1Er00         [12] 1304 	ld	de, #_editor
+    00000756 D5               [16] 1305 	push	de
+    00000757 1Er00            [ 8] 1306 	ld	e, #b_save_name_begin
+    00000759 21r00r00         [12] 1307 	ld	hl, #_save_name_begin
+    0000075C CDr00r00         [24] 1308 	call	___sdcc_bcall_ehl
+    0000075F E1               [12] 1309 	pop	hl
+    00000760 F8 0D            [12] 1310 	ldhl	sp,	#13
+    00000762 7E               [ 8] 1311 	ld	a, (hl)
+    00000763 EAr28r00         [16] 1312 	ld	(#_name_keys),a
+    00000766 21r27r00         [12] 1313 	ld	hl, #_name_repeat
+    00000769 36 18            [12] 1314 	ld	(hl), #0x18
+    0000076B CDrFEr03         [24] 1315 	call	_name_screen
+    0000076E C3r38r08         [16] 1316 	jp	00183$
+    00000771                       1317 00175$:
+                                   1318 ;src/save_ui.c:101: } else if(screen_state==STATE_SAVE_NAME) {
+    00000771 FAr00r00         [16] 1319 	ld	a, (#_screen_state)
+                                   1320 ;src/save_ui.c:102: if(pressed&J_B){save_name_input(&editor,1);name_screen();}
+    00000774 D6 1C            [ 8] 1321 	sub	a, #0x1c
+    00000776 C2r38r08         [16] 1322 	jp	NZ, 00183$
+    00000779 B3               [ 4] 1323 	or	a, e
+    0000077A 28 18            [12] 1324 	jr	Z, 00170$
+    0000077C 3E 01            [ 8] 1325 	ld	a, #0x01
+    0000077E F5               [16] 1326 	push	af
+    0000077F 33               [ 8] 1327 	inc	sp
+    00000780 11r1Er00         [12] 1328 	ld	de, #_editor
+    00000783 D5               [16] 1329 	push	de
+    00000784 1Er00            [ 8] 1330 	ld	e, #b_save_name_input
+    00000786 21r00r00         [12] 1331 	ld	hl, #_save_name_input
+    00000789 CDr00r00         [24] 1332 	call	___sdcc_bcall_ehl
+    0000078C E8 03            [16] 1333 	add	sp, #3
+    0000078E CDrFEr03         [24] 1334 	call	_name_screen
+    00000791 C3r32r08         [16] 1335 	jp	00171$
+    00000794                       1336 00170$:
+                                   1337 ;src/save_ui.c:103: else if(pressed&J_A){if(save_name_input(&editor,0)){write_label(save_active_slot);back();}else name_screen();}
+    00000794 78               [ 4] 1338 	ld	a, b
+    00000795 B7               [ 4] 1339 	or	a, a
+    00000796 28 24            [12] 1340 	jr	Z, 00167$
+    00000798 AF               [ 4] 1341 	xor	a, a
+    00000799 F5               [16] 1342 	push	af
+    0000079A 33               [ 8] 1343 	inc	sp
+    0000079B 11r1Er00         [12] 1344 	ld	de, #_editor
+    0000079E D5               [16] 1345 	push	de
+    0000079F 1Er00            [ 8] 1346 	ld	e, #b_save_name_input
+    000007A1 21r00r00         [12] 1347 	ld	hl, #_save_name_input
+    000007A4 CDr00r00         [24] 1348 	call	___sdcc_bcall_ehl
+    000007A7 E8 03            [16] 1349 	add	sp, #3
+    000007A9 B7               [ 4] 1350 	or	a, a
+    000007AA 28 0B            [12] 1351 	jr	Z, 00152$
+    000007AC FAr29r00         [16] 1352 	ld	a, (_save_active_slot)
+    000007AF CDrBEr00         [24] 1353 	call	_write_label
+    000007B2 CDrC0r01         [24] 1354 	call	_back
+    000007B5 18 7B            [12] 1355 	jr	00171$
+    000007B7                       1356 00152$:
+    000007B7 CDrFEr03         [24] 1357 	call	_name_screen
+    000007BA 18 76            [12] 1358 	jr	00171$
+    000007BC                       1359 00167$:
+                                   1360 ;src/save_ui.c:105: if(pressed&(J_UP|J_DOWN|J_LEFT|J_RIGHT)){move=1;name_repeat=24;}
+    000007BC 79               [ 4] 1361 	ld	a, c
+    000007BD B7               [ 4] 1362 	or	a, a
+    000007BE 28 0B            [12] 1363 	jr	Z, 00162$
+    000007C0 F8 0C            [12] 1364 	ldhl	sp,	#12
+    000007C2 36 01            [12] 1365 	ld	(hl), #0x01
+    000007C4 21r27r00         [12] 1366 	ld	hl, #_name_repeat
+    000007C7 36 18            [12] 1367 	ld	(hl), #0x18
+    000007C9 18 26            [12] 1368 	jr	00163$
+    000007CB                       1369 00162$:
+                                   1370 ;src/save_ui.c:106: else if(keys&(J_UP|J_DOWN|J_LEFT|J_RIGHT)){if(keys!=name_keys)name_repeat=24;else if(!--name_repeat){move=1;name_repeat=5;}}
+    000007CB F8 0D            [12] 1371 	ldhl	sp,	#13
+    000007CD 7E               [ 8] 1372 	ld	a, (hl)
+    000007CE E6 0F            [ 8] 1373 	and	a, #0x0f
+    000007D0 28 1F            [12] 1374 	jr	Z, 00163$
+    000007D2 FAr28r00         [16] 1375 	ld	a, (#_name_keys)
+    000007D5 F8 0D            [12] 1376 	ldhl	sp,	#13
+    000007D7 96               [ 8] 1377 	sub	a, (hl)
+    000007D8 28 07            [12] 1378 	jr	Z, 00157$
+    000007DA 21r27r00         [12] 1379 	ld	hl, #_name_repeat
+    000007DD 36 18            [12] 1380 	ld	(hl), #0x18
+    000007DF 18 10            [12] 1381 	jr	00163$
+    000007E1                       1382 00157$:
+    000007E1 21r27r00         [12] 1383 	ld	hl, #_name_repeat
+    000007E4 35               [12] 1384 	dec	(hl)
+    000007E5 7E               [ 8] 1385 	ld	a, (hl)
+    000007E6 20 09            [12] 1386 	jr	NZ, 00163$
+    000007E8 F8 0C            [12] 1387 	ldhl	sp,	#12
+    000007EA 36 01            [12] 1388 	ld	(hl), #0x01
+    000007EC 21r27r00         [12] 1389 	ld	hl, #_name_repeat
+    000007EF 36 05            [12] 1390 	ld	(hl), #0x05
+    000007F1                       1391 00163$:
+                                   1392 ;src/save_ui.c:107: if(move){save_name_move(&editor,(keys&J_LEFT)?-1:(keys&J_RIGHT)?1:0,(keys&J_UP)?-1:(keys&J_DOWN)?1:0);name_screen();}
+    000007F1 F8 0C            [12] 1393 	ldhl	sp,	#12
+    000007F3 7E               [ 8] 1394 	ld	a, (hl)
+    000007F4 B7               [ 4] 1395 	or	a, a
+    000007F5 28 3B            [12] 1396 	jr	Z, 00171$
+    000007F7 F8 14            [12] 1397 	ldhl	sp,	#20
+    000007F9 7E               [ 8] 1398 	ld	a, (hl)
+    000007FA CB 57            [ 8] 1399 	bit	2, a
+    000007FC 28 04            [12] 1400 	jr	Z, 00187$
+    000007FE 0E FF            [ 8] 1401 	ld	c, #0xff
+    00000800 18 08            [12] 1402 	jr	00188$
+    00000802                       1403 00187$:
+    00000802 CB 5F            [ 8] 1404 	bit	3, a
+    00000804 0E 01            [ 8] 1405 	ld	c, #0x01
+    00000806 20 02            [12] 1406 	jr	NZ, 00190$
+    00000808 0E 00            [ 8] 1407 	ld	c, #0x00
+    0000080A                       1408 00190$:
+    0000080A                       1409 00188$:
+    0000080A CB 4F            [ 8] 1410 	bit	1, a
+    0000080C 28 04            [12] 1411 	jr	Z, 00191$
+    0000080E 3E FF            [ 8] 1412 	ld	a, #0xff
+    00000810 18 08            [12] 1413 	jr	00192$
+    00000812                       1414 00191$:
+    00000812 0F               [ 4] 1415 	rrca
+    00000813 30 04            [12] 1416 	jr	NC, 00193$
+    00000815 3E 01            [ 8] 1417 	ld	a, #0x01
+    00000817 18 01            [12] 1418 	jr	00194$
+    00000819                       1419 00193$:
+    00000819 AF               [ 4] 1420 	xor	a, a
+    0000081A                       1421 00194$:
+    0000081A                       1422 00192$:
+    0000081A 5F               [ 4] 1423 	ld	e, a
+    0000081B 21r1Er00         [12] 1424 	ld	hl, #_editor
+    0000081E 79               [ 4] 1425 	ld	a, c
+    0000081F F5               [16] 1426 	push	af
+    00000820 33               [ 8] 1427 	inc	sp
+    00000821 7B               [ 4] 1428 	ld	a, e
+    00000822 F5               [16] 1429 	push	af
+    00000823 33               [ 8] 1430 	inc	sp
+    00000824 E5               [16] 1431 	push	hl
+    00000825 1Er00            [ 8] 1432 	ld	e, #b_save_name_move
+    00000827 21r00r00         [12] 1433 	ld	hl, #_save_name_move
+    0000082A CDr00r00         [24] 1434 	call	___sdcc_bcall_ehl
+    0000082D E8 04            [16] 1435 	add	sp, #4
+    0000082F CDrFEr03         [24] 1436 	call	_name_screen
+    00000832                       1437 00171$:
+                                   1438 ;src/save_ui.c:109: name_keys=keys;
+    00000832 F8 0D            [12] 1439 	ldhl	sp,	#13
+    00000834 7E               [ 8] 1440 	ld	a, (hl)
+    00000835 EAr28r00         [16] 1441 	ld	(#_name_keys),a
+    00000838                       1442 00183$:
+                                   1443 ;src/save_ui.c:111: }
+    00000838 E8 0E            [16] 1444 	add	sp, #14
+    0000083A C9               [16] 1445 	ret
+                                   1446 	.area _CODE_122
+                                   1447 	.area _INITIALIZER
+                                   1448 	.area _CABS (ABS)

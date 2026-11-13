@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "diagnostic_prefix_only": true,
+  "campaign_complete": false,
+  "source_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "tool_sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+  "cases": [
+    "Caught-up wall-clock waiting advances no frames or input rows",
+    "Incomplete JSONL tail remains unconsumed without ticking",
+    "Partial source report waits without consuming/ticking new rows",
+    "Four exact committed checkpoints and11674frames match fixed-prefix expectations after staggered publication",
+    "Rewrite of an observed but unconsumed partial tail fails immediately with preserved failure and no retry"
+  ],
+  "scope": "Publication mechanics use copies of a real committed controller prefix. No source campaign files or emulator memory were changed; no ending/final-marker success was fabricated."
+}

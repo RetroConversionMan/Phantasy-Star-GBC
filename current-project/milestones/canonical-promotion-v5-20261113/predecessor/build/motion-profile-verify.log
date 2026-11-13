@@ -1,0 +1,28 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "74642b47b00b83f25f8b3d2fefd30edaa16e84d2609928c985745228f08c85ca",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "exhaustive_all_image_palette_pairs": false,
+  "command_frames": null,
+  "source_path": {
+    "poses": 40,
+    "physical_frames": 209,
+    "audio_IRQ_ticks_including_two_drain_frames": 211,
+    "unmatched_frames": 0,
+    "visible_changes": 40
+  },
+  "guard_bytes": 64,
+  "guard_address": "DC00",
+  "production_changed": false
+}

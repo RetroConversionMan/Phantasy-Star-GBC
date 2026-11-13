@@ -1,0 +1,65 @@
+[
+  {
+    "name": "draft-archive-integrity",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 1.453,
+    "log": "draft-archive-integrity.log"
+  },
+  {
+    "name": "extract-archive",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 22.181,
+    "log": "extract-archive.log"
+  },
+  {
+    "name": "extracted-integrity",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.019,
+    "log": "extracted-integrity.log"
+  },
+  {
+    "name": "forced-native-build",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 77.932,
+    "log": "forced-native-build.log"
+  },
+  {
+    "name": "seven-core-logic-suites",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.272,
+    "log": "seven-core-logic-suites.log"
+  },
+  {
+    "name": "baseline-reproduction",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 4.651,
+    "log": "baseline-reproduction.log"
+  },
+  {
+    "name": "original-sms-reassembly",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 0.666,
+    "log": "original-sms-reassembly.log"
+  },
+  {
+    "name": "thirteen-integration-suites",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 16.686,
+    "log": "thirteen-integration-suites.log"
+  },
+  {
+    "name": "final-proof-independent-audit",
+    "passed": true,
+    "exit_code": 0,
+    "elapsed_seconds": 1.441,
+    "log": "final-proof-independent-audit.log"
+  }
+]

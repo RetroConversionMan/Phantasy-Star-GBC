@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "A press and release entirely during typing is ignored; first Suelo page remains at its original61 wait",
+    "Holding the page-advance button through the next reveal does not advance again; release must be sampled at the next original input wait",
+    "Armory default YES accepts B; simultaneous Down+B selects and confirms NO, matching source CheckOptionSelect order, without changing money/inventory"
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/dialogue-input/transient-press-ignored.png",
+      "sha256_pixels": "26122f77a53ff10624633095de1a4b76f529562c273e58d44e862d112eab450f",
+      "unique_colors": 15,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/dialogue-input/b-confirms-yes.png",
+      "sha256_pixels": "8f374d6b2d1b54fb6cf85a7a12adeb35324f1475c81924a38ad7508b7dbeb283",
+      "unique_colors": 13,
+      "lcd_enabled": true,
+      "pc": "0x456c"
+    }
+  ],
+  "injected_fixtures": [],
+  "campaign_complete": false,
+  "passed": true
+}

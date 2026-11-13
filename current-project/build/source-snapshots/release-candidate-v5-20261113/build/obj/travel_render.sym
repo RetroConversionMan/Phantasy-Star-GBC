@@ -1,0 +1,103 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuchar                                                      ******** GX
+    __moduchar                                                      ******** GX
+    __moduint                                                       ******** GX
+  9 __xinit__last_space_scroll                                      00000000 R
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+    _display_off                                                    ******** GX
+  8 _draw_space                                                     000005CF R
+  2 _fade_target                                                    00000000 R
+  8 _faded                                                          0000010E R
+  3 _last_space_scroll                                              00000000 R
+  8 _native_color                                                   0000008B R
+  8 _palettes                                                       0000030C R
+    _party_world_draw                                               ******** GX
+    _party_world_palettes                                           ******** GX
+    _party_world_reset                                              ******** GX
+  8 _planet_data                                                    00000000 R
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_actor_show_data                                          ******** GX
+  8 _scene_fade_begin                                               0000019E GR
+  8 _scene_fade_step                                                00000246 GR
+    _scene_palette_background                                       ******** GX
+    _scene_palette_capture                                          ******** GX
+    _scene_palette_commit                                           ******** GX
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+  8 _scene_ui_colors                                                00000012 R
+    _set_bkg_tiles                                                  ******** GX
+  8 _ship_data                                                      0000001A R
+  8 _sms_color                                                      0000002B R
+  8 _space_row                                                      00000519 R
+    _travel_fade_color                                              ******** GX
+  8 _travel_fade_current                                            0000012B GR
+    _travel_planet_0                                                ******** GX
+    _travel_planet_1                                                ******** GX
+    _travel_planet_2                                                ******** GX
+  8 _travel_present                                                 0000066E GR
+    _travel_ship_0                                                  ******** GX
+    _travel_ship_1                                                  ******** GX
+    _travel_space_row                                               ******** GX
+    _world_draw                                                     ******** GX
+    _world_group_id                                                 ******** GX
+    _world_load_graphics                                            ******** GX
+    _world_motion_reset                                             ******** GX
+    _world_scenes                                                   ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _world_select                                                   ******** GX
+    _world_terrain_sync                                             ******** GX
+    b_party_world_draw                                              ******** GX
+    b_party_world_reset                                             ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_actor_show_data                                         ******** GX
+    b_scene_fade_begin                                          =   00000077 G
+    b_scene_fade_step                                           =   00000077 G
+    b_scene_palette_capture                                         ******** GX
+    b_scene_palette_commit                                          ******** GX
+    b_travel_fade_color                                             ******** GX
+    b_travel_fade_current                                       =   00000077 G
+    b_travel_present                                            =   00000077 G
+    b_travel_space_row                                              ******** GX
+    b_world_draw                                                    ******** GX
+    b_world_load_graphics                                           ******** GX
+    b_world_motion_reset                                            ******** GX
+    b_world_select                                                  ******** GX
+    b_world_terrain_sync                                            ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       40   flags    0
+   3 _INITIALIZED                               size        1   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_119                                  size      86B   flags    0
+   9 _INITIALIZER                               size        1   flags    0
+   A _CABS                                      size        0   flags    8
+

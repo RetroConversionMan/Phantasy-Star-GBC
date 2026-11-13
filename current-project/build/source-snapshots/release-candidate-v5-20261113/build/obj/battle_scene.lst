@@ -1,0 +1,2870 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module battle_scene
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl b_gold_scene_prepare
+                                     11 	.globl _gold_scene_prepare
+                                     12 	.globl b_gold_scene_show
+                                     13 	.globl _gold_scene_show
+                                     14 	.globl b_boss_motion_asset
+                                     15 	.globl _boss_motion_asset
+                                     16 	.globl b_enemy_magic_asset
+                                     17 	.globl _enemy_magic_asset
+                                     18 	.globl b_enemy_magic_pose
+                                     19 	.globl _enemy_magic_pose
+                                     20 	.globl b_battle_weapon_asset
+                                     21 	.globl _battle_weapon_asset
+                                     22 	.globl b_battle_motion_asset
+                                     23 	.globl _battle_motion_asset
+                                     24 	.globl _bank_bkg_data
+                                     25 	.globl _bank_copy
+                                     26 	.globl _bank_read8
+                                     27 	.globl b_game_transition_vint16
+                                     28 	.globl _game_transition_vint16
+                                     29 	.globl b_scene_actor_hide
+                                     30 	.globl _scene_actor_hide
+                                     31 	.globl b_scene_palette_prepare
+                                     32 	.globl _scene_palette_prepare
+                                     33 	.globl b_scene_palette_capture
+                                     34 	.globl _scene_palette_capture
+                                     35 	.globl b_scene_palette_commit
+                                     36 	.globl _scene_palette_commit
+                                     37 	.globl b_scene_show_room
+                                     38 	.globl _scene_show_room
+                                     39 	.globl b_scene_show
+                                     40 	.globl _scene_show
+                                     41 	.globl _set_sprite_palette
+                                     42 	.globl _set_sprite_data
+                                     43 	.globl _set_bkg_tiles
+                                     44 	.globl _battle_scene_enemy
+                                     45 	.globl _battle_scene_palette
+                                     46 	.globl _battle_scene_type
+                                     47 	.globl b_battle_scene_world_type
+                                     48 	.globl _battle_scene_world_type
+                                     49 	.globl b_battle_scene_configure
+                                     50 	.globl _battle_scene_configure
+                                     51 	.globl b_battle_scene_hide
+                                     52 	.globl _battle_scene_hide
+                                     53 	.globl b_battle_scene_clear
+                                     54 	.globl _battle_scene_clear
+                                     55 	.globl b_battle_scene_clip
+                                     56 	.globl _battle_scene_clip
+                                     57 	.globl b_battle_scene_begin
+                                     58 	.globl _battle_scene_begin
+                                     59 	.globl b_battle_scene_animation_frame
+                                     60 	.globl _battle_scene_animation_frame
+                                     61 	.globl b_battle_scene_flash_enemy
+                                     62 	.globl _battle_scene_flash_enemy
+                                     63 	.globl b_battle_scene_flash_party
+                                     64 	.globl _battle_scene_flash_party
+                                     65 	.globl b_battle_scene_weapon_frame
+                                     66 	.globl _battle_scene_weapon_frame
+                                     67 	.globl b_battle_scene_magic_frame
+                                     68 	.globl _battle_scene_magic_frame
+                                     69 	.globl b_battle_scene_weapon_clear
+                                     70 	.globl _battle_scene_weapon_clear
+                                     71 	.globl b_battle_scene_boss_frame
+                                     72 	.globl _battle_scene_boss_frame
+                                     73 	.globl b_battle_scene_boss_patch
+                                     74 	.globl _battle_scene_boss_patch
+                                     75 ;--------------------------------------------------------
+                                     76 ; special function registers
+                                     77 ;--------------------------------------------------------
+                                     78 	.area _HRAM
+                                     79 ;--------------------------------------------------------
+                                     80 ; ram data
+                                     81 ;--------------------------------------------------------
+                                     82 	.area _DATA
+    00000000                         83 _battle_scene_type::
+    00000000                         84 	.ds 1
+    00000001                         85 _battle_scene_palette::
+    00000001                         86 	.ds 1
+    00000002                         87 _battle_scene_enemy::
+    00000002                         88 	.ds 1
+    00000003                         89 _current_clip:
+    00000003                         90 	.ds 1
+    00000004                         91 _current_animated:
+    00000004                         92 	.ds 1
+    00000005                         93 _current_asset:
+    00000005                         94 	.ds 2
+                                     95 ;--------------------------------------------------------
+                                     96 ; ram data
+                                     97 ;--------------------------------------------------------
+                                     98 	.area _INITIALIZED
+                                     99 ;--------------------------------------------------------
+                                    100 ; absolute external ram data
+                                    101 ;--------------------------------------------------------
+                                    102 	.area _DABS (ABS)
+                                    103 ;--------------------------------------------------------
+                                    104 ; global & static initialisations
+                                    105 ;--------------------------------------------------------
+                                    106 	.area _HOME
+                                    107 	.area _GSINIT
+                                    108 	.area _GSFINAL
+                                    109 	.area _GSINIT
+                                    110 ;--------------------------------------------------------
+                                    111 ; Home
+                                    112 ;--------------------------------------------------------
+                                    113 	.area _HOME
+                                    114 	.area _HOME
+                                    115 ;--------------------------------------------------------
+                                    116 ; code
+                                    117 ;--------------------------------------------------------
+                                    118 	.area _CODE_31
+                                    119 ;src/battle_scene.c:24: uint8_t battle_scene_world_type(uint8_t group,uint8_t flags) __banked {
+                                    120 ;	---------------------------------
+                                    121 ; Function battle_scene_world_type
+                                    122 ; ---------------------------------
+                         0000001F   123 	b_battle_scene_world_type	= 31
+    00000000                        124 _battle_scene_world_type::
+                                    125 ;src/battle_scene.c:25: uint8_t type=flags>>4;
+    00000000 F8 07            [12]  126 	ldhl	sp,	#7
+                                    127 ;src/battle_scene.c:26: if(!group && type==5u)type=4u;
+    00000002 3A               [ 8]  128 	ld	a, (hl-)
+    00000003 4F               [ 4]  129 	ld	c, a
+    00000004 CB 39            [ 8]  130 	srl	c
+    00000006 CB 39            [ 8]  131 	srl	c
+    00000008 CB 39            [ 8]  132 	srl	c
+    0000000A CB 39            [ 8]  133 	srl	c
+    0000000C 7E               [ 8]  134 	ld	a, (hl)
+    0000000D B7               [ 4]  135 	or	a, a
+    0000000E 20 09            [12]  136 	jr	NZ, 00113$
+    00000010 79               [ 4]  137 	ld	a, c
+    00000011 D6 05            [ 8]  138 	sub	a, #0x05
+    00000013 20 04            [12]  139 	jr	NZ, 00113$
+    00000015 0E 04            [ 8]  140 	ld	c, #0x04
+    00000017 18 2E            [12]  141 	jr	00114$
+    00000019                        142 00113$:
+                                    143 ;src/battle_scene.c:27: else if((group==1u||group==7u)&&type==1u)type=5u;
+    00000019 F8 06            [12]  144 	ldhl	sp,	#6
+    0000001B 7E               [ 8]  145 	ld	a, (hl)
+    0000001C 3D               [ 4]  146 	dec	a
+    0000001D 28 07            [12]  147 	jr	Z, 00111$
+    0000001F F8 06            [12]  148 	ldhl	sp,	#6
+    00000021 7E               [ 8]  149 	ld	a, (hl)
+    00000022 D6 07            [ 8]  150 	sub	a, #0x07
+    00000024 20 08            [12]  151 	jr	NZ, 00108$
+    00000026                        152 00111$:
+    00000026 79               [ 4]  153 	ld	a, c
+    00000027 3D               [ 4]  154 	dec	a
+    00000028 20 04            [12]  155 	jr	NZ, 00108$
+    0000002A 0E 05            [ 8]  156 	ld	c, #0x05
+    0000002C 18 19            [12]  157 	jr	00114$
+    0000002E                        158 00108$:
+                                    159 ;src/battle_scene.c:28: else if(group==8u)type=6u;
+    0000002E F8 06            [12]  160 	ldhl	sp,	#6
+    00000030 7E               [ 8]  161 	ld	a, (hl)
+    00000031 D6 08            [ 8]  162 	sub	a, #0x08
+    00000033 20 04            [12]  163 	jr	NZ, 00105$
+    00000035 0E 06            [ 8]  164 	ld	c, #0x06
+    00000037 18 0E            [12]  165 	jr	00114$
+    00000039                        166 00105$:
+                                    167 ;src/battle_scene.c:29: else if(group==10u&&type==9u)type=8u;
+    00000039 F8 06            [12]  168 	ldhl	sp,	#6
+    0000003B 7E               [ 8]  169 	ld	a, (hl)
+    0000003C D6 0A            [ 8]  170 	sub	a, #0x0a
+    0000003E 20 07            [12]  171 	jr	NZ, 00114$
+    00000040 79               [ 4]  172 	ld	a, c
+    00000041 D6 09            [ 8]  173 	sub	a, #0x09
+    00000043 20 02            [12]  174 	jr	NZ, 00114$
+    00000045 0E 08            [ 8]  175 	ld	c, #0x08
+    00000047                        176 00114$:
+                                    177 ;src/battle_scene.c:30: return type?type:1u;
+    00000047 79               [ 4]  178 	ld	a, c
+    00000048 B7               [ 4]  179 	or	a, a
+    00000049 28 02            [12]  180 	jr	Z, 00118$
+    0000004B 79               [ 4]  181 	ld	a, c
+    0000004C C9               [16]  182 	ret
+    0000004D                        183 00118$:
+    0000004D 3E 01            [ 8]  184 	ld	a, #0x01
+                                    185 ;src/battle_scene.c:31: }
+    0000004F C9               [16]  186 	ret
+                                    187 ;src/battle_scene.c:32: void battle_scene_configure(uint8_t type,uint8_t palette) __banked {
+                                    188 ;	---------------------------------
+                                    189 ; Function battle_scene_configure
+                                    190 ; ---------------------------------
+                         0000001F   191 	b_battle_scene_configure	= 31
+    00000050                        192 _battle_scene_configure::
+                                    193 ;src/battle_scene.c:33: battle_scene_type=type;battle_scene_palette=palette<12u?palette:0u;
+    00000050 F8 06            [12]  194 	ldhl	sp,	#6
+    00000052 7E               [ 8]  195 	ld	a, (hl)
+    00000053 EAr00r00         [16]  196 	ld	(#_battle_scene_type),a
+    00000056 F8 07            [12]  197 	ldhl	sp,	#7
+    00000058 7E               [ 8]  198 	ld	a,(hl)
+    00000059 FE 0C            [ 8]  199 	cp	a,#0x0c
+    0000005B 38 01            [12]  200 	jr	C, 00104$
+    0000005D AF               [ 4]  201 	xor	a, a
+    0000005E                        202 00104$:
+    0000005E EAr01r00         [16]  203 	ld	(#_battle_scene_palette),a
+                                    204 ;src/battle_scene.c:34: }
+    00000061 C9               [16]  205 	ret
+                                    206 ;src/battle_scene.c:35: void battle_scene_hide(void) __banked {
+                                    207 ;	---------------------------------
+                                    208 ; Function battle_scene_hide
+                                    209 ; ---------------------------------
+                         0000001F   210 	b_battle_scene_hide	= 31
+    00000062                        211 _battle_scene_hide::
+                                    212 ;src/battle_scene.c:36: scene_actor_hide();SPRITES_8x8;battle_scene_enemy=0;current_asset=65535u;current_clip=255u;current_animated=0;
+    00000062 1Er00            [ 8]  213 	ld	e, #b_scene_actor_hide
+    00000064 21r00r00         [12]  214 	ld	hl, #_scene_actor_hide
+    00000067 CDr00r00         [24]  215 	call	___sdcc_bcall_ehl
+    0000006A F0r00            [12]  216 	ldh	a, (_LCDC_REG + 0)
+    0000006C E6 FB            [ 8]  217 	and	a, #0xfb
+    0000006E E0r00            [12]  218 	ldh	(_LCDC_REG + 0), a
+    00000070 AF               [ 4]  219 	xor	a, a
+    00000071 EAr02r00         [16]  220 	ld	(#_battle_scene_enemy),a
+    00000074 21r05r00         [12]  221 	ld	hl, #_current_asset
+    00000077 3E FF            [ 8]  222 	ld	a, #0xff
+    00000079 22               [ 8]  223 	ld	(hl+), a
+    0000007A 36 FF            [12]  224 	ld	(hl), #0xff
+    0000007C 21r03r00         [12]  225 	ld	hl, #_current_clip
+    0000007F 36 FF            [12]  226 	ld	(hl), #0xff
+    00000081 AF               [ 4]  227 	xor	a, a
+    00000082 EAr04r00         [16]  228 	ld	(#_current_animated),a
+                                    229 ;src/battle_scene.c:37: }
+    00000085 C9               [16]  230 	ret
+                                    231 ;src/battle_scene.c:38: static uint8_t background(uint8_t enemy) {
+                                    232 ;	---------------------------------
+                                    233 ; Function background
+                                    234 ; ---------------------------------
+    00000086                        235 _background:
+    00000086 47               [ 4]  236 	ld	b, a
+                                    237 ;src/battle_scene.c:39: if(!battle_scene_type)return !enemy;
+    00000087 FAr00r00         [16]  238 	ld	a, (#_battle_scene_type)
+    0000008A B7               [ 4]  239 	or	a, a
+    0000008B 20 07            [12]  240 	jr	NZ, 00102$
+    0000008D 78               [ 4]  241 	ld	a, b
+    0000008E D6 01            [ 8]  242 	sub	a, #0x01
+    00000090 3E 00            [ 8]  243 	ld	a, #0x00
+    00000092 17               [ 4]  244 	rla
+    00000093 C9               [16]  245 	ret
+    00000094                        246 00102$:
+                                    247 ;src/battle_scene.c:40: if(battle_scene_type>=64u && battle_scene_type<76u)return scene_show_room(battle_scene_type-64u,0,enemy);
+    00000094 21r00r00         [12]  248 	ld	hl, #_battle_scene_type
+    00000097 7E               [ 8]  249 	ld	a,(hl)
+    00000098 FE 40            [ 8]  250 	cp	a,#0x40
+    0000009A 38 19            [12]  251 	jr	C, 00104$
+    0000009C FE 4C            [ 8]  252 	cp	a,#0x4c
+    0000009E 30 15            [12]  253 	jr	NC, 00104$
+    000000A0 C6 C0            [ 8]  254 	add	a, #0xc0
+    000000A2 C5               [16]  255 	push	bc
+    000000A3 33               [ 8]  256 	inc	sp
+    000000A4 26 00            [ 8]  257 	ld	h, #0x00
+    000000A6 E5               [16]  258 	push	hl
+    000000A7 33               [ 8]  259 	inc	sp
+    000000A8 F5               [16]  260 	push	af
+    000000A9 33               [ 8]  261 	inc	sp
+    000000AA 1Er00            [ 8]  262 	ld	e, #b_scene_show_room
+    000000AC 21r00r00         [12]  263 	ld	hl, #_scene_show_room
+    000000AF CDr00r00         [24]  264 	call	___sdcc_bcall_ehl
+    000000B2 E8 03            [16]  265 	add	sp, #3
+    000000B4 C9               [16]  266 	ret
+    000000B5                        267 00104$:
+                                    268 ;src/battle_scene.c:41: return scene_show(battle_scene_type,0,enemy);
+    000000B5 C5               [16]  269 	push	bc
+    000000B6 33               [ 8]  270 	inc	sp
+    000000B7 AF               [ 4]  271 	xor	a, a
+    000000B8 F5               [16]  272 	push	af
+    000000B9 33               [ 8]  273 	inc	sp
+    000000BA FAr00r00         [16]  274 	ld	a, (_battle_scene_type)
+    000000BD F5               [16]  275 	push	af
+    000000BE 33               [ 8]  276 	inc	sp
+    000000BF 1Er00            [ 8]  277 	ld	e, #b_scene_show
+    000000C1 21r00r00         [12]  278 	ld	hl, #_scene_show
+    000000C4 CDr00r00         [24]  279 	call	___sdcc_bcall_ehl
+    000000C7 E8 03            [16]  280 	add	sp, #3
+                                    281 ;src/battle_scene.c:42: }
+    000000C9 C9               [16]  282 	ret
+                                    283 ;src/battle_scene.c:43: void battle_scene_clear(void) __banked {
+                                    284 ;	---------------------------------
+                                    285 ; Function battle_scene_clear
+                                    286 ; ---------------------------------
+                         0000001F   287 	b_battle_scene_clear	= 31
+    000000CA                        288 _battle_scene_clear::
+                                    289 ;src/battle_scene.c:44: uint8_t composed=battle_scene_enemy==72u||battle_scene_enemy==73u;
+    000000CA FAr02r00         [16]  290 	ld	a, (#_battle_scene_enemy)
+    000000CD D6 48            [ 8]  291 	sub	a, #0x48
+    000000CF 28 09            [12]  292 	jr	Z, 00106$
+    000000D1 FAr02r00         [16]  293 	ld	a, (#_battle_scene_enemy)
+    000000D4 D6 49            [ 8]  294 	sub	a, #0x49
+    000000D6 0E 00            [ 8]  295 	ld	c, #0x00
+    000000D8 20 02            [12]  296 	jr	NZ, 00107$
+    000000DA                        297 00106$:
+    000000DA 0E 01            [ 8]  298 	ld	c, #0x01
+    000000DC                        299 00107$:
+                                    300 ;src/battle_scene.c:45: battle_scene_hide();if(composed)background(0);
+    000000DC C5               [16]  301 	push	bc
+    000000DD 1Er00            [ 8]  302 	ld	e, #b_battle_scene_hide
+    000000DF 21r62r00         [12]  303 	ld	hl, #_battle_scene_hide
+    000000E2 CDr00r00         [24]  304 	call	___sdcc_bcall_ehl
+    000000E5 C1               [12]  305 	pop	bc
+    000000E6 79               [ 4]  306 	ld	a, c
+    000000E7 B7               [ 4]  307 	or	a, a
+    000000E8 C8               [20]  308 	ret	Z
+    000000E9 AF               [ 4]  309 	xor	a, a
+                                    310 ;src/battle_scene.c:46: }
+    000000EA C3r86r00         [16]  311 	jp	_background
+                                    312 ;src/battle_scene.c:47: static void current_descriptor(BattleSceneAsset *asset) {
+                                    313 ;	---------------------------------
+                                    314 ; Function current_descriptor
+                                    315 ; ---------------------------------
+    000000ED                        316 _current_descriptor:
+                                    317 ;src/battle_scene.c:48: if(current_animated==3u)bank_copy(asset,BOSS_DATA_BANK,boss_assets+current_asset,sizeof *asset);
+    000000ED FAr05r00         [16]  318 	ld	a, (_current_asset)
+    000000F0 4F               [ 4]  319 	ld	c, a
+    000000F1 21r06r00         [12]  320 	ld	hl, #_current_asset + 1
+    000000F4 46               [ 8]  321 	ld	b, (hl)
+    000000F5 CB 21            [ 8]  322 	sla	c
+    000000F7 CB 10            [ 8]  323 	rl	b
+    000000F9 CB 21            [ 8]  324 	sla	c
+    000000FB CB 10            [ 8]  325 	rl	b
+    000000FD FAr04r00         [16]  326 	ld	a, (#_current_animated)
+    00000100 D6 03            [ 8]  327 	sub	a, #0x03
+    00000102 20 0F            [12]  328 	jr	NZ, 00108$
+    00000104 21r00r00         [12]  329 	ld	hl, #_boss_assets
+    00000107 09               [ 8]  330 	add	hl, bc
+    00000108 01 04 00         [12]  331 	ld	bc, #0x0004
+    0000010B C5               [16]  332 	push	bc
+    0000010C E5               [16]  333 	push	hl
+    0000010D 3E FE            [ 8]  334 	ld	a, #0xfe
+    0000010F CDr00r00         [24]  335 	call	_bank_copy
+    00000112 C9               [16]  336 	ret
+    00000113                        337 00108$:
+                                    338 ;src/battle_scene.c:49: else if(current_animated==2u)bank_copy(asset,ENEMY_MAGIC_BANK,enemy_magic_assets+current_asset,sizeof *asset);
+    00000113 FAr04r00         [16]  339 	ld	a, (#_current_animated)
+    00000116 D6 02            [ 8]  340 	sub	a, #0x02
+    00000118 20 0F            [12]  341 	jr	NZ, 00105$
+    0000011A 21r00r00         [12]  342 	ld	hl, #_enemy_magic_assets
+    0000011D 09               [ 8]  343 	add	hl, bc
+    0000011E 01 04 00         [12]  344 	ld	bc, #0x0004
+    00000121 C5               [16]  345 	push	bc
+    00000122 E5               [16]  346 	push	hl
+    00000123 3E FC            [ 8]  347 	ld	a, #0xfc
+    00000125 CDr00r00         [24]  348 	call	_bank_copy
+    00000128 C9               [16]  349 	ret
+    00000129                        350 00105$:
+                                    351 ;src/battle_scene.c:50: else if(current_animated)bank_copy(asset,BATTLE_ANIMATION_DESCRIPTOR_BANK,battle_animation_assets+current_asset,sizeof *asset);
+    00000129 FAr04r00         [16]  352 	ld	a, (#_current_animated)
+    0000012C B7               [ 4]  353 	or	a, a
+    0000012D 28 0F            [12]  354 	jr	Z, 00102$
+    0000012F 21r00r00         [12]  355 	ld	hl, #_battle_animation_assets
+    00000132 09               [ 8]  356 	add	hl, bc
+    00000133 01 04 00         [12]  357 	ld	bc, #0x0004
+    00000136 C5               [16]  358 	push	bc
+    00000137 E5               [16]  359 	push	hl
+    00000138 3E 94            [ 8]  360 	ld	a, #0x94
+    0000013A CDr00r00         [24]  361 	call	_bank_copy
+    0000013D C9               [16]  362 	ret
+    0000013E                        363 00102$:
+                                    364 ;src/battle_scene.c:51: else *asset=battle_scene_assets[current_asset];
+    0000013E 21r00r00         [12]  365 	ld	hl, #_battle_scene_assets
+    00000141 09               [ 8]  366 	add	hl, bc
+    00000142 4D               [ 4]  367 	ld	c, l
+    00000143 44               [ 4]  368 	ld	b, h
+    00000144 21 04 00         [12]  369 	ld	hl, #0x0004
+    00000147 E5               [16]  370 	push	hl
+    00000148 CDr00r00         [24]  371 	call	___memcpy
+                                    372 ;src/battle_scene.c:52: }
+    0000014B C9               [16]  373 	ret
+                                    374 ;src/battle_scene.c:53: static void current_pool(uint16_t pair,BattleScenePool *pool) {
+                                    375 ;	---------------------------------
+                                    376 ; Function current_pool
+                                    377 ; ---------------------------------
+    0000014C                        378 _current_pool:
+    0000014C E8 F8            [16]  379 	add	sp, #-8
+    0000014E F8 06            [12]  380 	ldhl	sp,	#6
+    00000150 79               [ 4]  381 	ld	a, c
+    00000151 22               [ 8]  382 	ld	(hl+), a
+    00000152 70               [ 8]  383 	ld	(hl), b
+                                    384 ;src/battle_scene.c:54: if(current_animated==3u)bank_copy(pool,BOSS_DATA_BANK,boss_pools+(pair>>8),sizeof *pool);
+    00000153 F8 04            [12]  385 	ldhl	sp,	#4
+    00000155 7A               [ 4]  386 	ld	a, d
+    00000156 22               [ 8]  387 	ld	(hl+), a
+    00000157 AF               [ 4]  388 	xor	a, a
+    00000158 22               [ 8]  389 	ld	(hl+), a
+    00000159 7E               [ 8]  390 	ld	a, (hl)
+    0000015A F8 00            [12]  391 	ldhl	sp,	#0
+    0000015C 77               [ 8]  392 	ld	(hl), a
+    0000015D F8 07            [12]  393 	ldhl	sp,	#7
+    0000015F 7E               [ 8]  394 	ld	a, (hl)
+    00000160 F8 01            [12]  395 	ldhl	sp,	#1
+    00000162 77               [ 8]  396 	ld	(hl), a
+    00000163 F8 04            [12]  397 	ldhl	sp,#4
+    00000165 2A               [ 8]  398 	ld	a, (hl+)
+    00000166 4F               [ 4]  399 	ld	c, a
+    00000167 46               [ 8]  400 	ld	b, (hl)
+    00000168 69               [ 4]  401 	ld	l, c
+    00000169 60               [ 4]  402 	ld	h, b
+    0000016A 29               [ 8]  403 	add	hl, hl
+    0000016B 09               [ 8]  404 	add	hl, bc
+    0000016C E5               [16]  405 	push	hl
+    0000016D 7D               [ 4]  406 	ld	a, l
+    0000016E F8 04            [12]  407 	ldhl	sp,	#4
+    00000170 77               [ 8]  408 	ld	(hl), a
+    00000171 E1               [12]  409 	pop	hl
+    00000172 7C               [ 4]  410 	ld	a, h
+    00000173 F8 03            [12]  411 	ldhl	sp,	#3
+    00000175 77               [ 8]  412 	ld	(hl), a
+    00000176 FAr04r00         [16]  413 	ld	a, (#_current_animated)
+    00000179 D6 03            [ 8]  414 	sub	a, #0x03
+    0000017B 20 1C            [12]  415 	jr	NZ, 00105$
+    0000017D 01r00r00         [12]  416 	ld	bc, #_boss_pools+0
+    00000180 F8 02            [12]  417 	ldhl	sp,	#2
+    00000182 2A               [ 8]  418 	ld	a,	(hl+)
+    00000183 66               [ 8]  419 	ld	h, (hl)
+    00000184 6F               [ 4]  420 	ld	l, a
+    00000185 09               [ 8]  421 	add	hl, bc
+    00000186 4D               [ 4]  422 	ld	c, l
+    00000187 44               [ 4]  423 	ld	b, h
+    00000188 11 03 00         [12]  424 	ld	de, #0x0003
+    0000018B D5               [16]  425 	push	de
+    0000018C C5               [16]  426 	push	bc
+    0000018D 3E FE            [ 8]  427 	ld	a, #0xfe
+    0000018F F8 04            [12]  428 	ldhl	sp,	#4
+    00000191 5E               [ 8]  429 	ld	e, (hl)
+    00000192 23               [ 8]  430 	inc	hl
+    00000193 56               [ 8]  431 	ld	d, (hl)
+    00000194 CDr00r00         [24]  432 	call	_bank_copy
+    00000197 18 54            [12]  433 	jr	00107$
+    00000199                        434 00105$:
+                                    435 ;src/battle_scene.c:55: else if(current_animated==2u)bank_copy(pool,ENEMY_MAGIC_BANK,enemy_magic_pools+(pair>>8),sizeof *pool);
+    00000199 FAr04r00         [16]  436 	ld	a, (#_current_animated)
+    0000019C D6 02            [ 8]  437 	sub	a, #0x02
+    0000019E 20 1C            [12]  438 	jr	NZ, 00102$
+    000001A0 01r00r00         [12]  439 	ld	bc, #_enemy_magic_pools+0
+    000001A3 F8 02            [12]  440 	ldhl	sp,	#2
+    000001A5 2A               [ 8]  441 	ld	a,	(hl+)
+    000001A6 66               [ 8]  442 	ld	h, (hl)
+    000001A7 6F               [ 4]  443 	ld	l, a
+    000001A8 09               [ 8]  444 	add	hl, bc
+    000001A9 4D               [ 4]  445 	ld	c, l
+    000001AA 44               [ 4]  446 	ld	b, h
+    000001AB 11 03 00         [12]  447 	ld	de, #0x0003
+    000001AE D5               [16]  448 	push	de
+    000001AF C5               [16]  449 	push	bc
+    000001B0 3E FC            [ 8]  450 	ld	a, #0xfc
+    000001B2 F8 04            [12]  451 	ldhl	sp,	#4
+    000001B4 5E               [ 8]  452 	ld	e, (hl)
+    000001B5 23               [ 8]  453 	inc	hl
+    000001B6 56               [ 8]  454 	ld	d, (hl)
+    000001B7 CDr00r00         [24]  455 	call	_bank_copy
+    000001BA 18 31            [12]  456 	jr	00107$
+    000001BC                        457 00102$:
+                                    458 ;src/battle_scene.c:56: else *pool=(current_animated?battle_animation_pools:battle_scene_pools)[pair>>8];
+    000001BC FAr04r00         [16]  459 	ld	a, (#_current_animated)
+    000001BF B7               [ 4]  460 	or	a, a
+    000001C0 28 0A            [12]  461 	jr	Z, 00109$
+    000001C2 11r00r00         [12]  462 	ld	de, #_battle_animation_pools+0
+    000001C5 F8 04            [12]  463 	ldhl	sp,	#4
+    000001C7 7B               [ 4]  464 	ld	a, e
+    000001C8 22               [ 8]  465 	ld	(hl+), a
+    000001C9 72               [ 8]  466 	ld	(hl), d
+    000001CA 18 08            [12]  467 	jr	00110$
+    000001CC                        468 00109$:
+    000001CC 11r00r00         [12]  469 	ld	de, #_battle_scene_pools+0
+    000001CF F8 04            [12]  470 	ldhl	sp,	#4
+    000001D1 7B               [ 4]  471 	ld	a, e
+    000001D2 22               [ 8]  472 	ld	(hl+), a
+    000001D3 72               [ 8]  473 	ld	(hl), d
+    000001D4                        474 00110$:
+    000001D4 F8 04            [12]  475 	ldhl	sp,#4
+    000001D6 2A               [ 8]  476 	ld	a, (hl+)
+    000001D7 5F               [ 4]  477 	ld	e, a
+    000001D8 56               [ 8]  478 	ld	d, (hl)
+    000001D9 F8 02            [12]  479 	ldhl	sp,	#2
+    000001DB 2A               [ 8]  480 	ld	a,	(hl+)
+    000001DC 66               [ 8]  481 	ld	h, (hl)
+    000001DD 6F               [ 4]  482 	ld	l, a
+    000001DE 19               [ 8]  483 	add	hl, de
+    000001DF 4D               [ 4]  484 	ld	c, l
+    000001E0 44               [ 4]  485 	ld	b, h
+    000001E1 11 03 00         [12]  486 	ld	de, #0x0003
+    000001E4 D5               [16]  487 	push	de
+    000001E5 F8 02            [12]  488 	ldhl	sp,	#2
+    000001E7 2A               [ 8]  489 	ld	a, (hl+)
+    000001E8 5F               [ 4]  490 	ld	e, a
+    000001E9 56               [ 8]  491 	ld	d, (hl)
+    000001EA CDr00r00         [24]  492 	call	___memcpy
+    000001ED                        493 00107$:
+                                    494 ;src/battle_scene.c:57: }
+    000001ED E8 08            [16]  495 	add	sp, #8
+    000001EF C9               [16]  496 	ret
+                                    497 ;src/battle_scene.c:58: void battle_scene_clip(uint8_t window_y) __banked {
+                                    498 ;	---------------------------------
+                                    499 ; Function battle_scene_clip
+                                    500 ; ---------------------------------
+                         0000001F   501 	b_battle_scene_clip	= 31
+    000001F0                        502 _battle_scene_clip::
+    000001F0 E8 EE            [16]  503 	add	sp, #-18
+                                    504 ;src/battle_scene.c:61: if(!battle_scene_enemy)return;
+    000001F2 FAr02r00         [16]  505 	ld	a, (#_battle_scene_enemy)
+    000001F5 B7               [ 4]  506 	or	a, a
+    000001F6 CArCFr04         [16]  507 	jp	Z, 00130$
+                                    508 ;src/battle_scene.c:62: if(current_asset==65535u){current_clip=window_y;return;}
+    000001F9 FAr05r00         [16]  509 	ld	a, (_current_asset)
+    000001FC 4F               [ 4]  510 	ld	c, a
+    000001FD 21r06r00         [12]  511 	ld	hl, #_current_asset + 1
+    00000200 46               [ 8]  512 	ld	b, (hl)
+    00000201 79               [ 4]  513 	ld	a, c
+    00000202 A0               [ 4]  514 	and	a, b
+    00000203 3C               [ 4]  515 	inc	a
+    00000204 20 09            [12]  516 	jr	NZ, 00104$
+    00000206 F8 18            [12]  517 	ldhl	sp,	#24
+    00000208 7E               [ 8]  518 	ld	a, (hl)
+    00000209 EAr03r00         [16]  519 	ld	(#_current_clip),a
+    0000020C C3rCFr04         [16]  520 	jp	00130$
+    0000020F                        521 00104$:
+                                    522 ;src/battle_scene.c:63: if(!window_y){HIDE_SPRITES;current_clip=0;return;}
+    0000020F F8 18            [12]  523 	ldhl	sp,	#24
+    00000211 7E               [ 8]  524 	ld	a, (hl)
+    00000212 B7               [ 4]  525 	or	a, a
+    00000213 20 0D            [12]  526 	jr	NZ, 00106$
+    00000215 F0r00            [12]  527 	ldh	a, (_LCDC_REG + 0)
+    00000217 E6 FD            [ 8]  528 	and	a, #0xfd
+    00000219 E0r00            [12]  529 	ldh	(_LCDC_REG + 0), a
+    0000021B AF               [ 4]  530 	xor	a, a
+    0000021C EAr03r00         [16]  531 	ld	(#_current_clip),a
+    0000021F C3rCFr04         [16]  532 	jp	00130$
+    00000222                        533 00106$:
+                                    534 ;src/battle_scene.c:64: if(window_y==current_clip){SHOW_SPRITES;return;}
+    00000222 F8 18            [12]  535 	ldhl	sp,	#24
+    00000224 7E               [ 8]  536 	ld	a, (hl)
+    00000225 21r03r00         [12]  537 	ld	hl, #_current_clip
+    00000228 96               [ 8]  538 	sub	a, (hl)
+    00000229 20 09            [12]  539 	jr	NZ, 00108$
+    0000022B F0r00            [12]  540 	ldh	a, (_LCDC_REG + 0)
+    0000022D F6 02            [ 8]  541 	or	a, #0x02
+    0000022F E0r00            [12]  542 	ldh	(_LCDC_REG + 0), a
+    00000231 C3rCFr04         [16]  543 	jp	00130$
+    00000234                        544 00108$:
+                                    545 ;src/battle_scene.c:65: current_descriptor(&local);asset=&local;
+    00000234 21 00 00         [12]  546 	ld	hl, #0
+    00000237 39               [ 8]  547 	add	hl, sp
+    00000238 5D               [ 4]  548 	ld	e, l
+    00000239 54               [ 4]  549 	ld	d, h
+    0000023A CDrEDr00         [24]  550 	call	_current_descriptor
+                                    551 ;src/battle_scene.c:66: for(i=0;i<asset->sprites;++i) {
+    0000023D F8 11            [12]  552 	ldhl	sp,	#17
+    0000023F 36 00            [12]  553 	ld	(hl), #0x00
+    00000241                        554 00126$:
+    00000241 F8 01            [12]  555 	ldhl	sp,	#1
+    00000243 4E               [ 8]  556 	ld	c, (hl)
+    00000244 F8 11            [12]  557 	ldhl	sp,	#17
+    00000246 7E               [ 8]  558 	ld	a, (hl)
+    00000247 91               [ 4]  559 	sub	a, c
+    00000248 D2rA6r04         [16]  560 	jp	NC, 00143$
+                                    561 ;src/battle_scene.c:67: bank_copy(scene_shared_bytes,asset->bank,asset->data+(uint16_t)i*5u,5u);
+    0000024B F8 02            [12]  562 	ldhl	sp,	#2
+    0000024D 7E               [ 8]  563 	ld	a, (hl)
+    0000024E F8 0D            [12]  564 	ldhl	sp,	#13
+    00000250 77               [ 8]  565 	ld	(hl), a
+    00000251 F8 03            [12]  566 	ldhl	sp,	#3
+    00000253 7E               [ 8]  567 	ld	a, (hl)
+    00000254 F8 0E            [12]  568 	ldhl	sp,	#14
+    00000256 77               [ 8]  569 	ld	(hl), a
+    00000257 F8 11            [12]  570 	ldhl	sp,	#17
+    00000259 3A               [ 8]  571 	ld	a, (hl-)
+    0000025A 2B               [ 8]  572 	dec	hl
+    0000025B 22               [ 8]  573 	ld	(hl+), a
+    0000025C AF               [ 4]  574 	xor	a, a
+    0000025D 32               [ 8]  575 	ld	(hl-), a
+    0000025E 2A               [ 8]  576 	ld	a, (hl+)
+    0000025F 4F               [ 4]  577 	ld	c, a
+    00000260 46               [ 8]  578 	ld	b, (hl)
+    00000261 69               [ 4]  579 	ld	l, c
+    00000262 60               [ 4]  580 	ld	h, b
+    00000263 29               [ 8]  581 	add	hl, hl
+    00000264 29               [ 8]  582 	add	hl, hl
+    00000265 09               [ 8]  583 	add	hl, bc
+    00000266 E5               [16]  584 	push	hl
+    00000267 7D               [ 4]  585 	ld	a, l
+    00000268 F8 11            [12]  586 	ldhl	sp,	#17
+    0000026A 77               [ 8]  587 	ld	(hl), a
+    0000026B E1               [12]  588 	pop	hl
+    0000026C 7C               [ 4]  589 	ld	a, h
+    0000026D F8 10            [12]  590 	ldhl	sp,	#16
+    0000026F 32               [ 8]  591 	ld	(hl-), a
+    00000270 2B               [ 8]  592 	dec	hl
+    00000271 2B               [ 8]  593 	dec	hl
+    00000272 2A               [ 8]  594 	ld	a, (hl+)
+    00000273 5F               [ 4]  595 	ld	e, a
+    00000274 2A               [ 8]  596 	ld	a, (hl+)
+    00000275 57               [ 4]  597 	ld	d, a
+    00000276 2A               [ 8]  598 	ld	a,	(hl+)
+    00000277 66               [ 8]  599 	ld	h, (hl)
+    00000278 6F               [ 4]  600 	ld	l, a
+    00000279 19               [ 8]  601 	add	hl, de
+    0000027A 4D               [ 4]  602 	ld	c, l
+    0000027B 44               [ 4]  603 	ld	b, h
+    0000027C F8 00            [12]  604 	ldhl	sp,	#0
+    0000027E 7E               [ 8]  605 	ld	a, (hl)
+    0000027F 11 05 00         [12]  606 	ld	de, #0x0005
+    00000282 D5               [16]  607 	push	de
+    00000283 C5               [16]  608 	push	bc
+    00000284 11r00r00         [12]  609 	ld	de, #_scene_shared_bytes
+    00000287 CDr00r00         [24]  610 	call	_bank_copy
+                                    611 ;src/battle_scene.c:68: x=scene_shared_bytes[0];y=scene_shared_bytes[1];prop=scene_shared_bytes[4];
+    0000028A FAr00r00         [16]  612 	ld	a, (#_scene_shared_bytes + 0)
+    0000028D F8 07            [12]  613 	ldhl	sp,	#7
+    0000028F 77               [ 8]  614 	ld	(hl), a
+    00000290 FAr01r00         [16]  615 	ld	a, (#(_scene_shared_bytes + 1) + 0)
+    00000293 F8 08            [12]  616 	ldhl	sp,	#8
+    00000295 77               [ 8]  617 	ld	(hl), a
+    00000296 FAr04r00         [16]  618 	ld	a, (#(_scene_shared_bytes + 4) + 0)
+    00000299 F8 09            [12]  619 	ldhl	sp,	#9
+    0000029B 77               [ 8]  620 	ld	(hl), a
+                                    621 ;src/battle_scene.c:69: pair=scene_shared_bytes[2]|((uint16_t)scene_shared_bytes[3]<<8);
+    0000029C FAr02r00         [16]  622 	ld	a, (#(_scene_shared_bytes + 2) + 0)
+    0000029F F8 10            [12]  623 	ldhl	sp,	#16
+    000002A1 77               [ 8]  624 	ld	(hl), a
+    000002A2 FAr03r00         [16]  625 	ld	a, (#(_scene_shared_bytes + 3) + 0)
+    000002A5 F8 0F            [12]  626 	ldhl	sp,#15
+    000002A7 77               [ 8]  627 	ld	(hl), a
+    000002A8 3A               [ 8]  628 	ld	a, (hl-)
+    000002A9 22               [ 8]  629 	ld	(hl+), a
+    000002AA AF               [ 4]  630 	xor	a, a
+    000002AB 32               [ 8]  631 	ld	(hl-), a
+    000002AC 3A               [ 8]  632 	ld	a, (hl-)
+    000002AD 2B               [ 8]  633 	dec	hl
+    000002AE 32               [ 8]  634 	ld	(hl-), a
+    000002AF 36 00            [12]  635 	ld	(hl), #0x00
+    000002B1 F8 10            [12]  636 	ldhl	sp,	#16
+    000002B3 7E               [ 8]  637 	ld	a, (hl)
+    000002B4 F8 0D            [12]  638 	ldhl	sp,	#13
+    000002B6 22               [ 8]  639 	ld	(hl+), a
+    000002B7 AF               [ 4]  640 	xor	a, a
+    000002B8 32               [ 8]  641 	ld	(hl-), a
+    000002B9 2A               [ 8]  642 	ld	a, (hl+)
+    000002BA 23               [ 8]  643 	inc	hl
+    000002BB 77               [ 8]  644 	ld	(hl), a
+    000002BC F8 0C            [12]  645 	ldhl	sp,	#12
+    000002BE 7E               [ 8]  646 	ld	a, (hl)
+    000002BF F8 10            [12]  647 	ldhl	sp,	#16
+    000002C1 77               [ 8]  648 	ld	(hl), a
+                                    649 ;src/battle_scene.c:70: if(y-16u>=window_y){move_sprite(i,0,0);continue;}
+    000002C2 F8 08            [12]  650 	ldhl	sp,	#8
+    000002C4 7E               [ 8]  651 	ld	a, (hl)
+    000002C5 F8 0E            [12]  652 	ldhl	sp,	#14
+    000002C7 77               [ 8]  653 	ld	(hl), a
+    000002C8 3A               [ 8]  654 	ld	a, (hl-)
+    000002C9 22               [ 8]  655 	ld	(hl+), a
+    000002CA AF               [ 4]  656 	xor	a, a
+    000002CB 32               [ 8]  657 	ld	(hl-), a
+    000002CC 2A               [ 8]  658 	ld	a, (hl+)
+    000002CD 5F               [ 4]  659 	ld	e, a
+    000002CE 56               [ 8]  660 	ld	d, (hl)
+    000002CF 21 10 00         [12]  661 	ld	hl, #0x0010
+    000002D2 7B               [ 4]  662 	ld	a, e
+    000002D3 95               [ 4]  663 	sub	a, l
+    000002D4 5F               [ 4]  664 	ld	e, a
+    000002D5 7A               [ 4]  665 	ld	a, d
+    000002D6 9C               [ 4]  666 	sbc	a, h
+    000002D7 F8 0C            [12]  667 	ldhl	sp,	#12
+    000002D9 32               [ 8]  668 	ld	(hl-), a
+    000002DA 73               [ 8]  669 	ld	(hl), e
+    000002DB F8 18            [12]  670 	ldhl	sp,	#24
+    000002DD 7E               [ 8]  671 	ld	a, (hl)
+    000002DE F8 0D            [12]  672 	ldhl	sp,	#13
+    000002E0 22               [ 8]  673 	ld	(hl+), a
+    000002E1 36 00            [12]  674 	ld	(hl), #0x00
+    000002E3 F8 0B            [12]  675 	ldhl	sp,	#11
+    000002E5 5D               [ 4]  676 	ld	e, l
+    000002E6 54               [ 4]  677 	ld	d, h
+    000002E7 F8 0D            [12]  678 	ldhl	sp,	#13
+    000002E9 1A               [ 8]  679 	ld	a, (de)
+    000002EA 13               [ 8]  680 	inc	de
+    000002EB 96               [ 8]  681 	sub	a, (hl)
+    000002EC 23               [ 8]  682 	inc	hl
+    000002ED 1A               [ 8]  683 	ld	a, (de)
+    000002EE 9E               [ 8]  684 	sbc	a, (hl)
+    000002EF 38 3A            [12]  685 	jr	C, 00110$
+                                    686 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000002F1 F8 11            [12]  687 	ldhl	sp,	#17
+    000002F3 3A               [ 8]  688 	ld	a, (hl-)
+    000002F4 2B               [ 8]  689 	dec	hl
+    000002F5 22               [ 8]  690 	ld	(hl+), a
+    000002F6 AF               [ 4]  691 	xor	a, a
+    000002F7 32               [ 8]  692 	ld	(hl-), a
+    000002F8 3A               [ 8]  693 	ld	a, (hl-)
+    000002F9 2B               [ 8]  694 	dec	hl
+    000002FA 22               [ 8]  695 	ld	(hl+), a
+    000002FB 36 00            [12]  696 	ld	(hl), #0x00
+    000002FD 3E 02            [ 8]  697 	ld	a, #0x02
+    000002FF                        698 00223$:
+    000002FF F8 0D            [12]  699 	ldhl	sp,	#13
+    00000301 CB 26            [16]  700 	sla	(hl)
+    00000303 23               [ 8]  701 	inc	hl
+    00000304 CB 16            [16]  702 	rl	(hl)
+    00000306 3D               [ 4]  703 	dec	a
+    00000307 20 F6            [12]  704 	jr	NZ, 00223$
+    00000309 2B               [ 8]  705 	dec	hl
+    0000030A 2A               [ 8]  706 	ld	a, (hl+)
+    0000030B 5F               [ 4]  707 	ld	e, a
+    0000030C 56               [ 8]  708 	ld	d, (hl)
+    0000030D 21r00r00         [12]  709 	ld	hl, #_shadow_OAM
+    00000310 19               [ 8]  710 	add	hl, de
+    00000311 E5               [16]  711 	push	hl
+    00000312 7D               [ 4]  712 	ld	a, l
+    00000313 F8 11            [12]  713 	ldhl	sp,	#17
+    00000315 77               [ 8]  714 	ld	(hl), a
+    00000316 E1               [12]  715 	pop	hl
+    00000317 7C               [ 4]  716 	ld	a, h
+    00000318 F8 10            [12]  717 	ldhl	sp,	#16
+                                    718 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    0000031A 32               [ 8]  719 	ld	(hl-), a
+    0000031B 2A               [ 8]  720 	ld	a, (hl+)
+    0000031C 66               [ 8]  721 	ld	h, (hl)
+    0000031D 6F               [ 4]  722 	ld	l, a
+    0000031E 36 00            [12]  723 	ld	(hl), #0x00
+    00000320 F8 0F            [12]  724 	ldhl	sp,	#15
+    00000322 2A               [ 8]  725 	ld	a, (hl+)
+    00000323 4F               [ 4]  726 	ld	c, a
+    00000324 46               [ 8]  727 	ld	b, (hl)
+    00000325 03               [ 8]  728 	inc	bc
+    00000326 AF               [ 4]  729 	xor	a, a
+    00000327 02               [ 8]  730 	ld	(bc), a
+                                    731 ;src/battle_scene.c:70: if(y-16u>=window_y){move_sprite(i,0,0);continue;}
+    00000328 C3rA0r04         [16]  732 	jp	00114$
+    0000032B                        733 00110$:
+                                    734 ;src/battle_scene.c:71: current_pool(pair,&pool);
+    0000032B 21 04 00         [12]  735 	ld	hl, #4
+    0000032E 39               [ 8]  736 	add	hl, sp
+    0000032F 4D               [ 4]  737 	ld	c, l
+    00000330 44               [ 4]  738 	ld	b, h
+    00000331 F8 0F            [12]  739 	ldhl	sp,	#15
+    00000333 2A               [ 8]  740 	ld	a, (hl+)
+    00000334 5F               [ 4]  741 	ld	e, a
+    00000335 56               [ 8]  742 	ld	d, (hl)
+    00000336 CDr4Cr01         [24]  743 	call	_current_pool
+                                    744 ;src/battle_scene.c:72: bank_copy(scene_shared_bytes,pool.bank,pool.data+((pair&255u)<<5),32u);
+    00000339 F8 05            [12]  745 	ldhl	sp,	#5
+    0000033B 7E               [ 8]  746 	ld	a, (hl)
+    0000033C F8 0B            [12]  747 	ldhl	sp,	#11
+    0000033E 77               [ 8]  748 	ld	(hl), a
+    0000033F F8 06            [12]  749 	ldhl	sp,	#6
+    00000341 7E               [ 8]  750 	ld	a, (hl)
+    00000342 F8 0C            [12]  751 	ldhl	sp,	#12
+    00000344 77               [ 8]  752 	ld	(hl), a
+    00000345 F8 0F            [12]  753 	ldhl	sp,	#15
+    00000347 3A               [ 8]  754 	ld	a, (hl-)
+    00000348 2B               [ 8]  755 	dec	hl
+    00000349 77               [ 8]  756 	ld	(hl), a
+    0000034A F8 10            [12]  757 	ldhl	sp,	#16
+    0000034C 3A               [ 8]  758 	ld	a, (hl-)
+    0000034D 2B               [ 8]  759 	dec	hl
+    0000034E 32               [ 8]  760 	ld	(hl-), a
+    0000034F 2A               [ 8]  761 	ld	a, (hl+)
+    00000350 23               [ 8]  762 	inc	hl
+    00000351 22               [ 8]  763 	ld	(hl+), a
+    00000352 AF               [ 4]  764 	xor	a, a
+    00000353 32               [ 8]  765 	ld	(hl-), a
+    00000354 3A               [ 8]  766 	ld	a, (hl-)
+    00000355 2B               [ 8]  767 	dec	hl
+    00000356 22               [ 8]  768 	ld	(hl+), a
+    00000357 36 00            [12]  769 	ld	(hl), #0x00
+    00000359 3E 05            [ 8]  770 	ld	a, #0x05
+    0000035B                        771 00224$:
+    0000035B F8 0D            [12]  772 	ldhl	sp,	#13
+    0000035D CB 26            [16]  773 	sla	(hl)
+    0000035F 23               [ 8]  774 	inc	hl
+    00000360 CB 16            [16]  775 	rl	(hl)
+    00000362 3D               [ 4]  776 	dec	a
+    00000363 20 F6            [12]  777 	jr	NZ, 00224$
+    00000365 2B               [ 8]  778 	dec	hl
+    00000366 2A               [ 8]  779 	ld	a, (hl+)
+    00000367 5F               [ 4]  780 	ld	e, a
+    00000368 56               [ 8]  781 	ld	d, (hl)
+    00000369 F8 0B            [12]  782 	ldhl	sp,	#11
+    0000036B 2A               [ 8]  783 	ld	a,	(hl+)
+    0000036C 66               [ 8]  784 	ld	h, (hl)
+    0000036D 6F               [ 4]  785 	ld	l, a
+    0000036E 19               [ 8]  786 	add	hl, de
+    0000036F E5               [16]  787 	push	hl
+    00000370 7D               [ 4]  788 	ld	a, l
+    00000371 F8 11            [12]  789 	ldhl	sp,	#17
+    00000373 77               [ 8]  790 	ld	(hl), a
+    00000374 E1               [12]  791 	pop	hl
+    00000375 7C               [ 4]  792 	ld	a, h
+    00000376 F8 10            [12]  793 	ldhl	sp,	#16
+    00000378 77               [ 8]  794 	ld	(hl), a
+    00000379 F8 04            [12]  795 	ldhl	sp,	#4
+    0000037B 7E               [ 8]  796 	ld	a, (hl)
+    0000037C F8 0E            [12]  797 	ldhl	sp,	#14
+    0000037E 22               [ 8]  798 	ld	(hl+), a
+    0000037F 11 20 00         [12]  799 	ld	de, #0x0020
+    00000382 D5               [16]  800 	push	de
+    00000383 2A               [ 8]  801 	ld	a, (hl+)
+    00000384 5F               [ 4]  802 	ld	e, a
+    00000385 3A               [ 8]  803 	ld	a, (hl-)
+    00000386 2B               [ 8]  804 	dec	hl
+    00000387 57               [ 4]  805 	ld	d, a
+    00000388 D5               [16]  806 	push	de
+    00000389 7E               [ 8]  807 	ld	a, (hl)
+    0000038A 11r00r00         [12]  808 	ld	de, #_scene_shared_bytes
+    0000038D CDr00r00         [24]  809 	call	_bank_copy
+                                    810 ;src/battle_scene.c:73: if(y>window_y)for(line=window_y-(y-16u);line<16u;++line){scene_shared_bytes[line*2u]=0;scene_shared_bytes[line*2u+1u]=0;}
+    00000390 F8 18            [12]  811 	ldhl	sp,	#24
+    00000392 7E               [ 8]  812 	ld	a, (hl)
+    00000393 F8 08            [12]  813 	ldhl	sp,	#8
+    00000395 96               [ 8]  814 	sub	a, (hl)
+    00000396 30 59            [12]  815 	jr	NC, 00113$
+    00000398 7E               [ 8]  816 	ld	a, (hl)
+    00000399 C6 F0            [ 8]  817 	add	a, #0xf0
+    0000039B 4F               [ 4]  818 	ld	c, a
+    0000039C F8 18            [12]  819 	ldhl	sp,	#24
+    0000039E 7E               [ 8]  820 	ld	a, (hl)
+    0000039F 91               [ 4]  821 	sub	a, c
+    000003A0 F8 10            [12]  822 	ldhl	sp,	#16
+    000003A2 77               [ 8]  823 	ld	(hl), a
+    000003A3                        824 00123$:
+    000003A3 F8 10            [12]  825 	ldhl	sp,	#16
+    000003A5 7E               [ 8]  826 	ld	a, (hl)
+    000003A6 D6 10            [ 8]  827 	sub	a, #0x10
+    000003A8 30 47            [12]  828 	jr	NC, 00113$
+    000003AA 3A               [ 8]  829 	ld	a, (hl-)
+    000003AB 2B               [ 8]  830 	dec	hl
+    000003AC 22               [ 8]  831 	ld	(hl+), a
+    000003AD AF               [ 4]  832 	xor	a, a
+    000003AE 32               [ 8]  833 	ld	(hl-), a
+    000003AF 3A               [ 8]  834 	ld	a, (hl-)
+    000003B0 2B               [ 8]  835 	dec	hl
+    000003B1 22               [ 8]  836 	ld	(hl+), a
+    000003B2 AF               [ 4]  837 	xor	a, a
+    000003B3 32               [ 8]  838 	ld	(hl-), a
+    000003B4 CB 26            [16]  839 	sla	(hl)
+    000003B6 23               [ 8]  840 	inc	hl
+    000003B7 CB 16            [16]  841 	rl	(hl)
+    000003B9 2B               [ 8]  842 	dec	hl
+    000003BA 2A               [ 8]  843 	ld	a, (hl+)
+    000003BB 5F               [ 4]  844 	ld	e, a
+    000003BC 56               [ 8]  845 	ld	d, (hl)
+    000003BD 21r00r00         [12]  846 	ld	hl, #_scene_shared_bytes
+    000003C0 19               [ 8]  847 	add	hl, de
+    000003C1 E5               [16]  848 	push	hl
+    000003C2 7D               [ 4]  849 	ld	a, l
+    000003C3 F8 10            [12]  850 	ldhl	sp,	#16
+    000003C5 77               [ 8]  851 	ld	(hl), a
+    000003C6 E1               [12]  852 	pop	hl
+    000003C7 7C               [ 4]  853 	ld	a, h
+    000003C8 F8 0F            [12]  854 	ldhl	sp,	#15
+    000003CA 32               [ 8]  855 	ld	(hl-), a
+    000003CB 2A               [ 8]  856 	ld	a, (hl+)
+    000003CC 66               [ 8]  857 	ld	h, (hl)
+    000003CD 6F               [ 4]  858 	ld	l, a
+    000003CE 36 00            [12]  859 	ld	(hl), #0x00
+    000003D0 F8 10            [12]  860 	ldhl	sp,	#16
+    000003D2 3A               [ 8]  861 	ld	a, (hl-)
+    000003D3 87               [ 4]  862 	add	a, a
+    000003D4 77               [ 8]  863 	ld	(hl), a
+    000003D5 34               [12]  864 	inc	(hl)
+    000003D6 5E               [ 8]  865 	ld	e, (hl)
+    000003D7 16 00            [ 8]  866 	ld	d, #0x00
+    000003D9 21r00r00         [12]  867 	ld	hl, #_scene_shared_bytes
+    000003DC 19               [ 8]  868 	add	hl, de
+    000003DD E5               [16]  869 	push	hl
+    000003DE 7D               [ 4]  870 	ld	a, l
+    000003DF F8 10            [12]  871 	ldhl	sp,	#16
+    000003E1 77               [ 8]  872 	ld	(hl), a
+    000003E2 E1               [12]  873 	pop	hl
+    000003E3 7C               [ 4]  874 	ld	a, h
+    000003E4 F8 0F            [12]  875 	ldhl	sp,	#15
+    000003E6 32               [ 8]  876 	ld	(hl-), a
+    000003E7 2A               [ 8]  877 	ld	a, (hl+)
+    000003E8 66               [ 8]  878 	ld	h, (hl)
+    000003E9 6F               [ 4]  879 	ld	l, a
+    000003EA 36 00            [12]  880 	ld	(hl), #0x00
+    000003EC F8 10            [12]  881 	ldhl	sp,	#16
+    000003EE 34               [12]  882 	inc	(hl)
+    000003EF 18 B2            [12]  883 	jr	00123$
+    000003F1                        884 00113$:
+                                    885 ;src/battle_scene.c:74: VBK_REG=1;set_sprite_data(84u+i*2u,2,scene_shared_bytes);VBK_REG=0;
+    000003F1 3E 01            [ 8]  886 	ld	a, #0x01
+    000003F3 E0r00            [12]  887 	ldh	(_VBK_REG + 0), a
+    000003F5 F8 11            [12]  888 	ldhl	sp,	#17
+    000003F7 7E               [ 8]  889 	ld	a, (hl)
+    000003F8 87               [ 4]  890 	add	a, a
+    000003F9 C6 54            [ 8]  891 	add	a, #0x54
+    000003FB 47               [ 4]  892 	ld	b, a
+    000003FC 11r00r00         [12]  893 	ld	de, #_scene_shared_bytes
+    000003FF D5               [16]  894 	push	de
+    00000400 3E 02            [ 8]  895 	ld	a, #0x02
+    00000402 F5               [16]  896 	push	af
+    00000403 33               [ 8]  897 	inc	sp
+    00000404 C5               [16]  898 	push	bc
+    00000405 33               [ 8]  899 	inc	sp
+    00000406 CDr00r00         [24]  900 	call	_set_sprite_data
+    00000409 E8 04            [16]  901 	add	sp, #4
+    0000040B AF               [ 4]  902 	xor	a, a
+    0000040C E0r00            [12]  903 	ldh	(_VBK_REG + 0), a
+                                    904 ;src/battle_scene.c:75: set_sprite_tile(i,84u+i*2u);set_sprite_prop(i,prop);move_sprite(i,x,y);
+    0000040E F8 0A            [12]  905 	ldhl	sp,	#10
+    00000410 70               [ 8]  906 	ld	(hl), b
+                                    907 ;../../../.tools/gbdk/include/gb/gb.h:1887: shadow_OAM[nb].tile=tile;
+    00000411 F8 11            [12]  908 	ldhl	sp,	#17
+    00000413 3A               [ 8]  909 	ld	a, (hl-)
+    00000414 2B               [ 8]  910 	dec	hl
+    00000415 22               [ 8]  911 	ld	(hl+), a
+    00000416 AF               [ 4]  912 	xor	a, a
+    00000417 32               [ 8]  913 	ld	(hl-), a
+    00000418 7E               [ 8]  914 	ld	a, (hl)
+    00000419 F8 0B            [12]  915 	ldhl	sp,	#11
+    0000041B 22               [ 8]  916 	ld	(hl+), a
+    0000041C 36 00            [12]  917 	ld	(hl), #0x00
+    0000041E 3E 02            [ 8]  918 	ld	a, #0x02
+    00000420                        919 00226$:
+    00000420 F8 0B            [12]  920 	ldhl	sp,	#11
+    00000422 CB 26            [16]  921 	sla	(hl)
+    00000424 23               [ 8]  922 	inc	hl
+    00000425 CB 16            [16]  923 	rl	(hl)
+    00000427 3D               [ 4]  924 	dec	a
+    00000428 20 F6            [12]  925 	jr	NZ, 00226$
+    0000042A 11r00r00         [12]  926 	ld	de, #_shadow_OAM
+    0000042D 3A               [ 8]  927 	ld	a, (hl-)
+    0000042E 6E               [ 8]  928 	ld	l, (hl)
+    0000042F 67               [ 4]  929 	ld	h, a
+    00000430 19               [ 8]  930 	add	hl, de
+    00000431 E5               [16]  931 	push	hl
+    00000432 7D               [ 4]  932 	ld	a, l
+    00000433 F8 0F            [12]  933 	ldhl	sp,	#15
+    00000435 77               [ 8]  934 	ld	(hl), a
+    00000436 E1               [12]  935 	pop	hl
+    00000437 7C               [ 4]  936 	ld	a, h
+    00000438 F8 0E            [12]  937 	ldhl	sp,	#14
+    0000043A 32               [ 8]  938 	ld	(hl-), a
+    0000043B 2A               [ 8]  939 	ld	a, (hl+)
+    0000043C 5F               [ 4]  940 	ld	e, a
+    0000043D 56               [ 8]  941 	ld	d, (hl)
+    0000043E 21 02 00         [12]  942 	ld	hl, #0x0002
+    00000441 19               [ 8]  943 	add	hl, de
+    00000442 E5               [16]  944 	push	hl
+    00000443 7D               [ 4]  945 	ld	a, l
+    00000444 F8 11            [12]  946 	ldhl	sp,	#17
+    00000446 77               [ 8]  947 	ld	(hl), a
+    00000447 E1               [12]  948 	pop	hl
+    00000448 7C               [ 4]  949 	ld	a, h
+    00000449 F8 10            [12]  950 	ldhl	sp,	#16
+    0000044B 32               [ 8]  951 	ld	(hl-), a
+    0000044C 2A               [ 8]  952 	ld	a, (hl+)
+    0000044D 5F               [ 4]  953 	ld	e, a
+    0000044E 56               [ 8]  954 	ld	d, (hl)
+    0000044F F8 0A            [12]  955 	ldhl	sp,	#10
+                                    956 ;../../../.tools/gbdk/include/gb/gb.h:1946: shadow_OAM[nb].prop=prop;
+    00000451 2A               [ 8]  957 	ld	a, (hl+)
+    00000452 12               [ 8]  958 	ld	(de), a
+    00000453 11r00r00         [12]  959 	ld	de, #_shadow_OAM
+    00000456 2A               [ 8]  960 	ld	a,	(hl+)
+    00000457 66               [ 8]  961 	ld	h, (hl)
+    00000458 6F               [ 4]  962 	ld	l, a
+    00000459 19               [ 8]  963 	add	hl, de
+    0000045A E5               [16]  964 	push	hl
+    0000045B 7D               [ 4]  965 	ld	a, l
+    0000045C F8 0F            [12]  966 	ldhl	sp,	#15
+    0000045E 77               [ 8]  967 	ld	(hl), a
+    0000045F E1               [12]  968 	pop	hl
+    00000460 7C               [ 4]  969 	ld	a, h
+    00000461 F8 0E            [12]  970 	ldhl	sp,	#14
+    00000463 32               [ 8]  971 	ld	(hl-), a
+    00000464 2A               [ 8]  972 	ld	a, (hl+)
+    00000465 5F               [ 4]  973 	ld	e, a
+    00000466 56               [ 8]  974 	ld	d, (hl)
+    00000467 21 03 00         [12]  975 	ld	hl, #0x0003
+    0000046A 19               [ 8]  976 	add	hl, de
+    0000046B E5               [16]  977 	push	hl
+    0000046C 7D               [ 4]  978 	ld	a, l
+    0000046D F8 11            [12]  979 	ldhl	sp,	#17
+    0000046F 77               [ 8]  980 	ld	(hl), a
+    00000470 E1               [12]  981 	pop	hl
+    00000471 7C               [ 4]  982 	ld	a, h
+    00000472 F8 10            [12]  983 	ldhl	sp,	#16
+    00000474 32               [ 8]  984 	ld	(hl-), a
+    00000475 2A               [ 8]  985 	ld	a, (hl+)
+    00000476 5F               [ 4]  986 	ld	e, a
+    00000477 56               [ 8]  987 	ld	d, (hl)
+    00000478 F8 09            [12]  988 	ldhl	sp,	#9
+    0000047A 7E               [ 8]  989 	ld	a, (hl)
+    0000047B 12               [ 8]  990 	ld	(de), a
+                                    991 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    0000047C F8 0B            [12]  992 	ldhl	sp,#11
+    0000047E 2A               [ 8]  993 	ld	a, (hl+)
+    0000047F 5F               [ 4]  994 	ld	e, a
+    00000480 56               [ 8]  995 	ld	d, (hl)
+    00000481 21r00r00         [12]  996 	ld	hl, #_shadow_OAM
+    00000484 19               [ 8]  997 	add	hl, de
+    00000485 E5               [16]  998 	push	hl
+    00000486 7D               [ 4]  999 	ld	a, l
+    00000487 F8 11            [12] 1000 	ldhl	sp,	#17
+    00000489 77               [ 8] 1001 	ld	(hl), a
+    0000048A E1               [12] 1002 	pop	hl
+    0000048B 7C               [ 4] 1003 	ld	a, h
+    0000048C F8 10            [12] 1004 	ldhl	sp,	#16
+                                   1005 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    0000048E 32               [ 8] 1006 	ld	(hl-), a
+    0000048F 2A               [ 8] 1007 	ld	a, (hl+)
+    00000490 5F               [ 4] 1008 	ld	e, a
+    00000491 56               [ 8] 1009 	ld	d, (hl)
+    00000492 F8 08            [12] 1010 	ldhl	sp,	#8
+    00000494 7E               [ 8] 1011 	ld	a, (hl)
+    00000495 12               [ 8] 1012 	ld	(de), a
+    00000496 F8 0F            [12] 1013 	ldhl	sp,	#15
+    00000498 2A               [ 8] 1014 	ld	a, (hl+)
+    00000499 4F               [ 4] 1015 	ld	c, a
+    0000049A 46               [ 8] 1016 	ld	b, (hl)
+    0000049B 03               [ 8] 1017 	inc	bc
+    0000049C F8 07            [12] 1018 	ldhl	sp,	#7
+    0000049E 7E               [ 8] 1019 	ld	a, (hl)
+    0000049F 02               [ 8] 1020 	ld	(bc), a
+                                   1021 ;src/battle_scene.c:75: set_sprite_tile(i,84u+i*2u);set_sprite_prop(i,prop);move_sprite(i,x,y);
+    000004A0                       1022 00114$:
+                                   1023 ;src/battle_scene.c:66: for(i=0;i<asset->sprites;++i) {
+    000004A0 F8 11            [12] 1024 	ldhl	sp,	#17
+    000004A2 34               [12] 1025 	inc	(hl)
+    000004A3 C3r41r02         [16] 1026 	jp	00126$
+    000004A6                       1027 00143$:
+    000004A6 F8 11            [12] 1028 	ldhl	sp,	#17
+    000004A8 4E               [ 8] 1029 	ld	c, (hl)
+    000004A9                       1030 00128$:
+                                   1031 ;src/battle_scene.c:77: for(;i<40u;++i)move_sprite(i,0,0);
+    000004A9 79               [ 4] 1032 	ld	a, c
+    000004AA D6 28            [ 8] 1033 	sub	a, #0x28
+    000004AC 30 0F            [12] 1034 	jr	NC, 00116$
+                                   1035 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000004AE 11r00r00         [12] 1036 	ld	de, #_shadow_OAM+0
+    000004B1 69               [ 4] 1037 	ld	l, c
+    000004B2 AF               [ 4] 1038 	xor	a, a
+    000004B3 67               [ 4] 1039 	ld	h, a
+    000004B4 29               [ 8] 1040 	add	hl, hl
+    000004B5 29               [ 8] 1041 	add	hl, hl
+    000004B6 19               [ 8] 1042 	add	hl, de
+                                   1043 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    000004B7 AF               [ 4] 1044 	xor	a, a
+    000004B8 22               [ 8] 1045 	ld	(hl+), a
+    000004B9 77               [ 8] 1046 	ld	(hl), a
+                                   1047 ;src/battle_scene.c:77: for(;i<40u;++i)move_sprite(i,0,0);
+    000004BA 0C               [ 4] 1048 	inc	c
+    000004BB 18 EC            [12] 1049 	jr	00128$
+    000004BD                       1050 00116$:
+                                   1051 ;src/battle_scene.c:78: SPRITES_8x16;current_clip=window_y;SHOW_SPRITES;
+    000004BD F0r00            [12] 1052 	ldh	a, (_LCDC_REG + 0)
+    000004BF F6 04            [ 8] 1053 	or	a, #0x04
+    000004C1 E0r00            [12] 1054 	ldh	(_LCDC_REG + 0), a
+    000004C3 F8 18            [12] 1055 	ldhl	sp,	#24
+    000004C5 7E               [ 8] 1056 	ld	a, (hl)
+    000004C6 EAr03r00         [16] 1057 	ld	(#_current_clip),a
+    000004C9 F0r00            [12] 1058 	ldh	a, (_LCDC_REG + 0)
+    000004CB F6 02            [ 8] 1059 	or	a, #0x02
+    000004CD E0r00            [12] 1060 	ldh	(_LCDC_REG + 0), a
+    000004CF                       1061 00130$:
+                                   1062 ;src/battle_scene.c:79: }
+    000004CF E8 12            [16] 1063 	add	sp, #18
+    000004D1 C9               [16] 1064 	ret
+                                   1065 ;src/battle_scene.c:80: uint8_t battle_scene_begin(uint8_t enemy) __banked {
+                                   1066 ;	---------------------------------
+                                   1067 ; Function battle_scene_begin
+                                   1068 ; ---------------------------------
+                         0000001F  1069 	b_battle_scene_begin	= 31
+    000004D2                       1070 _battle_scene_begin::
+    000004D2 3B               [ 8] 1071 	dec	sp
+    000004D3 3B               [ 8] 1072 	dec	sp
+                                   1073 ;src/battle_scene.c:82: if(!enemy||enemy>74u)return 0;
+    000004D4 F8 08            [12] 1074 	ldhl	sp,	#8
+    000004D6 7E               [ 8] 1075 	ld	a, (hl)
+    000004D7 B7               [ 4] 1076 	or	a, a
+    000004D8 28 05            [12] 1077 	jr	Z, 00101$
+    000004DA 3E 4A            [ 8] 1078 	ld	a, #0x4a
+    000004DC 96               [ 8] 1079 	sub	a, (hl)
+    000004DD 30 04            [12] 1080 	jr	NC, 00102$
+    000004DF                       1081 00101$:
+    000004DF AF               [ 4] 1082 	xor	a, a
+    000004E0 C3rD0r05         [16] 1083 	jp	00114$
+    000004E3                       1084 00102$:
+                                   1085 ;src/battle_scene.c:83: battle_scene_hide();battle_scene_enemy=enemy;
+    000004E3 1Er00            [ 8] 1086 	ld	e, #b_battle_scene_hide
+    000004E5 21r62r00         [12] 1087 	ld	hl, #_battle_scene_hide
+    000004E8 CDr00r00         [24] 1088 	call	___sdcc_bcall_ehl
+    000004EB F8 08            [12] 1089 	ldhl	sp,	#8
+    000004ED 5E               [ 8] 1090 	ld	e, (hl)
+    000004EE 21r02r00         [12] 1091 	ld	hl, #_battle_scene_enemy
+                                   1092 ;src/battle_scene.c:84: if(enemy==72u||enemy==73u){current_asset=65535u;current_clip=120u;return background(enemy);}
+    000004F1 7B               [ 4] 1093 	ld	a,e
+    000004F2 77               [ 8] 1094 	ld	(hl),a
+    000004F3 D6 48            [ 8] 1095 	sub	a, #0x48
+    000004F5 28 05            [12] 1096 	jr	Z, 00104$
+    000004F7 7B               [ 4] 1097 	ld	a, e
+    000004F8 D6 49            [ 8] 1098 	sub	a, #0x49
+    000004FA 20 16            [12] 1099 	jr	NZ, 00105$
+    000004FC                       1100 00104$:
+    000004FC 21r05r00         [12] 1101 	ld	hl, #_current_asset
+    000004FF 3E FF            [ 8] 1102 	ld	a, #0xff
+    00000501 22               [ 8] 1103 	ld	(hl+), a
+    00000502 36 FF            [12] 1104 	ld	(hl), #0xff
+    00000504 21r03r00         [12] 1105 	ld	hl, #_current_clip
+    00000507 36 78            [12] 1106 	ld	(hl), #0x78
+    00000509 7B               [ 4] 1107 	ld	a, e
+    0000050A 33               [ 8] 1108 	inc	sp
+    0000050B 33               [ 8] 1109 	inc	sp
+    0000050C C3r86r00         [16] 1110 	jp	_background
+    0000050F C3rD0r05         [16] 1111 	jp	00114$
+    00000512                       1112 00105$:
+                                   1113 ;src/battle_scene.c:85: if(enemy==70u&&battle_scene_type==14u)gold_scene_show(2u);
+    00000512 7B               [ 4] 1114 	ld	a, e
+    00000513 D6 46            [ 8] 1115 	sub	a, #0x46
+    00000515 20 18            [12] 1116 	jr	NZ, 00111$
+    00000517 FAr00r00         [16] 1117 	ld	a, (#_battle_scene_type)
+    0000051A D6 0E            [ 8] 1118 	sub	a, #0x0e
+    0000051C 20 11            [12] 1119 	jr	NZ, 00111$
+    0000051E D5               [16] 1120 	push	de
+    0000051F 3E 02            [ 8] 1121 	ld	a, #0x02
+    00000521 F5               [16] 1122 	push	af
+    00000522 33               [ 8] 1123 	inc	sp
+    00000523 1Er00            [ 8] 1124 	ld	e, #b_gold_scene_show
+    00000525 21r00r00         [12] 1125 	ld	hl, #_gold_scene_show
+    00000528 CDr00r00         [24] 1126 	call	___sdcc_bcall_ehl
+    0000052B 33               [ 8] 1127 	inc	sp
+    0000052C D1               [12] 1128 	pop	de
+    0000052D 18 15            [12] 1129 	jr	00112$
+    0000052F                       1130 00111$:
+                                   1131 ;src/battle_scene.c:86: else if(battle_scene_type&&!background(0)){battle_scene_enemy=0;return 0;}
+    0000052F FAr00r00         [16] 1132 	ld	a, (#_battle_scene_type)
+    00000532 B7               [ 4] 1133 	or	a, a
+    00000533 28 0F            [12] 1134 	jr	Z, 00112$
+    00000535 D5               [16] 1135 	push	de
+    00000536 AF               [ 4] 1136 	xor	a, a
+    00000537 CDr86r00         [24] 1137 	call	_background
+    0000053A D1               [12] 1138 	pop	de
+    0000053B B7               [ 4] 1139 	or	a,a
+    0000053C 20 06            [12] 1140 	jr	NZ, 00112$
+    0000053E EAr02r00         [16] 1141 	ld	(#_battle_scene_enemy), a
+    00000541 C3rD0r05         [16] 1142 	jp	00114$
+    00000544                       1143 00112$:
+                                   1144 ;src/battle_scene.c:87: current_asset=battle_scene_lookup[enemy-1u][battle_scene_type==0u?battle_scene_palette:0u];
+    00000544 01r00r00         [12] 1145 	ld	bc, #_battle_scene_lookup+0
+    00000547 6B               [ 4] 1146 	ld	l, e
+    00000548 26 00            [ 8] 1147 	ld	h, #0x00
+    0000054A 2B               [ 8] 1148 	dec	hl
+    0000054B 5D               [ 4] 1149 	ld	e, l
+    0000054C 54               [ 4] 1150 	ld	d, h
+    0000054D 29               [ 8] 1151 	add	hl, hl
+    0000054E 19               [ 8] 1152 	add	hl, de
+    0000054F 29               [ 8] 1153 	add	hl, hl
+    00000550 29               [ 8] 1154 	add	hl, hl
+    00000551 29               [ 8] 1155 	add	hl, hl
+    00000552 09               [ 8] 1156 	add	hl, bc
+    00000553 4D               [ 4] 1157 	ld	c, l
+    00000554 44               [ 4] 1158 	ld	b, h
+    00000555 FAr00r00         [16] 1159 	ld	a, (#_battle_scene_type)
+    00000558 B7               [ 4] 1160 	or	a, a
+    00000559 20 07            [12] 1161 	jr	NZ, 00116$
+    0000055B FAr01r00         [16] 1162 	ld	a, (_battle_scene_palette)
+    0000055E 26 00            [ 8] 1163 	ld	h, #0x00
+    00000560 18 02            [12] 1164 	jr	00117$
+    00000562                       1165 00116$:
+    00000562 AF               [ 4] 1166 	xor	a, a
+    00000563 67               [ 4] 1167 	ld	h, a
+    00000564                       1168 00117$:
+    00000564 6F               [ 4] 1169 	ld	l, a
+    00000565 29               [ 8] 1170 	add	hl, hl
+    00000566 09               [ 8] 1171 	add	hl, bc
+    00000567 5D               [ 4] 1172 	ld	e, l
+    00000568 54               [ 4] 1173 	ld	d, h
+    00000569 1A               [ 8] 1174 	ld	a, (de)
+    0000056A 21r05r00         [12] 1175 	ld	hl, #_current_asset
+    0000056D 22               [ 8] 1176 	ld	(hl+), a
+    0000056E 13               [ 8] 1177 	inc	de
+    0000056F 1A               [ 8] 1178 	ld	a, (de)
+    00000570 77               [ 8] 1179 	ld	(hl), a
+                                   1180 ;src/battle_scene.c:88: asset=battle_scene_assets+current_asset;
+    00000571 FAr05r00         [16] 1181 	ld	a, (_current_asset)
+    00000574 21r06r00         [12] 1182 	ld	hl, #_current_asset + 1
+    00000577 4E               [ 8] 1183 	ld	c, (hl)
+    00000578 87               [ 4] 1184 	add	a, a
+    00000579 CB 11            [ 8] 1185 	rl	c
+    0000057B 87               [ 4] 1186 	add	a, a
+    0000057C CB 11            [ 8] 1187 	rl	c
+    0000057E C6r00            [ 8] 1188 	add	a, #<(_battle_scene_assets)
+    00000580 5F               [ 4] 1189 	ld	e, a
+    00000581 79               [ 4] 1190 	ld	a, c
+    00000582 CEs00            [ 8] 1191 	adc	a, #>(_battle_scene_assets)
+    00000584 57               [ 4] 1192 	ld	d, a
+    00000585 33               [ 8] 1193 	inc	sp
+    00000586 33               [ 8] 1194 	inc	sp
+                                   1195 ;src/battle_scene.c:89: bank_copy(scene_shared_colors,asset->bank,asset->data+(uint16_t)asset->sprites*5u,64u);
+    00000587 6B               [ 4] 1196 	ld	l, e
+    00000588 62               [ 4] 1197 	ld	h, d
+    00000589 E5               [16] 1198 	push	hl
+    0000058A 23               [ 8] 1199 	inc	hl
+    0000058B 23               [ 8] 1200 	inc	hl
+    0000058C 2A               [ 8] 1201 	ld	a, (hl+)
+    0000058D 4F               [ 4] 1202 	ld	c, a
+    0000058E 46               [ 8] 1203 	ld	b, (hl)
+    0000058F E1               [12] 1204 	pop	hl
+    00000590 E5               [16] 1205 	push	hl
+    00000591 23               [ 8] 1206 	inc	hl
+    00000592 6E               [ 8] 1207 	ld	l, (hl)
+    00000593 26 00            [ 8] 1208 	ld	h, #0x00
+    00000595 5D               [ 4] 1209 	ld	e, l
+    00000596 54               [ 4] 1210 	ld	d, h
+    00000597 29               [ 8] 1211 	add	hl, hl
+    00000598 29               [ 8] 1212 	add	hl, hl
+    00000599 19               [ 8] 1213 	add	hl, de
+    0000059A 09               [ 8] 1214 	add	hl, bc
+    0000059B 4D               [ 4] 1215 	ld	c, l
+    0000059C 44               [ 4] 1216 	ld	b, h
+    0000059D D1               [12] 1217 	pop	de
+    0000059E D5               [16] 1218 	push	de
+    0000059F 1A               [ 8] 1219 	ld	a, (de)
+    000005A0 F8 01            [12] 1220 	ldhl	sp,	#1
+    000005A2 77               [ 8] 1221 	ld	(hl), a
+    000005A3 11 40 00         [12] 1222 	ld	de, #0x0040
+    000005A6 D5               [16] 1223 	push	de
+    000005A7 C5               [16] 1224 	push	bc
+    000005A8 7E               [ 8] 1225 	ld	a, (hl)
+    000005A9 11r00r00         [12] 1226 	ld	de, #_scene_shared_colors
+    000005AC CDr00r00         [24] 1227 	call	_bank_copy
+                                   1228 ;src/battle_scene.c:90: set_sprite_palette(0,8,scene_shared_colors);scene_actor_active=1;
+    000005AF 11r00r00         [12] 1229 	ld	de, #_scene_shared_colors
+    000005B2 D5               [16] 1230 	push	de
+    000005B3 21 00 08         [12] 1231 	ld	hl, #0x800
+    000005B6 E5               [16] 1232 	push	hl
+    000005B7 CDr00r00         [24] 1233 	call	_set_sprite_palette
+    000005BA E8 04            [16] 1234 	add	sp, #4
+    000005BC 21r00r00         [12] 1235 	ld	hl, #_scene_actor_active
+    000005BF 36 01            [12] 1236 	ld	(hl), #0x01
+                                   1237 ;src/battle_scene.c:91: battle_scene_clip(120u);return 1;
+    000005C1 3E 78            [ 8] 1238 	ld	a, #0x78
+    000005C3 F5               [16] 1239 	push	af
+    000005C4 33               [ 8] 1240 	inc	sp
+    000005C5 1Er00            [ 8] 1241 	ld	e, #b_battle_scene_clip
+    000005C7 21rF0r01         [12] 1242 	ld	hl, #_battle_scene_clip
+    000005CA CDr00r00         [24] 1243 	call	___sdcc_bcall_ehl
+    000005CD 33               [ 8] 1244 	inc	sp
+    000005CE 3E 01            [ 8] 1245 	ld	a, #0x01
+    000005D0                       1246 00114$:
+                                   1247 ;src/battle_scene.c:92: }
+    000005D0 33               [ 8] 1248 	inc	sp
+    000005D1 33               [ 8] 1249 	inc	sp
+    000005D2 C9               [16] 1250 	ret
+                                   1251 ;src/battle_scene.c:94: uint8_t battle_scene_animation_frame(uint8_t frame) __banked {
+                                   1252 ;	---------------------------------
+                                   1253 ; Function battle_scene_animation_frame
+                                   1254 ; ---------------------------------
+                         0000001F  1255 	b_battle_scene_animation_frame	= 31
+    000005D3                       1256 _battle_scene_animation_frame::
+    000005D3 E8 FA            [16] 1257 	add	sp, #-6
+                                   1258 ;src/battle_scene.c:95: BattleSceneAsset asset;uint8_t clip=current_clip,kind=1;uint16_t index;
+    000005D5 FAr03r00         [16] 1259 	ld	a, (#_current_clip)
+    000005D8 F8 04            [12] 1260 	ldhl	sp,	#4
+    000005DA 22               [ 8] 1261 	ld	(hl+), a
+    000005DB 36 01            [12] 1262 	ld	(hl), #0x01
+                                   1263 ;src/battle_scene.c:96: index=battle_motion_asset(battle_scene_enemy,frame,battle_scene_type==0u?battle_scene_palette:0u);
+    000005DD FAr00r00         [16] 1264 	ld	a, (#_battle_scene_type)
+    000005E0 B7               [ 4] 1265 	or	a, a
+    000005E1 20 05            [12] 1266 	jr	NZ, 00107$
+    000005E3 FAr01r00         [16] 1267 	ld	a, (_battle_scene_palette)
+    000005E6 18 01            [12] 1268 	jr	00108$
+    000005E8                       1269 00107$:
+    000005E8 AF               [ 4] 1270 	xor	a, a
+    000005E9                       1271 00108$:
+    000005E9 F5               [16] 1272 	push	af
+    000005EA 33               [ 8] 1273 	inc	sp
+    000005EB F8 0D            [12] 1274 	ldhl	sp,	#13
+    000005ED 7E               [ 8] 1275 	ld	a, (hl)
+    000005EE F5               [16] 1276 	push	af
+    000005EF 33               [ 8] 1277 	inc	sp
+    000005F0 FAr02r00         [16] 1278 	ld	a, (_battle_scene_enemy)
+    000005F3 F5               [16] 1279 	push	af
+    000005F4 33               [ 8] 1280 	inc	sp
+    000005F5 1Er00            [ 8] 1281 	ld	e, #b_battle_motion_asset
+    000005F7 21r00r00         [12] 1282 	ld	hl, #_battle_motion_asset
+    000005FA CDr00r00         [24] 1283 	call	___sdcc_bcall_ehl
+    000005FD E8 03            [16] 1284 	add	sp, #3
+                                   1285 ;src/battle_scene.c:97: if(index==65535u){index=enemy_magic_pose(battle_scene_enemy,frame,battle_scene_type==0u?battle_scene_palette:0u);if(index==65535u)return 0;kind=2;}
+    000005FF 59               [ 4] 1286 	ld	e, c
+    00000600 50               [ 4] 1287 	ld	d, b
+    00000601 7B               [ 4] 1288 	ld	a, e
+    00000602 A2               [ 4] 1289 	and	a, d
+    00000603 3C               [ 4] 1290 	inc	a
+    00000604 20 2D            [12] 1291 	jr	NZ, 00104$
+    00000606 FAr00r00         [16] 1292 	ld	a, (#_battle_scene_type)
+    00000609 B7               [ 4] 1293 	or	a, a
+    0000060A 20 05            [12] 1294 	jr	NZ, 00109$
+    0000060C FAr01r00         [16] 1295 	ld	a, (_battle_scene_palette)
+    0000060F 18 01            [12] 1296 	jr	00110$
+    00000611                       1297 00109$:
+    00000611 AF               [ 4] 1298 	xor	a, a
+    00000612                       1299 00110$:
+    00000612 F5               [16] 1300 	push	af
+    00000613 33               [ 8] 1301 	inc	sp
+    00000614 F8 0D            [12] 1302 	ldhl	sp,	#13
+    00000616 7E               [ 8] 1303 	ld	a, (hl)
+    00000617 F5               [16] 1304 	push	af
+    00000618 33               [ 8] 1305 	inc	sp
+    00000619 FAr02r00         [16] 1306 	ld	a, (_battle_scene_enemy)
+    0000061C F5               [16] 1307 	push	af
+    0000061D 33               [ 8] 1308 	inc	sp
+    0000061E 1Er00            [ 8] 1309 	ld	e, #b_enemy_magic_pose
+    00000620 21r00r00         [12] 1310 	ld	hl, #_enemy_magic_pose
+    00000623 CDr00r00         [24] 1311 	call	___sdcc_bcall_ehl
+    00000626 E8 03            [16] 1312 	add	sp, #3
+    00000628 59               [ 4] 1313 	ld	e, c
+    00000629 50               [ 4] 1314 	ld	d, b
+    0000062A 7B               [ 4] 1315 	ld	a, e
+    0000062B A2               [ 4] 1316 	and	a, d
+    0000062C 3C               [ 4] 1317 	inc	a
+    0000062D 28 5F            [12] 1318 	jr	Z, 00105$
+    0000062F F8 05            [12] 1319 	ldhl	sp,	#5
+    00000631 36 02            [12] 1320 	ld	(hl), #0x02
+    00000633                       1321 00104$:
+                                   1322 ;src/battle_scene.c:98: current_asset=index;current_animated=kind;current_descriptor(&asset);
+    00000633 21r05r00         [12] 1323 	ld	hl, #_current_asset
+    00000636 79               [ 4] 1324 	ld	a, c
+    00000637 22               [ 8] 1325 	ld	(hl+), a
+    00000638 70               [ 8] 1326 	ld	(hl), b
+    00000639 F8 05            [12] 1327 	ldhl	sp,	#5
+    0000063B 7E               [ 8] 1328 	ld	a, (hl)
+    0000063C EAr04r00         [16] 1329 	ld	(#_current_animated),a
+    0000063F 21 00 00         [12] 1330 	ld	hl, #0
+    00000642 39               [ 8] 1331 	add	hl, sp
+    00000643 5D               [ 4] 1332 	ld	e, l
+    00000644 54               [ 4] 1333 	ld	d, h
+    00000645 CDrEDr00         [24] 1334 	call	_current_descriptor
+                                   1335 ;src/battle_scene.c:99: bank_copy(scene_shared_colors,asset.bank,asset.data+(uint16_t)asset.sprites*5u,64u);
+    00000648 F8 02            [12] 1336 	ldhl	sp,	#2
+    0000064A 2A               [ 8] 1337 	ld	a, (hl+)
+    0000064B 4F               [ 4] 1338 	ld	c, a
+    0000064C 3A               [ 8] 1339 	ld	a, (hl-)
+    0000064D 2B               [ 8] 1340 	dec	hl
+    0000064E 47               [ 4] 1341 	ld	b, a
+    0000064F 6E               [ 8] 1342 	ld	l, (hl)
+    00000650 26 00            [ 8] 1343 	ld	h, #0x00
+    00000652 5D               [ 4] 1344 	ld	e, l
+    00000653 54               [ 4] 1345 	ld	d, h
+    00000654 29               [ 8] 1346 	add	hl, hl
+    00000655 29               [ 8] 1347 	add	hl, hl
+    00000656 19               [ 8] 1348 	add	hl, de
+    00000657 09               [ 8] 1349 	add	hl, bc
+    00000658 4D               [ 4] 1350 	ld	c, l
+    00000659 44               [ 4] 1351 	ld	b, h
+    0000065A F8 00            [12] 1352 	ldhl	sp,	#0
+    0000065C 7E               [ 8] 1353 	ld	a, (hl)
+    0000065D F8 05            [12] 1354 	ldhl	sp,	#5
+    0000065F 77               [ 8] 1355 	ld	(hl), a
+    00000660 11 40 00         [12] 1356 	ld	de, #0x0040
+    00000663 D5               [16] 1357 	push	de
+    00000664 C5               [16] 1358 	push	bc
+    00000665 7E               [ 8] 1359 	ld	a, (hl)
+    00000666 11r00r00         [12] 1360 	ld	de, #_scene_shared_colors
+    00000669 CDr00r00         [24] 1361 	call	_bank_copy
+                                   1362 ;src/battle_scene.c:100: set_sprite_palette(0,8,scene_shared_colors);current_clip=255u;battle_scene_clip(clip);return 1;
+    0000066C 11r00r00         [12] 1363 	ld	de, #_scene_shared_colors
+    0000066F D5               [16] 1364 	push	de
+    00000670 21 00 08         [12] 1365 	ld	hl, #0x800
+    00000673 E5               [16] 1366 	push	hl
+    00000674 CDr00r00         [24] 1367 	call	_set_sprite_palette
+    00000677 E8 04            [16] 1368 	add	sp, #4
+    00000679 21r03r00         [12] 1369 	ld	hl, #_current_clip
+    0000067C 36 FF            [12] 1370 	ld	(hl), #0xff
+    0000067E F8 04            [12] 1371 	ldhl	sp,	#4
+    00000680 7E               [ 8] 1372 	ld	a, (hl)
+    00000681 F5               [16] 1373 	push	af
+    00000682 33               [ 8] 1374 	inc	sp
+    00000683 1Er00            [ 8] 1375 	ld	e, #b_battle_scene_clip
+    00000685 21rF0r01         [12] 1376 	ld	hl, #_battle_scene_clip
+    00000688 CDr00r00         [24] 1377 	call	___sdcc_bcall_ehl
+    0000068B 33               [ 8] 1378 	inc	sp
+    0000068C 3E 01            [ 8] 1379 	ld	a, #0x01
+    0000068E                       1380 00105$:
+                                   1381 ;src/battle_scene.c:101: }
+    0000068E E8 06            [16] 1382 	add	sp, #6
+    00000690 C9               [16] 1383 	ret
+                                   1384 ;src/battle_scene.c:103: static void overlay_prepare(uint8_t group,uint8_t white) {
+                                   1385 ;	---------------------------------
+                                   1386 ; Function overlay_prepare
+                                   1387 ; ---------------------------------
+    00000691                       1388 _overlay_prepare:
+    00000691 E8 F7            [16] 1389 	add	sp, #-9
+    00000693 F8 08            [12] 1390 	ldhl	sp,	#8
+    00000695 32               [ 8] 1391 	ld	(hl-), a
+    00000696 73               [ 8] 1392 	ld	(hl), e
+                                   1393 ;src/battle_scene.c:105: if(!battle_scene_enemy||current_asset==65535u)return;
+    00000697 FAr02r00         [16] 1394 	ld	a, (#_battle_scene_enemy)
+    0000069A B7               [ 4] 1395 	or	a, a
+    0000069B CAr65r07         [16] 1396 	jp	Z, 00114$
+    0000069E FAr05r00         [16] 1397 	ld	a, (_current_asset)
+    000006A1 4F               [ 4] 1398 	ld	c, a
+    000006A2 21r06r00         [12] 1399 	ld	hl, #_current_asset + 1
+    000006A5 79               [ 4] 1400 	ld	a, c
+    000006A6 A6               [ 8] 1401 	and	a, (hl)
+    000006A7 3C               [ 4] 1402 	inc	a
+    000006A8 CAr65r07         [16] 1403 	jp	Z, 00114$
+                                   1404 ;src/battle_scene.c:106: current_descriptor(&local);asset=&local;
+    000006AB 21 00 00         [12] 1405 	ld	hl, #0
+    000006AE 39               [ 8] 1406 	add	hl, sp
+    000006AF 5D               [ 4] 1407 	ld	e, l
+    000006B0 54               [ 4] 1408 	ld	d, h
+    000006B1 CDrEDr00         [24] 1409 	call	_current_descriptor
+                                   1410 ;src/battle_scene.c:107: bank_copy(scene_shared_colors,asset->bank,asset->data+(uint16_t)asset->sprites*5u,64u);
+    000006B4 F8 02            [12] 1411 	ldhl	sp,	#2
+    000006B6 2A               [ 8] 1412 	ld	a, (hl+)
+    000006B7 4F               [ 4] 1413 	ld	c, a
+    000006B8 3A               [ 8] 1414 	ld	a, (hl-)
+    000006B9 2B               [ 8] 1415 	dec	hl
+    000006BA 47               [ 4] 1416 	ld	b, a
+    000006BB 6E               [ 8] 1417 	ld	l, (hl)
+    000006BC 26 00            [ 8] 1418 	ld	h, #0x00
+    000006BE 5D               [ 4] 1419 	ld	e, l
+    000006BF 54               [ 4] 1420 	ld	d, h
+    000006C0 29               [ 8] 1421 	add	hl, hl
+    000006C1 29               [ 8] 1422 	add	hl, hl
+    000006C2 19               [ 8] 1423 	add	hl, de
+    000006C3 09               [ 8] 1424 	add	hl, bc
+    000006C4 4D               [ 4] 1425 	ld	c, l
+    000006C5 44               [ 4] 1426 	ld	b, h
+    000006C6 F8 00            [12] 1427 	ldhl	sp,	#0
+    000006C8 7E               [ 8] 1428 	ld	a, (hl)
+    000006C9 F8 06            [12] 1429 	ldhl	sp,	#6
+    000006CB 77               [ 8] 1430 	ld	(hl), a
+    000006CC 11 40 00         [12] 1431 	ld	de, #0x0040
+    000006CF D5               [16] 1432 	push	de
+    000006D0 C5               [16] 1433 	push	bc
+    000006D1 7E               [ 8] 1434 	ld	a, (hl)
+    000006D2 11r00r00         [12] 1435 	ld	de, #_scene_shared_colors
+    000006D5 CDr00r00         [24] 1436 	call	_bank_copy
+                                   1437 ;src/battle_scene.c:108: if(white){
+    000006D8 F8 07            [12] 1438 	ldhl	sp,	#7
+    000006DA 7E               [ 8] 1439 	ld	a, (hl)
+    000006DB B7               [ 4] 1440 	or	a, a
+    000006DC CAr65r07         [16] 1441 	jp	Z, 00114$
+                                   1442 ;src/battle_scene.c:109: bank_copy(scene_shared_bytes,asset->bank,asset->data+(uint16_t)asset->sprites*5u+64u+(uint16_t)group*8u,8u);
+    000006DF F8 02            [12] 1443 	ldhl	sp,	#2
+    000006E1 2A               [ 8] 1444 	ld	a, (hl+)
+    000006E2 4F               [ 4] 1445 	ld	c, a
+    000006E3 3A               [ 8] 1446 	ld	a, (hl-)
+    000006E4 2B               [ 8] 1447 	dec	hl
+    000006E5 47               [ 4] 1448 	ld	b, a
+    000006E6 6E               [ 8] 1449 	ld	l, (hl)
+    000006E7 26 00            [ 8] 1450 	ld	h, #0x00
+    000006E9 5D               [ 4] 1451 	ld	e, l
+    000006EA 54               [ 4] 1452 	ld	d, h
+    000006EB 29               [ 8] 1453 	add	hl, hl
+    000006EC 29               [ 8] 1454 	add	hl, hl
+    000006ED 19               [ 8] 1455 	add	hl, de
+    000006EE 09               [ 8] 1456 	add	hl, bc
+    000006EF 01 40 00         [12] 1457 	ld	bc, #0x40
+    000006F2 09               [ 8] 1458 	add	hl,bc
+    000006F3 4D               [ 4] 1459 	ld	c, l
+    000006F4 44               [ 4] 1460 	ld	b, h
+    000006F5 F8 08            [12] 1461 	ldhl	sp,	#8
+    000006F7 5E               [ 8] 1462 	ld	e, (hl)
+    000006F8 AF               [ 4] 1463 	xor	a, a
+    000006F9 6B               [ 4] 1464 	ld	l, e
+    000006FA 67               [ 4] 1465 	ld	h, a
+    000006FB 29               [ 8] 1466 	add	hl, hl
+    000006FC 29               [ 8] 1467 	add	hl, hl
+    000006FD 29               [ 8] 1468 	add	hl, hl
+    000006FE 09               [ 8] 1469 	add	hl, bc
+    000006FF 4D               [ 4] 1470 	ld	c, l
+    00000700 44               [ 4] 1471 	ld	b, h
+    00000701 F8 00            [12] 1472 	ldhl	sp,	#0
+    00000703 7E               [ 8] 1473 	ld	a, (hl)
+    00000704 F8 06            [12] 1474 	ldhl	sp,	#6
+    00000706 77               [ 8] 1475 	ld	(hl), a
+    00000707 11 08 00         [12] 1476 	ld	de, #0x0008
+    0000070A D5               [16] 1477 	push	de
+    0000070B C5               [16] 1478 	push	bc
+    0000070C 7E               [ 8] 1479 	ld	a, (hl)
+    0000070D 11r00r00         [12] 1480 	ld	de, #_scene_shared_bytes
+    00000710 CDr00r00         [24] 1481 	call	_bank_copy
+                                   1482 ;src/battle_scene.c:110: for(p=0;p<8u;++p)for(c=1;c<4u;++c)if(scene_shared_bytes[p]&(1u<<c))scene_shared_colors[p*4u+c]=RGB(31,31,31);
+    00000713 0E 00            [ 8] 1483 	ld	c, #0x00
+    00000715                       1484 00119$:
+    00000715 79               [ 4] 1485 	ld	a, c
+    00000716 87               [ 4] 1486 	add	a, a
+    00000717 87               [ 4] 1487 	add	a, a
+    00000718 F8 04            [12] 1488 	ldhl	sp,	#4
+    0000071A 77               [ 8] 1489 	ld	(hl), a
+    0000071B 11r00r00         [12] 1490 	ld	de, #_scene_shared_bytes
+    0000071E 69               [ 4] 1491 	ld	l, c
+    0000071F 26 00            [ 8] 1492 	ld	h, #0x00
+    00000721 19               [ 8] 1493 	add	hl, de
+    00000722 E5               [16] 1494 	push	hl
+    00000723 7D               [ 4] 1495 	ld	a, l
+    00000724 F8 07            [12] 1496 	ldhl	sp,	#7
+    00000726 77               [ 8] 1497 	ld	(hl), a
+    00000727 E1               [12] 1498 	pop	hl
+    00000728 7C               [ 4] 1499 	ld	a, h
+    00000729 F8 06            [12] 1500 	ldhl	sp,	#6
+    0000072B 77               [ 8] 1501 	ld	(hl), a
+    0000072C 06 01            [ 8] 1502 	ld	b, #0x01
+    0000072E                       1503 00110$:
+    0000072E F8 05            [12] 1504 	ldhl	sp,#5
+    00000730 2A               [ 8] 1505 	ld	a, (hl+)
+    00000731 5F               [ 4] 1506 	ld	e, a
+    00000732 56               [ 8] 1507 	ld	d, (hl)
+    00000733 1A               [ 8] 1508 	ld	a, (de)
+    00000734 6F               [ 4] 1509 	ld	l, a
+    00000735 C5               [16] 1510 	push	bc
+    00000736 11 01 00         [12] 1511 	ld	de, #0x0001
+    00000739 F1               [12] 1512 	pop	af
+    0000073A                       1513 00162$:
+    0000073A CB 23            [ 8] 1514 	sla	e
+    0000073C CB 12            [ 8] 1515 	rl	d
+    0000073E 3D               [ 4] 1516 	dec	a
+    0000073F 20 F9            [12] 1517 	jr	NZ,00162$
+    00000741 7D               [ 4] 1518 	ld	a, l
+    00000742 A3               [ 4] 1519 	and	a, e
+    00000743 1E 00            [ 8] 1520 	ld	e, #0x00
+    00000745 B3               [ 4] 1521 	or	a, e
+    00000746 28 11            [12] 1522 	jr	Z, 00111$
+    00000748 F8 04            [12] 1523 	ldhl	sp,	#4
+    0000074A 7E               [ 8] 1524 	ld	a, (hl)
+    0000074B 80               [ 4] 1525 	add	a, b
+    0000074C 6F               [ 4] 1526 	ld	l, a
+    0000074D 26 00            [ 8] 1527 	ld	h, #0x00
+    0000074F 29               [ 8] 1528 	add	hl, hl
+    00000750 11r00r00         [12] 1529 	ld	de, #_scene_shared_colors
+    00000753 19               [ 8] 1530 	add	hl, de
+    00000754 3E FF            [ 8] 1531 	ld	a, #0xff
+    00000756 22               [ 8] 1532 	ld	(hl+), a
+    00000757 36 7F            [12] 1533 	ld	(hl), #0x7f
+    00000759                       1534 00111$:
+    00000759 04               [ 4] 1535 	inc	b
+    0000075A 78               [ 4] 1536 	ld	a, b
+    0000075B D6 04            [ 8] 1537 	sub	a, #0x04
+    0000075D 38 CF            [12] 1538 	jr	C, 00110$
+    0000075F 0C               [ 4] 1539 	inc	c
+    00000760 79               [ 4] 1540 	ld	a, c
+    00000761 D6 08            [ 8] 1541 	sub	a, #0x08
+    00000763 38 B0            [12] 1542 	jr	C, 00119$
+    00000765                       1543 00114$:
+                                   1544 ;src/battle_scene.c:112: }
+    00000765 E8 09            [16] 1545 	add	sp, #9
+    00000767 C9               [16] 1546 	ret
+                                   1547 ;src/battle_scene.c:113: static void overlay_flash(uint8_t group,uint8_t white) {
+                                   1548 ;	---------------------------------
+                                   1549 ; Function overlay_flash
+                                   1550 ; ---------------------------------
+    00000768                       1551 _overlay_flash:
+                                   1552 ;src/battle_scene.c:114: overlay_prepare(group,white);set_sprite_palette(0,8,scene_shared_colors);
+    00000768 CDr91r06         [24] 1553 	call	_overlay_prepare
+    0000076B 11r00r00         [12] 1554 	ld	de, #_scene_shared_colors
+    0000076E D5               [16] 1555 	push	de
+    0000076F 21 00 08         [12] 1556 	ld	hl, #0x800
+    00000772 E5               [16] 1557 	push	hl
+    00000773 CDr00r00         [24] 1558 	call	_set_sprite_palette
+    00000776 E8 04            [16] 1559 	add	sp, #4
+                                   1560 ;src/battle_scene.c:115: }
+    00000778 C9               [16] 1561 	ret
+                                   1562 ;src/battle_scene.c:117: void battle_scene_flash_enemy(uint8_t white) __banked {
+                                   1563 ;	---------------------------------
+                                   1564 ; Function battle_scene_flash_enemy
+                                   1565 ; ---------------------------------
+                         0000001F  1566 	b_battle_scene_flash_enemy	= 31
+    00000779                       1567 _battle_scene_flash_enemy::
+                                   1568 ;src/battle_scene.c:118: game_transition_vint16();
+    00000779 1Er00            [ 8] 1569 	ld	e, #b_game_transition_vint16
+    0000077B 21r00r00         [12] 1570 	ld	hl, #_game_transition_vint16
+    0000077E CDr00r00         [24] 1571 	call	___sdcc_bcall_ehl
+                                   1572 ;src/battle_scene.c:119: scene_palette_capture();
+    00000781 1Er00            [ 8] 1573 	ld	e, #b_scene_palette_capture
+    00000783 21r00r00         [12] 1574 	ld	hl, #_scene_palette_capture
+    00000786 CDr00r00         [24] 1575 	call	___sdcc_bcall_ehl
+                                   1576 ;src/battle_scene.c:120: if(battle_scene_enemy==72u||battle_scene_enemy==73u)scene_palette_prepare(4u,white);
+    00000789 FAr02r00         [16] 1577 	ld	a,(#_battle_scene_enemy)
+    0000078C FE 48            [ 8] 1578 	cp	a,#0x48
+    0000078E 28 04            [12] 1579 	jr	Z, 00104$
+    00000790 D6 49            [ 8] 1580 	sub	a, #0x49
+    00000792 20 14            [12] 1581 	jr	NZ, 00105$
+    00000794                       1582 00104$:
+    00000794 F8 06            [12] 1583 	ldhl	sp,	#6
+    00000796 7E               [ 8] 1584 	ld	a, (hl)
+    00000797 F5               [16] 1585 	push	af
+    00000798 33               [ 8] 1586 	inc	sp
+    00000799 3E 04            [ 8] 1587 	ld	a, #0x04
+    0000079B F5               [16] 1588 	push	af
+    0000079C 33               [ 8] 1589 	inc	sp
+    0000079D 1Er00            [ 8] 1590 	ld	e, #b_scene_palette_prepare
+    0000079F 21r00r00         [12] 1591 	ld	hl, #_scene_palette_prepare
+    000007A2 CDr00r00         [24] 1592 	call	___sdcc_bcall_ehl
+    000007A5 E1               [12] 1593 	pop	hl
+    000007A6 18 22            [12] 1594 	jr	00106$
+    000007A8                       1595 00105$:
+                                   1596 ;src/battle_scene.c:121: else if(battle_scene_enemy==70u&&battle_scene_type==14u)gold_scene_prepare(2u,4u,white);
+    000007A8 FAr02r00         [16] 1597 	ld	a, (#_battle_scene_enemy)
+    000007AB D6 46            [ 8] 1598 	sub	a, #0x46
+    000007AD 20 1B            [12] 1599 	jr	NZ, 00106$
+    000007AF FAr00r00         [16] 1600 	ld	a, (#_battle_scene_type)
+    000007B2 D6 0E            [ 8] 1601 	sub	a, #0x0e
+    000007B4 20 14            [12] 1602 	jr	NZ, 00106$
+    000007B6 F8 06            [12] 1603 	ldhl	sp,	#6
+    000007B8 66               [ 8] 1604 	ld	h, (hl)
+    000007B9 2E 04            [ 8] 1605 	ld	l, #0x04
+    000007BB E5               [16] 1606 	push	hl
+    000007BC 3E 02            [ 8] 1607 	ld	a, #0x02
+    000007BE F5               [16] 1608 	push	af
+    000007BF 33               [ 8] 1609 	inc	sp
+    000007C0 1Er00            [ 8] 1610 	ld	e, #b_gold_scene_prepare
+    000007C2 21r00r00         [12] 1611 	ld	hl, #_gold_scene_prepare
+    000007C5 CDr00r00         [24] 1612 	call	___sdcc_bcall_ehl
+    000007C8 E8 03            [16] 1613 	add	sp, #3
+    000007CA                       1614 00106$:
+                                   1615 ;src/battle_scene.c:122: overlay_prepare(0u,white);scene_palette_commit();
+    000007CA F8 06            [12] 1616 	ldhl	sp,	#6
+    000007CC 5E               [ 8] 1617 	ld	e, (hl)
+    000007CD AF               [ 4] 1618 	xor	a, a
+    000007CE CDr91r06         [24] 1619 	call	_overlay_prepare
+    000007D1 1Er00            [ 8] 1620 	ld	e, #b_scene_palette_commit
+    000007D3 21r00r00         [12] 1621 	ld	hl, #_scene_palette_commit
+                                   1622 ;src/battle_scene.c:123: }
+    000007D6 C3r00r00         [16] 1623 	jp  ___sdcc_bcall_ehl
+                                   1624 ;src/battle_scene.c:124: void battle_scene_flash_party(uint8_t white,uint8_t extra) __banked {
+                                   1625 ;	---------------------------------
+                                   1626 ; Function battle_scene_flash_party
+                                   1627 ; ---------------------------------
+                         0000001F  1628 	b_battle_scene_flash_party	= 31
+    000007D9                       1629 _battle_scene_flash_party::
+    000007D9 E8 FD            [16] 1630 	add	sp, #-3
+                                   1631 ;src/battle_scene.c:126: game_transition_vint16();scene_palette_capture();
+    000007DB 1Er00            [ 8] 1632 	ld	e, #b_game_transition_vint16
+    000007DD 21r00r00         [12] 1633 	ld	hl, #_game_transition_vint16
+    000007E0 CDr00r00         [24] 1634 	call	___sdcc_bcall_ehl
+    000007E3 1Er00            [ 8] 1635 	ld	e, #b_scene_palette_capture
+    000007E5 21r00r00         [12] 1636 	ld	hl, #_scene_palette_capture
+    000007E8 CDr00r00         [24] 1637 	call	___sdcc_bcall_ehl
+                                   1638 ;src/battle_scene.c:127: if(battle_scene_enemy==70u&&battle_scene_type==14u)gold_scene_prepare(2u,extra?3u:1u,white);
+    000007EB FAr02r00         [16] 1639 	ld	a, (#_battle_scene_enemy)
+    000007EE D6 46            [ 8] 1640 	sub	a, #0x46
+    000007F0 20 29            [12] 1641 	jr	NZ, 00110$
+    000007F2 FAr00r00         [16] 1642 	ld	a, (#_battle_scene_type)
+    000007F5 D6 0E            [ 8] 1643 	sub	a, #0x0e
+    000007F7 20 22            [12] 1644 	jr	NZ, 00110$
+    000007F9 F8 0A            [12] 1645 	ldhl	sp,	#10
+    000007FB 7E               [ 8] 1646 	ld	a, (hl)
+    000007FC B7               [ 4] 1647 	or	a, a
+    000007FD 3E 03            [ 8] 1648 	ld	a, #0x03
+    000007FF 20 02            [12] 1649 	jr	NZ, 00120$
+    00000801 3E 01            [ 8] 1650 	ld	a, #0x01
+    00000803                       1651 00120$:
+    00000803 F8 09            [12] 1652 	ldhl	sp,	#9
+    00000805 66               [ 8] 1653 	ld	h, (hl)
+    00000806 E5               [16] 1654 	push	hl
+    00000807 33               [ 8] 1655 	inc	sp
+    00000808 F5               [16] 1656 	push	af
+    00000809 33               [ 8] 1657 	inc	sp
+    0000080A 3E 02            [ 8] 1658 	ld	a, #0x02
+    0000080C F5               [16] 1659 	push	af
+    0000080D 33               [ 8] 1660 	inc	sp
+    0000080E 1Er00            [ 8] 1661 	ld	e, #b_gold_scene_prepare
+    00000810 21r00r00         [12] 1662 	ld	hl, #_gold_scene_prepare
+    00000813 CDr00r00         [24] 1663 	call	___sdcc_bcall_ehl
+    00000816 E8 03            [16] 1664 	add	sp, #3
+    00000818 C3rB2r08         [16] 1665 	jp	00111$
+    0000081B                       1666 00110$:
+                                   1667 ;src/battle_scene.c:128: else if(battle_scene_type)scene_palette_prepare(extra?3u:1u,white);
+    0000081B FAr00r00         [16] 1668 	ld	a, (#_battle_scene_type)
+    0000081E B7               [ 4] 1669 	or	a, a
+    0000081F 28 1C            [12] 1670 	jr	Z, 00107$
+    00000821 F8 0A            [12] 1671 	ldhl	sp,	#10
+    00000823 7E               [ 8] 1672 	ld	a, (hl)
+    00000824 B7               [ 4] 1673 	or	a, a
+    00000825 3E 03            [ 8] 1674 	ld	a, #0x03
+    00000827 20 02            [12] 1675 	jr	NZ, 00122$
+    00000829 3E 01            [ 8] 1676 	ld	a, #0x01
+    0000082B                       1677 00122$:
+    0000082B F8 09            [12] 1678 	ldhl	sp,	#9
+    0000082D 66               [ 8] 1679 	ld	h, (hl)
+    0000082E E5               [16] 1680 	push	hl
+    0000082F 33               [ 8] 1681 	inc	sp
+    00000830 F5               [16] 1682 	push	af
+    00000831 33               [ 8] 1683 	inc	sp
+    00000832 1Er00            [ 8] 1684 	ld	e, #b_scene_palette_prepare
+    00000834 21r00r00         [12] 1685 	ld	hl, #_scene_palette_prepare
+    00000837 CDr00r00         [24] 1686 	call	___sdcc_bcall_ehl
+    0000083A E1               [12] 1687 	pop	hl
+    0000083B 18 75            [12] 1688 	jr	00111$
+    0000083D                       1689 00107$:
+                                   1690 ;src/battle_scene.c:130: palette=dungeon_graphic_palettes+battle_scene_palette;
+    0000083D 21r01r00         [12] 1691 	ld	hl, #_battle_scene_palette
+    00000840 4E               [ 8] 1692 	ld	c, (hl)
+    00000841 06 00            [ 8] 1693 	ld	b, #0x00
+    00000843 69               [ 4] 1694 	ld	l, c
+    00000844 60               [ 4] 1695 	ld	h, b
+    00000845 29               [ 8] 1696 	add	hl, hl
+    00000846 09               [ 8] 1697 	add	hl, bc
+    00000847 01r00r00         [12] 1698 	ld	bc, #_dungeon_graphic_palettes
+    0000084A 09               [ 8] 1699 	add	hl, bc
+                                   1700 ;src/battle_scene.c:131: bank_copy(scene_palette_background,palette->bank,palette->data+312u,56u);
+    0000084B 4D               [ 4] 1701 	ld	c,l
+    0000084C 44               [ 4] 1702 	ld	b,h
+    0000084D 23               [ 8] 1703 	inc	hl
+    0000084E 33               [ 8] 1704 	inc	sp
+    0000084F 33               [ 8] 1705 	inc	sp
+    00000850 5D               [ 4] 1706 	ld	e, l
+    00000851 54               [ 4] 1707 	ld	d, h
+    00000852 D5               [16] 1708 	push	de
+    00000853 1A               [ 8] 1709 	ld	a, (de)
+    00000854 6F               [ 4] 1710 	ld	l, a
+    00000855 13               [ 8] 1711 	inc	de
+    00000856 1A               [ 8] 1712 	ld	a, (de)
+    00000857 67               [ 4] 1713 	ld	h, a
+    00000858 11 38 01         [12] 1714 	ld	de, #0x138
+    0000085B 19               [ 8] 1715 	add	hl, de
+    0000085C 5D               [ 4] 1716 	ld	e, l
+    0000085D 54               [ 4] 1717 	ld	d, h
+    0000085E 0A               [ 8] 1718 	ld	a, (bc)
+    0000085F F8 02            [12] 1719 	ldhl	sp,	#2
+    00000861 77               [ 8] 1720 	ld	(hl), a
+    00000862 C5               [16] 1721 	push	bc
+    00000863 21 38 00         [12] 1722 	ld	hl, #0x0038
+    00000866 E5               [16] 1723 	push	hl
+    00000867 D5               [16] 1724 	push	de
+    00000868 F8 08            [12] 1725 	ldhl	sp,	#8
+    0000086A 7E               [ 8] 1726 	ld	a, (hl)
+    0000086B 11r00r00         [12] 1727 	ld	de, #_scene_palette_background
+    0000086E CDr00r00         [24] 1728 	call	_bank_copy
+    00000871 C1               [12] 1729 	pop	bc
+                                   1730 ;src/battle_scene.c:132: if(white){
+    00000872 F8 09            [12] 1731 	ldhl	sp,	#9
+    00000874 7E               [ 8] 1732 	ld	a, (hl)
+    00000875 B7               [ 4] 1733 	or	a, a
+    00000876 28 3A            [12] 1734 	jr	Z, 00111$
+                                   1735 ;src/battle_scene.c:133: bank_copy(scene_shared_bytes,palette->bank,palette->data+376u,28u);
+    00000878 D1               [12] 1736 	pop	de
+    00000879 D5               [16] 1737 	push	de
+    0000087A 1A               [ 8] 1738 	ld	a, (de)
+    0000087B 6F               [ 4] 1739 	ld	l, a
+    0000087C 13               [ 8] 1740 	inc	de
+    0000087D 1A               [ 8] 1741 	ld	a, (de)
+    0000087E 67               [ 4] 1742 	ld	h, a
+    0000087F 11 78 01         [12] 1743 	ld	de, #0x178
+    00000882 19               [ 8] 1744 	add	hl, de
+    00000883 5D               [ 4] 1745 	ld	e, l
+    00000884 54               [ 4] 1746 	ld	d, h
+    00000885 0A               [ 8] 1747 	ld	a, (bc)
+    00000886 4F               [ 4] 1748 	ld	c, a
+    00000887 21 1C 00         [12] 1749 	ld	hl, #0x001c
+    0000088A E5               [16] 1750 	push	hl
+    0000088B D5               [16] 1751 	push	de
+    0000088C 79               [ 4] 1752 	ld	a, c
+    0000088D 11r00r00         [12] 1753 	ld	de, #_scene_shared_bytes
+    00000890 CDr00r00         [24] 1754 	call	_bank_copy
+                                   1755 ;src/battle_scene.c:134: for(i=0;i<28u;++i)if(scene_shared_bytes[i])scene_palette_background[i]=RGB(31,31,31);
+    00000893 0E 00            [ 8] 1756 	ld	c, #0x00
+    00000895                       1757 00115$:
+    00000895 21r00r00         [12] 1758 	ld	hl, #_scene_shared_bytes
+    00000898 06 00            [ 8] 1759 	ld	b, #0x00
+    0000089A 09               [ 8] 1760 	add	hl, bc
+    0000089B 7E               [ 8] 1761 	ld	a, (hl)
+    0000089C B7               [ 4] 1762 	or	a, a
+    0000089D 28 0D            [12] 1763 	jr	Z, 00116$
+    0000089F 69               [ 4] 1764 	ld	l, c
+    000008A0 AF               [ 4] 1765 	xor	a, a
+    000008A1 67               [ 4] 1766 	ld	h, a
+    000008A2 29               [ 8] 1767 	add	hl, hl
+    000008A3 11r00r00         [12] 1768 	ld	de, #_scene_palette_background
+    000008A6 19               [ 8] 1769 	add	hl, de
+    000008A7 3E FF            [ 8] 1770 	ld	a, #0xff
+    000008A9 22               [ 8] 1771 	ld	(hl+), a
+    000008AA 36 7F            [12] 1772 	ld	(hl), #0x7f
+    000008AC                       1773 00116$:
+    000008AC 0C               [ 4] 1774 	inc	c
+    000008AD 79               [ 4] 1775 	ld	a, c
+    000008AE D6 1C            [ 8] 1776 	sub	a, #0x1c
+    000008B0 38 E3            [12] 1777 	jr	C, 00115$
+    000008B2                       1778 00111$:
+                                   1779 ;src/battle_scene.c:137: if(extra)overlay_prepare(1u,white);
+    000008B2 F8 0A            [12] 1780 	ldhl	sp,	#10
+    000008B4 7E               [ 8] 1781 	ld	a, (hl)
+    000008B5 B7               [ 4] 1782 	or	a, a
+    000008B6 28 07            [12] 1783 	jr	Z, 00114$
+    000008B8 2B               [ 8] 1784 	dec	hl
+    000008B9 5E               [ 8] 1785 	ld	e, (hl)
+    000008BA 3E 01            [ 8] 1786 	ld	a, #0x01
+    000008BC CDr91r06         [24] 1787 	call	_overlay_prepare
+    000008BF                       1788 00114$:
+                                   1789 ;src/battle_scene.c:138: scene_palette_commit();
+    000008BF 1Er00            [ 8] 1790 	ld	e, #b_scene_palette_commit
+    000008C1 21r00r00         [12] 1791 	ld	hl, #_scene_palette_commit
+    000008C4 CDr00r00         [24] 1792 	call	___sdcc_bcall_ehl
+                                   1793 ;src/battle_scene.c:139: }
+    000008C7 E8 03            [16] 1794 	add	sp, #3
+    000008C9 C9               [16] 1795 	ret
+                                   1796 ;src/battle_scene.c:141: static uint8_t effect_frame(uint16_t index,uint8_t bank,const BattleSceneAsset *assets,const BattleScenePool *pools,uint8_t shift) {
+                                   1797 ;	---------------------------------
+                                   1798 ; Function effect_frame
+                                   1799 ; ---------------------------------
+    000008CA                       1800 _effect_frame:
+    000008CA E8 E8            [16] 1801 	add	sp, #-24
+    000008CC F8 15            [12] 1802 	ldhl	sp,	#21
+    000008CE 73               [ 8] 1803 	ld	(hl), e
+    000008CF 23               [ 8] 1804 	inc	hl
+    000008D0 72               [ 8] 1805 	ld	(hl), d
+    000008D1 2B               [ 8] 1806 	dec	hl
+    000008D2 2B               [ 8] 1807 	dec	hl
+    000008D3 77               [ 8] 1808 	ld	(hl), a
+                                   1809 ;src/battle_scene.c:143: uint16_t pair;uint8_t i,base_count=0,x,y,prop,line,slot;
+    000008D4 F8 0B            [12] 1810 	ldhl	sp,	#11
+    000008D6 36 00            [12] 1811 	ld	(hl), #0x00
+                                   1812 ;src/battle_scene.c:144: if(index==65535u)return 0;
+    000008D8 F8 15            [12] 1813 	ldhl	sp,	#21
+    000008DA 2A               [ 8] 1814 	ld	a, (hl+)
+    000008DB 4F               [ 4] 1815 	ld	c, a
+    000008DC 46               [ 8] 1816 	ld	b, (hl)
+    000008DD 79               [ 4] 1817 	ld	a, c
+    000008DE A0               [ 4] 1818 	and	a, b
+    000008DF 3C               [ 4] 1819 	inc	a
+    000008E0 20 04            [12] 1820 	jr	NZ, 00102$
+    000008E2 AF               [ 4] 1821 	xor	a, a
+    000008E3 C3r4Dr0C         [16] 1822 	jp	00144$
+    000008E6                       1823 00102$:
+                                   1824 ;src/battle_scene.c:145: bank_copy(&effect,bank,assets+index,sizeof effect);
+    000008E6 F8 15            [12] 1825 	ldhl	sp,	#21
+    000008E8 2A               [ 8] 1826 	ld	a, (hl+)
+    000008E9 56               [ 8] 1827 	ld	d, (hl)
+    000008EA 87               [ 4] 1828 	add	a, a
+    000008EB CB 12            [ 8] 1829 	rl	d
+    000008ED 87               [ 4] 1830 	add	a, a
+    000008EE CB 12            [ 8] 1831 	rl	d
+    000008F0 5F               [ 4] 1832 	ld	e, a
+    000008F1 F8 1A            [12] 1833 	ldhl	sp,	#26
+    000008F3 2A               [ 8] 1834 	ld	a,	(hl+)
+    000008F4 66               [ 8] 1835 	ld	h, (hl)
+    000008F5 6F               [ 4] 1836 	ld	l, a
+    000008F6 19               [ 8] 1837 	add	hl, de
+    000008F7 4D               [ 4] 1838 	ld	c, l
+    000008F8 44               [ 4] 1839 	ld	b, h
+    000008F9 11 04 00         [12] 1840 	ld	de, #0x0004
+    000008FC D5               [16] 1841 	push	de
+    000008FD C5               [16] 1842 	push	bc
+    000008FE F8 18            [12] 1843 	ldhl	sp,	#24
+    00000900 7E               [ 8] 1844 	ld	a, (hl)
+    00000901 21 04 00         [12] 1845 	ld	hl, #4
+    00000904 39               [ 8] 1846 	add	hl, sp
+    00000905 5D               [ 4] 1847 	ld	e, l
+    00000906 54               [ 4] 1848 	ld	d, h
+    00000907 CDr00r00         [24] 1849 	call	_bank_copy
+                                   1850 ;src/battle_scene.c:146: if(current_asset!=65535u){
+    0000090A FAr05r00         [16] 1851 	ld	a, (_current_asset)
+    0000090D 4F               [ 4] 1852 	ld	c, a
+    0000090E 21r06r00         [12] 1853 	ld	hl, #_current_asset + 1
+    00000911 79               [ 4] 1854 	ld	a, c
+    00000912 A6               [ 8] 1855 	and	a, (hl)
+    00000913 3C               [ 4] 1856 	inc	a
+    00000914 28 0F            [12] 1857 	jr	Z, 00104$
+                                   1858 ;src/battle_scene.c:147: current_descriptor(&base);base_count=base.sprites;
+    00000916 21 04 00         [12] 1859 	ld	hl, #4
+    00000919 39               [ 8] 1860 	add	hl, sp
+    0000091A 5D               [ 4] 1861 	ld	e, l
+    0000091B 54               [ 4] 1862 	ld	d, h
+    0000091C CDrEDr00         [24] 1863 	call	_current_descriptor
+    0000091F F8 05            [12] 1864 	ldhl	sp,	#5
+    00000921 7E               [ 8] 1865 	ld	a, (hl)
+    00000922 F8 0B            [12] 1866 	ldhl	sp,	#11
+    00000924 77               [ 8] 1867 	ld	(hl), a
+    00000925                       1868 00104$:
+                                   1869 ;src/battle_scene.c:149: if(base_count+effect.sprites>40u)return 0;
+    00000925 F8 0B            [12] 1870 	ldhl	sp,	#11
+    00000927 4E               [ 8] 1871 	ld	c, (hl)
+    00000928 06 00            [ 8] 1872 	ld	b, #0x00
+    0000092A F8 01            [12] 1873 	ldhl	sp,	#1
+    0000092C 6E               [ 8] 1874 	ld	l, (hl)
+    0000092D 26 00            [ 8] 1875 	ld	h, #0x00
+    0000092F 09               [ 8] 1876 	add	hl, bc
+    00000930 3E 28            [ 8] 1877 	ld	a, #0x28
+    00000932 BD               [ 4] 1878 	cp	a, l
+    00000933 3E 00            [ 8] 1879 	ld	a, #0x00
+    00000935 9C               [ 4] 1880 	sbc	a, h
+    00000936 30 04            [12] 1881 	jr	NC, 00155$
+    00000938 AF               [ 4] 1882 	xor	a, a
+    00000939 C3r4Dr0C         [16] 1883 	jp	00144$
+                                   1884 ;src/battle_scene.c:152: for(i=0;i<base_count;++i){
+    0000093C                       1885 00155$:
+    0000093C F8 17            [12] 1886 	ldhl	sp,	#23
+    0000093E 36 00            [12] 1887 	ld	(hl), #0x00
+    00000940                       1888 00133$:
+    00000940 F8 17            [12] 1889 	ldhl	sp,	#23
+    00000942 7E               [ 8] 1890 	ld	a, (hl)
+    00000943 F8 0B            [12] 1891 	ldhl	sp,	#11
+    00000945 96               [ 8] 1892 	sub	a, (hl)
+    00000946 D2r0Cr0A         [16] 1893 	jp	NC, 00111$
+                                   1894 ;src/battle_scene.c:153: bank_copy(scene_shared_bytes,base.bank,base.data+(uint16_t)i*5u,5u);
+    00000949 F8 06            [12] 1895 	ldhl	sp,	#6
+    0000094B 2A               [ 8] 1896 	ld	a, (hl+)
+    0000094C 4F               [ 4] 1897 	ld	c, a
+    0000094D 46               [ 8] 1898 	ld	b, (hl)
+    0000094E F8 17            [12] 1899 	ldhl	sp,	#23
+    00000950 7E               [ 8] 1900 	ld	a, (hl)
+    00000951 F8 12            [12] 1901 	ldhl	sp,	#18
+    00000953 22               [ 8] 1902 	ld	(hl+), a
+    00000954 AF               [ 4] 1903 	xor	a, a
+    00000955 32               [ 8] 1904 	ld	(hl-), a
+    00000956 2A               [ 8] 1905 	ld	a, (hl+)
+    00000957 5F               [ 4] 1906 	ld	e, a
+    00000958 56               [ 8] 1907 	ld	d, (hl)
+    00000959 6B               [ 4] 1908 	ld	l, e
+    0000095A 62               [ 4] 1909 	ld	h, d
+    0000095B 29               [ 8] 1910 	add	hl, hl
+    0000095C 29               [ 8] 1911 	add	hl, hl
+    0000095D 19               [ 8] 1912 	add	hl, de
+    0000095E 09               [ 8] 1913 	add	hl, bc
+    0000095F 4D               [ 4] 1914 	ld	c, l
+    00000960 44               [ 4] 1915 	ld	b, h
+    00000961 F8 04            [12] 1916 	ldhl	sp,	#4
+    00000963 7E               [ 8] 1917 	ld	a, (hl)
+    00000964 11 05 00         [12] 1918 	ld	de, #0x0005
+    00000967 D5               [16] 1919 	push	de
+    00000968 C5               [16] 1920 	push	bc
+    00000969 11r00r00         [12] 1921 	ld	de, #_scene_shared_bytes
+    0000096C CDr00r00         [24] 1922 	call	_bank_copy
+                                   1923 ;src/battle_scene.c:154: x=scene_shared_bytes[0];y=scene_shared_bytes[1];slot=i+effect.sprites;
+    0000096F FAr00r00         [16] 1924 	ld	a, (#_scene_shared_bytes + 0)
+    00000972 F8 0D            [12] 1925 	ldhl	sp,	#13
+    00000974 77               [ 8] 1926 	ld	(hl), a
+    00000975 FAr01r00         [16] 1927 	ld	a, (#(_scene_shared_bytes + 1) + 0)
+    00000978 F8 0E            [12] 1928 	ldhl	sp,	#14
+    0000097A 77               [ 8] 1929 	ld	(hl), a
+    0000097B F8 01            [12] 1930 	ldhl	sp,	#1
+    0000097D 7E               [ 8] 1931 	ld	a, (hl)
+    0000097E F8 17            [12] 1932 	ldhl	sp,	#23
+    00000980 86               [ 8] 1933 	add	a, (hl)
+    00000981 F8 0F            [12] 1934 	ldhl	sp,	#15
+    00000983 77               [ 8] 1935 	ld	(hl), a
+                                   1936 ;src/battle_scene.c:155: set_sprite_tile(slot,84u+i*2u);set_sprite_prop(slot,scene_shared_bytes[4]);
+    00000984 F8 17            [12] 1937 	ldhl	sp,	#23
+    00000986 7E               [ 8] 1938 	ld	a, (hl)
+    00000987 87               [ 4] 1939 	add	a, a
+    00000988 C6 54            [ 8] 1940 	add	a, #0x54
+    0000098A 4F               [ 4] 1941 	ld	c, a
+                                   1942 ;../../../.tools/gbdk/include/gb/gb.h:1887: shadow_OAM[nb].tile=tile;
+    0000098B F8 0F            [12] 1943 	ldhl	sp,	#15
+    0000098D 2A               [ 8] 1944 	ld	a, (hl+)
+    0000098E 47               [ 4] 1945 	ld	b, a
+    0000098F AF               [ 4] 1946 	xor	a, a
+    00000990 CB 20            [ 8] 1947 	sla	b
+    00000992 8F               [ 4] 1948 	adc	a, a
+    00000993 CB 20            [ 8] 1949 	sla	b
+    00000995 8F               [ 4] 1950 	adc	a, a
+    00000996 70               [ 8] 1951 	ld	(hl), b
+    00000997 23               [ 8] 1952 	inc	hl
+    00000998 77               [ 8] 1953 	ld	(hl), a
+    00000999 11r00r00         [12] 1954 	ld	de, #_shadow_OAM
+    0000099C 3A               [ 8] 1955 	ld	a, (hl-)
+    0000099D 6E               [ 8] 1956 	ld	l, (hl)
+    0000099E 67               [ 4] 1957 	ld	h, a
+    0000099F 19               [ 8] 1958 	add	hl, de
+    000009A0 23               [ 8] 1959 	inc	hl
+    000009A1 23               [ 8] 1960 	inc	hl
+    000009A2 5D               [ 4] 1961 	ld	e, l
+    000009A3 54               [ 4] 1962 	ld	d, h
+    000009A4 79               [ 4] 1963 	ld	a, c
+    000009A5 12               [ 8] 1964 	ld	(de), a
+                                   1965 ;src/battle_scene.c:155: set_sprite_tile(slot,84u+i*2u);set_sprite_prop(slot,scene_shared_bytes[4]);
+    000009A6 21r04r00         [12] 1966 	ld	hl, #(_scene_shared_bytes + 4)
+    000009A9 4E               [ 8] 1967 	ld	c, (hl)
+                                   1968 ;../../../.tools/gbdk/include/gb/gb.h:1946: shadow_OAM[nb].prop=prop;
+    000009AA 11r00r00         [12] 1969 	ld	de, #_shadow_OAM+0
+    000009AD F8 10            [12] 1970 	ldhl	sp,	#16
+    000009AF 2A               [ 8] 1971 	ld	a,	(hl+)
+    000009B0 66               [ 8] 1972 	ld	h, (hl)
+    000009B1 6F               [ 4] 1973 	ld	l, a
+    000009B2 19               [ 8] 1974 	add	hl, de
+    000009B3 23               [ 8] 1975 	inc	hl
+    000009B4 23               [ 8] 1976 	inc	hl
+    000009B5 23               [ 8] 1977 	inc	hl
+    000009B6 5D               [ 4] 1978 	ld	e, l
+    000009B7 54               [ 4] 1979 	ld	d, h
+    000009B8 79               [ 4] 1980 	ld	a, c
+    000009B9 12               [ 8] 1981 	ld	(de), a
+                                   1982 ;src/battle_scene.c:156: if(!current_clip||y-16u>=current_clip)move_sprite(slot,0,0);else move_sprite(slot,x,y);
+    000009BA FAr03r00         [16] 1983 	ld	a, (#_current_clip)
+    000009BD B7               [ 4] 1984 	or	a, a
+    000009BE 28 23            [12] 1985 	jr	Z, 00107$
+    000009C0 F8 0E            [12] 1986 	ldhl	sp,	#14
+    000009C2 7E               [ 8] 1987 	ld	a, (hl)
+    000009C3 F8 13            [12] 1988 	ldhl	sp,	#19
+    000009C5 77               [ 8] 1989 	ld	(hl), a
+    000009C6 3A               [ 8] 1990 	ld	a, (hl-)
+    000009C7 22               [ 8] 1991 	ld	(hl+), a
+    000009C8 AF               [ 4] 1992 	xor	a, a
+    000009C9 32               [ 8] 1993 	ld	(hl-), a
+    000009CA 2A               [ 8] 1994 	ld	a, (hl+)
+    000009CB 5F               [ 4] 1995 	ld	e, a
+    000009CC 56               [ 8] 1996 	ld	d, (hl)
+    000009CD 21 10 00         [12] 1997 	ld	hl, #0x0010
+    000009D0 7B               [ 4] 1998 	ld	a, e
+    000009D1 95               [ 4] 1999 	sub	a, l
+    000009D2 5F               [ 4] 2000 	ld	e, a
+    000009D3 7A               [ 4] 2001 	ld	a, d
+    000009D4 9C               [ 4] 2002 	sbc	a, h
+    000009D5 47               [ 4] 2003 	ld	b, a
+    000009D6 4B               [ 4] 2004 	ld	c, e
+    000009D7 FAr03r00         [16] 2005 	ld	a, (_current_clip)
+    000009DA 5F               [ 4] 2006 	ld	e, a
+    000009DB 16 00            [ 8] 2007 	ld	d, #0x00
+    000009DD 79               [ 4] 2008 	ld	a, c
+    000009DE 93               [ 4] 2009 	sub	a, e
+    000009DF 78               [ 4] 2010 	ld	a, b
+    000009E0 9A               [ 4] 2011 	sbc	a, d
+    000009E1 38 11            [12] 2012 	jr	C, 00108$
+    000009E3                       2013 00107$:
+                                   2014 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000009E3 F8 0F            [12] 2015 	ldhl	sp,	#15
+    000009E5 4E               [ 8] 2016 	ld	c, (hl)
+    000009E6 AF               [ 4] 2017 	xor	a, a
+    000009E7 69               [ 4] 2018 	ld	l, c
+    000009E8 67               [ 4] 2019 	ld	h, a
+    000009E9 29               [ 8] 2020 	add	hl, hl
+    000009EA 29               [ 8] 2021 	add	hl, hl
+    000009EB 11r00r00         [12] 2022 	ld	de, #_shadow_OAM
+    000009EE 19               [ 8] 2023 	add	hl, de
+                                   2024 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    000009EF AF               [ 4] 2025 	xor	a, a
+    000009F0 22               [ 8] 2026 	ld	(hl+), a
+    000009F1 77               [ 8] 2027 	ld	(hl), a
+                                   2028 ;src/battle_scene.c:156: if(!current_clip||y-16u>=current_clip)move_sprite(slot,0,0);else move_sprite(slot,x,y);
+    000009F2 18 12            [12] 2029 	jr	00134$
+    000009F4                       2030 00108$:
+                                   2031 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000009F4 01r00r00         [12] 2032 	ld	bc, #_shadow_OAM+0
+    000009F7 F8 10            [12] 2033 	ldhl	sp,	#16
+    000009F9 2A               [ 8] 2034 	ld	a,	(hl+)
+    000009FA 66               [ 8] 2035 	ld	h, (hl)
+    000009FB 6F               [ 4] 2036 	ld	l, a
+    000009FC 09               [ 8] 2037 	add	hl, bc
+    000009FD 4D               [ 4] 2038 	ld	c, l
+    000009FE 44               [ 4] 2039 	ld	b, h
+                                   2040 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    000009FF F8 0E            [12] 2041 	ldhl	sp,	#14
+    00000A01 3A               [ 8] 2042 	ld	a, (hl-)
+    00000A02 02               [ 8] 2043 	ld	(bc), a
+    00000A03 03               [ 8] 2044 	inc	bc
+    00000A04 7E               [ 8] 2045 	ld	a, (hl)
+    00000A05 02               [ 8] 2046 	ld	(bc), a
+                                   2047 ;src/battle_scene.c:156: if(!current_clip||y-16u>=current_clip)move_sprite(slot,0,0);else move_sprite(slot,x,y);
+    00000A06                       2048 00134$:
+                                   2049 ;src/battle_scene.c:152: for(i=0;i<base_count;++i){
+    00000A06 F8 17            [12] 2050 	ldhl	sp,	#23
+    00000A08 34               [12] 2051 	inc	(hl)
+    00000A09 C3r40r09         [16] 2052 	jp	00133$
+    00000A0C                       2053 00111$:
+                                   2054 ;src/battle_scene.c:158: for(i=0;i<effect.sprites;++i){
+    00000A0C F8 1E            [12] 2055 	ldhl	sp,	#30
+    00000A0E 7E               [ 8] 2056 	ld	a, (hl)
+    00000A0F D6 07            [ 8] 2057 	sub	a, #0x07
+    00000A11 3E 01            [ 8] 2058 	ld	a, #0x01
+    00000A13 28 01            [12] 2059 	jr	Z, 00279$
+    00000A15 AF               [ 4] 2060 	xor	a, a
+    00000A16                       2061 00279$:
+    00000A16 F8 0C            [12] 2062 	ldhl	sp,	#12
+    00000A18 77               [ 8] 2063 	ld	(hl), a
+    00000A19 F8 17            [12] 2064 	ldhl	sp,	#23
+    00000A1B 36 00            [12] 2065 	ld	(hl), #0x00
+    00000A1D                       2066 00139$:
+    00000A1D F8 01            [12] 2067 	ldhl	sp,	#1
+    00000A1F 7E               [ 8] 2068 	ld	a, (hl)
+    00000A20 F8 13            [12] 2069 	ldhl	sp,	#19
+    00000A22 77               [ 8] 2070 	ld	(hl), a
+    00000A23 F8 17            [12] 2071 	ldhl	sp,	#23
+    00000A25 7E               [ 8] 2072 	ld	a, (hl)
+    00000A26 F8 13            [12] 2073 	ldhl	sp,	#19
+    00000A28 96               [ 8] 2074 	sub	a, (hl)
+    00000A29 D2rE8r0B         [16] 2075 	jp	NC, 00119$
+                                   2076 ;src/battle_scene.c:159: bank_copy(scene_shared_bytes,effect.bank,effect.data+(uint16_t)i*5u,5u);
+    00000A2C F8 02            [12] 2077 	ldhl	sp,	#2
+    00000A2E 2A               [ 8] 2078 	ld	a, (hl+)
+    00000A2F 4F               [ 4] 2079 	ld	c, a
+    00000A30 46               [ 8] 2080 	ld	b, (hl)
+    00000A31 F8 17            [12] 2081 	ldhl	sp,	#23
+    00000A33 7E               [ 8] 2082 	ld	a, (hl)
+    00000A34 F8 12            [12] 2083 	ldhl	sp,	#18
+    00000A36 22               [ 8] 2084 	ld	(hl+), a
+    00000A37 AF               [ 4] 2085 	xor	a, a
+    00000A38 32               [ 8] 2086 	ld	(hl-), a
+    00000A39 2A               [ 8] 2087 	ld	a, (hl+)
+    00000A3A 5F               [ 4] 2088 	ld	e, a
+    00000A3B 56               [ 8] 2089 	ld	d, (hl)
+    00000A3C 6B               [ 4] 2090 	ld	l, e
+    00000A3D 62               [ 4] 2091 	ld	h, d
+    00000A3E 29               [ 8] 2092 	add	hl, hl
+    00000A3F 29               [ 8] 2093 	add	hl, hl
+    00000A40 19               [ 8] 2094 	add	hl, de
+    00000A41 09               [ 8] 2095 	add	hl, bc
+    00000A42 4D               [ 4] 2096 	ld	c, l
+    00000A43 44               [ 4] 2097 	ld	b, h
+    00000A44 F8 00            [12] 2098 	ldhl	sp,	#0
+    00000A46 7E               [ 8] 2099 	ld	a, (hl)
+    00000A47 11 05 00         [12] 2100 	ld	de, #0x0005
+    00000A4A D5               [16] 2101 	push	de
+    00000A4B C5               [16] 2102 	push	bc
+    00000A4C 11r00r00         [12] 2103 	ld	de, #_scene_shared_bytes
+    00000A4F CDr00r00         [24] 2104 	call	_bank_copy
+                                   2105 ;src/battle_scene.c:160: x=scene_shared_bytes[0];y=scene_shared_bytes[1];prop=scene_shared_bytes[4];
+    00000A52 FAr00r00         [16] 2106 	ld	a, (#_scene_shared_bytes + 0)
+    00000A55 F8 0D            [12] 2107 	ldhl	sp,	#13
+    00000A57 77               [ 8] 2108 	ld	(hl), a
+    00000A58 FAr01r00         [16] 2109 	ld	a, (#(_scene_shared_bytes + 1) + 0)
+    00000A5B F8 0E            [12] 2110 	ldhl	sp,	#14
+    00000A5D 77               [ 8] 2111 	ld	(hl), a
+    00000A5E FAr04r00         [16] 2112 	ld	a, (#(_scene_shared_bytes + 4) + 0)
+    00000A61 F8 0F            [12] 2113 	ldhl	sp,	#15
+    00000A63 77               [ 8] 2114 	ld	(hl), a
+                                   2115 ;src/battle_scene.c:161: pair=scene_shared_bytes[2]|((uint16_t)scene_shared_bytes[3]<<8);
+    00000A64 21r02r00         [12] 2116 	ld	hl, #(_scene_shared_bytes + 2)
+    00000A67 4E               [ 8] 2117 	ld	c, (hl)
+    00000A68 FAr03r00         [16] 2118 	ld	a, (#(_scene_shared_bytes + 3) + 0)
+    00000A6B 47               [ 4] 2119 	ld	b, a
+                                   2120 ;src/battle_scene.c:162: bank_copy(&pool,bank,pools+(pair>>shift),sizeof pool);
+    00000A6C F8 1E            [12] 2121 	ldhl	sp,	#30
+    00000A6E 7E               [ 8] 2122 	ld	a, (hl)
+    00000A6F F8 12            [12] 2123 	ldhl	sp,	#18
+    00000A71 71               [ 8] 2124 	ld	(hl), c
+    00000A72 23               [ 8] 2125 	inc	hl
+    00000A73 70               [ 8] 2126 	ld	(hl), b
+    00000A74 3C               [ 4] 2127 	inc	a
+    00000A75 18 07            [12] 2128 	jr	00281$
+    00000A77                       2129 00280$:
+    00000A77 F8 13            [12] 2130 	ldhl	sp,	#19
+    00000A79 CB 3E            [16] 2131 	srl	(hl)
+    00000A7B 2B               [ 8] 2132 	dec	hl
+    00000A7C CB 1E            [16] 2133 	rr	(hl)
+    00000A7E                       2134 00281$:
+    00000A7E 3D               [ 4] 2135 	dec	a
+    00000A7F 20 F6            [12] 2136 	jr	NZ, 00280$
+    00000A81 F8 12            [12] 2137 	ldhl	sp,#18
+    00000A83 2A               [ 8] 2138 	ld	a, (hl+)
+    00000A84 5F               [ 4] 2139 	ld	e, a
+    00000A85 56               [ 8] 2140 	ld	d, (hl)
+    00000A86 6B               [ 4] 2141 	ld	l, e
+    00000A87 62               [ 4] 2142 	ld	h, d
+    00000A88 29               [ 8] 2143 	add	hl, hl
+    00000A89 19               [ 8] 2144 	add	hl, de
+    00000A8A E5               [16] 2145 	push	hl
+    00000A8B 7D               [ 4] 2146 	ld	a, l
+    00000A8C F8 14            [12] 2147 	ldhl	sp,	#20
+    00000A8E 77               [ 8] 2148 	ld	(hl), a
+    00000A8F E1               [12] 2149 	pop	hl
+    00000A90 7C               [ 4] 2150 	ld	a, h
+    00000A91 F8 13            [12] 2151 	ldhl	sp,	#19
+    00000A93 32               [ 8] 2152 	ld	(hl-), a
+    00000A94 2A               [ 8] 2153 	ld	a, (hl+)
+    00000A95 5F               [ 4] 2154 	ld	e, a
+    00000A96 56               [ 8] 2155 	ld	d, (hl)
+    00000A97 F8 1C            [12] 2156 	ldhl	sp,	#28
+    00000A99 2A               [ 8] 2157 	ld	a,	(hl+)
+    00000A9A 66               [ 8] 2158 	ld	h, (hl)
+    00000A9B 6F               [ 4] 2159 	ld	l, a
+    00000A9C 19               [ 8] 2160 	add	hl, de
+    00000A9D 5D               [ 4] 2161 	ld	e, l
+    00000A9E 54               [ 4] 2162 	ld	d, h
+    00000A9F C5               [16] 2163 	push	bc
+    00000AA0 21 03 00         [12] 2164 	ld	hl, #0x0003
+    00000AA3 E5               [16] 2165 	push	hl
+    00000AA4 D5               [16] 2166 	push	de
+    00000AA5 F8 1A            [12] 2167 	ldhl	sp,	#26
+    00000AA7 7E               [ 8] 2168 	ld	a, (hl)
+    00000AA8 21 0E 00         [12] 2169 	ld	hl, #14
+    00000AAB 39               [ 8] 2170 	add	hl, sp
+    00000AAC 5D               [ 4] 2171 	ld	e, l
+    00000AAD 54               [ 4] 2172 	ld	d, h
+    00000AAE CDr00r00         [24] 2173 	call	_bank_copy
+    00000AB1 C1               [12] 2174 	pop	bc
+                                   2175 ;src/battle_scene.c:163: bank_copy(scene_shared_bytes,pool.bank,pool.data+((pair&(shift==7u?127u:255u))<<5),32u);
+    00000AB2 F8 09            [12] 2176 	ldhl	sp,	#9
+    00000AB4 7E               [ 8] 2177 	ld	a, (hl)
+    00000AB5 F8 12            [12] 2178 	ldhl	sp,	#18
+    00000AB7 77               [ 8] 2179 	ld	(hl), a
+    00000AB8 F8 0A            [12] 2180 	ldhl	sp,	#10
+    00000ABA 7E               [ 8] 2181 	ld	a, (hl)
+    00000ABB F8 13            [12] 2182 	ldhl	sp,	#19
+    00000ABD 77               [ 8] 2183 	ld	(hl), a
+    00000ABE F8 0C            [12] 2184 	ldhl	sp,	#12
+    00000AC0 7E               [ 8] 2185 	ld	a, (hl)
+    00000AC1 B7               [ 4] 2186 	or	a, a
+    00000AC2 28 05            [12] 2187 	jr	Z, 00146$
+    00000AC4 11 7F 00         [12] 2188 	ld	de, #0x007f
+    00000AC7 18 03            [12] 2189 	jr	00147$
+    00000AC9                       2190 00146$:
+    00000AC9 11 FF 00         [12] 2191 	ld	de, #0x00ff
+    00000ACC                       2192 00147$:
+    00000ACC 79               [ 4] 2193 	ld	a, c
+    00000ACD A3               [ 4] 2194 	and	a, e
+    00000ACE 6F               [ 4] 2195 	ld	l, a
+    00000ACF 26 00            [ 8] 2196 	ld	h, #0x00
+    00000AD1 29               [ 8] 2197 	add	hl, hl
+    00000AD2 29               [ 8] 2198 	add	hl, hl
+    00000AD3 29               [ 8] 2199 	add	hl, hl
+    00000AD4 29               [ 8] 2200 	add	hl, hl
+    00000AD5 29               [ 8] 2201 	add	hl, hl
+    00000AD6 4D               [ 4] 2202 	ld	c, l
+    00000AD7 44               [ 4] 2203 	ld	b, h
+    00000AD8 F8 12            [12] 2204 	ldhl	sp,	#18
+    00000ADA 2A               [ 8] 2205 	ld	a,	(hl+)
+    00000ADB 66               [ 8] 2206 	ld	h, (hl)
+    00000ADC 6F               [ 4] 2207 	ld	l, a
+    00000ADD 09               [ 8] 2208 	add	hl, bc
+    00000ADE 4D               [ 4] 2209 	ld	c, l
+    00000ADF 44               [ 4] 2210 	ld	b, h
+    00000AE0 F8 08            [12] 2211 	ldhl	sp,	#8
+    00000AE2 7E               [ 8] 2212 	ld	a, (hl)
+    00000AE3 11 20 00         [12] 2213 	ld	de, #0x0020
+    00000AE6 D5               [16] 2214 	push	de
+    00000AE7 C5               [16] 2215 	push	bc
+    00000AE8 11r00r00         [12] 2216 	ld	de, #_scene_shared_bytes
+    00000AEB CDr00r00         [24] 2217 	call	_bank_copy
+                                   2218 ;src/battle_scene.c:164: if(y>current_clip)for(line=current_clip>y-16u?current_clip-(y-16u):0u;line<16u;++line){scene_shared_bytes[line*2u]=0;scene_shared_bytes[line*2u+1u]=0;}
+    00000AEE FAr03r00         [16] 2219 	ld	a, (#_current_clip)
+    00000AF1 F8 0E            [12] 2220 	ldhl	sp,	#14
+    00000AF3 96               [ 8] 2221 	sub	a, (hl)
+    00000AF4 30 5D            [12] 2222 	jr	NC, 00114$
+    00000AF6 7E               [ 8] 2223 	ld	a, (hl)
+    00000AF7 F8 13            [12] 2224 	ldhl	sp,	#19
+    00000AF9 77               [ 8] 2225 	ld	(hl), a
+    00000AFA 3A               [ 8] 2226 	ld	a, (hl-)
+    00000AFB 22               [ 8] 2227 	ld	(hl+), a
+    00000AFC AF               [ 4] 2228 	xor	a, a
+    00000AFD 32               [ 8] 2229 	ld	(hl-), a
+    00000AFE 2A               [ 8] 2230 	ld	a, (hl+)
+    00000AFF 5F               [ 4] 2231 	ld	e, a
+    00000B00 56               [ 8] 2232 	ld	d, (hl)
+    00000B01 21 10 00         [12] 2233 	ld	hl, #0x0010
+    00000B04 7B               [ 4] 2234 	ld	a, e
+    00000B05 95               [ 4] 2235 	sub	a, l
+    00000B06 5F               [ 4] 2236 	ld	e, a
+    00000B07 7A               [ 4] 2237 	ld	a, d
+    00000B08 9C               [ 4] 2238 	sbc	a, h
+    00000B09 F8 11            [12] 2239 	ldhl	sp,	#17
+    00000B0B 32               [ 8] 2240 	ld	(hl-), a
+    00000B0C 73               [ 8] 2241 	ld	(hl), e
+    00000B0D FAr03r00         [16] 2242 	ld	a, (#_current_clip)
+    00000B10 F8 12            [12] 2243 	ldhl	sp,	#18
+    00000B12 22               [ 8] 2244 	ld	(hl+), a
+    00000B13 36 00            [12] 2245 	ld	(hl), #0x00
+    00000B15 F8 10            [12] 2246 	ldhl	sp,	#16
+    00000B17 5D               [ 4] 2247 	ld	e, l
+    00000B18 54               [ 4] 2248 	ld	d, h
+    00000B19 F8 12            [12] 2249 	ldhl	sp,	#18
+    00000B1B 1A               [ 8] 2250 	ld	a, (de)
+    00000B1C 13               [ 8] 2251 	inc	de
+    00000B1D 96               [ 8] 2252 	sub	a, (hl)
+    00000B1E 23               [ 8] 2253 	inc	hl
+    00000B1F 1A               [ 8] 2254 	ld	a, (de)
+    00000B20 9E               [ 8] 2255 	sbc	a, (hl)
+    00000B21 30 10            [12] 2256 	jr	NC, 00148$
+    00000B23 F8 0E            [12] 2257 	ldhl	sp,	#14
+    00000B25 7E               [ 8] 2258 	ld	a, (hl)
+    00000B26 C6 F0            [ 8] 2259 	add	a, #0xf0
+    00000B28 F8 13            [12] 2260 	ldhl	sp,	#19
+    00000B2A 77               [ 8] 2261 	ld	(hl), a
+    00000B2B FAr03r00         [16] 2262 	ld	a, (#_current_clip)
+    00000B2E F8 13            [12] 2263 	ldhl	sp,	#19
+    00000B30 96               [ 8] 2264 	sub	a, (hl)
+    00000B31 18 01            [12] 2265 	jr	00149$
+    00000B33                       2266 00148$:
+    00000B33 AF               [ 4] 2267 	xor	a, a
+    00000B34                       2268 00149$:
+    00000B34 4F               [ 4] 2269 	ld	c, a
+    00000B35                       2270 00136$:
+    00000B35 79               [ 4] 2271 	ld	a, c
+    00000B36 D6 10            [ 8] 2272 	sub	a, #0x10
+    00000B38 30 19            [12] 2273 	jr	NC, 00114$
+    00000B3A 69               [ 4] 2274 	ld	l, c
+    00000B3B AF               [ 4] 2275 	xor	a, a
+    00000B3C 67               [ 4] 2276 	ld	h, a
+    00000B3D 29               [ 8] 2277 	add	hl, hl
+    00000B3E 11r00r00         [12] 2278 	ld	de, #_scene_shared_bytes
+    00000B41 19               [ 8] 2279 	add	hl, de
+    00000B42 36 00            [12] 2280 	ld	(hl), #0x00
+    00000B44 79               [ 4] 2281 	ld	a, c
+    00000B45 87               [ 4] 2282 	add	a, a
+    00000B46 3C               [ 4] 2283 	inc	a
+    00000B47 6F               [ 4] 2284 	ld	l, a
+    00000B48 26 00            [ 8] 2285 	ld	h, #0x00
+    00000B4A 11r00r00         [12] 2286 	ld	de, #_scene_shared_bytes
+    00000B4D 19               [ 8] 2287 	add	hl, de
+    00000B4E 36 00            [12] 2288 	ld	(hl), #0x00
+    00000B50 0C               [ 4] 2289 	inc	c
+    00000B51 18 E2            [12] 2290 	jr	00136$
+    00000B53                       2291 00114$:
+                                   2292 ;src/battle_scene.c:165: VBK_REG=1;set_sprite_data(84u+(base_count+i)*2u,2u,scene_shared_bytes);VBK_REG=0;
+    00000B53 3E 01            [ 8] 2293 	ld	a, #0x01
+    00000B55 E0r00            [12] 2294 	ldh	(_VBK_REG + 0), a
+    00000B57 F8 0B            [12] 2295 	ldhl	sp,	#11
+    00000B59 7E               [ 8] 2296 	ld	a, (hl)
+    00000B5A F8 17            [12] 2297 	ldhl	sp,	#23
+    00000B5C 86               [ 8] 2298 	add	a, (hl)
+    00000B5D 87               [ 4] 2299 	add	a, a
+    00000B5E C6 54            [ 8] 2300 	add	a, #0x54
+    00000B60 47               [ 4] 2301 	ld	b, a
+    00000B61 11r00r00         [12] 2302 	ld	de, #_scene_shared_bytes
+    00000B64 D5               [16] 2303 	push	de
+    00000B65 3E 02            [ 8] 2304 	ld	a, #0x02
+    00000B67 F5               [16] 2305 	push	af
+    00000B68 33               [ 8] 2306 	inc	sp
+    00000B69 C5               [16] 2307 	push	bc
+    00000B6A 33               [ 8] 2308 	inc	sp
+    00000B6B CDr00r00         [24] 2309 	call	_set_sprite_data
+    00000B6E E8 04            [16] 2310 	add	sp, #4
+    00000B70 AF               [ 4] 2311 	xor	a, a
+    00000B71 E0r00            [12] 2312 	ldh	(_VBK_REG + 0), a
+                                   2313 ;src/battle_scene.c:166: set_sprite_tile(i,84u+(base_count+i)*2u);set_sprite_prop(i,prop);
+                                   2314 ;../../../.tools/gbdk/include/gb/gb.h:1887: shadow_OAM[nb].tile=tile;
+    00000B73 11r00r00         [12] 2315 	ld	de, #_shadow_OAM+0
+    00000B76 F8 17            [12] 2316 	ldhl	sp,	#23
+    00000B78 4E               [ 8] 2317 	ld	c, (hl)
+    00000B79 AF               [ 4] 2318 	xor	a, a
+    00000B7A CB 21            [ 8] 2319 	sla	c
+    00000B7C 8F               [ 4] 2320 	adc	a, a
+    00000B7D CB 21            [ 8] 2321 	sla	c
+    00000B7F 8F               [ 4] 2322 	adc	a, a
+    00000B80 F8 12            [12] 2323 	ldhl	sp,	#18
+    00000B82 71               [ 8] 2324 	ld	(hl), c
+    00000B83 23               [ 8] 2325 	inc	hl
+    00000B84 32               [ 8] 2326 	ld	(hl-), a
+    00000B85 2A               [ 8] 2327 	ld	a,	(hl+)
+    00000B86 66               [ 8] 2328 	ld	h, (hl)
+    00000B87 6F               [ 4] 2329 	ld	l, a
+    00000B88 19               [ 8] 2330 	add	hl, de
+    00000B89 23               [ 8] 2331 	inc	hl
+    00000B8A 23               [ 8] 2332 	inc	hl
+    00000B8B 5D               [ 4] 2333 	ld	e, l
+    00000B8C 54               [ 4] 2334 	ld	d, h
+    00000B8D 78               [ 4] 2335 	ld	a, b
+    00000B8E 12               [ 8] 2336 	ld	(de), a
+                                   2337 ;../../../.tools/gbdk/include/gb/gb.h:1946: shadow_OAM[nb].prop=prop;
+    00000B8F 01r00r00         [12] 2338 	ld	bc, #_shadow_OAM+0
+    00000B92 F8 12            [12] 2339 	ldhl	sp,	#18
+    00000B94 2A               [ 8] 2340 	ld	a,	(hl+)
+    00000B95 66               [ 8] 2341 	ld	h, (hl)
+    00000B96 6F               [ 4] 2342 	ld	l, a
+    00000B97 09               [ 8] 2343 	add	hl, bc
+    00000B98 23               [ 8] 2344 	inc	hl
+    00000B99 23               [ 8] 2345 	inc	hl
+    00000B9A 23               [ 8] 2346 	inc	hl
+    00000B9B 4D               [ 4] 2347 	ld	c, l
+    00000B9C 44               [ 4] 2348 	ld	b, h
+    00000B9D F8 0F            [12] 2349 	ldhl	sp,	#15
+    00000B9F 7E               [ 8] 2350 	ld	a, (hl)
+    00000BA0 02               [ 8] 2351 	ld	(bc), a
+                                   2352 ;src/battle_scene.c:167: if(!current_clip||y-16u>=current_clip)move_sprite(i,0,0);else move_sprite(i,x,y);
+    00000BA1 FAr03r00         [16] 2353 	ld	a, (#_current_clip)
+    00000BA4 B7               [ 4] 2354 	or	a, a
+    00000BA5 28 18            [12] 2355 	jr	Z, 00115$
+    00000BA7 F8 0E            [12] 2356 	ldhl	sp,	#14
+    00000BA9 7E               [ 8] 2357 	ld	a, (hl)
+    00000BAA 06 00            [ 8] 2358 	ld	b, #0x00
+    00000BAC C6 F0            [ 8] 2359 	add	a, #0xf0
+    00000BAE 4F               [ 4] 2360 	ld	c, a
+    00000BAF 78               [ 4] 2361 	ld	a, b
+    00000BB0 CE FF            [ 8] 2362 	adc	a, #0xff
+    00000BB2 47               [ 4] 2363 	ld	b, a
+    00000BB3 FAr03r00         [16] 2364 	ld	a, (_current_clip)
+    00000BB6 5F               [ 4] 2365 	ld	e, a
+    00000BB7 16 00            [ 8] 2366 	ld	d, #0x00
+    00000BB9 79               [ 4] 2367 	ld	a, c
+    00000BBA 93               [ 4] 2368 	sub	a, e
+    00000BBB 78               [ 4] 2369 	ld	a, b
+    00000BBC 9A               [ 4] 2370 	sbc	a, d
+    00000BBD 38 11            [12] 2371 	jr	C, 00116$
+    00000BBF                       2372 00115$:
+                                   2373 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    00000BBF 01r00r00         [12] 2374 	ld	bc, #_shadow_OAM+0
+    00000BC2 F8 17            [12] 2375 	ldhl	sp,	#23
+    00000BC4 5E               [ 8] 2376 	ld	e, (hl)
+    00000BC5 AF               [ 4] 2377 	xor	a, a
+    00000BC6 6B               [ 4] 2378 	ld	l, e
+    00000BC7 67               [ 4] 2379 	ld	h, a
+    00000BC8 29               [ 8] 2380 	add	hl, hl
+    00000BC9 29               [ 8] 2381 	add	hl, hl
+    00000BCA 09               [ 8] 2382 	add	hl, bc
+                                   2383 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    00000BCB AF               [ 4] 2384 	xor	a, a
+    00000BCC 22               [ 8] 2385 	ld	(hl+), a
+    00000BCD 77               [ 8] 2386 	ld	(hl), a
+                                   2387 ;src/battle_scene.c:167: if(!current_clip||y-16u>=current_clip)move_sprite(i,0,0);else move_sprite(i,x,y);
+    00000BCE 18 12            [12] 2388 	jr	00140$
+    00000BD0                       2389 00116$:
+                                   2390 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    00000BD0 01r00r00         [12] 2391 	ld	bc, #_shadow_OAM+0
+    00000BD3 F8 12            [12] 2392 	ldhl	sp,	#18
+    00000BD5 2A               [ 8] 2393 	ld	a,	(hl+)
+    00000BD6 66               [ 8] 2394 	ld	h, (hl)
+    00000BD7 6F               [ 4] 2395 	ld	l, a
+    00000BD8 09               [ 8] 2396 	add	hl, bc
+    00000BD9 4D               [ 4] 2397 	ld	c, l
+    00000BDA 44               [ 4] 2398 	ld	b, h
+                                   2399 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    00000BDB F8 0E            [12] 2400 	ldhl	sp,	#14
+    00000BDD 3A               [ 8] 2401 	ld	a, (hl-)
+    00000BDE 02               [ 8] 2402 	ld	(bc), a
+    00000BDF 03               [ 8] 2403 	inc	bc
+    00000BE0 7E               [ 8] 2404 	ld	a, (hl)
+    00000BE1 02               [ 8] 2405 	ld	(bc), a
+                                   2406 ;src/battle_scene.c:167: if(!current_clip||y-16u>=current_clip)move_sprite(i,0,0);else move_sprite(i,x,y);
+    00000BE2                       2407 00140$:
+                                   2408 ;src/battle_scene.c:158: for(i=0;i<effect.sprites;++i){
+    00000BE2 F8 17            [12] 2409 	ldhl	sp,	#23
+    00000BE4 34               [12] 2410 	inc	(hl)
+    00000BE5 C3r1Dr0A         [16] 2411 	jp	00139$
+    00000BE8                       2412 00119$:
+                                   2413 ;src/battle_scene.c:169: for(i=base_count+effect.sprites;i<40u;++i)move_sprite(i,0,0);
+    00000BE8 F8 13            [12] 2414 	ldhl	sp,	#19
+    00000BEA 7E               [ 8] 2415 	ld	a, (hl)
+    00000BEB F8 0B            [12] 2416 	ldhl	sp,	#11
+    00000BED 86               [ 8] 2417 	add	a, (hl)
+    00000BEE 4F               [ 4] 2418 	ld	c, a
+    00000BEF                       2419 00142$:
+    00000BEF 79               [ 4] 2420 	ld	a, c
+    00000BF0 D6 28            [ 8] 2421 	sub	a, #0x28
+    00000BF2 30 0F            [12] 2422 	jr	NC, 00120$
+                                   2423 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    00000BF4 11r00r00         [12] 2424 	ld	de, #_shadow_OAM+0
+    00000BF7 69               [ 4] 2425 	ld	l, c
+    00000BF8 AF               [ 4] 2426 	xor	a, a
+    00000BF9 67               [ 4] 2427 	ld	h, a
+    00000BFA 29               [ 8] 2428 	add	hl, hl
+    00000BFB 29               [ 8] 2429 	add	hl, hl
+    00000BFC 19               [ 8] 2430 	add	hl, de
+                                   2431 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    00000BFD AF               [ 4] 2432 	xor	a, a
+    00000BFE 22               [ 8] 2433 	ld	(hl+), a
+    00000BFF 77               [ 8] 2434 	ld	(hl), a
+                                   2435 ;src/battle_scene.c:169: for(i=base_count+effect.sprites;i<40u;++i)move_sprite(i,0,0);
+    00000C00 0C               [ 4] 2436 	inc	c
+    00000C01 18 EC            [12] 2437 	jr	00142$
+    00000C03                       2438 00120$:
+                                   2439 ;src/battle_scene.c:170: bank_copy(scene_shared_colors,effect.bank,effect.data+(uint16_t)effect.sprites*5u,16u);
+    00000C03 F8 02            [12] 2440 	ldhl	sp,	#2
+    00000C05 2A               [ 8] 2441 	ld	a, (hl+)
+    00000C06 4F               [ 4] 2442 	ld	c, a
+    00000C07 3A               [ 8] 2443 	ld	a, (hl-)
+    00000C08 2B               [ 8] 2444 	dec	hl
+    00000C09 47               [ 4] 2445 	ld	b, a
+    00000C0A 6E               [ 8] 2446 	ld	l, (hl)
+    00000C0B 26 00            [ 8] 2447 	ld	h, #0x00
+    00000C0D 5D               [ 4] 2448 	ld	e, l
+    00000C0E 54               [ 4] 2449 	ld	d, h
+    00000C0F 29               [ 8] 2450 	add	hl, hl
+    00000C10 29               [ 8] 2451 	add	hl, hl
+    00000C11 19               [ 8] 2452 	add	hl, de
+    00000C12 09               [ 8] 2453 	add	hl, bc
+    00000C13 4D               [ 4] 2454 	ld	c, l
+    00000C14 44               [ 4] 2455 	ld	b, h
+    00000C15 F8 00            [12] 2456 	ldhl	sp,	#0
+    00000C17 7E               [ 8] 2457 	ld	a, (hl)
+    00000C18 F8 17            [12] 2458 	ldhl	sp,	#23
+    00000C1A 77               [ 8] 2459 	ld	(hl), a
+    00000C1B 11 10 00         [12] 2460 	ld	de, #0x0010
+    00000C1E D5               [16] 2461 	push	de
+    00000C1F C5               [16] 2462 	push	bc
+    00000C20 7E               [ 8] 2463 	ld	a, (hl)
+    00000C21 11r00r00         [12] 2464 	ld	de, #_scene_shared_colors
+    00000C24 CDr00r00         [24] 2465 	call	_bank_copy
+                                   2466 ;src/battle_scene.c:171: set_sprite_palette(6,2,scene_shared_colors);SPRITES_8x16;scene_actor_active=1;
+    00000C27 11r00r00         [12] 2467 	ld	de, #_scene_shared_colors
+    00000C2A D5               [16] 2468 	push	de
+    00000C2B 21 06 02         [12] 2469 	ld	hl, #0x206
+    00000C2E E5               [16] 2470 	push	hl
+    00000C2F CDr00r00         [24] 2471 	call	_set_sprite_palette
+    00000C32 E8 04            [16] 2472 	add	sp, #4
+    00000C34 F0r00            [12] 2473 	ldh	a, (_LCDC_REG + 0)
+    00000C36 F6 04            [ 8] 2474 	or	a, #0x04
+    00000C38 E0r00            [12] 2475 	ldh	(_LCDC_REG + 0), a
+    00000C3A 21r00r00         [12] 2476 	ld	hl, #_scene_actor_active
+    00000C3D 36 01            [12] 2477 	ld	(hl), #0x01
+                                   2478 ;src/battle_scene.c:172: if(current_clip)SHOW_SPRITES;return 1;
+    00000C3F FAr03r00         [16] 2479 	ld	a, (#_current_clip)
+    00000C42 B7               [ 4] 2480 	or	a, a
+    00000C43 28 06            [12] 2481 	jr	Z, 00122$
+    00000C45 F0r00            [12] 2482 	ldh	a, (_LCDC_REG + 0)
+    00000C47 F6 02            [ 8] 2483 	or	a, #0x02
+    00000C49 E0r00            [12] 2484 	ldh	(_LCDC_REG + 0), a
+    00000C4B                       2485 00122$:
+    00000C4B 3E 01            [ 8] 2486 	ld	a, #0x01
+    00000C4D                       2487 00144$:
+                                   2488 ;src/battle_scene.c:173: }
+    00000C4D E8 18            [16] 2489 	add	sp, #24
+    00000C4F E1               [12] 2490 	pop	hl
+    00000C50 E8 05            [16] 2491 	add	sp, #5
+    00000C52 E9               [ 4] 2492 	jp	(hl)
+                                   2493 ;src/battle_scene.c:174: uint8_t battle_scene_weapon_frame(uint8_t frame) __banked {
+                                   2494 ;	---------------------------------
+                                   2495 ; Function battle_scene_weapon_frame
+                                   2496 ; ---------------------------------
+                         0000001F  2497 	b_battle_scene_weapon_frame	= 31
+    00000C53                       2498 _battle_scene_weapon_frame::
+                                   2499 ;src/battle_scene.c:175: return effect_frame(battle_weapon_asset(battle_scene_enemy,frame),WEAPON_DATA_BANK,weapon_assets,weapon_pools,WEAPON_POOL_SHIFT);
+    00000C53 F8 06            [12] 2500 	ldhl	sp,	#6
+    00000C55 7E               [ 8] 2501 	ld	a, (hl)
+    00000C56 F5               [16] 2502 	push	af
+    00000C57 33               [ 8] 2503 	inc	sp
+    00000C58 FAr02r00         [16] 2504 	ld	a, (_battle_scene_enemy)
+    00000C5B F5               [16] 2505 	push	af
+    00000C5C 33               [ 8] 2506 	inc	sp
+    00000C5D 1Er00            [ 8] 2507 	ld	e, #b_battle_weapon_asset
+    00000C5F 21r00r00         [12] 2508 	ld	hl, #_battle_weapon_asset
+    00000C62 CDr00r00         [24] 2509 	call	___sdcc_bcall_ehl
+    00000C65 E1               [12] 2510 	pop	hl
+    00000C66 3E 07            [ 8] 2511 	ld	a, #0x07
+    00000C68 F5               [16] 2512 	push	af
+    00000C69 33               [ 8] 2513 	inc	sp
+    00000C6A 11r00r00         [12] 2514 	ld	de, #_weapon_pools
+    00000C6D D5               [16] 2515 	push	de
+    00000C6E 11r00r00         [12] 2516 	ld	de, #_weapon_assets
+    00000C71 D5               [16] 2517 	push	de
+    00000C72 3E B6            [ 8] 2518 	ld	a, #0xb6
+    00000C74 59               [ 4] 2519 	ld	e, c
+    00000C75 50               [ 4] 2520 	ld	d, b
+    00000C76 CDrCAr08         [24] 2521 	call	_effect_frame
+                                   2522 ;src/battle_scene.c:176: }
+    00000C79 C9               [16] 2523 	ret
+                                   2524 ;src/battle_scene.c:177: uint8_t battle_scene_magic_frame(uint8_t frame) __banked {
+                                   2525 ;	---------------------------------
+                                   2526 ; Function battle_scene_magic_frame
+                                   2527 ; ---------------------------------
+                         0000001F  2528 	b_battle_scene_magic_frame	= 31
+    00000C7A                       2529 _battle_scene_magic_frame::
+                                   2530 ;src/battle_scene.c:178: return effect_frame(enemy_magic_asset(battle_scene_enemy,frame),ENEMY_MAGIC_BANK,enemy_magic_assets,enemy_magic_pools,8u);
+    00000C7A F8 06            [12] 2531 	ldhl	sp,	#6
+    00000C7C 7E               [ 8] 2532 	ld	a, (hl)
+    00000C7D F5               [16] 2533 	push	af
+    00000C7E 33               [ 8] 2534 	inc	sp
+    00000C7F FAr02r00         [16] 2535 	ld	a, (_battle_scene_enemy)
+    00000C82 F5               [16] 2536 	push	af
+    00000C83 33               [ 8] 2537 	inc	sp
+    00000C84 1Er00            [ 8] 2538 	ld	e, #b_enemy_magic_asset
+    00000C86 21r00r00         [12] 2539 	ld	hl, #_enemy_magic_asset
+    00000C89 CDr00r00         [24] 2540 	call	___sdcc_bcall_ehl
+    00000C8C E1               [12] 2541 	pop	hl
+    00000C8D 3E 08            [ 8] 2542 	ld	a, #0x08
+    00000C8F F5               [16] 2543 	push	af
+    00000C90 33               [ 8] 2544 	inc	sp
+    00000C91 11r00r00         [12] 2545 	ld	de, #_enemy_magic_pools
+    00000C94 D5               [16] 2546 	push	de
+    00000C95 11r00r00         [12] 2547 	ld	de, #_enemy_magic_assets
+    00000C98 D5               [16] 2548 	push	de
+    00000C99 3E FC            [ 8] 2549 	ld	a, #0xfc
+    00000C9B 59               [ 4] 2550 	ld	e, c
+    00000C9C 50               [ 4] 2551 	ld	d, b
+    00000C9D CDrCAr08         [24] 2552 	call	_effect_frame
+                                   2553 ;src/battle_scene.c:179: }
+    00000CA0 C9               [16] 2554 	ret
+                                   2555 ;src/battle_scene.c:180: void battle_scene_weapon_clear(void) __banked {
+                                   2556 ;	---------------------------------
+                                   2557 ; Function battle_scene_weapon_clear
+                                   2558 ; ---------------------------------
+                         0000001F  2559 	b_battle_scene_weapon_clear	= 31
+    00000CA1                       2560 _battle_scene_weapon_clear::
+                                   2561 ;src/battle_scene.c:181: uint8_t clip=current_clip,i;
+    00000CA1 FAr03r00         [16] 2562 	ld	a, (_current_clip)
+    00000CA4 47               [ 4] 2563 	ld	b, a
+                                   2564 ;src/battle_scene.c:182: if(current_asset!=65535u){current_clip=255u;battle_scene_clip(clip);overlay_flash(0u,0u);}
+    00000CA5 FAr05r00         [16] 2565 	ld	a, (_current_asset)
+    00000CA8 4F               [ 4] 2566 	ld	c, a
+    00000CA9 21r06r00         [12] 2567 	ld	hl, #_current_asset + 1
+    00000CAC 79               [ 4] 2568 	ld	a, c
+    00000CAD A6               [ 8] 2569 	and	a, (hl)
+    00000CAE 3C               [ 4] 2570 	inc	a
+    00000CAF 28 15            [12] 2571 	jr	Z, 00111$
+    00000CB1 21r03r00         [12] 2572 	ld	hl, #_current_clip
+    00000CB4 36 FF            [12] 2573 	ld	(hl), #0xff
+    00000CB6 C5               [16] 2574 	push	bc
+    00000CB7 33               [ 8] 2575 	inc	sp
+    00000CB8 1Er00            [ 8] 2576 	ld	e, #b_battle_scene_clip
+    00000CBA 21rF0r01         [12] 2577 	ld	hl, #_battle_scene_clip
+    00000CBD CDr00r00         [24] 2578 	call	___sdcc_bcall_ehl
+    00000CC0 33               [ 8] 2579 	inc	sp
+    00000CC1 AF               [ 4] 2580 	xor	a, a
+    00000CC2 5F               [ 4] 2581 	ld	e, a
+    00000CC3 C3r68r07         [16] 2582 	jp	_overlay_flash
+                                   2583 ;src/battle_scene.c:183: else{for(i=0;i<40u;++i)move_sprite(i,0,0);SPRITES_8x8;}
+    00000CC6                       2584 00111$:
+    00000CC6 0E 00            [ 8] 2585 	ld	c, #0x00
+    00000CC8                       2586 00106$:
+                                   2587 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    00000CC8 11r00r00         [12] 2588 	ld	de, #_shadow_OAM+0
+    00000CCB 69               [ 4] 2589 	ld	l, c
+    00000CCC AF               [ 4] 2590 	xor	a, a
+    00000CCD 67               [ 4] 2591 	ld	h, a
+    00000CCE 29               [ 8] 2592 	add	hl, hl
+    00000CCF 29               [ 8] 2593 	add	hl, hl
+    00000CD0 19               [ 8] 2594 	add	hl, de
+                                   2595 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    00000CD1 AF               [ 4] 2596 	xor	a, a
+    00000CD2 22               [ 8] 2597 	ld	(hl+), a
+    00000CD3 77               [ 8] 2598 	ld	(hl), a
+                                   2599 ;src/battle_scene.c:183: else{for(i=0;i<40u;++i)move_sprite(i,0,0);SPRITES_8x8;}
+    00000CD4 0C               [ 4] 2600 	inc	c
+    00000CD5 79               [ 4] 2601 	ld	a, c
+    00000CD6 D6 28            [ 8] 2602 	sub	a, #0x28
+    00000CD8 38 EE            [12] 2603 	jr	C, 00106$
+    00000CDA F0r00            [12] 2604 	ldh	a, (_LCDC_REG + 0)
+    00000CDC E6 FB            [ 8] 2605 	and	a, #0xfb
+    00000CDE E0r00            [12] 2606 	ldh	(_LCDC_REG + 0), a
+                                   2607 ;src/battle_scene.c:184: }
+    00000CE0 C9               [16] 2608 	ret
+                                   2609 ;src/battle_scene.c:186: uint8_t battle_scene_boss_frame(uint8_t frame,uint8_t y) __banked {
+                                   2610 ;	---------------------------------
+                                   2611 ; Function battle_scene_boss_frame
+                                   2612 ; ---------------------------------
+                         0000001F  2613 	b_battle_scene_boss_frame	= 31
+    00000CE1                       2614 _battle_scene_boss_frame::
+    00000CE1 E8 FA            [16] 2615 	add	sp, #-6
+                                   2616 ;src/battle_scene.c:187: BattleSceneAsset asset;uint8_t i,clip=current_clip;uint16_t index;
+    00000CE3 FAr03r00         [16] 2617 	ld	a, (#_current_clip)
+    00000CE6 F8 04            [12] 2618 	ldhl	sp,	#4
+    00000CE8 77               [ 8] 2619 	ld	(hl), a
+                                   2620 ;src/battle_scene.c:188: if(!frame){for(i=0;i<40u;++i)move_sprite(i,0,0);current_asset=65535u;current_animated=0;return 1;}
+    00000CE9 F8 0C            [12] 2621 	ldhl	sp,	#12
+    00000CEB 7E               [ 8] 2622 	ld	a, (hl)
+    00000CEC B7               [ 4] 2623 	or	a, a
+    00000CED 20 23            [12] 2624 	jr	NZ, 00103$
+    00000CEF 4F               [ 4] 2625 	ld	c, a
+    00000CF0                       2626 00107$:
+                                   2627 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    00000CF0 11r00r00         [12] 2628 	ld	de, #_shadow_OAM+0
+    00000CF3 69               [ 4] 2629 	ld	l, c
+    00000CF4 AF               [ 4] 2630 	xor	a, a
+    00000CF5 67               [ 4] 2631 	ld	h, a
+    00000CF6 29               [ 8] 2632 	add	hl, hl
+    00000CF7 29               [ 8] 2633 	add	hl, hl
+    00000CF8 19               [ 8] 2634 	add	hl, de
+                                   2635 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    00000CF9 AF               [ 4] 2636 	xor	a, a
+    00000CFA 22               [ 8] 2637 	ld	(hl+), a
+    00000CFB 77               [ 8] 2638 	ld	(hl), a
+                                   2639 ;src/battle_scene.c:188: if(!frame){for(i=0;i<40u;++i)move_sprite(i,0,0);current_asset=65535u;current_animated=0;return 1;}
+    00000CFC 0C               [ 4] 2640 	inc	c
+    00000CFD 79               [ 4] 2641 	ld	a, c
+    00000CFE D6 28            [ 8] 2642 	sub	a, #0x28
+    00000D00 38 EE            [12] 2643 	jr	C, 00107$
+    00000D02 21r05r00         [12] 2644 	ld	hl, #_current_asset
+    00000D05 3E FF            [ 8] 2645 	ld	a, #0xff
+    00000D07 22               [ 8] 2646 	ld	(hl+), a
+    00000D08 36 FF            [12] 2647 	ld	(hl), #0xff
+    00000D0A AF               [ 4] 2648 	xor	a, a
+    00000D0B EAr04r00         [16] 2649 	ld	(#_current_animated),a
+    00000D0E 3E 01            [ 8] 2650 	ld	a, #0x01
+    00000D10 18 7B            [12] 2651 	jr	00109$
+    00000D12                       2652 00103$:
+                                   2653 ;src/battle_scene.c:189: index=boss_motion_asset(battle_scene_enemy,frame,y);if(index==65535u)return 0;
+    00000D12 F8 0D            [12] 2654 	ldhl	sp,	#13
+    00000D14 3A               [ 8] 2655 	ld	a, (hl-)
+    00000D15 47               [ 4] 2656 	ld	b, a
+    00000D16 4E               [ 8] 2657 	ld	c, (hl)
+    00000D17 C5               [16] 2658 	push	bc
+    00000D18 FAr02r00         [16] 2659 	ld	a, (_battle_scene_enemy)
+    00000D1B F5               [16] 2660 	push	af
+    00000D1C 33               [ 8] 2661 	inc	sp
+    00000D1D 1Er00            [ 8] 2662 	ld	e, #b_boss_motion_asset
+    00000D1F 21r00r00         [12] 2663 	ld	hl, #_boss_motion_asset
+    00000D22 CDr00r00         [24] 2664 	call	___sdcc_bcall_ehl
+    00000D25 E8 03            [16] 2665 	add	sp, #3
+    00000D27 59               [ 4] 2666 	ld	e, c
+    00000D28 50               [ 4] 2667 	ld	d, b
+    00000D29 7B               [ 4] 2668 	ld	a, e
+    00000D2A A2               [ 4] 2669 	and	a, d
+    00000D2B 3C               [ 4] 2670 	inc	a
+    00000D2C 28 5F            [12] 2671 	jr	Z, 00109$
+                                   2672 ;src/battle_scene.c:190: current_asset=index;current_animated=3;current_descriptor(&asset);
+    00000D2E 21r05r00         [12] 2673 	ld	hl, #_current_asset
+    00000D31 79               [ 4] 2674 	ld	a, c
+    00000D32 22               [ 8] 2675 	ld	(hl+), a
+    00000D33 70               [ 8] 2676 	ld	(hl), b
+    00000D34 21r04r00         [12] 2677 	ld	hl, #_current_animated
+    00000D37 36 03            [12] 2678 	ld	(hl), #0x03
+    00000D39 21 00 00         [12] 2679 	ld	hl, #0
+    00000D3C 39               [ 8] 2680 	add	hl, sp
+    00000D3D 5D               [ 4] 2681 	ld	e, l
+    00000D3E 54               [ 4] 2682 	ld	d, h
+    00000D3F CDrEDr00         [24] 2683 	call	_current_descriptor
+                                   2684 ;src/battle_scene.c:191: bank_copy(scene_shared_colors,asset.bank,asset.data+(uint16_t)asset.sprites*5u,64u);set_sprite_palette(0,8,scene_shared_colors);
+    00000D42 F8 02            [12] 2685 	ldhl	sp,	#2
+    00000D44 2A               [ 8] 2686 	ld	a, (hl+)
+    00000D45 4F               [ 4] 2687 	ld	c, a
+    00000D46 3A               [ 8] 2688 	ld	a, (hl-)
+    00000D47 2B               [ 8] 2689 	dec	hl
+    00000D48 47               [ 4] 2690 	ld	b, a
+    00000D49 6E               [ 8] 2691 	ld	l, (hl)
+    00000D4A 26 00            [ 8] 2692 	ld	h, #0x00
+    00000D4C 5D               [ 4] 2693 	ld	e, l
+    00000D4D 54               [ 4] 2694 	ld	d, h
+    00000D4E 29               [ 8] 2695 	add	hl, hl
+    00000D4F 29               [ 8] 2696 	add	hl, hl
+    00000D50 19               [ 8] 2697 	add	hl, de
+    00000D51 09               [ 8] 2698 	add	hl, bc
+    00000D52 4D               [ 4] 2699 	ld	c, l
+    00000D53 44               [ 4] 2700 	ld	b, h
+    00000D54 F8 00            [12] 2701 	ldhl	sp,	#0
+    00000D56 7E               [ 8] 2702 	ld	a, (hl)
+    00000D57 F8 05            [12] 2703 	ldhl	sp,	#5
+    00000D59 77               [ 8] 2704 	ld	(hl), a
+    00000D5A 11 40 00         [12] 2705 	ld	de, #0x0040
+    00000D5D D5               [16] 2706 	push	de
+    00000D5E C5               [16] 2707 	push	bc
+    00000D5F 7E               [ 8] 2708 	ld	a, (hl)
+    00000D60 11r00r00         [12] 2709 	ld	de, #_scene_shared_colors
+    00000D63 CDr00r00         [24] 2710 	call	_bank_copy
+    00000D66 11r00r00         [12] 2711 	ld	de, #_scene_shared_colors
+    00000D69 D5               [16] 2712 	push	de
+    00000D6A 21 00 08         [12] 2713 	ld	hl, #0x800
+    00000D6D E5               [16] 2714 	push	hl
+    00000D6E CDr00r00         [24] 2715 	call	_set_sprite_palette
+    00000D71 E8 04            [16] 2716 	add	sp, #4
+                                   2717 ;src/battle_scene.c:192: current_clip=255u;scene_actor_active=1;battle_scene_clip(clip);return 1;
+    00000D73 21r03r00         [12] 2718 	ld	hl, #_current_clip
+    00000D76 36 FF            [12] 2719 	ld	(hl), #0xff
+    00000D78 21r00r00         [12] 2720 	ld	hl, #_scene_actor_active
+    00000D7B 36 01            [12] 2721 	ld	(hl), #0x01
+    00000D7D F8 04            [12] 2722 	ldhl	sp,	#4
+    00000D7F 7E               [ 8] 2723 	ld	a, (hl)
+    00000D80 F5               [16] 2724 	push	af
+    00000D81 33               [ 8] 2725 	inc	sp
+    00000D82 1Er00            [ 8] 2726 	ld	e, #b_battle_scene_clip
+    00000D84 21rF0r01         [12] 2727 	ld	hl, #_battle_scene_clip
+    00000D87 CDr00r00         [24] 2728 	call	___sdcc_bcall_ehl
+    00000D8A 33               [ 8] 2729 	inc	sp
+    00000D8B 3E 01            [ 8] 2730 	ld	a, #0x01
+    00000D8D                       2731 00109$:
+                                   2732 ;src/battle_scene.c:193: }
+    00000D8D E8 06            [16] 2733 	add	sp, #6
+    00000D8F C9               [16] 2734 	ret
+                                   2735 ;src/battle_scene.c:194: void battle_scene_boss_patch(uint8_t patch) __banked {
+                                   2736 ;	---------------------------------
+                                   2737 ; Function battle_scene_boss_patch
+                                   2738 ; ---------------------------------
+                         0000001F  2739 	b_battle_scene_boss_patch	= 31
+    00000D90                       2740 _battle_scene_boss_patch::
+    00000D90 E8 FB            [16] 2741 	add	sp, #-5
+                                   2742 ;src/battle_scene.c:196: if(battle_scene_enemy!=73u||patch>2u)return;
+    00000D92 FAr02r00         [16] 2743 	ld	a, (#_battle_scene_enemy)
+    00000D95 D6 49            [ 8] 2744 	sub	a, #0x49
+    00000D97 C2r40r0E         [16] 2745 	jp	NZ, 00107$
+    00000D9A 3E 02            [ 8] 2746 	ld	a, #0x02
+    00000D9C F8 0B            [12] 2747 	ldhl	sp,	#11
+    00000D9E 96               [ 8] 2748 	sub	a, (hl)
+    00000D9F DAr40r0E         [16] 2749 	jp	C, 00107$
+                                   2750 ;src/battle_scene.c:197: bank_copy(&data,BOSS_DATA_BANK,boss_patches+patch,sizeof data);
+    00000DA2 01r00r00         [12] 2751 	ld	bc, #_boss_patches+0
+    00000DA5 F8 0B            [12] 2752 	ldhl	sp,	#11
+    00000DA7 5E               [ 8] 2753 	ld	e, (hl)
+    00000DA8 AF               [ 4] 2754 	xor	a, a
+    00000DA9 6B               [ 4] 2755 	ld	l, e
+    00000DAA 67               [ 4] 2756 	ld	h, a
+    00000DAB 29               [ 8] 2757 	add	hl, hl
+    00000DAC 09               [ 8] 2758 	add	hl, bc
+    00000DAD 4D               [ 4] 2759 	ld	c, l
+    00000DAE 44               [ 4] 2760 	ld	b, h
+    00000DAF F8 00            [12] 2761 	ldhl	sp,	#0
+    00000DB1 5D               [ 4] 2762 	ld	e, l
+    00000DB2 54               [ 4] 2763 	ld	d, h
+    00000DB3 21 02 00         [12] 2764 	ld	hl, #0x0002
+    00000DB6 E5               [16] 2765 	push	hl
+    00000DB7 C5               [16] 2766 	push	bc
+    00000DB8 3E FE            [ 8] 2767 	ld	a, #0xfe
+    00000DBA CDr00r00         [24] 2768 	call	_bank_copy
+                                   2769 ;src/battle_scene.c:198: for(i=0;i<BOSS_PATCH_CELLS;++i){
+    00000DBD C1               [12] 2770 	pop	bc
+    00000DBE C5               [16] 2771 	push	bc
+    00000DBF F8 04            [12] 2772 	ldhl	sp,	#4
+    00000DC1 36 00            [12] 2773 	ld	(hl), #0x00
+    00000DC3                       2774 00105$:
+                                   2775 ;src/battle_scene.c:199: cell=bank_read8(BOSS_DATA_BANK,boss_patch_cells+i);attr=bank_read8(255u,data+16u);
+    00000DC3 11r00r00         [12] 2776 	ld	de, #_boss_patch_cells
+    00000DC6 F8 04            [12] 2777 	ldhl	sp,	#4
+    00000DC8 6E               [ 8] 2778 	ld	l, (hl)
+    00000DC9 26 00            [ 8] 2779 	ld	h, #0x00
+    00000DCB 19               [ 8] 2780 	add	hl, de
+    00000DCC 5D               [ 4] 2781 	ld	e, l
+    00000DCD 54               [ 4] 2782 	ld	d, h
+    00000DCE C5               [16] 2783 	push	bc
+    00000DCF 3E FE            [ 8] 2784 	ld	a, #0xfe
+    00000DD1 CDr00r00         [24] 2785 	call	_bank_read8
+    00000DD4 F8 05            [12] 2786 	ldhl	sp,	#5
+    00000DD6 77               [ 8] 2787 	ld	(hl), a
+    00000DD7 C1               [12] 2788 	pop	bc
+    00000DD8 21 10 00         [12] 2789 	ld	hl, #0x0010
+    00000DDB 09               [ 8] 2790 	add	hl, bc
+    00000DDC 5D               [ 4] 2791 	ld	e, l
+    00000DDD 54               [ 4] 2792 	ld	d, h
+    00000DDE C5               [16] 2793 	push	bc
+    00000DDF 3E FF            [ 8] 2794 	ld	a, #0xff
+    00000DE1 CDr00r00         [24] 2795 	call	_bank_read8
+    00000DE4 C1               [12] 2796 	pop	bc
+    00000DE5 F8 02            [12] 2797 	ldhl	sp,	#2
+                                   2798 ;src/battle_scene.c:200: bank_bkg_data(255u,cell,1u,data,0u);VBK_REG=1;set_bkg_tiles(cell%20u,cell/20u,1u,1u,&attr);data+=17u;
+    00000DE7 22               [ 8] 2799 	ld	(hl+), a
+    00000DE8 C5               [16] 2800 	push	bc
+    00000DE9 AF               [ 4] 2801 	xor	a, a
+    00000DEA F5               [16] 2802 	push	af
+    00000DEB 33               [ 8] 2803 	inc	sp
+    00000DEC C5               [16] 2804 	push	bc
+    00000DED 3E 01            [ 8] 2805 	ld	a, #0x01
+    00000DEF F5               [16] 2806 	push	af
+    00000DF0 33               [ 8] 2807 	inc	sp
+    00000DF1 5E               [ 8] 2808 	ld	e, (hl)
+    00000DF2 3E FF            [ 8] 2809 	ld	a, #0xff
+    00000DF4 CDr00r00         [24] 2810 	call	_bank_bkg_data
+    00000DF7 C1               [12] 2811 	pop	bc
+    00000DF8 3E 01            [ 8] 2812 	ld	a, #0x01
+    00000DFA E0r00            [12] 2813 	ldh	(_VBK_REG + 0), a
+    00000DFC F8 03            [12] 2814 	ldhl	sp,	#3
+    00000DFE 6E               [ 8] 2815 	ld	l, (hl)
+    00000DFF E5               [16] 2816 	push	hl
+    00000E00 C5               [16] 2817 	push	bc
+    00000E01 1E 14            [ 8] 2818 	ld	e, #0x14
+    00000E03 7D               [ 4] 2819 	ld	a, l
+    00000E04 CDr00r00         [24] 2820 	call	__divuchar
+    00000E07 51               [ 4] 2821 	ld	d, c
+    00000E08 C1               [12] 2822 	pop	bc
+    00000E09 E1               [12] 2823 	pop	hl
+    00000E0A C5               [16] 2824 	push	bc
+    00000E0B D5               [16] 2825 	push	de
+    00000E0C 1E 14            [ 8] 2826 	ld	e, #0x14
+    00000E0E 7D               [ 4] 2827 	ld	a, l
+    00000E0F CDr00r00         [24] 2828 	call	__moduchar
+    00000E12 79               [ 4] 2829 	ld	a, c
+    00000E13 D1               [12] 2830 	pop	de
+    00000E14 C1               [12] 2831 	pop	bc
+    00000E15 21 02 00         [12] 2832 	ld	hl, #2
+    00000E18 39               [ 8] 2833 	add	hl, sp
+    00000E19 E5               [16] 2834 	push	hl
+    00000E1A 26 01            [ 8] 2835 	ld	h, #0x01
+    00000E1C E5               [16] 2836 	push	hl
+    00000E1D 33               [ 8] 2837 	inc	sp
+    00000E1E 26 01            [ 8] 2838 	ld	h, #0x01
+    00000E20 6A               [ 4] 2839 	ld	l, d
+    00000E21 E5               [16] 2840 	push	hl
+    00000E22 F5               [16] 2841 	push	af
+    00000E23 33               [ 8] 2842 	inc	sp
+    00000E24 CDr00r00         [24] 2843 	call	_set_bkg_tiles
+    00000E27 E8 06            [16] 2844 	add	sp, #6
+    00000E29 21 11 00         [12] 2845 	ld	hl, #0x0011
+    00000E2C 09               [ 8] 2846 	add	hl, bc
+    00000E2D 4D               [ 4] 2847 	ld	c, l
+    00000E2E 44               [ 4] 2848 	ld	b, h
+    00000E2F 33               [ 8] 2849 	inc	sp
+    00000E30 33               [ 8] 2850 	inc	sp
+    00000E31 C5               [16] 2851 	push	bc
+                                   2852 ;src/battle_scene.c:198: for(i=0;i<BOSS_PATCH_CELLS;++i){
+    00000E32 F8 04            [12] 2853 	ldhl	sp,	#4
+    00000E34 34               [12] 2854 	inc	(hl)
+    00000E35 7E               [ 8] 2855 	ld	a, (hl)
+    00000E36 D6 0A            [ 8] 2856 	sub	a, #0x0a
+    00000E38 38 89            [12] 2857 	jr	C, 00105$
+                                   2858 ;src/battle_scene.c:201: }VBK_REG=0;
+    00000E3A 33               [ 8] 2859 	inc	sp
+    00000E3B 33               [ 8] 2860 	inc	sp
+    00000E3C C5               [16] 2861 	push	bc
+    00000E3D AF               [ 4] 2862 	xor	a, a
+    00000E3E E0r00            [12] 2863 	ldh	(_VBK_REG + 0), a
+    00000E40                       2864 00107$:
+                                   2865 ;src/battle_scene.c:202: }
+    00000E40 E8 05            [16] 2866 	add	sp, #5
+    00000E42 C9               [16] 2867 	ret
+                                   2868 	.area _CODE_31
+                                   2869 	.area _INITIALIZER
+                                   2870 	.area _CABS (ABS)

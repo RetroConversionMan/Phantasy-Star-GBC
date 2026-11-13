@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": 385470,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "tested": [
+    "all 94 one-based encounter pools",
+    "all 74 nonzero enemy records",
+    "every cell of 3 planet maps with 2 vehicle states and 4 seeds",
+    "all 61 dungeon floors with 16 cell classes and 32 seeds",
+    "source 12-swap initiative and retained permutation",
+    "independent exact physical/Fire/Wind/Thunder RNG fixtures",
+    "per-hit target/applied-damage/remaining-HP traces including8targets,earlykill,DarkFalz",
+    "all 8 enemy behavior classes",
+    "binding and protection",
+    "Dark Falz guns/Thunder and two HP records",
+    "Lassic Crystal and byte-carry behavior",
+    "Medusa Mirror Shield",
+    "Golden Dragon/Myau party loss",
+    "talk, run and consumables",
+    "EXP/chest separation, traps and full-inventory rewards",
+    "closed-chest preparation all256chance bytes*31seeds, no reroll on decline/disarm",
+    "1184 complete deterministic basic-attack battle simulations"
+  ],
+  "not_verified": [
+    "playable emulator battle UI/audio",
+    "story-specific battle wrappers",
+    "dungeon escape relocation",
+    "vehicle/key/Nuts battle item interactions",
+    "full campaign playthrough"
+  ],
+  "inputs_sha256": {
+    "src/rpg.c": "d875993bdea104e802b9259db7e3a8311844a78642e4f7a832b697e48a974f20",
+    "src/rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "src/battle.c": "820684dccf12afa872f97336b1fabc345a867915c8a69b404530aa5fc9f205a2",
+    "tests/test_battle.c": "ffcd189a0cbe847a78783be610205423e6a67dda10d1ee70fc79cbe5bf03825e"
+  },
+  "source_rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88"
+}

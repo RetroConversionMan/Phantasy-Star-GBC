@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "files": {
+    "independent-tool-review/SHA256.json": {
+      "bytes": 1555,
+      "sha256": "1b74c7ae7c904e288cc88738c910dbe9325de924c22353c3569bf1ee4b371f6f"
+    },
+    "independent-tool-review/inspected-files/build/research/replay-live-work/test_ingestion_final.py": {
+      "bytes": 5359,
+      "sha256": "a406e7991f46af057a203adaaaa1d66ee0a1697275cec6b2ca70b3db7f5adc1c"
+    },
+    "independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "independent-tool-review/inspected-files/build/source-snapshots/replay-live-tools-20261113/tools/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    },
+    "independent-tool-review/inspected-files/build/verification/live-replay-ingestion-final/following-output/prefix-replay-report.json": {
+      "bytes": 3296,
+      "sha256": "6fbcbf9d16b6c7d24f83cac54e688bed3023ba8399561ea7ef99b8116508b88e"
+    },
+    "independent-tool-review/inspected-files/build/verification/live-replay-ingestion-final/mutation-output/replay-failure.json": {
+      "bytes": 2822,
+      "sha256": "a537d4f3735d6fefe34d90ffdc7643effbcd464b172864c42f67447ea26a6932"
+    },
+    "independent-tool-review/inspected-files/build/verification/live-replay-ingestion-final/report.json": {
+      "bytes": 899,
+      "sha256": "e96c0142bc09cc0d88f2c97d7bbe92c0d34822b2318c02ebb9b8fc2a9eec05a7"
+    },
+    "independent-tool-review/report.json": {
+      "bytes": 4555,
+      "sha256": "cafe8bdeba0629134249c329300db4dfa31682c343b7fee74077a70c5c0ab4f6"
+    },
+    "replay/ACCEPTANCE.json": {
+      "bytes": 2242,
+      "sha256": "f8226b8ad4f9d977c10f9c0126de750bfb2a84c3813a080334252d5522c63c63"
+    },
+    "replay/CAMPAIGN_CLOSED.json": {
+      "bytes": 553,
+      "sha256": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1"
+    },
+    "replay/ENDING_TITLE_VISUAL_PROOF.json": {
+      "bytes": 1137,
+      "sha256": "cee96e937ea9e4163840a44422e4c44fea6592d5e00fd5660e98fda47d2e00c3"
+    },
+    "replay/LIVE_REPLAY_PROVENANCE.json": {
+      "bytes": 1356,
+      "sha256": "0020f1cd0e91ba8b83ca7782a3cd53529bc59bb5efedd441689120b076d8ec71"
+    },
+    "replay/REPRODUCE.txt": {
+      "bytes": 633,
+      "sha256": "38819d6c6a9db1eb37f04d7e54e67c2fbf046f4b0192b7db06e8277b47e2c49e"
+    },
+    "replay/SHA256.json": {
+      "bytes": 3275,
+      "sha256": "2c383f8f4af8c2728d93c2d925f2ddb33b96a86403921bb7b243f37d28ae23d2"
+    },
+    "replay/campaign.gbc": {
+      "bytes": 4194304,
+      "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+    },
+    "replay/campaign.gbc.ram": {
+      "bytes": 8192,
+      "sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60"
+    },
+    "replay/campaign.noi": {
+      "bytes": 232060,
+      "sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c"
+    },
+    "replay/initial-source-report.json": {
+      "bytes": 11325309,
+      "sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb"
+    },
+    "replay/native-layout.json": {
+      "bytes": 1748,
+      "sha256": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+    },
+    "replay/progress.json": {
+      "bytes": 507,
+      "sha256": "24d127920a304e9650d8a8b48a33d375d83779f4f825c4964991e62c929efb11"
+    },
+    "replay/recorded-controller.jsonl": {
+      "bytes": 11721245,
+      "sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1"
+    },
+    "replay/recorded-report.json": {
+      "bytes": 11325309,
+      "sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb"
+    },
+    "replay/replay-ending-title-settled.png": {
+      "bytes": 3548,
+      "sha256": "3f977da445f64d6912c6a00c8fb7cc2aa7df26a47a7e2979b9c2da4bf76b4bd0"
+    },
+    "replay/replay-report.json": {
+      "bytes": 39387,
+      "sha256": "b85bd705fabe42e57a1c787833b6c10f6b3df1b5dd44f26d32c668baa11844a0"
+    },
+    "replay/runtime-environment.json": {
+      "bytes": 71550,
+      "sha256": "a5ba35f3439416acc1186d533bb5161fbc307e07d244a238a54a35e523e97abe"
+    },
+    "replay/title-reference-native-earned-save-boot.png": {
+      "bytes": 3548,
+      "sha256": "3f977da445f64d6912c6a00c8fb7cc2aa7df26a47a7e2979b9c2da4bf76b4bd0"
+    },
+    "replay/verification-tooling/FROZEN_TOOLS.json": {
+      "bytes": 687,
+      "sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7"
+    },
+    "replay/verification-tooling/native_layout.py": {
+      "bytes": 4167,
+      "sha256": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36"
+    },
+    "replay/verification-tooling/replay_campaign_live.py": {
+      "bytes": 14827,
+      "sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+    },
+    "replay/verification-tooling/verify_campaign_title.py": {
+      "bytes": 3373,
+      "sha256": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba"
+    },
+    "replay/verification-tooling/verify_rom.py": {
+      "bytes": 20448,
+      "sha256": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+    },
+    "tool-acceptance/report.json": {
+      "bytes": 9914,
+      "sha256": "545e3cb38cb3979e1c4a413f58e6a3fb88848fa4bf8946ca2164b23ab3b59ec1"
+    },
+    "tool-acceptance/runtime-environment.json": {
+      "bytes": 71550,
+      "sha256": "a5ba35f3439416acc1186d533bb5161fbc307e07d244a238a54a35e523e97abe"
+    },
+    "tool-acceptance/test_ingestion_final.py": {
+      "bytes": 5359,
+      "sha256": "a406e7991f46af057a203adaaaa1d66ee0a1697275cec6b2ca70b3db7f5adc1c"
+    }
+  }
+}

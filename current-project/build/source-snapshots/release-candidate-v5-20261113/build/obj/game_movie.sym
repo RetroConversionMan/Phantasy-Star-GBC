@@ -1,0 +1,130 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _LY_REG                                                         ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _action_edge                                                    0000008C R
+    _apply_event                                                    ******** GX
+    _audio_clock                                                    ******** GX
+    _audio_command                                                  ******** GX
+    _background_changed                                             ******** GX
+    _begin_battle                                                   ******** GX
+    _display_off                                                    ******** GX
+  8 _ending_texts                                                   0000002D R
+    _ending_walk_begin                                              ******** GX
+    _ending_walk_tick                                               ******** GX
+    _enter_map                                                      ******** GX
+    _event_advance                                                  ******** GX
+    _event_governor_room_loaded                                     ******** GX
+  8 _fade                                                           00000000 R
+  2 _fade_clock                                                     00000005 R
+  8 _fade_done                                                      00000039 R
+  2 _fade_in                                                        00000003 R
+  2 _fade_step                                                      00000004 R
+    _game_dungeon                                                   ******** GX
+    _game_events                                                    ******** GX
+  8 _game_movie_battle_done                                         000001AF GR
+  2 _game_movie_mode                                                00000000 GR
+  2 _game_movie_stage                                               00000001 GR
+  8 _game_movie_story_done                                          00000126 GR
+  8 _game_movie_text_done                                           00000183 GR
+  8 _game_movie_tick                                                000001DC GR
+    _game_transition_vint16                                         ******** GX
+    _gold_scene_show                                                ******** GX
+  2 _hold_frames                                                    00000008 R
+    _joypad                                                         ******** GX
+  8 _movie_begin                                                    00000097 R
+    _movie_city_caption                                             ******** GX
+  2 _movie_keys                                                     00000002 R
+    _movie_scene_show                                               ******** GX
+    _myau_battle_palette                                            ******** GX
+    _myau_flight_begin                                              ******** GX
+    _myau_flight_frame                                              ******** GX
+    _myau_flight_tick                                               ******** GX
+    _opening_begin                                                  ******** GX
+    _opening_tick                                                   ******** GX
+    _presentation_begin                                             ******** GX
+    _presentation_tick                                              ******** GX
+  2 _returning                                                      00000006 R
+    _saved_position_valid                                           ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_context_type                                             ******** GX
+    _scene_fade_begin                                               ******** GX
+    _scene_fade_step                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_portrait_show                                            ******** GX
+    _scene_show                                                     ******** GX
+    _screen_state                                                   ******** GX
+    _start_cutscene                                                 ******** GX
+  8 _start_dark_falz_reveal                                         000000EF GR
+  8 _start_ending                                                   000000C5 GR
+  8 _start_governor_room                                            0000011A GR
+    _start_movie_text                                               ******** GX
+  8 _start_myau_flight                                              000000D1 GR
+  8 _start_opening                                                  000000AC GR
+  2 _text_index                                                     00000007 R
+    _title_choice                                                   ******** GX
+    _title_screen                                                   ******** GX
+    _world_map_id                                                   ******** GX
+    b_apply_event                                                   ******** GX
+    b_audio_command                                                 ******** GX
+    b_ending_walk_begin                                             ******** GX
+    b_ending_walk_tick                                              ******** GX
+    b_event_advance                                                 ******** GX
+    b_event_governor_room_loaded                                    ******** GX
+    b_game_movie_battle_done                                    =   00000079 G
+    b_game_movie_story_done                                     =   00000079 G
+    b_game_movie_text_done                                      =   00000079 G
+    b_game_movie_tick                                           =   00000079 G
+    b_game_transition_vint16                                        ******** GX
+    b_gold_scene_show                                               ******** GX
+    b_movie_city_caption                                            ******** GX
+    b_movie_scene_show                                              ******** GX
+    b_myau_battle_palette                                           ******** GX
+    b_myau_flight_begin                                             ******** GX
+    b_myau_flight_tick                                              ******** GX
+    b_opening_begin                                                 ******** GX
+    b_opening_tick                                                  ******** GX
+    b_presentation_begin                                            ******** GX
+    b_presentation_tick                                             ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_scene_fade_step                                               ******** GX
+    b_scene_portrait_show                                           ******** GX
+    b_scene_show                                                    ******** GX
+    b_start_dark_falz_reveal                                    =   00000079 G
+    b_start_ending                                              =   00000079 G
+    b_start_governor_room                                       =   00000079 G
+    b_start_myau_flight                                         =   00000079 G
+    b_start_opening                                             =   00000079 G
+    b_title_screen                                                  ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        A   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_121                                  size      75F   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

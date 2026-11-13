@@ -1,0 +1,30 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "95c6d55f7c8c23c14a449c3d90721eff6e7dababc145ed2cdeef9f1b9cda365a",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Armory welcome declined through original dialogue and farewell, no mutation",
+    "Armory selection without funds shows original failure and exits",
+    "Leather Shield costs30, enters shared inventory, and original another-purchase prompt works",
+    "Church entry records C317 before prompt; decline shows blessing and EXP-to-next guidance",
+    "Parolit hospital quotes15 and changes HP/money only after explicit yes",
+    "Already-healed single-member hospital branch shows source careful farewell without charging"
+  ],
+  "injected_fixtures": [
+    "Set money30 for actual Leather Shield purchase; no battle reward claimed",
+    "Set AlisHP1 and money15 for hospital fee; Camineet-to-Parolit travel uses only controller input"
+  ],
+  "walking_steps": 99,
+  "campaign_complete": false,
+  "passed": true
+}

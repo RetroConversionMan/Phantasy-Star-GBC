@@ -1,0 +1,53 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __moduchar                                                      ******** GX
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+  8 _movie_city_caption                                             000003B5 GR
+    _movie_images                                                   ******** GX
+  8 _movie_scene_show                                               0000018F GR
+  8 _opening_begin                                                  000000B0 GR
+  2 _opening_head                                                   00000002 R
+    _opening_pan                                                    ******** GX
+  2 _opening_position                                               00000000 GR
+  8 _opening_tick                                                   0000011F GR
+  8 _pan_row                                                        00000000 R
+    _scene_shared_bytes                                             ******** GX
+    _scene_shared_colors                                            ******** GX
+    _set_bkg_palette                                                ******** GX
+    _set_bkg_tiles                                                  ******** GX
+    b_movie_city_caption                                        =   00000084 G
+    b_movie_scene_show                                          =   00000084 G
+    b_opening_begin                                             =   00000084 G
+    b_opening_tick                                              =   00000084 G
+    b_pan_row                                                   =   00000084 
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        3   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_132                                  size      472   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

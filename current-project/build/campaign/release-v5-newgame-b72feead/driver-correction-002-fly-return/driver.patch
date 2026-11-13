@@ -1,0 +1,20 @@
+--- prefix-launch/campaign_runner.py
++++ corrected/campaign_runner.py
+@@ -1053,7 +1053,16 @@
+   if stage==2:
+    self.force_fight.add(60);self.dungeon_multi_walk((27,0x59,1));assert 14 in self.items()and self.byte('game_events',self.event_objects+203)==255
+    self.equip(14,0);assert self.byte('game_rpg',10)==14;task['laconia_sword']=stage=3;self.checkpoint('103-laconia-sword-earned')
+-  self.use(38);self.drain((1,));self.field_spell(0,1);assert self.map()==4;self.rest()
++  if self.byte('game_dungeon',264):self.use(38);self.drain((1,))
++  if self.map()!=4:
++   if self.byte('game_rpg')&1 and self.byte('game_rpg',2)>=8:
++    self.field_spell(0,1);assert self.map()==4
++   else:
++    assert self.map()==0
++    self.record('source_return_without_fly',phase='laconia_sword',reason='Actual remaining MP cannot pay original Fly8. Return by original shore boarding, Hovercraft sea crossing and Camineet entrance.')
++    self.avoid_combat=True
++    self.hover_to([(82,44),(83,44),(82,45),(83,45)],'Earned Laconia Sword return to Camineet without Fly')
++  assert self.map()==4;self.rest()
+   self.report['milestones'].append('Original Palma23/D7→27/5A RedDragon60 dungeon, actual fixed LaconiaSword14 rewardC6CB and Alis equipment');self.checkpoint('104-laconia-sword-camineet')
+  def silver_fang(self):
+   self.mp_reserve=8;task=self.report.setdefault('campaign_tasks',{});stage=task.get('silver_fang',0)

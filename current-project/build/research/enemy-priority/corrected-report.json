@@ -1,0 +1,4232 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "status": "corrected composer source-index and native flash-class checks passed",
+  "source_index_checks": 379674,
+  "native_flash_class_checks": 1969,
+  "unique_equal_Y_nonempty_actor_pairs": 130,
+  "affected_enemies": [
+    8,
+    12,
+    15,
+    21,
+    24,
+    27,
+    30,
+    34,
+    35,
+    40,
+    42,
+    43,
+    50,
+    53,
+    55,
+    57,
+    63,
+    64,
+    65,
+    66,
+    67,
+    72
+  ],
+  "ordinary_affected_enemies": [
+    8,
+    12,
+    15,
+    21,
+    24,
+    27,
+    30,
+    34,
+    35,
+    40,
+    42,
+    43,
+    50,
+    53,
+    55,
+    57,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "affected_initial_enemies": [
+    8,
+    12,
+    15,
+    30,
+    55,
+    57,
+    63,
+    64,
+    65
+  ],
+  "source_index_difference_pixels": 4444,
+  "source_RGB_difference_pixels": 4200,
+  "source_flash_class_difference_pixels": 1663,
+  "retained_flash_class_difference_pixels": 662,
+  "retained_difference_pixels": 1617,
+  "exact_secondary_RGB_pixels_in_generated_art": 101,
+  "reference": "Original Z80 576A sorter and5853 emitter execute with frozen mode16 actors. Every SAT equals actor4 records followed by actor5. Independent first-opaque rasterizer reads source4bpp patterns, raw sprite lists and palettes. No generic composer is the reference.",
+  "limits": [
+    "Generated binary art decoded directly; this audit does not execute the native ROM PPU.",
+    "Only equal-Y actor4/5 priority investigated; source8-sprites-per-line clipping is not reproduced.",
+    "Original pool/floor-table witnesses establish source data reachability, not a controller route for every enemy.",
+    "Boss extractor was already locally corrected before the shared change. Native RGB may still equal the secondary pixel when both are approximated to the same available GBC color."
+  ],
+  "cases": [
+    {
+      "enemy": 8,
+      "name": "N.FARMER",
+      "frame": 153,
+      "y": 79,
+      "secondary_frame": 150,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 39,
+      "different_source_indices": 33,
+      "different_source_RGB": 33,
+      "different_flash_class": 25,
+      "retained_flash_class_difference": 10,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "08-00",
+          "retained_wrong_RGB_pixels": 1
+        },
+        {
+          "group": "battle-animation",
+          "record": "08-153-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        55
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "4d80c816df542ea15c7141b4b2b67a4061ae7c4e4064098abc9cb7365115bd6d"
+    },
+    {
+      "enemy": 8,
+      "name": "N.FARMER",
+      "frame": 154,
+      "y": 79,
+      "secondary_frame": 150,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 11,
+      "different_source_indices": 8,
+      "different_source_RGB": 8,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 2,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "08-154-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        55
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "548690a8c6f6dfc2c4f84e96672078e45c6acb3db6b7870e12351e9a20a6ddbe"
+    },
+    {
+      "enemy": 8,
+      "name": "N.FARMER",
+      "frame": 155,
+      "y": 79,
+      "secondary_frame": 150,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 27,
+      "different_source_indices": 21,
+      "different_source_RGB": 21,
+      "different_flash_class": 16,
+      "retained_flash_class_difference": 5,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "08-155-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        55
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "ee579ad904c60df1e953ee8bf5ff2bffce8bbe86ccf35ca2884dc9ec3bee34c3"
+    },
+    {
+      "enemy": 8,
+      "name": "N.FARMER",
+      "frame": 156,
+      "y": 79,
+      "secondary_frame": 150,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "08-156-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        55
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "048ea808ccd1dad9818aa4acf6e69bf92d4695e7f9ce0107408a5bc404fed3c1"
+    },
+    {
+      "enemy": 12,
+      "name": "E.FARMER",
+      "frame": 153,
+      "y": 79,
+      "secondary_frame": 152,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 39,
+      "different_source_indices": 33,
+      "different_source_RGB": 33,
+      "different_flash_class": 25,
+      "retained_flash_class_difference": 10,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "12-00",
+          "retained_wrong_RGB_pixels": 1
+        },
+        {
+          "group": "battle-animation",
+          "record": "12-153-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        50,
+        75
+      ],
+      "original_dungeon_floor_witnesses": [
+        28,
+        29,
+        30,
+        36,
+        39
+      ],
+      "source_SAT_sha256": "293c23262e6747a89502d46df1488c29729f516ea83398d5258dbaba3ca8bc1b"
+    },
+    {
+      "enemy": 12,
+      "name": "E.FARMER",
+      "frame": 154,
+      "y": 79,
+      "secondary_frame": 152,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 11,
+      "different_source_indices": 8,
+      "different_source_RGB": 8,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 2,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "12-154-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        50,
+        75
+      ],
+      "original_dungeon_floor_witnesses": [
+        28,
+        29,
+        30,
+        36,
+        39
+      ],
+      "source_SAT_sha256": "276ecae4e3dfe78951a354bba525ecff96b390ee031b7e31a376a69de3a95d7e"
+    },
+    {
+      "enemy": 12,
+      "name": "E.FARMER",
+      "frame": 155,
+      "y": 79,
+      "secondary_frame": 152,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 27,
+      "different_source_indices": 21,
+      "different_source_RGB": 21,
+      "different_flash_class": 16,
+      "retained_flash_class_difference": 5,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "12-155-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        50,
+        75
+      ],
+      "original_dungeon_floor_witnesses": [
+        28,
+        29,
+        30,
+        36,
+        39
+      ],
+      "source_SAT_sha256": "9aaefd9a9c0fcef8a087ff46f1da8b04033cdced791acf73ead1ffa47bd6c7f0"
+    },
+    {
+      "enemy": 12,
+      "name": "E.FARMER",
+      "frame": 156,
+      "y": 79,
+      "secondary_frame": 152,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "12-156-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        47,
+        50,
+        75
+      ],
+      "original_dungeon_floor_witnesses": [
+        28,
+        29,
+        30,
+        36,
+        39
+      ],
+      "source_SAT_sha256": "e8896a4bde39cc829773cb25deba0a4001c32edd69ff1689bdbd0466162e5731"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 157,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 23,
+      "different_source_indices": 17,
+      "different_source_RGB": 17,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "15-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "15-157-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "a90b64432a1ce00b5c1c34c06e4ce909d97b152257e6b2c22d9fd2d5bff3b2b8"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 158,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 14,
+      "different_source_indices": 9,
+      "different_source_RGB": 9,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "15-158-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "4e6fc80d10e3442949196b07bf025155d8930d0d5d538f651e1639c8d889db87"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 159,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "15-159-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "52d2e043a51d7c0069d2fdd4d2d036e2204c48e6a2eb3e6906ecdf9ae3dd3e18"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 160,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 9,
+      "different_source_indices": 9,
+      "different_source_RGB": 9,
+      "different_flash_class": 6,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "15-160-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "245f9e9d7315a001d72fc1d48e53316ed458968e221c467e4e721d7d35597f94"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 161,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 62,
+      "different_source_indices": 62,
+      "different_source_RGB": 62,
+      "different_flash_class": 18,
+      "retained_flash_class_difference": 7,
+      "retained_native_coordinates": 23,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "15-161-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "3ca0a7b5d26fb06d5e24834408a921cc822534029fb0fc68945f9d7e205cf8b6"
+    },
+    {
+      "enemy": 15,
+      "name": "BARBRIAN",
+      "frame": 162,
+      "y": 79,
+      "secondary_frame": 151,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 18,
+      "different_source_indices": 18,
+      "different_source_RGB": 18,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "15-162-00",
+          "retained_wrong_RGB_pixels": 3
+        }
+      ],
+      "original_encounter_pools": [
+        48,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "f67785d22d25bac354a36adb11fab648343f705c2dc6d2e41756af737eabe700"
+    },
+    {
+      "enemy": 21,
+      "name": "EVILDEAD",
+      "frame": 199,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 30,
+      "different_source_indices": 30,
+      "different_source_RGB": 30,
+      "different_flash_class": 15,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "21-199-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        3,
+        4,
+        6,
+        8,
+        19,
+        22,
+        31,
+        77,
+        92
+      ],
+      "original_dungeon_floor_witnesses": [
+        16,
+        17,
+        18,
+        19,
+        22,
+        23
+      ],
+      "source_SAT_sha256": "5c170bf3bb6d77238858e6b3ef63a240f59894f06929b548e62457284846b944"
+    },
+    {
+      "enemy": 21,
+      "name": "EVILDEAD",
+      "frame": 200,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 98,
+      "different_source_indices": 98,
+      "different_source_RGB": 98,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 21,
+      "retained_native_coordinates": 37,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "21-200-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        3,
+        4,
+        6,
+        8,
+        19,
+        22,
+        31,
+        77,
+        92
+      ],
+      "original_dungeon_floor_witnesses": [
+        16,
+        17,
+        18,
+        19,
+        22,
+        23
+      ],
+      "source_SAT_sha256": "c4484407fa114a647a1dba84fbb12673432835e709ef6e66b6da7791473517db"
+    },
+    {
+      "enemy": 21,
+      "name": "EVILDEAD",
+      "frame": 201,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 99,
+      "different_source_indices": 99,
+      "different_source_RGB": 99,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 17,
+      "retained_native_coordinates": 35,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "21-201-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        3,
+        4,
+        6,
+        8,
+        19,
+        22,
+        31,
+        77,
+        92
+      ],
+      "original_dungeon_floor_witnesses": [
+        16,
+        17,
+        18,
+        19,
+        22,
+        23
+      ],
+      "source_SAT_sha256": "b00f8cb752c5fd00a969a79697db524306e3e0c6c71f761dca45d81d1b9b72a8"
+    },
+    {
+      "enemy": 21,
+      "name": "EVILDEAD",
+      "frame": 202,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 49,
+      "different_source_indices": 49,
+      "different_source_RGB": 49,
+      "different_flash_class": 29,
+      "retained_flash_class_difference": 12,
+      "retained_native_coordinates": 20,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "21-202-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        3,
+        4,
+        6,
+        8,
+        19,
+        22,
+        31,
+        77,
+        92
+      ],
+      "original_dungeon_floor_witnesses": [
+        16,
+        17,
+        18,
+        19,
+        22,
+        23
+      ],
+      "source_SAT_sha256": "6e51efe30bebfc9020f516bf988552df5f2fbde7d676ca97b8e2f9578d6d6d42"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 74,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 8,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "24-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "24-074-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "c0ff5641fab7918ade94c3b3d6257a1bb3a1ac11cb33a45da1498bf1d25ea5e2"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 75,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "24-075-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "92cfa28b369780027b23a26c389ae77acb0d74c5982593755ba1f267cf4b5280"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 76,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "24-076-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "8686a58a47ee0c8daed9c03f127b018eb9ae06b77b2cfb0e3c9b87bc0e9a440e"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 77,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "24-077-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "8577308bf4ec94f51b88d464d3989af6a35e51c35a39e8e7ee2e9410f7f57697"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 78,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 145,
+      "different_source_indices": 126,
+      "different_source_RGB": 126,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 48,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "24-078-00",
+          "retained_wrong_RGB_pixels": 7
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "d51dd613214af70d0b686cfe71284e0febf455f30f9429b583cca2f7825a8259"
+    },
+    {
+      "enemy": 24,
+      "name": "SKELETON",
+      "frame": 79,
+      "y": 47,
+      "secondary_frame": 71,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 122,
+      "different_source_indices": 107,
+      "different_source_RGB": 107,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 42,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "24-079-00",
+          "retained_wrong_RGB_pixels": 8
+        }
+      ],
+      "original_encounter_pools": [
+        9,
+        20,
+        25,
+        77,
+        82
+      ],
+      "original_dungeon_floor_witnesses": [
+        22,
+        23,
+        34,
+        43
+      ],
+      "source_SAT_sha256": "5cd69244546e4327d56ec3b3e14ad6f8500396ef26def2abb7fb15a88f5a2591"
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "frame": 64,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "27-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "27-064-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        58,
+        59,
+        60
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "e007637a01a17a91273df331a033b41315fbb7f75af4a24fa2fe38f7a799b68a"
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "frame": 65,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "27-065-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        58,
+        59,
+        60
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "3c2e6c3cc0a13d73f76ea1ea6b96c2d54adc71cc66fa0cb591f606a2ec758280"
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "frame": 66,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "27-066-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        58,
+        59,
+        60
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "65ea467e9448c409e78408a3eb58f2ed043e4ebca3b4f463a7f1c79c26229f54"
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "frame": 67,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "27-067-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        58,
+        59,
+        60
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "186aae34b5265283cbb6c0117313c66449d683591682dc4b21c7910438089c51"
+    },
+    {
+      "enemy": 27,
+      "name": "DEZORIAN",
+      "frame": 68,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 41,
+      "different_source_indices": 39,
+      "different_source_RGB": 39,
+      "different_flash_class": 10,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "27-068-00",
+          "retained_wrong_RGB_pixels": 6
+        }
+      ],
+      "original_encounter_pools": [
+        58,
+        59,
+        60
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "ce1899076595ea2cd04df0a02a887b643f22a7b3666d5d826bf82de5d5f4d730"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 22,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 48,
+      "different_source_indices": 40,
+      "different_source_RGB": 40,
+      "different_flash_class": 29,
+      "retained_flash_class_difference": 13,
+      "retained_native_coordinates": 16,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "30-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "30-022-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "ca13667ea05a5ddafb05db0697b4bb5384c67d39d60b005eadda63e99df30276"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 23,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 26,
+      "different_source_indices": 10,
+      "different_source_RGB": 10,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "30-023-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "2a0faaddd6e533a5d5c54241e0029b5a106fe6eebcbae0a9a7ac3745b9e3b856"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 24,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "30-024-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "6850a63dcf06cb7a6ecb5998f3c5dc1c017317088a4ad906942a0439afe25000"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 25,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 51,
+      "different_source_indices": 39,
+      "different_source_RGB": 39,
+      "different_flash_class": 22,
+      "retained_flash_class_difference": 9,
+      "retained_native_coordinates": 14,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "30-025-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "27e88bc0e93e93c86e9587e58b4a2a5fb0abb9622fcba4535207e23d000ea275"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 26,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 38,
+      "different_source_indices": 10,
+      "different_source_RGB": 10,
+      "different_flash_class": 9,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "30-026-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "41ea4b00a181d52c516376a2ebac4248826610ab8d9ba919aa75d0aa8f8fa853"
+    },
+    {
+      "enemy": 30,
+      "name": "ELEPHANT",
+      "frame": 27,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 79,
+      "different_source_indices": 55,
+      "different_source_RGB": 55,
+      "different_flash_class": 43,
+      "retained_flash_class_difference": 18,
+      "retained_native_coordinates": 23,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "30-027-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        8
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "eaceb185536f3ad986122284f966416cdc18c8ae7d8bbcf96f11d48764e59605"
+    },
+    {
+      "enemy": 34,
+      "name": "WIGHT",
+      "frame": 199,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 30,
+      "different_source_indices": 30,
+      "different_source_RGB": 30,
+      "different_flash_class": 15,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "34-199-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        43,
+        44,
+        45,
+        79
+      ],
+      "original_dungeon_floor_witnesses": [
+        35,
+        44,
+        45,
+        49
+      ],
+      "source_SAT_sha256": "5c170bf3bb6d77238858e6b3ef63a240f59894f06929b548e62457284846b944"
+    },
+    {
+      "enemy": 34,
+      "name": "WIGHT",
+      "frame": 200,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 98,
+      "different_source_indices": 98,
+      "different_source_RGB": 98,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 21,
+      "retained_native_coordinates": 37,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "34-200-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        43,
+        44,
+        45,
+        79
+      ],
+      "original_dungeon_floor_witnesses": [
+        35,
+        44,
+        45,
+        49
+      ],
+      "source_SAT_sha256": "c4484407fa114a647a1dba84fbb12673432835e709ef6e66b6da7791473517db"
+    },
+    {
+      "enemy": 34,
+      "name": "WIGHT",
+      "frame": 201,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 99,
+      "different_source_indices": 99,
+      "different_source_RGB": 99,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 17,
+      "retained_native_coordinates": 35,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "34-201-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        43,
+        44,
+        45,
+        79
+      ],
+      "original_dungeon_floor_witnesses": [
+        35,
+        44,
+        45,
+        49
+      ],
+      "source_SAT_sha256": "b00f8cb752c5fd00a969a79697db524306e3e0c6c71f761dca45d81d1b9b72a8"
+    },
+    {
+      "enemy": 34,
+      "name": "WIGHT",
+      "frame": 202,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 49,
+      "different_source_indices": 49,
+      "different_source_RGB": 49,
+      "different_flash_class": 29,
+      "retained_flash_class_difference": 12,
+      "retained_native_coordinates": 20,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "34-202-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        43,
+        44,
+        45,
+        79
+      ],
+      "original_dungeon_floor_witnesses": [
+        35,
+        44,
+        45,
+        49
+      ],
+      "source_SAT_sha256": "6e51efe30bebfc9020f516bf988552df5f2fbde7d676ca97b8e2f9578d6d6d42"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 74,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 8,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "35-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "35-074-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "1c2f54c038c48982d8d70ab5d4c5436881821255db4cd35b622e733a8443f92e"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 75,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "35-075-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "145a70c1842a7127d893edecd61dbc510026a8ddb1b84cfb792704ab547f9f0b"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 76,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "35-076-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "7ea0088edfd7fb20056294d50a1fa361f2091b45ebac890e961258f022753bd4"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 77,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "35-077-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "f6f9e05823502730503536ed3069a20ca3444c83538780fa91ada2ba49a5bb06"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 78,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 145,
+      "different_source_indices": 124,
+      "different_source_RGB": 90,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 34,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "35-078-00",
+          "retained_wrong_RGB_pixels": 6
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "bedcc7fa81b0514e6fdfd8d5c60b8951db9ff58f3aaa2e131dea808ee0fadcbf"
+    },
+    {
+      "enemy": 35,
+      "name": "SKULL-EN",
+      "frame": 79,
+      "y": 47,
+      "secondary_frame": 72,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 122,
+      "different_source_indices": 107,
+      "different_source_RGB": 84,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 33,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "35-079-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        13,
+        22,
+        26,
+        50
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "cc2fdcefa499289027b88bcaaabbfae3983c6297bc99c74d17732e9885b6cbb3"
+    },
+    {
+      "enemy": 40,
+      "name": "LICH",
+      "frame": 199,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 30,
+      "different_source_indices": 30,
+      "different_source_RGB": 30,
+      "different_flash_class": 15,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 12,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "40-199-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        63,
+        70,
+        78
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "5c170bf3bb6d77238858e6b3ef63a240f59894f06929b548e62457284846b944"
+    },
+    {
+      "enemy": 40,
+      "name": "LICH",
+      "frame": 200,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 98,
+      "different_source_indices": 98,
+      "different_source_RGB": 98,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 21,
+      "retained_native_coordinates": 37,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "40-200-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        63,
+        70,
+        78
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "c4484407fa114a647a1dba84fbb12673432835e709ef6e66b6da7791473517db"
+    },
+    {
+      "enemy": 40,
+      "name": "LICH",
+      "frame": 201,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 99,
+      "different_source_indices": 99,
+      "different_source_RGB": 99,
+      "different_flash_class": 51,
+      "retained_flash_class_difference": 17,
+      "retained_native_coordinates": 35,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "40-201-00",
+          "retained_wrong_RGB_pixels": 7
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        63,
+        70,
+        78
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "b00f8cb752c5fd00a969a79697db524306e3e0c6c71f761dca45d81d1b9b72a8"
+    },
+    {
+      "enemy": 40,
+      "name": "LICH",
+      "frame": 202,
+      "y": 39,
+      "secondary_frame": 198,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 49,
+      "different_source_indices": 49,
+      "different_source_RGB": 49,
+      "different_flash_class": 29,
+      "retained_flash_class_difference": 12,
+      "retained_native_coordinates": 20,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "40-202-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        63,
+        70,
+        78
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "6e51efe30bebfc9020f516bf988552df5f2fbde7d676ca97b8e2f9578d6d6d42"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 74,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 8,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "42-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "42-074-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "16fb4f482ce67280eadc21ab67ce0be1456cdb1ba5ed779bae832b2812760022"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 75,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "42-075-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "b2954a645d61fb9fe42e8cdea3d67e430eb5ca3df3e0eb1027e9bcbc3350899d"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 76,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "42-076-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "d8768a192fee64e341caa77e42eccced283d1119be927b1837d8a433080210a1"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 77,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "42-077-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "32794f7f3e55ce5a870568df31864bd1f7c5df070f6148531f25ea1233676263"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 78,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 145,
+      "different_source_indices": 126,
+      "different_source_RGB": 97,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 38,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "42-078-00",
+          "retained_wrong_RGB_pixels": 5
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "d8b31ad4c66b64197bc21225d5b28b190e2fe2e940dd7a0ad0a349b6489b5059"
+    },
+    {
+      "enemy": 42,
+      "name": "STALKER",
+      "frame": 79,
+      "y": 47,
+      "secondary_frame": 73,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 122,
+      "different_source_indices": 107,
+      "different_source_RGB": 76,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 33,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "42-079-00",
+          "retained_wrong_RGB_pixels": 3
+        }
+      ],
+      "original_encounter_pools": [
+        61,
+        62,
+        67,
+        70,
+        78,
+        83,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        6,
+        10,
+        27,
+        51,
+        52,
+        54,
+        58
+      ],
+      "source_SAT_sha256": "91fc65d0784e76486efa3162f249bbec540cb53d5b7c20559fb638ed8e006e6d"
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "frame": 64,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "43-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "43-064-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        64,
+        68,
+        76
+      ],
+      "original_dungeon_floor_witnesses": [
+        40
+      ],
+      "source_SAT_sha256": "e007637a01a17a91273df331a033b41315fbb7f75af4a24fa2fe38f7a799b68a"
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "frame": 65,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "43-065-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        64,
+        68,
+        76
+      ],
+      "original_dungeon_floor_witnesses": [
+        40
+      ],
+      "source_SAT_sha256": "3c2e6c3cc0a13d73f76ea1ea6b96c2d54adc71cc66fa0cb591f606a2ec758280"
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "frame": 66,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "43-066-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        64,
+        68,
+        76
+      ],
+      "original_dungeon_floor_witnesses": [
+        40
+      ],
+      "source_SAT_sha256": "65ea467e9448c409e78408a3eb58f2ed043e4ebca3b4f463a7f1c79c26229f54"
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "frame": 67,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 2,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "43-067-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        64,
+        68,
+        76
+      ],
+      "original_dungeon_floor_witnesses": [
+        40
+      ],
+      "source_SAT_sha256": "186aae34b5265283cbb6c0117313c66449d683591682dc4b21c7910438089c51"
+    },
+    {
+      "enemy": 43,
+      "name": "EVILHEAD",
+      "frame": 68,
+      "y": 55,
+      "secondary_frame": 63,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 41,
+      "different_source_indices": 39,
+      "different_source_RGB": 27,
+      "different_flash_class": 10,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "43-068-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        64,
+        68,
+        76
+      ],
+      "original_dungeon_floor_witnesses": [
+        40
+      ],
+      "source_SAT_sha256": "ce1899076595ea2cd04df0a02a887b643f22a7b3666d5d826bf82de5d5f4d730"
+    },
+    {
+      "enemy": 50,
+      "name": "GOLEM",
+      "frame": 187,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "50-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "50-187-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        26,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "49880342828e471c6ad38f9d71cc74ea62b6fecd92590a491b1c8ff12f6268fb"
+    },
+    {
+      "enemy": 50,
+      "name": "GOLEM",
+      "frame": 188,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "50-188-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        26,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "16b3ae97b7836ce30d1afecee64b2954943c688a56438dbe7998750024fd1439"
+    },
+    {
+      "enemy": 50,
+      "name": "GOLEM",
+      "frame": 189,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 1,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "50-189-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        26,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "7893d1a4bf7a3b43f655e083481f2e60d86e73fbd66cb742ac1425d0d1f27676"
+    },
+    {
+      "enemy": 50,
+      "name": "GOLEM",
+      "frame": 190,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 69,
+      "different_source_indices": 59,
+      "different_source_RGB": 59,
+      "different_flash_class": 21,
+      "retained_flash_class_difference": 8,
+      "retained_native_coordinates": 22,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "50-190-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        26,
+        54
+      ],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "5eab6ff3f4f9ea9a49092aae6a0085591443dc626856b7d22e287623db22d075"
+    },
+    {
+      "enemy": 53,
+      "name": "GIANT",
+      "frame": 187,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "53-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "53-187-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        15,
+        88
+      ],
+      "original_dungeon_floor_witnesses": [
+        32,
+        57
+      ],
+      "source_SAT_sha256": "49880342828e471c6ad38f9d71cc74ea62b6fecd92590a491b1c8ff12f6268fb"
+    },
+    {
+      "enemy": 53,
+      "name": "GIANT",
+      "frame": 188,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "53-188-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        15,
+        88
+      ],
+      "original_dungeon_floor_witnesses": [
+        32,
+        57
+      ],
+      "source_SAT_sha256": "16b3ae97b7836ce30d1afecee64b2954943c688a56438dbe7998750024fd1439"
+    },
+    {
+      "enemy": 53,
+      "name": "GIANT",
+      "frame": 189,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 1,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "53-189-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        15,
+        88
+      ],
+      "original_dungeon_floor_witnesses": [
+        32,
+        57
+      ],
+      "source_SAT_sha256": "7893d1a4bf7a3b43f655e083481f2e60d86e73fbd66cb742ac1425d0d1f27676"
+    },
+    {
+      "enemy": 53,
+      "name": "GIANT",
+      "frame": 190,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 69,
+      "different_source_indices": 59,
+      "different_source_RGB": 59,
+      "different_flash_class": 21,
+      "retained_flash_class_difference": 8,
+      "retained_native_coordinates": 22,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "53-190-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        10,
+        15,
+        88
+      ],
+      "original_dungeon_floor_witnesses": [
+        32,
+        57
+      ],
+      "source_SAT_sha256": "5eab6ff3f4f9ea9a49092aae6a0085591443dc626856b7d22e287623db22d075"
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "frame": 181,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 139,
+      "different_source_indices": 133,
+      "different_source_RGB": 133,
+      "different_flash_class": 49,
+      "retained_flash_class_difference": 20,
+      "retained_native_coordinates": 54,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "55-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "55-181-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        45,
+        85
+      ],
+      "original_dungeon_floor_witnesses": [
+        7,
+        13,
+        53
+      ],
+      "source_SAT_sha256": "5ad2d19453b8e7232fc8bd17b809be8ee97666d1dd933f5977cf31e1c8269d03"
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "frame": 182,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 49,
+      "different_source_indices": 46,
+      "different_source_RGB": 46,
+      "different_flash_class": 16,
+      "retained_flash_class_difference": 10,
+      "retained_native_coordinates": 19,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "55-182-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        45,
+        85
+      ],
+      "original_dungeon_floor_witnesses": [
+        7,
+        13,
+        53
+      ],
+      "source_SAT_sha256": "c360397cd9636cad999465cef9b85fd7cb8783a55a219e572fe2fda0eeb721cf"
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "frame": 183,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 26,
+      "different_source_indices": 24,
+      "different_source_RGB": 24,
+      "different_flash_class": 15,
+      "retained_flash_class_difference": 5,
+      "retained_native_coordinates": 9,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "55-183-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        45,
+        85
+      ],
+      "original_dungeon_floor_witnesses": [
+        7,
+        13,
+        53
+      ],
+      "source_SAT_sha256": "88ca5a37f63d41a02250e3d34b67fd66a279b03faddee2a4146e8db0a9b30785"
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "frame": 184,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 13,
+      "different_source_indices": 13,
+      "different_source_RGB": 13,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 6,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "55-184-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        45,
+        85
+      ],
+      "original_dungeon_floor_witnesses": [
+        7,
+        13,
+        53
+      ],
+      "source_SAT_sha256": "725ebab00ab3a8814570b0aba4aca079a0808c120c085191fea70a91b04f4842"
+    },
+    {
+      "enemy": 55,
+      "name": "REAPER",
+      "frame": 185,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 75,
+      "different_source_indices": 69,
+      "different_source_RGB": 69,
+      "different_flash_class": 41,
+      "retained_flash_class_difference": 20,
+      "retained_native_coordinates": 28,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "55-185-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        45,
+        85
+      ],
+      "original_dungeon_floor_witnesses": [
+        7,
+        13,
+        53
+      ],
+      "source_SAT_sha256": "616ffca15db325bf2f89b7363611ac5635dbc70d337e850dd066d6710d721e52"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 173,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "initial",
+        "magic",
+        "physical"
+      ],
+      "opaque_overlap": 27,
+      "different_source_indices": 20,
+      "different_source_RGB": 20,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "57-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "57-173-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "570050390cd75e60d108f4627a3afab4089d5702986381dc6fcf5cd606f0ace9"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 174,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "magic"
+      ],
+      "opaque_overlap": 45,
+      "different_source_indices": 23,
+      "different_source_RGB": 23,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 10,
+      "generated_art": [
+        {
+          "group": "enemy-magic",
+          "record": "pose-57-174-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "f077265dcd6c88559b321f0355053342b766e28081943c1ce14481bd3ae17ffa"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 175,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "magic"
+      ],
+      "opaque_overlap": 22,
+      "different_source_indices": 14,
+      "different_source_RGB": 14,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 6,
+      "generated_art": [
+        {
+          "group": "enemy-magic",
+          "record": "pose-57-175-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "fbbee29abc21ce4d70d67e76e762a5fdc6b0b041c3664a435cab7fcbedbdb763"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 176,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 114,
+      "different_source_indices": 82,
+      "different_source_RGB": 82,
+      "different_flash_class": 9,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 28,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "57-176-00",
+          "retained_wrong_RGB_pixels": 4
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "ad761acd9e79fa2a973ba9c10a26951546cfa31426c72fe31c8761498e41c89d"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 177,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 112,
+      "different_source_indices": 87,
+      "different_source_RGB": 87,
+      "different_flash_class": 2,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 35,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "57-177-00",
+          "retained_wrong_RGB_pixels": 5
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "ae856c7a62d2ae63bd845cf5c67417c33be92f3a39869fc361d462c3a019f6dc"
+    },
+    {
+      "enemy": 57,
+      "name": "HORSEMAN",
+      "frame": 178,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 54,
+      "different_source_indices": 44,
+      "different_source_RGB": 44,
+      "different_flash_class": 24,
+      "retained_flash_class_difference": 11,
+      "retained_native_coordinates": 19,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "57-178-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        55,
+        57,
+        63,
+        72,
+        87
+      ],
+      "original_dungeon_floor_witnesses": [
+        8,
+        9,
+        14,
+        55,
+        56
+      ],
+      "source_SAT_sha256": "7e644da70deb01ba960d80f4a32f58e4d261d7d3bf2727729f147ff8365cc248"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 22,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 48,
+      "different_source_indices": 40,
+      "different_source_RGB": 40,
+      "different_flash_class": 29,
+      "retained_flash_class_difference": 13,
+      "retained_native_coordinates": 16,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "63-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "63-022-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "ca13667ea05a5ddafb05db0697b4bb5384c67d39d60b005eadda63e99df30276"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 23,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 26,
+      "different_source_indices": 10,
+      "different_source_RGB": 10,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 2,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "63-023-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "2a0faaddd6e533a5d5c54241e0029b5a106fe6eebcbae0a9a7ac3745b9e3b856"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 24,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "63-024-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "6850a63dcf06cb7a6ecb5998f3c5dc1c017317088a4ad906942a0439afe25000"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 25,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 51,
+      "different_source_indices": 39,
+      "different_source_RGB": 39,
+      "different_flash_class": 22,
+      "retained_flash_class_difference": 9,
+      "retained_native_coordinates": 14,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "63-025-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "27e88bc0e93e93c86e9587e58b4a2a5fb0abb9622fcba4535207e23d000ea275"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 26,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 38,
+      "different_source_indices": 10,
+      "different_source_RGB": 10,
+      "different_flash_class": 9,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 4,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "63-026-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "41ea4b00a181d52c516376a2ebac4248826610ab8d9ba919aa75d0aa8f8fa853"
+    },
+    {
+      "enemy": 63,
+      "name": "MAMMOTH",
+      "frame": 27,
+      "y": 47,
+      "secondary_frame": 21,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 79,
+      "different_source_indices": 55,
+      "different_source_RGB": 55,
+      "different_flash_class": 43,
+      "retained_flash_class_difference": 18,
+      "retained_native_coordinates": 23,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "63-027-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        66,
+        84,
+        89
+      ],
+      "original_dungeon_floor_witnesses": [
+        31,
+        51,
+        52,
+        58
+      ],
+      "source_SAT_sha256": "eaceb185536f3ad986122284f966416cdc18c8ae7d8bbcf96f11d48764e59605"
+    },
+    {
+      "enemy": 64,
+      "name": "CENTAUR",
+      "frame": 173,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 27,
+      "different_source_indices": 20,
+      "different_source_RGB": 20,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 8,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "64-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "64-173-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        11,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "570050390cd75e60d108f4627a3afab4089d5702986381dc6fcf5cd606f0ace9"
+    },
+    {
+      "enemy": 64,
+      "name": "CENTAUR",
+      "frame": 176,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 114,
+      "different_source_indices": 82,
+      "different_source_RGB": 78,
+      "different_flash_class": 9,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 28,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "64-176-00",
+          "retained_wrong_RGB_pixels": 3
+        }
+      ],
+      "original_encounter_pools": [
+        11,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "ad761acd9e79fa2a973ba9c10a26951546cfa31426c72fe31c8761498e41c89d"
+    },
+    {
+      "enemy": 64,
+      "name": "CENTAUR",
+      "frame": 177,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 112,
+      "different_source_indices": 87,
+      "different_source_RGB": 86,
+      "different_flash_class": 2,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 35,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "64-177-00",
+          "retained_wrong_RGB_pixels": 5
+        }
+      ],
+      "original_encounter_pools": [
+        11,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "ae856c7a62d2ae63bd845cf5c67417c33be92f3a39869fc361d462c3a019f6dc"
+    },
+    {
+      "enemy": 64,
+      "name": "CENTAUR",
+      "frame": 178,
+      "y": 39,
+      "secondary_frame": 172,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 54,
+      "different_source_indices": 44,
+      "different_source_RGB": 44,
+      "different_flash_class": 24,
+      "retained_flash_class_difference": 11,
+      "retained_native_coordinates": 19,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "64-178-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        11,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "7e644da70deb01ba960d80f4a32f58e4d261d7d3bf2727729f147ff8365cc248"
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "frame": 181,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "initial",
+        "magic",
+        "physical"
+      ],
+      "opaque_overlap": 139,
+      "different_source_indices": 133,
+      "different_source_RGB": 133,
+      "different_flash_class": 49,
+      "retained_flash_class_difference": 20,
+      "retained_native_coordinates": 54,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "65-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "65-181-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        27,
+        68,
+        69,
+        72,
+        83,
+        94
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        5,
+        6,
+        10,
+        26,
+        27,
+        54
+      ],
+      "source_SAT_sha256": "5ad2d19453b8e7232fc8bd17b809be8ee97666d1dd933f5977cf31e1c8269d03"
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "frame": 182,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 49,
+      "different_source_indices": 46,
+      "different_source_RGB": 46,
+      "different_flash_class": 16,
+      "retained_flash_class_difference": 10,
+      "retained_native_coordinates": 19,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "65-182-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        27,
+        68,
+        69,
+        72,
+        83,
+        94
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        5,
+        6,
+        10,
+        26,
+        27,
+        54
+      ],
+      "source_SAT_sha256": "c360397cd9636cad999465cef9b85fd7cb8783a55a219e572fe2fda0eeb721cf"
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "frame": 183,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 26,
+      "different_source_indices": 24,
+      "different_source_RGB": 24,
+      "different_flash_class": 15,
+      "retained_flash_class_difference": 5,
+      "retained_native_coordinates": 9,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "65-183-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        27,
+        68,
+        69,
+        72,
+        83,
+        94
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        5,
+        6,
+        10,
+        26,
+        27,
+        54
+      ],
+      "source_SAT_sha256": "88ca5a37f63d41a02250e3d34b67fd66a279b03faddee2a4146e8db0a9b30785"
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "frame": 184,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 13,
+      "different_source_indices": 13,
+      "different_source_RGB": 13,
+      "different_flash_class": 8,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 6,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "65-184-00",
+          "retained_wrong_RGB_pixels": 2
+        }
+      ],
+      "original_encounter_pools": [
+        27,
+        68,
+        69,
+        72,
+        83,
+        94
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        5,
+        6,
+        10,
+        26,
+        27,
+        54
+      ],
+      "source_SAT_sha256": "725ebab00ab3a8814570b0aba4aca079a0808c120c085191fea70a91b04f4842"
+    },
+    {
+      "enemy": 65,
+      "name": "MARAUDER",
+      "frame": 185,
+      "y": 39,
+      "secondary_frame": 180,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 75,
+      "different_source_indices": 69,
+      "different_source_RGB": 69,
+      "different_flash_class": 41,
+      "retained_flash_class_difference": 20,
+      "retained_native_coordinates": 28,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "65-185-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        27,
+        68,
+        69,
+        72,
+        83,
+        94
+      ],
+      "original_dungeon_floor_witnesses": [
+        4,
+        5,
+        6,
+        10,
+        26,
+        27,
+        54
+      ],
+      "source_SAT_sha256": "616ffca15db325bf2f89b7363611ac5635dbc70d337e850dd066d6710d721e52"
+    },
+    {
+      "enemy": 66,
+      "name": "TITAN",
+      "frame": 187,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "66-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "66-187-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        28,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "49880342828e471c6ad38f9d71cc74ea62b6fecd92590a491b1c8ff12f6268fb"
+    },
+    {
+      "enemy": 66,
+      "name": "TITAN",
+      "frame": 188,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "66-188-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        28,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "16b3ae97b7836ce30d1afecee64b2954943c688a56438dbe7998750024fd1439"
+    },
+    {
+      "enemy": 66,
+      "name": "TITAN",
+      "frame": 189,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 1,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "66-189-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [
+        28,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "7893d1a4bf7a3b43f655e083481f2e60d86e73fbd66cb742ac1425d0d1f27676"
+    },
+    {
+      "enemy": 66,
+      "name": "TITAN",
+      "frame": 190,
+      "y": 31,
+      "secondary_frame": 186,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 69,
+      "different_source_indices": 59,
+      "different_source_RGB": 59,
+      "different_flash_class": 21,
+      "retained_flash_class_difference": 8,
+      "retained_native_coordinates": 22,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "66-190-00",
+          "retained_wrong_RGB_pixels": 1
+        }
+      ],
+      "original_encounter_pools": [
+        28,
+        84,
+        86
+      ],
+      "original_dungeon_floor_witnesses": [
+        3,
+        11,
+        12,
+        31,
+        46
+      ],
+      "source_SAT_sha256": "5eab6ff3f4f9ea9a49092aae6a0085591443dc626856b7d22e287623db22d075"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 192,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "initial",
+        "physical"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [
+        {
+          "group": "battle-scenes",
+          "record": "67-00",
+          "retained_wrong_RGB_pixels": 0
+        },
+        {
+          "group": "battle-animation",
+          "record": "67-192-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "35af73846c8f85b03b1120f347d0f88b6e0a30e97653cc3fe0444f0821b561b5"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 193,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 1,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "67-193-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "50802d0c7670f79c766e9d11e6167599464a4504a9656728086d8a3c580ebd49"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 194,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 27,
+      "different_source_indices": 27,
+      "different_source_RGB": 27,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 11,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "67-194-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "c83e2a00f8ff50916afee032c0bbe04a965184c00bffc6d45159b3025eb0314d"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 195,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 364,
+      "different_source_indices": 350,
+      "different_source_RGB": 350,
+      "different_flash_class": 157,
+      "retained_flash_class_difference": 64,
+      "retained_native_coordinates": 135,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "67-195-00",
+          "retained_wrong_RGB_pixels": 3
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "719762c6d8426c9bc85d1a1594ec5f1a7ea1719d63aadfe15a01381feef29144"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 196,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 3,
+      "different_source_indices": 3,
+      "different_source_RGB": 3,
+      "different_flash_class": 3,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 1,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "67-196-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "9b62b740550e69b935635ef43dea2e2f2d1b7ad0dcaa0fa4a73a2bf2855ecfeb"
+    },
+    {
+      "enemy": 67,
+      "name": "MEDUSA",
+      "frame": 197,
+      "y": 47,
+      "secondary_frame": 191,
+      "contexts": [
+        "physical"
+      ],
+      "opaque_overlap": 47,
+      "different_source_indices": 47,
+      "different_source_RGB": 47,
+      "different_flash_class": 10,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 17,
+      "generated_art": [
+        {
+          "group": "battle-animation",
+          "record": "67-197-00",
+          "retained_wrong_RGB_pixels": 0
+        }
+      ],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "f1fea97d4fef788d01be329b40d16f8f22d0cf3b25233f6a8250037dad3f4a42"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 16,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 9,
+      "different_source_indices": 9,
+      "different_source_RGB": 9,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 3,
+      "retained_native_coordinates": 4,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "c0f33625f6b70a4d72b8efa024ff6acc28380fc359b80f03480f8f79cc71563e"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 17,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "9f19ce447e0d475c7cfc02df4881cc7434defb9f5f8bd2bdb7309ecd5781bbed"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 18,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "97e668729a06f29df48341d6afa70085d35d87bc23f3a96f06250b5a7af97bc1"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 70,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "c546ea483a22d0d6a7b78885aad0e98413dd13ae6a503d04c5c92d487632564f"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 142,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "a3d3234695de112ddddffe9eb225553209e674a822353e50715891338792c148"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 179,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "f4464b7cb8457d61ba5c247767c4665f4d829f8f2b63fe4c91f005b5d532b62e"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 236,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "eab9d1fe0ecf9eecd2cc206db1f1e67ccfe6be00ee9cd851314333debbb103a0"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 237,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 117,
+      "different_source_indices": 42,
+      "different_source_RGB": 7,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 2,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "7b6212a91f7141b32498e8c42db3c5e624377b985a1d32cf8406034aa0045d05"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 238,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 117,
+      "different_source_indices": 108,
+      "different_source_RGB": 108,
+      "different_flash_class": 86,
+      "retained_flash_class_difference": 31,
+      "retained_native_coordinates": 39,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "b10dd7b99ca3b6dc73710576aad540dfbe5bf4fd59ee1255ad2fb91a484dd640"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 239,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 117,
+      "different_source_indices": 104,
+      "different_source_RGB": 69,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 26,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "8ee3aa3d4a82a192389a9e141d720136896f7c895195809880a2d8677e1863af"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 240,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 117,
+      "different_source_indices": 109,
+      "different_source_RGB": 95,
+      "different_flash_class": 33,
+      "retained_flash_class_difference": 12,
+      "retained_native_coordinates": 36,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "1ebc1b4d09dc3313d467f48269092ba797430b18871cce0ba99c3f590af13252"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 241,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 117,
+      "different_source_indices": 112,
+      "different_source_RGB": 112,
+      "different_flash_class": 81,
+      "retained_flash_class_difference": 31,
+      "retained_native_coordinates": 40,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "3f0f3ab4a7336d0feb1999448626dfa9a9823d5d276653ceb0334786a88c852c"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 242,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 12,
+      "different_source_indices": 12,
+      "different_source_RGB": 12,
+      "different_flash_class": 7,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 3,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "47d2b870158bf6230c4b81535cafdcc95ae00ac18c406eb2d76ec227eb844b29"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 243,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 9,
+      "different_source_indices": 9,
+      "different_source_RGB": 5,
+      "different_flash_class": 4,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 2,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "20e2297ddbdbb13d92c651367eead088ab31bd988d887596a172775d621a4d53"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 244,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "344c9ef8a39bc2a7dcb6e2cc2c6d90a944489caac9b46442ec08763cb5fcfa2e"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 245,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "0d39d66f02083a676e8f7ddd0f10ee7529e41c0034d91b09a858106ee77ee5f2"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 246,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "cb16345bfcef304560bf59366157025a07b6f10884c64ea293678d066a9fbf36"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 247,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 58,
+      "different_source_indices": 53,
+      "different_source_RGB": 49,
+      "different_flash_class": 26,
+      "retained_flash_class_difference": 9,
+      "retained_native_coordinates": 18,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "377d5598716e479b93f94e9338816c0cab75d8a2b621b49b21e32dba62c0bff5"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 248,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 31,
+      "different_source_indices": 31,
+      "different_source_RGB": 13,
+      "different_flash_class": 10,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 5,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "68515937c437eec75bd11ea74e74d85d2f371dc98809a9d81aed67e51e1efe42"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 249,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "a8fcc9dcb6c9536ab24422b6d7a01c3c5723c47df30457f742ad849bb372e1a5"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 250,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 3,
+      "different_source_indices": 3,
+      "different_source_RGB": 3,
+      "different_flash_class": 3,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "644c04598eb2740f650bfd908e210b0c9f2a7d68b4a4d7aaeb8dcd018a1b7026"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 251,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "6671fe30f9b2dd69fc49071d69bea1d4ed704687eef7272c22f87c91e6794da0"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 252,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 1,
+      "different_source_indices": 1,
+      "different_source_RGB": 1,
+      "different_flash_class": 1,
+      "retained_flash_class_difference": 1,
+      "retained_native_coordinates": 1,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "d0e77dc6155ef1e5ab532f7e0365b9d1b07b458fb53ab9bca2f885002388b8eb"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 253,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 5,
+      "different_source_indices": 5,
+      "different_source_RGB": 5,
+      "different_flash_class": 5,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 4,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "9dcfbeaca3ed1d2a19bdd6ed444668a5da9f73cb8610c823350a7ecc78d826ca"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 254,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 0,
+      "different_source_indices": 0,
+      "different_source_RGB": 0,
+      "different_flash_class": 0,
+      "retained_flash_class_difference": 0,
+      "retained_native_coordinates": 0,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "80e25719daf22dbfdad9a5f7c58541b897163fb07e249739f5b40c1360f33410"
+    },
+    {
+      "enemy": 72,
+      "name": "LASSIC",
+      "frame": 255,
+      "y": 255,
+      "secondary_frame": 203,
+      "contexts": [
+        "boss"
+      ],
+      "opaque_overlap": 14,
+      "different_source_indices": 14,
+      "different_source_RGB": 14,
+      "different_flash_class": 6,
+      "retained_flash_class_difference": 4,
+      "retained_native_coordinates": 6,
+      "generated_art": [],
+      "original_encounter_pools": [],
+      "original_dungeon_floor_witnesses": [],
+      "source_SAT_sha256": "323f545308601b7bbbbf1a3134d2249096bd81adcbe0e1c0c469fa430749a0b0"
+    }
+  ]
+}

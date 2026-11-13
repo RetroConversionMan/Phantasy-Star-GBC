@@ -1,0 +1,68 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/dialogue-stream-native/main.c:
+src/dialogue.c:
+src/dialogue_data.c:
+src/dialogue_text_09.c:
+src/dialogue_text_10.c:
+src/bank_io.c:
+src/font.c:
+src/ui.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 262144,
+    "sha256": "082c95598222fd389599d152d37ca0f3caadfb97023473e74734b5a9455e77a3",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "records": 534,
+  "native_glyphs": 27730,
+  "native_glyph_scroll_frames": 34234,
+  "window_cells": 1088712,
+  "maximum_physical_frames_per_tick_command": 4,
+  "free_running_cadence": [
+    {
+      "id": "0x1e2",
+      "segments": [
+        {
+          "logical_stream_steps": 60,
+          "physical_frames": 62,
+          "maximum_steps_in_one_physical_frame": 1
+        },
+        {
+          "logical_stream_steps": 27,
+          "physical_frames": 28,
+          "maximum_steps_in_one_physical_frame": 1
+        }
+      ]
+    },
+    {
+      "id": "0xf49b",
+      "segments": [
+        {
+          "logical_stream_steps": 68,
+          "physical_frames": 71,
+          "maximum_steps_in_one_physical_frame": 1
+        },
+        {
+          "logical_stream_steps": 33,
+          "physical_frames": 37,
+          "maximum_steps_in_one_physical_frame": 1
+        }
+      ]
+    }
+  ],
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "three_line_record_first_line_displayed": true,
+  "limits": [
+    "Isolated UI probe; production input-latch and integrated scene tests are separate",
+    "Original16px glyphs are adapted to native8px font",
+    "Native panel/newline overhead adds measured display frames; no catch-up may skip a glyph"
+  ]
+}

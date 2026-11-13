@@ -1,0 +1,91 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    _audio_clock                                                    ******** GX
+    _audio_command                                                  ******** GX
+    _background_changed                                             ******** GX
+  8 _begin_effect                                                   00000000 R
+    _display_off                                                    ******** GX
+  2 _effect_kind                                                    00000000 R
+    _enter_map_ready                                                ******** GX
+    _facing                                                         ******** GX
+    _game_fade_clock                                                ******** GX
+    _game_field_scene_done                                          ******** GX
+  8 _game_sequence_tick                                             000000FA GR
+    _game_transition_map_music                                      ******** GX
+    _game_transition_vint16                                         ******** GX
+  2 _game_travel                                                    00000005 R
+    _game_vehicle                                                   ******** GX
+    _joypad                                                         ******** GX
+    _menu_screen                                                    ******** GX
+    _notice                                                         ******** GX
+    _party_world_tick                                               ******** GX
+    _presentation_begin                                             ******** GX
+    _presentation_tick                                              ******** GX
+    _scene_fade_begin                                               ******** GX
+    _scene_fade_step                                                ******** GX
+    _screen_state                                                   ******** GX
+    _start_cutscene                                                 ******** GX
+  8 _start_field_scene                                              00000049 GR
+    _start_myau_flight                                              ******** GX
+  8 _start_recruitment                                              00000037 GR
+  8 _start_travel                                                   000000CD GR
+    _travel_begin                                                   ******** GX
+  2 _travel_fade_clock                                              00000002 R
+  2 _travel_fade_step                                               00000003 R
+  2 _travel_keys                                                    00000004 R
+    _travel_present                                                 ******** GX
+    _travel_step                                                    ******** GX
+  2 _travel_tag                                                     00000001 R
+    _world_motion_step                                              ******** GX
+    b_audio_command                                                 ******** GX
+    b_game_field_scene_done                                         ******** GX
+    b_game_sequence_tick                                        =   0000000E G
+    b_game_transition_map_music                                     ******** GX
+    b_game_transition_vint16                                        ******** GX
+    b_menu_screen                                                   ******** GX
+    b_notice                                                        ******** GX
+    b_party_world_tick                                              ******** GX
+    b_presentation_begin                                            ******** GX
+    b_presentation_tick                                             ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_scene_fade_step                                               ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_start_field_scene                                         =   0000000E G
+    b_start_myau_flight                                             ******** GX
+    b_start_recruitment                                         =   0000000E G
+    b_start_travel                                              =   0000000E G
+    b_travel_begin                                                  ******** GX
+    b_travel_present                                                ******** GX
+    b_travel_step                                                   ******** GX
+    b_world_motion_step                                             ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       27   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_14                                   size      2A4   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

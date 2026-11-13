@@ -1,0 +1,2384 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module dungeon_play
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _memset
+                                     11 	.globl b_dungeon_present_scene_fall
+                                     12 	.globl _dungeon_present_scene_fall
+                                     13 	.globl b_dungeon_present_fall
+                                     14 	.globl _dungeon_present_fall
+                                     15 	.globl b_dungeon_present_transition
+                                     16 	.globl _dungeon_present_transition
+                                     17 	.globl b_dungeon_present_door
+                                     18 	.globl _dungeon_present_door
+                                     19 	.globl b_dungeon_present_turn
+                                     20 	.globl _dungeon_present_turn
+                                     21 	.globl b_dungeon_present_sequence
+                                     22 	.globl _dungeon_present_sequence
+                                     23 	.globl b_dungeon_present_frame
+                                     24 	.globl _dungeon_present_frame
+                                     25 	.globl b_dungeon_present_prepare
+                                     26 	.globl _dungeon_present_prepare
+                                     27 	.globl b_rpg_dungeon_encounter
+                                     28 	.globl _rpg_dungeon_encounter
+                                     29 	.globl b_rpg_find_item
+                                     30 	.globl _rpg_find_item
+                                     31 	.globl b_rpg_random
+                                     32 	.globl _rpg_random
+                                     33 	.globl b_dungeon_active_object
+                                     34 	.globl _dungeon_active_object
+                                     35 	.globl b_dungeon_step
+                                     36 	.globl _dungeon_step
+                                     37 	.globl b_dungeon_sample_position
+                                     38 	.globl _dungeon_sample_position
+                                     39 	.globl b_dungeon_sample
+                                     40 	.globl _dungeon_sample
+                                     41 	.globl b_dungeon_refresh_light
+                                     42 	.globl _dungeon_refresh_light
+                                     43 	.globl b_dungeon_load_floor
+                                     44 	.globl _dungeon_load_floor
+                                     45 	.globl b_dungeon_enter
+                                     46 	.globl _dungeon_enter
+                                     47 	.globl b_dplay_mark_object
+                                     48 	.globl _dplay_mark_object
+                                     49 	.globl b_dplay_escape_blocked
+                                     50 	.globl _dplay_escape_blocked
+                                     51 	.globl b_dplay_resume
+                                     52 	.globl _dplay_resume
+                                     53 	.globl b_dplay_enter
+                                     54 	.globl _dplay_enter
+                                     55 	.globl b_dplay_scene_fall
+                                     56 	.globl _dplay_scene_fall
+                                     57 	.globl b_dplay_step
+                                     58 	.globl _dplay_step
+                                     59 	.globl b_dplay_escape
+                                     60 	.globl _dplay_escape
+                                     61 	.globl b_dplay_show_opening
+                                     62 	.globl _dplay_show_opening
+                                     63 ;--------------------------------------------------------
+                                     64 ; special function registers
+                                     65 ;--------------------------------------------------------
+                                     66 	.area _HRAM
+                                     67 ;--------------------------------------------------------
+                                     68 ; ram data
+                                     69 ;--------------------------------------------------------
+                                     70 	.area _DATA
+                                     71 ;--------------------------------------------------------
+                                     72 ; ram data
+                                     73 ;--------------------------------------------------------
+                                     74 	.area _INITIALIZED
+                                     75 ;--------------------------------------------------------
+                                     76 ; absolute external ram data
+                                     77 ;--------------------------------------------------------
+                                     78 	.area _DABS (ABS)
+                                     79 ;--------------------------------------------------------
+                                     80 ; global & static initialisations
+                                     81 ;--------------------------------------------------------
+                                     82 	.area _HOME
+                                     83 	.area _GSINIT
+                                     84 	.area _GSFINAL
+                                     85 	.area _GSINIT
+                                     86 ;--------------------------------------------------------
+                                     87 ; Home
+                                     88 ;--------------------------------------------------------
+                                     89 	.area _HOME
+                                     90 	.area _HOME
+                                     91 ;--------------------------------------------------------
+                                     92 ; code
+                                     93 ;--------------------------------------------------------
+                                     94 	.area _CODE_11
+                                     95 ;src/dungeon_play.c:10: static void queue(DungeonPlay *p,uint8_t position,uint8_t view) RPG_BANKED {
+                                     96 ;	---------------------------------
+                                     97 ; Function queue
+                                     98 ; ---------------------------------
+                         0000000B    99 	b_queue	= 11
+    00000000                        100 _queue:
+                                    101 ;src/dungeon_play.c:11: p->positions[p->check_count]=position;p->views[p->check_count++]=view;
+    00000000 F8 06            [12]  102 	ldhl	sp,	#6
+    00000002 2A               [ 8]  103 	ld	a, (hl+)
+    00000003 5F               [ 4]  104 	ld	e, a
+    00000004 56               [ 8]  105 	ld	d, (hl)
+    00000005 21 0B 01         [12]  106 	ld	hl, #0x010b
+    00000008 19               [ 8]  107 	add	hl, de
+    00000009 7B               [ 4]  108 	ld	a, e
+    0000000A C6 09            [ 8]  109 	add	a, #0x09
+    0000000C 4F               [ 4]  110 	ld	c, a
+    0000000D 7A               [ 4]  111 	ld	a, d
+    0000000E CE 01            [ 8]  112 	adc	a, #0x01
+    00000010 47               [ 4]  113 	ld	b, a
+    00000011 0A               [ 8]  114 	ld	a, (bc)
+    00000012 85               [ 4]  115 	add	a, l
+    00000013 6F               [ 4]  116 	ld	l, a
+    00000014 3E 00            [ 8]  117 	ld	a, #0x00
+    00000016 8C               [ 4]  118 	adc	a, h
+    00000017 67               [ 4]  119 	ld	h, a
+    00000018 E5               [16]  120 	push	hl
+    00000019 F8 0A            [12]  121 	ldhl	sp,	#10
+    0000001B 7E               [ 8]  122 	ld	a, (hl)
+    0000001C E1               [12]  123 	pop	hl
+    0000001D 77               [ 8]  124 	ld	(hl), a
+    0000001E 21 0D 01         [12]  125 	ld	hl, #0x010d
+    00000021 19               [ 8]  126 	add	hl, de
+    00000022 0A               [ 8]  127 	ld	a, (bc)
+    00000023 5F               [ 4]  128 	ld	e, a
+    00000024 3C               [ 4]  129 	inc	a
+    00000025 02               [ 8]  130 	ld	(bc), a
+    00000026 16 00            [ 8]  131 	ld	d, #0x00
+    00000028 19               [ 8]  132 	add	hl, de
+    00000029 E5               [16]  133 	push	hl
+    0000002A F8 0B            [12]  134 	ldhl	sp,	#11
+    0000002C 7E               [ 8]  135 	ld	a, (hl)
+    0000002D E1               [12]  136 	pop	hl
+    0000002E 77               [ 8]  137 	ld	(hl), a
+                                    138 ;src/dungeon_play.c:12: }
+    0000002F C9               [16]  139 	ret
+                                    140 ;src/dungeon_play.c:13: void dplay_mark_object(EventState *e,uint16_t address) RPG_BANKED {
+                                    141 ;	---------------------------------
+                                    142 ; Function dplay_mark_object
+                                    143 ; ---------------------------------
+                         0000000B   144 	b_dplay_mark_object	= 11
+    00000030                        145 _dplay_mark_object::
+                                    146 ;src/dungeon_play.c:14: if((address>>8)==0xc5u)e->flags[(uint8_t)address]=255;
+    00000030 F8 09            [12]  147 	ldhl	sp,	#9
+    00000032 7E               [ 8]  148 	ld	a, (hl)
+    00000033 F8 06            [12]  149 	ldhl	sp,	#6
+    00000035 5E               [ 8]  150 	ld	e, (hl)
+    00000036 23               [ 8]  151 	inc	hl
+    00000037 56               [ 8]  152 	ld	d, (hl)
+    00000038 23               [ 8]  153 	inc	hl
+    00000039 4E               [ 8]  154 	ld	c, (hl)
+    0000003A FE C5            [ 8]  155 	cp	a, #0xc5
+    0000003C 20 07            [12]  156 	jr	NZ, 00104$
+    0000003E 69               [ 4]  157 	ld	l, c
+    0000003F 26 00            [ 8]  158 	ld	h, #0x00
+    00000041 19               [ 8]  159 	add	hl, de
+    00000042 36 FF            [12]  160 	ld	(hl), #0xff
+    00000044 C9               [16]  161 	ret
+    00000045                        162 00104$:
+                                    163 ;src/dungeon_play.c:15: else if((address>>8)==0xc6u)e->object_flags[(uint8_t)address]=255;
+    00000045 D6 C6            [ 8]  164 	sub	a, #0xc6
+    00000047 C0               [20]  165 	ret	NZ
+    00000048 21 25 01         [12]  166 	ld	hl, #0x0125
+    0000004B 19               [ 8]  167 	add	hl, de
+    0000004C 59               [ 4]  168 	ld	e, c
+    0000004D 16 00            [ 8]  169 	ld	d, #0x00
+    0000004F 19               [ 8]  170 	add	hl, de
+    00000050 36 FF            [12]  171 	ld	(hl), #0xff
+                                    172 ;src/dungeon_play.c:16: }
+    00000052 C9               [16]  173 	ret
+                                    174 ;src/dungeon_play.c:17: uint8_t dplay_escape_blocked(const DungeonPlay *p) RPG_BANKED {
+                                    175 ;	---------------------------------
+                                    176 ; Function dplay_escape_blocked
+                                    177 ; ---------------------------------
+                         0000000B   178 	b_dplay_escape_blocked	= 11
+    00000053                        179 _dplay_escape_blocked::
+                                    180 ;src/dungeon_play.c:18: return (dungeon_sample(&p->dungeon,11)&7u)&&
+    00000053 F8 06            [12]  181 	ldhl	sp,	#6
+    00000055 2A               [ 8]  182 	ld	a, (hl+)
+    00000056 4F               [ 4]  183 	ld	c, a
+    00000057 46               [ 8]  184 	ld	b, (hl)
+    00000058 C5               [16]  185 	push	bc
+    00000059 3E 0B            [ 8]  186 	ld	a, #0x0b
+    0000005B F5               [16]  187 	push	af
+    0000005C 33               [ 8]  188 	inc	sp
+    0000005D C5               [16]  189 	push	bc
+    0000005E 1Er00            [ 8]  190 	ld	e, #b_dungeon_sample
+    00000060 21r00r00         [12]  191 	ld	hl, #_dungeon_sample
+    00000063 CDr00r00         [24]  192 	call	___sdcc_bcall_ehl
+    00000066 E8 03            [16]  193 	add	sp, #3
+    00000068 C1               [12]  194 	pop	bc
+    00000069 E6 07            [ 8]  195 	and	a, #0x07
+    0000006B 28 28            [12]  196 	jr	Z, 00103$
+                                    197 ;src/dungeon_play.c:19: (dungeon_sample(&p->dungeon,12)&7u)&&(dungeon_sample(&p->dungeon,13)&7u);
+    0000006D C5               [16]  198 	push	bc
+    0000006E 3E 0C            [ 8]  199 	ld	a, #0x0c
+    00000070 F5               [16]  200 	push	af
+    00000071 33               [ 8]  201 	inc	sp
+    00000072 C5               [16]  202 	push	bc
+    00000073 1Er00            [ 8]  203 	ld	e, #b_dungeon_sample
+    00000075 21r00r00         [12]  204 	ld	hl, #_dungeon_sample
+    00000078 CDr00r00         [24]  205 	call	___sdcc_bcall_ehl
+    0000007B E8 03            [16]  206 	add	sp, #3
+    0000007D C1               [12]  207 	pop	bc
+    0000007E E6 07            [ 8]  208 	and	a, #0x07
+    00000080 28 13            [12]  209 	jr	Z, 00103$
+    00000082 3E 0D            [ 8]  210 	ld	a, #0x0d
+    00000084 F5               [16]  211 	push	af
+    00000085 33               [ 8]  212 	inc	sp
+    00000086 C5               [16]  213 	push	bc
+    00000087 1Er00            [ 8]  214 	ld	e, #b_dungeon_sample
+    00000089 21r00r00         [12]  215 	ld	hl, #_dungeon_sample
+    0000008C CDr00r00         [24]  216 	call	___sdcc_bcall_ehl
+    0000008F E8 03            [16]  217 	add	sp, #3
+    00000091 E6 07            [ 8]  218 	and	a, #0x07
+    00000093 20 02            [12]  219 	jr	NZ, 00104$
+    00000095                        220 00103$:
+    00000095 AF               [ 4]  221 	xor	a, a
+    00000096 C9               [16]  222 	ret
+    00000097                        223 00104$:
+    00000097 3E 01            [ 8]  224 	ld	a, #0x01
+                                    225 ;src/dungeon_play.c:20: }
+    00000099 C9               [16]  226 	ret
+                                    227 ;src/dungeon_play.c:21: uint8_t dplay_resume(DungeonPlay *p,RPGState *r,EventState *e) RPG_BANKED {
+                                    228 ;	---------------------------------
+                                    229 ; Function dplay_resume
+                                    230 ; ---------------------------------
+                         0000000B   231 	b_dplay_resume	= 11
+    0000009A                        232 _dplay_resume::
+    0000009A E8 E1            [16]  233 	add	sp, #-31
+                                    234 ;src/dungeon_play.c:23: dungeon_present_prepare(&p->dungeon);
+    0000009C F8 25            [12]  235 	ldhl	sp,	#37
+    0000009E 7E               [ 8]  236 	ld	a, (hl)
+    0000009F F8 09            [12]  237 	ldhl	sp,	#9
+    000000A1 77               [ 8]  238 	ld	(hl), a
+    000000A2 F8 26            [12]  239 	ldhl	sp,	#38
+    000000A4 7E               [ 8]  240 	ld	a, (hl)
+    000000A5 F8 0A            [12]  241 	ldhl	sp,	#10
+    000000A7 32               [ 8]  242 	ld	(hl-), a
+    000000A8 2A               [ 8]  243 	ld	a, (hl+)
+    000000A9 5F               [ 4]  244 	ld	e, a
+    000000AA 56               [ 8]  245 	ld	d, (hl)
+    000000AB D5               [16]  246 	push	de
+    000000AC 1Er00            [ 8]  247 	ld	e, #b_dungeon_present_prepare
+    000000AE 21r00r00         [12]  248 	ld	hl, #_dungeon_present_prepare
+    000000B1 CDr00r00         [24]  249 	call	___sdcc_bcall_ehl
+    000000B4 E1               [12]  250 	pop	hl
+                                    251 ;src/dungeon_play.c:24: memset(&p->action,0,sizeof(p->action));
+    000000B5 F8 25            [12]  252 	ldhl	sp,#37
+    000000B7 2A               [ 8]  253 	ld	a, (hl+)
+    000000B8 5F               [ 4]  254 	ld	e, a
+    000000B9 56               [ 8]  255 	ld	d, (hl)
+    000000BA 21 13 01         [12]  256 	ld	hl, #0x0113
+    000000BD 19               [ 8]  257 	add	hl, de
+    000000BE 4D               [ 4]  258 	ld	c, l
+    000000BF 44               [ 4]  259 	ld	b, h
+    000000C0 11 09 00         [12]  260 	ld	de, #0x0009
+    000000C3 D5               [16]  261 	push	de
+    000000C4 11 00 00         [12]  262 	ld	de, #0x0000
+    000000C7 D5               [16]  263 	push	de
+    000000C8 C5               [16]  264 	push	bc
+    000000C9 CDr00r00         [24]  265 	call	_memset
+    000000CC E8 06            [16]  266 	add	sp, #6
+                                    267 ;src/dungeon_play.c:25: while(p->check_cursor<p->check_count) {
+    000000CE F8 25            [12]  268 	ldhl	sp,#37
+    000000D0 2A               [ 8]  269 	ld	a, (hl+)
+    000000D1 5F               [ 4]  270 	ld	e, a
+    000000D2 56               [ 8]  271 	ld	d, (hl)
+    000000D3 21 0B 01         [12]  272 	ld	hl, #0x010b
+    000000D6 19               [ 8]  273 	add	hl, de
+    000000D7 E5               [16]  274 	push	hl
+    000000D8 7D               [ 4]  275 	ld	a, l
+    000000D9 F8 0D            [12]  276 	ldhl	sp,	#13
+    000000DB 77               [ 8]  277 	ld	(hl), a
+    000000DC E1               [12]  278 	pop	hl
+    000000DD 7C               [ 4]  279 	ld	a, h
+    000000DE F8 0C            [12]  280 	ldhl	sp,	#12
+    000000E0 77               [ 8]  281 	ld	(hl), a
+    000000E1 F8 25            [12]  282 	ldhl	sp,#37
+    000000E3 2A               [ 8]  283 	ld	a, (hl+)
+    000000E4 5F               [ 4]  284 	ld	e, a
+    000000E5 56               [ 8]  285 	ld	d, (hl)
+    000000E6 21 0D 01         [12]  286 	ld	hl, #0x010d
+    000000E9 19               [ 8]  287 	add	hl, de
+    000000EA E5               [16]  288 	push	hl
+    000000EB 7D               [ 4]  289 	ld	a, l
+    000000EC F8 0F            [12]  290 	ldhl	sp,	#15
+    000000EE 77               [ 8]  291 	ld	(hl), a
+    000000EF E1               [12]  292 	pop	hl
+    000000F0 7C               [ 4]  293 	ld	a, h
+    000000F1 F8 0E            [12]  294 	ldhl	sp,	#14
+    000000F3 77               [ 8]  295 	ld	(hl), a
+    000000F4 F8 29            [12]  296 	ldhl	sp,	#41
+    000000F6 7E               [ 8]  297 	ld	a, (hl)
+    000000F7 F8 0F            [12]  298 	ldhl	sp,	#15
+    000000F9 77               [ 8]  299 	ld	(hl), a
+    000000FA F8 2A            [12]  300 	ldhl	sp,	#42
+    000000FC 7E               [ 8]  301 	ld	a, (hl)
+    000000FD F8 10            [12]  302 	ldhl	sp,	#16
+    000000FF 77               [ 8]  303 	ld	(hl), a
+    00000100 F8 25            [12]  304 	ldhl	sp,#37
+    00000102 2A               [ 8]  305 	ld	a, (hl+)
+    00000103 5F               [ 4]  306 	ld	e, a
+    00000104 56               [ 8]  307 	ld	d, (hl)
+    00000105 21 09 01         [12]  308 	ld	hl, #0x0109
+    00000108 19               [ 8]  309 	add	hl, de
+    00000109 E5               [16]  310 	push	hl
+    0000010A 7D               [ 4]  311 	ld	a, l
+    0000010B F8 13            [12]  312 	ldhl	sp,	#19
+    0000010D 77               [ 8]  313 	ld	(hl), a
+    0000010E E1               [12]  314 	pop	hl
+    0000010F 7C               [ 4]  315 	ld	a, h
+    00000110 F8 12            [12]  316 	ldhl	sp,	#18
+    00000112 77               [ 8]  317 	ld	(hl), a
+    00000113                        318 00128$:
+    00000113 F8 25            [12]  319 	ldhl	sp,#37
+    00000115 2A               [ 8]  320 	ld	a, (hl+)
+    00000116 5F               [ 4]  321 	ld	e, a
+    00000117 56               [ 8]  322 	ld	d, (hl)
+    00000118 21 0A 01         [12]  323 	ld	hl, #0x010a
+    0000011B 19               [ 8]  324 	add	hl, de
+    0000011C 33               [ 8]  325 	inc	sp
+    0000011D 33               [ 8]  326 	inc	sp
+    0000011E 5D               [ 4]  327 	ld	e, l
+    0000011F 54               [ 4]  328 	ld	d, h
+    00000120 D5               [16]  329 	push	de
+    00000121 1A               [ 8]  330 	ld	a, (de)
+    00000122 F8 1E            [12]  331 	ldhl	sp,	#30
+    00000124 77               [ 8]  332 	ld	(hl), a
+    00000125 F8 11            [12]  333 	ldhl	sp,#17
+    00000127 2A               [ 8]  334 	ld	a, (hl+)
+    00000128 5F               [ 4]  335 	ld	e, a
+    00000129 56               [ 8]  336 	ld	d, (hl)
+    0000012A 1A               [ 8]  337 	ld	a, (de)
+    0000012B 4F               [ 4]  338 	ld	c, a
+                                    339 ;src/dungeon_play.c:32: p->advance_second=0;p->encounter_latch=1;
+    0000012C F8 25            [12]  340 	ldhl	sp,#37
+    0000012E 2A               [ 8]  341 	ld	a, (hl+)
+    0000012F 5F               [ 4]  342 	ld	e, a
+    00000130 56               [ 8]  343 	ld	d, (hl)
+    00000131 21 0F 01         [12]  344 	ld	hl, #0x010f
+    00000134 19               [ 8]  345 	add	hl, de
+    00000135 E5               [16]  346 	push	hl
+    00000136 7D               [ 4]  347 	ld	a, l
+    00000137 F8 1C            [12]  348 	ldhl	sp,	#28
+    00000139 77               [ 8]  349 	ld	(hl), a
+    0000013A E1               [12]  350 	pop	hl
+    0000013B 7C               [ 4]  351 	ld	a, h
+    0000013C F8 1B            [12]  352 	ldhl	sp,	#27
+    0000013E 77               [ 8]  353 	ld	(hl), a
+                                    354 ;src/dungeon_play.c:36: p->encounter_latch=1;p->action.flag_address=o.flag_address;
+    0000013F F8 25            [12]  355 	ldhl	sp,#37
+    00000141 2A               [ 8]  356 	ld	a, (hl+)
+    00000142 5F               [ 4]  357 	ld	e, a
+    00000143 56               [ 8]  358 	ld	d, (hl)
+    00000144 21 18 01         [12]  359 	ld	hl, #0x0118
+    00000147 19               [ 8]  360 	add	hl, de
+    00000148 E5               [16]  361 	push	hl
+    00000149 7D               [ 4]  362 	ld	a, l
+    0000014A F8 1E            [12]  363 	ldhl	sp,	#30
+    0000014C 77               [ 8]  364 	ld	(hl), a
+    0000014D E1               [12]  365 	pop	hl
+    0000014E 7C               [ 4]  366 	ld	a, h
+    0000014F F8 1D            [12]  367 	ldhl	sp,	#29
+    00000151 77               [ 8]  368 	ld	(hl), a
+                                    369 ;src/dungeon_play.c:42: p->action.kind=DPLAY_CHEST;p->action.a=p->retained_trap;
+    00000152 F8 25            [12]  370 	ldhl	sp,#37
+    00000154 2A               [ 8]  371 	ld	a, (hl+)
+    00000155 5F               [ 4]  372 	ld	e, a
+    00000156 56               [ 8]  373 	ld	d, (hl)
+    00000157 21 13 01         [12]  374 	ld	hl, #0x0113
+    0000015A 19               [ 8]  375 	add	hl, de
+    0000015B E5               [16]  376 	push	hl
+    0000015C 7D               [ 4]  377 	ld	a, l
+    0000015D F8 15            [12]  378 	ldhl	sp,	#21
+    0000015F 77               [ 8]  379 	ld	(hl), a
+    00000160 E1               [12]  380 	pop	hl
+    00000161 7C               [ 4]  381 	ld	a, h
+    00000162 F8 14            [12]  382 	ldhl	sp,	#20
+    00000164 77               [ 8]  383 	ld	(hl), a
+                                    384 ;src/dungeon_play.c:43: if(o.type==0u)p->action.target=o.a;
+    00000165 F8 25            [12]  385 	ldhl	sp,#37
+    00000167 2A               [ 8]  386 	ld	a, (hl+)
+    00000168 5F               [ 4]  387 	ld	e, a
+    00000169 56               [ 8]  388 	ld	d, (hl)
+    0000016A 21 14 01         [12]  389 	ld	hl, #0x0114
+    0000016D 19               [ 8]  390 	add	hl, de
+    0000016E E5               [16]  391 	push	hl
+    0000016F 7D               [ 4]  392 	ld	a, l
+    00000170 F8 17            [12]  393 	ldhl	sp,	#23
+    00000172 77               [ 8]  394 	ld	(hl), a
+    00000173 E1               [12]  395 	pop	hl
+    00000174 7C               [ 4]  396 	ld	a, h
+    00000175 F8 16            [12]  397 	ldhl	sp,	#22
+    00000177 77               [ 8]  398 	ld	(hl), a
+                                    399 ;src/dungeon_play.c:25: while(p->check_cursor<p->check_count) {
+    00000178 F8 1E            [12]  400 	ldhl	sp,	#30
+    0000017A 7E               [ 8]  401 	ld	a, (hl)
+    0000017B 91               [ 4]  402 	sub	a, c
+    0000017C D2rF4r03         [16]  403 	jp	NC, 00130$
+                                    404 ;src/dungeon_play.c:26: if(p->advance_second && p->check_cursor==1u) {
+    0000017F F8 25            [12]  405 	ldhl	sp,#37
+    00000181 2A               [ 8]  406 	ld	a, (hl+)
+    00000182 5F               [ 4]  407 	ld	e, a
+    00000183 56               [ 8]  408 	ld	d, (hl)
+    00000184 21 11 01         [12]  409 	ld	hl, #0x0111
+    00000187 19               [ 8]  410 	add	hl, de
+    00000188 E5               [16]  411 	push	hl
+    00000189 7D               [ 4]  412 	ld	a, l
+    0000018A F8 1A            [12]  413 	ldhl	sp,	#26
+    0000018C 77               [ 8]  414 	ld	(hl), a
+    0000018D E1               [12]  415 	pop	hl
+    0000018E 7C               [ 4]  416 	ld	a, h
+    0000018F F8 19            [12]  417 	ldhl	sp,	#25
+    00000191 32               [ 8]  418 	ld	(hl-), a
+    00000192 2A               [ 8]  419 	ld	a, (hl+)
+    00000193 5F               [ 4]  420 	ld	e, a
+    00000194 56               [ 8]  421 	ld	d, (hl)
+    00000195 1A               [ 8]  422 	ld	a, (de)
+                                    423 ;src/dungeon_play.c:30: p->dungeon.position=dungeon_sample_position(&p->dungeon,1u);
+    00000196 F8 25            [12]  424 	ldhl	sp,	#37
+    00000198 4E               [ 8]  425 	ld	c, (hl)
+    00000199 23               [ 8]  426 	inc	hl
+    0000019A 46               [ 8]  427 	ld	b, (hl)
+    0000019B 03               [ 8]  428 	inc	bc
+                                    429 ;src/dungeon_play.c:26: if(p->advance_second && p->check_cursor==1u) {
+    0000019C B7               [ 4]  430 	or	a, a
+    0000019D 28 53            [12]  431 	jr	Z, 00102$
+    0000019F F8 1E            [12]  432 	ldhl	sp,	#30
+    000001A1 7E               [ 8]  433 	ld	a, (hl)
+    000001A2 3D               [ 4]  434 	dec	a
+    000001A3 20 4D            [12]  435 	jr	NZ, 00102$
+                                    436 ;src/dungeon_play.c:29: dungeon_present_sequence(&p->dungeon,0u);
+    000001A5 C5               [16]  437 	push	bc
+    000001A6 AF               [ 4]  438 	xor	a, a
+    000001A7 F5               [16]  439 	push	af
+    000001A8 33               [ 8]  440 	inc	sp
+    000001A9 F8 0C            [12]  441 	ldhl	sp,	#12
+    000001AB 2A               [ 8]  442 	ld	a, (hl+)
+    000001AC 5F               [ 4]  443 	ld	e, a
+    000001AD 56               [ 8]  444 	ld	d, (hl)
+    000001AE D5               [16]  445 	push	de
+    000001AF 1Er00            [ 8]  446 	ld	e, #b_dungeon_present_sequence
+    000001B1 21r00r00         [12]  447 	ld	hl, #_dungeon_present_sequence
+    000001B4 CDr00r00         [24]  448 	call	___sdcc_bcall_ehl
+    000001B7 E8 03            [16]  449 	add	sp, #3
+                                    450 ;src/dungeon_play.c:30: p->dungeon.position=dungeon_sample_position(&p->dungeon,1u);
+    000001B9 3E 01            [ 8]  451 	ld	a, #0x01
+    000001BB F5               [16]  452 	push	af
+    000001BC 33               [ 8]  453 	inc	sp
+    000001BD F8 0C            [12]  454 	ldhl	sp,	#12
+    000001BF 2A               [ 8]  455 	ld	a, (hl+)
+    000001C0 5F               [ 4]  456 	ld	e, a
+    000001C1 56               [ 8]  457 	ld	d, (hl)
+    000001C2 D5               [16]  458 	push	de
+    000001C3 1Er00            [ 8]  459 	ld	e, #b_dungeon_sample_position
+    000001C5 21r00r00         [12]  460 	ld	hl, #_dungeon_sample_position
+    000001C8 CDr00r00         [24]  461 	call	___sdcc_bcall_ehl
+    000001CB E8 03            [16]  462 	add	sp, #3
+    000001CD C1               [12]  463 	pop	bc
+    000001CE 02               [ 8]  464 	ld	(bc), a
+                                    465 ;src/dungeon_play.c:31: dungeon_present_frame(&p->dungeon,0u);
+    000001CF AF               [ 4]  466 	xor	a, a
+    000001D0 F5               [16]  467 	push	af
+    000001D1 33               [ 8]  468 	inc	sp
+    000001D2 F8 0A            [12]  469 	ldhl	sp,	#10
+    000001D4 2A               [ 8]  470 	ld	a, (hl+)
+    000001D5 5F               [ 4]  471 	ld	e, a
+    000001D6 56               [ 8]  472 	ld	d, (hl)
+    000001D7 D5               [16]  473 	push	de
+    000001D8 1Er00            [ 8]  474 	ld	e, #b_dungeon_present_frame
+    000001DA 21r00r00         [12]  475 	ld	hl, #_dungeon_present_frame
+    000001DD CDr00r00         [24]  476 	call	___sdcc_bcall_ehl
+    000001E0 E8 03            [16]  477 	add	sp, #3
+                                    478 ;src/dungeon_play.c:32: p->advance_second=0;p->encounter_latch=1;
+    000001E2 F8 18            [12]  479 	ldhl	sp,	#24
+    000001E4 2A               [ 8]  480 	ld	a, (hl+)
+    000001E5 66               [ 8]  481 	ld	h, (hl)
+    000001E6 6F               [ 4]  482 	ld	l, a
+    000001E7 36 00            [12]  483 	ld	(hl), #0x00
+    000001E9 F8 1A            [12]  484 	ldhl	sp,	#26
+    000001EB 2A               [ 8]  485 	ld	a, (hl+)
+    000001EC 66               [ 8]  486 	ld	h, (hl)
+    000001ED 6F               [ 4]  487 	ld	l, a
+    000001EE 36 01            [12]  488 	ld	(hl), #0x01
+    000001F0 18 0F            [12]  489 	jr	00103$
+    000001F2                        490 00102$:
+                                    491 ;src/dungeon_play.c:33: } else p->dungeon.position=p->positions[p->check_cursor];
+    000001F2 F8 0B            [12]  492 	ldhl	sp,#11
+    000001F4 2A               [ 8]  493 	ld	a, (hl+)
+    000001F5 5F               [ 4]  494 	ld	e, a
+    000001F6 56               [ 8]  495 	ld	d, (hl)
+    000001F7 F8 1E            [12]  496 	ldhl	sp,	#30
+    000001F9 6E               [ 8]  497 	ld	l, (hl)
+    000001FA 26 00            [ 8]  498 	ld	h, #0x00
+    000001FC 19               [ 8]  499 	add	hl, de
+    000001FD 5D               [ 4]  500 	ld	e, l
+    000001FE 54               [ 4]  501 	ld	d, h
+    000001FF 1A               [ 8]  502 	ld	a, (de)
+    00000200 02               [ 8]  503 	ld	(bc), a
+    00000201                        504 00103$:
+                                    505 ;src/dungeon_play.c:34: view=p->views[p->check_cursor++];
+    00000201 D1               [12]  506 	pop	de
+    00000202 D5               [16]  507 	push	de
+    00000203 1A               [ 8]  508 	ld	a, (de)
+    00000204 4F               [ 4]  509 	ld	c, a
+    00000205 0C               [ 4]  510 	inc	c
+    00000206 E1               [12]  511 	pop	hl
+    00000207 E5               [16]  512 	push	hl
+    00000208 71               [ 8]  513 	ld	(hl), c
+    00000209 5F               [ 4]  514 	ld	e, a
+    0000020A 16 00            [ 8]  515 	ld	d, #0x00
+    0000020C F8 0D            [12]  516 	ldhl	sp,	#13
+    0000020E 2A               [ 8]  517 	ld	a,	(hl+)
+    0000020F 66               [ 8]  518 	ld	h, (hl)
+    00000210 6F               [ 4]  519 	ld	l, a
+    00000211 19               [ 8]  520 	add	hl, de
+    00000212 4D               [ 4]  521 	ld	c, l
+    00000213 44               [ 4]  522 	ld	b, h
+    00000214 0A               [ 8]  523 	ld	a, (bc)
+    00000215 F8 1E            [12]  524 	ldhl	sp,	#30
+    00000217 77               [ 8]  525 	ld	(hl), a
+                                    526 ;src/dungeon_play.c:35: if(!dungeon_active_object(&p->dungeon,view,e->flags,e->object_flags,&o))continue;
+    00000218 F8 0F            [12]  527 	ldhl	sp,#15
+    0000021A 2A               [ 8]  528 	ld	a, (hl+)
+    0000021B 5F               [ 4]  529 	ld	e, a
+    0000021C 56               [ 8]  530 	ld	d, (hl)
+    0000021D 21 25 01         [12]  531 	ld	hl, #0x0125
+    00000220 19               [ 8]  532 	add	hl, de
+    00000221 5D               [ 4]  533 	ld	e, l
+    00000222 54               [ 4]  534 	ld	d, h
+    00000223 F8 0F            [12]  535 	ldhl	sp,	#15
+    00000225 2A               [ 8]  536 	ld	a, (hl+)
+    00000226 4F               [ 4]  537 	ld	c, a
+    00000227 46               [ 8]  538 	ld	b, (hl)
+    00000228 21 02 00         [12]  539 	ld	hl, #2
+    0000022B 39               [ 8]  540 	add	hl, sp
+    0000022C E5               [16]  541 	push	hl
+    0000022D D5               [16]  542 	push	de
+    0000022E C5               [16]  543 	push	bc
+    0000022F F8 24            [12]  544 	ldhl	sp,	#36
+    00000231 7E               [ 8]  545 	ld	a, (hl)
+    00000232 F5               [16]  546 	push	af
+    00000233 33               [ 8]  547 	inc	sp
+    00000234 F8 10            [12]  548 	ldhl	sp,	#16
+    00000236 2A               [ 8]  549 	ld	a, (hl+)
+    00000237 5F               [ 4]  550 	ld	e, a
+    00000238 56               [ 8]  551 	ld	d, (hl)
+    00000239 D5               [16]  552 	push	de
+    0000023A 1Er00            [ 8]  553 	ld	e, #b_dungeon_active_object
+    0000023C 21r00r00         [12]  554 	ld	hl, #_dungeon_active_object
+    0000023F CDr00r00         [24]  555 	call	___sdcc_bcall_ehl
+    00000242 E8 09            [16]  556 	add	sp, #9
+    00000244 B7               [ 4]  557 	or	a, a
+    00000245 CAr13r01         [16]  558 	jp	Z, 00128$
+                                    559 ;src/dungeon_play.c:36: p->encounter_latch=1;p->action.flag_address=o.flag_address;
+    00000248 F8 1A            [12]  560 	ldhl	sp,	#26
+    0000024A 2A               [ 8]  561 	ld	a, (hl+)
+    0000024B 66               [ 8]  562 	ld	h, (hl)
+    0000024C 6F               [ 4]  563 	ld	l, a
+    0000024D 36 01            [12]  564 	ld	(hl), #0x01
+    0000024F F8 02            [12]  565 	ldhl	sp,	#2
+    00000251 2A               [ 8]  566 	ld	a, (hl+)
+    00000252 4F               [ 4]  567 	ld	c, a
+    00000253 46               [ 8]  568 	ld	b, (hl)
+    00000254 F8 1C            [12]  569 	ldhl	sp,	#28
+    00000256 2A               [ 8]  570 	ld	a, (hl+)
+    00000257 66               [ 8]  571 	ld	h, (hl)
+    00000258 6F               [ 4]  572 	ld	l, a
+    00000259 79               [ 4]  573 	ld	a, c
+    0000025A 22               [ 8]  574 	ld	(hl+), a
+    0000025B 70               [ 8]  575 	ld	(hl), b
+                                    576 ;src/dungeon_play.c:37: if(o.type<2u) {
+    0000025C F8 04            [12]  577 	ldhl	sp,	#4
+    0000025E 7E               [ 8]  578 	ld	a, (hl)
+    0000025F F8 17            [12]  579 	ldhl	sp,	#23
+    00000261 77               [ 8]  580 	ld	(hl), a
+                                    581 ;src/dungeon_play.c:40: if(o.type==0u)p->retained_trap=o.b;
+                                    582 ;src/dungeon_play.c:41: if(view!=1u)continue;
+    00000262 F8 1E            [12]  583 	ldhl	sp,	#30
+    00000264 7E               [ 8]  584 	ld	a, (hl)
+    00000265 3D               [ 4]  585 	dec	a
+    00000266 3E 01            [ 8]  586 	ld	a, #0x01
+    00000268 28 01            [12]  587 	jr	Z, 00309$
+    0000026A AF               [ 4]  588 	xor	a, a
+    0000026B                        589 00309$:
+    0000026B F8 18            [12]  590 	ldhl	sp,	#24
+    0000026D 77               [ 8]  591 	ld	(hl), a
+                                    592 ;src/dungeon_play.c:42: p->action.kind=DPLAY_CHEST;p->action.a=p->retained_trap;
+    0000026E F8 25            [12]  593 	ldhl	sp,#37
+    00000270 2A               [ 8]  594 	ld	a, (hl+)
+    00000271 5F               [ 4]  595 	ld	e, a
+    00000272 56               [ 8]  596 	ld	d, (hl)
+    00000273 21 15 01         [12]  597 	ld	hl, #0x0115
+    00000276 19               [ 8]  598 	add	hl, de
+    00000277 E5               [16]  599 	push	hl
+    00000278 7D               [ 4]  600 	ld	a, l
+    00000279 F8 1B            [12]  601 	ldhl	sp,	#27
+    0000027B 77               [ 8]  602 	ld	(hl), a
+    0000027C E1               [12]  603 	pop	hl
+    0000027D 7C               [ 4]  604 	ld	a, h
+    0000027E F8 1A            [12]  605 	ldhl	sp,	#26
+    00000280 77               [ 8]  606 	ld	(hl), a
+                                    607 ;src/dungeon_play.c:43: if(o.type==0u)p->action.target=o.a;
+                                    608 ;src/dungeon_play.c:45: p->action.type=o.type;return p->action.kind;
+    00000281 F8 25            [12]  609 	ldhl	sp,#37
+    00000283 2A               [ 8]  610 	ld	a, (hl+)
+    00000284 5F               [ 4]  611 	ld	e, a
+    00000285 56               [ 8]  612 	ld	d, (hl)
+    00000286 21 17 01         [12]  613 	ld	hl, #0x0117
+    00000289 19               [ 8]  614 	add	hl, de
+    0000028A E5               [16]  615 	push	hl
+    0000028B 7D               [ 4]  616 	ld	a, l
+    0000028C F8 1D            [12]  617 	ldhl	sp,	#29
+    0000028E 77               [ 8]  618 	ld	(hl), a
+    0000028F E1               [12]  619 	pop	hl
+    00000290 7C               [ 4]  620 	ld	a, h
+    00000291 F8 1C            [12]  621 	ldhl	sp,	#28
+    00000293 77               [ 8]  622 	ld	(hl), a
+                                    623 ;src/dungeon_play.c:37: if(o.type<2u) {
+    00000294 F8 17            [12]  624 	ldhl	sp,	#23
+    00000296 7E               [ 8]  625 	ld	a, (hl)
+    00000297 D6 02            [ 8]  626 	sub	a, #0x02
+    00000299 30 70            [12]  627 	jr	NC, 00115$
+                                    628 ;src/dungeon_play.c:40: if(o.type==0u)p->retained_trap=o.b;
+    0000029B F8 25            [12]  629 	ldhl	sp,#37
+    0000029D 2A               [ 8]  630 	ld	a, (hl+)
+    0000029E 5F               [ 4]  631 	ld	e, a
+    0000029F 56               [ 8]  632 	ld	d, (hl)
+    000002A0 21 12 01         [12]  633 	ld	hl, #0x0112
+    000002A3 19               [ 8]  634 	add	hl, de
+    000002A4 4D               [ 4]  635 	ld	c, l
+    000002A5 44               [ 4]  636 	ld	b, h
+    000002A6 F8 17            [12]  637 	ldhl	sp,	#23
+    000002A8 7E               [ 8]  638 	ld	a, (hl)
+    000002A9 B7               [ 4]  639 	or	a, a
+    000002AA 20 04            [12]  640 	jr	NZ, 00108$
+    000002AC F8 06            [12]  641 	ldhl	sp,	#6
+    000002AE 7E               [ 8]  642 	ld	a, (hl)
+    000002AF 02               [ 8]  643 	ld	(bc), a
+    000002B0                        644 00108$:
+                                    645 ;src/dungeon_play.c:41: if(view!=1u)continue;
+    000002B0 F8 18            [12]  646 	ldhl	sp,	#24
+    000002B2 CB 46            [12]  647 	bit	0, (hl)
+    000002B4 CAr13r01         [16]  648 	jp	Z, 00128$
+                                    649 ;src/dungeon_play.c:42: p->action.kind=DPLAY_CHEST;p->action.a=p->retained_trap;
+    000002B7 F8 13            [12]  650 	ldhl	sp,	#19
+    000002B9 2A               [ 8]  651 	ld	a, (hl+)
+    000002BA 66               [ 8]  652 	ld	h, (hl)
+    000002BB 6F               [ 4]  653 	ld	l, a
+    000002BC 36 03            [12]  654 	ld	(hl), #0x03
+    000002BE 0A               [ 8]  655 	ld	a, (bc)
+    000002BF F8 19            [12]  656 	ldhl	sp,	#25
+    000002C1 5E               [ 8]  657 	ld	e, (hl)
+    000002C2 23               [ 8]  658 	inc	hl
+    000002C3 66               [ 8]  659 	ld	h, (hl)
+    000002C4 6B               [ 4]  660 	ld	l, e
+    000002C5 77               [ 8]  661 	ld	(hl), a
+                                    662 ;src/dungeon_play.c:43: if(o.type==0u)p->action.target=o.a;
+    000002C6 F8 04            [12]  663 	ldhl	sp,	#4
+                                    664 ;src/dungeon_play.c:52: if(!o.a)continue;
+    000002C8 2A               [ 8]  665 	ld	a, (hl+)
+    000002C9 4F               [ 4]  666 	ld	c, a
+    000002CA 7E               [ 8]  667 	ld	a, (hl)
+    000002CB F8 1E            [12]  668 	ldhl	sp,	#30
+    000002CD 77               [ 8]  669 	ld	(hl), a
+                                    670 ;src/dungeon_play.c:43: if(o.type==0u)p->action.target=o.a;
+    000002CE 79               [ 4]  671 	ld	a, c
+    000002CF B7               [ 4]  672 	or	a, a
+    000002D0 20 0B            [12]  673 	jr	NZ, 00112$
+    000002D2 F8 15            [12]  674 	ldhl	sp,	#21
+    000002D4 2A               [ 8]  675 	ld	a, (hl+)
+    000002D5 5F               [ 4]  676 	ld	e, a
+    000002D6 56               [ 8]  677 	ld	d, (hl)
+    000002D7 F8 1E            [12]  678 	ldhl	sp,	#30
+    000002D9 7E               [ 8]  679 	ld	a, (hl)
+    000002DA 12               [ 8]  680 	ld	(de), a
+    000002DB 18 1B            [12]  681 	jr	00113$
+    000002DD                        682 00112$:
+                                    683 ;src/dungeon_play.c:44: else p->action.money=(uint16_t)o.a|((uint16_t)o.b<<8);
+    000002DD F8 25            [12]  684 	ldhl	sp,#37
+    000002DF 2A               [ 8]  685 	ld	a, (hl+)
+    000002E0 5F               [ 4]  686 	ld	e, a
+    000002E1 56               [ 8]  687 	ld	d, (hl)
+    000002E2 21 1A 01         [12]  688 	ld	hl, #0x011a
+    000002E5 19               [ 8]  689 	add	hl, de
+    000002E6 4D               [ 4]  690 	ld	c, l
+    000002E7 44               [ 4]  691 	ld	b, h
+    000002E8 F8 1E            [12]  692 	ldhl	sp,	#30
+    000002EA 3A               [ 8]  693 	ld	a, (hl-)
+    000002EB 22               [ 8]  694 	ld	(hl+), a
+    000002EC 36 00            [12]  695 	ld	(hl), #0x00
+    000002EE F8 06            [12]  696 	ldhl	sp,	#6
+    000002F0 56               [ 8]  697 	ld	d, (hl)
+    000002F1 F8 1D            [12]  698 	ldhl	sp,	#29
+    000002F3 7E               [ 8]  699 	ld	a, (hl)
+    000002F4 02               [ 8]  700 	ld	(bc), a
+    000002F5 03               [ 8]  701 	inc	bc
+    000002F6 7A               [ 4]  702 	ld	a, d
+    000002F7 02               [ 8]  703 	ld	(bc), a
+    000002F8                        704 00113$:
+                                    705 ;src/dungeon_play.c:45: p->action.type=o.type;return p->action.kind;
+    000002F8 F8 04            [12]  706 	ldhl	sp,	#4
+    000002FA 7E               [ 8]  707 	ld	a, (hl)
+    000002FB F8 1B            [12]  708 	ldhl	sp,	#27
+    000002FD 5E               [ 8]  709 	ld	e, (hl)
+    000002FE 23               [ 8]  710 	inc	hl
+    000002FF 66               [ 8]  711 	ld	h, (hl)
+    00000300 6B               [ 4]  712 	ld	l, e
+    00000301 77               [ 8]  713 	ld	(hl), a
+    00000302 F8 13            [12]  714 	ldhl	sp,#19
+    00000304 2A               [ 8]  715 	ld	a, (hl+)
+    00000305 5F               [ 4]  716 	ld	e, a
+    00000306 56               [ 8]  717 	ld	d, (hl)
+    00000307 1A               [ 8]  718 	ld	a, (de)
+    00000308 C3rA5r04         [16]  719 	jp	00148$
+    0000030B                        720 00115$:
+                                    721 ;src/dungeon_play.c:49: p->dungeon.direction=(p->dungeon.direction+3u)&3u;
+    0000030B F8 25            [12]  722 	ldhl	sp,#37
+    0000030D 2A               [ 8]  723 	ld	a, (hl+)
+    0000030E 5F               [ 4]  724 	ld	e, a
+    0000030F 56               [ 8]  725 	ld	d, (hl)
+    00000310 21 02 00         [12]  726 	ld	hl, #0x0002
+    00000313 19               [ 8]  727 	add	hl, de
+    00000314 E5               [16]  728 	push	hl
+    00000315 7D               [ 4]  729 	ld	a, l
+    00000316 F8 1F            [12]  730 	ldhl	sp,	#31
+    00000318 77               [ 8]  731 	ld	(hl), a
+    00000319 E1               [12]  732 	pop	hl
+    0000031A 7C               [ 4]  733 	ld	a, h
+    0000031B F8 1E            [12]  734 	ldhl	sp,	#30
+    0000031D 77               [ 8]  735 	ld	(hl), a
+                                    736 ;src/dungeon_play.c:47: if(o.type==2u) {
+    0000031E F8 17            [12]  737 	ldhl	sp,	#23
+    00000320 7E               [ 8]  738 	ld	a, (hl)
+    00000321 D6 02            [ 8]  739 	sub	a, #0x02
+    00000323 20 65            [12]  740 	jr	NZ, 00122$
+                                    741 ;src/dungeon_play.c:48: if(view!=1u)for(i=0;i<2u;++i){
+    00000325 F8 18            [12]  742 	ldhl	sp,	#24
+    00000327 CB 46            [12]  743 	bit	0, (hl)
+    00000329 20 2D            [12]  744 	jr	NZ, 00118$
+    0000032B 0E 00            [ 8]  745 	ld	c, #0x00
+    0000032D                        746 00144$:
+                                    747 ;src/dungeon_play.c:49: p->dungeon.direction=(p->dungeon.direction+3u)&3u;
+    0000032D F8 1D            [12]  748 	ldhl	sp,#29
+    0000032F 2A               [ 8]  749 	ld	a, (hl+)
+    00000330 5F               [ 4]  750 	ld	e, a
+    00000331 3A               [ 8]  751 	ld	a, (hl-)
+    00000332 57               [ 4]  752 	ld	d, a
+    00000333 1A               [ 8]  753 	ld	a, (de)
+    00000334 C6 03            [ 8]  754 	add	a, #0x03
+    00000336 E6 03            [ 8]  755 	and	a, #0x03
+    00000338 5E               [ 8]  756 	ld	e, (hl)
+    00000339 23               [ 8]  757 	inc	hl
+    0000033A 66               [ 8]  758 	ld	h, (hl)
+    0000033B 6B               [ 4]  759 	ld	l, e
+    0000033C 77               [ 8]  760 	ld	(hl), a
+                                    761 ;src/dungeon_play.c:50: dungeon_present_turn(&p->dungeon,0u);
+    0000033D C5               [16]  762 	push	bc
+    0000033E AF               [ 4]  763 	xor	a, a
+    0000033F F5               [16]  764 	push	af
+    00000340 33               [ 8]  765 	inc	sp
+    00000341 F8 0C            [12]  766 	ldhl	sp,	#12
+    00000343 2A               [ 8]  767 	ld	a, (hl+)
+    00000344 5F               [ 4]  768 	ld	e, a
+    00000345 56               [ 8]  769 	ld	d, (hl)
+    00000346 D5               [16]  770 	push	de
+    00000347 1Er00            [ 8]  771 	ld	e, #b_dungeon_present_turn
+    00000349 21r00r00         [12]  772 	ld	hl, #_dungeon_present_turn
+    0000034C CDr00r00         [24]  773 	call	___sdcc_bcall_ehl
+    0000034F E8 03            [16]  774 	add	sp, #3
+    00000351 C1               [12]  775 	pop	bc
+                                    776 ;src/dungeon_play.c:48: if(view!=1u)for(i=0;i<2u;++i){
+    00000352 0C               [ 4]  777 	inc	c
+    00000353 79               [ 4]  778 	ld	a, c
+    00000354 D6 02            [ 8]  779 	sub	a, #0x02
+    00000356 38 D5            [12]  780 	jr	C, 00144$
+    00000358                        781 00118$:
+                                    782 ;src/dungeon_play.c:52: if(!o.a)continue;
+    00000358 F8 05            [12]  783 	ldhl	sp,	#5
+    0000035A 7E               [ 8]  784 	ld	a, (hl)
+    0000035B B7               [ 4]  785 	or	a, a
+    0000035C CAr13r01         [16]  786 	jp	Z, 00128$
+                                    787 ;src/dungeon_play.c:53: p->action.kind=DPLAY_BATTLE;p->action.target=o.a;p->action.a=o.b;
+    0000035F F8 13            [12]  788 	ldhl	sp,	#19
+    00000361 2A               [ 8]  789 	ld	a, (hl+)
+    00000362 66               [ 8]  790 	ld	h, (hl)
+    00000363 6F               [ 4]  791 	ld	l, a
+    00000364 36 02            [12]  792 	ld	(hl), #0x02
+    00000366 F8 05            [12]  793 	ldhl	sp,	#5
+    00000368 7E               [ 8]  794 	ld	a, (hl)
+    00000369 F8 15            [12]  795 	ldhl	sp,	#21
+    0000036B 5E               [ 8]  796 	ld	e, (hl)
+    0000036C 23               [ 8]  797 	inc	hl
+    0000036D 66               [ 8]  798 	ld	h, (hl)
+    0000036E 6B               [ 4]  799 	ld	l, e
+    0000036F 77               [ 8]  800 	ld	(hl), a
+    00000370 F8 06            [12]  801 	ldhl	sp,	#6
+    00000372 7E               [ 8]  802 	ld	a, (hl)
+    00000373 F8 19            [12]  803 	ldhl	sp,	#25
+    00000375 5E               [ 8]  804 	ld	e, (hl)
+    00000376 23               [ 8]  805 	inc	hl
+    00000377 66               [ 8]  806 	ld	h, (hl)
+    00000378 6B               [ 4]  807 	ld	l, e
+    00000379 77               [ 8]  808 	ld	(hl), a
+                                    809 ;src/dungeon_play.c:54: p->action.type=1;return p->action.kind;
+    0000037A F8 1B            [12]  810 	ldhl	sp,	#27
+    0000037C 2A               [ 8]  811 	ld	a, (hl+)
+    0000037D 66               [ 8]  812 	ld	h, (hl)
+    0000037E 6F               [ 4]  813 	ld	l, a
+    0000037F 36 01            [12]  814 	ld	(hl), #0x01
+    00000381 F8 13            [12]  815 	ldhl	sp,#19
+    00000383 2A               [ 8]  816 	ld	a, (hl+)
+    00000384 5F               [ 4]  817 	ld	e, a
+    00000385 56               [ 8]  818 	ld	d, (hl)
+    00000386 1A               [ 8]  819 	ld	a, (de)
+    00000387 C3rA5r04         [16]  820 	jp	00148$
+    0000038A                        821 00122$:
+                                    822 ;src/dungeon_play.c:56: if(o.type==3u) {
+    0000038A F8 17            [12]  823 	ldhl	sp,	#23
+    0000038C 7E               [ 8]  824 	ld	a, (hl)
+    0000038D D6 03            [ 8]  825 	sub	a, #0x03
+    0000038F C2r13r01         [16]  826 	jp	NZ, 00128$
+                                    827 ;src/dungeon_play.c:57: if(view!=1u)for(i=0;i<2u;++i){
+    00000392 F8 18            [12]  828 	ldhl	sp,	#24
+    00000394 CB 46            [12]  829 	bit	0, (hl)
+    00000396 20 31            [12]  830 	jr	NZ, 00125$
+    00000398 36 00            [12]  831 	ld	(hl), #0x00
+    0000039A                        832 00146$:
+                                    833 ;src/dungeon_play.c:58: p->dungeon.direction=(p->dungeon.direction+1u)&3u;
+    0000039A F8 1D            [12]  834 	ldhl	sp,#29
+    0000039C 2A               [ 8]  835 	ld	a, (hl+)
+    0000039D 5F               [ 4]  836 	ld	e, a
+    0000039E 56               [ 8]  837 	ld	d, (hl)
+    0000039F 1A               [ 8]  838 	ld	a, (de)
+    000003A0 F8 17            [12]  839 	ldhl	sp,	#23
+    000003A2 77               [ 8]  840 	ld	(hl), a
+    000003A3 3C               [ 4]  841 	inc	a
+    000003A4 E6 03            [ 8]  842 	and	a, #0x03
+    000003A6 F8 1D            [12]  843 	ldhl	sp,	#29
+    000003A8 5E               [ 8]  844 	ld	e, (hl)
+    000003A9 23               [ 8]  845 	inc	hl
+    000003AA 66               [ 8]  846 	ld	h, (hl)
+    000003AB 6B               [ 4]  847 	ld	l, e
+    000003AC 77               [ 8]  848 	ld	(hl), a
+                                    849 ;src/dungeon_play.c:59: dungeon_present_turn(&p->dungeon,1u);
+    000003AD 3E 01            [ 8]  850 	ld	a, #0x01
+    000003AF F5               [16]  851 	push	af
+    000003B0 33               [ 8]  852 	inc	sp
+    000003B1 F8 0A            [12]  853 	ldhl	sp,	#10
+    000003B3 2A               [ 8]  854 	ld	a, (hl+)
+    000003B4 5F               [ 4]  855 	ld	e, a
+    000003B5 56               [ 8]  856 	ld	d, (hl)
+    000003B6 D5               [16]  857 	push	de
+    000003B7 1Er00            [ 8]  858 	ld	e, #b_dungeon_present_turn
+    000003B9 21r00r00         [12]  859 	ld	hl, #_dungeon_present_turn
+    000003BC CDr00r00         [24]  860 	call	___sdcc_bcall_ehl
+    000003BF E8 03            [16]  861 	add	sp, #3
+                                    862 ;src/dungeon_play.c:57: if(view!=1u)for(i=0;i<2u;++i){
+    000003C1 F8 18            [12]  863 	ldhl	sp,	#24
+    000003C3 34               [12]  864 	inc	(hl)
+    000003C4 7E               [ 8]  865 	ld	a, (hl)
+    000003C5 D6 02            [ 8]  866 	sub	a, #0x02
+    000003C7 38 D1            [12]  867 	jr	C, 00146$
+    000003C9                        868 00125$:
+                                    869 ;src/dungeon_play.c:61: p->action.kind=DPLAY_EVENT;p->action.target=o.a;p->action.a=o.b;
+    000003C9 F8 13            [12]  870 	ldhl	sp,	#19
+    000003CB 2A               [ 8]  871 	ld	a, (hl+)
+    000003CC 66               [ 8]  872 	ld	h, (hl)
+    000003CD 6F               [ 4]  873 	ld	l, a
+    000003CE 36 04            [12]  874 	ld	(hl), #0x04
+    000003D0 F8 05            [12]  875 	ldhl	sp,	#5
+    000003D2 7E               [ 8]  876 	ld	a, (hl)
+    000003D3 F8 15            [12]  877 	ldhl	sp,	#21
+    000003D5 5E               [ 8]  878 	ld	e, (hl)
+    000003D6 23               [ 8]  879 	inc	hl
+    000003D7 66               [ 8]  880 	ld	h, (hl)
+    000003D8 6B               [ 4]  881 	ld	l, e
+    000003D9 77               [ 8]  882 	ld	(hl), a
+    000003DA F8 06            [12]  883 	ldhl	sp,	#6
+    000003DC 7E               [ 8]  884 	ld	a, (hl)
+    000003DD F8 19            [12]  885 	ldhl	sp,	#25
+    000003DF 5E               [ 8]  886 	ld	e, (hl)
+    000003E0 23               [ 8]  887 	inc	hl
+    000003E1 66               [ 8]  888 	ld	h, (hl)
+    000003E2 6B               [ 4]  889 	ld	l, e
+    000003E3 77               [ 8]  890 	ld	(hl), a
+                                    891 ;src/dungeon_play.c:62: p->action.type=0;return p->action.kind;
+    000003E4 F8 1B            [12]  892 	ldhl	sp,	#27
+    000003E6 2A               [ 8]  893 	ld	a, (hl+)
+    000003E7 66               [ 8]  894 	ld	h, (hl)
+    000003E8 6F               [ 4]  895 	ld	l, a
+    000003E9 36 00            [12]  896 	ld	(hl), #0x00
+    000003EB F8 13            [12]  897 	ldhl	sp,#19
+    000003ED 2A               [ 8]  898 	ld	a, (hl+)
+    000003EE 5F               [ 4]  899 	ld	e, a
+    000003EF 56               [ 8]  900 	ld	d, (hl)
+    000003F0 1A               [ 8]  901 	ld	a, (de)
+    000003F1 C3rA5r04         [16]  902 	jp	00148$
+    000003F4                        903 00130$:
+                                    904 ;src/dungeon_play.c:65: if(p->initial_dark==2u) {
+    000003F4 F8 25            [12]  905 	ldhl	sp,#37
+    000003F6 2A               [ 8]  906 	ld	a, (hl+)
+    000003F7 5F               [ 4]  907 	ld	e, a
+    000003F8 56               [ 8]  908 	ld	d, (hl)
+    000003F9 21 10 01         [12]  909 	ld	hl, #0x0110
+    000003FC 19               [ 8]  910 	add	hl, de
+    000003FD 4D               [ 4]  911 	ld	c, l
+    000003FE 44               [ 4]  912 	ld	b, h
+    000003FF 0A               [ 8]  913 	ld	a, (bc)
+    00000400 5F               [ 4]  914 	ld	e, a
+                                    915 ;src/dungeon_play.c:67: if(!p->dungeon.light){p->action.kind=DPLAY_EXIT;return p->action.kind;}
+    00000401 F8 25            [12]  916 	ldhl	sp,	#37
+    00000403 2A               [ 8]  917 	ld	a, (hl+)
+    00000404 66               [ 8]  918 	ld	h, (hl)
+    00000405 6F               [ 4]  919 	ld	l, a
+    00000406 23               [ 8]  920 	inc	hl
+    00000407 23               [ 8]  921 	inc	hl
+    00000408 23               [ 8]  922 	inc	hl
+                                    923 ;src/dungeon_play.c:65: if(p->initial_dark==2u) {
+    00000409 7B               [ 4]  924 	ld	a, e
+    0000040A D6 02            [ 8]  925 	sub	a, #0x02
+    0000040C 20 24            [12]  926 	jr	NZ, 00138$
+                                    927 ;src/dungeon_play.c:66: p->initial_dark=0;
+    0000040E AF               [ 4]  928 	xor	a, a
+    0000040F 02               [ 8]  929 	ld	(bc), a
+                                    930 ;src/dungeon_play.c:67: if(!p->dungeon.light){p->action.kind=DPLAY_EXIT;return p->action.kind;}
+    00000410 7E               [ 8]  931 	ld	a, (hl)
+    00000411 B7               [ 4]  932 	or	a, a
+    00000412 20 0B            [12]  933 	jr	NZ, 00132$
+    00000414 F8 13            [12]  934 	ldhl	sp,	#19
+    00000416 2A               [ 8]  935 	ld	a, (hl+)
+    00000417 66               [ 8]  936 	ld	h, (hl)
+    00000418 6F               [ 4]  937 	ld	l, a
+    00000419 3E 06            [ 8]  938 	ld	a,#0x06
+    0000041B 77               [ 8]  939 	ld	(hl),a
+    0000041C C3rA5r04         [16]  940 	jp	00148$
+    0000041F                        941 00132$:
+                                    942 ;src/dungeon_play.c:68: p->dungeon.light=255u;dungeon_refresh_light(&p->dungeon);
+    0000041F 36 FF            [12]  943 	ld	(hl), #0xff
+    00000421 F8 09            [12]  944 	ldhl	sp,	#9
+    00000423 2A               [ 8]  945 	ld	a, (hl+)
+    00000424 5F               [ 4]  946 	ld	e, a
+    00000425 56               [ 8]  947 	ld	d, (hl)
+    00000426 D5               [16]  948 	push	de
+    00000427 1Er00            [ 8]  949 	ld	e, #b_dungeon_refresh_light
+    00000429 21r00r00         [12]  950 	ld	hl, #_dungeon_refresh_light
+    0000042C CDr00r00         [24]  951 	call	___sdcc_bcall_ehl
+    0000042F E1               [12]  952 	pop	hl
+    00000430 18 17            [12]  953 	jr	00139$
+    00000432                        954 00138$:
+                                    955 ;src/dungeon_play.c:69: } else if(p->initial_dark) {
+    00000432 7B               [ 4]  956 	ld	a, e
+    00000433 B7               [ 4]  957 	or	a, a
+    00000434 28 13            [12]  958 	jr	Z, 00139$
+                                    959 ;src/dungeon_play.c:70: p->initial_dark=0;
+    00000436 AF               [ 4]  960 	xor	a, a
+    00000437 02               [ 8]  961 	ld	(bc), a
+                                    962 ;src/dungeon_play.c:71: if(!p->dungeon.light){p->initial_dark=2u;p->action.kind=DPLAY_DARK;return p->action.kind;}
+    00000438 7E               [ 8]  963 	ld	a, (hl)
+    00000439 B7               [ 4]  964 	or	a, a
+    0000043A 20 0D            [12]  965 	jr	NZ, 00139$
+    0000043C 3E 02            [ 8]  966 	ld	a, #0x02
+    0000043E 02               [ 8]  967 	ld	(bc), a
+    0000043F F8 13            [12]  968 	ldhl	sp,	#19
+    00000441 2A               [ 8]  969 	ld	a, (hl+)
+    00000442 66               [ 8]  970 	ld	h, (hl)
+    00000443 6F               [ 4]  971 	ld	l, a
+    00000444 3E 07            [ 8]  972 	ld	a,#0x07
+    00000446 77               [ 8]  973 	ld	(hl),a
+    00000447 18 5C            [12]  974 	jr	00148$
+    00000449                        975 00139$:
+                                    976 ;src/dungeon_play.c:73: if(p->encounter_latch) {
+    00000449 F8 1A            [12]  977 	ldhl	sp,#26
+    0000044B 2A               [ 8]  978 	ld	a, (hl+)
+    0000044C 5F               [ 4]  979 	ld	e, a
+    0000044D 56               [ 8]  980 	ld	d, (hl)
+    0000044E 1A               [ 8]  981 	ld	a, (de)
+    0000044F B7               [ 4]  982 	or	a, a
+    00000450 28 4D            [12]  983 	jr	Z, 00143$
+                                    984 ;src/dungeon_play.c:74: p->encounter_latch=0;
+    00000452 3A               [ 8]  985 	ld	a, (hl-)
+    00000453 6E               [ 8]  986 	ld	l, (hl)
+    00000454 67               [ 4]  987 	ld	h, a
+    00000455 36 00            [12]  988 	ld	(hl), #0x00
+                                    989 ;src/dungeon_play.c:75: enemy=rpg_dungeon_encounter(r,p->dungeon.floor,dungeon_sample(&p->dungeon,1));
+    00000457 3E 01            [ 8]  990 	ld	a, #0x01
+    00000459 F5               [16]  991 	push	af
+    0000045A 33               [ 8]  992 	inc	sp
+    0000045B F8 0A            [12]  993 	ldhl	sp,	#10
+    0000045D 2A               [ 8]  994 	ld	a, (hl+)
+    0000045E 5F               [ 4]  995 	ld	e, a
+    0000045F 56               [ 8]  996 	ld	d, (hl)
+    00000460 D5               [16]  997 	push	de
+    00000461 1Er00            [ 8]  998 	ld	e, #b_dungeon_sample
+    00000463 21r00r00         [12]  999 	ld	hl, #_dungeon_sample
+    00000466 CDr00r00         [24] 1000 	call	___sdcc_bcall_ehl
+    00000469 E8 03            [16] 1001 	add	sp, #3
+    0000046B 47               [ 4] 1002 	ld	b, a
+    0000046C F8 25            [12] 1003 	ldhl	sp,#37
+    0000046E 2A               [ 8] 1004 	ld	a, (hl+)
+    0000046F 5F               [ 4] 1005 	ld	e, a
+    00000470 2A               [ 8] 1006 	ld	a, (hl+)
+    00000471 57               [ 4] 1007 	ld	d, a
+    00000472 1A               [ 8] 1008 	ld	a, (de)
+    00000473 C5               [16] 1009 	push	bc
+    00000474 33               [ 8] 1010 	inc	sp
+    00000475 F5               [16] 1011 	push	af
+    00000476 33               [ 8] 1012 	inc	sp
+    00000477 2A               [ 8] 1013 	ld	a, (hl+)
+    00000478 5F               [ 4] 1014 	ld	e, a
+    00000479 56               [ 8] 1015 	ld	d, (hl)
+    0000047A D5               [16] 1016 	push	de
+    0000047B 1Er00            [ 8] 1017 	ld	e, #b_rpg_dungeon_encounter
+    0000047D 21r00r00         [12] 1018 	ld	hl, #_rpg_dungeon_encounter
+    00000480 CDr00r00         [24] 1019 	call	___sdcc_bcall_ehl
+    00000483 E8 04            [16] 1020 	add	sp, #4
+    00000485 4F               [ 4] 1021 	ld	c, a
+                                   1022 ;src/dungeon_play.c:76: if(enemy){p->action.kind=DPLAY_BATTLE;p->action.target=enemy;p->action.flag_address=0xc500;}
+    00000486 B7               [ 4] 1023 	or	a, a
+    00000487 28 16            [12] 1024 	jr	Z, 00143$
+    00000489 F8 13            [12] 1025 	ldhl	sp,	#19
+    0000048B 2A               [ 8] 1026 	ld	a, (hl+)
+    0000048C 66               [ 8] 1027 	ld	h, (hl)
+    0000048D 6F               [ 4] 1028 	ld	l, a
+    0000048E 36 02            [12] 1029 	ld	(hl), #0x02
+    00000490 F8 15            [12] 1030 	ldhl	sp,	#21
+    00000492 2A               [ 8] 1031 	ld	a, (hl+)
+    00000493 66               [ 8] 1032 	ld	h, (hl)
+    00000494 6F               [ 4] 1033 	ld	l, a
+    00000495 71               [ 8] 1034 	ld	(hl), c
+    00000496 F8 1C            [12] 1035 	ldhl	sp,	#28
+    00000498 2A               [ 8] 1036 	ld	a, (hl+)
+    00000499 66               [ 8] 1037 	ld	h, (hl)
+    0000049A 6F               [ 4] 1038 	ld	l, a
+    0000049B AF               [ 4] 1039 	xor	a, a
+    0000049C 22               [ 8] 1040 	ld	(hl+), a
+    0000049D 36 C5            [12] 1041 	ld	(hl), #0xc5
+    0000049F                       1042 00143$:
+                                   1043 ;src/dungeon_play.c:78: return p->action.kind;
+    0000049F F8 13            [12] 1044 	ldhl	sp,#19
+    000004A1 2A               [ 8] 1045 	ld	a, (hl+)
+    000004A2 5F               [ 4] 1046 	ld	e, a
+    000004A3 56               [ 8] 1047 	ld	d, (hl)
+    000004A4 1A               [ 8] 1048 	ld	a, (de)
+    000004A5                       1049 00148$:
+                                   1050 ;src/dungeon_play.c:79: }
+    000004A5 E8 1F            [16] 1051 	add	sp, #31
+    000004A7 C9               [16] 1052 	ret
+                                   1053 ;src/dungeon_play.c:80: uint8_t dplay_enter(DungeonPlay *p,RPGState *r,EventState *e,uint8_t floor,uint8_t position,uint8_t direction,uint8_t trap) RPG_BANKED {
+                                   1054 ;	---------------------------------
+                                   1055 ; Function dplay_enter
+                                   1056 ; ---------------------------------
+                         0000000B  1057 	b_dplay_enter	= 11
+    000004A8                       1058 _dplay_enter::
+                                   1059 ;src/dungeon_play.c:81: memset(p,0,sizeof(*p));
+    000004A8 F8 06            [12] 1060 	ldhl	sp,	#6
+    000004AA 2A               [ 8] 1061 	ld	a, (hl+)
+    000004AB 4F               [ 4] 1062 	ld	c, a
+    000004AC 46               [ 8] 1063 	ld	b, (hl)
+    000004AD 11 1C 01         [12] 1064 	ld	de, #0x011c
+    000004B0 D5               [16] 1065 	push	de
+    000004B1 11 00 00         [12] 1066 	ld	de, #0x0000
+    000004B4 D5               [16] 1067 	push	de
+    000004B5 C5               [16] 1068 	push	bc
+    000004B6 CDr00r00         [24] 1069 	call	_memset
+    000004B9 E8 06            [16] 1070 	add	sp, #6
+                                   1071 ;src/dungeon_play.c:82: if(!dungeon_enter(&p->dungeon,floor,position,direction)){p->action.kind=DPLAY_INVALID;return DPLAY_INVALID;}
+    000004BB F8 06            [12] 1072 	ldhl	sp,	#6
+    000004BD 2A               [ 8] 1073 	ld	a, (hl+)
+    000004BE 4F               [ 4] 1074 	ld	c, a
+    000004BF 46               [ 8] 1075 	ld	b, (hl)
+    000004C0 59               [ 4] 1076 	ld	e, c
+    000004C1 50               [ 4] 1077 	ld	d, b
+    000004C2 C5               [16] 1078 	push	bc
+    000004C3 D5               [16] 1079 	push	de
+    000004C4 F8 12            [12] 1080 	ldhl	sp,	#18
+    000004C6 3A               [ 8] 1081 	ld	a, (hl-)
+    000004C7 47               [ 4] 1082 	ld	b, a
+    000004C8 3A               [ 8] 1083 	ld	a, (hl-)
+    000004C9 4F               [ 4] 1084 	ld	c, a
+    000004CA C5               [16] 1085 	push	bc
+    000004CB 7E               [ 8] 1086 	ld	a, (hl)
+    000004CC F5               [16] 1087 	push	af
+    000004CD 33               [ 8] 1088 	inc	sp
+    000004CE D5               [16] 1089 	push	de
+    000004CF 1Er00            [ 8] 1090 	ld	e, #b_dungeon_enter
+    000004D1 21r00r00         [12] 1091 	ld	hl, #_dungeon_enter
+    000004D4 CDr00r00         [24] 1092 	call	___sdcc_bcall_ehl
+    000004D7 E8 05            [16] 1093 	add	sp, #5
+    000004D9 D1               [12] 1094 	pop	de
+    000004DA C1               [12] 1095 	pop	bc
+    000004DB B7               [ 4] 1096 	or	a, a
+    000004DC 20 08            [12] 1097 	jr	NZ, 00102$
+    000004DE 21 13 01         [12] 1098 	ld	hl, #0x0113
+    000004E1 09               [ 8] 1099 	add	hl, bc
+    000004E2 3E FF            [ 8] 1100 	ld	a,#0xff
+    000004E4 77               [ 8] 1101 	ld	(hl),a
+    000004E5 C9               [16] 1102 	ret
+    000004E6                       1103 00102$:
+                                   1104 ;src/dungeon_play.c:83: p->active=1;p->retained_trap=trap;
+    000004E6 21 08 01         [12] 1105 	ld	hl, #0x0108
+    000004E9 09               [ 8] 1106 	add	hl, bc
+    000004EA 36 01            [12] 1107 	ld	(hl), #0x01
+    000004EC 21 12 01         [12] 1108 	ld	hl, #0x0112
+    000004EF 09               [ 8] 1109 	add	hl, bc
+    000004F0 E5               [16] 1110 	push	hl
+    000004F1 F8 11            [12] 1111 	ldhl	sp,	#17
+    000004F3 7E               [ 8] 1112 	ld	a, (hl)
+    000004F4 E1               [12] 1113 	pop	hl
+    000004F5 77               [ 8] 1114 	ld	(hl), a
+                                   1115 ;src/dungeon_play.c:84: if(rpg_find_item(r,ItemID_MagicLamp)!=RPG_NO_SLOT){p->dungeon.light=255;dungeon_refresh_light(&p->dungeon);}
+    000004F6 C5               [16] 1116 	push	bc
+    000004F7 D5               [16] 1117 	push	de
+    000004F8 3E 39            [ 8] 1118 	ld	a, #0x39
+    000004FA F5               [16] 1119 	push	af
+    000004FB 33               [ 8] 1120 	inc	sp
+    000004FC F8 0D            [12] 1121 	ldhl	sp,	#13
+    000004FE 2A               [ 8] 1122 	ld	a, (hl+)
+    000004FF 66               [ 8] 1123 	ld	h, (hl)
+    00000500 6F               [ 4] 1124 	ld	l, a
+    00000501 E5               [16] 1125 	push	hl
+    00000502 1Er00            [ 8] 1126 	ld	e, #b_rpg_find_item
+    00000504 21r00r00         [12] 1127 	ld	hl, #_rpg_find_item
+    00000507 CDr00r00         [24] 1128 	call	___sdcc_bcall_ehl
+    0000050A E8 03            [16] 1129 	add	sp, #3
+    0000050C D1               [12] 1130 	pop	de
+    0000050D C1               [12] 1131 	pop	bc
+    0000050E 3C               [ 4] 1132 	inc	a
+    0000050F 28 13            [12] 1133 	jr	Z, 00104$
+    00000511 69               [ 4] 1134 	ld	l, c
+    00000512 60               [ 4] 1135 	ld	h, b
+    00000513 23               [ 8] 1136 	inc	hl
+    00000514 23               [ 8] 1137 	inc	hl
+    00000515 23               [ 8] 1138 	inc	hl
+    00000516 36 FF            [12] 1139 	ld	(hl), #0xff
+    00000518 C5               [16] 1140 	push	bc
+    00000519 D5               [16] 1141 	push	de
+    0000051A 1Er00            [ 8] 1142 	ld	e, #b_dungeon_refresh_light
+    0000051C 21r00r00         [12] 1143 	ld	hl, #_dungeon_refresh_light
+    0000051F CDr00r00         [24] 1144 	call	___sdcc_bcall_ehl
+    00000522 E1               [12] 1145 	pop	hl
+    00000523 C1               [12] 1146 	pop	bc
+    00000524                       1147 00104$:
+                                   1148 ;src/dungeon_play.c:85: p->initial_dark=1;queue(p,position,1);
+    00000524 21 10 01         [12] 1149 	ld	hl, #0x0110
+    00000527 09               [ 8] 1150 	add	hl, bc
+    00000528 3E 01            [ 8] 1151 	ld	a,#0x01
+    0000052A 77               [ 8] 1152 	ld	(hl),a
+    0000052B F5               [16] 1153 	push	af
+    0000052C 33               [ 8] 1154 	inc	sp
+    0000052D F8 0E            [12] 1155 	ldhl	sp,	#14
+    0000052F 7E               [ 8] 1156 	ld	a, (hl)
+    00000530 F5               [16] 1157 	push	af
+    00000531 33               [ 8] 1158 	inc	sp
+    00000532 C5               [16] 1159 	push	bc
+    00000533 1E 0B            [ 8] 1160 	ld	e, #b_queue
+    00000535 21r00r00         [12] 1161 	ld	hl, #_queue
+    00000538 CDr00r00         [24] 1162 	call	___sdcc_bcall_ehl
+    0000053B E8 04            [16] 1163 	add	sp, #4
+                                   1164 ;src/dungeon_play.c:86: return dplay_resume(p,r,e);
+    0000053D F8 0A            [12] 1165 	ldhl	sp,	#10
+    0000053F 2A               [ 8] 1166 	ld	a, (hl+)
+    00000540 5F               [ 4] 1167 	ld	e, a
+    00000541 56               [ 8] 1168 	ld	d, (hl)
+    00000542 D5               [16] 1169 	push	de
+    00000543 F8 0A            [12] 1170 	ldhl	sp,	#10
+    00000545 2A               [ 8] 1171 	ld	a, (hl+)
+    00000546 5F               [ 4] 1172 	ld	e, a
+    00000547 56               [ 8] 1173 	ld	d, (hl)
+    00000548 D5               [16] 1174 	push	de
+    00000549 F8 0A            [12] 1175 	ldhl	sp,	#10
+    0000054B 2A               [ 8] 1176 	ld	a, (hl+)
+    0000054C 5F               [ 4] 1177 	ld	e, a
+    0000054D 56               [ 8] 1178 	ld	d, (hl)
+    0000054E D5               [16] 1179 	push	de
+    0000054F 1Er00            [ 8] 1180 	ld	e, #b_dplay_resume
+    00000551 21r9Ar00         [12] 1181 	ld	hl, #_dplay_resume
+    00000554 CDr00r00         [24] 1182 	call	___sdcc_bcall_ehl
+    00000557 E8 06            [16] 1183 	add	sp, #6
+                                   1184 ;src/dungeon_play.c:87: }
+    00000559 C9               [16] 1185 	ret
+                                   1186 ;src/dungeon_play.c:88: uint8_t dplay_scene_fall(DungeonPlay *p,RPGState *r,EventState *e,uint8_t floor,uint8_t position,uint8_t direction,uint8_t trap) RPG_BANKED {
+                                   1187 ;	---------------------------------
+                                   1188 ; Function dplay_scene_fall
+                                   1189 ; ---------------------------------
+                         0000000B  1190 	b_dplay_scene_fall	= 11
+    0000055A                       1191 _dplay_scene_fall::
+    0000055A E8 FD            [16] 1192 	add	sp, #-3
+                                   1193 ;src/dungeon_play.c:89: uint8_t light=p->dungeon.light;
+    0000055C F8 09            [12] 1194 	ldhl	sp,	#9
+    0000055E 2A               [ 8] 1195 	ld	a, (hl+)
+    0000055F 4F               [ 4] 1196 	ld	c, a
+    00000560 46               [ 8] 1197 	ld	b, (hl)
+    00000561 59               [ 4] 1198 	ld	e, c
+    00000562 50               [ 4] 1199 	ld	d, b
+    00000563 13               [ 8] 1200 	inc	de
+    00000564 13               [ 8] 1201 	inc	de
+    00000565 13               [ 8] 1202 	inc	de
+    00000566 1A               [ 8] 1203 	ld	a, (de)
+    00000567 F8 00            [12] 1204 	ldhl	sp,	#0
+    00000569 77               [ 8] 1205 	ld	(hl), a
+                                   1206 ;src/dungeon_play.c:90: memset(p,0,sizeof(*p));
+    0000056A F8 09            [12] 1207 	ldhl	sp,	#9
+    0000056C 7E               [ 8] 1208 	ld	a, (hl)
+    0000056D F8 01            [12] 1209 	ldhl	sp,	#1
+    0000056F 77               [ 8] 1210 	ld	(hl), a
+    00000570 F8 0A            [12] 1211 	ldhl	sp,	#10
+    00000572 7E               [ 8] 1212 	ld	a, (hl)
+    00000573 F8 02            [12] 1213 	ldhl	sp,	#2
+    00000575 77               [ 8] 1214 	ld	(hl), a
+    00000576 D5               [16] 1215 	push	de
+    00000577 21 1C 01         [12] 1216 	ld	hl, #0x011c
+    0000057A E5               [16] 1217 	push	hl
+    0000057B 21 00 00         [12] 1218 	ld	hl, #0x0000
+    0000057E E5               [16] 1219 	push	hl
+    0000057F F8 07            [12] 1220 	ldhl	sp,	#7
+    00000581 2A               [ 8] 1221 	ld	a, (hl+)
+    00000582 66               [ 8] 1222 	ld	h, (hl)
+    00000583 6F               [ 4] 1223 	ld	l, a
+    00000584 E5               [16] 1224 	push	hl
+    00000585 CDr00r00         [24] 1225 	call	_memset
+    00000588 E8 06            [16] 1226 	add	sp, #6
+    0000058A D1               [12] 1227 	pop	de
+                                   1228 ;src/dungeon_play.c:91: if(floor>=DUNGEON_FLOOR_COUNT||direction>3u){p->action.kind=DPLAY_INVALID;return DPLAY_INVALID;}
+    0000058B F8 0F            [12] 1229 	ldhl	sp,	#15
+    0000058D 7E               [ 8] 1230 	ld	a, (hl)
+    0000058E D6 3D            [ 8] 1231 	sub	a, #0x3d
+    00000590 30 07            [12] 1232 	jr	NC, 00101$
+    00000592 23               [ 8] 1233 	inc	hl
+    00000593 23               [ 8] 1234 	inc	hl
+    00000594 3E 03            [ 8] 1235 	ld	a, #0x03
+    00000596 96               [ 8] 1236 	sub	a, (hl)
+    00000597 30 0A            [12] 1237 	jr	NC, 00102$
+    00000599                       1238 00101$:
+    00000599 21 13 01         [12] 1239 	ld	hl, #0x0113
+    0000059C 09               [ 8] 1240 	add	hl, bc
+    0000059D 3E FF            [ 8] 1241 	ld	a,#0xff
+    0000059F 77               [ 8] 1242 	ld	(hl),a
+    000005A0 C3r24r06         [16] 1243 	jp	00104$
+    000005A3                       1244 00102$:
+                                   1245 ;src/dungeon_play.c:92: p->dungeon.position=position;p->dungeon.direction=direction;p->dungeon.light=light;
+    000005A3 69               [ 4] 1246 	ld	l, c
+    000005A4 60               [ 4] 1247 	ld	h, b
+    000005A5 23               [ 8] 1248 	inc	hl
+    000005A6 E5               [16] 1249 	push	hl
+    000005A7 F8 12            [12] 1250 	ldhl	sp,	#18
+    000005A9 7E               [ 8] 1251 	ld	a, (hl)
+    000005AA E1               [12] 1252 	pop	hl
+    000005AB 77               [ 8] 1253 	ld	(hl), a
+    000005AC 69               [ 4] 1254 	ld	l, c
+    000005AD 60               [ 4] 1255 	ld	h, b
+    000005AE 23               [ 8] 1256 	inc	hl
+    000005AF 23               [ 8] 1257 	inc	hl
+    000005B0 E5               [16] 1258 	push	hl
+    000005B1 F8 13            [12] 1259 	ldhl	sp,	#19
+    000005B3 7E               [ 8] 1260 	ld	a, (hl)
+    000005B4 E1               [12] 1261 	pop	hl
+    000005B5 77               [ 8] 1262 	ld	(hl), a
+    000005B6 F8 00            [12] 1263 	ldhl	sp,	#0
+    000005B8 7E               [ 8] 1264 	ld	a, (hl)
+    000005B9 12               [ 8] 1265 	ld	(de), a
+                                   1266 ;src/dungeon_play.c:93: dungeon_load_floor(&p->dungeon,floor?floor-1u:0u);p->active=1;p->retained_trap=trap;
+    000005BA F8 0F            [12] 1267 	ldhl	sp,	#15
+    000005BC 7E               [ 8] 1268 	ld	a, (hl)
+    000005BD B7               [ 4] 1269 	or	a, a
+    000005BE 28 04            [12] 1270 	jr	Z, 00106$
+    000005C0 7E               [ 8] 1271 	ld	a, (hl)
+    000005C1 3D               [ 4] 1272 	dec	a
+    000005C2 18 01            [12] 1273 	jr	00107$
+    000005C4                       1274 00106$:
+    000005C4 AF               [ 4] 1275 	xor	a, a
+    000005C5                       1276 00107$:
+    000005C5 59               [ 4] 1277 	ld	e, c
+    000005C6 50               [ 4] 1278 	ld	d, b
+    000005C7 C5               [16] 1279 	push	bc
+    000005C8 D5               [16] 1280 	push	de
+    000005C9 F5               [16] 1281 	push	af
+    000005CA 33               [ 8] 1282 	inc	sp
+    000005CB D5               [16] 1283 	push	de
+    000005CC 1Er00            [ 8] 1284 	ld	e, #b_dungeon_load_floor
+    000005CE 21r00r00         [12] 1285 	ld	hl, #_dungeon_load_floor
+    000005D1 CDr00r00         [24] 1286 	call	___sdcc_bcall_ehl
+    000005D4 E8 03            [16] 1287 	add	sp, #3
+    000005D6 D1               [12] 1288 	pop	de
+    000005D7 C1               [12] 1289 	pop	bc
+    000005D8 21 08 01         [12] 1290 	ld	hl, #0x0108
+    000005DB 09               [ 8] 1291 	add	hl, bc
+    000005DC 36 01            [12] 1292 	ld	(hl), #0x01
+    000005DE 21 12 01         [12] 1293 	ld	hl, #0x0112
+    000005E1 09               [ 8] 1294 	add	hl, bc
+    000005E2 E5               [16] 1295 	push	hl
+    000005E3 F8 14            [12] 1296 	ldhl	sp,	#20
+    000005E5 7E               [ 8] 1297 	ld	a, (hl)
+    000005E6 E1               [12] 1298 	pop	hl
+    000005E7 77               [ 8] 1299 	ld	(hl), a
+                                   1300 ;src/dungeon_play.c:94: dungeon_present_scene_fall(&p->dungeon);
+    000005E8 C5               [16] 1301 	push	bc
+    000005E9 D5               [16] 1302 	push	de
+    000005EA 1Er00            [ 8] 1303 	ld	e, #b_dungeon_present_scene_fall
+    000005EC 21r00r00         [12] 1304 	ld	hl, #_dungeon_present_scene_fall
+    000005EF CDr00r00         [24] 1305 	call	___sdcc_bcall_ehl
+    000005F2 E1               [12] 1306 	pop	hl
+    000005F3 C1               [12] 1307 	pop	bc
+                                   1308 ;src/dungeon_play.c:95: queue(p,position,1u);return dplay_resume(p,r,e);
+    000005F4 3E 01            [ 8] 1309 	ld	a, #0x01
+    000005F6 F5               [16] 1310 	push	af
+    000005F7 33               [ 8] 1311 	inc	sp
+    000005F8 F8 11            [12] 1312 	ldhl	sp,	#17
+    000005FA 7E               [ 8] 1313 	ld	a, (hl)
+    000005FB F5               [16] 1314 	push	af
+    000005FC 33               [ 8] 1315 	inc	sp
+    000005FD C5               [16] 1316 	push	bc
+    000005FE 1E 0B            [ 8] 1317 	ld	e, #b_queue
+    00000600 21r00r00         [12] 1318 	ld	hl, #_queue
+    00000603 CDr00r00         [24] 1319 	call	___sdcc_bcall_ehl
+    00000606 E8 04            [16] 1320 	add	sp, #4
+    00000608 F8 0D            [12] 1321 	ldhl	sp,	#13
+    0000060A 2A               [ 8] 1322 	ld	a, (hl+)
+    0000060B 5F               [ 4] 1323 	ld	e, a
+    0000060C 56               [ 8] 1324 	ld	d, (hl)
+    0000060D D5               [16] 1325 	push	de
+    0000060E F8 0D            [12] 1326 	ldhl	sp,	#13
+    00000610 2A               [ 8] 1327 	ld	a, (hl+)
+    00000611 5F               [ 4] 1328 	ld	e, a
+    00000612 56               [ 8] 1329 	ld	d, (hl)
+    00000613 D5               [16] 1330 	push	de
+    00000614 F8 0D            [12] 1331 	ldhl	sp,	#13
+    00000616 2A               [ 8] 1332 	ld	a, (hl+)
+    00000617 5F               [ 4] 1333 	ld	e, a
+    00000618 56               [ 8] 1334 	ld	d, (hl)
+    00000619 D5               [16] 1335 	push	de
+    0000061A 1Er00            [ 8] 1336 	ld	e, #b_dplay_resume
+    0000061C 21r9Ar00         [12] 1337 	ld	hl, #_dplay_resume
+    0000061F CDr00r00         [24] 1338 	call	___sdcc_bcall_ehl
+    00000622 E8 06            [16] 1339 	add	sp, #6
+    00000624                       1340 00104$:
+                                   1341 ;src/dungeon_play.c:96: }
+    00000624 E8 03            [16] 1342 	add	sp, #3
+    00000626 C9               [16] 1343 	ret
+                                   1344 ;src/dungeon_play.c:97: uint8_t dplay_step(DungeonPlay *p,RPGState *r,EventState *e,uint8_t command) RPG_BANKED {
+                                   1345 ;	---------------------------------
+                                   1346 ; Function dplay_step
+                                   1347 ; ---------------------------------
+                         0000000B  1348 	b_dplay_step	= 11
+    00000627                       1349 _dplay_step::
+    00000627 E8 E3            [16] 1350 	add	sp, #-29
+                                   1351 ;src/dungeon_play.c:98: DungeonAction a;uint8_t front=dungeon_sample(&p->dungeon,1)&7u,mode,old_position=p->dungeon.position;
+    00000629 F8 23            [12] 1352 	ldhl	sp,	#35
+    0000062B 7E               [ 8] 1353 	ld	a, (hl)
+    0000062C F8 0C            [12] 1354 	ldhl	sp,	#12
+    0000062E 77               [ 8] 1355 	ld	(hl), a
+    0000062F F8 24            [12] 1356 	ldhl	sp,	#36
+    00000631 7E               [ 8] 1357 	ld	a, (hl)
+    00000632 F8 0D            [12] 1358 	ldhl	sp,	#13
+    00000634 32               [ 8] 1359 	ld	(hl-), a
+    00000635 2A               [ 8] 1360 	ld	a, (hl+)
+    00000636 23               [ 8] 1361 	inc	hl
+    00000637 32               [ 8] 1362 	ld	(hl-), a
+    00000638 2A               [ 8] 1363 	ld	a, (hl+)
+    00000639 23               [ 8] 1364 	inc	hl
+    0000063A 32               [ 8] 1365 	ld	(hl-), a
+    0000063B 3E 01            [ 8] 1366 	ld	a, #0x01
+    0000063D F5               [16] 1367 	push	af
+    0000063E 33               [ 8] 1368 	inc	sp
+    0000063F 2A               [ 8] 1369 	ld	a, (hl+)
+    00000640 5F               [ 4] 1370 	ld	e, a
+    00000641 56               [ 8] 1371 	ld	d, (hl)
+    00000642 D5               [16] 1372 	push	de
+    00000643 1Er00            [ 8] 1373 	ld	e, #b_dungeon_sample
+    00000645 21r00r00         [12] 1374 	ld	hl, #_dungeon_sample
+    00000648 CDr00r00         [24] 1375 	call	___sdcc_bcall_ehl
+    0000064B E8 03            [16] 1376 	add	sp, #3
+    0000064D E6 07            [ 8] 1377 	and	a, #0x07
+    0000064F F8 10            [12] 1378 	ldhl	sp,	#16
+    00000651 77               [ 8] 1379 	ld	(hl), a
+                                   1380 ;src/dungeon_play.c:123: queue(p,p->advance_second?a.positions[1]:p->dungeon.position,1);
+    00000652 F8 0C            [12] 1381 	ldhl	sp,#12
+    00000654 2A               [ 8] 1382 	ld	a, (hl+)
+    00000655 5F               [ 4] 1383 	ld	e, a
+    00000656 56               [ 8] 1384 	ld	d, (hl)
+    00000657 6B               [ 4] 1385 	ld	l, e
+    00000658 62               [ 4] 1386 	ld	h, d
+    00000659 23               [ 8] 1387 	inc	hl
+    0000065A E5               [16] 1388 	push	hl
+    0000065B 7D               [ 4] 1389 	ld	a, l
+    0000065C F8 13            [12] 1390 	ldhl	sp,	#19
+    0000065E 77               [ 8] 1391 	ld	(hl), a
+    0000065F E1               [12] 1392 	pop	hl
+    00000660 7C               [ 4] 1393 	ld	a, h
+    00000661 F8 12            [12] 1394 	ldhl	sp,	#18
+                                   1395 ;src/dungeon_play.c:98: DungeonAction a;uint8_t front=dungeon_sample(&p->dungeon,1)&7u,mode,old_position=p->dungeon.position;
+    00000663 32               [ 8] 1396 	ld	(hl-), a
+    00000664 2A               [ 8] 1397 	ld	a, (hl+)
+    00000665 5F               [ 4] 1398 	ld	e, a
+    00000666 2A               [ 8] 1399 	ld	a, (hl+)
+    00000667 57               [ 4] 1400 	ld	d, a
+    00000668 1A               [ 8] 1401 	ld	a, (de)
+    00000669 77               [ 8] 1402 	ld	(hl), a
+                                   1403 ;src/dungeon_play.c:99: dungeon_present_prepare(&p->dungeon);
+    0000066A F8 0E            [12] 1404 	ldhl	sp,	#14
+    0000066C 2A               [ 8] 1405 	ld	a, (hl+)
+    0000066D 5F               [ 4] 1406 	ld	e, a
+    0000066E 56               [ 8] 1407 	ld	d, (hl)
+    0000066F D5               [16] 1408 	push	de
+    00000670 1Er00            [ 8] 1409 	ld	e, #b_dungeon_present_prepare
+    00000672 21r00r00         [12] 1410 	ld	hl, #_dungeon_present_prepare
+    00000675 CDr00r00         [24] 1411 	call	___sdcc_bcall_ehl
+    00000678 E1               [12] 1412 	pop	hl
+                                   1413 ;src/dungeon_play.c:100: p->check_count=p->check_cursor=p->encounter_latch=p->advance_second=0;
+    00000679 F8 0C            [12] 1414 	ldhl	sp,#12
+    0000067B 2A               [ 8] 1415 	ld	a, (hl+)
+    0000067C 5F               [ 4] 1416 	ld	e, a
+    0000067D 56               [ 8] 1417 	ld	d, (hl)
+    0000067E 21 09 01         [12] 1418 	ld	hl, #0x0109
+    00000681 19               [ 8] 1419 	add	hl, de
+    00000682 E5               [16] 1420 	push	hl
+    00000683 7D               [ 4] 1421 	ld	a, l
+    00000684 F8 1D            [12] 1422 	ldhl	sp,	#29
+    00000686 77               [ 8] 1423 	ld	(hl), a
+    00000687 E1               [12] 1424 	pop	hl
+    00000688 7C               [ 4] 1425 	ld	a, h
+    00000689 F8 1C            [12] 1426 	ldhl	sp,	#28
+    0000068B 77               [ 8] 1427 	ld	(hl), a
+    0000068C F8 0C            [12] 1428 	ldhl	sp,#12
+    0000068E 2A               [ 8] 1429 	ld	a, (hl+)
+    0000068F 5F               [ 4] 1430 	ld	e, a
+    00000690 56               [ 8] 1431 	ld	d, (hl)
+    00000691 21 0A 01         [12] 1432 	ld	hl, #0x010a
+    00000694 19               [ 8] 1433 	add	hl, de
+    00000695 4D               [ 4] 1434 	ld	c, l
+    00000696 44               [ 4] 1435 	ld	b, h
+    00000697 F8 0C            [12] 1436 	ldhl	sp,#12
+    00000699 2A               [ 8] 1437 	ld	a, (hl+)
+    0000069A 5F               [ 4] 1438 	ld	e, a
+    0000069B 56               [ 8] 1439 	ld	d, (hl)
+    0000069C 21 0F 01         [12] 1440 	ld	hl, #0x010f
+    0000069F 19               [ 8] 1441 	add	hl, de
+    000006A0 E5               [16] 1442 	push	hl
+    000006A1 7D               [ 4] 1443 	ld	a, l
+    000006A2 F8 16            [12] 1444 	ldhl	sp,	#22
+    000006A4 77               [ 8] 1445 	ld	(hl), a
+    000006A5 E1               [12] 1446 	pop	hl
+    000006A6 7C               [ 4] 1447 	ld	a, h
+    000006A7 F8 15            [12] 1448 	ldhl	sp,	#21
+    000006A9 77               [ 8] 1449 	ld	(hl), a
+    000006AA F8 0C            [12] 1450 	ldhl	sp,#12
+    000006AC 2A               [ 8] 1451 	ld	a, (hl+)
+    000006AD 5F               [ 4] 1452 	ld	e, a
+    000006AE 56               [ 8] 1453 	ld	d, (hl)
+    000006AF 21 11 01         [12] 1454 	ld	hl, #0x0111
+    000006B2 19               [ 8] 1455 	add	hl, de
+    000006B3 E5               [16] 1456 	push	hl
+    000006B4 7D               [ 4] 1457 	ld	a, l
+    000006B5 F8 18            [12] 1458 	ldhl	sp,	#24
+    000006B7 77               [ 8] 1459 	ld	(hl), a
+    000006B8 E1               [12] 1460 	pop	hl
+    000006B9 7C               [ 4] 1461 	ld	a, h
+    000006BA F8 17            [12] 1462 	ldhl	sp,	#23
+    000006BC 32               [ 8] 1463 	ld	(hl-), a
+    000006BD 2A               [ 8] 1464 	ld	a, (hl+)
+    000006BE 66               [ 8] 1465 	ld	h, (hl)
+    000006BF 6F               [ 4] 1466 	ld	l, a
+    000006C0 36 00            [12] 1467 	ld	(hl), #0x00
+    000006C2 F8 14            [12] 1468 	ldhl	sp,	#20
+    000006C4 2A               [ 8] 1469 	ld	a, (hl+)
+    000006C5 66               [ 8] 1470 	ld	h, (hl)
+    000006C6 6F               [ 4] 1471 	ld	l, a
+    000006C7 36 00            [12] 1472 	ld	(hl), #0x00
+    000006C9 AF               [ 4] 1473 	xor	a, a
+    000006CA 02               [ 8] 1474 	ld	(bc), a
+    000006CB F8 1B            [12] 1475 	ldhl	sp,	#27
+    000006CD 2A               [ 8] 1476 	ld	a, (hl+)
+    000006CE 66               [ 8] 1477 	ld	h, (hl)
+    000006CF 6F               [ 4] 1478 	ld	l, a
+    000006D0 36 00            [12] 1479 	ld	(hl), #0x00
+                                   1480 ;src/dungeon_play.c:101: memset(&p->action,0,sizeof(p->action));
+    000006D2 F8 0C            [12] 1481 	ldhl	sp,#12
+    000006D4 2A               [ 8] 1482 	ld	a, (hl+)
+    000006D5 5F               [ 4] 1483 	ld	e, a
+    000006D6 56               [ 8] 1484 	ld	d, (hl)
+    000006D7 21 13 01         [12] 1485 	ld	hl, #0x0113
+    000006DA 19               [ 8] 1486 	add	hl, de
+    000006DB 4D               [ 4] 1487 	ld	c, l
+    000006DC 44               [ 4] 1488 	ld	b, h
+    000006DD 11 09 00         [12] 1489 	ld	de, #0x0009
+    000006E0 D5               [16] 1490 	push	de
+    000006E1 11 00 00         [12] 1491 	ld	de, #0x0000
+    000006E4 D5               [16] 1492 	push	de
+    000006E5 C5               [16] 1493 	push	bc
+    000006E6 CDr00r00         [24] 1494 	call	_memset
+    000006E9 E8 06            [16] 1495 	add	sp, #6
+                                   1496 ;src/dungeon_play.c:102: mode=dungeon_step(&p->dungeon,command,&a);
+    000006EB 21 04 00         [12] 1497 	ld	hl, #4
+    000006EE 39               [ 8] 1498 	add	hl, sp
+    000006EF E5               [16] 1499 	push	hl
+    000006F0 F8 2B            [12] 1500 	ldhl	sp,	#43
+    000006F2 7E               [ 8] 1501 	ld	a, (hl)
+    000006F3 F5               [16] 1502 	push	af
+    000006F4 33               [ 8] 1503 	inc	sp
+    000006F5 F8 11            [12] 1504 	ldhl	sp,	#17
+    000006F7 2A               [ 8] 1505 	ld	a, (hl+)
+    000006F8 5F               [ 4] 1506 	ld	e, a
+    000006F9 56               [ 8] 1507 	ld	d, (hl)
+    000006FA D5               [16] 1508 	push	de
+    000006FB 1Er00            [ 8] 1509 	ld	e, #b_dungeon_step
+    000006FD 21r00r00         [12] 1510 	ld	hl, #_dungeon_step
+    00000700 CDr00r00         [24] 1511 	call	___sdcc_bcall_ehl
+    00000703 E8 05            [16] 1512 	add	sp, #5
+    00000705 F8 1C            [12] 1513 	ldhl	sp,	#28
+    00000707 77               [ 8] 1514 	ld	(hl), a
+                                   1515 ;src/dungeon_play.c:103: if(mode==DUNGEON_MAP){p->action.kind=DPLAY_MAP;p->action.target=a.target;p->action.a=a.a;p->action.b=a.b;}
+    00000708 F8 0C            [12] 1516 	ldhl	sp,#12
+    0000070A 2A               [ 8] 1517 	ld	a, (hl+)
+    0000070B 5F               [ 4] 1518 	ld	e, a
+    0000070C 56               [ 8] 1519 	ld	d, (hl)
+    0000070D 21 13 01         [12] 1520 	ld	hl, #0x0113
+    00000710 19               [ 8] 1521 	add	hl, de
+    00000711 E5               [16] 1522 	push	hl
+    00000712 7D               [ 4] 1523 	ld	a, l
+    00000713 F8 1A            [12] 1524 	ldhl	sp,	#26
+    00000715 77               [ 8] 1525 	ld	(hl), a
+    00000716 E1               [12] 1526 	pop	hl
+    00000717 7C               [ 4] 1527 	ld	a, h
+    00000718 F8 19            [12] 1528 	ldhl	sp,	#25
+    0000071A 77               [ 8] 1529 	ld	(hl), a
+    0000071B F8 0C            [12] 1530 	ldhl	sp,#12
+    0000071D 2A               [ 8] 1531 	ld	a, (hl+)
+    0000071E 5F               [ 4] 1532 	ld	e, a
+    0000071F 56               [ 8] 1533 	ld	d, (hl)
+    00000720 21 14 01         [12] 1534 	ld	hl, #0x0114
+    00000723 19               [ 8] 1535 	add	hl, de
+    00000724 33               [ 8] 1536 	inc	sp
+    00000725 33               [ 8] 1537 	inc	sp
+    00000726 E5               [16] 1538 	push	hl
+    00000727 F8 0C            [12] 1539 	ldhl	sp,#12
+    00000729 2A               [ 8] 1540 	ld	a, (hl+)
+    0000072A 5F               [ 4] 1541 	ld	e, a
+    0000072B 56               [ 8] 1542 	ld	d, (hl)
+    0000072C 21 15 01         [12] 1543 	ld	hl, #0x0115
+    0000072F 19               [ 8] 1544 	add	hl, de
+    00000730 E5               [16] 1545 	push	hl
+    00000731 7D               [ 4] 1546 	ld	a, l
+    00000732 F8 04            [12] 1547 	ldhl	sp,	#4
+    00000734 77               [ 8] 1548 	ld	(hl), a
+    00000735 E1               [12] 1549 	pop	hl
+    00000736 7C               [ 4] 1550 	ld	a, h
+    00000737 F8 03            [12] 1551 	ldhl	sp,	#3
+    00000739 77               [ 8] 1552 	ld	(hl), a
+    0000073A F8 0C            [12] 1553 	ldhl	sp,#12
+    0000073C 2A               [ 8] 1554 	ld	a, (hl+)
+    0000073D 5F               [ 4] 1555 	ld	e, a
+    0000073E 56               [ 8] 1556 	ld	d, (hl)
+    0000073F 21 16 01         [12] 1557 	ld	hl, #0x0116
+    00000742 19               [ 8] 1558 	add	hl, de
+    00000743 E5               [16] 1559 	push	hl
+    00000744 7D               [ 4] 1560 	ld	a, l
+    00000745 F8 1C            [12] 1561 	ldhl	sp,	#28
+    00000747 77               [ 8] 1562 	ld	(hl), a
+    00000748 E1               [12] 1563 	pop	hl
+    00000749 7C               [ 4] 1564 	ld	a, h
+    0000074A F8 1B            [12] 1565 	ldhl	sp,	#27
+    0000074C 22               [ 8] 1566 	ld	(hl+), a
+    0000074D 7E               [ 8] 1567 	ld	a, (hl)
+    0000074E D6 08            [ 8] 1568 	sub	a, #0x08
+    00000750 20 24            [12] 1569 	jr	NZ, 00143$
+    00000752 F8 18            [12] 1570 	ldhl	sp,	#24
+    00000754 2A               [ 8] 1571 	ld	a, (hl+)
+    00000755 66               [ 8] 1572 	ld	h, (hl)
+    00000756 6F               [ 4] 1573 	ld	l, a
+    00000757 36 05            [12] 1574 	ld	(hl), #0x05
+    00000759 F8 05            [12] 1575 	ldhl	sp,	#5
+    0000075B 7E               [ 8] 1576 	ld	a, (hl)
+    0000075C E1               [12] 1577 	pop	hl
+    0000075D E5               [16] 1578 	push	hl
+    0000075E 77               [ 8] 1579 	ld	(hl), a
+    0000075F F8 06            [12] 1580 	ldhl	sp,	#6
+    00000761 7E               [ 8] 1581 	ld	a, (hl)
+    00000762 F8 02            [12] 1582 	ldhl	sp,	#2
+    00000764 5E               [ 8] 1583 	ld	e, (hl)
+    00000765 23               [ 8] 1584 	inc	hl
+    00000766 66               [ 8] 1585 	ld	h, (hl)
+    00000767 6B               [ 4] 1586 	ld	l, e
+    00000768 77               [ 8] 1587 	ld	(hl), a
+    00000769 F8 07            [12] 1588 	ldhl	sp,	#7
+    0000076B 7E               [ 8] 1589 	ld	a, (hl)
+    0000076C F8 1A            [12] 1590 	ldhl	sp,	#26
+    0000076E 5E               [ 8] 1591 	ld	e, (hl)
+    0000076F 23               [ 8] 1592 	inc	hl
+    00000770 66               [ 8] 1593 	ld	h, (hl)
+    00000771 6B               [ 4] 1594 	ld	l, e
+    00000772 77               [ 8] 1595 	ld	(hl), a
+    00000773 C3rE7r09         [16] 1596 	jp	00144$
+    00000776                       1597 00143$:
+                                   1598 ;src/dungeon_play.c:104: else if(mode==DUNGEON_EXIT_SAVED)p->action.kind=DPLAY_EXIT;
+    00000776 F8 1C            [12] 1599 	ldhl	sp,	#28
+    00000778 7E               [ 8] 1600 	ld	a, (hl)
+    00000779 D6 0D            [ 8] 1601 	sub	a, #0x0d
+    0000077B 20 0A            [12] 1602 	jr	NZ, 00140$
+    0000077D F8 18            [12] 1603 	ldhl	sp,	#24
+    0000077F 2A               [ 8] 1604 	ld	a, (hl+)
+    00000780 66               [ 8] 1605 	ld	h, (hl)
+    00000781 6F               [ 4] 1606 	ld	l, a
+    00000782 36 06            [12] 1607 	ld	(hl), #0x06
+    00000784 C3rE7r09         [16] 1608 	jp	00144$
+    00000787                       1609 00140$:
+                                   1610 ;src/dungeon_play.c:105: else if(mode==DUNGEON_INTERACTION){p->action.kind=DPLAY_EVENT;p->action.target=a.a;p->action.a=a.b;p->action.type=a.interaction;p->action.b=a.target;}
+    00000787 F8 1C            [12] 1611 	ldhl	sp,	#28
+    00000789 7E               [ 8] 1612 	ld	a, (hl)
+    0000078A D6 0C            [ 8] 1613 	sub	a, #0x0c
+    0000078C 20 33            [12] 1614 	jr	NZ, 00137$
+    0000078E F8 18            [12] 1615 	ldhl	sp,	#24
+    00000790 2A               [ 8] 1616 	ld	a, (hl+)
+    00000791 66               [ 8] 1617 	ld	h, (hl)
+    00000792 6F               [ 4] 1618 	ld	l, a
+    00000793 36 04            [12] 1619 	ld	(hl), #0x04
+    00000795 F8 06            [12] 1620 	ldhl	sp,	#6
+    00000797 7E               [ 8] 1621 	ld	a, (hl)
+    00000798 E1               [12] 1622 	pop	hl
+    00000799 E5               [16] 1623 	push	hl
+    0000079A 77               [ 8] 1624 	ld	(hl), a
+    0000079B F8 07            [12] 1625 	ldhl	sp,	#7
+    0000079D 7E               [ 8] 1626 	ld	a, (hl)
+    0000079E F8 02            [12] 1627 	ldhl	sp,	#2
+    000007A0 5E               [ 8] 1628 	ld	e, (hl)
+    000007A1 23               [ 8] 1629 	inc	hl
+    000007A2 66               [ 8] 1630 	ld	h, (hl)
+    000007A3 6B               [ 4] 1631 	ld	l, e
+    000007A4 77               [ 8] 1632 	ld	(hl), a
+    000007A5 F8 0C            [12] 1633 	ldhl	sp,#12
+    000007A7 2A               [ 8] 1634 	ld	a, (hl+)
+    000007A8 5F               [ 4] 1635 	ld	e, a
+    000007A9 56               [ 8] 1636 	ld	d, (hl)
+    000007AA 21 17 01         [12] 1637 	ld	hl, #0x0117
+    000007AD 19               [ 8] 1638 	add	hl, de
+    000007AE 4D               [ 4] 1639 	ld	c, l
+    000007AF 44               [ 4] 1640 	ld	b, h
+    000007B0 F8 08            [12] 1641 	ldhl	sp,	#8
+    000007B2 7E               [ 8] 1642 	ld	a, (hl)
+    000007B3 02               [ 8] 1643 	ld	(bc), a
+    000007B4 F8 05            [12] 1644 	ldhl	sp,	#5
+    000007B6 7E               [ 8] 1645 	ld	a, (hl)
+    000007B7 F8 1A            [12] 1646 	ldhl	sp,	#26
+    000007B9 5E               [ 8] 1647 	ld	e, (hl)
+    000007BA 23               [ 8] 1648 	inc	hl
+    000007BB 66               [ 8] 1649 	ld	h, (hl)
+    000007BC 6B               [ 4] 1650 	ld	l, e
+    000007BD 77               [ 8] 1651 	ld	(hl), a
+    000007BE C3rE7r09         [16] 1652 	jp	00144$
+    000007C1                       1653 00137$:
+                                   1654 ;src/dungeon_play.c:106: else if(mode==DUNGEON_MENU)p->action.kind=DPLAY_MENU;
+    000007C1 F8 1C            [12] 1655 	ldhl	sp,	#28
+    000007C3 7E               [ 8] 1656 	ld	a, (hl)
+    000007C4 D6 0E            [ 8] 1657 	sub	a, #0x0e
+    000007C6 20 0A            [12] 1658 	jr	NZ, 00134$
+    000007C8 F8 18            [12] 1659 	ldhl	sp,	#24
+    000007CA 2A               [ 8] 1660 	ld	a, (hl+)
+    000007CB 66               [ 8] 1661 	ld	h, (hl)
+    000007CC 6F               [ 4] 1662 	ld	l, a
+    000007CD 36 01            [12] 1663 	ld	(hl), #0x01
+    000007CF C3rE7r09         [16] 1664 	jp	00144$
+    000007D2                       1665 00134$:
+                                   1666 ;src/dungeon_play.c:107: else if(mode==DUNGEON_INVALID)p->action.kind=DPLAY_INVALID;
+    000007D2 F8 1C            [12] 1667 	ldhl	sp,	#28
+    000007D4 7E               [ 8] 1668 	ld	a, (hl)
+    000007D5 3C               [ 4] 1669 	inc	a
+    000007D6 20 0A            [12] 1670 	jr	NZ, 00131$
+    000007D8 F8 18            [12] 1671 	ldhl	sp,	#24
+    000007DA 2A               [ 8] 1672 	ld	a, (hl+)
+    000007DB 66               [ 8] 1673 	ld	h, (hl)
+    000007DC 6F               [ 4] 1674 	ld	l, a
+    000007DD 36 FF            [12] 1675 	ld	(hl), #0xff
+    000007DF C3rE7r09         [16] 1676 	jp	00144$
+    000007E2                       1677 00131$:
+                                   1678 ;src/dungeon_play.c:108: else if(mode==DUNGEON_OPENED)dungeon_present_door(&p->dungeon,2u);
+    000007E2 F8 1C            [12] 1679 	ldhl	sp,	#28
+    000007E4 7E               [ 8] 1680 	ld	a, (hl)
+    000007E5 D6 03            [ 8] 1681 	sub	a, #0x03
+    000007E7 20 17            [12] 1682 	jr	NZ, 00128$
+    000007E9 3E 02            [ 8] 1683 	ld	a, #0x02
+    000007EB F5               [16] 1684 	push	af
+    000007EC 33               [ 8] 1685 	inc	sp
+    000007ED F8 0F            [12] 1686 	ldhl	sp,	#15
+    000007EF 2A               [ 8] 1687 	ld	a, (hl+)
+    000007F0 5F               [ 4] 1688 	ld	e, a
+    000007F1 56               [ 8] 1689 	ld	d, (hl)
+    000007F2 D5               [16] 1690 	push	de
+    000007F3 1Er00            [ 8] 1691 	ld	e, #b_dungeon_present_door
+    000007F5 21r00r00         [12] 1692 	ld	hl, #_dungeon_present_door
+    000007F8 CDr00r00         [24] 1693 	call	___sdcc_bcall_ehl
+    000007FB E8 03            [16] 1694 	add	sp, #3
+    000007FD C3rE7r09         [16] 1695 	jp	00144$
+    00000800                       1696 00128$:
+                                   1697 ;src/dungeon_play.c:109: else if(mode==DUNGEON_MOVED||mode==DUNGEON_TURNED||mode==DUNGEON_CHANGED_FLOOR||mode==DUNGEON_FELL) {
+    00000800 F8 1C            [12] 1698 	ldhl	sp,	#28
+    00000802 7E               [ 8] 1699 	ld	a, (hl)
+    00000803 3D               [ 4] 1700 	dec	a
+    00000804 3E 01            [ 8] 1701 	ld	a, #0x01
+    00000806 28 01            [12] 1702 	jr	Z, 00343$
+    00000808 AF               [ 4] 1703 	xor	a, a
+    00000809                       1704 00343$:
+    00000809 F8 1A            [12] 1705 	ldhl	sp,	#26
+    0000080B 22               [ 8] 1706 	ld	(hl+), a
+    0000080C 23               [ 8] 1707 	inc	hl
+    0000080D 7E               [ 8] 1708 	ld	a, (hl)
+    0000080E D6 02            [ 8] 1709 	sub	a, #0x02
+    00000810 3E 01            [ 8] 1710 	ld	a, #0x01
+    00000812 28 01            [12] 1711 	jr	Z, 00345$
+    00000814 AF               [ 4] 1712 	xor	a, a
+    00000815                       1713 00345$:
+    00000815 4F               [ 4] 1714 	ld	c, a
+    00000816 F8 1C            [12] 1715 	ldhl	sp,	#28
+    00000818 7E               [ 8] 1716 	ld	a, (hl)
+    00000819 D6 04            [ 8] 1717 	sub	a, #0x04
+    0000081B 3E 01            [ 8] 1718 	ld	a, #0x01
+    0000081D 28 01            [12] 1719 	jr	Z, 00347$
+    0000081F AF               [ 4] 1720 	xor	a, a
+    00000820                       1721 00347$:
+    00000820 F8 1B            [12] 1722 	ldhl	sp,	#27
+    00000822 22               [ 8] 1723 	ld	(hl+), a
+    00000823 7E               [ 8] 1724 	ld	a, (hl)
+    00000824 D6 05            [ 8] 1725 	sub	a, #0x05
+    00000826 3E 01            [ 8] 1726 	ld	a, #0x01
+    00000828 28 01            [12] 1727 	jr	Z, 00349$
+    0000082A AF               [ 4] 1728 	xor	a, a
+    0000082B                       1729 00349$:
+    0000082B F8 1C            [12] 1730 	ldhl	sp,	#28
+    0000082D 32               [ 8] 1731 	ld	(hl-), a
+    0000082E 2B               [ 8] 1732 	dec	hl
+    0000082F 7E               [ 8] 1733 	ld	a, (hl)
+    00000830 B7               [ 4] 1734 	or	a, a
+    00000831 20 0E            [12] 1735 	jr	NZ, 00122$
+    00000833 B1               [ 4] 1736 	or	a, c
+    00000834 20 0B            [12] 1737 	jr	NZ, 00122$
+    00000836 23               [ 8] 1738 	inc	hl
+    00000837 7E               [ 8] 1739 	ld	a, (hl)
+    00000838 B7               [ 4] 1740 	or	a, a
+    00000839 20 06            [12] 1741 	jr	NZ, 00122$
+    0000083B 23               [ 8] 1742 	inc	hl
+    0000083C 7E               [ 8] 1743 	ld	a, (hl)
+    0000083D B7               [ 4] 1744 	or	a, a
+    0000083E CArE7r09         [16] 1745 	jp	Z, 00144$
+    00000841                       1746 00122$:
+                                   1747 ;src/dungeon_play.c:112: p->encounter_latch=mode==DUNGEON_TURNED || (mode==DUNGEON_MOVED &&
+    00000841 F8 14            [12] 1748 	ldhl	sp,	#20
+    00000843 2A               [ 8] 1749 	ld	a, (hl+)
+    00000844 5F               [ 4] 1750 	ld	e, a
+    00000845 56               [ 8] 1751 	ld	d, (hl)
+                                   1752 ;src/dungeon_play.c:113: (command==DUNGEON_CMD_BACK||front==0u||front==7u));
+    00000846 F8 29            [12] 1753 	ldhl	sp,	#41
+    00000848 7E               [ 8] 1754 	ld	a, (hl)
+    00000849 D6 02            [ 8] 1755 	sub	a, #0x02
+    0000084B 3E 01            [ 8] 1756 	ld	a, #0x01
+    0000084D 28 01            [12] 1757 	jr	Z, 00351$
+    0000084F AF               [ 4] 1758 	xor	a, a
+    00000850                       1759 00351$:
+    00000850 F8 18            [12] 1760 	ldhl	sp,	#24
+    00000852 77               [ 8] 1761 	ld	(hl), a
+    00000853 F8 10            [12] 1762 	ldhl	sp,	#16
+    00000855 7E               [ 8] 1763 	ld	a, (hl)
+    00000856 D6 07            [ 8] 1764 	sub	a, #0x07
+    00000858 3E 01            [ 8] 1765 	ld	a, #0x01
+    0000085A 28 01            [12] 1766 	jr	Z, 00353$
+    0000085C AF               [ 4] 1767 	xor	a, a
+    0000085D                       1768 00353$:
+    0000085D F8 19            [12] 1769 	ldhl	sp,	#25
+    0000085F 77               [ 8] 1770 	ld	(hl), a
+                                   1771 ;src/dungeon_play.c:112: p->encounter_latch=mode==DUNGEON_TURNED || (mode==DUNGEON_MOVED &&
+    00000860 41               [ 4] 1772 	ld	b, c
+    00000861 CB 40            [ 8] 1773 	bit	0, b
+    00000863 20 1A            [12] 1774 	jr	NZ, 00148$
+    00000865 23               [ 8] 1775 	inc	hl
+    00000866 CB 46            [12] 1776 	bit	0, (hl)
+    00000868 28 12            [12] 1777 	jr	Z, 00147$
+                                   1778 ;src/dungeon_play.c:113: (command==DUNGEON_CMD_BACK||front==0u||front==7u));
+    0000086A 2B               [ 8] 1779 	dec	hl
+    0000086B 2B               [ 8] 1780 	dec	hl
+    0000086C CB 46            [12] 1781 	bit	0, (hl)
+    0000086E 20 0F            [12] 1782 	jr	NZ, 00148$
+    00000870 F8 10            [12] 1783 	ldhl	sp,	#16
+    00000872 7E               [ 8] 1784 	ld	a, (hl)
+    00000873 B7               [ 4] 1785 	or	a, a
+    00000874 28 09            [12] 1786 	jr	Z, 00148$
+    00000876 F8 19            [12] 1787 	ldhl	sp,	#25
+    00000878 CB 46            [12] 1788 	bit	0, (hl)
+    0000087A 20 03            [12] 1789 	jr	NZ, 00148$
+    0000087C                       1790 00147$:
+    0000087C AF               [ 4] 1791 	xor	a, a
+    0000087D 18 02            [12] 1792 	jr	00149$
+    0000087F                       1793 00148$:
+    0000087F 3E 01            [ 8] 1794 	ld	a, #0x01
+    00000881                       1795 00149$:
+    00000881 12               [ 8] 1796 	ld	(de), a
+                                   1797 ;src/dungeon_play.c:114: if(mode==DUNGEON_MOVED&&command==DUNGEON_CMD_FORWARD&&(front==0u||front==7u)) {
+    00000882 F8 1A            [12] 1798 	ldhl	sp,	#26
+    00000884 7E               [ 8] 1799 	ld	a, (hl)
+    00000885 B7               [ 4] 1800 	or	a, a
+    00000886 28 73            [12] 1801 	jr	Z, 00114$
+    00000888 F8 29            [12] 1802 	ldhl	sp,	#41
+    0000088A 7E               [ 8] 1803 	ld	a, (hl)
+    0000088B 3D               [ 4] 1804 	dec	a
+    0000088C 20 6D            [12] 1805 	jr	NZ, 00114$
+    0000088E F8 10            [12] 1806 	ldhl	sp,	#16
+    00000890 7E               [ 8] 1807 	ld	a, (hl)
+    00000891 B7               [ 4] 1808 	or	a, a
+    00000892 28 06            [12] 1809 	jr	Z, 00113$
+    00000894 F8 19            [12] 1810 	ldhl	sp,	#25
+    00000896 7E               [ 8] 1811 	ld	a, (hl)
+    00000897 B7               [ 4] 1812 	or	a, a
+    00000898 28 61            [12] 1813 	jr	Z, 00114$
+    0000089A                       1814 00113$:
+                                   1815 ;src/dungeon_play.c:115: p->dungeon.position=old_position;dungeon_present_sequence(&p->dungeon,0u);
+    0000089A F8 11            [12] 1816 	ldhl	sp,	#17
+    0000089C 2A               [ 8] 1817 	ld	a, (hl+)
+    0000089D 5F               [ 4] 1818 	ld	e, a
+    0000089E 2A               [ 8] 1819 	ld	a, (hl+)
+    0000089F 57               [ 4] 1820 	ld	d, a
+    000008A0 7E               [ 8] 1821 	ld	a, (hl)
+    000008A1 12               [ 8] 1822 	ld	(de), a
+    000008A2 AF               [ 4] 1823 	xor	a, a
+    000008A3 F5               [16] 1824 	push	af
+    000008A4 33               [ 8] 1825 	inc	sp
+    000008A5 F8 0F            [12] 1826 	ldhl	sp,	#15
+    000008A7 2A               [ 8] 1827 	ld	a, (hl+)
+    000008A8 5F               [ 4] 1828 	ld	e, a
+    000008A9 56               [ 8] 1829 	ld	d, (hl)
+    000008AA D5               [16] 1830 	push	de
+    000008AB 1Er00            [ 8] 1831 	ld	e, #b_dungeon_present_sequence
+    000008AD 21r00r00         [12] 1832 	ld	hl, #_dungeon_present_sequence
+    000008B0 CDr00r00         [24] 1833 	call	___sdcc_bcall_ehl
+    000008B3 E8 03            [16] 1834 	add	sp, #3
+                                   1835 ;src/dungeon_play.c:116: p->dungeon.position=a.positions[0];dungeon_present_frame(&p->dungeon,0u);
+    000008B5 F8 0A            [12] 1836 	ldhl	sp,	#10
+    000008B7 7E               [ 8] 1837 	ld	a, (hl)
+    000008B8 F8 11            [12] 1838 	ldhl	sp,	#17
+    000008BA 5E               [ 8] 1839 	ld	e, (hl)
+    000008BB 23               [ 8] 1840 	inc	hl
+    000008BC 66               [ 8] 1841 	ld	h, (hl)
+    000008BD 6B               [ 4] 1842 	ld	l, e
+    000008BE 77               [ 8] 1843 	ld	(hl), a
+    000008BF AF               [ 4] 1844 	xor	a, a
+    000008C0 F5               [16] 1845 	push	af
+    000008C1 33               [ 8] 1846 	inc	sp
+    000008C2 F8 0F            [12] 1847 	ldhl	sp,	#15
+    000008C4 2A               [ 8] 1848 	ld	a, (hl+)
+    000008C5 5F               [ 4] 1849 	ld	e, a
+    000008C6 56               [ 8] 1850 	ld	d, (hl)
+    000008C7 D5               [16] 1851 	push	de
+    000008C8 1Er00            [ 8] 1852 	ld	e, #b_dungeon_present_frame
+    000008CA 21r00r00         [12] 1853 	ld	hl, #_dungeon_present_frame
+    000008CD CDr00r00         [24] 1854 	call	___sdcc_bcall_ehl
+    000008D0 E8 03            [16] 1855 	add	sp, #3
+                                   1856 ;src/dungeon_play.c:117: if(front==7u){queue(p,a.positions[0],1);p->advance_second=1;}
+    000008D2 F8 19            [12] 1857 	ldhl	sp,	#25
+    000008D4 7E               [ 8] 1858 	ld	a, (hl)
+    000008D5 B7               [ 4] 1859 	or	a, a
+    000008D6 CAr6Br09         [16] 1860 	jp	Z, 00115$
+    000008D9 F8 0A            [12] 1861 	ldhl	sp,	#10
+    000008DB 7E               [ 8] 1862 	ld	a, (hl)
+    000008DC 26 01            [ 8] 1863 	ld	h, #0x01
+    000008DE E5               [16] 1864 	push	hl
+    000008DF 33               [ 8] 1865 	inc	sp
+    000008E0 F5               [16] 1866 	push	af
+    000008E1 33               [ 8] 1867 	inc	sp
+    000008E2 F8 0E            [12] 1868 	ldhl	sp,	#14
+    000008E4 2A               [ 8] 1869 	ld	a, (hl+)
+    000008E5 5F               [ 4] 1870 	ld	e, a
+    000008E6 56               [ 8] 1871 	ld	d, (hl)
+    000008E7 D5               [16] 1872 	push	de
+    000008E8 1E 0B            [ 8] 1873 	ld	e, #b_queue
+    000008EA 21r00r00         [12] 1874 	ld	hl, #_queue
+    000008ED CDr00r00         [24] 1875 	call	___sdcc_bcall_ehl
+    000008F0 E8 04            [16] 1876 	add	sp, #4
+    000008F2 F8 16            [12] 1877 	ldhl	sp,	#22
+    000008F4 2A               [ 8] 1878 	ld	a, (hl+)
+    000008F5 66               [ 8] 1879 	ld	h, (hl)
+    000008F6 6F               [ 4] 1880 	ld	l, a
+    000008F7 36 01            [12] 1881 	ld	(hl), #0x01
+    000008F9 18 70            [12] 1882 	jr	00115$
+    000008FB                       1883 00114$:
+                                   1884 ;src/dungeon_play.c:119: else if(mode==DUNGEON_MOVED&&command==DUNGEON_CMD_BACK)dungeon_present_sequence(&p->dungeon,1u);
+    000008FB F8 1A            [12] 1885 	ldhl	sp,	#26
+    000008FD 7E               [ 8] 1886 	ld	a, (hl)
+    000008FE B7               [ 4] 1887 	or	a, a
+    000008FF 28 1C            [12] 1888 	jr	Z, 00110$
+    00000901 2B               [ 8] 1889 	dec	hl
+    00000902 2B               [ 8] 1890 	dec	hl
+    00000903 7E               [ 8] 1891 	ld	a, (hl)
+    00000904 B7               [ 4] 1892 	or	a, a
+    00000905 28 16            [12] 1893 	jr	Z, 00110$
+    00000907 3E 01            [ 8] 1894 	ld	a, #0x01
+    00000909 F5               [16] 1895 	push	af
+    0000090A 33               [ 8] 1896 	inc	sp
+    0000090B F8 0F            [12] 1897 	ldhl	sp,	#15
+    0000090D 2A               [ 8] 1898 	ld	a, (hl+)
+    0000090E 5F               [ 4] 1899 	ld	e, a
+    0000090F 56               [ 8] 1900 	ld	d, (hl)
+    00000910 D5               [16] 1901 	push	de
+    00000911 1Er00            [ 8] 1902 	ld	e, #b_dungeon_present_sequence
+    00000913 21r00r00         [12] 1903 	ld	hl, #_dungeon_present_sequence
+    00000916 CDr00r00         [24] 1904 	call	___sdcc_bcall_ehl
+    00000919 E8 03            [16] 1905 	add	sp, #3
+    0000091B 18 4E            [12] 1906 	jr	00115$
+    0000091D                       1907 00110$:
+                                   1908 ;src/dungeon_play.c:120: else if(mode==DUNGEON_TURNED)dungeon_present_turn(&p->dungeon,command==DUNGEON_CMD_RIGHT);
+    0000091D 79               [ 4] 1909 	ld	a, c
+    0000091E B7               [ 4] 1910 	or	a, a
+    0000091F 28 1E            [12] 1911 	jr	Z, 00107$
+    00000921 F8 29            [12] 1912 	ldhl	sp,	#41
+    00000923 7E               [ 8] 1913 	ld	a, (hl)
+    00000924 D6 04            [ 8] 1914 	sub	a, #0x04
+    00000926 3E 01            [ 8] 1915 	ld	a, #0x01
+    00000928 28 01            [12] 1916 	jr	Z, 00357$
+    0000092A AF               [ 4] 1917 	xor	a, a
+    0000092B                       1918 00357$:
+    0000092B F5               [16] 1919 	push	af
+    0000092C 33               [ 8] 1920 	inc	sp
+    0000092D F8 0F            [12] 1921 	ldhl	sp,	#15
+    0000092F 2A               [ 8] 1922 	ld	a, (hl+)
+    00000930 5F               [ 4] 1923 	ld	e, a
+    00000931 56               [ 8] 1924 	ld	d, (hl)
+    00000932 D5               [16] 1925 	push	de
+    00000933 1Er00            [ 8] 1926 	ld	e, #b_dungeon_present_turn
+    00000935 21r00r00         [12] 1927 	ld	hl, #_dungeon_present_turn
+    00000938 CDr00r00         [24] 1928 	call	___sdcc_bcall_ehl
+    0000093B E8 03            [16] 1929 	add	sp, #3
+    0000093D 18 2C            [12] 1930 	jr	00115$
+    0000093F                       1931 00107$:
+                                   1932 ;src/dungeon_play.c:121: else if(mode==DUNGEON_FELL)dungeon_present_fall(&p->dungeon);
+    0000093F F8 1C            [12] 1933 	ldhl	sp,	#28
+    00000941 7E               [ 8] 1934 	ld	a, (hl)
+    00000942 B7               [ 4] 1935 	or	a, a
+    00000943 28 11            [12] 1936 	jr	Z, 00104$
+    00000945 F8 0E            [12] 1937 	ldhl	sp,	#14
+    00000947 2A               [ 8] 1938 	ld	a, (hl+)
+    00000948 5F               [ 4] 1939 	ld	e, a
+    00000949 56               [ 8] 1940 	ld	d, (hl)
+    0000094A D5               [16] 1941 	push	de
+    0000094B 1Er00            [ 8] 1942 	ld	e, #b_dungeon_present_fall
+    0000094D 21r00r00         [12] 1943 	ld	hl, #_dungeon_present_fall
+    00000950 CDr00r00         [24] 1944 	call	___sdcc_bcall_ehl
+    00000953 E1               [12] 1945 	pop	hl
+    00000954 18 15            [12] 1946 	jr	00115$
+    00000956                       1947 00104$:
+                                   1948 ;src/dungeon_play.c:122: else dungeon_present_transition(&p->dungeon,mode==DUNGEON_CHANGED_FLOOR);
+    00000956 F8 1B            [12] 1949 	ldhl	sp,	#27
+    00000958 7E               [ 8] 1950 	ld	a, (hl)
+    00000959 F5               [16] 1951 	push	af
+    0000095A 33               [ 8] 1952 	inc	sp
+    0000095B F8 0F            [12] 1953 	ldhl	sp,	#15
+    0000095D 2A               [ 8] 1954 	ld	a, (hl+)
+    0000095E 5F               [ 4] 1955 	ld	e, a
+    0000095F 56               [ 8] 1956 	ld	d, (hl)
+    00000960 D5               [16] 1957 	push	de
+    00000961 1Er00            [ 8] 1958 	ld	e, #b_dungeon_present_transition
+    00000963 21r00r00         [12] 1959 	ld	hl, #_dungeon_present_transition
+    00000966 CDr00r00         [24] 1960 	call	___sdcc_bcall_ehl
+    00000969 E8 03            [16] 1961 	add	sp, #3
+    0000096B                       1962 00115$:
+                                   1963 ;src/dungeon_play.c:123: queue(p,p->advance_second?a.positions[1]:p->dungeon.position,1);
+    0000096B F8 16            [12] 1964 	ldhl	sp,#22
+    0000096D 2A               [ 8] 1965 	ld	a, (hl+)
+    0000096E 5F               [ 4] 1966 	ld	e, a
+    0000096F 56               [ 8] 1967 	ld	d, (hl)
+    00000970 1A               [ 8] 1968 	ld	a, (de)
+    00000971 F8 1C            [12] 1969 	ldhl	sp,	#28
+    00000973 77               [ 8] 1970 	ld	(hl), a
+    00000974 B7               [ 4] 1971 	or	a, a
+    00000975 28 08            [12] 1972 	jr	Z, 00159$
+    00000977 F8 0B            [12] 1973 	ldhl	sp,	#11
+    00000979 7E               [ 8] 1974 	ld	a, (hl)
+    0000097A F8 1C            [12] 1975 	ldhl	sp,	#28
+    0000097C 77               [ 8] 1976 	ld	(hl), a
+    0000097D 18 09            [12] 1977 	jr	00160$
+    0000097F                       1978 00159$:
+    0000097F F8 11            [12] 1979 	ldhl	sp,#17
+    00000981 2A               [ 8] 1980 	ld	a, (hl+)
+    00000982 5F               [ 4] 1981 	ld	e, a
+    00000983 56               [ 8] 1982 	ld	d, (hl)
+    00000984 1A               [ 8] 1983 	ld	a, (de)
+    00000985 F8 1C            [12] 1984 	ldhl	sp,	#28
+    00000987 77               [ 8] 1985 	ld	(hl), a
+    00000988                       1986 00160$:
+    00000988 3E 01            [ 8] 1987 	ld	a, #0x01
+    0000098A F5               [16] 1988 	push	af
+    0000098B 33               [ 8] 1989 	inc	sp
+    0000098C F8 1D            [12] 1990 	ldhl	sp,	#29
+    0000098E 7E               [ 8] 1991 	ld	a, (hl)
+    0000098F F5               [16] 1992 	push	af
+    00000990 33               [ 8] 1993 	inc	sp
+    00000991 F8 0E            [12] 1994 	ldhl	sp,	#14
+    00000993 2A               [ 8] 1995 	ld	a, (hl+)
+    00000994 5F               [ 4] 1996 	ld	e, a
+    00000995 56               [ 8] 1997 	ld	d, (hl)
+    00000996 D5               [16] 1998 	push	de
+    00000997 1E 0B            [ 8] 1999 	ld	e, #b_queue
+    00000999 21r00r00         [12] 2000 	ld	hl, #_queue
+    0000099C CDr00r00         [24] 2001 	call	___sdcc_bcall_ehl
+    0000099F E8 04            [16] 2002 	add	sp, #4
+                                   2003 ;src/dungeon_play.c:124: if(mode==DUNGEON_MOVED&&command==DUNGEON_CMD_BACK)queue(p,p->dungeon.position,11);
+    000009A1 F8 1A            [12] 2004 	ldhl	sp,	#26
+    000009A3 7E               [ 8] 2005 	ld	a, (hl)
+    000009A4 B7               [ 4] 2006 	or	a, a
+    000009A5 28 22            [12] 2007 	jr	Z, 00120$
+    000009A7 2B               [ 8] 2008 	dec	hl
+    000009A8 2B               [ 8] 2009 	dec	hl
+    000009A9 7E               [ 8] 2010 	ld	a, (hl)
+    000009AA B7               [ 4] 2011 	or	a, a
+    000009AB 28 1C            [12] 2012 	jr	Z, 00120$
+    000009AD F8 11            [12] 2013 	ldhl	sp,#17
+    000009AF 2A               [ 8] 2014 	ld	a, (hl+)
+    000009B0 5F               [ 4] 2015 	ld	e, a
+    000009B1 56               [ 8] 2016 	ld	d, (hl)
+    000009B2 1A               [ 8] 2017 	ld	a, (de)
+    000009B3 26 0B            [ 8] 2018 	ld	h, #0x0b
+    000009B5 E5               [16] 2019 	push	hl
+    000009B6 33               [ 8] 2020 	inc	sp
+    000009B7 F5               [16] 2021 	push	af
+    000009B8 33               [ 8] 2022 	inc	sp
+    000009B9 F8 0E            [12] 2023 	ldhl	sp,	#14
+    000009BB 2A               [ 8] 2024 	ld	a, (hl+)
+    000009BC 5F               [ 4] 2025 	ld	e, a
+    000009BD 56               [ 8] 2026 	ld	d, (hl)
+    000009BE D5               [16] 2027 	push	de
+    000009BF 1E 0B            [ 8] 2028 	ld	e, #b_queue
+    000009C1 21r00r00         [12] 2029 	ld	hl, #_queue
+    000009C4 CDr00r00         [24] 2030 	call	___sdcc_bcall_ehl
+    000009C7 E8 04            [16] 2031 	add	sp, #4
+    000009C9                       2032 00120$:
+                                   2033 ;src/dungeon_play.c:125: return dplay_resume(p,r,e);
+    000009C9 F8 27            [12] 2034 	ldhl	sp,	#39
+    000009CB 2A               [ 8] 2035 	ld	a, (hl+)
+    000009CC 5F               [ 4] 2036 	ld	e, a
+    000009CD 56               [ 8] 2037 	ld	d, (hl)
+    000009CE D5               [16] 2038 	push	de
+    000009CF F8 27            [12] 2039 	ldhl	sp,	#39
+    000009D1 2A               [ 8] 2040 	ld	a, (hl+)
+    000009D2 5F               [ 4] 2041 	ld	e, a
+    000009D3 56               [ 8] 2042 	ld	d, (hl)
+    000009D4 D5               [16] 2043 	push	de
+    000009D5 F8 27            [12] 2044 	ldhl	sp,	#39
+    000009D7 2A               [ 8] 2045 	ld	a, (hl+)
+    000009D8 5F               [ 4] 2046 	ld	e, a
+    000009D9 56               [ 8] 2047 	ld	d, (hl)
+    000009DA D5               [16] 2048 	push	de
+    000009DB 1Er00            [ 8] 2049 	ld	e, #b_dplay_resume
+    000009DD 21r9Ar00         [12] 2050 	ld	hl, #_dplay_resume
+    000009E0 CDr00r00         [24] 2051 	call	___sdcc_bcall_ehl
+    000009E3 E8 06            [16] 2052 	add	sp, #6
+    000009E5 18 06            [12] 2053 	jr	00145$
+    000009E7                       2054 00144$:
+                                   2055 ;src/dungeon_play.c:127: return p->action.kind;
+    000009E7 F8 18            [12] 2056 	ldhl	sp,#24
+    000009E9 2A               [ 8] 2057 	ld	a, (hl+)
+    000009EA 5F               [ 4] 2058 	ld	e, a
+    000009EB 56               [ 8] 2059 	ld	d, (hl)
+    000009EC 1A               [ 8] 2060 	ld	a, (de)
+    000009ED                       2061 00145$:
+                                   2062 ;src/dungeon_play.c:128: }
+    000009ED E8 1D            [16] 2063 	add	sp, #29
+    000009EF C9               [16] 2064 	ret
+                                   2065 ;src/dungeon_play.c:129: uint8_t dplay_escape(DungeonPlay *p,RPGState *r,EventState *e) RPG_BANKED {
+                                   2066 ;	---------------------------------
+                                   2067 ; Function dplay_escape
+                                   2068 ; ---------------------------------
+                         0000000B  2069 	b_dplay_escape	= 11
+    000009F0                       2070 _dplay_escape::
+    000009F0 E8 FA            [16] 2071 	add	sp, #-6
+                                   2072 ;src/dungeon_play.c:132: dungeon_present_prepare(&p->dungeon);
+    000009F2 F8 0C            [12] 2073 	ldhl	sp,	#12
+    000009F4 7E               [ 8] 2074 	ld	a, (hl)
+    000009F5 F8 00            [12] 2075 	ldhl	sp,	#0
+    000009F7 77               [ 8] 2076 	ld	(hl), a
+    000009F8 F8 0D            [12] 2077 	ldhl	sp,	#13
+    000009FA 7E               [ 8] 2078 	ld	a, (hl)
+    000009FB F8 01            [12] 2079 	ldhl	sp,	#1
+    000009FD 77               [ 8] 2080 	ld	(hl), a
+    000009FE C1               [12] 2081 	pop	bc
+    000009FF C5               [16] 2082 	push	bc
+    00000A00 C5               [16] 2083 	push	bc
+    00000A01 C5               [16] 2084 	push	bc
+    00000A02 1Er00            [ 8] 2085 	ld	e, #b_dungeon_present_prepare
+    00000A04 21r00r00         [12] 2086 	ld	hl, #_dungeon_present_prepare
+    00000A07 CDr00r00         [24] 2087 	call	___sdcc_bcall_ehl
+    00000A0A E1               [12] 2088 	pop	hl
+    00000A0B C1               [12] 2089 	pop	bc
+                                   2090 ;src/dungeon_play.c:133: if(dungeon_sample(&p->dungeon,11)&7u) {
+    00000A0C C5               [16] 2091 	push	bc
+    00000A0D 3E 0B            [ 8] 2092 	ld	a, #0x0b
+    00000A0F F5               [16] 2093 	push	af
+    00000A10 33               [ 8] 2094 	inc	sp
+    00000A11 C5               [16] 2095 	push	bc
+    00000A12 1Er00            [ 8] 2096 	ld	e, #b_dungeon_sample
+    00000A14 21r00r00         [12] 2097 	ld	hl, #_dungeon_sample
+    00000A17 CDr00r00         [24] 2098 	call	___sdcc_bcall_ehl
+    00000A1A E8 03            [16] 2099 	add	sp, #3
+    00000A1C C1               [12] 2100 	pop	bc
+    00000A1D E6 07            [ 8] 2101 	and	a, #0x07
+    00000A1F 28 74            [12] 2102 	jr	Z, 00102$
+                                   2103 ;src/dungeon_play.c:134: uint8_t left=dungeon_sample(&p->dungeon,12)&7u,right=dungeon_sample(&p->dungeon,13)&7u;
+    00000A21 C5               [16] 2104 	push	bc
+    00000A22 3E 0C            [ 8] 2105 	ld	a, #0x0c
+    00000A24 F5               [16] 2106 	push	af
+    00000A25 33               [ 8] 2107 	inc	sp
+    00000A26 C5               [16] 2108 	push	bc
+    00000A27 1Er00            [ 8] 2109 	ld	e, #b_dungeon_sample
+    00000A29 21r00r00         [12] 2110 	ld	hl, #_dungeon_sample
+    00000A2C CDr00r00         [24] 2111 	call	___sdcc_bcall_ehl
+    00000A2F E8 03            [16] 2112 	add	sp, #3
+    00000A31 C1               [12] 2113 	pop	bc
+    00000A32 E6 07            [ 8] 2114 	and	a, #0x07
+    00000A34 5F               [ 4] 2115 	ld	e, a
+    00000A35 C5               [16] 2116 	push	bc
+    00000A36 D5               [16] 2117 	push	de
+    00000A37 3E 0D            [ 8] 2118 	ld	a, #0x0d
+    00000A39 F5               [16] 2119 	push	af
+    00000A3A 33               [ 8] 2120 	inc	sp
+    00000A3B C5               [16] 2121 	push	bc
+    00000A3C 1Er00            [ 8] 2122 	ld	e, #b_dungeon_sample
+    00000A3E 21r00r00         [12] 2123 	ld	hl, #_dungeon_sample
+    00000A41 CDr00r00         [24] 2124 	call	___sdcc_bcall_ehl
+    00000A44 E8 03            [16] 2125 	add	sp, #3
+    00000A46 D1               [12] 2126 	pop	de
+    00000A47 C1               [12] 2127 	pop	bc
+    00000A48 E6 07            [ 8] 2128 	and	a, #0x07
+                                   2129 ;src/dungeon_play.c:135: uint8_t turn_right=!left&&(right||(rpg_random(r)&1u));
+    00000A4A 1C               [ 4] 2130 	inc	e
+    00000A4B 1D               [ 4] 2131 	dec	e
+    00000A4C 20 1A            [12] 2132 	jr	NZ, 00105$
+    00000A4E B7               [ 4] 2133 	or	a, a
+    00000A4F 20 1A            [12] 2134 	jr	NZ, 00106$
+    00000A51 C5               [16] 2135 	push	bc
+    00000A52 F8 10            [12] 2136 	ldhl	sp,	#16
+    00000A54 2A               [ 8] 2137 	ld	a, (hl+)
+    00000A55 5F               [ 4] 2138 	ld	e, a
+    00000A56 56               [ 8] 2139 	ld	d, (hl)
+    00000A57 D5               [16] 2140 	push	de
+    00000A58 1Er00            [ 8] 2141 	ld	e, #b_rpg_random
+    00000A5A 21r00r00         [12] 2142 	ld	hl, #_rpg_random
+    00000A5D CDr00r00         [24] 2143 	call	___sdcc_bcall_ehl
+    00000A60 E1               [12] 2144 	pop	hl
+    00000A61 5F               [ 4] 2145 	ld	e, a
+    00000A62 C1               [12] 2146 	pop	bc
+    00000A63 7B               [ 4] 2147 	ld	a, e
+    00000A64 E6 01            [ 8] 2148 	and	a, #0x01
+    00000A66 20 03            [12] 2149 	jr	NZ, 00106$
+    00000A68                       2150 00105$:
+    00000A68 AF               [ 4] 2151 	xor	a, a
+    00000A69 18 02            [12] 2152 	jr	00107$
+    00000A6B                       2153 00106$:
+    00000A6B 3E 01            [ 8] 2154 	ld	a, #0x01
+    00000A6D                       2155 00107$:
+    00000A6D F8 04            [12] 2156 	ldhl	sp,	#4
+                                   2157 ;src/dungeon_play.c:136: p->dungeon.direction=(p->dungeon.direction+(turn_right?1u:3u))&3u;
+    00000A6F 22               [ 8] 2158 	ld	(hl+), a
+    00000A70 D1               [12] 2159 	pop	de
+    00000A71 D5               [16] 2160 	push	de
+    00000A72 13               [ 8] 2161 	inc	de
+    00000A73 13               [ 8] 2162 	inc	de
+    00000A74 1A               [ 8] 2163 	ld	a, (de)
+    00000A75 32               [ 8] 2164 	ld	(hl-), a
+    00000A76 7E               [ 8] 2165 	ld	a, (hl)
+    00000A77 B7               [ 4] 2166 	or	a, a
+    00000A78 3E 01            [ 8] 2167 	ld	a, #0x01
+    00000A7A 20 02            [12] 2168 	jr	NZ, 00112$
+    00000A7C 3E 03            [ 8] 2169 	ld	a, #0x03
+    00000A7E                       2170 00112$:
+    00000A7E F8 05            [12] 2171 	ldhl	sp,	#5
+    00000A80 86               [ 8] 2172 	add	a, (hl)
+                                   2173 ;src/dungeon_play.c:137: dungeon_present_turn(&p->dungeon,turn_right);
+    00000A81 2B               [ 8] 2174 	dec	hl
+    00000A82 E6 03            [ 8] 2175 	and	a, #0x03
+    00000A84 12               [ 8] 2176 	ld	(de), a
+    00000A85 C5               [16] 2177 	push	bc
+    00000A86 7E               [ 8] 2178 	ld	a, (hl)
+    00000A87 F5               [16] 2179 	push	af
+    00000A88 33               [ 8] 2180 	inc	sp
+    00000A89 C5               [16] 2181 	push	bc
+    00000A8A 1Er00            [ 8] 2182 	ld	e, #b_dungeon_present_turn
+    00000A8C 21r00r00         [12] 2183 	ld	hl, #_dungeon_present_turn
+    00000A8F CDr00r00         [24] 2184 	call	___sdcc_bcall_ehl
+    00000A92 E8 03            [16] 2185 	add	sp, #3
+    00000A94 C1               [12] 2186 	pop	bc
+    00000A95                       2187 00102$:
+                                   2188 ;src/dungeon_play.c:139: p->check_count=p->check_cursor=p->advance_second=0;p->encounter_latch=1;
+    00000A95 D1               [12] 2189 	pop	de
+    00000A96 D5               [16] 2190 	push	de
+    00000A97 21 09 01         [12] 2191 	ld	hl, #0x0109
+    00000A9A 19               [ 8] 2192 	add	hl, de
+    00000A9B E5               [16] 2193 	push	hl
+    00000A9C 7D               [ 4] 2194 	ld	a, l
+    00000A9D F8 04            [12] 2195 	ldhl	sp,	#4
+    00000A9F 77               [ 8] 2196 	ld	(hl), a
+    00000AA0 E1               [12] 2197 	pop	hl
+    00000AA1 7C               [ 4] 2198 	ld	a, h
+    00000AA2 F8 03            [12] 2199 	ldhl	sp,	#3
+    00000AA4 77               [ 8] 2200 	ld	(hl), a
+    00000AA5 D1               [12] 2201 	pop	de
+    00000AA6 D5               [16] 2202 	push	de
+    00000AA7 21 0A 01         [12] 2203 	ld	hl, #0x010a
+    00000AAA 19               [ 8] 2204 	add	hl, de
+    00000AAB E5               [16] 2205 	push	hl
+    00000AAC 7D               [ 4] 2206 	ld	a, l
+    00000AAD F8 06            [12] 2207 	ldhl	sp,	#6
+    00000AAF 77               [ 8] 2208 	ld	(hl), a
+    00000AB0 E1               [12] 2209 	pop	hl
+    00000AB1 7C               [ 4] 2210 	ld	a, h
+    00000AB2 F8 05            [12] 2211 	ldhl	sp,	#5
+    00000AB4 77               [ 8] 2212 	ld	(hl), a
+    00000AB5 D1               [12] 2213 	pop	de
+    00000AB6 D5               [16] 2214 	push	de
+    00000AB7 21 11 01         [12] 2215 	ld	hl, #0x0111
+    00000ABA 19               [ 8] 2216 	add	hl, de
+    00000ABB 5D               [ 4] 2217 	ld	e, l
+    00000ABC 54               [ 4] 2218 	ld	d, h
+    00000ABD AF               [ 4] 2219 	xor	a, a
+    00000ABE 12               [ 8] 2220 	ld	(de), a
+    00000ABF F8 04            [12] 2221 	ldhl	sp,	#4
+    00000AC1 2A               [ 8] 2222 	ld	a, (hl+)
+    00000AC2 66               [ 8] 2223 	ld	h, (hl)
+    00000AC3 6F               [ 4] 2224 	ld	l, a
+    00000AC4 36 00            [12] 2225 	ld	(hl), #0x00
+    00000AC6 F8 02            [12] 2226 	ldhl	sp,	#2
+    00000AC8 2A               [ 8] 2227 	ld	a, (hl+)
+    00000AC9 66               [ 8] 2228 	ld	h, (hl)
+    00000ACA 6F               [ 4] 2229 	ld	l, a
+    00000ACB 36 00            [12] 2230 	ld	(hl), #0x00
+    00000ACD D1               [12] 2231 	pop	de
+    00000ACE D5               [16] 2232 	push	de
+    00000ACF 21 0F 01         [12] 2233 	ld	hl, #0x010f
+    00000AD2 19               [ 8] 2234 	add	hl, de
+    00000AD3 36 01            [12] 2235 	ld	(hl), #0x01
+                                   2236 ;src/dungeon_play.c:140: p->dungeon.position=dungeon_sample_position(&p->dungeon,11u);
+    00000AD5 D1               [12] 2237 	pop	de
+    00000AD6 D5               [16] 2238 	push	de
+    00000AD7 13               [ 8] 2239 	inc	de
+    00000AD8 C5               [16] 2240 	push	bc
+    00000AD9 D5               [16] 2241 	push	de
+    00000ADA 3E 0B            [ 8] 2242 	ld	a, #0x0b
+    00000ADC F5               [16] 2243 	push	af
+    00000ADD 33               [ 8] 2244 	inc	sp
+    00000ADE C5               [16] 2245 	push	bc
+    00000ADF 1Er00            [ 8] 2246 	ld	e, #b_dungeon_sample_position
+    00000AE1 21r00r00         [12] 2247 	ld	hl, #_dungeon_sample_position
+    00000AE4 CDr00r00         [24] 2248 	call	___sdcc_bcall_ehl
+    00000AE7 E8 03            [16] 2249 	add	sp, #3
+    00000AE9 D1               [12] 2250 	pop	de
+    00000AEA C1               [12] 2251 	pop	bc
+    00000AEB 12               [ 8] 2252 	ld	(de), a
+                                   2253 ;src/dungeon_play.c:141: dungeon_present_sequence(&p->dungeon,1u);
+    00000AEC D5               [16] 2254 	push	de
+    00000AED 3E 01            [ 8] 2255 	ld	a, #0x01
+    00000AEF F5               [16] 2256 	push	af
+    00000AF0 33               [ 8] 2257 	inc	sp
+    00000AF1 C5               [16] 2258 	push	bc
+    00000AF2 1Er00            [ 8] 2259 	ld	e, #b_dungeon_present_sequence
+    00000AF4 21r00r00         [12] 2260 	ld	hl, #_dungeon_present_sequence
+    00000AF7 CDr00r00         [24] 2261 	call	___sdcc_bcall_ehl
+    00000AFA E8 03            [16] 2262 	add	sp, #3
+    00000AFC D1               [12] 2263 	pop	de
+                                   2264 ;src/dungeon_play.c:142: queue(p,p->dungeon.position,1u);queue(p,p->dungeon.position,11u);
+    00000AFD 1A               [ 8] 2265 	ld	a, (de)
+    00000AFE D5               [16] 2266 	push	de
+    00000AFF 26 01            [ 8] 2267 	ld	h, #0x01
+    00000B01 E5               [16] 2268 	push	hl
+    00000B02 33               [ 8] 2269 	inc	sp
+    00000B03 F5               [16] 2270 	push	af
+    00000B04 33               [ 8] 2271 	inc	sp
+    00000B05 F8 04            [12] 2272 	ldhl	sp,	#4
+    00000B07 2A               [ 8] 2273 	ld	a, (hl+)
+    00000B08 4F               [ 4] 2274 	ld	c, a
+    00000B09 46               [ 8] 2275 	ld	b, (hl)
+    00000B0A C5               [16] 2276 	push	bc
+    00000B0B 1E 0B            [ 8] 2277 	ld	e, #b_queue
+    00000B0D 21r00r00         [12] 2278 	ld	hl, #_queue
+    00000B10 CDr00r00         [24] 2279 	call	___sdcc_bcall_ehl
+    00000B13 E8 04            [16] 2280 	add	sp, #4
+    00000B15 D1               [12] 2281 	pop	de
+    00000B16 1A               [ 8] 2282 	ld	a, (de)
+    00000B17 26 0B            [ 8] 2283 	ld	h, #0x0b
+    00000B19 E5               [16] 2284 	push	hl
+    00000B1A 33               [ 8] 2285 	inc	sp
+    00000B1B F5               [16] 2286 	push	af
+    00000B1C 33               [ 8] 2287 	inc	sp
+    00000B1D F8 02            [12] 2288 	ldhl	sp,	#2
+    00000B1F 2A               [ 8] 2289 	ld	a, (hl+)
+    00000B20 5F               [ 4] 2290 	ld	e, a
+    00000B21 56               [ 8] 2291 	ld	d, (hl)
+    00000B22 D5               [16] 2292 	push	de
+    00000B23 1E 0B            [ 8] 2293 	ld	e, #b_queue
+    00000B25 21r00r00         [12] 2294 	ld	hl, #_queue
+    00000B28 CDr00r00         [24] 2295 	call	___sdcc_bcall_ehl
+    00000B2B E8 04            [16] 2296 	add	sp, #4
+                                   2297 ;src/dungeon_play.c:143: return dplay_resume(p,r,e);
+    00000B2D F8 10            [12] 2298 	ldhl	sp,	#16
+    00000B2F 2A               [ 8] 2299 	ld	a, (hl+)
+    00000B30 5F               [ 4] 2300 	ld	e, a
+    00000B31 56               [ 8] 2301 	ld	d, (hl)
+    00000B32 D5               [16] 2302 	push	de
+    00000B33 F8 10            [12] 2303 	ldhl	sp,	#16
+    00000B35 2A               [ 8] 2304 	ld	a, (hl+)
+    00000B36 5F               [ 4] 2305 	ld	e, a
+    00000B37 56               [ 8] 2306 	ld	d, (hl)
+    00000B38 D5               [16] 2307 	push	de
+    00000B39 F8 10            [12] 2308 	ldhl	sp,	#16
+    00000B3B 2A               [ 8] 2309 	ld	a, (hl+)
+    00000B3C 5F               [ 4] 2310 	ld	e, a
+    00000B3D 56               [ 8] 2311 	ld	d, (hl)
+    00000B3E D5               [16] 2312 	push	de
+    00000B3F 1Er00            [ 8] 2313 	ld	e, #b_dplay_resume
+    00000B41 21r9Ar00         [12] 2314 	ld	hl, #_dplay_resume
+    00000B44 CDr00r00         [24] 2315 	call	___sdcc_bcall_ehl
+                                   2316 ;src/dungeon_play.c:144: }
+    00000B47 E8 0C            [16] 2317 	add	sp, #12
+    00000B49 C9               [16] 2318 	ret
+                                   2319 ;src/dungeon_play.c:145: void dplay_show_opening(DungeonPlay *p,uint8_t style) RPG_BANKED {
+                                   2320 ;	---------------------------------
+                                   2321 ; Function dplay_show_opening
+                                   2322 ; ---------------------------------
+                         0000000B  2323 	b_dplay_show_opening	= 11
+    00000B4A                       2324 _dplay_show_opening::
+                                   2325 ;src/dungeon_play.c:146: uint8_t pos=dungeon_sample_position(&p->dungeon,1u),cell=p->dungeon.layout[pos];
+    00000B4A F8 06            [12] 2326 	ldhl	sp,	#6
+    00000B4C 2A               [ 8] 2327 	ld	a, (hl+)
+    00000B4D 5F               [ 4] 2328 	ld	e, a
+    00000B4E 56               [ 8] 2329 	ld	d, (hl)
+    00000B4F 4B               [ 4] 2330 	ld	c, e
+    00000B50 42               [ 4] 2331 	ld	b, d
+    00000B51 C5               [16] 2332 	push	bc
+    00000B52 D5               [16] 2333 	push	de
+    00000B53 3E 01            [ 8] 2334 	ld	a, #0x01
+    00000B55 F5               [16] 2335 	push	af
+    00000B56 33               [ 8] 2336 	inc	sp
+    00000B57 C5               [16] 2337 	push	bc
+    00000B58 1Er00            [ 8] 2338 	ld	e, #b_dungeon_sample_position
+    00000B5A 21r00r00         [12] 2339 	ld	hl, #_dungeon_sample_position
+    00000B5D CDr00r00         [24] 2340 	call	___sdcc_bcall_ehl
+    00000B60 E8 03            [16] 2341 	add	sp, #3
+    00000B62 6F               [ 4] 2342 	ld	l, a
+    00000B63 D1               [12] 2343 	pop	de
+    00000B64 C1               [12] 2344 	pop	bc
+    00000B65 7B               [ 4] 2345 	ld	a, e
+    00000B66 C6 08            [ 8] 2346 	add	a, #0x08
+    00000B68 5F               [ 4] 2347 	ld	e, a
+    00000B69 30 01            [12] 2348 	jr	NC, 00103$
+    00000B6B 14               [ 4] 2349 	inc	d
+    00000B6C                       2350 00103$:
+    00000B6C 26 00            [ 8] 2351 	ld	h, #0x00
+    00000B6E 19               [ 8] 2352 	add	hl, de
+    00000B6F 5E               [ 8] 2353 	ld	e, (hl)
+                                   2354 ;src/dungeon_play.c:149: p->dungeon.layout[pos]=cell&127u;dungeon_present_prepare(&p->dungeon);
+    00000B70 7B               [ 4] 2355 	ld	a, e
+    00000B71 E6 7F            [ 8] 2356 	and	a, #0x7f
+    00000B73 77               [ 8] 2357 	ld	(hl), a
+    00000B74 E5               [16] 2358 	push	hl
+    00000B75 C5               [16] 2359 	push	bc
+    00000B76 D5               [16] 2360 	push	de
+    00000B77 C5               [16] 2361 	push	bc
+    00000B78 1Er00            [ 8] 2362 	ld	e, #b_dungeon_present_prepare
+    00000B7A 21r00r00         [12] 2363 	ld	hl, #_dungeon_present_prepare
+    00000B7D CDr00r00         [24] 2364 	call	___sdcc_bcall_ehl
+    00000B80 E1               [12] 2365 	pop	hl
+    00000B81 D1               [12] 2366 	pop	de
+    00000B82 C1               [12] 2367 	pop	bc
+    00000B83 E1               [12] 2368 	pop	hl
+                                   2369 ;src/dungeon_play.c:150: p->dungeon.layout[pos]=cell;dungeon_present_door(&p->dungeon,style);
+    00000B84 73               [ 8] 2370 	ld	(hl), e
+    00000B85 F8 08            [12] 2371 	ldhl	sp,	#8
+    00000B87 7E               [ 8] 2372 	ld	a, (hl)
+    00000B88 F5               [16] 2373 	push	af
+    00000B89 33               [ 8] 2374 	inc	sp
+    00000B8A C5               [16] 2375 	push	bc
+    00000B8B 1Er00            [ 8] 2376 	ld	e, #b_dungeon_present_door
+    00000B8D 21r00r00         [12] 2377 	ld	hl, #_dungeon_present_door
+    00000B90 CDr00r00         [24] 2378 	call	___sdcc_bcall_ehl
+    00000B93 E8 03            [16] 2379 	add	sp, #3
+                                   2380 ;src/dungeon_play.c:151: }
+    00000B95 C9               [16] 2381 	ret
+                                   2382 	.area _CODE_11
+                                   2383 	.area _INITIALIZER
+                                   2384 	.area _CABS (ABS)

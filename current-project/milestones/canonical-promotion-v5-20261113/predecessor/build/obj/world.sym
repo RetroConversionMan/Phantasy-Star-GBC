@@ -1,0 +1,108 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuint                                                       ******** GX
+    __moduchar                                                      ******** GX
+    __moduint                                                       ******** GX
+  9 __xinit__ice_origin_x                                           00000000 R
+  2 _attrs_buffer                                                   00000181 R
+    _bank_bkg_data                                                  ******** GX
+    _bank_copy                                                      ******** GX
+    _bank_read8                                                     ******** GX
+  8 _break_ice                                                      0000086E R
+  2 _broken_ice                                                     00000003 R
+  2 _collisions                                                     00000067 R
+  8 _draw_column                                                    00000530 R
+  8 _draw_row                                                       00000431 R
+  2 _drawn                                                          0000016B R
+  8 _hover_checks                                                   00000C30 R
+  8 _hover_exits                                                    00000C60 R
+  2 _ice_dirty                                                      00000064 R
+  8 _ice_index                                                      000000AE R
+  3 _ice_origin_x                                                   00000000 R
+  2 _ice_origin_y                                                   00000063 R
+  8 _land_checks                                                    00000C20 R
+    _memset                                                         ******** GX
+  2 _previous_tile_x                                                00000167 R
+  2 _previous_tile_y                                                00000169 R
+  8 _roads                                                          0000007E R
+  8 _sample_offsets                                                 00000C78 R
+  2 _scene                                                          00000065 R
+    _set_bkg_palette                                                ******** GX
+    _set_bkg_tiles                                                  ******** GX
+  2 _tiles_buffer                                                   0000016C R
+  8 _town_exits                                                     00000042 R
+  8 _vehicle_sample                                                 00000BD2 R
+  8 _world_can_stand                                                000007AE GR
+  8 _world_check_trigger                                            000010DE GR
+  8 _world_decode_destination                                       00001022 GR
+  8 _world_decode_y                                                 0000100A GR
+  8 _world_draw                                                     00000629 GR
+  8 _world_flags_at                                                 0000035D GR
+  2 _world_group_id                                                 00000001 GR
+  2 _world_ice_changed                                              00000002 GR
+  8 _world_load_graphics                                            000001D9 GR
+    _world_map_group                                                ******** GX
+  2 _world_map_id                                                   00000000 GR
+  8 _world_meta_at                                                  000002A5 GR
+    _world_motion_reset                                             ******** GX
+  8 _world_road_destination                                         00001077 GR
+    _world_scenes                                                   ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _world_select                                                   00000169 GR
+  8 _world_step_allowed                                             00000A3C GR
+  8 _world_terrain_sync                                             0000010A GR
+  8 _world_tile_at                                                  0000037C GR
+  8 _world_vehicle_footprint                                        00000984 GR
+  8 _world_vehicle_use                                              00000CA4 GR
+  8 _world_vehicle_use_direction_10000_247                          00001006 R
+  8 _wrap_y                                                         00000000 R
+    b_world_can_stand                                           =   00000006 G
+    b_world_check_trigger                                       =   00000006 G
+    b_world_decode_destination                                  =   00000006 G
+    b_world_decode_y                                            =   00000006 G
+    b_world_draw                                                =   00000006 G
+    b_world_flags_at                                            =   00000006 G
+    b_world_load_graphics                                       =   00000006 G
+    b_world_meta_at                                             =   00000006 G
+    b_world_motion_reset                                            ******** GX
+    b_world_road_destination                                    =   00000006 G
+    b_world_select                                              =   00000006 G
+    b_world_step_allowed                                        =   00000006 G
+    b_world_terrain_sync                                        =   00000006 G
+    b_world_tile_at                                             =   00000006 G
+    b_world_vehicle_footprint                                   =   00000006 G
+    b_world_vehicle_use                                         =   00000006 G
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size      196   flags    0
+   3 _INITIALIZED                               size        1   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_6                                    size     1420   flags    0
+   9 _INITIALIZER                               size        1   flags    0
+   A _CABS                                      size        0   flags    8
+

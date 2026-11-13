@@ -1,0 +1,43 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/cutscenes/main.c:
+src/cutscene.c:
+src/cutscene_art.c:
+src/cutscene_art_data.c:
+src/dialogue.c:
+src/dialogue_data.c:
+src/bank_io.c:
+src/font.c:
+src/assets_sprites.c:
+src/cutscene_art_bank_116.c:
+src/cutscene_art_bank_117.c:
+src/dialogue_text_09.c:
+src/dialogue_text_10.c:
+{
+  "passed": true,
+  "host": {
+    "checks": 110,
+    "narrative_pages": 38,
+    "passed": true
+  },
+  "header": {
+    "title": "",
+    "bytes": 2097152,
+    "sha256": "00d01534c21652cdb13951516e4fb557cdec94126da3284a6e48ec906136c999",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "native_portraits": 9,
+  "native_pattern_bytes": 13728,
+  "native_map_attributes": 2700,
+  "native_narrative_pages": 38,
+  "native_narrative_characters": 2736,
+  "limits": [
+    "Separate narrative/portrait probe; recruitment game-loop integration tested separately",
+    "Intro/ending surrounding camera and movement sequences remain separate from their decoded narrative"
+  ]
+}

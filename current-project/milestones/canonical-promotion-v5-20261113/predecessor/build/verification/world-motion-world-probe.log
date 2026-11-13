@@ -1,0 +1,61 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/world-motion-world-probe/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/world-motion-world-probe/bank_check.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/bank_io.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/font.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/assets_sprites.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_00_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_00_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_01_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_01_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_02_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_02_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_03_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_03_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_04_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_04_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_05_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_05_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_06_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_06_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_07_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_07_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_08_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_08_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_09_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_09_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_10_map.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_assets_10_tiles.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_motion.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_motion_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_motion_bank_24.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-motion-work/src/world_motion_bank_25.c:
+{
+  "passed": true,
+  "header": {
+    "title": "PSWORLD-PROBE",
+    "bytes": 1048576,
+    "sha256": "a39c2a2598c8eace0a1c8a9ca4e5f37ab8eb652dfe1a4ee13ca635a5f0f617a3",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "groups": 11,
+  "viewports": 187,
+  "tile_attribute_pairs": 74613,
+  "graphics_bytes": 29984,
+  "protected_bytes": 26048,
+  "bank_restore_checks": "All11 map banks from code executing in bank6, returning to bank1",
+  "limits": [
+    "Isolated engine harness, not input-driven campaign traversal",
+    "PyBoy only; no physical hardware test",
+    "Initial graphics only; audio and animation use separate production-object probes"
+  ],
+  "source_path": "build/source-snapshots/world-motion-work"
+}

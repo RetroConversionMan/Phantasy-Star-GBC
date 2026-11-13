@@ -1,0 +1,13 @@
+{
+  "scope": "Driver and read-only replay source at launch of fresh v4 controller campaign. Any later runner corrections must preserve prior failure and record their reason. Production cartridge never changes.",
+  "files": {
+    "campaign_runner.py": "2129706bce4a57c9ddaaeb6200bcdfaafda10bb8f112d28645c8e65a87c98621",
+    "run_campaign_story.py": "d89ef00e8bc8da08b78779851acf718f2cc750f049f52ad4b80e6af500ff4fd0",
+    "native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+    "campaign_dungeon_route.py": "dc159d7a294b763c8888f2592dbb3f748be39a4044786de23e18225ac69e934b",
+    "campaign_world_route.py": "067030c808f993e257e8b3d4338c59976117b458df41a5166d4ca429820f3eab",
+    "campaign_hover_route.py": "b9899327f1418ed81cc638ea6f66dc1653f6ef161f667575d3b84a0a87612d8b",
+    "verify_rom.py": "1b00985a0be44101bac2112dc355cbd6523dbfd94560ae1106f099baf5453ed2",
+    "replay_campaign.py": "02b25783ca9df303edcc8bf7db82a00d5e6545051ede5cec916413cf9e2dc8ae"
+  }
+}

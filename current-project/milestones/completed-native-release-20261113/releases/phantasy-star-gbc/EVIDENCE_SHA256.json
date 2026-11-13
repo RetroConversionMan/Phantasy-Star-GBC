@@ -1,0 +1,21 @@
+{
+  "path_base": "current-project",
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "files": {
+    "build/verification/release-v5-final-independent-audit/report.json": "429c268b552e094e6013ce0c3bb660e4f5644a68a4042031ee3f6e65b5370b96",
+    "build/verification/release-v5-story-independent-audit/report.json": "77487a4327708aef4c7056f86511c2355fdf23bf51f2998fba53090f157f05d9",
+    "build/campaign/release-v5-live-replay-b72feead/replay-report.json": "b85bd705fabe42e57a1c787833b6c10f6b3df1b5dd44f26d32c668baa11844a0",
+    "build/campaign/release-v5-live-replay-b72feead/ENDING_TITLE_VISUAL_PROOF.json": "cee96e937ea9e4163840a44422e4c44fea6592d5e00fd5660e98fda47d2e00c3",
+    "build/campaign/release-v5-newgame-b72feead/CAMPAIGN_CLOSED.json": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1",
+    "build/campaign/release-v5-newgame-b72feead/ENDING_TITLE_VISUAL_PROOF.json": "fddd1dc694833238b16964cba84f19725ec8a8933c226fdd0decab32f28a7ce1",
+    "build/campaign/release-v5-newgame-b72feead/SHA256.json": "27a748fa2877af0def9b7267df318f383175c2258e27dd736383b65949797457",
+    "build/campaign/release-v5-live-replay-b72feead/SHA256.json": "2c383f8f4af8c2728d93c2d925f2ddb33b96a86403921bb7b243f37d28ae23d2",
+    "build/milestones/release-v5-full-replay-20261113/SHA256.json": "748e482738a680065b6dac3e7d48ffe1436a06d81cd02bd2d273fda53973bdd8",
+    "build/verification/vehicle-reload-fix-integrations/report.json": "5107fb653109b95daef63c5a2b6278420dbe8714d755916546c20b1055d27673",
+    "build/source-snapshots/release-candidate-v5-20261113/MANIFEST.json": "5e16a7c5e010421313970c42809a768d0d34fa6cf14fa4faca299265f25377ec",
+    "build/source-snapshots/release-candidate-v5-20261113/BUILD_PROOF.json": "032d73e4b7a766499315b2dfd3f7253133db5c62d747cefac7db52e366604255",
+    "milestones/canonical-promotion-v5-20261113/EXACT_REBUILD.json": "0a05018eb0a64b3556b588646079d0bcf5751e13bd7d7486b538a0344550d92e",
+    "milestones/canonical-promotion-v5-20261113/PRESERVATION.json": "585405cf83c458aba84e2d03b0cbc3ee2fb35f669387bba03ef1343747b14ab2",
+    "milestones/canonical-promotion-v5-20261113/SHA256.json": "d5b3cee0cae6210f3e042759129132b6a77d542fade953af22ca257e47714790"
+  }
+}

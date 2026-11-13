@@ -1,0 +1,12 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+Traceback (most recent call last):
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_ui.py", line 151, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_ui.py", line 58, in main
+    q,events,state=setup(name,[item,36],actor=actor,alive=alive,hp=7 if alive else 0,old=old);item_menu(q,1)
+                                                                                              ^^^^^^^^^^^^^^
+  File "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/research/service-inventory-order/native_ui.py", line 41, in item_menu
+    q.press('start');q.press('down');q.press('down');q.press('a');assert q.state()==9;q.press('a');assert q.state()==10
+                                                                         ^^^^^^^^^^^^
+AssertionError

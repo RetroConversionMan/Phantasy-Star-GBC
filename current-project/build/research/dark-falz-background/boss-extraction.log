@@ -1,0 +1,38 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "banks": [
+    254,
+    255
+  ],
+  "data_bytes": 11694,
+  "pattern_pairs": 215,
+  "assets": 39,
+  "patch_cells": [
+    109,
+    110,
+    129,
+    130,
+    149,
+    150,
+    169,
+    170,
+    189,
+    190
+  ],
+  "patch_quantized_pixels": [
+    159,
+    129,
+    155
+  ],
+  "patch_bank": 24,
+  "patch_pointers": [
+    48928,
+    48976,
+    49024
+  ],
+  "palette_equals_original_scene": true,
+  "limits": [
+    "Original256x192 source composition before5/8resize; GBC palettes adapt measured RGB",
+    "No battle choreography/native renderer claim from extraction alone"
+  ]
+}

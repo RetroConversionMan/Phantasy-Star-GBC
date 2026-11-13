@@ -1,0 +1,22 @@
+XL4
+H B areas 2 global symbols
+M myau_flight_data
+S .__.ABS. Def00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_132 size 18 flags 0 addr 0
+S _myau_flight_frames Def00000000
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 60 01 04 B0 01 04 00 02 04 50 02 04
+R 00 00 08 00
+T 0C 00 00 00 A0 02 04 F0 02 04 40 03 04 90 03 04
+R 00 00 08 00

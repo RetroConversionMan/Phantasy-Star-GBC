@@ -1,0 +1,12 @@
+{
+  "scope": "Runner-only original-route recovery after the first preserved natural Corona Tower defeat; no production or cartridge change",
+  "reason": "Saved party entered Corona with Alis8/22MP and Noah30/50MP, then exhausted escape/healing resources. Actual Continue is followed by original Flute, Aukba caves/church/hospital and preparation for source Tele/escape choices.",
+  "defeat_frame": 1613443,
+  "failure_preserved": "failure-001.state",
+  "ROM_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+  "files": {
+    "campaign_runner.py": "b83aace29eaa5a02d8b7e6bc621177e4e29fe4eb3c20234e2408c5162dbe3527",
+    "run_campaign_story.py": "cd353317ece972e965c2d1b99dbfb8dc5ac9bcd73e33f41a08aceec6fb72e1c7"
+  },
+  "patch_sha256": "a45ff26c7fa79af4634a57f2413d09ce05ec7db08518d22741ff3912df84fb80"
+}

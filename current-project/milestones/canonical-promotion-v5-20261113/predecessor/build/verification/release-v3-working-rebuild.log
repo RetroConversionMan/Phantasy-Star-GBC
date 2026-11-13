@@ -1,0 +1,520 @@
+mkdir -p build/obj
+mkdir -p build/obj
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/assets.o src/assets.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/assets_sprites.o src/assets_sprites.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/main.o src/main.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/font.o src/font.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/bank_io.o src/bank_io.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ui.o src/ui.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/game_ui.o src/game_ui.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/game_flow.o src/game_flow.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/game_field.o src/game_field.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/game_sequence.o src/game_sequence.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/game_movie.o src/game_movie.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/field_actions.o src/field_actions.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/save.o src/save.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/save_slots.o src/save_slots.c
+src/save_slots.c:16: warning 185: comparison of 'signed char' with 'unsigned char' requires promotion to int
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/save_ui.o src/save_ui.c
+src/save_ui.c:47: warning 196: pointer target lost const qualifier
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/rpg.o src/rpg.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/rpg_data.o src/rpg_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/events.o src/events.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/events_data.o src/events_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/services.o src/services.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dialogue.o src/dialogue.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dialogue_data.o src/dialogue_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world.o src/world.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_rules.o src/world_rules.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle.o src/battle.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_view.o src/battle_view.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art.o src/enemy_art.c
+src/battle.c:249: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/chest_art.o src/chest_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/vehicle_art.o src/vehicle_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene.o src/battle_scene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_data.o src/battle_scene_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_140.o src/battle_scene_bank_140.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_141.o src/battle_scene_bank_141.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_142.o src/battle_scene_bank_142.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_143.o src/battle_scene_bank_143.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_144.o src/battle_scene_bank_144.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_145.o src/battle_scene_bank_145.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_scene_bank_146.o src/battle_scene_bank_146.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/boss_motion.o src/boss_motion.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/boss_effects_bank_254.o src/boss_effects_bank_254.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/boss_effects_bank_255.o src/boss_effects_bank_255.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/gold_scene.o src/gold_scene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/gold_scene_bank_123.o src/gold_scene_bank_123.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_weapon.o src/battle_weapon.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_147.o src/weapon_bank_147.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_182.o src/weapon_bank_182.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_183.o src/weapon_bank_183.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_184.o src/weapon_bank_184.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_185.o src/weapon_bank_185.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_186.o src/weapon_bank_186.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_187.o src/weapon_bank_187.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_188.o src/weapon_bank_188.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_189.o src/weapon_bank_189.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_190.o src/weapon_bank_190.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_191.o src/weapon_bank_191.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/weapon_bank_213.o src/weapon_bank_213.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_motion.o src/battle_motion.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/chest_motion.o src/chest_motion.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_data.o src/battle_animation_data.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_148.o src/battle_animation_bank_148.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_149.o src/battle_animation_bank_149.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_150.o src/battle_animation_bank_150.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_151.o src/battle_animation_bank_151.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_152.o src/battle_animation_bank_152.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_153.o src/battle_animation_bank_153.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_154.o src/battle_animation_bank_154.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_155.o src/battle_animation_bank_155.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_156.o src/battle_animation_bank_156.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_157.o src/battle_animation_bank_157.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_158.o src/battle_animation_bank_158.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_159.o src/battle_animation_bank_159.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_160.o src/battle_animation_bank_160.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_161.o src/battle_animation_bank_161.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_162.o src/battle_animation_bank_162.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_163.o src/battle_animation_bank_163.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_164.o src/battle_animation_bank_164.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_165.o src/battle_animation_bank_165.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_166.o src/battle_animation_bank_166.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_167.o src/battle_animation_bank_167.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_168.o src/battle_animation_bank_168.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_169.o src/battle_animation_bank_169.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_170.o src/battle_animation_bank_170.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_171.o src/battle_animation_bank_171.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_172.o src/battle_animation_bank_172.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_173.o src/battle_animation_bank_173.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_174.o src/battle_animation_bank_174.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_175.o src/battle_animation_bank_175.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_176.o src/battle_animation_bank_176.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_177.o src/battle_animation_bank_177.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_178.o src/battle_animation_bank_178.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_179.o src/battle_animation_bank_179.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_180.o src/battle_animation_bank_180.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/battle_animation_bank_181.o src/battle_animation_bank_181.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_magic.o src/enemy_magic.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_magic_bank_252.o src/enemy_magic_bank_252.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_magic_bank_253.o src/enemy_magic_bank_253.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon.o src/dungeon.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_data.o src/dungeon_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_play.o src/dungeon_play.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_render_play.o src/dungeon_render_play.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_view.o src/dungeon_view.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_upload.o src/dungeon_upload.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_present.o src/dungeon_present.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion.o src/dungeon_motion.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_upload.o src/dungeon_motion_upload.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_data.o src/dungeon_motion_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_209.o src/dungeon_motion_bank_209.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_210.o src/dungeon_motion_bank_210.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_211.o src/dungeon_motion_bank_211.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_212.o src/dungeon_motion_bank_212.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_214.o src/dungeon_motion_bank_214.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_215.o src/dungeon_motion_bank_215.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_216.o src/dungeon_motion_bank_216.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_217.o src/dungeon_motion_bank_217.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_218.o src/dungeon_motion_bank_218.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_219.o src/dungeon_motion_bank_219.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_220.o src/dungeon_motion_bank_220.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_221.o src/dungeon_motion_bank_221.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_222.o src/dungeon_motion_bank_222.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_223.o src/dungeon_motion_bank_223.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_224.o src/dungeon_motion_bank_224.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_225.o src/dungeon_motion_bank_225.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_226.o src/dungeon_motion_bank_226.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_227.o src/dungeon_motion_bank_227.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_228.o src/dungeon_motion_bank_228.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_229.o src/dungeon_motion_bank_229.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_230.o src/dungeon_motion_bank_230.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_231.o src/dungeon_motion_bank_231.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_232.o src/dungeon_motion_bank_232.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_233.o src/dungeon_motion_bank_233.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_234.o src/dungeon_motion_bank_234.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_235.o src/dungeon_motion_bank_235.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_236.o src/dungeon_motion_bank_236.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_237.o src/dungeon_motion_bank_237.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_238.o src/dungeon_motion_bank_238.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_239.o src/dungeon_motion_bank_239.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_240.o src/dungeon_motion_bank_240.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_241.o src/dungeon_motion_bank_241.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_242.o src/dungeon_motion_bank_242.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_243.o src/dungeon_motion_bank_243.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_244.o src/dungeon_motion_bank_244.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_245.o src/dungeon_motion_bank_245.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_246.o src/dungeon_motion_bank_246.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_247.o src/dungeon_motion_bank_247.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_248.o src/dungeon_motion_bank_248.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_249.o src/dungeon_motion_bank_249.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_250.o src/dungeon_motion_bank_250.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_motion_bank_251.o src/dungeon_motion_bank_251.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_production_data.o src/dungeon_production_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dungeon_production_tables.o src/dungeon_production_tables.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene.o src/scene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/palette_commit.o src/palette_commit.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_data.o src/scene_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor.o src/scene_actor.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor_data.o src/scene_actor_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/cutscene.o src/cutscene.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/cutscene_art.o src/cutscene_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/cutscene_art_data.o src/cutscene_art_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/cutscene_art_bank_116.o src/cutscene_art_bank_116.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/cutscene_art_bank_117.o src/cutscene_art_bank_117.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/presentation.o src/presentation.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/presentation_data.o src/presentation_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/presentation_bank_128.o src/presentation_bank_128.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/travel.o src/travel.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/travel_render.o src/travel_render.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/travel_art.o src/travel_art.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/opening.o src/opening.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/opening_data.o src/opening_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/opening_bank_129.o src/opening_bank_129.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/opening_bank_130.o src/opening_bank_130.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/myau_flight.o src/myau_flight.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/myau_flight_data.o src/myau_flight_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/myau_flight_bank_131.o src/myau_flight_bank_131.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk.o src/ending_walk.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_data.o src/ending_walk_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_upload.o src/ending_upload.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_137.o src/ending_walk_bank_137.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_138.o src/ending_walk_bank_138.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_139.o src/ending_walk_bank_139.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_193.o src/ending_walk_bank_193.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_194.o src/ending_walk_bank_194.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_195.o src/ending_walk_bank_195.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_196.o src/ending_walk_bank_196.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_197.o src/ending_walk_bank_197.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_198.o src/ending_walk_bank_198.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_199.o src/ending_walk_bank_199.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_200.o src/ending_walk_bank_200.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_201.o src/ending_walk_bank_201.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_202.o src/ending_walk_bank_202.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_203.o src/ending_walk_bank_203.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_204.o src/ending_walk_bank_204.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_205.o src/ending_walk_bank_205.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_206.o src/ending_walk_bank_206.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_207.o src/ending_walk_bank_207.c
+mkdir -p build/obj
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/ending_walk_bank_208.o src/ending_walk_bank_208.c
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio.o src/audio.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio_irq.o src/audio_irq.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio_data.o src/audio_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio_tables.o src/audio_tables.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio_low_62.o src/audio_low_62.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/audio_low_63.o src/audio_low_63.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dialogue_text_09.o src/dialogue_text_09.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/dialogue_text_10.o src/dialogue_text_10.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets.o src/world_assets.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_00_map.o src/world_assets_00_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_00_tiles.o src/world_assets_00_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_01_map.o src/world_assets_01_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_01_tiles.o src/world_assets_01_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_02_map.o src/world_assets_02_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_02_tiles.o src/world_assets_02_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_03_map.o src/world_assets_03_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_03_tiles.o src/world_assets_03_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_04_map.o src/world_assets_04_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_04_tiles.o src/world_assets_04_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_05_map.o src/world_assets_05_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_05_tiles.o src/world_assets_05_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_06_map.o src/world_assets_06_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_06_tiles.o src/world_assets_06_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_07_map.o src/world_assets_07_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_07_tiles.o src/world_assets_07_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_08_map.o src/world_assets_08_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_08_tiles.o src/world_assets_08_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_09_map.o src/world_assets_09_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_09_tiles.o src/world_assets_09_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_10_map.o src/world_assets_10_map.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/world_assets_10_tiles.o src/world_assets_10_tiles.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_54.o src/enemy_art_bank_54.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_55.o src/enemy_art_bank_55.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_56.o src/enemy_art_bank_56.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_57.o src/enemy_art_bank_57.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_58.o src/enemy_art_bank_58.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_59.o src/enemy_art_bank_59.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_bank_60.o src/enemy_art_bank_60.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/enemy_art_data.o src/enemy_art_data.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_097.o src/scene_bank_097.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_098.o src/scene_bank_098.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_099.o src/scene_bank_099.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_100.o src/scene_bank_100.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_101.o src/scene_bank_101.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_102.o src/scene_bank_102.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_103.o src/scene_bank_103.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_104.o src/scene_bank_104.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_105.o src/scene_bank_105.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_106.o src/scene_bank_106.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_107.o src/scene_bank_107.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_108.o src/scene_bank_108.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_109.o src/scene_bank_109.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_110.o src/scene_bank_110.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_bank_192.o src/scene_bank_192.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor_bank_111.o src/scene_actor_bank_111.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor_bank_112.o src/scene_actor_bank_112.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor_bank_113.o src/scene_actor_bank_113.c
+mkdir -p build/obj
+.tools/gbdk/bin/lcc -msm83:gb -DPS_DUNGEON_LEAN -DPS_DUNGEON_MOTION -c -o build/obj/scene_actor_bank_114.o src/scene_actor_bank_114.c
+.tools/gbdk/bin/lcc -msm83:gb -Wm-yC -Wm-yt0x1b -Wm-yo256 -Wm-ya1 -Wm-ynPSGBC-WORLD -Wl-m -Wl-j -o build/phantasy-star-gbc-world.gbc build/obj/assets.o build/obj/assets_sprites.o build/obj/font.o build/obj/main.o build/obj/bank_io.o build/obj/ui.o build/obj/game_ui.o build/obj/game_flow.o build/obj/game_field.o build/obj/game_sequence.o build/obj/game_movie.o build/obj/field_actions.o build/obj/save.o build/obj/save_slots.o build/obj/save_ui.o build/obj/rpg.o build/obj/rpg_data.o build/obj/events.o build/obj/events_data.o build/obj/services.o build/obj/dialogue.o build/obj/dialogue_data.o build/obj/world.o build/obj/world_rules.o build/obj/battle.o build/obj/battle_view.o build/obj/enemy_art.o build/obj/chest_art.o build/obj/vehicle_art.o build/obj/battle_scene.o build/obj/battle_scene_data.o build/obj/battle_scene_bank_140.o build/obj/battle_scene_bank_141.o build/obj/battle_scene_bank_142.o build/obj/battle_scene_bank_143.o build/obj/battle_scene_bank_144.o build/obj/battle_scene_bank_145.o build/obj/battle_scene_bank_146.o build/obj/boss_motion.o build/obj/boss_effects_bank_254.o build/obj/boss_effects_bank_255.o build/obj/gold_scene.o build/obj/gold_scene_bank_123.o build/obj/battle_weapon.o build/obj/weapon_bank_147.o build/obj/weapon_bank_182.o build/obj/weapon_bank_183.o build/obj/weapon_bank_184.o build/obj/weapon_bank_185.o build/obj/weapon_bank_186.o build/obj/weapon_bank_187.o build/obj/weapon_bank_188.o build/obj/weapon_bank_189.o build/obj/weapon_bank_190.o build/obj/weapon_bank_191.o build/obj/weapon_bank_213.o build/obj/battle_motion.o build/obj/chest_motion.o build/obj/battle_animation_data.o build/obj/battle_animation_bank_148.o build/obj/battle_animation_bank_149.o build/obj/battle_animation_bank_150.o build/obj/battle_animation_bank_151.o build/obj/battle_animation_bank_152.o build/obj/battle_animation_bank_153.o build/obj/battle_animation_bank_154.o build/obj/battle_animation_bank_155.o build/obj/battle_animation_bank_156.o build/obj/battle_animation_bank_157.o build/obj/battle_animation_bank_158.o build/obj/battle_animation_bank_159.o build/obj/battle_animation_bank_160.o build/obj/battle_animation_bank_161.o build/obj/battle_animation_bank_162.o build/obj/battle_animation_bank_163.o build/obj/battle_animation_bank_164.o build/obj/battle_animation_bank_165.o build/obj/battle_animation_bank_166.o build/obj/battle_animation_bank_167.o build/obj/battle_animation_bank_168.o build/obj/battle_animation_bank_169.o build/obj/battle_animation_bank_170.o build/obj/battle_animation_bank_171.o build/obj/battle_animation_bank_172.o build/obj/battle_animation_bank_173.o build/obj/battle_animation_bank_174.o build/obj/battle_animation_bank_175.o build/obj/battle_animation_bank_176.o build/obj/battle_animation_bank_177.o build/obj/battle_animation_bank_178.o build/obj/battle_animation_bank_179.o build/obj/battle_animation_bank_180.o build/obj/battle_animation_bank_181.o build/obj/enemy_magic.o build/obj/enemy_magic_bank_252.o build/obj/enemy_magic_bank_253.o build/obj/dungeon.o build/obj/dungeon_data.o build/obj/dungeon_play.o build/obj/dungeon_render_play.o build/obj/dungeon_view.o build/obj/dungeon_upload.o build/obj/dungeon_present.o build/obj/dungeon_motion.o build/obj/dungeon_motion_upload.o build/obj/dungeon_motion_data.o build/obj/dungeon_motion_bank_209.o build/obj/dungeon_motion_bank_210.o build/obj/dungeon_motion_bank_211.o build/obj/dungeon_motion_bank_212.o build/obj/dungeon_motion_bank_214.o build/obj/dungeon_motion_bank_215.o build/obj/dungeon_motion_bank_216.o build/obj/dungeon_motion_bank_217.o build/obj/dungeon_motion_bank_218.o build/obj/dungeon_motion_bank_219.o build/obj/dungeon_motion_bank_220.o build/obj/dungeon_motion_bank_221.o build/obj/dungeon_motion_bank_222.o build/obj/dungeon_motion_bank_223.o build/obj/dungeon_motion_bank_224.o build/obj/dungeon_motion_bank_225.o build/obj/dungeon_motion_bank_226.o build/obj/dungeon_motion_bank_227.o build/obj/dungeon_motion_bank_228.o build/obj/dungeon_motion_bank_229.o build/obj/dungeon_motion_bank_230.o build/obj/dungeon_motion_bank_231.o build/obj/dungeon_motion_bank_232.o build/obj/dungeon_motion_bank_233.o build/obj/dungeon_motion_bank_234.o build/obj/dungeon_motion_bank_235.o build/obj/dungeon_motion_bank_236.o build/obj/dungeon_motion_bank_237.o build/obj/dungeon_motion_bank_238.o build/obj/dungeon_motion_bank_239.o build/obj/dungeon_motion_bank_240.o build/obj/dungeon_motion_bank_241.o build/obj/dungeon_motion_bank_242.o build/obj/dungeon_motion_bank_243.o build/obj/dungeon_motion_bank_244.o build/obj/dungeon_motion_bank_245.o build/obj/dungeon_motion_bank_246.o build/obj/dungeon_motion_bank_247.o build/obj/dungeon_motion_bank_248.o build/obj/dungeon_motion_bank_249.o build/obj/dungeon_motion_bank_250.o build/obj/dungeon_motion_bank_251.o build/obj/dungeon_production_data.o build/obj/dungeon_production_tables.o build/obj/scene.o build/obj/palette_commit.o build/obj/scene_data.o build/obj/scene_actor.o build/obj/scene_actor_data.o build/obj/cutscene.o build/obj/cutscene_art.o build/obj/cutscene_art_data.o build/obj/cutscene_art_bank_116.o build/obj/cutscene_art_bank_117.o build/obj/presentation.o build/obj/presentation_data.o build/obj/presentation_bank_128.o build/obj/travel.o build/obj/travel_render.o build/obj/travel_art.o build/obj/opening.o build/obj/opening_data.o build/obj/opening_bank_129.o build/obj/opening_bank_130.o build/obj/myau_flight.o build/obj/myau_flight_data.o build/obj/myau_flight_bank_131.o build/obj/ending_walk.o build/obj/ending_walk_data.o build/obj/ending_upload.o build/obj/ending_walk_bank_137.o build/obj/ending_walk_bank_138.o build/obj/ending_walk_bank_139.o build/obj/ending_walk_bank_193.o build/obj/ending_walk_bank_194.o build/obj/ending_walk_bank_195.o build/obj/ending_walk_bank_196.o build/obj/ending_walk_bank_197.o build/obj/ending_walk_bank_198.o build/obj/ending_walk_bank_199.o build/obj/ending_walk_bank_200.o build/obj/ending_walk_bank_201.o build/obj/ending_walk_bank_202.o build/obj/ending_walk_bank_203.o build/obj/ending_walk_bank_204.o build/obj/ending_walk_bank_205.o build/obj/ending_walk_bank_206.o build/obj/ending_walk_bank_207.o build/obj/ending_walk_bank_208.o build/obj/audio.o build/obj/audio_irq.o build/obj/audio_data.o build/obj/audio_tables.o build/obj/audio_low_62.o build/obj/audio_low_63.o build/obj/dialogue_text_09.o build/obj/dialogue_text_10.o build/obj/world_assets.o build/obj/world_assets_00_map.o build/obj/world_assets_00_tiles.o build/obj/world_assets_01_map.o build/obj/world_assets_01_tiles.o build/obj/world_assets_02_map.o build/obj/world_assets_02_tiles.o build/obj/world_assets_03_map.o build/obj/world_assets_03_tiles.o build/obj/world_assets_04_map.o build/obj/world_assets_04_tiles.o build/obj/world_assets_05_map.o build/obj/world_assets_05_tiles.o build/obj/world_assets_06_map.o build/obj/world_assets_06_tiles.o build/obj/world_assets_07_map.o build/obj/world_assets_07_tiles.o build/obj/world_assets_08_map.o build/obj/world_assets_08_tiles.o build/obj/world_assets_09_map.o build/obj/world_assets_09_tiles.o build/obj/world_assets_10_map.o build/obj/world_assets_10_tiles.o build/obj/enemy_art_bank_54.o build/obj/enemy_art_bank_55.o build/obj/enemy_art_bank_56.o build/obj/enemy_art_bank_57.o build/obj/enemy_art_bank_58.o build/obj/enemy_art_bank_59.o build/obj/enemy_art_bank_60.o build/obj/enemy_art_data.o build/obj/scene_bank_097.o build/obj/scene_bank_098.o build/obj/scene_bank_099.o build/obj/scene_bank_100.o build/obj/scene_bank_101.o build/obj/scene_bank_102.o build/obj/scene_bank_103.o build/obj/scene_bank_104.o build/obj/scene_bank_105.o build/obj/scene_bank_106.o build/obj/scene_bank_107.o build/obj/scene_bank_108.o build/obj/scene_bank_109.o build/obj/scene_bank_110.o build/obj/scene_bank_192.o build/obj/scene_actor_bank_111.o build/obj/scene_actor_bank_112.o build/obj/scene_actor_bank_113.o build/obj/scene_actor_bank_114.o
+../../.venv-transfer/bin/python tools/verify_layout.py build/phantasy-star-gbc-world.gbc
+{
+  "passed": true,
+  "rom_sha256": "2e151f71ae14996d5753791d373b6ef9f0d7a27f7f86e3cab3742c39ea19668c",
+  "rom_banks": 256,
+  "wram_start": 49312,
+  "wram_bytes": 6905,
+  "wram_end": 56217,
+  "stack_address_space_reserved": 1127
+}

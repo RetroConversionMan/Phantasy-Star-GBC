@@ -1,0 +1,136 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module audio_irq
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl b_audio_tick
+                                     11 	.globl _audio_tick
+                                     12 	.globl b_audio_init
+                                     13 	.globl _audio_init
+                                     14 	.globl _add_LCD
+                                     15 	.globl _audio_command_before_tick
+                                     16 	.globl _audio_install
+                                     17 ;--------------------------------------------------------
+                                     18 ; special function registers
+                                     19 ;--------------------------------------------------------
+                                     20 	.area _HRAM
+                                     21 ;--------------------------------------------------------
+                                     22 ; ram data
+                                     23 ;--------------------------------------------------------
+                                     24 	.area _DATA
+    00000000                         25 _audio_before_tick:
+    00000000                         26 	.ds 1
+                                     27 ;--------------------------------------------------------
+                                     28 ; ram data
+                                     29 ;--------------------------------------------------------
+                                     30 	.area _INITIALIZED
+                                     31 ;--------------------------------------------------------
+                                     32 ; absolute external ram data
+                                     33 ;--------------------------------------------------------
+                                     34 	.area _DABS (ABS)
+                                     35 ;--------------------------------------------------------
+                                     36 ; global & static initialisations
+                                     37 ;--------------------------------------------------------
+                                     38 	.area _HOME
+                                     39 	.area _GSINIT
+                                     40 	.area _GSFINAL
+                                     41 	.area _GSINIT
+                                     42 ;--------------------------------------------------------
+                                     43 ; Home
+                                     44 ;--------------------------------------------------------
+                                     45 	.area _HOME
+                                     46 ;src/audio_irq.c:12: void audio_command_before_tick(uint8_t command) AUDIO_FIXED {
+                                     47 ;	---------------------------------
+                                     48 ; Function audio_command_before_tick
+                                     49 ; ---------------------------------
+    00000000                         50 _audio_command_before_tick::
+    00000000 4F               [ 4]   51 	ld	c, a
+                                     52 ;src/audio_irq.c:21: }
+    00000001 F3               [ 4]   53 	di
+                                     54 ;src/audio_irq.c:18: audio_ram[4]=0x80u;
+    00000002 21r04r00         [12]   55 	ld	hl, #(_audio_ram + 4)
+    00000005 36 80            [12]   56 	ld	(hl), #0x80
+                                     57 ;src/audio_irq.c:19: audio_before_tick=command;
+    00000007 21r00r00         [12]   58 	ld	hl, #_audio_before_tick
+    0000000A 71               [ 8]   59 	ld	(hl), c
+    0000000B FB               [ 4]   60 	ei
+                                     61 ;src/audio_irq.c:23: }
+    0000000C C9               [16]   62 	ret
+                                     63 ;src/audio_irq.c:25: static void audio_scanline(void) AUDIO_FIXED {
+                                     64 ;	---------------------------------
+                                     65 ; Function audio_scanline
+                                     66 ; ---------------------------------
+    0000000D                         67 _audio_scanline:
+                                     68 ;src/audio_irq.c:26: uint8_t command=audio_before_tick,later;
+    0000000D FAr00r00         [16]   69 	ld	a, (_audio_before_tick)
+                                     70 ;src/audio_irq.c:27: if(command) {
+    00000010 4F               [ 4]   71 	ld	c, a
+    00000011 B7               [ 4]   72 	or	a, a
+    00000012 28 1D            [12]   73 	jr	Z, 00104$
+                                     74 ;src/audio_irq.c:28: audio_before_tick=0;
+    00000014 AF               [ 4]   75 	xor	a, a
+    00000015 EAr00r00         [16]   76 	ld	(#_audio_before_tick),a
+                                     77 ;src/audio_irq.c:29: later=audio_ram[4];
+    00000018 11r04r00         [12]   78 	ld	de, #_audio_ram+4
+    0000001B 1A               [ 8]   79 	ld	a, (de)
+    0000001C 47               [ 4]   80 	ld	b, a
+                                     81 ;src/audio_irq.c:30: audio_ram[4]=command;
+    0000001D 79               [ 4]   82 	ld	a, c
+    0000001E 12               [ 8]   83 	ld	(de), a
+                                     84 ;src/audio_irq.c:31: audio_tick();
+    0000001F C5               [16]   85 	push	bc
+    00000020 D5               [16]   86 	push	de
+    00000021 1Er00            [ 8]   87 	ld	e, #b_audio_tick
+    00000023 21r00r00         [12]   88 	ld	hl, #_audio_tick
+    00000026 CDr00r00         [24]   89 	call	___sdcc_bcall_ehl
+    00000029 D1               [12]   90 	pop	de
+    0000002A C1               [12]   91 	pop	bc
+                                     92 ;src/audio_irq.c:32: if(later!=0x80u)audio_ram[4]=later;
+    0000002B 78               [ 4]   93 	ld	a,b
+    0000002C FE 80            [ 8]   94 	cp	a,#0x80
+    0000002E C8               [20]   95 	ret	Z
+    0000002F 12               [ 8]   96 	ld	(de), a
+    00000030 C9               [16]   97 	ret
+    00000031                         98 00104$:
+                                     99 ;src/audio_irq.c:33: } else audio_tick();
+    00000031 1Er00            [ 8]  100 	ld	e, #b_audio_tick
+    00000033 21r00r00         [12]  101 	ld	hl, #_audio_tick
+                                    102 ;src/audio_irq.c:34: }
+    00000036 C3r00r00         [16]  103 	jp  ___sdcc_bcall_ehl
+                                    104 ;src/audio_irq.c:35: void audio_install(void) AUDIO_FIXED {
+                                    105 ;	---------------------------------
+                                    106 ; Function audio_install
+                                    107 ; ---------------------------------
+    00000039                        108 _audio_install::
+                                    109 ;src/audio_irq.c:36: CRITICAL {audio_before_tick=0;audio_init();LYC_REG=0;STAT_REG|=0x40;add_LCD(audio_scanline);IE_REG|=LCD_IFLAG;}
+    00000039 F3               [ 4]  110 	di
+    0000003A AF               [ 4]  111 	xor	a, a
+    0000003B EAr00r00         [16]  112 	ld	(#_audio_before_tick),a
+    0000003E 1Er00            [ 8]  113 	ld	e, #b_audio_init
+    00000040 21r00r00         [12]  114 	ld	hl, #_audio_init
+    00000043 CDr00r00         [24]  115 	call	___sdcc_bcall_ehl
+    00000046 AF               [ 4]  116 	xor	a, a
+    00000047 E0r00            [12]  117 	ldh	(_LYC_REG + 0), a
+    00000049 F0r00            [12]  118 	ldh	a, (_STAT_REG + 0)
+    0000004B F6 40            [ 8]  119 	or	a, #0x40
+    0000004D E0r00            [12]  120 	ldh	(_STAT_REG + 0), a
+    0000004F 11r0Dr00         [12]  121 	ld	de, #_audio_scanline
+    00000052 CDr00r00         [24]  122 	call	_add_LCD
+    00000055 F0r00            [12]  123 	ldh	a, (_IE_REG + 0)
+    00000057 F6 02            [ 8]  124 	or	a, #0x02
+    00000059 E0r00            [12]  125 	ldh	(_IE_REG + 0), a
+    0000005B FB               [ 4]  126 	ei
+                                    127 ;src/audio_irq.c:37: }
+    0000005C C9               [16]  128 	ret
+                                    129 	.area _HOME
+                                    130 ;--------------------------------------------------------
+                                    131 ; code
+                                    132 ;--------------------------------------------------------
+                                    133 	.area _CODE_0
+                                    134 	.area _CODE_0
+                                    135 	.area _INITIALIZER
+                                    136 	.area _CABS (ABS)

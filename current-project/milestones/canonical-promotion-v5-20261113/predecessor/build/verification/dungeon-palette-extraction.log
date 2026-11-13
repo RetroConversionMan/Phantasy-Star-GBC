@@ -1,0 +1,46 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "frames": 38,
+  "unique_graphics": 22,
+  "unique_tilemaps": 35,
+  "data_bytes": 322619,
+  "banks": {
+    "20": 16384,
+    "21": 16369,
+    "22": 16281,
+    "23": 16183,
+    "24": 16134,
+    "25": 15986,
+    "26": 16371,
+    "27": 16175,
+    "28": 16238,
+    "29": 16350,
+    "64": 12692,
+    "65": 12288,
+    "66": 12288,
+    "67": 12288,
+    "68": 12288,
+    "69": 12288,
+    "70": 12288,
+    "71": 12288,
+    "72": 12288,
+    "73": 12288,
+    "74": 12288,
+    "75": 12288,
+    "76": 12288,
+    "77": 0
+  },
+  "scene_size": [
+    160,
+    120
+  ],
+  "source_scene_size": [
+    256,
+    192
+  ],
+  "limits": [
+    "Extraction alone is not playable gameplay; native verification is recorded separately",
+    "Palette reduction and nearest-neighbor scaling adapt original art",
+    "Special dynamic overlay at LABEL_6E04 remains separate"
+  ]
+}

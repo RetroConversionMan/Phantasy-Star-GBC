@@ -1,0 +1,28 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "d1341b26003df6d2475810056c985b8d56ed97496fa7d49151386dd5e920a974",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Canceling Heal target selection spends no MP and heals nobody",
+    "Heal selected through field menu restores20 HP capped at maximum and spends2 MP",
+    "Canceling Rise after selecting Noah spends12 MP as in source",
+    "Landrover entry uses original geometry, retains item, and survives save/power-cycle with party state intact",
+    "Selecting the active vehicle item dismounts directly and restores Alis without leaving stale vehicle sprites"
+  ],
+  "injected_fixtures": [
+    "Alis HP1, MP/maxMP20 and2 mapspells; Noah joined with MP/maxMP60, HP/maxHP100 and5 mapspells to test menu costs without campaign grinding",
+    "Landrover inventory item for vehicle UI; map location, flags and RNG unchanged"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

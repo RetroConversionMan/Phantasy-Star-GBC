@@ -1,0 +1,152 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _scene_actor_000                                                ******** GX
+    _scene_actor_001                                                ******** GX
+    _scene_actor_002                                                ******** GX
+    _scene_actor_003                                                ******** GX
+    _scene_actor_004                                                ******** GX
+    _scene_actor_005                                                ******** GX
+    _scene_actor_006                                                ******** GX
+    _scene_actor_007                                                ******** GX
+    _scene_actor_008                                                ******** GX
+    _scene_actor_009                                                ******** GX
+    _scene_actor_010                                                ******** GX
+    _scene_actor_011                                                ******** GX
+    _scene_actor_012                                                ******** GX
+    _scene_actor_013                                                ******** GX
+    _scene_actor_014                                                ******** GX
+    _scene_actor_015                                                ******** GX
+    _scene_actor_016                                                ******** GX
+    _scene_actor_017                                                ******** GX
+    _scene_actor_018                                                ******** GX
+    _scene_actor_019                                                ******** GX
+    _scene_actor_020                                                ******** GX
+    _scene_actor_021                                                ******** GX
+    _scene_actor_022                                                ******** GX
+    _scene_actor_023                                                ******** GX
+    _scene_actor_024                                                ******** GX
+    _scene_actor_025                                                ******** GX
+    _scene_actor_026                                                ******** GX
+    _scene_actor_027                                                ******** GX
+    _scene_actor_028                                                ******** GX
+    _scene_actor_029                                                ******** GX
+    _scene_actor_030                                                ******** GX
+    _scene_actor_031                                                ******** GX
+    _scene_actor_032                                                ******** GX
+    _scene_actor_033                                                ******** GX
+    _scene_actor_034                                                ******** GX
+    _scene_actor_035                                                ******** GX
+    _scene_actor_036                                                ******** GX
+    _scene_actor_037                                                ******** GX
+    _scene_actor_038                                                ******** GX
+    _scene_actor_039                                                ******** GX
+    _scene_actor_040                                                ******** GX
+    _scene_actor_041                                                ******** GX
+    _scene_actor_042                                                ******** GX
+    _scene_actor_043                                                ******** GX
+    _scene_actor_044                                                ******** GX
+    _scene_actor_045                                                ******** GX
+    _scene_actor_046                                                ******** GX
+    _scene_actor_047                                                ******** GX
+    _scene_actor_048                                                ******** GX
+    _scene_actor_049                                                ******** GX
+    _scene_actor_050                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_actor_051                                                ******** GX
+    _scene_actor_052                                                ******** GX
+    _scene_actor_053                                                ******** GX
+    _scene_actor_054                                                ******** GX
+    _scene_actor_055                                                ******** GX
+    _scene_actor_056                                                ******** GX
+    _scene_actor_057                                                ******** GX
+    _scene_actor_058                                                ******** GX
+    _scene_actor_059                                                ******** GX
+    _scene_actor_060                                                ******** GX
+    _scene_actor_061                                                ******** GX
+    _scene_actor_062                                                ******** GX
+    _scene_actor_063                                                ******** GX
+    _scene_actor_064                                                ******** GX
+    _scene_actor_065                                                ******** GX
+    _scene_actor_066                                                ******** GX
+    _scene_actor_067                                                ******** GX
+    _scene_actor_068                                                ******** GX
+    _scene_actor_069                                                ******** GX
+    _scene_actor_070                                                ******** GX
+    _scene_actor_071                                                ******** GX
+    _scene_actor_072                                                ******** GX
+    _scene_actor_073                                                ******** GX
+    _scene_actor_074                                                ******** GX
+    _scene_actor_075                                                ******** GX
+    _scene_actor_076                                                ******** GX
+    _scene_actor_077                                                ******** GX
+    _scene_actor_078                                                ******** GX
+    _scene_actor_079                                                ******** GX
+    _scene_actor_080                                                ******** GX
+    _scene_actor_081                                                ******** GX
+    _scene_actor_082                                                ******** GX
+    _scene_actor_083                                                ******** GX
+    _scene_actor_084                                                ******** GX
+    _scene_actor_085                                                ******** GX
+    _scene_actor_086                                                ******** GX
+    _scene_actor_087                                                ******** GX
+    _scene_actor_088                                                ******** GX
+    _scene_actor_089                                                ******** GX
+    _scene_actor_090                                                ******** GX
+    _scene_actor_091                                                ******** GX
+    _scene_actor_092                                                ******** GX
+    _scene_actor_093                                                ******** GX
+    _scene_actor_094                                                ******** GX
+    _scene_actor_095                                                ******** GX
+    _scene_actor_096                                                ******** GX
+    _scene_actor_097                                                ******** GX
+    _scene_actor_098                                                ******** GX
+    _scene_actor_099                                                ******** GX
+    _scene_actor_100                                                ******** GX
+    _scene_actor_101                                                ******** GX
+    _scene_actor_102                                                ******** GX
+    _scene_actor_103                                                ******** GX
+    _scene_actor_104                                                ******** GX
+    _scene_actor_105                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_actor_106                                                ******** GX
+    _scene_actor_107                                                ******** GX
+    _scene_actor_108                                                ******** GX
+    _scene_actor_109                                                ******** GX
+    _scene_actor_110                                                ******** GX
+    _scene_actor_111                                                ******** GX
+    _scene_actor_112                                                ******** GX
+  8 _scene_actors                                                   00000000 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_13                                   size      388   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

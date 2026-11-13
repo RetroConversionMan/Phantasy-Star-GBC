@@ -1,0 +1,41 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "diagnostic": "128-byte unused-WRAM guard above static data; no game state injected",
+  "sections": [
+    {
+      "name": "title",
+      "score_frames": 300,
+      "music_command": 129,
+      "pcm_peak_to_peak": 36
+    },
+    {
+      "name": "Camineet",
+      "score_frames": 300,
+      "music_command": 135,
+      "pcm_peak_to_peak": 27
+    },
+    {
+      "name": "menu",
+      "score_frames": 300,
+      "music_command": 135,
+      "pcm_peak_to_peak": 27
+    }
+  ],
+  "hardware_tested": false,
+  "lower_stack_guard_intact": true,
+  "guard_start": "0xdb86",
+  "audio_artifact": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/current-project/build/verification/integrated-audio/production-title-town-menu.wav",
+  "passed": true
+}

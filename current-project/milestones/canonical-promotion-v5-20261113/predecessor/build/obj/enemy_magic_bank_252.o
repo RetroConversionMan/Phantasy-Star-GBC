@@ -1,0 +1,274 @@
+XL4
+H B areas 76 global symbols
+M enemy_magic_bank_252
+S _enemy_magic_asset_000 Ref00000000
+S _enemy_magic_asset_010 Ref00000000
+S _enemy_magic_asset_001 Ref00000000
+S _enemy_magic_asset_020 Ref00000000
+S _enemy_magic_asset_011 Ref00000000
+S _enemy_magic_asset_002 Ref00000000
+S _enemy_magic_asset_030 Ref00000000
+S _enemy_magic_asset_021 Ref00000000
+S _enemy_magic_asset_012 Ref00000000
+S _enemy_magic_asset_003 Ref00000000
+S _enemy_magic_asset_040 Ref00000000
+S _enemy_magic_asset_031 Ref00000000
+S _enemy_magic_asset_022 Ref00000000
+S _enemy_magic_asset_013 Ref00000000
+S _enemy_magic_asset_004 Ref00000000
+S _enemy_magic_asset_050 Ref00000000
+S _enemy_magic_asset_041 Ref00000000
+S _enemy_magic_asset_032 Ref00000000
+S _enemy_magic_asset_023 Ref00000000
+S _enemy_magic_asset_014 Ref00000000
+S _enemy_magic_asset_005 Ref00000000
+S _enemy_magic_asset_060 Ref00000000
+S _enemy_magic_asset_051 Ref00000000
+S _enemy_magic_asset_042 Ref00000000
+S _enemy_magic_asset_033 Ref00000000
+S _enemy_magic_asset_024 Ref00000000
+S _enemy_magic_asset_015 Ref00000000
+S _enemy_magic_asset_006 Ref00000000
+S _enemy_magic_asset_070 Ref00000000
+S _enemy_magic_asset_061 Ref00000000
+S _enemy_magic_asset_052 Ref00000000
+S _enemy_magic_asset_043 Ref00000000
+S _enemy_magic_asset_034 Ref00000000
+S _enemy_magic_asset_025 Ref00000000
+S _enemy_magic_asset_016 Ref00000000
+S _enemy_magic_asset_007 Ref00000000
+S _enemy_magic_asset_080 Ref00000000
+S _enemy_magic_asset_071 Ref00000000
+S _enemy_magic_asset_062 Ref00000000
+S _enemy_magic_asset_053 Ref00000000
+S _enemy_magic_asset_044 Ref00000000
+S _enemy_magic_asset_035 Ref00000000
+S _enemy_magic_asset_026 Ref00000000
+S _enemy_magic_asset_017 Ref00000000
+S _enemy_magic_asset_008 Ref00000000
+S _enemy_magic_asset_090 Ref00000000
+S _enemy_magic_asset_081 Ref00000000
+S _enemy_magic_asset_072 Ref00000000
+S _enemy_magic_asset_063 Ref00000000
+S _enemy_magic_asset_054 Ref00000000
+S _enemy_magic_asset_045 Ref00000000
+S _enemy_magic_asset_036 Ref00000000
+S _enemy_magic_asset_027 Ref00000000
+S _enemy_magic_asset_018 Ref00000000
+S _enemy_magic_asset_009 Ref00000000
+S _enemy_magic_asset_091 Ref00000000
+S _enemy_magic_asset_082 Ref00000000
+S _enemy_magic_asset_073 Ref00000000
+S _enemy_magic_asset_064 Ref00000000
+S _enemy_magic_asset_055 Ref00000000
+S _enemy_magic_asset_046 Ref00000000
+S _enemy_magic_asset_037 Ref00000000
+S _enemy_magic_asset_028 Ref00000000
+S _enemy_magic_asset_019 Ref00000000
+S _enemy_magic_asset_092 Ref00000000
+S _enemy_magic_asset_083 Ref00000000
+S _enemy_magic_asset_074 Ref00000000
+S _enemy_magic_asset_065 Ref00000000
+S _enemy_magic_asset_056 Ref00000000
+S _enemy_magic_asset_047 Ref00000000
+S _enemy_magic_asset_038 Ref00000000
+S _enemy_magic_asset_029 Ref00000000
+S _enemy_magic_asset_093 Ref00000000
+S _enemy_magic_asset_084 Ref00000000
+S _enemy_magic_asset_075 Ref00000000
+S _enemy_magic_asset_066 Ref00000000
+S _enemy_magic_asset_057 Ref00000000
+S _enemy_magic_asset_048 Ref00000000
+S _enemy_magic_asset_039 Ref00000000
+S _enemy_magic_asset_094 Ref00000000
+S _enemy_magic_asset_085 Ref00000000
+S _enemy_magic_asset_076 Ref00000000
+S _enemy_magic_asset_067 Ref00000000
+S _enemy_magic_asset_058 Ref00000000
+S _enemy_magic_asset_049 Ref00000000
+S _enemy_magic_sequence_13 Ref00000000
+S _enemy_magic_asset_095 Ref00000000
+S _enemy_magic_asset_086 Ref00000000
+S _enemy_magic_asset_077 Ref00000000
+S _enemy_magic_asset_068 Ref00000000
+S _enemy_magic_asset_059 Ref00000000
+S _enemy_magic_sequence_23 Ref00000000
+S _enemy_magic_pairs_00 Ref00000000
+S _enemy_magic_asset_096 Ref00000000
+S _enemy_magic_asset_087 Ref00000000
+S _enemy_magic_asset_078 Ref00000000
+S _enemy_magic_asset_069 Ref00000000
+S _enemy_magic_asset_097 Ref00000000
+S _enemy_magic_asset_088 Ref00000000
+S _enemy_magic_asset_079 Ref00000000
+S _enemy_magic_asset_098 Ref00000000
+S _enemy_magic_asset_089 Ref00000000
+S _enemy_magic_asset_099 Ref00000000
+S .__.ABS. Def00000000
+S _enemy_magic_sequence_65 Ref00000000
+S _enemy_magic_sequence_56 Ref00000000
+S _enemy_magic_sequence_47 Ref00000000
+S _enemy_magic_sequence_57 Ref00000000
+S _enemy_magic_sequence_49 Ref00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_252 size 2B2 flags 0 addr 0
+S _enemy_magic_pose_keys Def00000047
+S _enemy_magic_assets Def0000011F
+S _enemy_magic_kinds Def00000007
+S _enemy_magic_effects Def0000000E
+S _enemy_magic_enemies Def00000000
+S _enemy_magic_effect_lookup Def000000AF
+S _enemy_magic_pools Def000002AF
+S _enemy_magic_pose_lookup Def0000004F
+S _enemy_magic_animations Def00000016
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 0D 17 2F 31 38 39 41
+R 00 00 08 00
+T 07 00 00 00
+R 00 00 08 00
+T 07 00 00 00 00 00 00 00 01 00 01
+R 00 00 08 00
+T 0E 00 00 00
+R 00 00 08 00
+T 0E 00 00 00 A8 03 46 4F A9 03 79 82
+R 00 00 08 00
+T 16 00 00 00
+R 00 00 08 00
+T 16 00 00 00 01 0B 00 66 FD 00 00 05 0B 00 70 FD
+R 00 00 08 00 02 09 55 00
+T 22 00 00 00 00 00 0F 04 00 1C FD 00 00 07 0A 00
+R 00 00 08 00 02 04 5B 00 02 0B 6A 00
+T 2E 00 00 00 24 FD 00 00 0F 04 00 1C FD 00 00 07
+R 00 00 08 00 02 06 6C 00 02 0D 69 00
+T 3A 00 00 00 06 00 AD FD 00 00 05 03 00 B5 FD
+R 00 00 08 00 02 08 6B 00
+T 45 00 00 00 00 00
+R 00 00 08 00 02 04 68 00
+T 47 00 00 00
+R 00 00 08 00
+T 47 00 00 00 2F 1F 38 1F 39 AE 39 AF
+R 00 00 08 00
+T 4F 00 00 00
+R 00 00 08 00
+T 4F 00 00 00 18 00 19 00 1A 00 1B 00 1C 00 1D 00
+R 00 00 08 00
+T 5B 00 00 00 1E 00 1F 00 20 00 18 00 21 00 22 00
+R 00 00 08 00
+T 67 00 00 00 33 00 34 00 35 00 36 00 37 00 38 00
+R 00 00 08 00
+T 73 00 00 00 39 00 3A 00 3B 00 33 00 3C 00 3D 00
+R 00 00 08 00
+T 7F 00 00 00 46 00 47 00 48 00 49 00 4A 00 4B 00
+R 00 00 08 00
+T 8B 00 00 00 4C 00 4D 00 4E 00 46 00 4F 00 50 00
+R 00 00 08 00
+T 97 00 00 00 51 00 52 00 53 00 54 00 55 00 56 00
+R 00 00 08 00
+T A3 00 00 00 57 00 58 00 59 00 51 00 5A 00 5B 00
+R 00 00 08 00
+T AF 00 00 00
+R 00 00 08 00
+T AF 00 00 00 00 00 01 00 02 00 03 00 04 00 05 00
+R 00 00 08 00
+T BB 00 00 00 06 00 07 00 08 00 09 00 0A 00 0B 00
+R 00 00 08 00
+T C7 00 00 00 0C 00 0D 00 0E 00 0F 00 10 00 11 00
+R 00 00 08 00
+T D3 00 00 00 12 00 13 00 14 00 15 00 16 00 17 00
+R 00 00 08 00
+T DF 00 00 00 23 00 24 00 25 00 26 00 27 00 28 00
+R 00 00 08 00
+T EB 00 00 00 29 00 2A 00 2B 00 2C 00 2D 00 2E 00
+R 00 00 08 00
+T F7 00 00 00 2F 00 30 00 31 00 32 00 3E 00 3F 00
+R 00 00 08 00
+T 03 01 00 00 40 00 41 00 42 00 43 00 44 00 45 00
+R 00 00 08 00
+T 0F 01 00 00 5C 00 5D 00 5E 00 5F 00 60 00 61 00
+R 00 00 08 00
+T 1B 01 00 00 62 00 63 00
+R 00 00 08 00
+T 1F 01 00 00
+R 00 00 08 00
+T 1F 01 00 00 FD 02 00 00 FD 04 00 00 FD 02 00 00
+R 00 00 08 00 02 06 00 00 02 0A 02 00 02 0E 05 00
+T 2B 01 00 00 FD 04 00 00 FD 04 00 00 FD 02 00 00
+R 00 00 08 00 02 06 09 00 02 0A 0E 00 02 0E 14 00
+T 37 01 00 00 FD 02 00 00 FD 04 00 00 FD 02 00 00
+R 00 00 08 00 02 06 1B 00 02 0A 23 00 02 0E 2C 00
+T 43 01 00 00 FD 02 00 00 FD 04 00 00 FD 01 00 00
+R 00 00 08 00 02 06 36 00 02 0A 01 00 02 0E 04 00
+T 4F 01 00 00 FD 04 00 00 FD 02 00 00 FD 02 00 00
+R 00 00 08 00 02 06 08 00 02 0A 0D 00 02 0E 13 00
+T 5B 01 00 00 FD 02 00 00 FD 01 00 00 FD 02 00 00
+R 00 00 08 00 02 06 1A 00 02 0A 22 00 02 0E 2B 00
+T 67 01 00 00 FD 04 00 00 FD 02 00 00 FD 04 00 00
+R 00 00 08 00 02 06 35 00 02 0A 3F 00 02 0E 03 00
+T 73 01 00 00 FD 02 00 00 FD 02 00 00 FD 02 00 00
+R 00 00 08 00 02 06 07 00 02 0A 0C 00 02 0E 12 00
+T 7F 01 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 19 00 02 0A 21 00 02 0E 2A 00
+T 8B 01 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 34 00 02 0A 3E 00 02 0E 47 00
+T 97 01 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 06 00 02 0A 0B 00 02 0E 11 00
+T A3 01 00 00 FD 11 00 00 FD 11 00 00 FD 01 00 00
+R 00 00 08 00 02 06 18 00 02 0A 20 00 02 0E 29 00
+T AF 01 00 00 FD 02 00 00 FD 01 00 00 FD 02 00 00
+R 00 00 08 00 02 06 33 00 02 0A 3D 00 02 0E 46 00
+T BB 01 00 00 FD 03 00 00 FD 02 00 00 FD 01 00 00
+R 00 00 08 00 02 06 4E 00 02 0A 0A 00 02 0E 10 00
+T C7 01 00 00 FD 03 00 00 FD 01 00 00 FD 02 00 00
+R 00 00 08 00 02 06 17 00 02 0A 1F 00 02 0E 28 00
+T D3 01 00 00 FD 04 00 00 FD 05 00 00 FD 06 00 00
+R 00 00 08 00 02 06 32 00 02 0A 3C 00 02 0E 45 00
+T DF 01 00 00 FD 02 00 00 FD 02 00 00 FD 02 00 00
+R 00 00 08 00 02 06 4D 00 02 0A 54 00 02 0E 0F 00
+T EB 01 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 16 00 02 0A 1E 00 02 0E 27 00
+T F7 01 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 31 00 02 0A 3B 00 02 0E 44 00
+T 03 02 00 00 FD 11 00 00 FD 11 00 00 FD 11 00 00
+R 00 00 08 00 02 06 4C 00 02 0A 53 00 02 0E 5A 00
+T 0F 02 00 00 FD 11 00 00 FD 11 00 00 FD 01 00 00
+R 00 00 08 00 02 06 15 00 02 0A 1D 00 02 0E 26 00
+T 1B 02 00 00 FD 03 00 00 FD 02 00 00 FD 02 00 00
+R 00 00 08 00 02 06 30 00 02 0A 3A 00 02 0E 43 00
+T 27 02 00 00 FD 04 00 00 FD 03 00 00 FD 03 00 00
+R 00 00 08 00 02 06 4B 00 02 0A 52 00 02 0E 59 00
+T 33 02 00 00 FD 04 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 60 00 02 0A 1C 00 02 0E 25 00
+T 3F 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 2F 00 02 0A 39 00 02 0E 42 00
+T 4B 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 4A 00 02 0A 51 00 02 0E 58 00
+T 57 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 5F 00 02 0A 63 00 02 0E 24 00
+T 63 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 2E 00 02 0A 38 00 02 0E 41 00
+T 6F 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 49 00 02 0A 50 00 02 0E 57 00
+T 7B 02 00 00 FD 12 00 00 FD 12 00 00 FD 12 00 00
+R 00 00 08 00 02 06 5E 00 02 0A 62 00 02 0E 65 00
+T 87 02 00 00 FD 12 00 00 FD 12 00 00 FD 01 00 00
+R 00 00 08 00 02 06 2D 00 02 0A 37 00 02 0E 40 00
+T 93 02 00 00 FD 01 00 00 FD 02 00 00 FD 04 00 00
+R 00 00 08 00 02 06 48 00 02 0A 4F 00 02 0E 56 00
+T 9F 02 00 00 FD 05 00 00 FD 02 00 00 FD 01 00 00
+R 00 00 08 00 02 06 5D 00 02 0A 61 00 02 0E 64 00
+T AB 02 00 00 FD 02 00 00
+R 00 00 08 00 02 06 66 00
+T AF 02 00 00
+R 00 00 08 00
+T AF 02 00 00 FD 00 00
+R 00 00 08 00 02 05 5C 00

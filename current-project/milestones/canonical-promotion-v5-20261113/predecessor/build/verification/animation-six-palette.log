@@ -1,0 +1,155 @@
+extracted enemy1: 3frames, 3assets, 24pairs
+extracted enemy2: 7frames, 10assets, 68pairs
+extracted enemy3: 4frames, 14assets, 107pairs
+extracted enemy4: 6frames, 20assets, 135pairs
+extracted enemy5: 3frames, 23assets, 155pairs
+extracted enemy6: 3frames, 26assets, 165pairs
+extracted enemy7: 7frames, 33assets, 175pairs
+extracted enemy8: 4frames, 37assets, 196pairs
+extracted enemy9: 4frames, 41assets, 216pairs
+extracted enemy10: 6frames, 47assets, 235pairs
+extracted enemy11: 3frames, 50assets, 238pairs
+extracted enemy12: 4frames, 54assets, 250pairs
+extracted enemy13: 3frames, 57assets, 254pairs
+extracted enemy14: 5frames, 62assets, 304pairs
+extracted enemy15: 6frames, 68assets, 319pairs
+extracted enemy16: 4frames, 72assets, 329pairs
+extracted enemy17: 7frames, 79assets, 330pairs
+extracted enemy18: 8frames, 87assets, 421pairs
+extracted enemy19: 7frames, 94assets, 456pairs
+extracted enemy20: 4frames, 138assets, 494pairs
+extracted enemy21: 5frames, 193assets, 524pairs
+extracted enemy22: 9frames, 292assets, 576pairs
+extracted enemy23: 6frames, 358assets, 614pairs
+extracted enemy24: 6frames, 364assets, 650pairs
+extracted enemy25: 9frames, 452assets, 655pairs
+extracted enemy26: 4frames, 496assets, 672pairs
+extracted enemy27: 5frames, 501assets, 688pairs
+extracted enemy28: 5frames, 506assets, 714pairs
+extracted enemy29: 8frames, 514assets, 768pairs
+extracted enemy30: 6frames, 580assets, 819pairs
+extracted enemy31: 7frames, 587assets, 859pairs
+extracted enemy32: 8frames, 595assets, 895pairs
+extracted enemy33: 7frames, 602assets, 921pairs
+extracted enemy34: 5frames, 657assets, 930pairs
+extracted enemy35: 6frames, 663assets, 953pairs
+extracted enemy36: 8frames, 671assets, 976pairs
+extracted enemy37: 6frames, 737assets, 978pairs
+extracted enemy38: 8frames, 825assets, 1024pairs
+extracted enemy39: 5frames, 830assets, 1048pairs
+extracted enemy40: 5frames, 885assets, 1057pairs
+extracted enemy41: 4frames, 929assets, 1106pairs
+extracted enemy42: 6frames, 935assets, 1120pairs
+extracted enemy43: 5frames, 940assets, 1134pairs
+extracted enemy44: 7frames, 947assets, 1165pairs
+extracted enemy45: 7frames, 954assets, 1199pairs
+extracted enemy46: 8frames, 962assets, 1244pairs
+extracted enemy47: 3frames, 995assets, 1270pairs
+extracted enemy48: 8frames, 1083assets, 1282pairs
+extracted enemy49: 4frames, 1087assets, 1308pairs
+extracted enemy50: 4frames, 1131assets, 1349pairs
+extracted enemy51: 8frames, 1139assets, 1384pairs
+extracted enemy52: 4frames, 1183assets, 1420pairs
+extracted enemy53: 4frames, 1227assets, 1425pairs
+extracted enemy54: 8frames, 1315assets, 1437pairs
+extracted enemy55: 5frames, 1370assets, 1487pairs
+extracted enemy56: 3frames, 1403assets, 1491pairs
+extracted enemy57: 4frames, 1447assets, 1531pairs
+extracted enemy58: 8frames, 1535assets, 1588pairs
+extracted enemy59: 8frames, 1623assets, 1629pairs
+extracted enemy60: 7frames, 1700assets, 1709pairs
+extracted enemy61: 7frames, 1777assets, 1739pairs
+extracted enemy62: 8frames, 1865assets, 1781pairs
+extracted enemy63: 6frames, 1931assets, 1809pairs
+extracted enemy64: 4frames, 1975assets, 1820pairs
+extracted enemy65: 5frames, 2030assets, 1834pairs
+extracted enemy66: 4frames, 2074assets, 1838pairs
+extracted enemy67: 6frames, 2140assets, 1885pairs
+extracted enemy68: 7frames, 2217assets, 1910pairs
+extracted enemy69: 7frames, 2294assets, 1930pairs
+extracted enemy70: 9frames, 2303assets, 2003pairs
+extracted enemy71: 8frames, 2391assets, 2006pairs
+extracted enemy74: 4frames, 2435assets, 2022pairs
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "enemy_obj_palettes": 6,
+  "reserved_effect_palettes": [
+    6,
+    7
+  ],
+  "native_banks": [
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+  ],
+  "bank_bytes": [
+    9740,
+    15782,
+    15787,
+    15762,
+    15778,
+    15788,
+    15792,
+    15782,
+    15785,
+    15760,
+    15730,
+    15786,
+    15730,
+    15755,
+    15800,
+    15745,
+    15790,
+    15795,
+    15800,
+    15755,
+    15785,
+    15797,
+    15786,
+    15780,
+    15780,
+    15780,
+    15800,
+    15795,
+    15765,
+    15790,
+    15781,
+    15775,
+    15795,
+    9003
+  ],
+  "pattern_pairs": 2022,
+  "unique_assets": 2435,
+  "scope": "Physical-attack source sequences and original frames for enemyIDs1..71,74, all12 floor palettes. Lassic/DarkFalz special handlers and magic/weapon overlays are not included."
+}

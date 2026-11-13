@@ -1,0 +1,2958 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module field_actions
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _memset
+                                     11 	.globl b_rpg_battle_prepare_chest
+                                     12 	.globl _rpg_battle_prepare_chest
+                                     13 	.globl b_dungeon_find_object
+                                     14 	.globl _dungeon_find_object
+                                     15 	.globl b_dungeon_sample_position
+                                     16 	.globl _dungeon_sample_position
+                                     17 	.globl b_dungeon_sample
+                                     18 	.globl _dungeon_sample
+                                     19 	.globl b_dungeon_refresh_light
+                                     20 	.globl _dungeon_refresh_light
+                                     21 	.globl b_rpg_magic_cost
+                                     22 	.globl _rpg_magic_cost
+                                     23 	.globl b_rpg_cast_heal
+                                     24 	.globl _rpg_cast_heal
+                                     25 	.globl b_rpg_knows_spell
+                                     26 	.globl _rpg_knows_spell
+                                     27 	.globl b_rpg_use_item
+                                     28 	.globl _rpg_use_item
+                                     29 	.globl b_rpg_find_item
+                                     30 	.globl _rpg_find_item
+                                     31 	.globl b_rpg_remove_item
+                                     32 	.globl _rpg_remove_item
+                                     33 	.globl b_rpg_add_item
+                                     34 	.globl _rpg_add_item
+                                     35 	.globl b_field_cast
+                                     36 	.globl _field_cast
+                                     37 	.globl b_field_use_item
+                                     38 	.globl _field_use_item
+                                     39 	.globl b_field_torch_reply
+                                     40 	.globl _field_torch_reply
+                                     41 	.globl b_field_torch_finish
+                                     42 	.globl _field_torch_finish
+                                     43 ;--------------------------------------------------------
+                                     44 ; special function registers
+                                     45 ;--------------------------------------------------------
+                                     46 	.area _HRAM
+                                     47 ;--------------------------------------------------------
+                                     48 ; ram data
+                                     49 ;--------------------------------------------------------
+                                     50 	.area _DATA
+                                     51 ;--------------------------------------------------------
+                                     52 ; ram data
+                                     53 ;--------------------------------------------------------
+                                     54 	.area _INITIALIZED
+                                     55 ;--------------------------------------------------------
+                                     56 ; absolute external ram data
+                                     57 ;--------------------------------------------------------
+                                     58 	.area _DABS (ABS)
+                                     59 ;--------------------------------------------------------
+                                     60 ; global & static initialisations
+                                     61 ;--------------------------------------------------------
+                                     62 	.area _HOME
+                                     63 	.area _GSINIT
+                                     64 	.area _GSFINAL
+                                     65 	.area _GSINIT
+                                     66 ;--------------------------------------------------------
+                                     67 ; Home
+                                     68 ;--------------------------------------------------------
+                                     69 	.area _HOME
+                                     70 	.area _HOME
+                                     71 ;--------------------------------------------------------
+                                     72 ; code
+                                     73 ;--------------------------------------------------------
+                                     74 	.area _CODE_11
+                                     75 ;src/field_actions.c:7: static void line(FieldAction *a,uint16_t id){if(a->line_count<3u)a->lines[a->line_count++].dialogue=id;}
+                                     76 ;	---------------------------------
+                                     77 ; Function line
+                                     78 ; ---------------------------------
+    00000000                         79 _line:
+    00000000 C5               [16]   80 	push	bc
+    00000001 6B               [ 4]   81 	ld	l, e
+    00000002 62               [ 4]   82 	ld	h, d
+    00000003 23               [ 8]   83 	inc	hl
+    00000004 23               [ 8]   84 	inc	hl
+    00000005 4E               [ 8]   85 	ld	c, (hl)
+    00000006 79               [ 4]   86 	ld	a, c
+    00000007 D6 03            [ 8]   87 	sub	a, #0x03
+    00000009 30 1A            [12]   88 	jr	NC, 00103$
+    0000000B 7B               [ 4]   89 	ld	a, e
+    0000000C C6 0A            [ 8]   90 	add	a, #0x0a
+    0000000E 5F               [ 4]   91 	ld	e, a
+    0000000F 30 01            [12]   92 	jr	NC, 00112$
+    00000011 14               [ 4]   93 	inc	d
+    00000012                         94 00112$:
+    00000012 79               [ 4]   95 	ld	a, c
+    00000013 3C               [ 4]   96 	inc	a
+    00000014 77               [ 8]   97 	ld	(hl), a
+    00000015 79               [ 4]   98 	ld	a, c
+    00000016 87               [ 4]   99 	add	a, a
+    00000017 87               [ 4]  100 	add	a, a
+    00000018 83               [ 4]  101 	add	a, e
+    00000019 4F               [ 4]  102 	ld	c, a
+    0000001A 3E 00            [ 8]  103 	ld	a, #0x00
+    0000001C 8A               [ 4]  104 	adc	a, d
+    0000001D 47               [ 4]  105 	ld	b, a
+    0000001E F8 00            [12]  106 	ldhl	sp,	#0
+    00000020 2A               [ 8]  107 	ld	a, (hl+)
+    00000021 02               [ 8]  108 	ld	(bc), a
+    00000022 03               [ 8]  109 	inc	bc
+    00000023 7E               [ 8]  110 	ld	a, (hl)
+    00000024 02               [ 8]  111 	ld	(bc), a
+    00000025                        112 00103$:
+    00000025 33               [ 8]  113 	inc	sp
+    00000026 33               [ 8]  114 	inc	sp
+    00000027 C9               [16]  115 	ret
+                                    116 ;src/field_actions.c:8: static uint8_t fail(FieldAction *a,uint8_t error,uint16_t id){a->error=error;if(id)line(a,id);return a->kind;}
+                                    117 ;	---------------------------------
+                                    118 ; Function fail
+                                    119 ; ---------------------------------
+    00000028                        120 _fail:
+    00000028 4B               [ 4]  121 	ld	c, e
+    00000029 42               [ 4]  122 	ld	b, d
+    0000002A 03               [ 8]  123 	inc	bc
+    0000002B 02               [ 8]  124 	ld	(bc), a
+    0000002C F8 03            [12]  125 	ldhl	sp,	#3
+    0000002E 3A               [ 8]  126 	ld	a, (hl-)
+    0000002F B6               [ 8]  127 	or	a, (hl)
+    00000030 28 08            [12]  128 	jr	Z, 00102$
+    00000032 D5               [16]  129 	push	de
+    00000033 2A               [ 8]  130 	ld	a, (hl+)
+    00000034 4F               [ 4]  131 	ld	c, a
+    00000035 46               [ 8]  132 	ld	b, (hl)
+    00000036 CDr00r00         [24]  133 	call	_line
+    00000039 D1               [12]  134 	pop	de
+    0000003A                        135 00102$:
+    0000003A 1A               [ 8]  136 	ld	a, (de)
+    0000003B E1               [12]  137 	pop	hl
+    0000003C C1               [12]  138 	pop	bc
+    0000003D E9               [ 4]  139 	jp	(hl)
+                                    140 ;src/field_actions.c:9: static uint8_t alive(const RPGState *s,uint8_t c){return c<4u&&(s->joined_mask&(1u<<c))&&(s->party[c].status&1u);}
+                                    141 ;	---------------------------------
+                                    142 ; Function alive
+                                    143 ; ---------------------------------
+    0000003E                        144 _alive:
+    0000003E 4F               [ 4]  145 	ld	c, a
+    0000003F D6 04            [ 8]  146 	sub	a, #0x04
+    00000041 30 24            [12]  147 	jr	NC, 00103$
+    00000043 21 59 00         [12]  148 	ld	hl, #0x0059
+    00000046 19               [ 8]  149 	add	hl, de
+    00000047 7E               [ 8]  150 	ld	a, (hl)
+    00000048 41               [ 4]  151 	ld	b, c
+    00000049 21 01 00         [12]  152 	ld	hl, #0x0001
+    0000004C 04               [ 4]  153 	inc	b
+    0000004D 18 01            [12]  154 	jr	00123$
+    0000004F                        155 00122$:
+    0000004F 29               [ 8]  156 	add	hl, hl
+    00000050                        157 00123$:
+    00000050 05               [ 4]  158 	dec	b
+    00000051 20 FC            [12]  159 	jr	NZ,00122$
+    00000053 A5               [ 4]  160 	and	a, l
+    00000054 06 00            [ 8]  161 	ld	b, #0x00
+    00000056 B0               [ 4]  162 	or	a, b
+    00000057 28 0E            [12]  163 	jr	Z, 00103$
+    00000059 79               [ 4]  164 	ld	a, c
+    0000005A CB 37            [ 8]  165 	swap	a
+    0000005C E6 F0            [ 8]  166 	and	a, #0xf0
+    0000005E 6F               [ 4]  167 	ld	l, a
+    0000005F 26 00            [ 8]  168 	ld	h, #0x00
+    00000061 19               [ 8]  169 	add	hl, de
+    00000062 7E               [ 8]  170 	ld	a, (hl)
+    00000063 E6 01            [ 8]  171 	and	a, #0x01
+    00000065 20 02            [12]  172 	jr	NZ, 00104$
+    00000067                        173 00103$:
+    00000067 AF               [ 4]  174 	xor	a, a
+    00000068 C9               [16]  175 	ret
+    00000069                        176 00104$:
+    00000069 3E 01            [ 8]  177 	ld	a, #0x01
+    0000006B C9               [16]  178 	ret
+                                    179 ;src/field_actions.c:10: static uint8_t floor_trap(FieldContext *c){
+                                    180 ;	---------------------------------
+                                    181 ; Function floor_trap
+                                    182 ; ---------------------------------
+    0000006C                        183 _floor_trap:
+    0000006C E8 F9            [16]  184 	add	sp, #-7
+                                    185 ;src/field_actions.c:14: return c->dungeon && dungeon_sample(c->dungeon,1u)==8u && !dungeon_find_object(c->dungeon,1u,&object);
+    0000006E 21 04 00         [12]  186 	ld	hl, #0x0004
+    00000071 19               [ 8]  187 	add	hl, de
+    00000072 4D               [ 4]  188 	ld	c,l
+    00000073 44               [ 4]  189 	ld	b,h
+    00000074 2A               [ 8]  190 	ld	a,	(hl+)
+    00000075 66               [ 8]  191 	ld	h, (hl)
+    00000076 6F               [ 4]  192 	ld	l, a
+    00000077 B4               [ 4]  193 	or	a, h
+    00000078 28 31            [12]  194 	jr	Z, 00103$
+    0000007A C5               [16]  195 	push	bc
+    0000007B 3E 01            [ 8]  196 	ld	a, #0x01
+    0000007D F5               [16]  197 	push	af
+    0000007E 33               [ 8]  198 	inc	sp
+    0000007F E5               [16]  199 	push	hl
+    00000080 1Er00            [ 8]  200 	ld	e, #b_dungeon_sample
+    00000082 21r00r00         [12]  201 	ld	hl, #_dungeon_sample
+    00000085 CDr00r00         [24]  202 	call	___sdcc_bcall_ehl
+    00000088 E8 03            [16]  203 	add	sp, #3
+    0000008A C1               [12]  204 	pop	bc
+    0000008B D6 08            [ 8]  205 	sub	a, #0x08
+    0000008D 20 1C            [12]  206 	jr	NZ, 00103$
+    0000008F 69               [ 4]  207 	ld	l, c
+    00000090 60               [ 4]  208 	ld	h, b
+    00000091 2A               [ 8]  209 	ld	a, (hl+)
+    00000092 4F               [ 4]  210 	ld	c, a
+    00000093 46               [ 8]  211 	ld	b, (hl)
+    00000094 21 00 00         [12]  212 	ld	hl, #0
+    00000097 39               [ 8]  213 	add	hl, sp
+    00000098 E5               [16]  214 	push	hl
+    00000099 3E 01            [ 8]  215 	ld	a, #0x01
+    0000009B F5               [16]  216 	push	af
+    0000009C 33               [ 8]  217 	inc	sp
+    0000009D C5               [16]  218 	push	bc
+    0000009E 1Er00            [ 8]  219 	ld	e, #b_dungeon_find_object
+    000000A0 21r00r00         [12]  220 	ld	hl, #_dungeon_find_object
+    000000A3 CDr00r00         [24]  221 	call	___sdcc_bcall_ehl
+    000000A6 E8 05            [16]  222 	add	sp, #5
+    000000A8 B7               [ 4]  223 	or	a, a
+    000000A9 28 03            [12]  224 	jr	Z, 00104$
+    000000AB                        225 00103$:
+    000000AB AF               [ 4]  226 	xor	a, a
+    000000AC 18 02            [12]  227 	jr	00105$
+    000000AE                        228 00104$:
+    000000AE 3E 01            [ 8]  229 	ld	a, #0x01
+    000000B0                        230 00105$:
+                                    231 ;src/field_actions.c:15: }
+    000000B0 E8 07            [16]  232 	add	sp, #7
+    000000B2 C9               [16]  233 	ret
+                                    234 ;src/field_actions.c:16: static void transfer(FieldContext *c,FieldAction *a){
+                                    235 ;	---------------------------------
+                                    236 ; Function transfer
+                                    237 ; ---------------------------------
+    000000B3                        238 _transfer:
+    000000B3 E8 FD            [16]  239 	add	sp, #-3
+    000000B5 F8 01            [12]  240 	ldhl	sp,	#1
+    000000B7 79               [ 4]  241 	ld	a, c
+    000000B8 22               [ 8]  242 	ld	(hl+), a
+    000000B9 70               [ 8]  243 	ld	(hl), b
+                                    244 ;src/field_actions.c:18: uint8_t index=c->events->last_church;
+    000000BA 6B               [ 4]  245 	ld	l, e
+    000000BB 62               [ 4]  246 	ld	h, d
+    000000BC 23               [ 8]  247 	inc	hl
+    000000BD 23               [ 8]  248 	inc	hl
+    000000BE 2A               [ 8]  249 	ld	a, (hl+)
+    000000BF 4F               [ 4]  250 	ld	c, a
+    000000C0 46               [ 8]  251 	ld	b, (hl)
+    000000C1 21 03 01         [12]  252 	ld	hl, #0x0103
+    000000C4 09               [ 8]  253 	add	hl, bc
+    000000C5 7E               [ 8]  254 	ld	a, (hl)
+                                    255 ;src/field_actions.c:20: if(index>=9u){a->error=RPG_INVALID;return;}
+    000000C6 F8 00            [12]  256 	ldhl	sp,#0
+    000000C8 77               [ 8]  257 	ld	(hl), a
+    000000C9 D6 09            [ 8]  258 	sub	a, #0x09
+    000000CB 38 09            [12]  259 	jr	C, 00102$
+    000000CD 23               [ 8]  260 	inc	hl
+    000000CE 2A               [ 8]  261 	ld	a, (hl+)
+    000000CF 66               [ 8]  262 	ld	h, (hl)
+    000000D0 6F               [ 4]  263 	ld	l, a
+    000000D1 23               [ 8]  264 	inc	hl
+    000000D2 36 01            [12]  265 	ld	(hl), #0x01
+    000000D4 18 48            [12]  266 	jr	00103$
+    000000D6                        267 00102$:
+                                    268 ;src/field_actions.c:21: a->kind=FIELD_TRANSFER;a->target=places[index][0];a->a=places[index][1];a->b=places[index][2];
+    000000D6 F8 01            [12]  269 	ldhl	sp,	#1
+    000000D8 2A               [ 8]  270 	ld	a, (hl+)
+    000000D9 66               [ 8]  271 	ld	h, (hl)
+    000000DA 6F               [ 4]  272 	ld	l, a
+    000000DB 36 03            [12]  273 	ld	(hl), #0x03
+    000000DD F8 01            [12]  274 	ldhl	sp,#1
+    000000DF 2A               [ 8]  275 	ld	a, (hl+)
+    000000E0 5F               [ 4]  276 	ld	e, a
+    000000E1 56               [ 8]  277 	ld	d, (hl)
+    000000E2 21 05 00         [12]  278 	ld	hl, #0x0005
+    000000E5 19               [ 8]  279 	add	hl, de
+    000000E6 4D               [ 4]  280 	ld	c, l
+    000000E7 44               [ 4]  281 	ld	b, h
+    000000E8 F8 00            [12]  282 	ldhl	sp,	#0
+    000000EA 5E               [ 8]  283 	ld	e, (hl)
+    000000EB 16 00            [ 8]  284 	ld	d, #0x00
+    000000ED 6B               [ 4]  285 	ld	l, e
+    000000EE 62               [ 4]  286 	ld	h, d
+    000000EF 29               [ 8]  287 	add	hl, hl
+    000000F0 19               [ 8]  288 	add	hl, de
+    000000F1 3Er21            [ 8]  289 	ld	a, #<(_transfer_places_10000_98)
+    000000F3 85               [ 4]  290 	add	a, l
+    000000F4 5F               [ 4]  291 	ld	e, a
+    000000F5 3Es01            [ 8]  292 	ld	a, #>(_transfer_places_10000_98)
+    000000F7 8C               [ 4]  293 	adc	a, h
+    000000F8 57               [ 4]  294 	ld	d, a
+    000000F9 1A               [ 8]  295 	ld	a, (de)
+    000000FA 02               [ 8]  296 	ld	(bc), a
+    000000FB D5               [16]  297 	push	de
+    000000FC F8 03            [12]  298 	ldhl	sp,#3
+    000000FE 2A               [ 8]  299 	ld	a, (hl+)
+    000000FF 5F               [ 4]  300 	ld	e, a
+    00000100 56               [ 8]  301 	ld	d, (hl)
+    00000101 21 06 00         [12]  302 	ld	hl, #0x0006
+    00000104 19               [ 8]  303 	add	hl, de
+    00000105 D1               [12]  304 	pop	de
+    00000106 4D               [ 4]  305 	ld	c, l
+    00000107 44               [ 4]  306 	ld	b, h
+    00000108 6B               [ 4]  307 	ld	l, e
+    00000109 62               [ 4]  308 	ld	h, d
+    0000010A 23               [ 8]  309 	inc	hl
+    0000010B 7E               [ 8]  310 	ld	a, (hl)
+    0000010C 02               [ 8]  311 	ld	(bc), a
+    0000010D D5               [16]  312 	push	de
+    0000010E F8 03            [12]  313 	ldhl	sp,#3
+    00000110 2A               [ 8]  314 	ld	a, (hl+)
+    00000111 5F               [ 4]  315 	ld	e, a
+    00000112 56               [ 8]  316 	ld	d, (hl)
+    00000113 21 07 00         [12]  317 	ld	hl, #0x0007
+    00000116 19               [ 8]  318 	add	hl, de
+    00000117 D1               [12]  319 	pop	de
+    00000118 4D               [ 4]  320 	ld	c, l
+    00000119 44               [ 4]  321 	ld	b, h
+    0000011A 13               [ 8]  322 	inc	de
+    0000011B 13               [ 8]  323 	inc	de
+    0000011C 1A               [ 8]  324 	ld	a, (de)
+    0000011D 02               [ 8]  325 	ld	(bc), a
+    0000011E                        326 00103$:
+                                    327 ;src/field_actions.c:22: }
+    0000011E E8 03            [16]  328 	add	sp, #3
+    00000120 C9               [16]  329 	ret
+    00000121                        330 _transfer_places_10000_98:
+    00000121 04                     331 	.db #0x04	; 4
+    00000122 16                     332 	.db #0x16	; 22
+    00000123 69                     333 	.db #0x69	; 105	'i'
+    00000124 04                     334 	.db #0x04	; 4
+    00000125 27                     335 	.db #0x27	; 39
+    00000126 6B                     336 	.db #0x6b	; 107	'k'
+    00000127 07                     337 	.db #0x07	; 7
+    00000128 29                     338 	.db #0x29	; 41
+    00000129 2A                     339 	.db #0x2a	; 42
+    0000012A 09                     340 	.db #0x09	; 9
+    0000012B 19                     341 	.db #0x19	; 25
+    0000012C 66                     342 	.db #0x66	; 102	'f'
+    0000012D 0E                     343 	.db #0x0e	; 14
+    0000012E 29                     344 	.db #0x29	; 41
+    0000012F 19                     345 	.db #0x19	; 25
+    00000130 0F                     346 	.db #0x0f	; 15
+    00000131 15                     347 	.db #0x15	; 21
+    00000132 43                     348 	.db #0x43	; 67	'C'
+    00000133 11                     349 	.db #0x11	; 17
+    00000134 53                     350 	.db #0x53	; 83	'S'
+    00000135 52                     351 	.db #0x52	; 82	'R'
+    00000136 16                     352 	.db #0x16	; 22
+    00000137 15                     353 	.db #0x15	; 21
+    00000138 2C                     354 	.db #0x2c	; 44
+    00000139 15                     355 	.db #0x15	; 21
+    0000013A 28                     356 	.db #0x28	; 40
+    0000013B 61                     357 	.db #0x61	; 97	'a'
+                                    358 ;src/field_actions.c:23: static void tele(FieldContext *c,FieldAction *a){
+                                    359 ;	---------------------------------
+                                    360 ; Function tele
+                                    361 ; ---------------------------------
+    0000013C                        362 _tele:
+    0000013C E8 F8            [16]  363 	add	sp, #-8
+    0000013E F8 06            [12]  364 	ldhl	sp,	#6
+    00000140 7B               [ 4]  365 	ld	a, e
+    00000141 22               [ 8]  366 	ld	(hl+), a
+    00000142 72               [ 8]  367 	ld	(hl), d
+    00000143 F8 04            [12]  368 	ldhl	sp,	#4
+    00000145 79               [ 4]  369 	ld	a, c
+    00000146 22               [ 8]  370 	ld	(hl+), a
+                                    371 ;src/field_actions.c:25: if(c->chest){rpg_battle_prepare_chest(c->rpg,c->chest);found=c->chest->chest_visual!=0x3du;a->kind=FIELD_CHEST_PROMPT;}
+    00000147 78               [ 4]  372 	ld	a, b
+    00000148 22               [ 8]  373 	ld	(hl+), a
+    00000149 2A               [ 8]  374 	ld	a, (hl+)
+    0000014A 5F               [ 4]  375 	ld	e, a
+    0000014B 56               [ 8]  376 	ld	d, (hl)
+    0000014C 21 06 00         [12]  377 	ld	hl, #0x0006
+    0000014F 19               [ 8]  378 	add	hl, de
+    00000150 33               [ 8]  379 	inc	sp
+    00000151 33               [ 8]  380 	inc	sp
+    00000152 5D               [ 4]  381 	ld	e, l
+    00000153 54               [ 4]  382 	ld	d, h
+    00000154 D5               [16]  383 	push	de
+    00000155 1A               [ 8]  384 	ld	a, (de)
+    00000156 F8 02            [12]  385 	ldhl	sp,	#2
+    00000158 22               [ 8]  386 	ld	(hl+), a
+    00000159 13               [ 8]  387 	inc	de
+    0000015A 1A               [ 8]  388 	ld	a, (de)
+    0000015B 77               [ 8]  389 	ld	(hl), a
+    0000015C 3A               [ 8]  390 	ld	a, (hl-)
+    0000015D B6               [ 8]  391 	or	a, (hl)
+    0000015E 28 3A            [12]  392 	jr	Z, 00102$
+    00000160 F8 06            [12]  393 	ldhl	sp,#6
+    00000162 2A               [ 8]  394 	ld	a, (hl+)
+    00000163 5F               [ 4]  395 	ld	e, a
+    00000164 56               [ 8]  396 	ld	d, (hl)
+    00000165 1A               [ 8]  397 	ld	a, (de)
+    00000166 4F               [ 4]  398 	ld	c, a
+    00000167 13               [ 8]  399 	inc	de
+    00000168 1A               [ 8]  400 	ld	a, (de)
+    00000169 F8 02            [12]  401 	ldhl	sp,	#2
+    0000016B 5E               [ 8]  402 	ld	e, (hl)
+    0000016C 23               [ 8]  403 	inc	hl
+    0000016D 56               [ 8]  404 	ld	d, (hl)
+    0000016E D5               [16]  405 	push	de
+    0000016F 47               [ 4]  406 	ld	b, a
+    00000170 C5               [16]  407 	push	bc
+    00000171 1Er00            [ 8]  408 	ld	e, #b_rpg_battle_prepare_chest
+    00000173 21r00r00         [12]  409 	ld	hl, #_rpg_battle_prepare_chest
+    00000176 CDr00r00         [24]  410 	call	___sdcc_bcall_ehl
+    00000179 E8 04            [16]  411 	add	sp, #4
+    0000017B D1               [12]  412 	pop	de
+    0000017C D5               [16]  413 	push	de
+    0000017D 1A               [ 8]  414 	ld	a, (de)
+    0000017E 4F               [ 4]  415 	ld	c, a
+    0000017F 13               [ 8]  416 	inc	de
+    00000180 1A               [ 8]  417 	ld	a, (de)
+    00000181 47               [ 4]  418 	ld	b, a
+    00000182 21 A7 00         [12]  419 	ld	hl, #0x00a7
+    00000185 09               [ 8]  420 	add	hl, bc
+    00000186 7E               [ 8]  421 	ld	a, (hl)
+    00000187 D6 3D            [ 8]  422 	sub	a, #0x3d
+    00000189 3E 01            [ 8]  423 	ld	a, #0x01
+    0000018B 28 01            [12]  424 	jr	Z, 00133$
+    0000018D AF               [ 4]  425 	xor	a, a
+    0000018E                        426 00133$:
+    0000018E EE 01            [ 8]  427 	xor	a, #0x01
+    00000190 F8 03            [12]  428 	ldhl	sp,	#3
+    00000192 22               [ 8]  429 	ld	(hl+), a
+    00000193 2A               [ 8]  430 	ld	a, (hl+)
+    00000194 66               [ 8]  431 	ld	h, (hl)
+    00000195 6F               [ 4]  432 	ld	l, a
+    00000196 36 06            [12]  433 	ld	(hl), #0x06
+    00000198 18 22            [12]  434 	jr	00103$
+    0000019A                        435 00102$:
+                                    436 ;src/field_actions.c:26: else found=!c->interaction&&floor_trap(c);
+    0000019A F8 06            [12]  437 	ldhl	sp,#6
+    0000019C 2A               [ 8]  438 	ld	a, (hl+)
+    0000019D 5F               [ 4]  439 	ld	e, a
+    0000019E 56               [ 8]  440 	ld	d, (hl)
+    0000019F 21 08 00         [12]  441 	ld	hl, #0x0008
+    000001A2 19               [ 8]  442 	add	hl, de
+    000001A3 4D               [ 4]  443 	ld	c, l
+    000001A4 44               [ 4]  444 	ld	b, h
+    000001A5 0A               [ 8]  445 	ld	a, (bc)
+    000001A6 B7               [ 4]  446 	or	a, a
+    000001A7 20 0B            [12]  447 	jr	NZ, 00106$
+    000001A9 F8 06            [12]  448 	ldhl	sp,	#6
+    000001AB 2A               [ 8]  449 	ld	a, (hl+)
+    000001AC 5F               [ 4]  450 	ld	e, a
+    000001AD 56               [ 8]  451 	ld	d, (hl)
+    000001AE CDr6Cr00         [24]  452 	call	_floor_trap
+    000001B1 B7               [ 4]  453 	or	a, a
+    000001B2 20 03            [12]  454 	jr	NZ, 00107$
+    000001B4                        455 00106$:
+    000001B4 AF               [ 4]  456 	xor	a, a
+    000001B5 18 02            [12]  457 	jr	00108$
+    000001B7                        458 00107$:
+    000001B7 3E 01            [ 8]  459 	ld	a, #0x01
+    000001B9                        460 00108$:
+    000001B9 F8 03            [12]  461 	ldhl	sp,	#3
+    000001BB 77               [ 8]  462 	ld	(hl), a
+    000001BC                        463 00103$:
+                                    464 ;src/field_actions.c:27: line(a,found?0xb404:0xb424);a->lines[a->line_count-1u].sound_after=0xd5;
+    000001BC F8 03            [12]  465 	ldhl	sp,	#3
+    000001BE 7E               [ 8]  466 	ld	a, (hl)
+    000001BF B7               [ 4]  467 	or	a, a
+    000001C0 28 05            [12]  468 	jr	Z, 00109$
+    000001C2 01 04 B4         [12]  469 	ld	bc, #0xb404
+    000001C5 18 03            [12]  470 	jr	00110$
+    000001C7                        471 00109$:
+    000001C7 01 24 B4         [12]  472 	ld	bc, #0xb424
+    000001CA                        473 00110$:
+    000001CA F8 04            [12]  474 	ldhl	sp,	#4
+    000001CC 2A               [ 8]  475 	ld	a, (hl+)
+    000001CD 5F               [ 4]  476 	ld	e, a
+    000001CE 56               [ 8]  477 	ld	d, (hl)
+    000001CF CDr00r00         [24]  478 	call	_line
+    000001D2 F8 04            [12]  479 	ldhl	sp,#4
+    000001D4 2A               [ 8]  480 	ld	a, (hl+)
+    000001D5 5F               [ 4]  481 	ld	e, a
+    000001D6 56               [ 8]  482 	ld	d, (hl)
+    000001D7 21 0A 00         [12]  483 	ld	hl, #0x000a
+    000001DA 19               [ 8]  484 	add	hl, de
+    000001DB 4D               [ 4]  485 	ld	c, l
+    000001DC 44               [ 4]  486 	ld	b, h
+    000001DD F8 04            [12]  487 	ldhl	sp,	#4
+    000001DF 2A               [ 8]  488 	ld	a, (hl+)
+    000001E0 5F               [ 4]  489 	ld	e, a
+    000001E1 56               [ 8]  490 	ld	d, (hl)
+    000001E2 13               [ 8]  491 	inc	de
+    000001E3 13               [ 8]  492 	inc	de
+    000001E4 1A               [ 8]  493 	ld	a, (de)
+    000001E5 3D               [ 4]  494 	dec	a
+    000001E6 87               [ 4]  495 	add	a, a
+    000001E7 87               [ 4]  496 	add	a, a
+    000001E8 6F               [ 4]  497 	ld	l, a
+    000001E9 26 00            [ 8]  498 	ld	h, #0x00
+    000001EB 09               [ 8]  499 	add	hl, bc
+    000001EC 23               [ 8]  500 	inc	hl
+    000001ED 23               [ 8]  501 	inc	hl
+    000001EE 23               [ 8]  502 	inc	hl
+    000001EF 36 D5            [12]  503 	ld	(hl), #0xd5
+                                    504 ;src/field_actions.c:28: }
+    000001F1 E8 08            [16]  505 	add	sp, #8
+    000001F3 C9               [16]  506 	ret
+                                    507 ;src/field_actions.c:29: uint8_t field_cast(FieldContext *c,uint8_t caster,uint8_t spell,uint8_t target,FieldAction *a) RPG_BANKED {
+                                    508 ;	---------------------------------
+                                    509 ; Function field_cast
+                                    510 ; ---------------------------------
+                         0000000B   511 	b_field_cast	= 11
+    000001F4                        512 _field_cast::
+    000001F4 E8 F8            [16]  513 	add	sp, #-8
+                                    514 ;src/field_actions.c:31: memset(a,0,sizeof(*a));a->character=target<4u?target:caster;
+    000001F6 F8 13            [12]  515 	ldhl	sp,	#19
+    000001F8 2A               [ 8]  516 	ld	a, (hl+)
+    000001F9 4F               [ 4]  517 	ld	c, a
+    000001FA 46               [ 8]  518 	ld	b, (hl)
+    000001FB 11 16 00         [12]  519 	ld	de, #0x0016
+    000001FE D5               [16]  520 	push	de
+    000001FF 11 00 00         [12]  521 	ld	de, #0x0000
+    00000202 D5               [16]  522 	push	de
+    00000203 C5               [16]  523 	push	bc
+    00000204 CDr00r00         [24]  524 	call	_memset
+    00000207 E8 06            [16]  525 	add	sp, #6
+    00000209 F8 13            [12]  526 	ldhl	sp,	#19
+    0000020B 7E               [ 8]  527 	ld	a, (hl)
+    0000020C F8 00            [12]  528 	ldhl	sp,	#0
+    0000020E 77               [ 8]  529 	ld	(hl), a
+    0000020F F8 14            [12]  530 	ldhl	sp,	#20
+    00000211 7E               [ 8]  531 	ld	a, (hl)
+    00000212 F8 01            [12]  532 	ldhl	sp,	#1
+    00000214 77               [ 8]  533 	ld	(hl), a
+    00000215 D1               [12]  534 	pop	de
+    00000216 D5               [16]  535 	push	de
+    00000217 21 04 00         [12]  536 	ld	hl, #0x0004
+    0000021A 19               [ 8]  537 	add	hl, de
+    0000021B 4D               [ 4]  538 	ld	c, l
+    0000021C 44               [ 4]  539 	ld	b, h
+    0000021D F8 12            [12]  540 	ldhl	sp,	#18
+    0000021F 7E               [ 8]  541 	ld	a,(hl)
+    00000220 FE 04            [ 8]  542 	cp	a,#0x04
+    00000222 38 03            [12]  543 	jr	C, 00153$
+    00000224 F8 10            [12]  544 	ldhl	sp,	#16
+    00000226 7E               [ 8]  545 	ld	a, (hl)
+    00000227                        546 00153$:
+    00000227 02               [ 8]  547 	ld	(bc), a
+                                    548 ;src/field_actions.c:32: if(!alive(c->rpg,caster))return fail(a,RPG_DEAD,0xb730);
+    00000228 F8 0E            [12]  549 	ldhl	sp,	#14
+    0000022A 7E               [ 8]  550 	ld	a, (hl)
+    0000022B F8 02            [12]  551 	ldhl	sp,	#2
+    0000022D 77               [ 8]  552 	ld	(hl), a
+    0000022E F8 0F            [12]  553 	ldhl	sp,	#15
+    00000230 7E               [ 8]  554 	ld	a, (hl)
+    00000231 F8 03            [12]  555 	ldhl	sp,	#3
+    00000233 32               [ 8]  556 	ld	(hl-), a
+    00000234 2A               [ 8]  557 	ld	a, (hl+)
+    00000235 23               [ 8]  558 	inc	hl
+    00000236 32               [ 8]  559 	ld	(hl-), a
+    00000237 2A               [ 8]  560 	ld	a, (hl+)
+    00000238 23               [ 8]  561 	inc	hl
+    00000239 32               [ 8]  562 	ld	(hl-), a
+    0000023A 2A               [ 8]  563 	ld	a, (hl+)
+    0000023B 5F               [ 4]  564 	ld	e, a
+    0000023C 56               [ 8]  565 	ld	d, (hl)
+    0000023D 1A               [ 8]  566 	ld	a, (de)
+    0000023E 4F               [ 4]  567 	ld	c, a
+    0000023F 13               [ 8]  568 	inc	de
+    00000240 1A               [ 8]  569 	ld	a, (de)
+    00000241 47               [ 4]  570 	ld	b, a
+    00000242 F8 10            [12]  571 	ldhl	sp,	#16
+    00000244 7E               [ 8]  572 	ld	a, (hl)
+    00000245 59               [ 4]  573 	ld	e, c
+    00000246 50               [ 4]  574 	ld	d, b
+    00000247 CDr3Er00         [24]  575 	call	_alive
+    0000024A B7               [ 4]  576 	or	a, a
+    0000024B 20 11            [12]  577 	jr	NZ, 00102$
+    0000024D 11 30 B7         [12]  578 	ld	de, #0xb730
+    00000250 D5               [16]  579 	push	de
+    00000251 3E 05            [ 8]  580 	ld	a, #0x05
+    00000253 F8 02            [12]  581 	ldhl	sp,	#2
+    00000255 5E               [ 8]  582 	ld	e, (hl)
+    00000256 23               [ 8]  583 	inc	hl
+    00000257 56               [ 8]  584 	ld	d, (hl)
+    00000258 CDr28r00         [24]  585 	call	_fail
+    0000025B C3r71r06         [16]  586 	jp	00150$
+    0000025E                        587 00102$:
+                                    588 ;src/field_actions.c:33: if(!rpg_knows_spell(c->rpg,caster,spell,0))return fail(a,RPG_NOT_LEARNED,caster==2u?0xb5ba:0xb5c8);
+    0000025E F8 04            [12]  589 	ldhl	sp,#4
+    00000260 2A               [ 8]  590 	ld	a, (hl+)
+    00000261 5F               [ 4]  591 	ld	e, a
+    00000262 56               [ 8]  592 	ld	d, (hl)
+    00000263 1A               [ 8]  593 	ld	a, (de)
+    00000264 4F               [ 4]  594 	ld	c, a
+    00000265 13               [ 8]  595 	inc	de
+    00000266 1A               [ 8]  596 	ld	a, (de)
+    00000267 47               [ 4]  597 	ld	b, a
+    00000268 AF               [ 4]  598 	xor	a, a
+    00000269 F5               [16]  599 	push	af
+    0000026A 33               [ 8]  600 	inc	sp
+    0000026B F8 12            [12]  601 	ldhl	sp,	#18
+    0000026D 3A               [ 8]  602 	ld	a, (hl-)
+    0000026E F5               [16]  603 	push	af
+    0000026F 33               [ 8]  604 	inc	sp
+    00000270 7E               [ 8]  605 	ld	a, (hl)
+    00000271 F5               [16]  606 	push	af
+    00000272 33               [ 8]  607 	inc	sp
+    00000273 C5               [16]  608 	push	bc
+    00000274 1Er00            [ 8]  609 	ld	e, #b_rpg_knows_spell
+    00000276 21r00r00         [12]  610 	ld	hl, #_rpg_knows_spell
+    00000279 CDr00r00         [24]  611 	call	___sdcc_bcall_ehl
+    0000027C E8 05            [16]  612 	add	sp, #5
+    0000027E B7               [ 4]  613 	or	a, a
+    0000027F 20 1D            [12]  614 	jr	NZ, 00104$
+    00000281 F8 10            [12]  615 	ldhl	sp,	#16
+    00000283 7E               [ 8]  616 	ld	a, (hl)
+    00000284 D6 02            [ 8]  617 	sub	a, #0x02
+    00000286 20 05            [12]  618 	jr	NZ, 00154$
+    00000288 01 BA B5         [12]  619 	ld	bc, #0xb5ba
+    0000028B 18 03            [12]  620 	jr	00155$
+    0000028D                        621 00154$:
+    0000028D 01 C8 B5         [12]  622 	ld	bc, #0xb5c8
+    00000290                        623 00155$:
+    00000290 C5               [16]  624 	push	bc
+    00000291 3E 07            [ 8]  625 	ld	a, #0x07
+    00000293 F8 02            [12]  626 	ldhl	sp,	#2
+    00000295 5E               [ 8]  627 	ld	e, (hl)
+    00000296 23               [ 8]  628 	inc	hl
+    00000297 56               [ 8]  629 	ld	d, (hl)
+    00000298 CDr28r00         [24]  630 	call	_fail
+    0000029B C3r71r06         [16]  631 	jp	00150$
+    0000029E                        632 00104$:
+                                    633 ;src/field_actions.c:34: cost=rpg_magic_cost(spell);p=&c->rpg->party[caster];
+    0000029E F8 11            [12]  634 	ldhl	sp,	#17
+    000002A0 7E               [ 8]  635 	ld	a, (hl)
+    000002A1 F5               [16]  636 	push	af
+    000002A2 33               [ 8]  637 	inc	sp
+    000002A3 1Er00            [ 8]  638 	ld	e, #b_rpg_magic_cost
+    000002A5 21r00r00         [12]  639 	ld	hl, #_rpg_magic_cost
+    000002A8 CDr00r00         [24]  640 	call	___sdcc_bcall_ehl
+    000002AB 33               [ 8]  641 	inc	sp
+    000002AC 4F               [ 4]  642 	ld	c, a
+    000002AD F8 04            [12]  643 	ldhl	sp,#4
+    000002AF 2A               [ 8]  644 	ld	a, (hl+)
+    000002B0 5F               [ 4]  645 	ld	e, a
+    000002B1 2A               [ 8]  646 	ld	a, (hl+)
+    000002B2 57               [ 4]  647 	ld	d, a
+    000002B3 1A               [ 8]  648 	ld	a, (de)
+    000002B4 22               [ 8]  649 	ld	(hl+), a
+    000002B5 13               [ 8]  650 	inc	de
+    000002B6 1A               [ 8]  651 	ld	a, (de)
+    000002B7 77               [ 8]  652 	ld	(hl), a
+    000002B8 F8 10            [12]  653 	ldhl	sp,	#16
+    000002BA 7E               [ 8]  654 	ld	a, (hl)
+    000002BB CB 37            [ 8]  655 	swap	a
+    000002BD E6 F0            [ 8]  656 	and	a, #0xf0
+    000002BF 5F               [ 4]  657 	ld	e, a
+    000002C0 16 00            [ 8]  658 	ld	d, #0x00
+    000002C2 F8 06            [12]  659 	ldhl	sp,	#6
+    000002C4 2A               [ 8]  660 	ld	a,	(hl+)
+    000002C5 66               [ 8]  661 	ld	h, (hl)
+    000002C6 6F               [ 4]  662 	ld	l, a
+    000002C7 19               [ 8]  663 	add	hl, de
+    000002C8 5D               [ 4]  664 	ld	e, l
+    000002C9 54               [ 4]  665 	ld	d, h
+                                    666 ;src/field_actions.c:35: if(p->mp<cost)return fail(a,RPG_NO_MP,0xb6f7);
+    000002CA 13               [ 8]  667 	inc	de
+    000002CB 13               [ 8]  668 	inc	de
+    000002CC 1A               [ 8]  669 	ld	a, (de)
+    000002CD 6F               [ 4]  670 	ld	l, a
+    000002CE 91               [ 4]  671 	sub	a, c
+    000002CF 30 11            [12]  672 	jr	NC, 00106$
+    000002D1 11 F7 B6         [12]  673 	ld	de, #0xb6f7
+    000002D4 D5               [16]  674 	push	de
+    000002D5 3E 06            [ 8]  675 	ld	a, #0x06
+    000002D7 F8 02            [12]  676 	ldhl	sp,	#2
+    000002D9 5E               [ 8]  677 	ld	e, (hl)
+    000002DA 23               [ 8]  678 	inc	hl
+    000002DB 56               [ 8]  679 	ld	d, (hl)
+    000002DC CDr28r00         [24]  680 	call	_fail
+    000002DF C3r71r06         [16]  681 	jp	00150$
+    000002E2                        682 00106$:
+                                    683 ;src/field_actions.c:36: if(spell==MagicID_Heal||spell==MagicID_Cure){
+    000002E2 E5               [16]  684 	push	hl
+    000002E3 F8 13            [12]  685 	ldhl	sp,	#19
+    000002E5 7E               [ 8]  686 	ld	a, (hl)
+    000002E6 3D               [ 4]  687 	dec	a
+    000002E7 E1               [12]  688 	pop	hl
+    000002E8 28 09            [12]  689 	jr	Z, 00111$
+    000002EA E5               [16]  690 	push	hl
+    000002EB F8 13            [12]  691 	ldhl	sp,	#19
+    000002ED 7E               [ 8]  692 	ld	a, (hl)
+    000002EE D6 02            [ 8]  693 	sub	a, #0x02
+    000002F0 E1               [12]  694 	pop	hl
+    000002F1 20 59            [12]  695 	jr	NZ, 00112$
+    000002F3                        696 00111$:
+                                    697 ;src/field_actions.c:37: if(target==255u)return FIELD_DONE;
+    000002F3 F8 12            [12]  698 	ldhl	sp,	#18
+    000002F5 7E               [ 8]  699 	ld	a, (hl)
+    000002F6 3C               [ 4]  700 	inc	a
+    000002F7 CAr71r06         [16]  701 	jp	Z, 00150$
+                                    702 ;src/field_actions.c:38: error=rpg_cast_heal(c->rpg,caster,target,spell,0);if(error)return fail(a,error,0xb730);
+    000002FA AF               [ 4]  703 	xor	a, a
+    000002FB F5               [16]  704 	push	af
+    000002FC 33               [ 8]  705 	inc	sp
+    000002FD F8 12            [12]  706 	ldhl	sp,	#18
+    000002FF 2A               [ 8]  707 	ld	a, (hl+)
+    00000300 57               [ 4]  708 	ld	d, a
+    00000301 3A               [ 8]  709 	ld	a, (hl-)
+    00000302 2B               [ 8]  710 	dec	hl
+    00000303 5F               [ 4]  711 	ld	e, a
+    00000304 D5               [16]  712 	push	de
+    00000305 7E               [ 8]  713 	ld	a, (hl)
+    00000306 F5               [16]  714 	push	af
+    00000307 33               [ 8]  715 	inc	sp
+    00000308 F8 0A            [12]  716 	ldhl	sp,	#10
+    0000030A 5E               [ 8]  717 	ld	e, (hl)
+    0000030B 23               [ 8]  718 	inc	hl
+    0000030C 56               [ 8]  719 	ld	d, (hl)
+    0000030D D5               [16]  720 	push	de
+    0000030E 1Er00            [ 8]  721 	ld	e, #b_rpg_cast_heal
+    00000310 21r00r00         [12]  722 	ld	hl, #_rpg_cast_heal
+    00000313 CDr00r00         [24]  723 	call	___sdcc_bcall_ehl
+    00000316 E8 06            [16]  724 	add	sp, #6
+    00000318 4F               [ 4]  725 	ld	c, a
+    00000319 B7               [ 4]  726 	or	a, a
+    0000031A 28 10            [12]  727 	jr	Z, 00110$
+    0000031C 11 30 B7         [12]  728 	ld	de, #0xb730
+    0000031F D5               [16]  729 	push	de
+    00000320 79               [ 4]  730 	ld	a, c
+    00000321 F8 02            [12]  731 	ldhl	sp,	#2
+    00000323 5E               [ 8]  732 	ld	e, (hl)
+    00000324 23               [ 8]  733 	inc	hl
+    00000325 56               [ 8]  734 	ld	d, (hl)
+    00000326 CDr28r00         [24]  735 	call	_fail
+    00000329 C3r71r06         [16]  736 	jp	00150$
+    0000032C                        737 00110$:
+                                    738 ;src/field_actions.c:39: a->sound_start=0xab;line(a,0xb1d0);a->lines[0].sound_after=0xc1;return FIELD_DONE;
+    0000032C D1               [12]  739 	pop	de
+    0000032D D5               [16]  740 	push	de
+    0000032E 21 08 00         [12]  741 	ld	hl, #0x0008
+    00000331 19               [ 8]  742 	add	hl, de
+    00000332 44               [ 4]  743 	ld	b, h
+    00000333 36 AB            [12]  744 	ld	(hl), #0xab
+    00000335 01 D0 B1         [12]  745 	ld	bc, #0xb1d0
+    00000338 D1               [12]  746 	pop	de
+    00000339 D5               [16]  747 	push	de
+    0000033A CDr00r00         [24]  748 	call	_line
+    0000033D F8 13            [12]  749 	ldhl	sp,	#19
+    0000033F 2A               [ 8]  750 	ld	a, (hl+)
+    00000340 4F               [ 4]  751 	ld	c, a
+    00000341 46               [ 8]  752 	ld	b, (hl)
+    00000342 21 0D 00         [12]  753 	ld	hl, #0x000d
+    00000345 09               [ 8]  754 	add	hl, bc
+    00000346 36 C1            [12]  755 	ld	(hl), #0xc1
+    00000348 AF               [ 4]  756 	xor	a, a
+    00000349 C3r71r06         [16]  757 	jp	00150$
+    0000034C                        758 00112$:
+                                    759 ;src/field_actions.c:41: p->mp-=cost;
+    0000034C 7D               [ 4]  760 	ld	a, l
+    0000034D 91               [ 4]  761 	sub	a, c
+    0000034E 12               [ 8]  762 	ld	(de), a
+                                    763 ;src/field_actions.c:42: switch(spell){
+    0000034F F8 11            [12]  764 	ldhl	sp,	#17
+    00000351 7E               [ 8]  765 	ld	a, (hl)
+    00000352 D6 0C            [ 8]  766 	sub	a, #0x0c
+    00000354 DAr64r06         [16]  767 	jp	C, 00148$
+    00000357 3E 12            [ 8]  768 	ld	a, #0x12
+    00000359 96               [ 8]  769 	sub	a, (hl)
+    0000035A DAr64r06         [16]  770 	jp	C, 00148$
+    0000035D 7E               [ 8]  771 	ld	a, (hl)
+    0000035E C6 F4            [ 8]  772 	add	a, #0xf4
+    00000360 4F               [ 4]  773 	ld	c, a
+    00000361 06 00            [ 8]  774 	ld	b, #0x00
+    00000363 21r6Dr03         [12]  775 	ld	hl, #00312$
+    00000366 09               [ 8]  776 	add	hl, bc
+    00000367 09               [ 8]  777 	add	hl, bc
+    00000368 4E               [ 8]  778 	ld	c, (hl)
+    00000369 23               [ 8]  779 	inc	hl
+    0000036A 66               [ 8]  780 	ld	h, (hl)
+    0000036B 69               [ 4]  781 	ld	l, c
+    0000036C E9               [ 4]  782 	jp	(hl)
+    0000036D                        783 00312$:
+    0000036Dr7Br03                  784 	.dw	00114$
+    0000036Fr65r04                  785 	.dw	00122$
+    00000371r9Br04                  786 	.dw	00126$
+    00000373r32r05                  787 	.dw	00133$
+    00000375r10r06                  788 	.dw	00143$
+    00000377r10r06                  789 	.dw	00143$
+    00000379r25r06                  790 	.dw	00144$
+                                    791 ;src/field_actions.c:43: case MagicID_Trap:
+    0000037B                        792 00114$:
+                                    793 ;src/field_actions.c:44: a->sound_start=0xab;
+    0000037B D1               [12]  794 	pop	de
+    0000037C D5               [16]  795 	push	de
+    0000037D 21 08 00         [12]  796 	ld	hl, #0x0008
+    00000380 19               [ 8]  797 	add	hl, de
+    00000381 44               [ 4]  798 	ld	b, h
+    00000382 36 AB            [12]  799 	ld	(hl), #0xab
+                                    800 ;src/field_actions.c:45: if(c->chest){rpg_battle_prepare_chest(c->rpg,c->chest);line(a,c->chest->chest_visual==0x3du?0xb27f:0xb28e);c->chest->chest_visual=0x3d;c->chest->trap_kind=BATTLE_TRAP_NONE;a->kind=FIELD_CHEST_OPEN;}
+    00000384 F8 02            [12]  801 	ldhl	sp,#2
+    00000386 2A               [ 8]  802 	ld	a, (hl+)
+    00000387 5F               [ 4]  803 	ld	e, a
+    00000388 56               [ 8]  804 	ld	d, (hl)
+    00000389 21 06 00         [12]  805 	ld	hl, #0x0006
+    0000038C 19               [ 8]  806 	add	hl, de
+    0000038D E5               [16]  807 	push	hl
+    0000038E 7D               [ 4]  808 	ld	a, l
+    0000038F F8 08            [12]  809 	ldhl	sp,	#8
+    00000391 77               [ 8]  810 	ld	(hl), a
+    00000392 E1               [12]  811 	pop	hl
+    00000393 7C               [ 4]  812 	ld	a, h
+    00000394 F8 07            [12]  813 	ldhl	sp,	#7
+    00000396 32               [ 8]  814 	ld	(hl-), a
+    00000397 2A               [ 8]  815 	ld	a, (hl+)
+    00000398 5F               [ 4]  816 	ld	e, a
+    00000399 56               [ 8]  817 	ld	d, (hl)
+    0000039A 1A               [ 8]  818 	ld	a, (de)
+    0000039B 4F               [ 4]  819 	ld	c, a
+    0000039C 13               [ 8]  820 	inc	de
+    0000039D 1A               [ 8]  821 	ld	a, (de)
+    0000039E 47               [ 4]  822 	ld	b, a
+    0000039F B1               [ 4]  823 	or	a, c
+    000003A0 28 62            [12]  824 	jr	Z, 00120$
+    000003A2 2B               [ 8]  825 	dec	hl
+    000003A3 2B               [ 8]  826 	dec	hl
+    000003A4 2B               [ 8]  827 	dec	hl
+    000003A5 2A               [ 8]  828 	ld	a, (hl+)
+    000003A6 5F               [ 4]  829 	ld	e, a
+    000003A7 56               [ 8]  830 	ld	d, (hl)
+    000003A8 1A               [ 8]  831 	ld	a, (de)
+    000003A9 6F               [ 4]  832 	ld	l, a
+    000003AA 13               [ 8]  833 	inc	de
+    000003AB 1A               [ 8]  834 	ld	a, (de)
+    000003AC 67               [ 4]  835 	ld	h, a
+    000003AD C5               [16]  836 	push	bc
+    000003AE E5               [16]  837 	push	hl
+    000003AF 1Er00            [ 8]  838 	ld	e, #b_rpg_battle_prepare_chest
+    000003B1 21r00r00         [12]  839 	ld	hl, #_rpg_battle_prepare_chest
+    000003B4 CDr00r00         [24]  840 	call	___sdcc_bcall_ehl
+    000003B7 E8 04            [16]  841 	add	sp, #4
+    000003B9 F8 06            [12]  842 	ldhl	sp,#6
+    000003BB 2A               [ 8]  843 	ld	a, (hl+)
+    000003BC 5F               [ 4]  844 	ld	e, a
+    000003BD 56               [ 8]  845 	ld	d, (hl)
+    000003BE 1A               [ 8]  846 	ld	a, (de)
+    000003BF 4F               [ 4]  847 	ld	c, a
+    000003C0 13               [ 8]  848 	inc	de
+    000003C1 1A               [ 8]  849 	ld	a, (de)
+    000003C2 47               [ 4]  850 	ld	b, a
+    000003C3 21 A7 00         [12]  851 	ld	hl, #0x00a7
+    000003C6 09               [ 8]  852 	add	hl, bc
+    000003C7 7E               [ 8]  853 	ld	a, (hl)
+    000003C8 D6 3D            [ 8]  854 	sub	a, #0x3d
+    000003CA 20 05            [12]  855 	jr	NZ, 00156$
+    000003CC 01 7F B2         [12]  856 	ld	bc, #0xb27f
+    000003CF 18 03            [12]  857 	jr	00157$
+    000003D1                        858 00156$:
+    000003D1 01 8E B2         [12]  859 	ld	bc, #0xb28e
+    000003D4                        860 00157$:
+    000003D4 D1               [12]  861 	pop	de
+    000003D5 D5               [16]  862 	push	de
+    000003D6 CDr00r00         [24]  863 	call	_line
+    000003D9 F8 06            [12]  864 	ldhl	sp,#6
+    000003DB 2A               [ 8]  865 	ld	a, (hl+)
+    000003DC 5F               [ 4]  866 	ld	e, a
+    000003DD 56               [ 8]  867 	ld	d, (hl)
+    000003DE 1A               [ 8]  868 	ld	a, (de)
+    000003DF 4F               [ 4]  869 	ld	c, a
+    000003E0 13               [ 8]  870 	inc	de
+    000003E1 1A               [ 8]  871 	ld	a, (de)
+    000003E2 47               [ 4]  872 	ld	b, a
+    000003E3 21 A7 00         [12]  873 	ld	hl, #0x00a7
+    000003E6 09               [ 8]  874 	add	hl, bc
+    000003E7 36 3D            [12]  875 	ld	(hl), #0x3d
+    000003E9 F8 06            [12]  876 	ldhl	sp,#6
+    000003EB 2A               [ 8]  877 	ld	a, (hl+)
+    000003EC 5F               [ 4]  878 	ld	e, a
+    000003ED 56               [ 8]  879 	ld	d, (hl)
+    000003EE 1A               [ 8]  880 	ld	a, (de)
+    000003EF 4F               [ 4]  881 	ld	c, a
+    000003F0 13               [ 8]  882 	inc	de
+    000003F1 1A               [ 8]  883 	ld	a, (de)
+    000003F2 47               [ 4]  884 	ld	b, a
+    000003F3 21 A3 00         [12]  885 	ld	hl, #0x00a3
+    000003F6 09               [ 8]  886 	add	hl, bc
+    000003F7 36 00            [12]  887 	ld	(hl), #0x00
+    000003F9 F8 13            [12]  888 	ldhl	sp,	#19
+    000003FB 2A               [ 8]  889 	ld	a, (hl+)
+    000003FC 4F               [ 4]  890 	ld	c, a
+    000003FD 46               [ 8]  891 	ld	b, (hl)
+    000003FE 3E 05            [ 8]  892 	ld	a, #0x05
+    00000400 02               [ 8]  893 	ld	(bc), a
+    00000401 C3r6Br06         [16]  894 	jp	00149$
+    00000404                        895 00120$:
+                                    896 ;src/field_actions.c:46: else if(!c->interaction&&floor_trap(c)){c->dungeon->layout[dungeon_sample_position(c->dungeon,1u)]=0;line(a,0xb28e);a->kind=FIELD_REDRAW;}
+    00000404 F8 02            [12]  897 	ldhl	sp,#2
+    00000406 2A               [ 8]  898 	ld	a, (hl+)
+    00000407 5F               [ 4]  899 	ld	e, a
+    00000408 56               [ 8]  900 	ld	d, (hl)
+    00000409 21 08 00         [12]  901 	ld	hl, #0x0008
+    0000040C 19               [ 8]  902 	add	hl, de
+    0000040D 4D               [ 4]  903 	ld	c, l
+    0000040E 44               [ 4]  904 	ld	b, h
+    0000040F 0A               [ 8]  905 	ld	a, (bc)
+    00000410 B7               [ 4]  906 	or	a, a
+    00000411 20 47            [12]  907 	jr	NZ, 00116$
+    00000413 F8 02            [12]  908 	ldhl	sp,	#2
+    00000415 2A               [ 8]  909 	ld	a, (hl+)
+    00000416 5F               [ 4]  910 	ld	e, a
+    00000417 56               [ 8]  911 	ld	d, (hl)
+    00000418 CDr6Cr00         [24]  912 	call	_floor_trap
+    0000041B B7               [ 4]  913 	or	a, a
+    0000041C 28 3C            [12]  914 	jr	Z, 00116$
+    0000041E F8 02            [12]  915 	ldhl	sp,#2
+    00000420 2A               [ 8]  916 	ld	a, (hl+)
+    00000421 5F               [ 4]  917 	ld	e, a
+    00000422 56               [ 8]  918 	ld	d, (hl)
+    00000423 21 04 00         [12]  919 	ld	hl, #0x0004
+    00000426 19               [ 8]  920 	add	hl, de
+    00000427 2A               [ 8]  921 	ld	a, (hl+)
+    00000428 4F               [ 4]  922 	ld	c, a
+    00000429 46               [ 8]  923 	ld	b, (hl)
+    0000042A 21 08 00         [12]  924 	ld	hl, #0x0008
+    0000042D 09               [ 8]  925 	add	hl, bc
+    0000042E 5D               [ 4]  926 	ld	e, l
+    0000042F 54               [ 4]  927 	ld	d, h
+    00000430 D5               [16]  928 	push	de
+    00000431 3E 01            [ 8]  929 	ld	a, #0x01
+    00000433 F5               [16]  930 	push	af
+    00000434 33               [ 8]  931 	inc	sp
+    00000435 C5               [16]  932 	push	bc
+    00000436 1Er00            [ 8]  933 	ld	e, #b_dungeon_sample_position
+    00000438 21r00r00         [12]  934 	ld	hl, #_dungeon_sample_position
+    0000043B CDr00r00         [24]  935 	call	___sdcc_bcall_ehl
+    0000043E E8 03            [16]  936 	add	sp, #3
+    00000440 6F               [ 4]  937 	ld	l, a
+    00000441 D1               [12]  938 	pop	de
+    00000442 26 00            [ 8]  939 	ld	h, #0x00
+    00000444 19               [ 8]  940 	add	hl, de
+    00000445 36 00            [12]  941 	ld	(hl), #0x00
+    00000447 01 8E B2         [12]  942 	ld	bc, #0xb28e
+    0000044A D1               [12]  943 	pop	de
+    0000044B D5               [16]  944 	push	de
+    0000044C CDr00r00         [24]  945 	call	_line
+    0000044F F8 13            [12]  946 	ldhl	sp,	#19
+    00000451 2A               [ 8]  947 	ld	a, (hl+)
+    00000452 4F               [ 4]  948 	ld	c, a
+    00000453 46               [ 8]  949 	ld	b, (hl)
+    00000454 3E 01            [ 8]  950 	ld	a, #0x01
+    00000456 02               [ 8]  951 	ld	(bc), a
+    00000457 C3r6Br06         [16]  952 	jp	00149$
+    0000045A                        953 00116$:
+                                    954 ;src/field_actions.c:47: else line(a,0xb569);break;
+    0000045A 01 69 B5         [12]  955 	ld	bc, #0xb569
+    0000045D D1               [12]  956 	pop	de
+    0000045E D5               [16]  957 	push	de
+    0000045F CDr00r00         [24]  958 	call	_line
+    00000462 C3r6Br06         [16]  959 	jp	00149$
+                                    960 ;src/field_actions.c:48: case MagicID_Exit:
+    00000465                        961 00122$:
+                                    962 ;src/field_actions.c:49: if(c->interaction)line(a,0xb172);else{a->sound_start=0xbf;line(a,0xb59c);a->kind=FIELD_EXIT_DUNGEON;}break;
+    00000465 F8 02            [12]  963 	ldhl	sp,#2
+    00000467 2A               [ 8]  964 	ld	a, (hl+)
+    00000468 5F               [ 4]  965 	ld	e, a
+    00000469 56               [ 8]  966 	ld	d, (hl)
+    0000046A 21 08 00         [12]  967 	ld	hl, #0x0008
+    0000046D 19               [ 8]  968 	add	hl, de
+    0000046E 4D               [ 4]  969 	ld	c, l
+    0000046F 44               [ 4]  970 	ld	b, h
+    00000470 0A               [ 8]  971 	ld	a, (bc)
+    00000471 B7               [ 4]  972 	or	a, a
+    00000472 28 0B            [12]  973 	jr	Z, 00124$
+    00000474 01 72 B1         [12]  974 	ld	bc, #0xb172
+    00000477 D1               [12]  975 	pop	de
+    00000478 D5               [16]  976 	push	de
+    00000479 CDr00r00         [24]  977 	call	_line
+    0000047C C3r6Br06         [16]  978 	jp	00149$
+    0000047F                        979 00124$:
+    0000047F D1               [12]  980 	pop	de
+    00000480 D5               [16]  981 	push	de
+    00000481 21 08 00         [12]  982 	ld	hl, #0x0008
+    00000484 19               [ 8]  983 	add	hl, de
+    00000485 44               [ 4]  984 	ld	b, h
+    00000486 36 BF            [12]  985 	ld	(hl), #0xbf
+    00000488 01 9C B5         [12]  986 	ld	bc, #0xb59c
+    0000048B D1               [12]  987 	pop	de
+    0000048C D5               [16]  988 	push	de
+    0000048D CDr00r00         [24]  989 	call	_line
+    00000490 F8 13            [12]  990 	ldhl	sp,	#19
+    00000492 2A               [ 8]  991 	ld	a, (hl+)
+    00000493 4F               [ 4]  992 	ld	c, a
+    00000494 46               [ 8]  993 	ld	b, (hl)
+    00000495 3E 02            [ 8]  994 	ld	a, #0x02
+    00000497 02               [ 8]  995 	ld	(bc), a
+    00000498 C3r6Br06         [16]  996 	jp	00149$
+                                    997 ;src/field_actions.c:50: case MagicID_Open:
+    0000049B                        998 00126$:
+                                    999 ;src/field_actions.c:51: a->sound_start=0xab;
+    0000049B D1               [12] 1000 	pop	de
+    0000049C D5               [16] 1001 	push	de
+    0000049D 21 08 00         [12] 1002 	ld	hl, #0x0008
+    000004A0 19               [ 8] 1003 	add	hl, de
+    000004A1 44               [ 4] 1004 	ld	b, h
+    000004A2 36 AB            [12] 1005 	ld	(hl), #0xab
+                                   1006 ;src/field_actions.c:52: if(c->interaction||!c->dungeon){line(a,0xb172);break;}
+    000004A4 F8 02            [12] 1007 	ldhl	sp,#2
+    000004A6 2A               [ 8] 1008 	ld	a, (hl+)
+    000004A7 5F               [ 4] 1009 	ld	e, a
+    000004A8 56               [ 8] 1010 	ld	d, (hl)
+    000004A9 21 08 00         [12] 1011 	ld	hl, #0x0008
+    000004AC 19               [ 8] 1012 	add	hl, de
+    000004AD 4D               [ 4] 1013 	ld	c, l
+    000004AE 44               [ 4] 1014 	ld	b, h
+    000004AF 0A               [ 8] 1015 	ld	a, (bc)
+    000004B0 B7               [ 4] 1016 	or	a, a
+    000004B1 20 11            [12] 1017 	jr	NZ, 00127$
+    000004B3 F8 02            [12] 1018 	ldhl	sp,#2
+    000004B5 2A               [ 8] 1019 	ld	a, (hl+)
+    000004B6 5F               [ 4] 1020 	ld	e, a
+    000004B7 56               [ 8] 1021 	ld	d, (hl)
+    000004B8 21 04 00         [12] 1022 	ld	hl, #0x0004
+    000004BB 19               [ 8] 1023 	add	hl, de
+    000004BC 4D               [ 4] 1024 	ld	c,l
+    000004BD 44               [ 4] 1025 	ld	b,h
+    000004BE 2A               [ 8] 1026 	ld	a,	(hl+)
+    000004BF 66               [ 8] 1027 	ld	h, (hl)
+    000004C0 6F               [ 4] 1028 	ld	l, a
+    000004C1 B4               [ 4] 1029 	or	a, h
+    000004C2 20 0B            [12] 1030 	jr	NZ, 00128$
+    000004C4                       1031 00127$:
+    000004C4 01 72 B1         [12] 1032 	ld	bc, #0xb172
+    000004C7 D1               [12] 1033 	pop	de
+    000004C8 D5               [16] 1034 	push	de
+    000004C9 CDr00r00         [24] 1035 	call	_line
+    000004CC C3r6Br06         [16] 1036 	jp	00149$
+    000004CF                       1037 00128$:
+                                   1038 ;src/field_actions.c:53: position=dungeon_sample_position(c->dungeon,1u);cell=c->dungeon->layout[position];
+    000004CF C5               [16] 1039 	push	bc
+    000004D0 3E 01            [ 8] 1040 	ld	a, #0x01
+    000004D2 F5               [16] 1041 	push	af
+    000004D3 33               [ 8] 1042 	inc	sp
+    000004D4 E5               [16] 1043 	push	hl
+    000004D5 1Er00            [ 8] 1044 	ld	e, #b_dungeon_sample_position
+    000004D7 21r00r00         [12] 1045 	ld	hl, #_dungeon_sample_position
+    000004DA CDr00r00         [24] 1046 	call	___sdcc_bcall_ehl
+    000004DD E8 03            [16] 1047 	add	sp, #3
+    000004DF F8 09            [12] 1048 	ldhl	sp,	#9
+    000004E1 77               [ 8] 1049 	ld	(hl), a
+    000004E2 E1               [12] 1050 	pop	hl
+    000004E3 2A               [ 8] 1051 	ld	a, (hl+)
+    000004E4 4F               [ 4] 1052 	ld	c, a
+    000004E5 46               [ 8] 1053 	ld	b, (hl)
+    000004E6 21 08 00         [12] 1054 	ld	hl, #0x0008
+    000004E9 09               [ 8] 1055 	add	hl, bc
+    000004EA 4D               [ 4] 1056 	ld	c, l
+    000004EB 44               [ 4] 1057 	ld	b, h
+    000004EC F8 07            [12] 1058 	ldhl	sp,	#7
+    000004EE 6E               [ 8] 1059 	ld	l, (hl)
+    000004EF 26 00            [ 8] 1060 	ld	h, #0x00
+    000004F1 09               [ 8] 1061 	add	hl, bc
+    000004F2 4E               [ 8] 1062 	ld	c, (hl)
+    000004F3 41               [ 4] 1063 	ld	b, c
+                                   1064 ;src/field_actions.c:54: if((cell&7u)!=6u||(cell&128u)){line(a,0xb172);break;}
+    000004F4 78               [ 4] 1065 	ld	a, b
+    000004F5 E6 07            [ 8] 1066 	and	a, #0x07
+    000004F7 D6 06            [ 8] 1067 	sub	a, #0x06
+    000004F9 20 04            [12] 1068 	jr	NZ, 00130$
+    000004FB CB 78            [ 8] 1069 	bit	7, b
+    000004FD 28 0B            [12] 1070 	jr	Z, 00131$
+    000004FF                       1071 00130$:
+    000004FF 01 72 B1         [12] 1072 	ld	bc, #0xb172
+    00000502 D1               [12] 1073 	pop	de
+    00000503 D5               [16] 1074 	push	de
+    00000504 CDr00r00         [24] 1075 	call	_line
+    00000507 C3r6Br06         [16] 1076 	jp	00149$
+    0000050A                       1077 00131$:
+                                   1078 ;src/field_actions.c:55: c->dungeon->layout[position]|=128;a->kind=FIELD_OPEN_DOOR;a->target=position;a->a=4;a->sound_end=0xbd;break;
+    0000050A CB F9            [ 8] 1079 	set	7, c
+    0000050C 71               [ 8] 1080 	ld	(hl), c
+    0000050D E1               [12] 1081 	pop	hl
+    0000050E 36 04            [12] 1082 	ld	(hl), #0x04
+    00000510 5D               [ 4] 1083 	ld	e, l
+    00000511 54               [ 4] 1084 	ld	d, h
+    00000512 D5               [16] 1085 	push	de
+    00000513 21 05 00         [12] 1086 	ld	hl, #0x0005
+    00000516 19               [ 8] 1087 	add	hl, de
+    00000517 4D               [ 4] 1088 	ld	c, l
+    00000518 44               [ 4] 1089 	ld	b, h
+    00000519 F8 07            [12] 1090 	ldhl	sp,	#7
+    0000051B 7E               [ 8] 1091 	ld	a, (hl)
+    0000051C 02               [ 8] 1092 	ld	(bc), a
+    0000051D D1               [12] 1093 	pop	de
+    0000051E D5               [16] 1094 	push	de
+    0000051F 21 06 00         [12] 1095 	ld	hl, #0x0006
+    00000522 19               [ 8] 1096 	add	hl, de
+    00000523 36 04            [12] 1097 	ld	(hl), #0x04
+    00000525 D1               [12] 1098 	pop	de
+    00000526 D5               [16] 1099 	push	de
+    00000527 21 09 00         [12] 1100 	ld	hl, #0x0009
+    0000052A 19               [ 8] 1101 	add	hl, de
+    0000052B 4D               [ 4] 1102 	ld	c, l
+    0000052C 44               [ 4] 1103 	ld	b, h
+    0000052D 36 BD            [12] 1104 	ld	(hl), #0xbd
+    0000052F C3r6Br06         [16] 1105 	jp	00149$
+                                   1106 ;src/field_actions.c:56: case MagicID_Rise:
+    00000532                       1107 00133$:
+                                   1108 ;src/field_actions.c:57: if(target==255u)break; /* MP was spent before source target selection. */
+    00000532 F8 12            [12] 1109 	ldhl	sp,	#18
+    00000534 7E               [ 8] 1110 	ld	a, (hl)
+    00000535 3C               [ 4] 1111 	inc	a
+    00000536 CAr6Br06         [16] 1112 	jp	Z, 00149$
+                                   1113 ;src/field_actions.c:58: a->sound_start=0xab;
+    00000539 D1               [12] 1114 	pop	de
+    0000053A D5               [16] 1115 	push	de
+    0000053B 21 08 00         [12] 1116 	ld	hl, #0x0008
+    0000053E 19               [ 8] 1117 	add	hl, de
+    0000053F 44               [ 4] 1118 	ld	b, h
+    00000540 36 AB            [12] 1119 	ld	(hl), #0xab
+                                   1120 ;src/field_actions.c:59: if(target>=4u||!(c->rpg->joined_mask&(1u<<target)))return fail(a,RPG_INVALID,0);
+    00000542 F8 12            [12] 1121 	ldhl	sp,	#18
+    00000544 7E               [ 8] 1122 	ld	a, (hl)
+    00000545 D6 04            [ 8] 1123 	sub	a, #0x04
+    00000547 30 31            [12] 1124 	jr	NC, 00136$
+    00000549 F8 04            [12] 1125 	ldhl	sp,#4
+    0000054B 2A               [ 8] 1126 	ld	a, (hl+)
+    0000054C 5F               [ 4] 1127 	ld	e, a
+    0000054D 56               [ 8] 1128 	ld	d, (hl)
+    0000054E 1A               [ 8] 1129 	ld	a, (de)
+    0000054F 4F               [ 4] 1130 	ld	c, a
+    00000550 13               [ 8] 1131 	inc	de
+    00000551 1A               [ 8] 1132 	ld	a, (de)
+    00000552 47               [ 4] 1133 	ld	b, a
+    00000553 21 59 00         [12] 1134 	ld	hl, #0x0059
+    00000556 09               [ 8] 1135 	add	hl, bc
+    00000557 7E               [ 8] 1136 	ld	a, (hl)
+    00000558 F8 07            [12] 1137 	ldhl	sp,	#7
+    0000055A 77               [ 8] 1138 	ld	(hl), a
+    0000055B F8 12            [12] 1139 	ldhl	sp,	#18
+    0000055D 7E               [ 8] 1140 	ld	a, (hl)
+    0000055E F5               [16] 1141 	push	af
+    0000055F 11 01 00         [12] 1142 	ld	de, #0x0001
+    00000562 F1               [12] 1143 	pop	af
+    00000563 3C               [ 4] 1144 	inc	a
+    00000564 18 04            [12] 1145 	jr	00320$
+    00000566                       1146 00319$:
+    00000566 CB 23            [ 8] 1147 	sla	e
+    00000568 CB 12            [ 8] 1148 	rl	d
+    0000056A                       1149 00320$:
+    0000056A 3D               [ 4] 1150 	dec	a
+    0000056B 20 F9            [12] 1151 	jr	NZ,00319$
+    0000056D F8 07            [12] 1152 	ldhl	sp,	#7
+    0000056F 3A               [ 8] 1153 	ld	a, (hl-)
+    00000570 22               [ 8] 1154 	ld	(hl+), a
+    00000571 AF               [ 4] 1155 	xor	a, a
+    00000572 32               [ 8] 1156 	ld	(hl-), a
+    00000573 7E               [ 8] 1157 	ld	a, (hl)
+    00000574 A3               [ 4] 1158 	and	a, e
+    00000575 1E 00            [ 8] 1159 	ld	e, #0x00
+    00000577 B3               [ 4] 1160 	or	a, e
+    00000578 20 11            [12] 1161 	jr	NZ, 00137$
+    0000057A                       1162 00136$:
+    0000057A 11 00 00         [12] 1163 	ld	de, #0x0000
+    0000057D D5               [16] 1164 	push	de
+    0000057E 3E 01            [ 8] 1165 	ld	a, #0x01
+    00000580 F8 02            [12] 1166 	ldhl	sp,	#2
+    00000582 5E               [ 8] 1167 	ld	e, (hl)
+    00000583 23               [ 8] 1168 	inc	hl
+    00000584 56               [ 8] 1169 	ld	d, (hl)
+    00000585 CDr28r00         [24] 1170 	call	_fail
+    00000588 C3r71r06         [16] 1171 	jp	00150$
+    0000058B                       1172 00137$:
+                                   1173 ;src/field_actions.c:60: p=&c->rpg->party[target];if(p->status&1u)line(a,0xb709);
+    0000058B F8 12            [12] 1174 	ldhl	sp,	#18
+    0000058D 7E               [ 8] 1175 	ld	a, (hl)
+    0000058E CB 37            [ 8] 1176 	swap	a
+    00000590 E6 F0            [ 8] 1177 	and	a, #0xf0
+    00000592 6F               [ 4] 1178 	ld	l, a
+    00000593 26 00            [ 8] 1179 	ld	h, #0x00
+    00000595 09               [ 8] 1180 	add	hl, bc
+    00000596 E5               [16] 1181 	push	hl
+    00000597 7D               [ 4] 1182 	ld	a, l
+    00000598 F8 04            [12] 1183 	ldhl	sp,	#4
+    0000059A 77               [ 8] 1184 	ld	(hl), a
+    0000059B E1               [12] 1185 	pop	hl
+    0000059C 7C               [ 4] 1186 	ld	a, h
+    0000059D F8 03            [12] 1187 	ldhl	sp,	#3
+    0000059F 32               [ 8] 1188 	ld	(hl-), a
+    000005A0 7E               [ 8] 1189 	ld	a, (hl)
+    000005A1 F8 06            [12] 1190 	ldhl	sp,	#6
+    000005A3 77               [ 8] 1191 	ld	(hl), a
+    000005A4 F8 03            [12] 1192 	ldhl	sp,	#3
+    000005A6 7E               [ 8] 1193 	ld	a, (hl)
+    000005A7 F8 07            [12] 1194 	ldhl	sp,	#7
+    000005A9 32               [ 8] 1195 	ld	(hl-), a
+    000005AA 2A               [ 8] 1196 	ld	a, (hl+)
+    000005AB 5F               [ 4] 1197 	ld	e, a
+    000005AC 56               [ 8] 1198 	ld	d, (hl)
+    000005AD 1A               [ 8] 1199 	ld	a, (de)
+    000005AE 0F               [ 4] 1200 	rrca
+    000005AF 30 0B            [12] 1201 	jr	NC, 00140$
+    000005B1 01 09 B7         [12] 1202 	ld	bc, #0xb709
+    000005B4 D1               [12] 1203 	pop	de
+    000005B5 D5               [16] 1204 	push	de
+    000005B6 CDr00r00         [24] 1205 	call	_line
+    000005B9 C3r6Br06         [16] 1206 	jp	00149$
+    000005BC                       1207 00140$:
+                                   1208 ;src/field_actions.c:61: else{p->status=1;p->hp=p->max_hp;p->mp=p->max_mp;line(a,0xb5b0);}break;
+    000005BC F8 06            [12] 1209 	ldhl	sp,	#6
+    000005BE 2A               [ 8] 1210 	ld	a, (hl+)
+    000005BF 66               [ 8] 1211 	ld	h, (hl)
+    000005C0 6F               [ 4] 1212 	ld	l, a
+    000005C1 36 01            [12] 1213 	ld	(hl), #0x01
+    000005C3 F8 02            [12] 1214 	ldhl	sp,#2
+    000005C5 2A               [ 8] 1215 	ld	a, (hl+)
+    000005C6 5F               [ 4] 1216 	ld	e, a
+    000005C7 56               [ 8] 1217 	ld	d, (hl)
+    000005C8 6B               [ 4] 1218 	ld	l, e
+    000005C9 62               [ 4] 1219 	ld	h, d
+    000005CA 23               [ 8] 1220 	inc	hl
+    000005CB E5               [16] 1221 	push	hl
+    000005CC 7D               [ 4] 1222 	ld	a, l
+    000005CD F8 06            [12] 1223 	ldhl	sp,	#6
+    000005CF 77               [ 8] 1224 	ld	(hl), a
+    000005D0 E1               [12] 1225 	pop	hl
+    000005D1 7C               [ 4] 1226 	ld	a, h
+    000005D2 F8 05            [12] 1227 	ldhl	sp,	#5
+    000005D4 32               [ 8] 1228 	ld	(hl-), a
+    000005D5 2B               [ 8] 1229 	dec	hl
+    000005D6 2B               [ 8] 1230 	dec	hl
+    000005D7 2A               [ 8] 1231 	ld	a, (hl+)
+    000005D8 5F               [ 4] 1232 	ld	e, a
+    000005D9 56               [ 8] 1233 	ld	d, (hl)
+    000005DA 21 06 00         [12] 1234 	ld	hl, #0x0006
+    000005DD 19               [ 8] 1235 	add	hl, de
+    000005DE E5               [16] 1236 	push	hl
+    000005DF 7D               [ 4] 1237 	ld	a, l
+    000005E0 F8 08            [12] 1238 	ldhl	sp,	#8
+    000005E2 77               [ 8] 1239 	ld	(hl), a
+    000005E3 E1               [12] 1240 	pop	hl
+    000005E4 7C               [ 4] 1241 	ld	a, h
+    000005E5 F8 07            [12] 1242 	ldhl	sp,	#7
+    000005E7 32               [ 8] 1243 	ld	(hl-), a
+    000005E8 2A               [ 8] 1244 	ld	a, (hl+)
+    000005E9 5F               [ 4] 1245 	ld	e, a
+    000005EA 56               [ 8] 1246 	ld	d, (hl)
+    000005EB 1A               [ 8] 1247 	ld	a, (de)
+    000005EC F8 04            [12] 1248 	ldhl	sp,	#4
+    000005EE 5E               [ 8] 1249 	ld	e, (hl)
+    000005EF 23               [ 8] 1250 	inc	hl
+    000005F0 66               [ 8] 1251 	ld	h, (hl)
+    000005F1 6B               [ 4] 1252 	ld	l, e
+    000005F2 77               [ 8] 1253 	ld	(hl), a
+    000005F3 F8 02            [12] 1254 	ldhl	sp,	#2
+    000005F5 2A               [ 8] 1255 	ld	a, (hl+)
+    000005F6 4F               [ 4] 1256 	ld	c, a
+    000005F7 3A               [ 8] 1257 	ld	a, (hl-)
+    000005F8 47               [ 4] 1258 	ld	b, a
+    000005F9 03               [ 8] 1259 	inc	bc
+    000005FA 03               [ 8] 1260 	inc	bc
+    000005FB 2A               [ 8] 1261 	ld	a, (hl+)
+    000005FC 5F               [ 4] 1262 	ld	e, a
+    000005FD 56               [ 8] 1263 	ld	d, (hl)
+    000005FE 21 07 00         [12] 1264 	ld	hl, #0x0007
+    00000601 19               [ 8] 1265 	add	hl, de
+    00000602 5D               [ 4] 1266 	ld	e, l
+    00000603 54               [ 4] 1267 	ld	d, h
+    00000604 1A               [ 8] 1268 	ld	a, (de)
+    00000605 02               [ 8] 1269 	ld	(bc), a
+    00000606 01 B0 B5         [12] 1270 	ld	bc, #0xb5b0
+    00000609 D1               [12] 1271 	pop	de
+    0000060A D5               [16] 1272 	push	de
+    0000060B CDr00r00         [24] 1273 	call	_line
+    0000060E 18 5B            [12] 1274 	jr	00149$
+                                   1275 ;src/field_actions.c:62: case MagicID_Tele:case MagicID_Chat:a->sound_start=0xac;tele(c,a);break;
+    00000610                       1276 00143$:
+    00000610 D1               [12] 1277 	pop	de
+    00000611 D5               [16] 1278 	push	de
+    00000612 21 08 00         [12] 1279 	ld	hl, #0x0008
+    00000615 19               [ 8] 1280 	add	hl, de
+    00000616 4D               [ 4] 1281 	ld	c, l
+    00000617 36 AC            [12] 1282 	ld	(hl), #0xac
+    00000619 C1               [12] 1283 	pop	bc
+    0000061A C5               [16] 1284 	push	bc
+    0000061B F8 02            [12] 1285 	ldhl	sp,	#2
+    0000061D 2A               [ 8] 1286 	ld	a, (hl+)
+    0000061E 5F               [ 4] 1287 	ld	e, a
+    0000061F 56               [ 8] 1288 	ld	d, (hl)
+    00000620 CDr3Cr01         [24] 1289 	call	_tele
+    00000623 18 46            [12] 1290 	jr	00149$
+                                   1291 ;src/field_actions.c:63: case MagicID_Fly:
+    00000625                       1292 00144$:
+                                   1293 ;src/field_actions.c:64: a->sound_start=0xab;if(!c->interaction)line(a,0xb172);else {line(a,0xb59c);a->sound_end=0xbf;transfer(c,a);}break;
+    00000625 D1               [12] 1294 	pop	de
+    00000626 D5               [16] 1295 	push	de
+    00000627 21 08 00         [12] 1296 	ld	hl, #0x0008
+    0000062A 19               [ 8] 1297 	add	hl, de
+    0000062B 44               [ 4] 1298 	ld	b, h
+    0000062C 36 AB            [12] 1299 	ld	(hl), #0xab
+    0000062E F8 02            [12] 1300 	ldhl	sp,#2
+    00000630 2A               [ 8] 1301 	ld	a, (hl+)
+    00000631 5F               [ 4] 1302 	ld	e, a
+    00000632 56               [ 8] 1303 	ld	d, (hl)
+    00000633 21 08 00         [12] 1304 	ld	hl, #0x0008
+    00000636 19               [ 8] 1305 	add	hl, de
+    00000637 4D               [ 4] 1306 	ld	c, l
+    00000638 44               [ 4] 1307 	ld	b, h
+    00000639 0A               [ 8] 1308 	ld	a, (bc)
+    0000063A B7               [ 4] 1309 	or	a, a
+    0000063B 20 0A            [12] 1310 	jr	NZ, 00146$
+    0000063D 01 72 B1         [12] 1311 	ld	bc, #0xb172
+    00000640 D1               [12] 1312 	pop	de
+    00000641 D5               [16] 1313 	push	de
+    00000642 CDr00r00         [24] 1314 	call	_line
+    00000645 18 24            [12] 1315 	jr	00149$
+    00000647                       1316 00146$:
+    00000647 01 9C B5         [12] 1317 	ld	bc, #0xb59c
+    0000064A D1               [12] 1318 	pop	de
+    0000064B D5               [16] 1319 	push	de
+    0000064C CDr00r00         [24] 1320 	call	_line
+    0000064F F8 13            [12] 1321 	ldhl	sp,	#19
+    00000651 2A               [ 8] 1322 	ld	a, (hl+)
+    00000652 4F               [ 4] 1323 	ld	c, a
+    00000653 46               [ 8] 1324 	ld	b, (hl)
+    00000654 21 09 00         [12] 1325 	ld	hl, #0x0009
+    00000657 09               [ 8] 1326 	add	hl, bc
+    00000658 36 BF            [12] 1327 	ld	(hl), #0xbf
+    0000065A F8 02            [12] 1328 	ldhl	sp,	#2
+    0000065C 2A               [ 8] 1329 	ld	a, (hl+)
+    0000065D 5F               [ 4] 1330 	ld	e, a
+    0000065E 56               [ 8] 1331 	ld	d, (hl)
+    0000065F CDrB3r00         [24] 1332 	call	_transfer
+    00000662 18 07            [12] 1333 	jr	00149$
+                                   1334 ;src/field_actions.c:65: default:a->kind=FIELD_UNIMPLEMENTED;a->error=RPG_NOT_IMPLEMENTED;break;
+    00000664                       1335 00148$:
+    00000664 E1               [12] 1336 	pop	hl
+    00000665 36 FF            [12] 1337 	ld	(hl), #0xff
+    00000667 E5               [16] 1338 	push	hl
+    00000668 23               [ 8] 1339 	inc	hl
+    00000669 36 08            [12] 1340 	ld	(hl), #0x08
+                                   1341 ;src/field_actions.c:66: }
+    0000066B                       1342 00149$:
+                                   1343 ;src/field_actions.c:67: return a->kind;
+    0000066B F8 13            [12] 1344 	ldhl	sp,#19
+    0000066D 2A               [ 8] 1345 	ld	a, (hl+)
+    0000066E 5F               [ 4] 1346 	ld	e, a
+    0000066F 56               [ 8] 1347 	ld	d, (hl)
+    00000670 1A               [ 8] 1348 	ld	a, (de)
+    00000671                       1349 00150$:
+                                   1350 ;src/field_actions.c:68: }
+    00000671 E8 08            [16] 1351 	add	sp, #8
+    00000673 C9               [16] 1352 	ret
+                                   1353 ;src/field_actions.c:69: static uint8_t key(FieldContext *c,FieldAction *a,uint8_t miracle){
+                                   1354 ;	---------------------------------
+                                   1355 ; Function key
+                                   1356 ; ---------------------------------
+    00000674                       1357 _key:
+    00000674 E8 F7            [16] 1358 	add	sp, #-9
+    00000676 F8 07            [12] 1359 	ldhl	sp,	#7
+    00000678 7B               [ 4] 1360 	ld	a, e
+    00000679 22               [ 8] 1361 	ld	(hl+), a
+    0000067A 72               [ 8] 1362 	ld	(hl), d
+    0000067B F8 05            [12] 1363 	ldhl	sp,	#5
+    0000067D 79               [ 4] 1364 	ld	a, c
+    0000067E 22               [ 8] 1365 	ld	(hl+), a
+                                   1366 ;src/field_actions.c:71: if(c->interaction||!c->dungeon){line(a,0xb366);line(a,0xb569);return FIELD_DONE;}
+    0000067F 78               [ 4] 1367 	ld	a, b
+    00000680 22               [ 8] 1368 	ld	(hl+), a
+    00000681 2A               [ 8] 1369 	ld	a, (hl+)
+    00000682 5F               [ 4] 1370 	ld	e, a
+    00000683 56               [ 8] 1371 	ld	d, (hl)
+    00000684 21 08 00         [12] 1372 	ld	hl, #0x0008
+    00000687 19               [ 8] 1373 	add	hl, de
+    00000688 4D               [ 4] 1374 	ld	c, l
+    00000689 44               [ 4] 1375 	ld	b, h
+    0000068A 0A               [ 8] 1376 	ld	a, (bc)
+    0000068B B7               [ 4] 1377 	or	a, a
+    0000068C 20 1D            [12] 1378 	jr	NZ, 00101$
+    0000068E F8 07            [12] 1379 	ldhl	sp,#7
+    00000690 2A               [ 8] 1380 	ld	a, (hl+)
+    00000691 5F               [ 4] 1381 	ld	e, a
+    00000692 56               [ 8] 1382 	ld	d, (hl)
+    00000693 21 04 00         [12] 1383 	ld	hl, #0x0004
+    00000696 19               [ 8] 1384 	add	hl, de
+    00000697 E5               [16] 1385 	push	hl
+    00000698 7D               [ 4] 1386 	ld	a, l
+    00000699 F8 05            [12] 1387 	ldhl	sp,	#5
+    0000069B 77               [ 8] 1388 	ld	(hl), a
+    0000069C E1               [12] 1389 	pop	hl
+    0000069D 7C               [ 4] 1390 	ld	a, h
+    0000069E F8 04            [12] 1391 	ldhl	sp,	#4
+    000006A0 32               [ 8] 1392 	ld	(hl-), a
+    000006A1 2A               [ 8] 1393 	ld	a, (hl+)
+    000006A2 5F               [ 4] 1394 	ld	e, a
+    000006A3 56               [ 8] 1395 	ld	d, (hl)
+    000006A4 1A               [ 8] 1396 	ld	a, (de)
+    000006A5 4F               [ 4] 1397 	ld	c, a
+    000006A6 13               [ 8] 1398 	inc	de
+    000006A7 1A               [ 8] 1399 	ld	a, (de)
+    000006A8 B1               [ 4] 1400 	or	a, c
+    000006A9 20 1A            [12] 1401 	jr	NZ, 00102$
+    000006AB                       1402 00101$:
+    000006AB 01 66 B3         [12] 1403 	ld	bc, #0xb366
+    000006AE F8 05            [12] 1404 	ldhl	sp,	#5
+    000006B0 2A               [ 8] 1405 	ld	a, (hl+)
+    000006B1 5F               [ 4] 1406 	ld	e, a
+    000006B2 56               [ 8] 1407 	ld	d, (hl)
+    000006B3 CDr00r00         [24] 1408 	call	_line
+    000006B6 01 69 B5         [12] 1409 	ld	bc, #0xb569
+    000006B9 F8 05            [12] 1410 	ldhl	sp,	#5
+    000006BB 2A               [ 8] 1411 	ld	a, (hl+)
+    000006BC 5F               [ 4] 1412 	ld	e, a
+    000006BD 56               [ 8] 1413 	ld	d, (hl)
+    000006BE CDr00r00         [24] 1414 	call	_line
+    000006C1 AF               [ 4] 1415 	xor	a, a
+    000006C2 C3r8Cr07         [16] 1416 	jp	00112$
+    000006C5                       1417 00102$:
+                                   1418 ;src/field_actions.c:72: line(a,0xb2ac);position=dungeon_sample_position(c->dungeon,1u);cell=c->dungeon->layout[position];kind=cell&7u;
+    000006C5 01 AC B2         [12] 1419 	ld	bc, #0xb2ac
+    000006C8 F8 05            [12] 1420 	ldhl	sp,	#5
+    000006CA 2A               [ 8] 1421 	ld	a, (hl+)
+    000006CB 5F               [ 4] 1422 	ld	e, a
+    000006CC 56               [ 8] 1423 	ld	d, (hl)
+    000006CD CDr00r00         [24] 1424 	call	_line
+    000006D0 F8 03            [12] 1425 	ldhl	sp,#3
+    000006D2 2A               [ 8] 1426 	ld	a, (hl+)
+    000006D3 5F               [ 4] 1427 	ld	e, a
+    000006D4 56               [ 8] 1428 	ld	d, (hl)
+    000006D5 1A               [ 8] 1429 	ld	a, (de)
+    000006D6 4F               [ 4] 1430 	ld	c, a
+    000006D7 13               [ 8] 1431 	inc	de
+    000006D8 1A               [ 8] 1432 	ld	a, (de)
+    000006D9 26 01            [ 8] 1433 	ld	h, #0x01
+    000006DB E5               [16] 1434 	push	hl
+    000006DC 33               [ 8] 1435 	inc	sp
+    000006DD 47               [ 4] 1436 	ld	b, a
+    000006DE C5               [16] 1437 	push	bc
+    000006DF 1Er00            [ 8] 1438 	ld	e, #b_dungeon_sample_position
+    000006E1 21r00r00         [12] 1439 	ld	hl, #_dungeon_sample_position
+    000006E4 CDr00r00         [24] 1440 	call	___sdcc_bcall_ehl
+    000006E7 E8 03            [16] 1441 	add	sp, #3
+    000006E9 F8 00            [12] 1442 	ldhl	sp,	#0
+    000006EB 77               [ 8] 1443 	ld	(hl), a
+    000006EC F8 03            [12] 1444 	ldhl	sp,#3
+    000006EE 2A               [ 8] 1445 	ld	a, (hl+)
+    000006EF 5F               [ 4] 1446 	ld	e, a
+    000006F0 56               [ 8] 1447 	ld	d, (hl)
+    000006F1 1A               [ 8] 1448 	ld	a, (de)
+    000006F2 4F               [ 4] 1449 	ld	c, a
+    000006F3 13               [ 8] 1450 	inc	de
+    000006F4 1A               [ 8] 1451 	ld	a, (de)
+    000006F5 47               [ 4] 1452 	ld	b, a
+    000006F6 21 08 00         [12] 1453 	ld	hl, #0x0008
+    000006F9 09               [ 8] 1454 	add	hl, bc
+    000006FA 4D               [ 4] 1455 	ld	c, l
+    000006FB 44               [ 4] 1456 	ld	b, h
+    000006FC F8 00            [12] 1457 	ldhl	sp,	#0
+    000006FE 2A               [ 8] 1458 	ld	a, (hl+)
+    000006FF 81               [ 4] 1459 	add	a, c
+    00000700 5F               [ 4] 1460 	ld	e, a
+    00000701 3E 00            [ 8] 1461 	ld	a, #0x00
+    00000703 88               [ 4] 1462 	adc	a, b
+    00000704 57               [ 4] 1463 	ld	d, a
+    00000705 1A               [ 8] 1464 	ld	a, (de)
+    00000706 77               [ 8] 1465 	ld	(hl), a
+    00000707 2A               [ 8] 1466 	ld	a, (hl+)
+    00000708 4F               [ 4] 1467 	ld	c, a
+    00000709 E6 07            [ 8] 1468 	and	a, #0x07
+    0000070B 77               [ 8] 1469 	ld	(hl), a
+                                   1470 ;src/field_actions.c:73: if(!(cell&128u)&&(kind==5u||(miracle&&kind==6u))){if(!c->in_battle)c->dungeon->layout[position]|=128;a->kind=FIELD_OPEN_DOOR;a->target=position;a->a=kind-2u;a->sound_end=0xbd;}
+    0000070C F8 05            [12] 1471 	ldhl	sp,	#5
+    0000070E 3A               [ 8] 1472 	ld	a, (hl-)
+    0000070F 2B               [ 8] 1473 	dec	hl
+    00000710 77               [ 8] 1474 	ld	(hl), a
+    00000711 F8 06            [12] 1475 	ldhl	sp,	#6
+    00000713 3A               [ 8] 1476 	ld	a, (hl-)
+    00000714 2B               [ 8] 1477 	dec	hl
+    00000715 77               [ 8] 1478 	ld	(hl), a
+    00000716 CB 79            [ 8] 1479 	bit	7, c
+    00000718 20 61            [12] 1480 	jr	NZ, 00107$
+    0000071A F8 02            [12] 1481 	ldhl	sp,	#2
+    0000071C 7E               [ 8] 1482 	ld	a, (hl)
+    0000071D D6 05            [ 8] 1483 	sub	a, #0x05
+    0000071F 28 0D            [12] 1484 	jr	Z, 00106$
+    00000721 F8 0B            [12] 1485 	ldhl	sp,	#11
+    00000723 7E               [ 8] 1486 	ld	a, (hl)
+    00000724 B7               [ 4] 1487 	or	a, a
+    00000725 28 54            [12] 1488 	jr	Z, 00107$
+    00000727 F8 02            [12] 1489 	ldhl	sp,	#2
+    00000729 7E               [ 8] 1490 	ld	a, (hl)
+    0000072A D6 06            [ 8] 1491 	sub	a, #0x06
+    0000072C 20 4D            [12] 1492 	jr	NZ, 00107$
+    0000072E                       1493 00106$:
+    0000072E D5               [16] 1494 	push	de
+    0000072F F8 09            [12] 1495 	ldhl	sp,#9
+    00000731 2A               [ 8] 1496 	ld	a, (hl+)
+    00000732 5F               [ 4] 1497 	ld	e, a
+    00000733 56               [ 8] 1498 	ld	d, (hl)
+    00000734 21 09 00         [12] 1499 	ld	hl, #0x0009
+    00000737 19               [ 8] 1500 	add	hl, de
+    00000738 D1               [12] 1501 	pop	de
+    00000739 4D               [ 4] 1502 	ld	c, l
+    0000073A 44               [ 4] 1503 	ld	b, h
+    0000073B 0A               [ 8] 1504 	ld	a, (bc)
+    0000073C B7               [ 4] 1505 	or	a, a
+    0000073D 20 06            [12] 1506 	jr	NZ, 00105$
+    0000073F F8 01            [12] 1507 	ldhl	sp,	#1
+    00000741 7E               [ 8] 1508 	ld	a, (hl)
+    00000742 CB FF            [ 8] 1509 	set	7, a
+    00000744 12               [ 8] 1510 	ld	(de), a
+    00000745                       1511 00105$:
+    00000745 F8 03            [12] 1512 	ldhl	sp,	#3
+    00000747 2A               [ 8] 1513 	ld	a, (hl+)
+    00000748 66               [ 8] 1514 	ld	h, (hl)
+    00000749 6F               [ 4] 1515 	ld	l, a
+    0000074A 36 04            [12] 1516 	ld	(hl), #0x04
+    0000074C F8 05            [12] 1517 	ldhl	sp,#5
+    0000074E 2A               [ 8] 1518 	ld	a, (hl+)
+    0000074F 5F               [ 4] 1519 	ld	e, a
+    00000750 56               [ 8] 1520 	ld	d, (hl)
+    00000751 21 05 00         [12] 1521 	ld	hl, #0x0005
+    00000754 19               [ 8] 1522 	add	hl, de
+    00000755 4D               [ 4] 1523 	ld	c, l
+    00000756 44               [ 4] 1524 	ld	b, h
+    00000757 F8 00            [12] 1525 	ldhl	sp,	#0
+    00000759 7E               [ 8] 1526 	ld	a, (hl)
+    0000075A 02               [ 8] 1527 	ld	(bc), a
+    0000075B F8 05            [12] 1528 	ldhl	sp,#5
+    0000075D 2A               [ 8] 1529 	ld	a, (hl+)
+    0000075E 5F               [ 4] 1530 	ld	e, a
+    0000075F 56               [ 8] 1531 	ld	d, (hl)
+    00000760 21 06 00         [12] 1532 	ld	hl, #0x0006
+    00000763 19               [ 8] 1533 	add	hl, de
+    00000764 4D               [ 4] 1534 	ld	c, l
+    00000765 44               [ 4] 1535 	ld	b, h
+    00000766 F8 02            [12] 1536 	ldhl	sp,	#2
+    00000768 7E               [ 8] 1537 	ld	a, (hl)
+    00000769 3D               [ 4] 1538 	dec	a
+    0000076A 3D               [ 4] 1539 	dec	a
+    0000076B 02               [ 8] 1540 	ld	(bc), a
+    0000076C F8 05            [12] 1541 	ldhl	sp,#5
+    0000076E 2A               [ 8] 1542 	ld	a, (hl+)
+    0000076F 5F               [ 4] 1543 	ld	e, a
+    00000770 56               [ 8] 1544 	ld	d, (hl)
+    00000771 21 09 00         [12] 1545 	ld	hl, #0x0009
+    00000774 19               [ 8] 1546 	add	hl, de
+    00000775 4D               [ 4] 1547 	ld	c, l
+    00000776 44               [ 4] 1548 	ld	b, h
+    00000777 36 BD            [12] 1549 	ld	(hl), #0xbd
+    00000779 18 0B            [12] 1550 	jr	00108$
+    0000077B                       1551 00107$:
+                                   1552 ;src/field_actions.c:74: else line(a,0xb2cd);
+    0000077B 01 CD B2         [12] 1553 	ld	bc, #0xb2cd
+    0000077E F8 05            [12] 1554 	ldhl	sp,	#5
+    00000780 2A               [ 8] 1555 	ld	a, (hl+)
+    00000781 5F               [ 4] 1556 	ld	e, a
+    00000782 56               [ 8] 1557 	ld	d, (hl)
+    00000783 CDr00r00         [24] 1558 	call	_line
+    00000786                       1559 00108$:
+                                   1560 ;src/field_actions.c:75: return a->kind;
+    00000786 F8 03            [12] 1561 	ldhl	sp,#3
+    00000788 2A               [ 8] 1562 	ld	a, (hl+)
+    00000789 5F               [ 4] 1563 	ld	e, a
+    0000078A 56               [ 8] 1564 	ld	d, (hl)
+    0000078B 1A               [ 8] 1565 	ld	a, (de)
+    0000078C                       1566 00112$:
+                                   1567 ;src/field_actions.c:76: }
+    0000078C E8 09            [16] 1568 	add	sp, #9
+    0000078E E1               [12] 1569 	pop	hl
+    0000078F 33               [ 8] 1570 	inc	sp
+    00000790 E9               [ 4] 1571 	jp	(hl)
+                                   1572 ;src/field_actions.c:77: uint8_t field_use_item(FieldContext *c,uint8_t slot,uint8_t target,FieldAction *a) RPG_BANKED {
+                                   1573 ;	---------------------------------
+                                   1574 ; Function field_use_item
+                                   1575 ; ---------------------------------
+                         0000000B  1576 	b_field_use_item	= 11
+    00000791                       1577 _field_use_item::
+    00000791 E8 F7            [16] 1578 	add	sp, #-9
+                                   1579 ;src/field_actions.c:79: memset(a,0,sizeof(*a));a->character=target<4u?target:0;
+    00000793 F8 13            [12] 1580 	ldhl	sp,	#19
+    00000795 2A               [ 8] 1581 	ld	a, (hl+)
+    00000796 4F               [ 4] 1582 	ld	c, a
+    00000797 46               [ 8] 1583 	ld	b, (hl)
+    00000798 11 16 00         [12] 1584 	ld	de, #0x0016
+    0000079B D5               [16] 1585 	push	de
+    0000079C 11 00 00         [12] 1586 	ld	de, #0x0000
+    0000079F D5               [16] 1587 	push	de
+    000007A0 C5               [16] 1588 	push	bc
+    000007A1 CDr00r00         [24] 1589 	call	_memset
+    000007A4 E8 06            [16] 1590 	add	sp, #6
+    000007A6 F8 13            [12] 1591 	ldhl	sp,	#19
+    000007A8 7E               [ 8] 1592 	ld	a, (hl)
+    000007A9 F8 00            [12] 1593 	ldhl	sp,	#0
+    000007AB 77               [ 8] 1594 	ld	(hl), a
+    000007AC F8 14            [12] 1595 	ldhl	sp,	#20
+    000007AE 7E               [ 8] 1596 	ld	a, (hl)
+    000007AF F8 01            [12] 1597 	ldhl	sp,	#1
+    000007B1 77               [ 8] 1598 	ld	(hl), a
+    000007B2 D1               [12] 1599 	pop	de
+    000007B3 D5               [16] 1600 	push	de
+    000007B4 21 04 00         [12] 1601 	ld	hl, #0x0004
+    000007B7 19               [ 8] 1602 	add	hl, de
+    000007B8 4D               [ 4] 1603 	ld	c, l
+    000007B9 44               [ 4] 1604 	ld	b, h
+    000007BA F8 12            [12] 1605 	ldhl	sp,	#18
+    000007BC 7E               [ 8] 1606 	ld	a,(hl)
+    000007BD FE 04            [ 8] 1607 	cp	a,#0x04
+    000007BF 38 01            [12] 1608 	jr	C, 00187$
+    000007C1 AF               [ 4] 1609 	xor	a, a
+    000007C2                       1610 00187$:
+    000007C2 02               [ 8] 1611 	ld	(bc), a
+                                   1612 ;src/field_actions.c:80: if(slot>=c->rpg->inventory_count)return fail(a,RPG_INVALID,0);
+    000007C3 F8 0F            [12] 1613 	ldhl	sp,	#15
+    000007C5 7E               [ 8] 1614 	ld	a, (hl)
+    000007C6 F8 02            [12] 1615 	ldhl	sp,	#2
+    000007C8 77               [ 8] 1616 	ld	(hl), a
+    000007C9 F8 10            [12] 1617 	ldhl	sp,	#16
+    000007CB 7E               [ 8] 1618 	ld	a, (hl)
+    000007CC F8 03            [12] 1619 	ldhl	sp,	#3
+    000007CE 32               [ 8] 1620 	ld	(hl-), a
+    000007CF 2A               [ 8] 1621 	ld	a, (hl+)
+    000007D0 23               [ 8] 1622 	inc	hl
+    000007D1 32               [ 8] 1623 	ld	(hl-), a
+    000007D2 2A               [ 8] 1624 	ld	a, (hl+)
+    000007D3 23               [ 8] 1625 	inc	hl
+    000007D4 32               [ 8] 1626 	ld	(hl-), a
+    000007D5 2A               [ 8] 1627 	ld	a, (hl+)
+    000007D6 5F               [ 4] 1628 	ld	e, a
+    000007D7 2A               [ 8] 1629 	ld	a, (hl+)
+    000007D8 23               [ 8] 1630 	inc	hl
+    000007D9 57               [ 4] 1631 	ld	d, a
+    000007DA 1A               [ 8] 1632 	ld	a, (de)
+    000007DB 22               [ 8] 1633 	ld	(hl+), a
+    000007DC 13               [ 8] 1634 	inc	de
+    000007DD 1A               [ 8] 1635 	ld	a, (de)
+    000007DE 32               [ 8] 1636 	ld	(hl-), a
+    000007DF 2A               [ 8] 1637 	ld	a, (hl+)
+    000007E0 5F               [ 4] 1638 	ld	e, a
+    000007E1 56               [ 8] 1639 	ld	d, (hl)
+    000007E2 21 58 00         [12] 1640 	ld	hl, #0x0058
+    000007E5 19               [ 8] 1641 	add	hl, de
+    000007E6 4D               [ 4] 1642 	ld	c, l
+    000007E7 44               [ 4] 1643 	ld	b, h
+    000007E8 0A               [ 8] 1644 	ld	a, (bc)
+    000007E9 4F               [ 4] 1645 	ld	c, a
+    000007EA F8 11            [12] 1646 	ldhl	sp,	#17
+    000007EC 7E               [ 8] 1647 	ld	a, (hl)
+    000007ED 91               [ 4] 1648 	sub	a, c
+    000007EE 38 11            [12] 1649 	jr	C, 00102$
+    000007F0 11 00 00         [12] 1650 	ld	de, #0x0000
+    000007F3 D5               [16] 1651 	push	de
+    000007F4 3E 01            [ 8] 1652 	ld	a, #0x01
+    000007F6 F8 02            [12] 1653 	ldhl	sp,	#2
+    000007F8 5E               [ 8] 1654 	ld	e, (hl)
+    000007F9 23               [ 8] 1655 	inc	hl
+    000007FA 56               [ 8] 1656 	ld	d, (hl)
+    000007FB CDr28r00         [24] 1657 	call	_fail
+    000007FE C3r6Ar0E         [16] 1658 	jp	00184$
+    00000801                       1659 00102$:
+                                   1660 ;src/field_actions.c:81: item=c->rpg->inventory[slot];a->item=item;
+    00000801 F8 07            [12] 1661 	ldhl	sp,#7
+    00000803 2A               [ 8] 1662 	ld	a, (hl+)
+    00000804 5F               [ 4] 1663 	ld	e, a
+    00000805 56               [ 8] 1664 	ld	d, (hl)
+    00000806 21 40 00         [12] 1665 	ld	hl, #0x0040
+    00000809 19               [ 8] 1666 	add	hl, de
+    0000080A 4D               [ 4] 1667 	ld	c, l
+    0000080B 44               [ 4] 1668 	ld	b, h
+    0000080C F8 11            [12] 1669 	ldhl	sp,	#17
+    0000080E 7E               [ 8] 1670 	ld	a, (hl)
+    0000080F F8 06            [12] 1671 	ldhl	sp,	#6
+    00000811 77               [ 8] 1672 	ld	(hl), a
+    00000812 6E               [ 8] 1673 	ld	l, (hl)
+    00000813 26 00            [ 8] 1674 	ld	h, #0x00
+    00000815 09               [ 8] 1675 	add	hl, bc
+    00000816 4D               [ 4] 1676 	ld	c, l
+    00000817 44               [ 4] 1677 	ld	b, h
+    00000818 0A               [ 8] 1678 	ld	a, (bc)
+    00000819 F8 08            [12] 1679 	ldhl	sp,	#8
+    0000081B 77               [ 8] 1680 	ld	(hl), a
+    0000081C C1               [12] 1681 	pop	bc
+    0000081D C5               [16] 1682 	push	bc
+    0000081E 03               [ 8] 1683 	inc	bc
+    0000081F 03               [ 8] 1684 	inc	bc
+    00000820 03               [ 8] 1685 	inc	bc
+    00000821 7E               [ 8] 1686 	ld	a, (hl)
+    00000822 02               [ 8] 1687 	ld	(bc), a
+                                   1688 ;src/field_actions.c:82: switch(item){
+    00000823 7E               [ 8] 1689 	ld	a, (hl)
+    00000824 D6 04            [ 8] 1690 	sub	a, #0x04
+    00000826 CAr04r0E         [16] 1691 	jp	Z, 00179$
+    00000829 F8 08            [12] 1692 	ldhl	sp,	#8
+    0000082B 7E               [ 8] 1693 	ld	a, (hl)
+    0000082C D6 21            [ 8] 1694 	sub	a, #0x21
+    0000082E CArF2r0D         [16] 1695 	jp	Z, 00177$
+    00000831 F8 08            [12] 1696 	ldhl	sp,	#8
+    00000833 7E               [ 8] 1697 	ld	a, (hl)
+    00000834 D6 22            [ 8] 1698 	sub	a, #0x22
+    00000836 CArF2r0D         [16] 1699 	jp	Z, 00177$
+    00000839 F8 08            [12] 1700 	ldhl	sp,	#8
+    0000083B 7E               [ 8] 1701 	ld	a, (hl)
+    0000083C D6 23            [ 8] 1702 	sub	a, #0x23
+    0000083E CArF2r0D         [16] 1703 	jp	Z, 00177$
+    00000841 F8 08            [12] 1704 	ldhl	sp,	#8
+    00000843 7E               [ 8] 1705 	ld	a, (hl)
+    00000844 D6 24            [ 8] 1706 	sub	a, #0x24
+    00000846 CArCBr08         [16] 1707 	jp	Z, 00104$
+    00000849 F8 08            [12] 1708 	ldhl	sp,	#8
+    0000084B 7E               [ 8] 1709 	ld	a, (hl)
+    0000084C D6 25            [ 8] 1710 	sub	a, #0x25
+    0000084E 28 7B            [12] 1711 	jr	Z, 00104$
+    00000850 F8 08            [12] 1712 	ldhl	sp,	#8
+    00000852 7E               [ 8] 1713 	ld	a, (hl)
+    00000853 D6 26            [ 8] 1714 	sub	a, #0x26
+    00000855 CAr26r09         [16] 1715 	jp	Z, 00109$
+    00000858 F8 08            [12] 1716 	ldhl	sp,	#8
+    0000085A 7E               [ 8] 1717 	ld	a, (hl)
+    0000085B D6 27            [ 8] 1718 	sub	a, #0x27
+    0000085D CAr90r09         [16] 1719 	jp	Z, 00113$
+    00000860 F8 08            [12] 1720 	ldhl	sp,	#8
+    00000862 7E               [ 8] 1721 	ld	a, (hl)
+    00000863 D6 28            [ 8] 1722 	sub	a, #0x28
+    00000865 CAr04r0E         [16] 1723 	jp	Z, 00179$
+    00000868 F8 08            [12] 1724 	ldhl	sp,	#8
+    0000086A 7E               [ 8] 1725 	ld	a, (hl)
+    0000086B D6 29            [ 8] 1726 	sub	a, #0x29
+    0000086D CAr4Er0A         [16] 1727 	jp	Z, 00120$
+    00000870 F8 08            [12] 1728 	ldhl	sp,	#8
+    00000872 7E               [ 8] 1729 	ld	a, (hl)
+    00000873 D6 2A            [ 8] 1730 	sub	a, #0x2a
+    00000875 CArCAr0A         [16] 1731 	jp	Z, 00127$
+    00000878 F8 08            [12] 1732 	ldhl	sp,	#8
+    0000087A 7E               [ 8] 1733 	ld	a, (hl)
+    0000087B D6 2B            [ 8] 1734 	sub	a, #0x2b
+    0000087D CAr81r0B         [16] 1735 	jp	Z, 00136$
+    00000880 F8 08            [12] 1736 	ldhl	sp,	#8
+    00000882 7E               [ 8] 1737 	ld	a, (hl)
+    00000883 D6 2C            [ 8] 1738 	sub	a, #0x2c
+    00000885 CAr81r0B         [16] 1739 	jp	Z, 00136$
+    00000888 F8 08            [12] 1740 	ldhl	sp,	#8
+    0000088A 7E               [ 8] 1741 	ld	a, (hl)
+    0000088B D6 2D            [ 8] 1742 	sub	a, #0x2d
+    0000088D CAr5Cr0B         [16] 1743 	jp	Z, 00133$
+    00000890 F8 08            [12] 1744 	ldhl	sp,	#8
+    00000892 7E               [ 8] 1745 	ld	a, (hl)
+    00000893 D6 2E            [ 8] 1746 	sub	a, #0x2e
+    00000895 CAr12r0B         [16] 1747 	jp	Z, 00130$
+    00000898 F8 08            [12] 1748 	ldhl	sp,	#8
+    0000089A 7E               [ 8] 1749 	ld	a, (hl)
+    0000089B D6 2F            [ 8] 1750 	sub	a, #0x2f
+    0000089D CArBCr0B         [16] 1751 	jp	Z, 00140$
+    000008A0 F8 08            [12] 1752 	ldhl	sp,	#8
+    000008A2 7E               [ 8] 1753 	ld	a, (hl)
+    000008A3 D6 30            [ 8] 1754 	sub	a, #0x30
+    000008A5 CAr13r0C         [16] 1755 	jp	Z, 00147$
+    000008A8 F8 08            [12] 1756 	ldhl	sp,	#8
+    000008AA 7E               [ 8] 1757 	ld	a, (hl)
+    000008AB D6 31            [ 8] 1758 	sub	a, #0x31
+    000008AD CAr80r0C         [16] 1759 	jp	Z, 00155$
+    000008B0 F8 08            [12] 1760 	ldhl	sp,	#8
+    000008B2 7E               [ 8] 1761 	ld	a, (hl)
+    000008B3 D6 32            [ 8] 1762 	sub	a, #0x32
+    000008B5 CAr22r0D         [16] 1763 	jp	Z, 00165$
+    000008B8 F8 08            [12] 1764 	ldhl	sp,	#8
+    000008BA 7E               [ 8] 1765 	ld	a, (hl)
+    000008BB D6 35            [ 8] 1766 	sub	a, #0x35
+    000008BD CAr52r0D         [16] 1767 	jp	Z, 00169$
+    000008C0 F8 08            [12] 1768 	ldhl	sp,	#8
+    000008C2 7E               [ 8] 1769 	ld	a, (hl)
+    000008C3 D6 3E            [ 8] 1770 	sub	a, #0x3e
+    000008C5 CAr6Er0B         [16] 1771 	jp	Z, 00134$
+    000008C8 C3r31r0E         [16] 1772 	jp	00182$
+                                   1773 ;src/field_actions.c:83: case ItemID_Cola:case ItemID_Burger:
+    000008CB                       1774 00104$:
+                                   1775 ;src/field_actions.c:84: if(target==255u)break;
+    000008CB F8 12            [12] 1776 	ldhl	sp,	#18
+    000008CD 7E               [ 8] 1777 	ld	a, (hl)
+    000008CE 3C               [ 4] 1778 	inc	a
+    000008CF CAr64r0E         [16] 1779 	jp	Z, 00183$
+                                   1780 ;src/field_actions.c:85: error=rpg_use_item(c->rpg,slot,target);if(error)return fail(a,error,0xb730);
+    000008D2 F8 04            [12] 1781 	ldhl	sp,#4
+    000008D4 2A               [ 8] 1782 	ld	a, (hl+)
+    000008D5 5F               [ 4] 1783 	ld	e, a
+    000008D6 56               [ 8] 1784 	ld	d, (hl)
+    000008D7 1A               [ 8] 1785 	ld	a, (de)
+    000008D8 4F               [ 4] 1786 	ld	c, a
+    000008D9 13               [ 8] 1787 	inc	de
+    000008DA 1A               [ 8] 1788 	ld	a, (de)
+    000008DB F8 12            [12] 1789 	ldhl	sp,	#18
+    000008DD 66               [ 8] 1790 	ld	h, (hl)
+    000008DE E5               [16] 1791 	push	hl
+    000008DF 33               [ 8] 1792 	inc	sp
+    000008E0 F8 07            [12] 1793 	ldhl	sp,	#7
+    000008E2 66               [ 8] 1794 	ld	h, (hl)
+    000008E3 E5               [16] 1795 	push	hl
+    000008E4 33               [ 8] 1796 	inc	sp
+    000008E5 47               [ 4] 1797 	ld	b, a
+    000008E6 C5               [16] 1798 	push	bc
+    000008E7 1Er00            [ 8] 1799 	ld	e, #b_rpg_use_item
+    000008E9 21r00r00         [12] 1800 	ld	hl, #_rpg_use_item
+    000008EC CDr00r00         [24] 1801 	call	___sdcc_bcall_ehl
+    000008EF E8 04            [16] 1802 	add	sp, #4
+    000008F1 4F               [ 4] 1803 	ld	c, a
+    000008F2 B7               [ 4] 1804 	or	a, a
+    000008F3 28 10            [12] 1805 	jr	Z, 00108$
+    000008F5 11 30 B7         [12] 1806 	ld	de, #0xb730
+    000008F8 D5               [16] 1807 	push	de
+    000008F9 79               [ 4] 1808 	ld	a, c
+    000008FA F8 02            [12] 1809 	ldhl	sp,	#2
+    000008FC 5E               [ 8] 1810 	ld	e, (hl)
+    000008FD 23               [ 8] 1811 	inc	hl
+    000008FE 56               [ 8] 1812 	ld	d, (hl)
+    000008FF CDr28r00         [24] 1813 	call	_fail
+    00000902 C3r6Ar0E         [16] 1814 	jp	00184$
+    00000905                       1815 00108$:
+                                   1816 ;src/field_actions.c:86: line(a,0xb2ac);line(a,0xb1d0);a->lines[1].sound_after=0xc1;break;
+    00000905 01 AC B2         [12] 1817 	ld	bc, #0xb2ac
+    00000908 D1               [12] 1818 	pop	de
+    00000909 D5               [16] 1819 	push	de
+    0000090A CDr00r00         [24] 1820 	call	_line
+    0000090D 01 D0 B1         [12] 1821 	ld	bc, #0xb1d0
+    00000910 F8 13            [12] 1822 	ldhl	sp,	#19
+    00000912 2A               [ 8] 1823 	ld	a, (hl+)
+    00000913 5F               [ 4] 1824 	ld	e, a
+    00000914 56               [ 8] 1825 	ld	d, (hl)
+    00000915 CDr00r00         [24] 1826 	call	_line
+    00000918 F8 13            [12] 1827 	ldhl	sp,	#19
+    0000091A 2A               [ 8] 1828 	ld	a, (hl+)
+    0000091B 4F               [ 4] 1829 	ld	c, a
+    0000091C 46               [ 8] 1830 	ld	b, (hl)
+    0000091D 21 11 00         [12] 1831 	ld	hl, #0x0011
+    00000920 09               [ 8] 1832 	add	hl, bc
+    00000921 36 C1            [12] 1833 	ld	(hl), #0xc1
+    00000923 C3r64r0E         [16] 1834 	jp	00183$
+                                   1835 ;src/field_actions.c:87: case ItemID_Flute:
+    00000926                       1836 00109$:
+                                   1837 ;src/field_actions.c:88: line(a,0xb2ac);line(a,c->in_battle?0xb322:0xbfc4);a->lines[1].sound_before=0xc2;a->lines[1].sound_after=0xd5;
+    00000926 01 AC B2         [12] 1838 	ld	bc, #0xb2ac
+    00000929 D1               [12] 1839 	pop	de
+    0000092A D5               [16] 1840 	push	de
+    0000092B CDr00r00         [24] 1841 	call	_line
+    0000092E F8 02            [12] 1842 	ldhl	sp,#2
+    00000930 2A               [ 8] 1843 	ld	a, (hl+)
+    00000931 5F               [ 4] 1844 	ld	e, a
+    00000932 56               [ 8] 1845 	ld	d, (hl)
+    00000933 21 09 00         [12] 1846 	ld	hl, #0x0009
+    00000936 19               [ 8] 1847 	add	hl, de
+    00000937 4D               [ 4] 1848 	ld	c, l
+    00000938 44               [ 4] 1849 	ld	b, h
+    00000939 0A               [ 8] 1850 	ld	a, (bc)
+    0000093A B7               [ 4] 1851 	or	a, a
+    0000093B 28 05            [12] 1852 	jr	Z, 00188$
+    0000093D 11 22 B3         [12] 1853 	ld	de, #0xb322
+    00000940 18 03            [12] 1854 	jr	00189$
+    00000942                       1855 00188$:
+    00000942 11 C4 BF         [12] 1856 	ld	de, #0xbfc4
+    00000945                       1857 00189$:
+    00000945 C5               [16] 1858 	push	bc
+    00000946 4B               [ 4] 1859 	ld	c, e
+    00000947 42               [ 4] 1860 	ld	b, d
+    00000948 F8 15            [12] 1861 	ldhl	sp,	#21
+    0000094A 2A               [ 8] 1862 	ld	a, (hl+)
+    0000094B 5F               [ 4] 1863 	ld	e, a
+    0000094C 56               [ 8] 1864 	ld	d, (hl)
+    0000094D CDr00r00         [24] 1865 	call	_line
+    00000950 C1               [12] 1866 	pop	bc
+    00000951 F8 13            [12] 1867 	ldhl	sp,	#19
+    00000953 2A               [ 8] 1868 	ld	a, (hl+)
+    00000954 5F               [ 4] 1869 	ld	e, a
+    00000955 56               [ 8] 1870 	ld	d, (hl)
+    00000956 21 10 00         [12] 1871 	ld	hl, #0x0010
+    00000959 19               [ 8] 1872 	add	hl, de
+    0000095A 36 C2            [12] 1873 	ld	(hl), #0xc2
+    0000095C 21 11 00         [12] 1874 	ld	hl, #0x0011
+    0000095F 19               [ 8] 1875 	add	hl, de
+    00000960 36 D5            [12] 1876 	ld	(hl), #0xd5
+                                   1877 ;src/field_actions.c:89: if(!c->in_battle&&!c->interaction){line(a,0xb59c);a->lines[2].sound_before=0xbf;a->kind=FIELD_EXIT_DUNGEON;}break;
+    00000962 0A               [ 8] 1878 	ld	a, (bc)
+    00000963 B7               [ 4] 1879 	or	a, a
+    00000964 C2r64r0E         [16] 1880 	jp	NZ, 00183$
+    00000967 D5               [16] 1881 	push	de
+    00000968 F8 04            [12] 1882 	ldhl	sp,#4
+    0000096A 2A               [ 8] 1883 	ld	a, (hl+)
+    0000096B 5F               [ 4] 1884 	ld	e, a
+    0000096C 56               [ 8] 1885 	ld	d, (hl)
+    0000096D 21 08 00         [12] 1886 	ld	hl, #0x0008
+    00000970 19               [ 8] 1887 	add	hl, de
+    00000971 D1               [12] 1888 	pop	de
+    00000972 4D               [ 4] 1889 	ld	c, l
+    00000973 44               [ 4] 1890 	ld	b, h
+    00000974 0A               [ 8] 1891 	ld	a, (bc)
+    00000975 B7               [ 4] 1892 	or	a, a
+    00000976 C2r64r0E         [16] 1893 	jp	NZ, 00183$
+    00000979 01 9C B5         [12] 1894 	ld	bc, #0xb59c
+    0000097C CDr00r00         [24] 1895 	call	_line
+    0000097F F8 13            [12] 1896 	ldhl	sp,	#19
+    00000981 2A               [ 8] 1897 	ld	a, (hl+)
+    00000982 4F               [ 4] 1898 	ld	c, a
+    00000983 46               [ 8] 1899 	ld	b, (hl)
+    00000984 21 14 00         [12] 1900 	ld	hl, #0x0014
+    00000987 09               [ 8] 1901 	add	hl, bc
+    00000988 36 BF            [12] 1902 	ld	(hl), #0xbf
+    0000098A 3E 02            [ 8] 1903 	ld	a, #0x02
+    0000098C 02               [ 8] 1904 	ld	(bc), a
+    0000098D C3r64r0E         [16] 1905 	jp	00183$
+                                   1906 ;src/field_actions.c:90: case ItemID_Flash:
+    00000990                       1907 00113$:
+                                   1908 ;src/field_actions.c:91: if(c->in_battle){line(a,0xb366);line(a,0xb35c);break;}
+    00000990 F8 02            [12] 1909 	ldhl	sp,#2
+    00000992 2A               [ 8] 1910 	ld	a, (hl+)
+    00000993 5F               [ 4] 1911 	ld	e, a
+    00000994 56               [ 8] 1912 	ld	d, (hl)
+    00000995 21 09 00         [12] 1913 	ld	hl, #0x0009
+    00000998 19               [ 8] 1914 	add	hl, de
+    00000999 4D               [ 4] 1915 	ld	c, l
+    0000099A 44               [ 4] 1916 	ld	b, h
+    0000099B 0A               [ 8] 1917 	ld	a, (bc)
+    0000099C B7               [ 4] 1918 	or	a, a
+    0000099D 28 16            [12] 1919 	jr	Z, 00115$
+    0000099F 01 66 B3         [12] 1920 	ld	bc, #0xb366
+    000009A2 D1               [12] 1921 	pop	de
+    000009A3 D5               [16] 1922 	push	de
+    000009A4 CDr00r00         [24] 1923 	call	_line
+    000009A7 01 5C B3         [12] 1924 	ld	bc, #0xb35c
+    000009AA F8 13            [12] 1925 	ldhl	sp,	#19
+    000009AC 2A               [ 8] 1926 	ld	a, (hl+)
+    000009AD 5F               [ 4] 1927 	ld	e, a
+    000009AE 56               [ 8] 1928 	ld	d, (hl)
+    000009AF CDr00r00         [24] 1929 	call	_line
+    000009B2 C3r64r0E         [16] 1930 	jp	00183$
+    000009B5                       1931 00115$:
+                                   1932 ;src/field_actions.c:92: if(c->interaction||!c->dungeon||c->dungeon->light){line(a,0xb366);line(a,0xb375);break;}
+    000009B5 F8 02            [12] 1933 	ldhl	sp,#2
+    000009B7 2A               [ 8] 1934 	ld	a, (hl+)
+    000009B8 5F               [ 4] 1935 	ld	e, a
+    000009B9 56               [ 8] 1936 	ld	d, (hl)
+    000009BA 21 08 00         [12] 1937 	ld	hl, #0x0008
+    000009BD 19               [ 8] 1938 	add	hl, de
+    000009BE 4D               [ 4] 1939 	ld	c, l
+    000009BF 44               [ 4] 1940 	ld	b, h
+    000009C0 0A               [ 8] 1941 	ld	a, (bc)
+    000009C1 B7               [ 4] 1942 	or	a, a
+    000009C2 20 25            [12] 1943 	jr	NZ, 00116$
+    000009C4 F8 02            [12] 1944 	ldhl	sp,#2
+    000009C6 2A               [ 8] 1945 	ld	a, (hl+)
+    000009C7 5F               [ 4] 1946 	ld	e, a
+    000009C8 56               [ 8] 1947 	ld	d, (hl)
+    000009C9 21 04 00         [12] 1948 	ld	hl, #0x0004
+    000009CC 19               [ 8] 1949 	add	hl, de
+    000009CD E5               [16] 1950 	push	hl
+    000009CE 7D               [ 4] 1951 	ld	a, l
+    000009CF F8 09            [12] 1952 	ldhl	sp,	#9
+    000009D1 77               [ 8] 1953 	ld	(hl), a
+    000009D2 E1               [12] 1954 	pop	hl
+    000009D3 7C               [ 4] 1955 	ld	a, h
+    000009D4 F8 08            [12] 1956 	ldhl	sp,	#8
+    000009D6 32               [ 8] 1957 	ld	(hl-), a
+    000009D7 2A               [ 8] 1958 	ld	a, (hl+)
+    000009D8 5F               [ 4] 1959 	ld	e, a
+    000009D9 56               [ 8] 1960 	ld	d, (hl)
+    000009DA 1A               [ 8] 1961 	ld	a, (de)
+    000009DB 4F               [ 4] 1962 	ld	c, a
+    000009DC 13               [ 8] 1963 	inc	de
+    000009DD 1A               [ 8] 1964 	ld	a, (de)
+    000009DE 47               [ 4] 1965 	ld	b, a
+    000009DF B1               [ 4] 1966 	or	a, c
+    000009E0 28 07            [12] 1967 	jr	Z, 00116$
+    000009E2 03               [ 8] 1968 	inc	bc
+    000009E3 03               [ 8] 1969 	inc	bc
+    000009E4 03               [ 8] 1970 	inc	bc
+    000009E5 0A               [ 8] 1971 	ld	a, (bc)
+    000009E6 B7               [ 4] 1972 	or	a, a
+    000009E7 28 16            [12] 1973 	jr	Z, 00117$
+    000009E9                       1974 00116$:
+    000009E9 01 66 B3         [12] 1975 	ld	bc, #0xb366
+    000009EC D1               [12] 1976 	pop	de
+    000009ED D5               [16] 1977 	push	de
+    000009EE CDr00r00         [24] 1978 	call	_line
+    000009F1 01 75 B3         [12] 1979 	ld	bc, #0xb375
+    000009F4 F8 13            [12] 1980 	ldhl	sp,	#19
+    000009F6 2A               [ 8] 1981 	ld	a, (hl+)
+    000009F7 5F               [ 4] 1982 	ld	e, a
+    000009F8 56               [ 8] 1983 	ld	d, (hl)
+    000009F9 CDr00r00         [24] 1984 	call	_line
+    000009FC C3r64r0E         [16] 1985 	jp	00183$
+    000009FF                       1986 00117$:
+                                   1987 ;src/field_actions.c:93: line(a,0xb2ac);rpg_remove_item(c->rpg,slot);c->dungeon->light=255;dungeon_refresh_light(c->dungeon);a->kind=FIELD_REDRAW;break;
+    000009FF 01 AC B2         [12] 1988 	ld	bc, #0xb2ac
+    00000A02 D1               [12] 1989 	pop	de
+    00000A03 D5               [16] 1990 	push	de
+    00000A04 CDr00r00         [24] 1991 	call	_line
+    00000A07 F8 04            [12] 1992 	ldhl	sp,#4
+    00000A09 2A               [ 8] 1993 	ld	a, (hl+)
+    00000A0A 5F               [ 4] 1994 	ld	e, a
+    00000A0B 2A               [ 8] 1995 	ld	a, (hl+)
+    00000A0C 57               [ 4] 1996 	ld	d, a
+    00000A0D 1A               [ 8] 1997 	ld	a, (de)
+    00000A0E 4F               [ 4] 1998 	ld	c, a
+    00000A0F 13               [ 8] 1999 	inc	de
+    00000A10 1A               [ 8] 2000 	ld	a, (de)
+    00000A11 66               [ 8] 2001 	ld	h, (hl)
+    00000A12 E5               [16] 2002 	push	hl
+    00000A13 33               [ 8] 2003 	inc	sp
+    00000A14 47               [ 4] 2004 	ld	b, a
+    00000A15 C5               [16] 2005 	push	bc
+    00000A16 1Er00            [ 8] 2006 	ld	e, #b_rpg_remove_item
+    00000A18 21r00r00         [12] 2007 	ld	hl, #_rpg_remove_item
+    00000A1B CDr00r00         [24] 2008 	call	___sdcc_bcall_ehl
+    00000A1E E8 03            [16] 2009 	add	sp, #3
+    00000A20 F8 07            [12] 2010 	ldhl	sp,#7
+    00000A22 2A               [ 8] 2011 	ld	a, (hl+)
+    00000A23 5F               [ 4] 2012 	ld	e, a
+    00000A24 56               [ 8] 2013 	ld	d, (hl)
+    00000A25 1A               [ 8] 2014 	ld	a, (de)
+    00000A26 6F               [ 4] 2015 	ld	l, a
+    00000A27 13               [ 8] 2016 	inc	de
+    00000A28 1A               [ 8] 2017 	ld	a, (de)
+    00000A29 67               [ 4] 2018 	ld	h, a
+    00000A2A 23               [ 8] 2019 	inc	hl
+    00000A2B 23               [ 8] 2020 	inc	hl
+    00000A2C 23               [ 8] 2021 	inc	hl
+    00000A2D 36 FF            [12] 2022 	ld	(hl), #0xff
+    00000A2F F8 07            [12] 2023 	ldhl	sp,#7
+    00000A31 2A               [ 8] 2024 	ld	a, (hl+)
+    00000A32 5F               [ 4] 2025 	ld	e, a
+    00000A33 56               [ 8] 2026 	ld	d, (hl)
+    00000A34 1A               [ 8] 2027 	ld	a, (de)
+    00000A35 4F               [ 4] 2028 	ld	c, a
+    00000A36 13               [ 8] 2029 	inc	de
+    00000A37 1A               [ 8] 2030 	ld	a, (de)
+    00000A38 47               [ 4] 2031 	ld	b, a
+    00000A39 C5               [16] 2032 	push	bc
+    00000A3A 1Er00            [ 8] 2033 	ld	e, #b_dungeon_refresh_light
+    00000A3C 21r00r00         [12] 2034 	ld	hl, #_dungeon_refresh_light
+    00000A3F CDr00r00         [24] 2035 	call	___sdcc_bcall_ehl
+    00000A42 E1               [12] 2036 	pop	hl
+    00000A43 F8 13            [12] 2037 	ldhl	sp,	#19
+    00000A45 2A               [ 8] 2038 	ld	a, (hl+)
+    00000A46 4F               [ 4] 2039 	ld	c, a
+    00000A47 46               [ 8] 2040 	ld	b, (hl)
+    00000A48 3E 01            [ 8] 2041 	ld	a, #0x01
+    00000A4A 02               [ 8] 2042 	ld	(bc), a
+    00000A4B C3r64r0E         [16] 2043 	jp	00183$
+                                   2044 ;src/field_actions.c:94: case ItemID_Transfer:
+    00000A4E                       2045 00120$:
+                                   2046 ;src/field_actions.c:95: line(a,0xb2ac);if(c->in_battle)line(a,0xb2cd);else if(!c->interaction)line(a,0xb312);
+    00000A4E 01 AC B2         [12] 2047 	ld	bc, #0xb2ac
+    00000A51 D1               [12] 2048 	pop	de
+    00000A52 D5               [16] 2049 	push	de
+    00000A53 CDr00r00         [24] 2050 	call	_line
+    00000A56 F8 02            [12] 2051 	ldhl	sp,#2
+    00000A58 2A               [ 8] 2052 	ld	a, (hl+)
+    00000A59 5F               [ 4] 2053 	ld	e, a
+    00000A5A 56               [ 8] 2054 	ld	d, (hl)
+    00000A5B 21 09 00         [12] 2055 	ld	hl, #0x0009
+    00000A5E 19               [ 8] 2056 	add	hl, de
+    00000A5F 4D               [ 4] 2057 	ld	c, l
+    00000A60 44               [ 4] 2058 	ld	b, h
+    00000A61 0A               [ 8] 2059 	ld	a, (bc)
+    00000A62 B7               [ 4] 2060 	or	a, a
+    00000A63 28 0E            [12] 2061 	jr	Z, 00125$
+    00000A65 01 CD B2         [12] 2062 	ld	bc, #0xb2cd
+    00000A68 F8 13            [12] 2063 	ldhl	sp,	#19
+    00000A6A 2A               [ 8] 2064 	ld	a, (hl+)
+    00000A6B 5F               [ 4] 2065 	ld	e, a
+    00000A6C 56               [ 8] 2066 	ld	d, (hl)
+    00000A6D CDr00r00         [24] 2067 	call	_line
+    00000A70 C3r64r0E         [16] 2068 	jp	00183$
+    00000A73                       2069 00125$:
+    00000A73 F8 02            [12] 2070 	ldhl	sp,#2
+    00000A75 2A               [ 8] 2071 	ld	a, (hl+)
+    00000A76 5F               [ 4] 2072 	ld	e, a
+    00000A77 56               [ 8] 2073 	ld	d, (hl)
+    00000A78 21 08 00         [12] 2074 	ld	hl, #0x0008
+    00000A7B 19               [ 8] 2075 	add	hl, de
+    00000A7C 4D               [ 4] 2076 	ld	c, l
+    00000A7D 44               [ 4] 2077 	ld	b, h
+    00000A7E 0A               [ 8] 2078 	ld	a, (bc)
+    00000A7F B7               [ 4] 2079 	or	a, a
+    00000A80 20 0E            [12] 2080 	jr	NZ, 00122$
+    00000A82 01 12 B3         [12] 2081 	ld	bc, #0xb312
+    00000A85 F8 13            [12] 2082 	ldhl	sp,	#19
+    00000A87 2A               [ 8] 2083 	ld	a, (hl+)
+    00000A88 5F               [ 4] 2084 	ld	e, a
+    00000A89 56               [ 8] 2085 	ld	d, (hl)
+    00000A8A CDr00r00         [24] 2086 	call	_line
+    00000A8D C3r64r0E         [16] 2087 	jp	00183$
+    00000A90                       2088 00122$:
+                                   2089 ;src/field_actions.c:96: else{rpg_remove_item(c->rpg,slot);line(a,0xb59c);a->sound_end=0xbf;transfer(c,a);}break;
+    00000A90 F8 04            [12] 2090 	ldhl	sp,#4
+    00000A92 2A               [ 8] 2091 	ld	a, (hl+)
+    00000A93 5F               [ 4] 2092 	ld	e, a
+    00000A94 2A               [ 8] 2093 	ld	a, (hl+)
+    00000A95 57               [ 4] 2094 	ld	d, a
+    00000A96 1A               [ 8] 2095 	ld	a, (de)
+    00000A97 4F               [ 4] 2096 	ld	c, a
+    00000A98 13               [ 8] 2097 	inc	de
+    00000A99 1A               [ 8] 2098 	ld	a, (de)
+    00000A9A 66               [ 8] 2099 	ld	h, (hl)
+    00000A9B E5               [16] 2100 	push	hl
+    00000A9C 33               [ 8] 2101 	inc	sp
+    00000A9D 47               [ 4] 2102 	ld	b, a
+    00000A9E C5               [16] 2103 	push	bc
+    00000A9F 1Er00            [ 8] 2104 	ld	e, #b_rpg_remove_item
+    00000AA1 21r00r00         [12] 2105 	ld	hl, #_rpg_remove_item
+    00000AA4 CDr00r00         [24] 2106 	call	___sdcc_bcall_ehl
+    00000AA7 E8 03            [16] 2107 	add	sp, #3
+    00000AA9 01 9C B5         [12] 2108 	ld	bc, #0xb59c
+    00000AAC F8 13            [12] 2109 	ldhl	sp,	#19
+    00000AAE 2A               [ 8] 2110 	ld	a, (hl+)
+    00000AAF 5F               [ 4] 2111 	ld	e, a
+    00000AB0 56               [ 8] 2112 	ld	d, (hl)
+    00000AB1 CDr00r00         [24] 2113 	call	_line
+    00000AB4 F8 13            [12] 2114 	ldhl	sp,	#19
+    00000AB6 2A               [ 8] 2115 	ld	a, (hl+)
+    00000AB7 4F               [ 4] 2116 	ld	c, a
+    00000AB8 46               [ 8] 2117 	ld	b, (hl)
+    00000AB9 21 09 00         [12] 2118 	ld	hl, #0x0009
+    00000ABC 09               [ 8] 2119 	add	hl, bc
+    00000ABD 36 BF            [12] 2120 	ld	(hl), #0xbf
+    00000ABF F8 02            [12] 2121 	ldhl	sp,	#2
+    00000AC1 2A               [ 8] 2122 	ld	a, (hl+)
+    00000AC2 5F               [ 4] 2123 	ld	e, a
+    00000AC3 56               [ 8] 2124 	ld	d, (hl)
+    00000AC4 CDrB3r00         [24] 2125 	call	_transfer
+    00000AC7 C3r64r0E         [16] 2126 	jp	00183$
+                                   2127 ;src/field_actions.c:97: case ItemID_MagicHat:
+    00000ACA                       2128 00127$:
+                                   2129 ;src/field_actions.c:98: if(c->in_battle){a->kind=FIELD_UNIMPLEMENTED;a->error=RPG_NOT_IMPLEMENTED;break;}
+    00000ACA F8 02            [12] 2130 	ldhl	sp,#2
+    00000ACC 2A               [ 8] 2131 	ld	a, (hl+)
+    00000ACD 5F               [ 4] 2132 	ld	e, a
+    00000ACE 56               [ 8] 2133 	ld	d, (hl)
+    00000ACF 21 09 00         [12] 2134 	ld	hl, #0x0009
+    00000AD2 19               [ 8] 2135 	add	hl, de
+    00000AD3 4D               [ 4] 2136 	ld	c, l
+    00000AD4 44               [ 4] 2137 	ld	b, h
+    00000AD5 0A               [ 8] 2138 	ld	a, (bc)
+    00000AD6 B7               [ 4] 2139 	or	a, a
+    00000AD7 28 0A            [12] 2140 	jr	Z, 00129$
+    00000AD9 E1               [12] 2141 	pop	hl
+    00000ADA 36 FF            [12] 2142 	ld	(hl), #0xff
+    00000ADC E5               [16] 2143 	push	hl
+    00000ADD 23               [ 8] 2144 	inc	hl
+    00000ADE 36 08            [12] 2145 	ld	(hl), #0x08
+    00000AE0 C3r64r0E         [16] 2146 	jp	00183$
+    00000AE3                       2147 00129$:
+                                   2148 ;src/field_actions.c:99: rpg_remove_item(c->rpg,slot);line(a,0xb2ac);line(a,0xb2cd);break;
+    00000AE3 F8 04            [12] 2149 	ldhl	sp,#4
+    00000AE5 2A               [ 8] 2150 	ld	a, (hl+)
+    00000AE6 5F               [ 4] 2151 	ld	e, a
+    00000AE7 2A               [ 8] 2152 	ld	a, (hl+)
+    00000AE8 57               [ 4] 2153 	ld	d, a
+    00000AE9 1A               [ 8] 2154 	ld	a, (de)
+    00000AEA 4F               [ 4] 2155 	ld	c, a
+    00000AEB 13               [ 8] 2156 	inc	de
+    00000AEC 1A               [ 8] 2157 	ld	a, (de)
+    00000AED 66               [ 8] 2158 	ld	h, (hl)
+    00000AEE E5               [16] 2159 	push	hl
+    00000AEF 33               [ 8] 2160 	inc	sp
+    00000AF0 47               [ 4] 2161 	ld	b, a
+    00000AF1 C5               [16] 2162 	push	bc
+    00000AF2 1Er00            [ 8] 2163 	ld	e, #b_rpg_remove_item
+    00000AF4 21r00r00         [12] 2164 	ld	hl, #_rpg_remove_item
+    00000AF7 CDr00r00         [24] 2165 	call	___sdcc_bcall_ehl
+    00000AFA E8 03            [16] 2166 	add	sp, #3
+    00000AFC 01 AC B2         [12] 2167 	ld	bc, #0xb2ac
+    00000AFF D1               [12] 2168 	pop	de
+    00000B00 D5               [16] 2169 	push	de
+    00000B01 CDr00r00         [24] 2170 	call	_line
+    00000B04 01 CD B2         [12] 2171 	ld	bc, #0xb2cd
+    00000B07 F8 13            [12] 2172 	ldhl	sp,	#19
+    00000B09 2A               [ 8] 2173 	ld	a, (hl+)
+    00000B0A 5F               [ 4] 2174 	ld	e, a
+    00000B0B 56               [ 8] 2175 	ld	d, (hl)
+    00000B0C CDr00r00         [24] 2176 	call	_line
+    00000B0F C3r64r0E         [16] 2177 	jp	00183$
+                                   2178 ;src/field_actions.c:100: case ItemID_Sphere:
+    00000B12                       2179 00130$:
+                                   2180 ;src/field_actions.c:101: if(c->in_battle){a->kind=FIELD_UNIMPLEMENTED;a->error=RPG_NOT_IMPLEMENTED;break;}
+    00000B12 F8 02            [12] 2181 	ldhl	sp,#2
+    00000B14 2A               [ 8] 2182 	ld	a, (hl+)
+    00000B15 5F               [ 4] 2183 	ld	e, a
+    00000B16 56               [ 8] 2184 	ld	d, (hl)
+    00000B17 21 09 00         [12] 2185 	ld	hl, #0x0009
+    00000B1A 19               [ 8] 2186 	add	hl, de
+    00000B1B 4D               [ 4] 2187 	ld	c, l
+    00000B1C 44               [ 4] 2188 	ld	b, h
+    00000B1D 0A               [ 8] 2189 	ld	a, (bc)
+    00000B1E B7               [ 4] 2190 	or	a, a
+    00000B1F 28 0A            [12] 2191 	jr	Z, 00132$
+    00000B21 E1               [12] 2192 	pop	hl
+    00000B22 36 FF            [12] 2193 	ld	(hl), #0xff
+    00000B24 E5               [16] 2194 	push	hl
+    00000B25 23               [ 8] 2195 	inc	hl
+    00000B26 36 08            [12] 2196 	ld	(hl), #0x08
+    00000B28 C3r64r0E         [16] 2197 	jp	00183$
+    00000B2B                       2198 00132$:
+                                   2199 ;src/field_actions.c:102: rpg_remove_item(c->rpg,slot);line(a,0xb2ac);tele(c,a);break;
+    00000B2B F8 04            [12] 2200 	ldhl	sp,#4
+    00000B2D 2A               [ 8] 2201 	ld	a, (hl+)
+    00000B2E 5F               [ 4] 2202 	ld	e, a
+    00000B2F 2A               [ 8] 2203 	ld	a, (hl+)
+    00000B30 57               [ 4] 2204 	ld	d, a
+    00000B31 1A               [ 8] 2205 	ld	a, (de)
+    00000B32 4F               [ 4] 2206 	ld	c, a
+    00000B33 13               [ 8] 2207 	inc	de
+    00000B34 1A               [ 8] 2208 	ld	a, (de)
+    00000B35 66               [ 8] 2209 	ld	h, (hl)
+    00000B36 E5               [16] 2210 	push	hl
+    00000B37 33               [ 8] 2211 	inc	sp
+    00000B38 47               [ 4] 2212 	ld	b, a
+    00000B39 C5               [16] 2213 	push	bc
+    00000B3A 1Er00            [ 8] 2214 	ld	e, #b_rpg_remove_item
+    00000B3C 21r00r00         [12] 2215 	ld	hl, #_rpg_remove_item
+    00000B3F CDr00r00         [24] 2216 	call	___sdcc_bcall_ehl
+    00000B42 E8 03            [16] 2217 	add	sp, #3
+    00000B44 01 AC B2         [12] 2218 	ld	bc, #0xb2ac
+    00000B47 D1               [12] 2219 	pop	de
+    00000B48 D5               [16] 2220 	push	de
+    00000B49 CDr00r00         [24] 2221 	call	_line
+    00000B4C F8 13            [12] 2222 	ldhl	sp,	#19
+    00000B4E 2A               [ 8] 2223 	ld	a, (hl+)
+    00000B4F 4F               [ 4] 2224 	ld	c, a
+    00000B50 46               [ 8] 2225 	ld	b, (hl)
+    00000B51 F8 02            [12] 2226 	ldhl	sp,	#2
+    00000B53 2A               [ 8] 2227 	ld	a, (hl+)
+    00000B54 5F               [ 4] 2228 	ld	e, a
+    00000B55 56               [ 8] 2229 	ld	d, (hl)
+    00000B56 CDr3Cr01         [24] 2230 	call	_tele
+    00000B59 C3r64r0E         [16] 2231 	jp	00183$
+                                   2232 ;src/field_actions.c:103: case ItemID_DungeonKey:return key(c,a,0);
+    00000B5C                       2233 00133$:
+    00000B5C AF               [ 4] 2234 	xor	a, a
+    00000B5D F5               [16] 2235 	push	af
+    00000B5E 33               [ 8] 2236 	inc	sp
+    00000B5F F8 01            [12] 2237 	ldhl	sp,	#1
+    00000B61 2A               [ 8] 2238 	ld	a, (hl+)
+    00000B62 4F               [ 4] 2239 	ld	c, a
+    00000B63 2A               [ 8] 2240 	ld	a, (hl+)
+    00000B64 47               [ 4] 2241 	ld	b, a
+    00000B65 2A               [ 8] 2242 	ld	a, (hl+)
+    00000B66 5F               [ 4] 2243 	ld	e, a
+    00000B67 56               [ 8] 2244 	ld	d, (hl)
+    00000B68 CDr74r06         [24] 2245 	call	_key
+    00000B6B C3r6Ar0E         [16] 2246 	jp	00184$
+                                   2247 ;src/field_actions.c:104: case ItemID_MiracleKey:return key(c,a,1);
+    00000B6E                       2248 00134$:
+    00000B6E 3E 01            [ 8] 2249 	ld	a, #0x01
+    00000B70 F5               [16] 2250 	push	af
+    00000B71 33               [ 8] 2251 	inc	sp
+    00000B72 F8 01            [12] 2252 	ldhl	sp,	#1
+    00000B74 2A               [ 8] 2253 	ld	a, (hl+)
+    00000B75 4F               [ 4] 2254 	ld	c, a
+    00000B76 2A               [ 8] 2255 	ld	a, (hl+)
+    00000B77 47               [ 4] 2256 	ld	b, a
+    00000B78 2A               [ 8] 2257 	ld	a, (hl+)
+    00000B79 5F               [ 4] 2258 	ld	e, a
+    00000B7A 56               [ 8] 2259 	ld	d, (hl)
+    00000B7B CDr74r06         [24] 2260 	call	_key
+    00000B7E C3r6Ar0E         [16] 2261 	jp	00184$
+                                   2262 ;src/field_actions.c:105: case ItemID_Alsulin:case ItemID_Polymaterial:
+    00000B81                       2263 00136$:
+                                   2264 ;src/field_actions.c:106: if(c->in_battle){line(a,0xb366);line(a,0xb35c);}else{a->kind=FIELD_STORY_ITEM;a->target=slot;}break;
+    00000B81 F8 02            [12] 2265 	ldhl	sp,#2
+    00000B83 2A               [ 8] 2266 	ld	a, (hl+)
+    00000B84 5F               [ 4] 2267 	ld	e, a
+    00000B85 56               [ 8] 2268 	ld	d, (hl)
+    00000B86 21 09 00         [12] 2269 	ld	hl, #0x0009
+    00000B89 19               [ 8] 2270 	add	hl, de
+    00000B8A 4D               [ 4] 2271 	ld	c, l
+    00000B8B 44               [ 4] 2272 	ld	b, h
+    00000B8C 0A               [ 8] 2273 	ld	a, (bc)
+    00000B8D F8 08            [12] 2274 	ldhl	sp,	#8
+    00000B8F 77               [ 8] 2275 	ld	(hl), a
+    00000B90 B7               [ 4] 2276 	or	a, a
+    00000B91 28 16            [12] 2277 	jr	Z, 00138$
+    00000B93 01 66 B3         [12] 2278 	ld	bc, #0xb366
+    00000B96 D1               [12] 2279 	pop	de
+    00000B97 D5               [16] 2280 	push	de
+    00000B98 CDr00r00         [24] 2281 	call	_line
+    00000B9B 01 5C B3         [12] 2282 	ld	bc, #0xb35c
+    00000B9E F8 13            [12] 2283 	ldhl	sp,	#19
+    00000BA0 2A               [ 8] 2284 	ld	a, (hl+)
+    00000BA1 5F               [ 4] 2285 	ld	e, a
+    00000BA2 56               [ 8] 2286 	ld	d, (hl)
+    00000BA3 CDr00r00         [24] 2287 	call	_line
+    00000BA6 C3r64r0E         [16] 2288 	jp	00183$
+    00000BA9                       2289 00138$:
+    00000BA9 E1               [12] 2290 	pop	hl
+    00000BAA 36 0A            [12] 2291 	ld	(hl), #0x0a
+    00000BAC 5D               [ 4] 2292 	ld	e, l
+    00000BAD 54               [ 4] 2293 	ld	d, h
+    00000BAE D5               [16] 2294 	push	de
+    00000BAF 21 05 00         [12] 2295 	ld	hl, #0x0005
+    00000BB2 19               [ 8] 2296 	add	hl, de
+    00000BB3 4D               [ 4] 2297 	ld	c, l
+    00000BB4 44               [ 4] 2298 	ld	b, h
+    00000BB5 F8 06            [12] 2299 	ldhl	sp,	#6
+    00000BB7 7E               [ 8] 2300 	ld	a, (hl)
+    00000BB8 02               [ 8] 2301 	ld	(bc), a
+    00000BB9 C3r64r0E         [16] 2302 	jp	00183$
+                                   2303 ;src/field_actions.c:107: case ItemID_EclipseTorch:
+    00000BBC                       2304 00140$:
+                                   2305 ;src/field_actions.c:108: line(a,0xb458);
+    00000BBC 01 58 B4         [12] 2306 	ld	bc, #0xb458
+    00000BBF D1               [12] 2307 	pop	de
+    00000BC0 D5               [16] 2308 	push	de
+    00000BC1 CDr00r00         [24] 2309 	call	_line
+                                   2310 ;src/field_actions.c:109: if(c->in_battle)line(a,0xb431);else if(c->event_id!=0xafu)line(a,0xb312);
+    00000BC4 F8 02            [12] 2311 	ldhl	sp,#2
+    00000BC6 2A               [ 8] 2312 	ld	a, (hl+)
+    00000BC7 5F               [ 4] 2313 	ld	e, a
+    00000BC8 56               [ 8] 2314 	ld	d, (hl)
+    00000BC9 21 09 00         [12] 2315 	ld	hl, #0x0009
+    00000BCC 19               [ 8] 2316 	add	hl, de
+    00000BCD 4D               [ 4] 2317 	ld	c, l
+    00000BCE 44               [ 4] 2318 	ld	b, h
+    00000BCF 0A               [ 8] 2319 	ld	a, (bc)
+    00000BD0 B7               [ 4] 2320 	or	a, a
+    00000BD1 28 0E            [12] 2321 	jr	Z, 00145$
+    00000BD3 01 31 B4         [12] 2322 	ld	bc, #0xb431
+    00000BD6 F8 13            [12] 2323 	ldhl	sp,	#19
+    00000BD8 2A               [ 8] 2324 	ld	a, (hl+)
+    00000BD9 5F               [ 4] 2325 	ld	e, a
+    00000BDA 56               [ 8] 2326 	ld	d, (hl)
+    00000BDB CDr00r00         [24] 2327 	call	_line
+    00000BDE C3r64r0E         [16] 2328 	jp	00183$
+    00000BE1                       2329 00145$:
+    00000BE1 F8 02            [12] 2330 	ldhl	sp,#2
+    00000BE3 2A               [ 8] 2331 	ld	a, (hl+)
+    00000BE4 5F               [ 4] 2332 	ld	e, a
+    00000BE5 56               [ 8] 2333 	ld	d, (hl)
+    00000BE6 21 0C 00         [12] 2334 	ld	hl, #0x000c
+    00000BE9 19               [ 8] 2335 	add	hl, de
+    00000BEA 4D               [ 4] 2336 	ld	c, l
+    00000BEB 44               [ 4] 2337 	ld	b, h
+    00000BEC 0A               [ 8] 2338 	ld	a, (bc)
+    00000BED D6 AF            [ 8] 2339 	sub	a, #0xaf
+    00000BEF 28 0E            [12] 2340 	jr	Z, 00142$
+    00000BF1 01 12 B3         [12] 2341 	ld	bc, #0xb312
+    00000BF4 F8 13            [12] 2342 	ldhl	sp,	#19
+    00000BF6 2A               [ 8] 2343 	ld	a, (hl+)
+    00000BF7 5F               [ 4] 2344 	ld	e, a
+    00000BF8 56               [ 8] 2345 	ld	d, (hl)
+    00000BF9 CDr00r00         [24] 2346 	call	_line
+    00000BFC C3r64r0E         [16] 2347 	jp	00183$
+    00000BFF                       2348 00142$:
+                                   2349 ;src/field_actions.c:110: else {a->kind=FIELD_TORCH_SCENE;a->target=slot;}break;
+    00000BFF F8 13            [12] 2350 	ldhl	sp,	#19
+    00000C01 2A               [ 8] 2351 	ld	a, (hl+)
+    00000C02 4F               [ 4] 2352 	ld	c, a
+    00000C03 46               [ 8] 2353 	ld	b, (hl)
+    00000C04 3E 09            [ 8] 2354 	ld	a, #0x09
+    00000C06 02               [ 8] 2355 	ld	(bc), a
+    00000C07 03               [ 8] 2356 	inc	bc
+    00000C08 03               [ 8] 2357 	inc	bc
+    00000C09 03               [ 8] 2358 	inc	bc
+    00000C0A 03               [ 8] 2359 	inc	bc
+    00000C0B 03               [ 8] 2360 	inc	bc
+    00000C0C F8 06            [12] 2361 	ldhl	sp,	#6
+    00000C0E 7E               [ 8] 2362 	ld	a, (hl)
+    00000C0F 02               [ 8] 2363 	ld	(bc), a
+    00000C10 C3r64r0E         [16] 2364 	jp	00183$
+                                   2365 ;src/field_actions.c:111: case ItemID_AeroPrism:
+    00000C13                       2366 00147$:
+                                   2367 ;src/field_actions.c:112: line(a,0xb458);if(c->in_battle)line(a,0xb35c);else if(c->event_id!=0xb0u||c->projection==255u)line(a,0xb312);
+    00000C13 01 58 B4         [12] 2368 	ld	bc, #0xb458
+    00000C16 D1               [12] 2369 	pop	de
+    00000C17 D5               [16] 2370 	push	de
+    00000C18 CDr00r00         [24] 2371 	call	_line
+    00000C1B F8 02            [12] 2372 	ldhl	sp,#2
+    00000C1D 2A               [ 8] 2373 	ld	a, (hl+)
+    00000C1E 5F               [ 4] 2374 	ld	e, a
+    00000C1F 56               [ 8] 2375 	ld	d, (hl)
+    00000C20 21 09 00         [12] 2376 	ld	hl, #0x0009
+    00000C23 19               [ 8] 2377 	add	hl, de
+    00000C24 4D               [ 4] 2378 	ld	c, l
+    00000C25 44               [ 4] 2379 	ld	b, h
+    00000C26 0A               [ 8] 2380 	ld	a, (bc)
+    00000C27 B7               [ 4] 2381 	or	a, a
+    00000C28 28 0E            [12] 2382 	jr	Z, 00153$
+    00000C2A 01 5C B3         [12] 2383 	ld	bc, #0xb35c
+    00000C2D F8 13            [12] 2384 	ldhl	sp,	#19
+    00000C2F 2A               [ 8] 2385 	ld	a, (hl+)
+    00000C30 5F               [ 4] 2386 	ld	e, a
+    00000C31 56               [ 8] 2387 	ld	d, (hl)
+    00000C32 CDr00r00         [24] 2388 	call	_line
+    00000C35 C3r64r0E         [16] 2389 	jp	00183$
+    00000C38                       2390 00153$:
+    00000C38 F8 02            [12] 2391 	ldhl	sp,#2
+    00000C3A 2A               [ 8] 2392 	ld	a, (hl+)
+    00000C3B 5F               [ 4] 2393 	ld	e, a
+    00000C3C 56               [ 8] 2394 	ld	d, (hl)
+    00000C3D 21 0C 00         [12] 2395 	ld	hl, #0x000c
+    00000C40 19               [ 8] 2396 	add	hl, de
+    00000C41 4D               [ 4] 2397 	ld	c, l
+    00000C42 44               [ 4] 2398 	ld	b, h
+    00000C43 0A               [ 8] 2399 	ld	a, (bc)
+    00000C44 D6 B0            [ 8] 2400 	sub	a, #0xb0
+    00000C46 20 0F            [12] 2401 	jr	NZ, 00148$
+    00000C48 F8 02            [12] 2402 	ldhl	sp,#2
+    00000C4A 2A               [ 8] 2403 	ld	a, (hl+)
+    00000C4B 5F               [ 4] 2404 	ld	e, a
+    00000C4C 56               [ 8] 2405 	ld	d, (hl)
+    00000C4D 21 0D 00         [12] 2406 	ld	hl, #0x000d
+    00000C50 19               [ 8] 2407 	add	hl, de
+    00000C51 4D               [ 4] 2408 	ld	c, l
+    00000C52 44               [ 4] 2409 	ld	b, h
+    00000C53 0A               [ 8] 2410 	ld	a, (bc)
+    00000C54 3C               [ 4] 2411 	inc	a
+    00000C55 20 0E            [12] 2412 	jr	NZ, 00149$
+    00000C57                       2413 00148$:
+    00000C57 01 12 B3         [12] 2414 	ld	bc, #0xb312
+    00000C5A F8 13            [12] 2415 	ldhl	sp,	#19
+    00000C5C 2A               [ 8] 2416 	ld	a, (hl+)
+    00000C5D 5F               [ 4] 2417 	ld	e, a
+    00000C5E 56               [ 8] 2418 	ld	d, (hl)
+    00000C5F CDr00r00         [24] 2419 	call	_line
+    00000C62 C3r64r0E         [16] 2420 	jp	00183$
+    00000C65                       2421 00149$:
+                                   2422 ;src/field_actions.c:113: else{line(a,0xb4d5);c->projection=255;a->kind=FIELD_PRISM;}break;
+    00000C65 C5               [16] 2423 	push	bc
+    00000C66 01 D5 B4         [12] 2424 	ld	bc, #0xb4d5
+    00000C69 F8 15            [12] 2425 	ldhl	sp,	#21
+    00000C6B 2A               [ 8] 2426 	ld	a, (hl+)
+    00000C6C 5F               [ 4] 2427 	ld	e, a
+    00000C6D 56               [ 8] 2428 	ld	d, (hl)
+    00000C6E CDr00r00         [24] 2429 	call	_line
+    00000C71 C1               [12] 2430 	pop	bc
+    00000C72 3E FF            [ 8] 2431 	ld	a, #0xff
+    00000C74 02               [ 8] 2432 	ld	(bc), a
+    00000C75 F8 13            [12] 2433 	ldhl	sp,	#19
+    00000C77 2A               [ 8] 2434 	ld	a, (hl+)
+    00000C78 4F               [ 4] 2435 	ld	c, a
+    00000C79 46               [ 8] 2436 	ld	b, (hl)
+    00000C7A 3E 07            [ 8] 2437 	ld	a, #0x07
+    00000C7C 02               [ 8] 2438 	ld	(bc), a
+    00000C7D C3r64r0E         [16] 2439 	jp	00183$
+                                   2440 ;src/field_actions.c:114: case ItemID_Nuts:
+    00000C80                       2441 00155$:
+                                   2442 ;src/field_actions.c:115: if(c->rpg->party[1].status && ((c->map_id==23u&&c->interaction&&!c->in_battle)||(c->map_id!=23u&&c->event_id==0xb0u&&c->projection==255u))){line(a,0xb743);a->kind=FIELD_MYAU_FLY;}
+    00000C80 F8 04            [12] 2443 	ldhl	sp,#4
+    00000C82 2A               [ 8] 2444 	ld	a, (hl+)
+    00000C83 5F               [ 4] 2445 	ld	e, a
+    00000C84 56               [ 8] 2446 	ld	d, (hl)
+    00000C85 1A               [ 8] 2447 	ld	a, (de)
+    00000C86 4F               [ 4] 2448 	ld	c, a
+    00000C87 13               [ 8] 2449 	inc	de
+    00000C88 1A               [ 8] 2450 	ld	a, (de)
+    00000C89 47               [ 4] 2451 	ld	b, a
+    00000C8A 21 10 00         [12] 2452 	ld	hl, #0x0010
+    00000C8D 09               [ 8] 2453 	add	hl, bc
+    00000C8E 7E               [ 8] 2454 	ld	a, (hl)
+    00000C8F B7               [ 4] 2455 	or	a, a
+    00000C90 28 66            [12] 2456 	jr	Z, 00157$
+    00000C92 F8 02            [12] 2457 	ldhl	sp,#2
+    00000C94 2A               [ 8] 2458 	ld	a, (hl+)
+    00000C95 5F               [ 4] 2459 	ld	e, a
+    00000C96 56               [ 8] 2460 	ld	d, (hl)
+    00000C97 21 0A 00         [12] 2461 	ld	hl, #0x000a
+    00000C9A 19               [ 8] 2462 	add	hl, de
+    00000C9B 4D               [ 4] 2463 	ld	c, l
+    00000C9C 44               [ 4] 2464 	ld	b, h
+    00000C9D 0A               [ 8] 2465 	ld	a, (bc)
+    00000C9E 4F               [ 4] 2466 	ld	c, a
+    00000C9F D6 17            [ 8] 2467 	sub	a, #0x17
+    00000CA1 20 1E            [12] 2468 	jr	NZ, 00163$
+    00000CA3 F8 02            [12] 2469 	ldhl	sp,#2
+    00000CA5 2A               [ 8] 2470 	ld	a, (hl+)
+    00000CA6 5F               [ 4] 2471 	ld	e, a
+    00000CA7 56               [ 8] 2472 	ld	d, (hl)
+    00000CA8 21 08 00         [12] 2473 	ld	hl, #0x0008
+    00000CAB 19               [ 8] 2474 	add	hl, de
+    00000CAC 5D               [ 4] 2475 	ld	e, l
+    00000CAD 54               [ 4] 2476 	ld	d, h
+    00000CAE 1A               [ 8] 2477 	ld	a, (de)
+    00000CAF B7               [ 4] 2478 	or	a, a
+    00000CB0 28 0F            [12] 2479 	jr	Z, 00163$
+    00000CB2 F8 02            [12] 2480 	ldhl	sp,#2
+    00000CB4 2A               [ 8] 2481 	ld	a, (hl+)
+    00000CB5 5F               [ 4] 2482 	ld	e, a
+    00000CB6 56               [ 8] 2483 	ld	d, (hl)
+    00000CB7 21 09 00         [12] 2484 	ld	hl, #0x0009
+    00000CBA 19               [ 8] 2485 	add	hl, de
+    00000CBB 5D               [ 4] 2486 	ld	e, l
+    00000CBC 54               [ 4] 2487 	ld	d, h
+    00000CBD 1A               [ 8] 2488 	ld	a, (de)
+    00000CBE B7               [ 4] 2489 	or	a, a
+    00000CBF 28 24            [12] 2490 	jr	Z, 00156$
+    00000CC1                       2491 00163$:
+    00000CC1 79               [ 4] 2492 	ld	a, c
+    00000CC2 D6 17            [ 8] 2493 	sub	a, #0x17
+    00000CC4 28 32            [12] 2494 	jr	Z, 00157$
+    00000CC6 F8 02            [12] 2495 	ldhl	sp,#2
+    00000CC8 2A               [ 8] 2496 	ld	a, (hl+)
+    00000CC9 5F               [ 4] 2497 	ld	e, a
+    00000CCA 56               [ 8] 2498 	ld	d, (hl)
+    00000CCB 21 0C 00         [12] 2499 	ld	hl, #0x000c
+    00000CCE 19               [ 8] 2500 	add	hl, de
+    00000CCF 4D               [ 4] 2501 	ld	c, l
+    00000CD0 44               [ 4] 2502 	ld	b, h
+    00000CD1 0A               [ 8] 2503 	ld	a, (bc)
+    00000CD2 D6 B0            [ 8] 2504 	sub	a, #0xb0
+    00000CD4 20 22            [12] 2505 	jr	NZ, 00157$
+    00000CD6 F8 02            [12] 2506 	ldhl	sp,#2
+    00000CD8 2A               [ 8] 2507 	ld	a, (hl+)
+    00000CD9 5F               [ 4] 2508 	ld	e, a
+    00000CDA 56               [ 8] 2509 	ld	d, (hl)
+    00000CDB 21 0D 00         [12] 2510 	ld	hl, #0x000d
+    00000CDE 19               [ 8] 2511 	add	hl, de
+    00000CDF 4D               [ 4] 2512 	ld	c, l
+    00000CE0 44               [ 4] 2513 	ld	b, h
+    00000CE1 0A               [ 8] 2514 	ld	a, (bc)
+    00000CE2 3C               [ 4] 2515 	inc	a
+    00000CE3 20 13            [12] 2516 	jr	NZ, 00157$
+    00000CE5                       2517 00156$:
+    00000CE5 01 43 B7         [12] 2518 	ld	bc, #0xb743
+    00000CE8 D1               [12] 2519 	pop	de
+    00000CE9 D5               [16] 2520 	push	de
+    00000CEA CDr00r00         [24] 2521 	call	_line
+    00000CED F8 13            [12] 2522 	ldhl	sp,	#19
+    00000CEF 2A               [ 8] 2523 	ld	a, (hl+)
+    00000CF0 4F               [ 4] 2524 	ld	c, a
+    00000CF1 46               [ 8] 2525 	ld	b, (hl)
+    00000CF2 3E 08            [ 8] 2526 	ld	a, #0x08
+    00000CF4 02               [ 8] 2527 	ld	(bc), a
+    00000CF5 C3r64r0E         [16] 2528 	jp	00183$
+    00000CF8                       2529 00157$:
+                                   2530 ;src/field_actions.c:116: else{line(a,0xb366);line(a,c->in_battle?0xb35c:0xb500);}break;
+    00000CF8 01 66 B3         [12] 2531 	ld	bc, #0xb366
+    00000CFB D1               [12] 2532 	pop	de
+    00000CFC D5               [16] 2533 	push	de
+    00000CFD CDr00r00         [24] 2534 	call	_line
+    00000D00 F8 02            [12] 2535 	ldhl	sp,#2
+    00000D02 2A               [ 8] 2536 	ld	a, (hl+)
+    00000D03 5F               [ 4] 2537 	ld	e, a
+    00000D04 56               [ 8] 2538 	ld	d, (hl)
+    00000D05 21 09 00         [12] 2539 	ld	hl, #0x0009
+    00000D08 19               [ 8] 2540 	add	hl, de
+    00000D09 4D               [ 4] 2541 	ld	c, l
+    00000D0A 44               [ 4] 2542 	ld	b, h
+    00000D0B 0A               [ 8] 2543 	ld	a, (bc)
+    00000D0C B7               [ 4] 2544 	or	a, a
+    00000D0D 28 05            [12] 2545 	jr	Z, 00190$
+    00000D0F 01 5C B3         [12] 2546 	ld	bc, #0xb35c
+    00000D12 18 03            [12] 2547 	jr	00191$
+    00000D14                       2548 00190$:
+    00000D14 01 00 B5         [12] 2549 	ld	bc, #0xb500
+    00000D17                       2550 00191$:
+    00000D17 F8 13            [12] 2551 	ldhl	sp,	#19
+    00000D19 2A               [ 8] 2552 	ld	a, (hl+)
+    00000D1A 5F               [ 4] 2553 	ld	e, a
+    00000D1B 56               [ 8] 2554 	ld	d, (hl)
+    00000D1C CDr00r00         [24] 2555 	call	_line
+    00000D1F C3r64r0E         [16] 2556 	jp	00183$
+                                   2557 ;src/field_actions.c:117: case ItemID_Hapsby:if(c->in_battle){line(a,0xb2ac);line(a,0xb52c);}else line(a,0xb544);break;
+    00000D22                       2558 00165$:
+    00000D22 F8 02            [12] 2559 	ldhl	sp,#2
+    00000D24 2A               [ 8] 2560 	ld	a, (hl+)
+    00000D25 5F               [ 4] 2561 	ld	e, a
+    00000D26 56               [ 8] 2562 	ld	d, (hl)
+    00000D27 21 09 00         [12] 2563 	ld	hl, #0x0009
+    00000D2A 19               [ 8] 2564 	add	hl, de
+    00000D2B 4D               [ 4] 2565 	ld	c, l
+    00000D2C 44               [ 4] 2566 	ld	b, h
+    00000D2D 0A               [ 8] 2567 	ld	a, (bc)
+    00000D2E B7               [ 4] 2568 	or	a, a
+    00000D2F 28 16            [12] 2569 	jr	Z, 00167$
+    00000D31 01 AC B2         [12] 2570 	ld	bc, #0xb2ac
+    00000D34 D1               [12] 2571 	pop	de
+    00000D35 D5               [16] 2572 	push	de
+    00000D36 CDr00r00         [24] 2573 	call	_line
+    00000D39 01 2C B5         [12] 2574 	ld	bc, #0xb52c
+    00000D3C F8 13            [12] 2575 	ldhl	sp,	#19
+    00000D3E 2A               [ 8] 2576 	ld	a, (hl+)
+    00000D3F 5F               [ 4] 2577 	ld	e, a
+    00000D40 56               [ 8] 2578 	ld	d, (hl)
+    00000D41 CDr00r00         [24] 2579 	call	_line
+    00000D44 C3r64r0E         [16] 2580 	jp	00183$
+    00000D47                       2581 00167$:
+    00000D47 01 44 B5         [12] 2582 	ld	bc, #0xb544
+    00000D4A D1               [12] 2583 	pop	de
+    00000D4B D5               [16] 2584 	push	de
+    00000D4C CDr00r00         [24] 2585 	call	_line
+    00000D4F C3r64r0E         [16] 2586 	jp	00183$
+                                   2587 ;src/field_actions.c:118: case ItemID_Compass:
+    00000D52                       2588 00169$:
+                                   2589 ;src/field_actions.c:119: if(c->interaction||c->in_battle||!c->dungeon){line(a,0xb366);line(a,c->in_battle?0xb35c:0xb375);}
+    00000D52 F8 02            [12] 2590 	ldhl	sp,#2
+    00000D54 2A               [ 8] 2591 	ld	a, (hl+)
+    00000D55 5F               [ 4] 2592 	ld	e, a
+    00000D56 56               [ 8] 2593 	ld	d, (hl)
+    00000D57 21 08 00         [12] 2594 	ld	hl, #0x0008
+    00000D5A 19               [ 8] 2595 	add	hl, de
+    00000D5B 4D               [ 4] 2596 	ld	c, l
+    00000D5C 44               [ 4] 2597 	ld	b, h
+    00000D5D 0A               [ 8] 2598 	ld	a, (bc)
+    00000D5E B7               [ 4] 2599 	or	a, a
+    00000D5F 20 2C            [12] 2600 	jr	NZ, 00170$
+    00000D61 F8 02            [12] 2601 	ldhl	sp,#2
+    00000D63 2A               [ 8] 2602 	ld	a, (hl+)
+    00000D64 5F               [ 4] 2603 	ld	e, a
+    00000D65 56               [ 8] 2604 	ld	d, (hl)
+    00000D66 21 09 00         [12] 2605 	ld	hl, #0x0009
+    00000D69 19               [ 8] 2606 	add	hl, de
+    00000D6A 4D               [ 4] 2607 	ld	c, l
+    00000D6B 44               [ 4] 2608 	ld	b, h
+    00000D6C 0A               [ 8] 2609 	ld	a, (bc)
+    00000D6D B7               [ 4] 2610 	or	a, a
+    00000D6E 20 1D            [12] 2611 	jr	NZ, 00170$
+    00000D70 F8 02            [12] 2612 	ldhl	sp,#2
+    00000D72 2A               [ 8] 2613 	ld	a, (hl+)
+    00000D73 5F               [ 4] 2614 	ld	e, a
+    00000D74 56               [ 8] 2615 	ld	d, (hl)
+    00000D75 21 04 00         [12] 2616 	ld	hl, #0x0004
+    00000D78 19               [ 8] 2617 	add	hl, de
+    00000D79 E5               [16] 2618 	push	hl
+    00000D7A 7D               [ 4] 2619 	ld	a, l
+    00000D7B F8 09            [12] 2620 	ldhl	sp,	#9
+    00000D7D 77               [ 8] 2621 	ld	(hl), a
+    00000D7E E1               [12] 2622 	pop	hl
+    00000D7F 7C               [ 4] 2623 	ld	a, h
+    00000D80 F8 08            [12] 2624 	ldhl	sp,	#8
+    00000D82 32               [ 8] 2625 	ld	(hl-), a
+    00000D83 2A               [ 8] 2626 	ld	a, (hl+)
+    00000D84 5F               [ 4] 2627 	ld	e, a
+    00000D85 56               [ 8] 2628 	ld	d, (hl)
+    00000D86 1A               [ 8] 2629 	ld	a, (de)
+    00000D87 4F               [ 4] 2630 	ld	c, a
+    00000D88 13               [ 8] 2631 	inc	de
+    00000D89 1A               [ 8] 2632 	ld	a, (de)
+    00000D8A B1               [ 4] 2633 	or	a, c
+    00000D8B 20 39            [12] 2634 	jr	NZ, 00171$
+    00000D8D                       2635 00170$:
+    00000D8D 01 66 B3         [12] 2636 	ld	bc, #0xb366
+    00000D90 D1               [12] 2637 	pop	de
+    00000D91 D5               [16] 2638 	push	de
+    00000D92 CDr00r00         [24] 2639 	call	_line
+    00000D95 F8 02            [12] 2640 	ldhl	sp,#2
+    00000D97 2A               [ 8] 2641 	ld	a, (hl+)
+    00000D98 5F               [ 4] 2642 	ld	e, a
+    00000D99 56               [ 8] 2643 	ld	d, (hl)
+    00000D9A 21 09 00         [12] 2644 	ld	hl, #0x0009
+    00000D9D 19               [ 8] 2645 	add	hl, de
+    00000D9E 4D               [ 4] 2646 	ld	c, l
+    00000D9F 44               [ 4] 2647 	ld	b, h
+    00000DA0 0A               [ 8] 2648 	ld	a, (bc)
+    00000DA1 F8 08            [12] 2649 	ldhl	sp,	#8
+    00000DA3 77               [ 8] 2650 	ld	(hl), a
+    00000DA4 B7               [ 4] 2651 	or	a, a
+    00000DA5 28 08            [12] 2652 	jr	Z, 00192$
+    00000DA7 2B               [ 8] 2653 	dec	hl
+    00000DA8 3E 5C            [ 8] 2654 	ld	a, #0x5c
+    00000DAA 22               [ 8] 2655 	ld	(hl+), a
+    00000DAB 36 B3            [12] 2656 	ld	(hl), #0xb3
+    00000DAD 18 07            [12] 2657 	jr	00193$
+    00000DAF                       2658 00192$:
+    00000DAF F8 07            [12] 2659 	ldhl	sp,	#7
+    00000DB1 3E 75            [ 8] 2660 	ld	a, #0x75
+    00000DB3 22               [ 8] 2661 	ld	(hl+), a
+    00000DB4 36 B3            [12] 2662 	ld	(hl), #0xb3
+    00000DB6                       2663 00193$:
+    00000DB6 F8 07            [12] 2664 	ldhl	sp,	#7
+    00000DB8 2A               [ 8] 2665 	ld	a, (hl+)
+    00000DB9 4F               [ 4] 2666 	ld	c, a
+    00000DBA 46               [ 8] 2667 	ld	b, (hl)
+    00000DBB F8 13            [12] 2668 	ldhl	sp,	#19
+    00000DBD 2A               [ 8] 2669 	ld	a, (hl+)
+    00000DBE 5F               [ 4] 2670 	ld	e, a
+    00000DBF 56               [ 8] 2671 	ld	d, (hl)
+    00000DC0 CDr00r00         [24] 2672 	call	_line
+    00000DC3 C3r64r0E         [16] 2673 	jp	00183$
+    00000DC6                       2674 00171$:
+                                   2675 ;src/field_actions.c:120: else{line(a,0xb2ac);line(a,compass[c->dungeon->direction&3u]);}break;
+    00000DC6 01 AC B2         [12] 2676 	ld	bc, #0xb2ac
+    00000DC9 D1               [12] 2677 	pop	de
+    00000DCA D5               [16] 2678 	push	de
+    00000DCB CDr00r00         [24] 2679 	call	_line
+    00000DCE 01r6Dr0E         [12] 2680 	ld	bc, #_field_use_item_compass_10000_140+0
+    00000DD1 F8 07            [12] 2681 	ldhl	sp,#7
+    00000DD3 2A               [ 8] 2682 	ld	a, (hl+)
+    00000DD4 5F               [ 4] 2683 	ld	e, a
+    00000DD5 56               [ 8] 2684 	ld	d, (hl)
+    00000DD6 1A               [ 8] 2685 	ld	a, (de)
+    00000DD7 6F               [ 4] 2686 	ld	l, a
+    00000DD8 13               [ 8] 2687 	inc	de
+    00000DD9 1A               [ 8] 2688 	ld	a, (de)
+    00000DDA 67               [ 4] 2689 	ld	h, a
+    00000DDB 23               [ 8] 2690 	inc	hl
+    00000DDC 23               [ 8] 2691 	inc	hl
+    00000DDD 7E               [ 8] 2692 	ld	a, (hl)
+    00000DDE E6 03            [ 8] 2693 	and	a, #0x03
+    00000DE0 26 00            [ 8] 2694 	ld	h, #0x00
+    00000DE2 6F               [ 4] 2695 	ld	l, a
+    00000DE3 29               [ 8] 2696 	add	hl, hl
+    00000DE4 09               [ 8] 2697 	add	hl, bc
+    00000DE5 2A               [ 8] 2698 	ld	a, (hl+)
+    00000DE6 4F               [ 4] 2699 	ld	c, a
+    00000DE7 46               [ 8] 2700 	ld	b, (hl)
+    00000DE8 F8 13            [12] 2701 	ldhl	sp,	#19
+    00000DEA 2A               [ 8] 2702 	ld	a, (hl+)
+    00000DEB 5F               [ 4] 2703 	ld	e, a
+    00000DEC 56               [ 8] 2704 	ld	d, (hl)
+    00000DED CDr00r00         [24] 2705 	call	_line
+    00000DF0 18 72            [12] 2706 	jr	00183$
+                                   2707 ;src/field_actions.c:121: case ItemID_Landrover:case ItemID_Hovercraft:case ItemID_IceDigger:a->kind=FIELD_VEHICLE;a->target=slot;break;
+    00000DF2                       2708 00177$:
+    00000DF2 E1               [12] 2709 	pop	hl
+    00000DF3 36 0B            [12] 2710 	ld	(hl), #0x0b
+    00000DF5 5D               [ 4] 2711 	ld	e, l
+    00000DF6 54               [ 4] 2712 	ld	d, h
+    00000DF7 D5               [16] 2713 	push	de
+    00000DF8 21 05 00         [12] 2714 	ld	hl, #0x0005
+    00000DFB 19               [ 8] 2715 	add	hl, de
+    00000DFC 4D               [ 4] 2716 	ld	c, l
+    00000DFD 44               [ 4] 2717 	ld	b, h
+    00000DFE F8 06            [12] 2718 	ldhl	sp,	#6
+    00000E00 7E               [ 8] 2719 	ld	a, (hl)
+    00000E01 02               [ 8] 2720 	ld	(bc), a
+    00000E02 18 60            [12] 2721 	jr	00183$
+                                   2722 ;src/field_actions.c:122: case ItemID_Wand:case ItemID_Escaper:
+    00000E04                       2723 00179$:
+                                   2724 ;src/field_actions.c:123: if(c->in_battle){a->kind=FIELD_UNIMPLEMENTED;a->error=RPG_NOT_IMPLEMENTED;break;}
+    00000E04 F8 02            [12] 2725 	ldhl	sp,#2
+    00000E06 2A               [ 8] 2726 	ld	a, (hl+)
+    00000E07 5F               [ 4] 2727 	ld	e, a
+    00000E08 56               [ 8] 2728 	ld	d, (hl)
+    00000E09 21 09 00         [12] 2729 	ld	hl, #0x0009
+    00000E0C 19               [ 8] 2730 	add	hl, de
+    00000E0D 4D               [ 4] 2731 	ld	c, l
+    00000E0E 44               [ 4] 2732 	ld	b, h
+    00000E0F 0A               [ 8] 2733 	ld	a, (bc)
+    00000E10 B7               [ 4] 2734 	or	a, a
+    00000E11 28 09            [12] 2735 	jr	Z, 00181$
+    00000E13 E1               [12] 2736 	pop	hl
+    00000E14 36 FF            [12] 2737 	ld	(hl), #0xff
+    00000E16 E5               [16] 2738 	push	hl
+    00000E17 23               [ 8] 2739 	inc	hl
+    00000E18 36 08            [12] 2740 	ld	(hl), #0x08
+    00000E1A 18 48            [12] 2741 	jr	00183$
+    00000E1C                       2742 00181$:
+                                   2743 ;src/field_actions.c:124: line(a,0xb2ac);line(a,0xb312);break;
+    00000E1C 01 AC B2         [12] 2744 	ld	bc, #0xb2ac
+    00000E1F D1               [12] 2745 	pop	de
+    00000E20 D5               [16] 2746 	push	de
+    00000E21 CDr00r00         [24] 2747 	call	_line
+    00000E24 01 12 B3         [12] 2748 	ld	bc, #0xb312
+    00000E27 F8 13            [12] 2749 	ldhl	sp,	#19
+    00000E29 2A               [ 8] 2750 	ld	a, (hl+)
+    00000E2A 5F               [ 4] 2751 	ld	e, a
+    00000E2B 56               [ 8] 2752 	ld	d, (hl)
+    00000E2C CDr00r00         [24] 2753 	call	_line
+    00000E2F 18 33            [12] 2754 	jr	00183$
+                                   2755 ;src/field_actions.c:125: default:
+    00000E31                       2756 00182$:
+                                   2757 ;src/field_actions.c:126: line(a,0xb2ac);line(a,item>=ItemID_RoadPass?(c->in_battle?0xb312:0xb555):0xb2cd);break;
+    00000E31 01 AC B2         [12] 2758 	ld	bc, #0xb2ac
+    00000E34 D1               [12] 2759 	pop	de
+    00000E35 D5               [16] 2760 	push	de
+    00000E36 CDr00r00         [24] 2761 	call	_line
+    00000E39 F8 08            [12] 2762 	ldhl	sp,	#8
+    00000E3B 7E               [ 8] 2763 	ld	a, (hl)
+    00000E3C D6 33            [ 8] 2764 	sub	a, #0x33
+    00000E3E 38 19            [12] 2765 	jr	C, 00194$
+    00000E40 F8 02            [12] 2766 	ldhl	sp,#2
+    00000E42 2A               [ 8] 2767 	ld	a, (hl+)
+    00000E43 5F               [ 4] 2768 	ld	e, a
+    00000E44 56               [ 8] 2769 	ld	d, (hl)
+    00000E45 21 09 00         [12] 2770 	ld	hl, #0x0009
+    00000E48 19               [ 8] 2771 	add	hl, de
+    00000E49 4D               [ 4] 2772 	ld	c, l
+    00000E4A 44               [ 4] 2773 	ld	b, h
+    00000E4B 0A               [ 8] 2774 	ld	a, (bc)
+    00000E4C B7               [ 4] 2775 	or	a, a
+    00000E4D 28 05            [12] 2776 	jr	Z, 00196$
+    00000E4F 01 12 B3         [12] 2777 	ld	bc, #0xb312
+    00000E52 18 08            [12] 2778 	jr	00195$
+    00000E54                       2779 00196$:
+    00000E54 01 55 B5         [12] 2780 	ld	bc, #0xb555
+    00000E57 18 03            [12] 2781 	jr	00195$
+    00000E59                       2782 00194$:
+    00000E59 01 CD B2         [12] 2783 	ld	bc, #0xb2cd
+    00000E5C                       2784 00195$:
+    00000E5C F8 13            [12] 2785 	ldhl	sp,	#19
+    00000E5E 2A               [ 8] 2786 	ld	a, (hl+)
+    00000E5F 5F               [ 4] 2787 	ld	e, a
+    00000E60 56               [ 8] 2788 	ld	d, (hl)
+    00000E61 CDr00r00         [24] 2789 	call	_line
+                                   2790 ;src/field_actions.c:127: }
+    00000E64                       2791 00183$:
+                                   2792 ;src/field_actions.c:128: return a->kind;
+    00000E64 F8 13            [12] 2793 	ldhl	sp,#19
+    00000E66 2A               [ 8] 2794 	ld	a, (hl+)
+    00000E67 5F               [ 4] 2795 	ld	e, a
+    00000E68 56               [ 8] 2796 	ld	d, (hl)
+    00000E69 1A               [ 8] 2797 	ld	a, (de)
+    00000E6A                       2798 00184$:
+                                   2799 ;src/field_actions.c:129: }
+    00000E6A E8 09            [16] 2800 	add	sp, #9
+    00000E6C C9               [16] 2801 	ret
+    00000E6D                       2802 _field_use_item_compass_10000_140:
+    00000E6D 01 BD                 2803 	.dw #0xbd01
+    00000E6F ED BC                 2804 	.dw #0xbced
+    00000E71 0C BD                 2805 	.dw #0xbd0c
+    00000E73 F7 BC                 2806 	.dw #0xbcf7
+                                   2807 ;src/field_actions.c:132: void field_torch_reply(RPGState *r,FieldAction *a) RPG_BANKED {
+                                   2808 ;	---------------------------------
+                                   2809 ; Function field_torch_reply
+                                   2810 ; ---------------------------------
+                         0000000B  2811 	b_field_torch_reply	= 11
+    00000E75                       2812 _field_torch_reply::
+                                   2813 ;src/field_actions.c:133: if(a->kind!=FIELD_TORCH_SCENE||a->b)return;
+    00000E75 F8 08            [12] 2814 	ldhl	sp,	#8
+    00000E77 2A               [ 8] 2815 	ld	a, (hl+)
+    00000E78 5F               [ 4] 2816 	ld	e, a
+    00000E79 56               [ 8] 2817 	ld	d, (hl)
+    00000E7A 1A               [ 8] 2818 	ld	a, (de)
+    00000E7B D6 09            [ 8] 2819 	sub	a, #0x09
+    00000E7D C0               [20] 2820 	ret	NZ
+    00000E7E 21 07 00         [12] 2821 	ld	hl, #0x0007
+    00000E81 19               [ 8] 2822 	add	hl, de
+    00000E82 7E               [ 8] 2823 	ld	a, (hl)
+    00000E83 B7               [ 4] 2824 	or	a, a
+    00000E84 C0               [20] 2825 	ret	NZ
+                                   2826 ;src/field_actions.c:134: a->b=1;
+    00000E85 36 01            [12] 2827 	ld	(hl), #0x01
+                                   2828 ;src/field_actions.c:135: if(rpg_find_item(r,ItemID_LaconiaPot)==RPG_NO_SLOT)line(a,0xb49a);
+    00000E87 D5               [16] 2829 	push	de
+    00000E88 3E 38            [ 8] 2830 	ld	a, #0x38
+    00000E8A F5               [16] 2831 	push	af
+    00000E8B 33               [ 8] 2832 	inc	sp
+    00000E8C F8 09            [12] 2833 	ldhl	sp,	#9
+    00000E8E 2A               [ 8] 2834 	ld	a, (hl+)
+    00000E8F 4F               [ 4] 2835 	ld	c, a
+    00000E90 46               [ 8] 2836 	ld	b, (hl)
+    00000E91 C5               [16] 2837 	push	bc
+    00000E92 1Er00            [ 8] 2838 	ld	e, #b_rpg_find_item
+    00000E94 21r00r00         [12] 2839 	ld	hl, #_rpg_find_item
+    00000E97 CDr00r00         [24] 2840 	call	___sdcc_bcall_ehl
+    00000E9A E8 03            [16] 2841 	add	sp, #3
+    00000E9C D1               [12] 2842 	pop	de
+    00000E9D 3C               [ 4] 2843 	inc	a
+    00000E9E 20 06            [12] 2844 	jr	NZ, 00105$
+    00000EA0 01 9A B4         [12] 2845 	ld	bc, #0xb49a
+    00000EA3 C3r00r00         [16] 2846 	jp	_line
+    00000EA6                       2847 00105$:
+                                   2848 ;src/field_actions.c:136: else {rpg_remove_item(r,a->target);a->a=1;line(a,0xb471);}
+    00000EA6 21 05 00         [12] 2849 	ld	hl, #0x0005
+    00000EA9 19               [ 8] 2850 	add	hl, de
+    00000EAA 7E               [ 8] 2851 	ld	a, (hl)
+    00000EAB D5               [16] 2852 	push	de
+    00000EAC F5               [16] 2853 	push	af
+    00000EAD 33               [ 8] 2854 	inc	sp
+    00000EAE F8 09            [12] 2855 	ldhl	sp,	#9
+    00000EB0 2A               [ 8] 2856 	ld	a, (hl+)
+    00000EB1 4F               [ 4] 2857 	ld	c, a
+    00000EB2 46               [ 8] 2858 	ld	b, (hl)
+    00000EB3 C5               [16] 2859 	push	bc
+    00000EB4 1Er00            [ 8] 2860 	ld	e, #b_rpg_remove_item
+    00000EB6 21r00r00         [12] 2861 	ld	hl, #_rpg_remove_item
+    00000EB9 CDr00r00         [24] 2862 	call	___sdcc_bcall_ehl
+    00000EBC E8 03            [16] 2863 	add	sp, #3
+    00000EBE D1               [12] 2864 	pop	de
+    00000EBF 21 06 00         [12] 2865 	ld	hl, #0x0006
+    00000EC2 19               [ 8] 2866 	add	hl, de
+    00000EC3 36 01            [12] 2867 	ld	(hl), #0x01
+    00000EC5 01 71 B4         [12] 2868 	ld	bc, #0xb471
+                                   2869 ;src/field_actions.c:137: }
+    00000EC8 C3r00r00         [16] 2870 	jp	_line
+                                   2871 ;src/field_actions.c:138: void field_torch_finish(RPGState *r,FieldAction *a) RPG_BANKED {
+                                   2872 ;	---------------------------------
+                                   2873 ; Function field_torch_finish
+                                   2874 ; ---------------------------------
+                         0000000B  2875 	b_field_torch_finish	= 11
+    00000ECB                       2876 _field_torch_finish::
+    00000ECB 3B               [ 8] 2877 	dec	sp
+    00000ECC 3B               [ 8] 2878 	dec	sp
+                                   2879 ;src/field_actions.c:139: if(a->kind!=FIELD_TORCH_SCENE||a->b!=1u)return;
+    00000ECD F8 0A            [12] 2880 	ldhl	sp,	#10
+    00000ECF 2A               [ 8] 2881 	ld	a, (hl+)
+    00000ED0 4F               [ 4] 2882 	ld	c, a
+    00000ED1 46               [ 8] 2883 	ld	b, (hl)
+    00000ED2 33               [ 8] 2884 	inc	sp
+    00000ED3 33               [ 8] 2885 	inc	sp
+    00000ED4 C5               [16] 2886 	push	bc
+    00000ED5 D1               [12] 2887 	pop	de
+    00000ED6 D5               [16] 2888 	push	de
+    00000ED7 1A               [ 8] 2889 	ld	a, (de)
+    00000ED8 D6 09            [ 8] 2890 	sub	a, #0x09
+    00000EDA 20 55            [12] 2891 	jr	NZ, 00108$
+    00000EDC 21 07 00         [12] 2892 	ld	hl, #0x0007
+    00000EDF 09               [ 8] 2893 	add	hl, bc
+    00000EE0 5D               [ 4] 2894 	ld	e, l
+    00000EE1 54               [ 4] 2895 	ld	d, h
+    00000EE2 1A               [ 8] 2896 	ld	a, (de)
+    00000EE3 3D               [ 4] 2897 	dec	a
+    00000EE4 20 4B            [12] 2898 	jr	NZ, 00108$
+                                   2899 ;src/field_actions.c:140: if(a->a&&rpg_find_item(r,ItemID_Nuts)==RPG_NO_SLOT&&rpg_add_item(r,ItemID_Nuts)==RPG_OK)a->sound_end=0xb3;
+    00000EE6 21 06 00         [12] 2900 	ld	hl, #0x0006
+    00000EE9 09               [ 8] 2901 	add	hl, bc
+    00000EEA 7E               [ 8] 2902 	ld	a, (hl)
+    00000EEB B7               [ 4] 2903 	or	a, a
+    00000EEC 28 3C            [12] 2904 	jr	Z, 00105$
+    00000EEE C5               [16] 2905 	push	bc
+    00000EEF D5               [16] 2906 	push	de
+    00000EF0 3E 31            [ 8] 2907 	ld	a, #0x31
+    00000EF2 F5               [16] 2908 	push	af
+    00000EF3 33               [ 8] 2909 	inc	sp
+    00000EF4 F8 0D            [12] 2910 	ldhl	sp,	#13
+    00000EF6 2A               [ 8] 2911 	ld	a, (hl+)
+    00000EF7 66               [ 8] 2912 	ld	h, (hl)
+    00000EF8 6F               [ 4] 2913 	ld	l, a
+    00000EF9 E5               [16] 2914 	push	hl
+    00000EFA 1Er00            [ 8] 2915 	ld	e, #b_rpg_find_item
+    00000EFC 21r00r00         [12] 2916 	ld	hl, #_rpg_find_item
+    00000EFF CDr00r00         [24] 2917 	call	___sdcc_bcall_ehl
+    00000F02 E8 03            [16] 2918 	add	sp, #3
+    00000F04 D1               [12] 2919 	pop	de
+    00000F05 C1               [12] 2920 	pop	bc
+    00000F06 3C               [ 4] 2921 	inc	a
+    00000F07 20 21            [12] 2922 	jr	NZ, 00105$
+    00000F09 C5               [16] 2923 	push	bc
+    00000F0A D5               [16] 2924 	push	de
+    00000F0B 3E 31            [ 8] 2925 	ld	a, #0x31
+    00000F0D F5               [16] 2926 	push	af
+    00000F0E 33               [ 8] 2927 	inc	sp
+    00000F0F F8 0D            [12] 2928 	ldhl	sp,	#13
+    00000F11 2A               [ 8] 2929 	ld	a, (hl+)
+    00000F12 66               [ 8] 2930 	ld	h, (hl)
+    00000F13 6F               [ 4] 2931 	ld	l, a
+    00000F14 E5               [16] 2932 	push	hl
+    00000F15 1Er00            [ 8] 2933 	ld	e, #b_rpg_add_item
+    00000F17 21r00r00         [12] 2934 	ld	hl, #_rpg_add_item
+    00000F1A CDr00r00         [24] 2935 	call	___sdcc_bcall_ehl
+    00000F1D E8 03            [16] 2936 	add	sp, #3
+    00000F1F D1               [12] 2937 	pop	de
+    00000F20 C1               [12] 2938 	pop	bc
+    00000F21 B7               [ 4] 2939 	or	a, a
+    00000F22 20 06            [12] 2940 	jr	NZ, 00105$
+    00000F24 21 09 00         [12] 2941 	ld	hl, #0x0009
+    00000F27 09               [ 8] 2942 	add	hl, bc
+    00000F28 36 B3            [12] 2943 	ld	(hl), #0xb3
+    00000F2A                       2944 00105$:
+                                   2945 ;src/field_actions.c:141: a->b=2;a->kind=FIELD_DONE;
+    00000F2A 3E 02            [ 8] 2946 	ld	a, #0x02
+    00000F2C 12               [ 8] 2947 	ld	(de), a
+    00000F2D E1               [12] 2948 	pop	hl
+    00000F2E 36 00            [12] 2949 	ld	(hl), #0x00
+    00000F30 E5               [16] 2950 	push	hl
+    00000F31                       2951 00108$:
+                                   2952 ;src/field_actions.c:142: }
+    00000F31 33               [ 8] 2953 	inc	sp
+    00000F32 33               [ 8] 2954 	inc	sp
+    00000F33 C9               [16] 2955 	ret
+                                   2956 	.area _CODE_11
+                                   2957 	.area _INITIALIZER
+                                   2958 	.area _CABS (ABS)

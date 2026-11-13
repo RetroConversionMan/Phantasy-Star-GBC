@@ -1,0 +1,365 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/chest_motion.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/field_actions.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/rpg_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle.c:250: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_view.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dialogue.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dialogue_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dialogue_text_09.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dialogue_text_10.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/bank_io.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/ui.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/font.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/assets_sprites.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_motion.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_weapon.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/chest_art.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_irq.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_data.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_tables.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_low_62.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/audio_low_63.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_140.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_141.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_142.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_143.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_144.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_145.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_scene_bank_146.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_148.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_149.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_150.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_151.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_152.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_153.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_154.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_155.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_156.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_157.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_158.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_159.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_160.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_161.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_162.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_163.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_164.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_165.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_166.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_167.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_168.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_169.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_170.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_171.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_172.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_173.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_174.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_175.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_176.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_177.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_178.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_179.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_180.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle_animation_bank_181.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_097.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_098.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_099.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_100.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_101.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_102.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_103.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_104.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_105.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_106.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_107.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_108.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_109.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_110.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_bank_192.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor_bank_111.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor_bank_112.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor_bank_113.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/scene_actor_bank_114.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_00.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_01.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_02.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_03.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_04.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_05.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_06.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_07.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_08.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_09.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_10.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_11.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_12.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_13.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_14.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_15.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_16.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_17.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_18.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_19.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_20.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_21.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/dungeon_graphics_22.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_147.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_182.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_183.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_184.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_185.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_186.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_187.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_188.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_189.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_190.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_191.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/weapon_bank_213.c:
+{
+  "host_checks": 87,
+  "native_checks": [
+    "Bank30 menu strings copied to WRAM before bank1 UI call; ALIS and ATTACK VRAM tiles match expected font IDs",
+    "Native bank30 controller calls bank18 battle, bank4 RNG/stats, bank8 dialogue, bank31 art and restores caller bank1; Run exits",
+    "Original Sworm physical motion and10-frame hit hold execute, continue automatically after the source HP update, and restore caller bank1; observed duration includes input/render alignment, exact actor cadence is tested against Z80 separately",
+    "Heal target selection rejects dead Myau with original dialogue and spends no MP",
+    "Original unarmed source weapon actor executes before10-frame enemy-hit palette feedback; visible effect/HP resolution returns to genuine battle reward flow",
+    "Native physical battle resolves to victory, awards EXP and opens source money chest",
+    "Chest full-inventory prompts: protected replacement refused, cancel repeats, abandon declined, valid replacement succeeds without duplicate money",
+    "Closed chest decline returns254 with preparation retained; native field Tele spends4MP and reopens question, Trap spends2MP and disarms,49-frame lid opening grants10meseta without HP loss or RNG reroll",
+    "Fire2/Wind3/Thunder2 and all3guns8targets animate every actual hit automatically, withMPchargedonce and no presentation RNG; earlykillFire stopsafter1 and DarkFalzThunder hitsfirstlivingrecordonly"
+  ],
+  "injected_fixtures": [
+    "HighHP/defense Alis and255HP Sworms force observation of an ordinary enemy physical animation; no campaign reward claim",
+    "Level30 Alis and1HP Sworms shorten isolated combat test; no campaign reward claim",
+    "Victory with20meseta/Flute reward and24 items exercises native chest overflow; source inventory data unchanged",
+    "Level30 recruited party, forced party-trap chest and direct field-menu bridge API calls verify native cross-bank chest magic; full main-menu controller route is a separate integration test",
+    "Level30 soleNoah/Odin, forced255HP enemy groups and initiative override isolate8offensive-action sequences; native menus choose real learned spells/equipped weapons. These are presentation fixtures, not campaign progression."
+  ],
+  "screenshots": [
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/command.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/spells.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/dead-target.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/full-inventory.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/protected-item.png"
+  ],
+  "observed_physical_animation_frames": 32,
+  "observed_player_weapon_frames": 19,
+  "observed_player_hit_frames": 11,
+  "native_multi_hit_cases": [
+    {
+      "fixture": 8,
+      "hits": 2,
+      "observed_frames": 91,
+      "trace": [
+        4,
+        10,
+        245,
+        5,
+        7,
+        248
+      ],
+      "MP_spent": 4,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 9,
+      "hits": 3,
+      "observed_frames": 136,
+      "trace": [
+        4,
+        12,
+        243,
+        5,
+        9,
+        246,
+        5,
+        10,
+        236
+      ],
+      "MP_spent": 12,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 10,
+      "hits": 2,
+      "observed_frames": 99,
+      "trace": [
+        4,
+        36,
+        219,
+        5,
+        32,
+        223
+      ],
+      "MP_spent": 16,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 11,
+      "hits": 8,
+      "observed_frames": 361,
+      "trace": [
+        4,
+        5,
+        250,
+        5,
+        5,
+        250,
+        6,
+        5,
+        250,
+        7,
+        5,
+        250,
+        8,
+        5,
+        250,
+        9,
+        5,
+        250,
+        10,
+        5,
+        250,
+        11,
+        5,
+        250
+      ],
+      "MP_spent": 0,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 12,
+      "hits": 8,
+      "observed_frames": 329,
+      "trace": [
+        4,
+        10,
+        245,
+        5,
+        10,
+        245,
+        6,
+        10,
+        245,
+        7,
+        10,
+        245,
+        8,
+        10,
+        245,
+        9,
+        10,
+        245,
+        10,
+        10,
+        245,
+        11,
+        10,
+        245
+      ],
+      "MP_spent": 0,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 13,
+      "hits": 8,
+      "observed_frames": 361,
+      "trace": [
+        4,
+        20,
+        235,
+        5,
+        20,
+        235,
+        6,
+        20,
+        235,
+        7,
+        20,
+        235,
+        8,
+        20,
+        235,
+        9,
+        20,
+        235,
+        10,
+        20,
+        235,
+        11,
+        20,
+        235
+      ],
+      "MP_spent": 0,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 14,
+      "hits": 1,
+      "observed_frames": 46,
+      "trace": [
+        4,
+        1,
+        0
+      ],
+      "MP_spent": 4,
+      "RNG_unchanged_during_presentation": true
+    },
+    {
+      "fixture": 15,
+      "hits": 1,
+      "observed_frames": 50,
+      "trace": [
+        4,
+        36,
+        219
+      ],
+      "MP_spent": 16,
+      "RNG_unchanged_during_presentation": true
+    }
+  ],
+  "inputs_sha256": {
+    "chest_motion.c": "99197bd0a0f451688d915b48b583a9feea38bbf63d172024ec1d7bdace646f6e",
+    "field_actions.c": "4cea0091f27dc390ef6181305bc7f824887b92ba276cf63457621f28175fb300",
+    "dungeon.c": "340513e6b552130bc9f49ee00d78f0b3dd8f23db3a3024b292acd0e61ab16327",
+    "dungeon_data.c": "5f9c450b65762b5d97df6b847fba2780fb991bef3ea5368cad3a910cf65bb211",
+    "rpg.c": "f6f23ab3848aa108bf29048ae13746732533db1ead092893cdc3300005bd426b",
+    "rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "battle.c": "6c7b92d078e281dfb6059936aed5fd8411cc2383d00354aaac9ddef1610089d1",
+    "battle_view.c": "b12f2db97cfddf0c81e07b82717c2159af863a3d5b5f3a0788fde2474bedde6e",
+    "dialogue.c": "62259914c226526f076a97fdedc3f01eb8c310a2688fce2181a4429ec3079d0c",
+    "dialogue_data.c": "710eb4f88696fd82ba78193edbdddd6e1494180e6356bb94e541f7ca0e82778d",
+    "dialogue_text_09.c": "75afb12cd057e893dd2f20e3ad351c85435a9a9421ef9272ec7391796c22c0f2",
+    "dialogue_text_10.c": "be47bd2334d29b0afccc33013cf6e7559ae77306ac7e1a91787ba501230e5bdf",
+    "bank_io.c": "534a7caaa9cc1a4ef0fb1f97d1fa39481c1a30e4cdf371bff37976bc03991a03"
+  },
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "8f2075c67cadc9911092b78e7b9c4ae7711127ded934ed04cf72bbec9f6715bf",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "probe_sha256": "8f2075c67cadc9911092b78e7b9c4ae7711127ded934ed04cf72bbec9f6715bf",
+  "scope": "Separate native controller/art/rules probe, not integrated world encounter or campaign test"
+}

@@ -1,0 +1,40 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _scene_map_099                                                  00002000 GR
+  8 _scene_map_100                                                  000022A5 GR
+  8 _scene_map_101                                                  0000254A GR
+  8 _scene_map_102                                                  000027EF GR
+  8 _scene_map_103                                                  00002A94 GR
+  8 _scene_map_104                                                  00002D39 GR
+  8 _scene_map_105                                                  00002FDE GR
+  8 _scene_map_106                                                  00003283 GR
+  8 _scene_map_107                                                  00003528 GR
+  8 _scene_map_108                                                  000037CD GR
+  8 _scene_map_109                                                  00003A72 GR
+  8 _scene_patterns_09                                              00000000 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_106                                  size     3D17   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

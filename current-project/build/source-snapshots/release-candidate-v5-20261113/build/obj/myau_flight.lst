@@ -1,0 +1,608 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module myau_flight
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _bank_copy
+                                     11 	.globl b_scene_actor_hide
+                                     12 	.globl _scene_actor_hide
+                                     13 	.globl b_scene_show
+                                     14 	.globl _scene_show
+                                     15 	.globl _set_sprite_palette
+                                     16 	.globl _set_sprite_data
+                                     17 	.globl _myau_flight_frame
+                                     18 	.globl b_myau_flight_begin
+                                     19 	.globl _myau_flight_begin
+                                     20 	.globl b_myau_flight_tick
+                                     21 	.globl _myau_flight_tick
+                                     22 	.globl b_myau_battle_palette
+                                     23 	.globl _myau_battle_palette
+                                     24 ;--------------------------------------------------------
+                                     25 ; special function registers
+                                     26 ;--------------------------------------------------------
+                                     27 	.area _HRAM
+                                     28 ;--------------------------------------------------------
+                                     29 ; ram data
+                                     30 ;--------------------------------------------------------
+                                     31 	.area _DATA
+    00000000                         32 _myau_flight_frame::
+    00000000                         33 	.ds 2
+    00000002                         34 _returning:
+    00000002                         35 	.ds 1
+                                     36 ;--------------------------------------------------------
+                                     37 ; ram data
+                                     38 ;--------------------------------------------------------
+                                     39 	.area _INITIALIZED
+                                     40 ;--------------------------------------------------------
+                                     41 ; absolute external ram data
+                                     42 ;--------------------------------------------------------
+                                     43 	.area _DABS (ABS)
+                                     44 ;--------------------------------------------------------
+                                     45 ; global & static initialisations
+                                     46 ;--------------------------------------------------------
+                                     47 	.area _HOME
+                                     48 	.area _GSINIT
+                                     49 	.area _GSFINAL
+                                     50 	.area _GSINIT
+                                     51 ;--------------------------------------------------------
+                                     52 ; Home
+                                     53 ;--------------------------------------------------------
+                                     54 	.area _HOME
+                                     55 	.area _HOME
+                                     56 ;--------------------------------------------------------
+                                     57 ; code
+                                     58 ;--------------------------------------------------------
+                                     59 	.area _CODE_132
+                                     60 ;src/myau_flight.c:12: static void draw_flight(uint8_t pose,uint8_t x,uint8_t y) __banked {
+                                     61 ;	---------------------------------
+                                     62 ; Function draw_flight
+                                     63 ; ---------------------------------
+                         00000084    64 	b_draw_flight	= 132
+    00000000                         65 _draw_flight:
+    00000000 E8 F9            [16]   66 	add	sp, #-7
+                                     67 ;src/myau_flight.c:13: const MyauFlightFrame *f=myau_flight_frames+pose;uint8_t i;
+    00000002 F8 0D            [12]   68 	ldhl	sp,	#13
+    00000004 4E               [ 8]   69 	ld	c, (hl)
+    00000005 06 00            [ 8]   70 	ld	b, #0x00
+    00000007 69               [ 4]   71 	ld	l, c
+    00000008 60               [ 4]   72 	ld	h, b
+    00000009 29               [ 8]   73 	add	hl, hl
+    0000000A 09               [ 8]   74 	add	hl, bc
+    0000000B 01r00r00         [12]   75 	ld	bc, #_myau_flight_frames
+    0000000E 09               [ 8]   76 	add	hl, bc
+    0000000F 4D               [ 4]   77 	ld	c, l
+    00000010 7C               [ 4]   78 	ld	a, h
+    00000011 F8 02            [12]   79 	ldhl	sp,	#2
+    00000013 71               [ 8]   80 	ld	(hl), c
+    00000014 23               [ 8]   81 	inc	hl
+    00000015 77               [ 8]   82 	ld	(hl), a
+                                     83 ;src/myau_flight.c:14: x=(uint8_t)(((uint16_t)x*5u)>>3);y=(uint8_t)(((uint16_t)y*5u)>>3);
+    00000016 F8 0E            [12]   84 	ldhl	sp,	#14
+    00000018 4E               [ 8]   85 	ld	c, (hl)
+    00000019 06 00            [ 8]   86 	ld	b, #0x00
+    0000001B 69               [ 4]   87 	ld	l, c
+    0000001C 60               [ 4]   88 	ld	h, b
+    0000001D 29               [ 8]   89 	add	hl, hl
+    0000001E 29               [ 8]   90 	add	hl, hl
+    0000001F 09               [ 8]   91 	add	hl, bc
+    00000020 4D               [ 4]   92 	ld	c, l
+    00000021 44               [ 4]   93 	ld	b, h
+    00000022 CB 38            [ 8]   94 	srl	b
+    00000024 CB 19            [ 8]   95 	rr	c
+    00000026 CB 38            [ 8]   96 	srl	b
+    00000028 CB 19            [ 8]   97 	rr	c
+    0000002A CB 38            [ 8]   98 	srl	b
+    0000002C CB 19            [ 8]   99 	rr	c
+    0000002E F8 0E            [12]  100 	ldhl	sp,	#14
+    00000030 79               [ 4]  101 	ld	a, c
+    00000031 22               [ 8]  102 	ld	(hl+), a
+    00000032 4E               [ 8]  103 	ld	c, (hl)
+    00000033 06 00            [ 8]  104 	ld	b, #0x00
+    00000035 69               [ 4]  105 	ld	l, c
+    00000036 60               [ 4]  106 	ld	h, b
+    00000037 29               [ 8]  107 	add	hl, hl
+    00000038 29               [ 8]  108 	add	hl, hl
+    00000039 09               [ 8]  109 	add	hl, bc
+    0000003A 4D               [ 4]  110 	ld	c, l
+    0000003B 44               [ 4]  111 	ld	b, h
+    0000003C CB 38            [ 8]  112 	srl	b
+    0000003E CB 19            [ 8]  113 	rr	c
+    00000040 CB 38            [ 8]  114 	srl	b
+    00000042 CB 19            [ 8]  115 	rr	c
+    00000044 CB 38            [ 8]  116 	srl	b
+    00000046 CB 19            [ 8]  117 	rr	c
+    00000048 F8 0F            [12]  118 	ldhl	sp,	#15
+    0000004A 71               [ 8]  119 	ld	(hl), c
+                                    120 ;src/myau_flight.c:15: for(i=0;i<f->sprites;++i){
+    0000004B F8 02            [12]  121 	ldhl	sp,#2
+    0000004D 2A               [ 8]  122 	ld	a, (hl+)
+    0000004E 5F               [ 4]  123 	ld	e, a
+    0000004F 56               [ 8]  124 	ld	d, (hl)
+    00000050 21 02 00         [12]  125 	ld	hl, #0x0002
+    00000053 19               [ 8]  126 	add	hl, de
+    00000054 E5               [16]  127 	push	hl
+    00000055 7D               [ 4]  128 	ld	a, l
+    00000056 F8 06            [12]  129 	ldhl	sp,	#6
+    00000058 77               [ 8]  130 	ld	(hl), a
+    00000059 E1               [12]  131 	pop	hl
+    0000005A 7C               [ 4]  132 	ld	a, h
+    0000005B F8 05            [12]  133 	ldhl	sp,	#5
+    0000005D 22               [ 8]  134 	ld	(hl+), a
+    0000005E 36 00            [12]  135 	ld	(hl), #0x00
+    00000060                        136 00108$:
+    00000060 F8 04            [12]  137 	ldhl	sp,#4
+    00000062 2A               [ 8]  138 	ld	a, (hl+)
+    00000063 5F               [ 4]  139 	ld	e, a
+    00000064 2A               [ 8]  140 	ld	a, (hl+)
+    00000065 57               [ 4]  141 	ld	d, a
+    00000066 1A               [ 8]  142 	ld	a, (de)
+    00000067 4F               [ 4]  143 	ld	c, a
+    00000068 7E               [ 8]  144 	ld	a, (hl)
+    00000069 91               [ 4]  145 	sub	a, c
+    0000006A 30 74            [12]  146 	jr	NC, 00118$
+                                    147 ;src/myau_flight.c:16: bank_copy(scene_shared_bytes,131,myau_flight_data+f->offset+(uint16_t)i*4u,4u);
+    0000006C F8 02            [12]  148 	ldhl	sp,#2
+    0000006E 2A               [ 8]  149 	ld	a, (hl+)
+    0000006F 5F               [ 4]  150 	ld	e, a
+    00000070 56               [ 8]  151 	ld	d, (hl)
+    00000071 1A               [ 8]  152 	ld	a, (de)
+    00000072 4F               [ 4]  153 	ld	c, a
+    00000073 13               [ 8]  154 	inc	de
+    00000074 1A               [ 8]  155 	ld	a, (de)
+    00000075 47               [ 4]  156 	ld	b, a
+    00000076 21r00r00         [12]  157 	ld	hl, #_myau_flight_data
+    00000079 09               [ 8]  158 	add	hl, bc
+    0000007A 4D               [ 4]  159 	ld	c, l
+    0000007B 44               [ 4]  160 	ld	b, h
+    0000007C F8 06            [12]  161 	ldhl	sp,	#6
+    0000007E 5E               [ 8]  162 	ld	e, (hl)
+    0000007F AF               [ 4]  163 	xor	a, a
+    00000080 6B               [ 4]  164 	ld	l, e
+    00000081 67               [ 4]  165 	ld	h, a
+    00000082 29               [ 8]  166 	add	hl, hl
+    00000083 29               [ 8]  167 	add	hl, hl
+    00000084 09               [ 8]  168 	add	hl, bc
+    00000085 11 04 00         [12]  169 	ld	de, #0x0004
+    00000088 D5               [16]  170 	push	de
+    00000089 E5               [16]  171 	push	hl
+    0000008A 3E 83            [ 8]  172 	ld	a, #0x83
+    0000008C 11r00r00         [12]  173 	ld	de, #_scene_shared_bytes
+    0000008F CDr00r00         [24]  174 	call	_bank_copy
+                                    175 ;src/myau_flight.c:17: set_sprite_tile(i,84u+scene_shared_bytes[2]);set_sprite_prop(i,scene_shared_bytes[3]);
+    00000092 FAr02r00         [16]  176 	ld	a, (#(_scene_shared_bytes + 2) + 0)
+    00000095 C6 54            [ 8]  177 	add	a, #0x54
+    00000097 5F               [ 4]  178 	ld	e, a
+                                    179 ;../../../.tools/gbdk/include/gb/gb.h:1887: shadow_OAM[nb].tile=tile;
+    00000098 F8 06            [12]  180 	ldhl	sp,	#6
+    0000009A 4E               [ 8]  181 	ld	c, (hl)
+    0000009B AF               [ 4]  182 	xor	a, a
+    0000009C 47               [ 4]  183 	ld	b, a
+    0000009D CB 21            [ 8]  184 	sla	c
+    0000009F CB 10            [ 8]  185 	rl	b
+    000000A1 CB 21            [ 8]  186 	sla	c
+    000000A3 CB 10            [ 8]  187 	rl	b
+    000000A5 21r01r00         [12]  188 	ld	hl,#_shadow_OAM + 1
+    000000A8 09               [ 8]  189 	add	hl,bc
+    000000A9 23               [ 8]  190 	inc	hl
+    000000AA 73               [ 8]  191 	ld	(hl), e
+                                    192 ;src/myau_flight.c:17: set_sprite_tile(i,84u+scene_shared_bytes[2]);set_sprite_prop(i,scene_shared_bytes[3]);
+    000000AB FAr03r00         [16]  193 	ld	a, (#(_scene_shared_bytes + 3) + 0)
+    000000AE F8 01            [12]  194 	ldhl	sp,	#1
+    000000B0 77               [ 8]  195 	ld	(hl), a
+                                    196 ;../../../.tools/gbdk/include/gb/gb.h:1946: shadow_OAM[nb].prop=prop;
+    000000B1 21r01r00         [12]  197 	ld	hl,#_shadow_OAM + 1
+    000000B4 09               [ 8]  198 	add	hl,bc
+    000000B5 23               [ 8]  199 	inc	hl
+    000000B6 23               [ 8]  200 	inc	hl
+    000000B7 5D               [ 4]  201 	ld	e, l
+    000000B8 54               [ 4]  202 	ld	d, h
+    000000B9 F8 01            [12]  203 	ldhl	sp,	#1
+    000000BB 7E               [ 8]  204 	ld	a, (hl)
+    000000BC 12               [ 8]  205 	ld	(de), a
+                                    206 ;src/myau_flight.c:18: move_sprite(i,x+scene_shared_bytes[0],y+scene_shared_bytes[1]);
+    000000BD FAr01r00         [16]  207 	ld	a, (#(_scene_shared_bytes + 1) + 0)
+    000000C0 F8 0F            [12]  208 	ldhl	sp,	#15
+    000000C2 86               [ 8]  209 	add	a, (hl)
+    000000C3 F8 01            [12]  210 	ldhl	sp,	#1
+    000000C5 77               [ 8]  211 	ld	(hl), a
+    000000C6 FAr00r00         [16]  212 	ld	a, (#_scene_shared_bytes + 0)
+    000000C9 F8 0E            [12]  213 	ldhl	sp,	#14
+    000000CB 86               [ 8]  214 	add	a, (hl)
+    000000CC 5F               [ 4]  215 	ld	e, a
+                                    216 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000000CD 21r00r00         [12]  217 	ld	hl, #_shadow_OAM
+    000000D0 09               [ 8]  218 	add	hl, bc
+    000000D1 4D               [ 4]  219 	ld	c, l
+    000000D2 44               [ 4]  220 	ld	b, h
+                                    221 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    000000D3 F8 01            [12]  222 	ldhl	sp,	#1
+    000000D5 7E               [ 8]  223 	ld	a, (hl)
+    000000D6 02               [ 8]  224 	ld	(bc), a
+    000000D7 03               [ 8]  225 	inc	bc
+    000000D8 7B               [ 4]  226 	ld	a, e
+    000000D9 02               [ 8]  227 	ld	(bc), a
+                                    228 ;src/myau_flight.c:15: for(i=0;i<f->sprites;++i){
+    000000DA F8 06            [12]  229 	ldhl	sp,	#6
+    000000DC 34               [12]  230 	inc	(hl)
+    000000DD C3r60r00         [16]  231 	jp	00108$
+    000000E0                        232 00118$:
+    000000E0                        233 00111$:
+                                    234 ;src/myau_flight.c:20: for(;i<40u;++i)move_sprite(i,0,0);
+    000000E0 F8 06            [12]  235 	ldhl	sp,	#6
+    000000E2 7E               [ 8]  236 	ld	a, (hl)
+    000000E3 D6 28            [ 8]  237 	sub	a, #0x28
+    000000E5 30 1D            [12]  238 	jr	NC, 00102$
+                                    239 ;../../../.tools/gbdk/include/gb/gb.h:1973: OAM_item_t * itm = &shadow_OAM[nb];
+    000000E7 7E               [ 8]  240 	ld	a, (hl)
+    000000E8 F8 00            [12]  241 	ldhl	sp,	#0
+    000000EA 22               [ 8]  242 	ld	(hl+), a
+    000000EB AF               [ 4]  243 	xor	a, a
+    000000EC 32               [ 8]  244 	ld	(hl-), a
+    000000ED 7E               [ 8]  245 	ld	a, (hl)
+    000000EE 0E 00            [ 8]  246 	ld	c, #0x00
+    000000F0 87               [ 4]  247 	add	a, a
+    000000F1 CB 11            [ 8]  248 	rl	c
+    000000F3 87               [ 4]  249 	add	a, a
+    000000F4 CB 11            [ 8]  250 	rl	c
+    000000F6 6F               [ 4]  251 	ld	l, a
+    000000F7 61               [ 4]  252 	ld	h, c
+    000000F8 11r00r00         [12]  253 	ld	de, #_shadow_OAM
+    000000FB 19               [ 8]  254 	add	hl, de
+                                    255 ;../../../.tools/gbdk/include/gb/gb.h:1974: itm->y=y, itm->x=x;
+    000000FC AF               [ 4]  256 	xor	a, a
+    000000FD 22               [ 8]  257 	ld	(hl+), a
+    000000FE 77               [ 8]  258 	ld	(hl), a
+                                    259 ;src/myau_flight.c:20: for(;i<40u;++i)move_sprite(i,0,0);
+    000000FF F8 06            [12]  260 	ldhl	sp,	#6
+    00000101 34               [12]  261 	inc	(hl)
+    00000102 18 DC            [12]  262 	jr	00111$
+    00000104                        263 00102$:
+                                    264 ;src/myau_flight.c:21: bank_copy(scene_shared_colors,131,myau_flight_data+f->offset+(uint16_t)f->sprites*4u,64u);
+    00000104 F8 02            [12]  265 	ldhl	sp,#2
+    00000106 2A               [ 8]  266 	ld	a, (hl+)
+    00000107 5F               [ 4]  267 	ld	e, a
+    00000108 3A               [ 8]  268 	ld	a, (hl-)
+    00000109 57               [ 4]  269 	ld	d, a
+    0000010A 1A               [ 8]  270 	ld	a, (de)
+    0000010B 22               [ 8]  271 	ld	(hl+), a
+    0000010C 13               [ 8]  272 	inc	de
+    0000010D 1A               [ 8]  273 	ld	a, (de)
+    0000010E 77               [ 8]  274 	ld	(hl), a
+    0000010F 11r00r00         [12]  275 	ld	de, #_myau_flight_data
+    00000112 3A               [ 8]  276 	ld	a, (hl-)
+    00000113 6E               [ 8]  277 	ld	l, (hl)
+    00000114 67               [ 4]  278 	ld	h, a
+    00000115 19               [ 8]  279 	add	hl, de
+    00000116 33               [ 8]  280 	inc	sp
+    00000117 33               [ 8]  281 	inc	sp
+    00000118 E5               [16]  282 	push	hl
+    00000119 F8 04            [12]  283 	ldhl	sp,#4
+    0000011B 2A               [ 8]  284 	ld	a, (hl+)
+    0000011C 5F               [ 4]  285 	ld	e, a
+    0000011D 2A               [ 8]  286 	ld	a, (hl+)
+    0000011E 57               [ 4]  287 	ld	d, a
+    0000011F 1A               [ 8]  288 	ld	a, (de)
+    00000120 77               [ 8]  289 	ld	(hl), a
+    00000121 7E               [ 8]  290 	ld	a, (hl)
+    00000122 16 00            [ 8]  291 	ld	d, #0x00
+    00000124 87               [ 4]  292 	add	a, a
+    00000125 CB 12            [ 8]  293 	rl	d
+    00000127 87               [ 4]  294 	add	a, a
+    00000128 CB 12            [ 8]  295 	rl	d
+    0000012A 5F               [ 4]  296 	ld	e, a
+    0000012B E1               [12]  297 	pop	hl
+    0000012C E5               [16]  298 	push	hl
+    0000012D 19               [ 8]  299 	add	hl, de
+    0000012E 4D               [ 4]  300 	ld	c, l
+    0000012F 44               [ 4]  301 	ld	b, h
+    00000130 11 40 00         [12]  302 	ld	de, #0x0040
+    00000133 D5               [16]  303 	push	de
+    00000134 C5               [16]  304 	push	bc
+    00000135 3E 83            [ 8]  305 	ld	a, #0x83
+    00000137 11r00r00         [12]  306 	ld	de, #_scene_shared_colors
+    0000013A CDr00r00         [24]  307 	call	_bank_copy
+                                    308 ;src/myau_flight.c:22: set_sprite_palette(0,8,scene_shared_colors);scene_actor_active=1;SHOW_SPRITES;
+    0000013D 11r00r00         [12]  309 	ld	de, #_scene_shared_colors
+    00000140 D5               [16]  310 	push	de
+    00000141 21 00 08         [12]  311 	ld	hl, #0x800
+    00000144 E5               [16]  312 	push	hl
+    00000145 CDr00r00         [24]  313 	call	_set_sprite_palette
+    00000148 E8 04            [16]  314 	add	sp, #4
+    0000014A 21r00r00         [12]  315 	ld	hl, #_scene_actor_active
+    0000014D 36 01            [12]  316 	ld	(hl), #0x01
+    0000014F F0r00            [12]  317 	ldh	a, (_LCDC_REG + 0)
+    00000151 F6 02            [ 8]  318 	or	a, #0x02
+    00000153 E0r00            [12]  319 	ldh	(_LCDC_REG + 0), a
+                                    320 ;src/myau_flight.c:23: }
+    00000155 E8 07            [16]  321 	add	sp, #7
+    00000157 C9               [16]  322 	ret
+                                    323 ;src/myau_flight.c:24: uint8_t myau_flight_begin(uint8_t return_trip) __banked {
+                                    324 ;	---------------------------------
+                                    325 ; Function myau_flight_begin
+                                    326 ; ---------------------------------
+                         00000084   327 	b_myau_flight_begin	= 132
+    00000158                        328 _myau_flight_begin::
+                                    329 ;src/myau_flight.c:25: uint8_t i;if(!scene_show(15,0,0))return 0;
+    00000158 AF               [ 4]  330 	xor	a, a
+    00000159 0F               [ 4]  331 	rrca
+    0000015A F5               [16]  332 	push	af
+    0000015B AF               [ 4]  333 	xor	a, a
+    0000015C 3E 0F            [ 8]  334 	ld	a, #0x0f
+    0000015E F5               [16]  335 	push	af
+    0000015F 33               [ 8]  336 	inc	sp
+    00000160 1Er00            [ 8]  337 	ld	e, #b_scene_show
+    00000162 21r00r00         [12]  338 	ld	hl, #_scene_show
+    00000165 CDr00r00         [24]  339 	call	___sdcc_bcall_ehl
+    00000168 E8 03            [16]  340 	add	sp, #3
+    0000016A B7               [ 4]  341 	or	a,a
+    0000016B C8               [20]  342 	ret	Z
+                                    343 ;src/myau_flight.c:26: scene_actor_hide();HIDE_WIN;returning=!!return_trip;myau_flight_frame=0;
+    0000016C 1Er00            [ 8]  344 	ld	e, #b_scene_actor_hide
+    0000016E 21r00r00         [12]  345 	ld	hl, #_scene_actor_hide
+    00000171 CDr00r00         [24]  346 	call	___sdcc_bcall_ehl
+    00000174 F0r00            [12]  347 	ldh	a, (_LCDC_REG + 0)
+    00000176 E6 DF            [ 8]  348 	and	a, #0xdf
+    00000178 E0r00            [12]  349 	ldh	(_LCDC_REG + 0), a
+    0000017A F8 06            [12]  350 	ldhl	sp,	#6
+    0000017C 7E               [ 8]  351 	ld	a, (hl)
+    0000017D D6 01            [ 8]  352 	sub	a, #0x01
+    0000017F 3E 00            [ 8]  353 	ld	a, #0x00
+    00000181 17               [ 4]  354 	rla
+    00000182 EE 01            [ 8]  355 	xor	a, #0x01
+    00000184 EAr02r00         [16]  356 	ld	(#_returning),a
+    00000187 AF               [ 4]  357 	xor	a, a
+    00000188 21r00r00         [12]  358 	ld	hl, #_myau_flight_frame
+    0000018B 22               [ 8]  359 	ld	(hl+), a
+    0000018C 77               [ 8]  360 	ld	(hl), a
+                                    361 ;src/myau_flight.c:27: for(i=0;i<MYAU_FLIGHT_TILES;++i){bank_copy(scene_shared_bytes,131,myau_flight_data+(uint16_t)i*16u,16u);VBK_REG=1;set_sprite_data(84u+i,1,scene_shared_bytes);}
+    0000018D 0E 00            [ 8]  362 	ld	c, #0x00
+    0000018F                        363 00104$:
+    0000018F 69               [ 4]  364 	ld	l, c
+    00000190 AF               [ 4]  365 	xor	a, a
+    00000191 67               [ 4]  366 	ld	h, a
+    00000192 29               [ 8]  367 	add	hl, hl
+    00000193 29               [ 8]  368 	add	hl, hl
+    00000194 29               [ 8]  369 	add	hl, hl
+    00000195 29               [ 8]  370 	add	hl, hl
+    00000196 11r00r00         [12]  371 	ld	de, #_myau_flight_data
+    00000199 19               [ 8]  372 	add	hl, de
+    0000019A C5               [16]  373 	push	bc
+    0000019B 11 10 00         [12]  374 	ld	de, #0x0010
+    0000019E D5               [16]  375 	push	de
+    0000019F E5               [16]  376 	push	hl
+    000001A0 3E 83            [ 8]  377 	ld	a, #0x83
+    000001A2 11r00r00         [12]  378 	ld	de, #_scene_shared_bytes
+    000001A5 CDr00r00         [24]  379 	call	_bank_copy
+    000001A8 C1               [12]  380 	pop	bc
+    000001A9 3E 01            [ 8]  381 	ld	a, #0x01
+    000001AB E0r00            [12]  382 	ldh	(_VBK_REG + 0), a
+    000001AD 79               [ 4]  383 	ld	a, c
+    000001AE C6 54            [ 8]  384 	add	a, #0x54
+    000001B0 11r00r00         [12]  385 	ld	de, #_scene_shared_bytes
+    000001B3 D5               [16]  386 	push	de
+    000001B4 26 01            [ 8]  387 	ld	h, #0x01
+    000001B6 E5               [16]  388 	push	hl
+    000001B7 33               [ 8]  389 	inc	sp
+    000001B8 F5               [16]  390 	push	af
+    000001B9 33               [ 8]  391 	inc	sp
+    000001BA CDr00r00         [24]  392 	call	_set_sprite_data
+    000001BD E8 04            [16]  393 	add	sp, #4
+    000001BF 0C               [ 4]  394 	inc	c
+    000001C0 79               [ 4]  395 	ld	a, c
+    000001C1 D6 16            [ 8]  396 	sub	a, #0x16
+    000001C3 38 CA            [12]  397 	jr	C, 00104$
+                                    398 ;src/myau_flight.c:28: VBK_REG=0;SPRITES_8x8;return 1;
+    000001C5 AF               [ 4]  399 	xor	a, a
+    000001C6 E0r00            [12]  400 	ldh	(_VBK_REG + 0), a
+    000001C8 F0r00            [12]  401 	ldh	a, (_LCDC_REG + 0)
+    000001CA E6 FB            [ 8]  402 	and	a, #0xfb
+    000001CC E0r00            [12]  403 	ldh	(_LCDC_REG + 0), a
+    000001CE 3E 01            [ 8]  404 	ld	a, #0x01
+                                    405 ;src/myau_flight.c:29: }
+    000001D0 C9               [16]  406 	ret
+                                    407 ;src/myau_flight.c:30: uint8_t myau_flight_tick(void) __banked {
+                                    408 ;	---------------------------------
+                                    409 ; Function myau_flight_tick
+                                    410 ; ---------------------------------
+                         00000084   411 	b_myau_flight_tick	= 132
+    000001D1                        412 _myau_flight_tick::
+                                    413 ;src/myau_flight.c:31: uint8_t updates,pose,x,y;uint16_t last=returning?571u:507u;
+    000001D1 FAr02r00         [16]  414 	ld	a, (#_returning)
+    000001D4 B7               [ 4]  415 	or	a, a
+    000001D5 28 05            [12]  416 	jr	Z, 00114$
+    000001D7 01 3B 02         [12]  417 	ld	bc, #0x023b
+    000001DA 18 03            [12]  418 	jr	00115$
+    000001DC                        419 00114$:
+    000001DC 01 FB 01         [12]  420 	ld	bc, #0x01fb
+    000001DF                        421 00115$:
+                                    422 ;src/myau_flight.c:32: if(myau_flight_frame>=last)return 1;
+    000001DF 21r00r00         [12]  423 	ld	hl, #_myau_flight_frame
+    000001E2 2A               [ 8]  424 	ld	a, (hl+)
+    000001E3 91               [ 4]  425 	sub	a, c
+    000001E4 7E               [ 8]  426 	ld	a, (hl)
+    000001E5 98               [ 4]  427 	sbc	a, b
+    000001E6 38 03            [12]  428 	jr	C, 00102$
+    000001E8 3E 01            [ 8]  429 	ld	a, #0x01
+    000001EA C9               [16]  430 	ret
+    000001EB                        431 00102$:
+                                    432 ;src/myau_flight.c:33: ++myau_flight_frame;
+    000001EB 21r00r00         [12]  433 	ld	hl, #_myau_flight_frame
+    000001EE 34               [12]  434 	inc	(hl)
+    000001EF 20 02            [12]  435 	jr	NZ, 00194$
+    000001F1 23               [ 8]  436 	inc	hl
+    000001F2 34               [12]  437 	inc	(hl)
+    000001F3                        438 00194$:
+                                    439 ;src/myau_flight.c:34: if(myau_flight_frame==last)return 1;
+    000001F3 21r00r00         [12]  440 	ld	hl, #_myau_flight_frame
+    000001F6 7E               [ 8]  441 	ld	a, (hl)
+    000001F7 91               [ 4]  442 	sub	a, c
+    000001F8 20 08            [12]  443 	jr	NZ, 00104$
+    000001FA 23               [ 8]  444 	inc	hl
+    000001FB 7E               [ 8]  445 	ld	a, (hl)
+    000001FC 90               [ 4]  446 	sub	a, b
+    000001FD 20 03            [12]  447 	jr	NZ, 00104$
+    000001FF 3E 01            [ 8]  448 	ld	a, #0x01
+    00000201 C9               [16]  449 	ret
+    00000202                        450 00104$:
+                                    451 ;src/myau_flight.c:35: if(myau_flight_frame==1u){draw_flight(returning?4u:0u,returning?80u:208u,returning?48u:136u);return 0;}
+    00000202 FAr00r00         [16]  452 	ld	a, (_myau_flight_frame)
+    00000205 4F               [ 4]  453 	ld	c, a
+    00000206 21r01r00         [12]  454 	ld	hl, #_myau_flight_frame + 1
+    00000209 46               [ 8]  455 	ld	b, (hl)
+    0000020A 79               [ 4]  456 	ld	a, c
+    0000020B 3D               [ 4]  457 	dec	a
+    0000020C B0               [ 4]  458 	or	a, b
+    0000020D 20 31            [12]  459 	jr	NZ, 00106$
+    0000020F FAr02r00         [16]  460 	ld	a, (#_returning)
+    00000212 B7               [ 4]  461 	or	a, a
+    00000213 28 04            [12]  462 	jr	Z, 00116$
+    00000215 16 30            [ 8]  463 	ld	d, #0x30
+    00000217 18 02            [12]  464 	jr	00117$
+    00000219                        465 00116$:
+    00000219 16 88            [ 8]  466 	ld	d, #0x88
+    0000021B                        467 00117$:
+    0000021B FAr02r00         [16]  468 	ld	a, (#_returning)
+    0000021E B7               [ 4]  469 	or	a, a
+    0000021F 28 04            [12]  470 	jr	Z, 00118$
+    00000221 06 50            [ 8]  471 	ld	b, #0x50
+    00000223 18 02            [12]  472 	jr	00119$
+    00000225                        473 00118$:
+    00000225 06 D0            [ 8]  474 	ld	b, #0xd0
+    00000227                        475 00119$:
+    00000227 FAr02r00         [16]  476 	ld	a, (#_returning)
+    0000022A B7               [ 4]  477 	or	a, a
+    0000022B 3E 04            [ 8]  478 	ld	a, #0x04
+    0000022D 20 01            [12]  479 	jr	NZ, 00121$
+    0000022F AF               [ 4]  480 	xor	a, a
+    00000230                        481 00121$:
+    00000230 58               [ 4]  482 	ld	e, b
+    00000231 D5               [16]  483 	push	de
+    00000232 F5               [16]  484 	push	af
+    00000233 33               [ 8]  485 	inc	sp
+    00000234 1E 84            [ 8]  486 	ld	e, #b_draw_flight
+    00000236 21r00r00         [12]  487 	ld	hl, #_draw_flight
+    00000239 CDr00r00         [24]  488 	call	___sdcc_bcall_ehl
+    0000023C E8 03            [16]  489 	add	sp, #3
+    0000023E AF               [ 4]  490 	xor	a, a
+    0000023F C9               [16]  491 	ret
+    00000240                        492 00106$:
+                                    493 ;src/myau_flight.c:36: if((myau_flight_frame-2u)&7u)return 0;
+    00000240 0B               [ 8]  494 	dec	bc
+    00000241 0B               [ 8]  495 	dec	bc
+    00000242 79               [ 4]  496 	ld	a, c
+    00000243 E6 07            [ 8]  497 	and	a, #0x07
+    00000245 28 02            [12]  498 	jr	Z, 00108$
+    00000247 AF               [ 4]  499 	xor	a, a
+    00000248 C9               [16]  500 	ret
+    00000249                        501 00108$:
+                                    502 ;src/myau_flight.c:37: updates=(uint8_t)((myau_flight_frame-2u)>>3)+1u;pose=(updates-1u)&3u;
+    00000249 CB 38            [ 8]  503 	srl	b
+    0000024B CB 19            [ 8]  504 	rr	c
+    0000024D CB 38            [ 8]  505 	srl	b
+    0000024F CB 19            [ 8]  506 	rr	c
+    00000251 CB 38            [ 8]  507 	srl	b
+    00000253 CB 19            [ 8]  508 	rr	c
+    00000255 0C               [ 4]  509 	inc	c
+    00000256 79               [ 4]  510 	ld	a, c
+    00000257 3D               [ 4]  511 	dec	a
+    00000258 E6 03            [ 8]  512 	and	a, #0x03
+    0000025A 47               [ 4]  513 	ld	b, a
+                                    514 ;src/myau_flight.c:38: if(returning){pose+=4u;y=48u+updates;x=80u-(updates==72u?8u:updates>>3);}
+    0000025B FAr02r00         [16]  515 	ld	a, (#_returning)
+    0000025E B7               [ 4]  516 	or	a, a
+    0000025F 28 1D            [12]  517 	jr	Z, 00110$
+    00000261 04               [ 4]  518 	inc	b
+    00000262 04               [ 4]  519 	inc	b
+    00000263 04               [ 4]  520 	inc	b
+    00000264 04               [ 4]  521 	inc	b
+    00000265 79               [ 4]  522 	ld	a, c
+    00000266 C6 30            [ 8]  523 	add	a, #0x30
+    00000268 57               [ 4]  524 	ld	d, a
+    00000269 79               [ 4]  525 	ld	a, c
+    0000026A D6 48            [ 8]  526 	sub	a, #0x48
+    0000026C 20 04            [12]  527 	jr	NZ, 00122$
+    0000026E 0E 08            [ 8]  528 	ld	c, #0x08
+    00000270 18 06            [12]  529 	jr	00123$
+    00000272                        530 00122$:
+    00000272 CB 39            [ 8]  531 	srl	c
+    00000274 CB 39            [ 8]  532 	srl	c
+    00000276 CB 39            [ 8]  533 	srl	c
+    00000278                        534 00123$:
+    00000278 3E 50            [ 8]  535 	ld	a, #0x50
+    0000027A 91               [ 4]  536 	sub	a, c
+    0000027B 67               [ 4]  537 	ld	h, a
+    0000027C 18 08            [12]  538 	jr	00111$
+    0000027E                        539 00110$:
+                                    540 ;src/myau_flight.c:39: else{x=208u-updates;y=136u-updates;}
+    0000027E 3E D0            [ 8]  541 	ld	a, #0xd0
+    00000280 91               [ 4]  542 	sub	a, c
+    00000281 67               [ 4]  543 	ld	h, a
+    00000282 3E 88            [ 8]  544 	ld	a, #0x88
+    00000284 91               [ 4]  545 	sub	a, c
+    00000285 57               [ 4]  546 	ld	d, a
+    00000286                        547 00111$:
+                                    548 ;src/myau_flight.c:40: draw_flight(pose,x,y);return 0;
+    00000286 5C               [ 4]  549 	ld	e, h
+    00000287 D5               [16]  550 	push	de
+    00000288 C5               [16]  551 	push	bc
+    00000289 33               [ 8]  552 	inc	sp
+    0000028A 1E 84            [ 8]  553 	ld	e, #b_draw_flight
+    0000028C 21r00r00         [12]  554 	ld	hl, #_draw_flight
+    0000028F CDr00r00         [24]  555 	call	___sdcc_bcall_ehl
+    00000292 E8 03            [16]  556 	add	sp, #3
+    00000294 AF               [ 4]  557 	xor	a, a
+                                    558 ;src/myau_flight.c:41: }
+    00000295 C9               [16]  559 	ret
+                                    560 ;src/myau_flight.c:43: void myau_battle_palette(uint8_t restore) __banked {
+                                    561 ;	---------------------------------
+                                    562 ; Function myau_battle_palette
+                                    563 ; ---------------------------------
+                         00000084   564 	b_myau_battle_palette	= 132
+    00000296                        565 _myau_battle_palette::
+                                    566 ;src/myau_flight.c:45: if(restore)bank_copy(scene_shared_colors,131,myau_flight_data+MYAU_BATTLE_PALETTE_OFFSET,64u);
+    00000296 F8 06            [12]  567 	ldhl	sp,	#6
+    00000298 7E               [ 8]  568 	ld	a, (hl)
+    00000299 B7               [ 4]  569 	or	a, a
+    0000029A 28 12            [12]  570 	jr	Z, 00110$
+    0000029C 11 40 00         [12]  571 	ld	de, #0x0040
+    0000029F D5               [16]  572 	push	de
+    000002A0 11rE0r03         [12]  573 	ld	de, #(_myau_flight_data + 992)
+    000002A3 D5               [16]  574 	push	de
+    000002A4 3E 83            [ 8]  575 	ld	a, #0x83
+    000002A6 11r00r00         [12]  576 	ld	de, #_scene_shared_colors
+    000002A9 CDr00r00         [24]  577 	call	_bank_copy
+    000002AC 18 14            [12]  578 	jr	00104$
+                                    579 ;src/myau_flight.c:46: else for(i=0;i<32u;++i)scene_shared_colors[i]=0x7c00u;
+    000002AE                        580 00110$:
+    000002AE 01r00r00         [12]  581 	ld	bc, #_scene_shared_colors+0
+    000002B1 1E 00            [ 8]  582 	ld	e, #0x00
+    000002B3                        583 00105$:
+    000002B3 6B               [ 4]  584 	ld	l, e
+    000002B4 AF               [ 4]  585 	xor	a, a
+    000002B5 67               [ 4]  586 	ld	h, a
+    000002B6 29               [ 8]  587 	add	hl, hl
+    000002B7 09               [ 8]  588 	add	hl, bc
+    000002B8 AF               [ 4]  589 	xor	a, a
+    000002B9 22               [ 8]  590 	ld	(hl+), a
+    000002BA 36 7C            [12]  591 	ld	(hl), #0x7c
+    000002BC 1C               [ 4]  592 	inc	e
+    000002BD 7B               [ 4]  593 	ld	a, e
+    000002BE D6 20            [ 8]  594 	sub	a, #0x20
+    000002C0 38 F1            [12]  595 	jr	C, 00105$
+    000002C2                        596 00104$:
+                                    597 ;src/myau_flight.c:47: set_sprite_palette(0,8,scene_shared_colors);
+    000002C2 11r00r00         [12]  598 	ld	de, #_scene_shared_colors
+    000002C5 D5               [16]  599 	push	de
+    000002C6 21 00 08         [12]  600 	ld	hl, #0x800
+    000002C9 E5               [16]  601 	push	hl
+    000002CA CDr00r00         [24]  602 	call	_set_sprite_palette
+    000002CD E8 04            [16]  603 	add	sp, #4
+                                    604 ;src/myau_flight.c:48: }
+    000002CF C9               [16]  605 	ret
+                                    606 	.area _CODE_132
+                                    607 	.area _INITIALIZER
+                                    608 	.area _CABS (ABS)

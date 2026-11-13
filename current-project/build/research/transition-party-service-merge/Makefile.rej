@@ -1,0 +1,9 @@
+@@ -6,7 +6,7 @@
+ # Expansion integration; verified-baseline remains a separate build.
+ SOURCES := src/assets.c src/assets_sprites.c src/font.c src/main.c src/bank_io.c \
+  src/ui.c src/game_ui.c src/game_flow.c src/game_field.c src/game_sequence.c src/game_movie.c src/field_actions.c src/save.c src/save_slots.c src/save_ui.c src/rpg.c src/rpg_data.c src/events.c src/events_data.c \
+- src/services.c src/dialogue.c src/dialogue_data.c src/world.c src/world_rules.c \
++ src/services.c src/inventory_menu.c src/dialogue.c src/dialogue_data.c src/world.c src/world_rules.c \
+  src/battle.c src/battle_view.c src/enemy_art.c src/chest_art.c src/vehicle_art.c \
+  src/battle_scene.c src/battle_scene_data.c $(wildcard src/battle_scene_bank_*.c) \
+  src/boss_motion.c src/boss_effects_bank_254.c src/boss_effects_bank_255.c \

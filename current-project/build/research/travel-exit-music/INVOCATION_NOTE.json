@@ -1,0 +1,4 @@
+{
+  "issue": "Initial v3 test invocation mistakenly retained --expect-mismatch, the negative-control-only option. All 28 native route sequences ran, and the final assertion correctly rejected the absent expected defect. Re-run without this option is the positive verification.",
+  "production_failure": false
+}

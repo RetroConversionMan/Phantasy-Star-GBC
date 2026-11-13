@@ -1,0 +1,485 @@
+--- a/src/battle_view.c
++++ b/src/battle_view.c
+@@ -120,6 +120,7 @@
+ #define NEXT_RETURN 32u
+ #define NEXT_VICTORY_CLEAR 33u
+ #define NEXT_VICTORY_UPLOAD 34u
++#define NEXT_CHEST_CLOSE 35u
+ #define PROMPT_CHEST 1u
+ #define PROMPT_FULL 2u
+ #define PROMPT_ABANDON 3u
+@@ -487,14 +488,20 @@
+     case NEXT_PROMPT_CHEST:prompt(PROMPT_CHEST);break;
+     case NEXT_MONEY:
+         if(b->money_reward)say(0xb648,NEXT_FOUND,0,0,b->money_reward);else resume(NEXT_FOUND);break;
+-    case NEXT_FOUND:if(b->item_reward)say(0xb592,NEXT_GIFT,0,b->item_reward,0);else resume(NEXT_DONE);break;
+-    case NEXT_GIFT:if(b->item_pending)say(0xb671,NEXT_PROMPT_FULL,0,b->item_pending,0);else resume(NEXT_DONE);break;
++    case NEXT_FOUND:if(b->item_reward)say(0xb592,NEXT_GIFT,0,b->item_reward,0);else resume(NEXT_CHEST_CLOSE);break;
++    case NEXT_GIFT:
++        /*28EE calls Inventory_AddItem only after the found-item text returns. */
++        result=rpg_battle_open_chest(party,b);
++        if(result==RPG_FULL)say(0xb671,NEXT_PROMPT_FULL,0,b->item_pending,0);
++        else if(result==RPG_OK){audio_command(0xb3);resume(NEXT_CHEST_CLOSE);}
++        else literal("CHEST UNAVAILABLE","",NEXT_CHEST_CLOSE);
++        break;
+     case NEXT_PROMPT_FULL:prompt(PROMPT_FULL);break;
+     case NEXT_PROMPT_ABANDON:prompt(PROMPT_ABANDON);break;
+     case NEXT_REPLACE:battle_view_choice=0;item_screen(1);break;
+     case NEXT_APPLY_REPLACE:
+         result=rpg_battle_replace_reward(party,b,replacement_slot);
+-        if(result==RPG_OK)say(0xb6ad,NEXT_DONE,0,b->item_reward,0);else resume(NEXT_REPLACE);
++        if(result==RPG_OK){audio_command(0xb3);say(0xb6ad,NEXT_CHEST_CLOSE,0,b->item_reward,0);}else resume(NEXT_REPLACE);
+         break;
+     case NEXT_TALK_REPLY:say(talk_texts[b->talk_index<19u?b->talk_index:0u],NEXT_DONE,character_for_message(),0,0);break;
+     case NEXT_DEFEAT:say(0xbd23,NEXT_DONE,0,0,0);break;
+@@ -514,6 +521,14 @@
+     case NEXT_ITEM_LINE:
+         if(field_action.lines[item_line].sound_after)audio_command(field_action.lines[item_line].sound_after);
+         ++item_line;item_next_line();break;
++    case NEXT_CHEST_CLOSE:
++        /*28EE hides the chest before3464's six row-restoration waits, including
++         * an empty chest and an abandoned full-inventory award. Keep B3 alive
++         * across this boundary before the outer scene can restore its score. */
++#ifdef __SDCC
++        HIDE_WIN;HIDE_SPRITES;
++#endif
++        close_delay(6u,NEXT_DONE);break;
+     case NEXT_DONE:
+         if(b->outcome==RPG_ESCAPED||b->outcome==RPG_TALKED){
+             /* 319E restores ten enemy rows (exceptDarkFalz) and four party
+@@ -712,9 +727,16 @@
+ #endif
+             if(id&CHEST_MOTION_SOUND)audio_command(chest_motion.visual==0x3eu?0xb1:0xb2);
+             if(id&CHEST_MOTION_DONE){
+-                err=rpg_battle_open_chest(party,&battle_view_battle);battle_view_chest_pending=0;
++                /* Resolve source trap/money after actor animation, but stage
++                 * the item until B592 completes. The pure rules API retains
++                 * its immediate whole-chest contract for standalone callers. */
++                id=battle_view_battle.item_reward;battle_view_battle.item_reward=0;
++                err=rpg_battle_open_chest(party,&battle_view_battle);
++                battle_view_battle.item_reward=id;
++                if(err==RPG_OK&&id){battle_view_battle.item_pending=id;battle_view_battle.rewards_claimed=0;}
++                battle_view_chest_pending=0;
+                 if(err!=RPG_OK&&err!=RPG_FULL)literal("CHEST UNAVAILABLE","",NEXT_DONE);
+-                else if(!battle_view_battle.money_reward&&!battle_view_battle.item_reward)say(0xb665,NEXT_DONE,0,0,0);
++                else if(!battle_view_battle.money_reward&&!battle_view_battle.item_reward)say(0xb665,NEXT_CHEST_CLOSE,0,0,0);
+                 else resume(NEXT_MONEY);return battle_view_result;
+             }
+         }
+@@ -763,7 +785,7 @@
+         }else if(prompt_kind==PROMPT_FULL){
+             if(yes)say(0xb68c,NEXT_REPLACE,0,0,0);else say(0xb6c1,NEXT_PROMPT_ABANDON,0,battle_view_battle.item_pending,0);
+         }else{
+-            if(yes){id=battle_view_battle.item_pending;rpg_battle_decline_chest(&battle_view_battle);say(0xb6d0,NEXT_DONE,0,id,0);}
++            if(yes){id=battle_view_battle.item_pending;rpg_battle_decline_chest(&battle_view_battle);say(0xb6d0,NEXT_CHEST_CLOSE,0,id,0);}
+             else say(0xb68c,NEXT_REPLACE,0,0,0);
+         }
+         return battle_view_result;
+--- a/src/events.c
++++ b/src/events.c
+@@ -13,7 +13,7 @@
+ };
+ 
+ static const EventAction *emit(EventState *s,uint8_t kind,uint16_t dialogue,uint8_t stage) {
+-    s->stage=stage;s->action.kind=kind;s->action.dialogue_id=dialogue;
++    s->stage=stage;s->action.kind=kind;s->action.dialogue_id=dialogue;s->action.sound=0;
+     return &s->action;
+ }
+ static const EventAction *finish(EventState *s) {return emit(s,EVENT_DONE,0,0);}
+@@ -32,7 +32,7 @@
+ }
+ static const EventAction *give(EventState *s,uint8_t item,uint8_t next) {
+     s->pending_item=item;s->action.item=item;s->resume_stage=next;
+-    if(rpg_add_item(s->rpg,item)==RPG_OK) return resume(s);
++    if(rpg_add_item(s->rpg,item)==RPG_OK) {resume(s);s->action.sound=0xb3;return &s->action;}
+     return ask(s,0xb671,200);
+ }
+ static const EventAction *select_replacement(EventState *s) {
+@@ -293,7 +293,7 @@
+     case 205:
+         /* Original overwrite follows the discarded-item message; count/order remain unchanged. */
+         if(rpg_replace_item(s->rpg,s->selected_slot,s->pending_item)!=RPG_OK) return select_replacement(s);
+-        s->action.item=s->pending_item;return say(s,0xb6ad,203);
++        s->action.item=s->pending_item;say(s,0xb6ad,203);s->action.sound=0xb3;return &s->action;
+     default:return emit(s,EVENT_UNIMPLEMENTED,0,0);
+     }
+ }
+@@ -428,7 +428,7 @@
+         s->secrets_requests=0;
+         if(!has(s,ItemID_RoadPass)) {
+             s->rpg->money-=price;rpg_add_item(s->rpg,ItemID_RoadPass);
+-            s->action.item=ItemID_RoadPass;return say(s,0x146,0);
++            s->action.item=ItemID_RoadPass;say(s,0x146,0);s->action.sound=0xb3;return &s->action;
+         }
+         /* Having the pass restarts the refusal sequence, without charging or duplicating. */
+     }
+--- a/src/events.h
++++ b/src/events.h
+@@ -32,7 +32,7 @@
+ typedef struct {
+     uint8_t kind;
+     uint16_t dialogue_id,number;
+-    uint8_t item,target,a,b,character;
++    uint8_t item,target,a,b,character,sound;
+ } EventAction;
+ typedef struct {
+     uint8_t options,item_reward,flag_index,status_snapshot[3],noah_hp;
+--- a/src/game_flow.c
++++ b/src/game_flow.c
+@@ -56,6 +56,7 @@
+ #define STATE_CUTSCENE 18u
+ void apply_event(void) RPG_BANKED {
+     EventAction *a=&game_events.action;
++    if(a->sound){audio_command(a->sound);a->sound=0;}
+     if(a->kind==EVENT_DONE) resume_walk();
+     else if(a->kind==EVENT_MENU) {menu_choice=0;menu_screen();}
+     else if(a->kind==EVENT_BATTLE) {
+--- /dev/null
++++ b/src/inventory_menu.c
+@@ -0,0 +1,70 @@
++/* Original ItemAction_Equip/Drop chronology; no additional static RAM. */
++#pragma bank 19
++#include <gb/gb.h>
++#include <string.h>
++#include "inventory_menu.h"
++#include "game_field.h"
++#include "game_ui.h"
++#include "dialogue.h"
++#include "ui.h"
++extern RPGState game_rpg;
++extern uint8_t screen_state,party_choice;
++void show_dialogue(uint16_t);
++void inventory_dialogue_overlay(void);
++enum { ITEM_CLOSE=1,ITEM_DROP,ITEM_EQUIP_TEXT,ITEM_EQUIP_DENIED };
++static void close_rows(uint8_t rows) {while(rows--)vsync();}
++static void finish(uint8_t refresh) {
++    HIDE_WIN;close_rows(6u);
++    if(refresh)rpg_refresh_stats(&game_rpg);
++    if(refresh&&(game_rpg.joined_mask&14u))close_rows(9u);
++    field_active=0;inventory_screen();
++}
++static void start(uint8_t slot) {
++    memset(&field_action,0,sizeof(field_action));field_active=2;
++    field_action.a=slot;field_action.item=game_rpg.inventory[slot];field_action.character=255;
++}
++void inventory_equip_begin(uint8_t slot) RPG_BANKED {
++    start(slot);
++    if(!rpg_item_equippers(field_action.item)) {
++        field_action.target=ITEM_CLOSE;show_dialogue(0xb5f0);return;
++    }
++    if(!(game_rpg.joined_mask&14u)){inventory_equip_select(0u);return;}
++    party_choice=0;party_screen();
++}
++void inventory_equip_select(uint8_t character) RPG_BANKED {
++    uint8_t result;
++    if(character==255u){
++        rpg_refresh_stats(&game_rpg);
++        if(game_rpg.joined_mask&14u)close_rows(9u);
++        field_active=0;inventory_screen();return;
++    }
++    field_action.character=character;
++    result=rpg_equip_stage(&game_rpg,field_action.a,character);
++    field_action.target=result==RPG_OK?ITEM_EQUIP_TEXT:ITEM_EQUIP_DENIED;
++    show_dialogue(result==RPG_OK?0xb2b6:result==RPG_DEAD?0xb730:0xb5de);
++}
++void inventory_drop_begin(uint8_t slot) RPG_BANKED {
++    start(slot);field_action.target=rpg_item_discardable(field_action.item)?ITEM_DROP:ITEM_CLOSE;
++    show_dialogue(field_action.target==ITEM_DROP?0xb2c2:0xb6de);
++}
++void inventory_action_advance(void) RPG_BANKED {
++    uint8_t i,item;char name[9];RPGCharacter *p;
++    if(field_action.target==ITEM_EQUIP_TEXT){
++        /*3707 presents the three original equipment names, then explicitly
++         * waits for a fresh action edge even after B2B6's terminator wait. */
++        p=&game_rpg.party[field_action.character];ui_panel(40u,13u);
++        for(i=0;i<3u;++i){
++            item=i==0u?p->weapon:i==1u?p->armor:p->shield;
++            dialogue_item_name(item,name);ui_text(3u,2u+i*2u,name);
++        }
++        inventory_dialogue_overlay();screen_state=STATE_EQUIPMENT_PANEL;return;
++    }
++    if(field_action.target==ITEM_DROP)rpg_remove_item(&game_rpg,field_action.a);
++    finish(field_action.target==ITEM_EQUIP_DENIED);
++}
++void inventory_equipment_done(void) RPG_BANKED {
++    HIDE_WIN;close_rows(8u);close_rows(6u);
++    rpg_equip_finish(&game_rpg,field_action.a);
++    if(game_rpg.joined_mask&14u)close_rows(9u);
++    field_active=0;inventory_screen();
++}
+--- /dev/null
++++ b/src/inventory_menu.h
+@@ -0,0 +1,10 @@
++#ifndef PS_INVENTORY_MENU_H
++#define PS_INVENTORY_MENU_H
++#include "rpg.h"
++#define STATE_EQUIPMENT_PANEL 30u
++void inventory_equip_begin(uint8_t slot) RPG_BANKED;
++void inventory_equip_select(uint8_t character) RPG_BANKED;
++void inventory_drop_begin(uint8_t slot) RPG_BANKED;
++void inventory_action_advance(void) RPG_BANKED;
++void inventory_equipment_done(void) RPG_BANKED;
++#endif
+--- a/src/main.c
++++ b/src/main.c
+@@ -30,6 +30,7 @@
+ #include "game_sequence.h"
+ #include "game_movie.h"
+ #include "save_ui.h"
++#include "inventory_menu.h"
+ 
+ #define STATE_TITLE 0u
+ #define STATE_WALK 1u
+@@ -314,6 +315,9 @@
+     }
+     dialogue_stream_begin(&dialogue,0);dialogue_page();
+ }
++void inventory_dialogue_overlay(void) {
++    ui_text(1,9,dialogue.lines[0]);ui_text(1,10,dialogue.lines[1]);
++}
+ void start_movie_text(uint16_t id) {
+     dialogue_open(&dialogue,id);dialogue_stream_begin(&dialogue,0);dialogue_page();screen_state=STATE_MOVIE_TEXT;
+ }
+@@ -335,7 +339,18 @@
+ }
+ void apply_service(void) {
+     ServiceAction *a=&game_service.action;
++    uint8_t remaining,previous,keys;
+     service_selector=0;
++    while(a->kind==SERVICE_EFFECT||a->kind==SERVICE_WAIT){
++        if(a->sound){audio_command(a->sound);a->sound=0;}
++        if(a->kind==SERVICE_WAIT){
++            remaining=a->target;previous=joypad();
++            do {vsync();keys=joypad();if((keys&~previous)&(J_A|J_B))break;previous=keys;}while(!a->target||--remaining);
++            last_keys=keys;
++        }
++        service_advance(&game_service);
++    }
++    if(a->sound){audio_command(a->sound);a->sound=0;}
+     if(a->kind==SERVICE_DONE) {service_active=0;resume_walk();}
+     else if(a->kind==SERVICE_INVALID) {service_active=0;notice("SERVICE NOT PORTED",STATE_WALK);}
+     else if(a->kind==SERVICE_DIALOGUE||a->kind==SERVICE_YES_NO) show_dialogue(a->dialogue_id);
+@@ -458,6 +473,8 @@
+                 else if(menu_choice==6u)help_screen();
+                 else {party_choice=0;party_purpose=PARTY_MAGIC_CASTER;party_screen();}
+             }
++        } else if(screen_state==STATE_EQUIPMENT_PANEL) {
++            if(pressed&(J_A|J_B))inventory_equipment_done();
+         } else if(screen_state==STATE_HELP||screen_state==STATE_STATUS) {
+             if(pressed&(J_A|J_B|J_START)) menu_screen();
+         } else if(screen_state==STATE_NOTICE) {
+@@ -465,6 +482,7 @@
+         } else if(screen_state==STATE_DIALOGUE) {
+             if(dialogue_tick(0,pressed&(J_A|J_B))) {
+                 if(!dialogue.done) dialogue_page();
++                else if(field_active==2u)inventory_action_advance();
+                 else if(field_active)game_field_advance();
+                 else if(service_active) {
+                     if(service_selector) service_selection();
+@@ -517,8 +535,8 @@
+             else if(pressed&J_UP) {item_action=item_action?item_action-1u:2u;item_screen();}
+             else if(pressed&J_DOWN) {item_action=(item_action+1u)%3u;item_screen();}
+             else if(pressed&J_A) {
+-                if(item_action==2u) result(rpg_drop_item(&game_rpg,item_slot),STATE_INVENTORY);
+-                else if(item_action==1u){party_choice=0;party_purpose=0;party_screen();}
++                if(item_action==2u) inventory_drop_begin(item_slot);
++                else if(item_action==1u){party_purpose=0;inventory_equip_begin(item_slot);}
+                 else if(game_rpg.inventory[item_slot]==ItemID_Cola||game_rpg.inventory[item_slot]==ItemID_Burger) {
+                     party_choice=0;party_purpose=PARTY_FIELD_ITEM;party_screen();
+                 } else {
+@@ -529,6 +547,7 @@
+         } else if(screen_state==STATE_PARTY) {
+             if(pressed&J_B) {
+                 if(service_active) {service_select(&game_service,255);apply_service();}
++                else if(field_active==2u)inventory_equip_select(255u);
+                 else if(party_purpose==PARTY_MAGIC_TARGET)game_field_spell(magic_caster,selected_field_spell,255);
+                 else if(party_purpose==PARTY_MAGIC_CASTER)menu_screen();
+                 else if(party_purpose==PARTY_FIELD_ITEM)game_field_item(item_slot,255);
+@@ -539,6 +558,7 @@
+                 party_screen();
+             } else if(pressed&J_A) {
+                 if(service_active) {service_select(&game_service,party_choice);apply_service();continue;}
++                if(field_active==2u){inventory_equip_select(party_choice);continue;}
+                 if(party_purpose==PARTY_MAGIC_CASTER) {
+                     magic_caster=party_choice;magic_choice=0;
+                     if(!(game_rpg.party[magic_caster].status&1u)||!rpg_spell_option(&game_rpg,magic_caster,0,0))
+--- a/src/rpg.c
++++ b/src/rpg.c
+@@ -114,9 +114,14 @@
+     s->inventory[slot] = item;
+     return RPG_OK;
+ }
+-uint8_t rpg_equip(RPGState *s, uint8_t slot, uint8_t c) RPG_BANKED {
++uint8_t rpg_item_equippers(uint8_t item) RPG_BANKED {
++    return item && item < 64u ? rpg_item_flags[item] >> 4 : 0u;
++}
++uint8_t rpg_equip_stage(RPGState *s, uint8_t slot, uint8_t c) RPG_BANKED {
+     uint8_t item, flags, old;
+-    RPGCharacter *p;
++    /* GBDK4.5.0 otherwise drops the computed party pointer when the staged
++     * variant returns before removal/refresh. Keep that pointer materialized. */
++    RPGCharacter * volatile p;
+     if (!joined(s, c) || s->inventory_count > RPG_INVENTORY_SIZE || slot >= s->inventory_count) return RPG_INVALID;
+     if (!living(s, c)) return RPG_DEAD;
+     item = s->inventory[slot];
+@@ -128,9 +133,16 @@
+     else if ((flags & 3u) == 1u) { old = p->armor; p->armor = item; }
+     else { old = p->shield; p->shield = item; }
+     s->inventory[slot] = old;
+-    if (!old) rpg_remove_item(s, slot);
++    return RPG_OK;
++}
++void rpg_equip_finish(RPGState *s, uint8_t slot) RPG_BANKED {
++    if (slot < s->inventory_count && !s->inventory[slot]) rpg_remove_item(s, slot);
+     rpg_refresh_stats(s);
+-    return RPG_OK;
++}
++uint8_t rpg_equip(RPGState *s, uint8_t slot, uint8_t c) RPG_BANKED {
++    uint8_t result = rpg_equip_stage(s, slot, c);
++    if (result == RPG_OK) rpg_equip_finish(s, slot);
++    return result;
+ }
+ uint8_t rpg_shop_option(uint8_t shop, uint8_t option, uint8_t *item, uint16_t *price) RPG_BANKED {
+     const uint8_t *p;
+--- a/src/rpg.h
++++ b/src/rpg.h
+@@ -78,6 +78,11 @@
+ uint8_t rpg_find_item(const RPGState *state, uint8_t item) RPG_BANKED;
+ uint8_t rpg_item_discardable(uint8_t item) RPG_BANKED;
+ uint8_t rpg_drop_item(RPGState *state, uint8_t slot) RPG_BANKED;
++uint8_t rpg_item_equippers(uint8_t item) RPG_BANKED;
++/* ItemAction_Equip swaps before B2B6; zero-slot removal and UpdateCharStats
++ * follow its equipment panel, button wait and text close. */
++uint8_t rpg_equip_stage(RPGState *state, uint8_t slot, uint8_t character) RPG_BANKED;
++void rpg_equip_finish(RPGState *state, uint8_t slot) RPG_BANKED;
+ uint8_t rpg_equip(RPGState *state, uint8_t slot, uint8_t character) RPG_BANKED;
+ uint8_t rpg_replace_item(RPGState *state, uint8_t slot, uint8_t item) RPG_BANKED;
+ uint8_t rpg_shop_option(uint8_t shop, uint8_t option, uint8_t *item, uint16_t *price) RPG_BANKED;
+--- a/src/services.c
++++ b/src/services.c
+@@ -7,10 +7,11 @@
+ enum {
+     DONE=0,H_ENTER,H_CHOOSE,H_FULL,H_RETURN,H_COST,H_HEALED,H_ANOTHER,
+     C_ENTER,C_CHOOSE,C_COST,C_CAST,C_AGAIN,C_ALIVE,C_BLESS,C_GUIDE,C_EXP,
+-    B_ENTER,B_CHOOSE,B_AGAIN,S_CHOOSE,S_COST,S_AGAIN,BS_CHOOSE
++    B_ENTER,B_CHOOSE,B_AGAIN,S_CHOOSE,S_COST,S_AGAIN,BS_CHOOSE,
++    H_FILL,C_REVIVED,C_ALONE_WAIT
+ };
+ static const ServiceAction *emit(ServiceState *s,uint8_t kind,uint16_t dialogue,uint8_t stage) {
+-    s->stage=stage;s->action.kind=kind;s->action.dialogue_id=dialogue;
++    s->stage=stage;s->action.kind=kind;s->action.dialogue_id=dialogue;s->action.sound=0;
+     s->action.target=s->shop;s->action.character=s->character;
+     return &s->action;
+ }
+@@ -54,17 +55,26 @@
+ }
+ const ServiceAction *service_advance(ServiceState *s) RPG_BANKED {
+     uint8_t result;
+-    if(s->action.kind!=SERVICE_DIALOGUE) return &s->action;
++    if(s->action.kind!=SERVICE_DIALOGUE && s->action.kind!=SERVICE_EFFECT && s->action.kind!=SERVICE_WAIT) return &s->action;
+     switch(s->stage) {
+     case DONE:return done(s);
+     case H_RETURN:return hospital_return(s);
+     case H_FULL:return multiple(s)?hospital_choose(s):say(s,0xb964,DONE);
++    case H_FILL:
++        s->events->rpg->party[s->character].hp=s->events->rpg->party[s->character].max_hp;
++        s->events->rpg->party[s->character].mp=s->events->rpg->party[s->character].max_mp;
++        return say(s,0xb938,H_HEALED);
+     case H_HEALED:return multiple(s)?ask(s,0xb90a,H_ANOTHER):done(s);
+     case C_CAST:
+         result=rpg_revive(s->events->rpg,s->character);
+-        return say(s,result==RPG_OK?0xb9c4:0xbd9f,C_AGAIN);
++        return say(s,result==RPG_OK?0xb9c4:0xbd9f,result==RPG_OK?C_REVIVED:C_AGAIN);
++    case C_REVIVED:
++        emit(s,SERVICE_WAIT,0,C_AGAIN);s->action.sound=0xc5;s->action.target=30;return &s->action;
+     case C_AGAIN:return ask(s,0xb9e5,C_AGAIN);
+-    case C_ALIVE:return multiple(s)?ask(s,0xb9e5,C_AGAIN):church_exit(s);
++    case C_ALIVE:
++        if(multiple(s))return ask(s,0xb9e5,C_AGAIN);
++        emit(s,SERVICE_WAIT,0,C_ALONE_WAIT);s->action.target=0;return &s->action;
++    case C_ALONE_WAIT:return church_exit(s);
+     case C_BLESS:return say(s,0xba04,C_GUIDE);
+     case C_GUIDE:s->exp_character=0;return church_experience(s);
+     case C_EXP:return church_experience(s);
+@@ -83,8 +93,11 @@
+     case H_ENTER:return yes?hospital_choose(s):say(s,0xb951,DONE);
+     case H_COST:
+         if(!yes)return hospital_return(s);
+-        result=rpg_hospital(s->events->rpg,s->character);
+-        return say(s,result==RPG_OK?0xb938:0xbd57,result==RPG_OK?H_HEALED:DONE);
++        /*2999 commits the quoted (8-bit wrapped) fee before C1, then heals.
++         * No target or quote can change while this confirmation is active. */
++        if(r->money<s->action.number)return say(s,0xbd57,DONE);
++        r->money-=s->action.number;
++        emit(s,SERVICE_EFFECT,0,H_FILL);s->action.sound=0xc1;return &s->action;
+     case H_ANOTHER:return yes?hospital_choose(s):say(s,0xb951,DONE);
+     case C_ENTER:return yes?church_choose(s):church_exit(s);
+     case C_COST:return yes?say(s,0xb9b0,C_CAST):ask(s,0xb9e5,C_AGAIN);
+@@ -103,7 +116,7 @@
+     RPGState *r=s->events->rpg;
+     RPGCharacter *p;
+     const EventAction *event_action;
+-    uint8_t result,item;
++    uint8_t result,item,count;
+     uint16_t price;
+     if(s->action.kind==SERVICE_PARTY) {
+         if(selection==255u)return s->stage==H_CHOOSE?say(s,0xb951,DONE):church_exit(s);
+@@ -126,13 +139,13 @@
+         if(item==ItemID_Secrets) {
+             event_action=event_buy_secret(s->events,s->shop,selection);
+             s->action.item=event_action->item;
+-            return say(s,event_action->dialogue_id,DONE);
++            say(s,event_action->dialogue_id,DONE);s->action.sound=event_action->sound;return &s->action;
+         }
+-        result=rpg_buy(r,s->shop,selection);
++        count=r->inventory_count;result=rpg_buy(r,s->shop,selection);
+         if(result==RPG_FULL)return say(s,0xb813,DONE);
+         if(result==RPG_NO_MONEY)return say(s,0xbd57,DONE);
+         if(result!=RPG_OK)return emit(s,SERVICE_INVALID,0,DONE);
+-        return ask(s,0xb807,B_AGAIN);
++        ask(s,0xb807,B_AGAIN);if(r->inventory_count!=count)s->action.sound=0xb3;return &s->action;
+     } else if(s->action.kind==SERVICE_ITEMS) {
+         if(selection==255u)return say(s,0xb7e3,DONE);
+         if(selection>=r->inventory_count)return &s->action;
+--- a/src/services.h
++++ b/src/services.h
+@@ -8,11 +8,13 @@
+ #define SERVICE_GOODS 4u
+ #define SERVICE_ITEMS 5u
+ #define SERVICE_BUY_SELL 6u
++#define SERVICE_EFFECT 7u /* Emit sound, then advance without a frame delay. */
++#define SERVICE_WAIT 8u /* Emit sound, wait target frames (0=input), then advance. */
+ #define SERVICE_INVALID 255u
+ typedef struct {
+     uint8_t kind;
+     uint16_t dialogue_id,number;
+-    uint8_t item,character,target;
++    uint8_t item,character,target,sound;
+ } ServiceAction;
+ typedef struct {
+     EventState *events;
+--- a/Makefile
++++ b/Makefile
+@@ -6,7 +6,7 @@
+ # Expansion integration; verified-baseline remains a separate build.
+ SOURCES := src/assets.c src/assets_sprites.c src/font.c src/main.c src/bank_io.c \
+  src/ui.c src/game_ui.c src/game_flow.c src/game_field.c src/game_sequence.c src/game_movie.c src/field_actions.c src/save.c src/save_slots.c src/save_ui.c src/rpg.c src/rpg_data.c src/events.c src/events_data.c \
+- src/services.c src/dialogue.c src/dialogue_data.c src/world.c src/world_rules.c \
++ src/services.c src/inventory_menu.c src/dialogue.c src/dialogue_data.c src/world.c src/world_rules.c \
+  src/battle.c src/battle_view.c src/enemy_art.c src/chest_art.c src/vehicle_art.c \
+  src/battle_scene.c src/battle_scene_data.c $(wildcard src/battle_scene_bank_*.c) \
+  src/boss_motion.c src/boss_effects_bank_254.c src/boss_effects_bank_255.c \
+--- a/tests/test_services.c
++++ b/tests/test_services.c
+@@ -9,8 +9,9 @@
+ #define CHECK(x) do{assert(x);++checks;}while(0)
+ static void fresh(void){rpg_new_game(&r);event_init(&e,&r);}
+ static void begin(uint8_t type,uint8_t shop){a=service_begin(&s,&e,type,shop);}
+-static void next(void){a=service_advance(&s);}
+-static void yes(void){a=service_respond(&s,1);}
++static void effects(void){while(a->kind==SERVICE_EFFECT||a->kind==SERVICE_WAIT)a=service_advance(&s);}
++static void next(void){a=service_advance(&s);effects();}
++static void yes(void){a=service_respond(&s,1);effects();}
+ static void no(void){a=service_respond(&s,0);}
+ static void select_(uint8_t v){a=service_select(&s,v);}
+ int main(void){

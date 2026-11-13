@@ -1,0 +1,126 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/dungeon-motion-profile-standing-wait/src/main.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_data.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_upload.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_data.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_view.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_upload.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_production_data.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_production_tables.c:
+build/verification/dungeon-motion-profile-standing-wait/src/bank_io.c:
+build/verification/dungeon-motion-profile-standing-wait/src/font.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio_tables.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio_data.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio_low_62.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio_low_63.c:
+build/verification/dungeon-motion-profile-standing-wait/src/audio_irq.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_209.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_210.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_211.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_212.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_214.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_215.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_216.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_217.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_218.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_219.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_220.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_221.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_222.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_223.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_224.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_225.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_226.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_227.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_228.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_229.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_230.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_231.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_232.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_233.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_234.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_235.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_236.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_237.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_238.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_239.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_240.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_241.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_242.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_243.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_244.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_245.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_246.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_247.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_248.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_249.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_250.c:
+build/verification/dungeon-motion-profile-standing-wait/src/dungeon_motion_bank_251.c:
+{
+  "passed": true,
+  "diagnostic_header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "e62b634e14159207ff41736ea7e156b09db8038dd0b0f0324abd44fcb8e12992",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "production_reference": "30fcd2fe47b494532202629444ace2aa25cc881fec2ea8273a70258f29bad9f5",
+  "original_uploader_sha256": "2d1778fc6b6459a5259e340ba8fa88cf1d58103f087a6a437018e986c6ec8970",
+  "diagnostic_uploader_sha256": "1c1802973b60dc9bd9f6ca71f123f6a05a0b0ad4c1c21a2248d221338c0b581d",
+  "extra_production_WRAM": 0,
+  "native_blocks_experiment": false,
+  "continuous_caller": true,
+  "CPU_cycles_per_physical_frame": 140448,
+  "source_palette": 4,
+  "summary": {
+    "source_path": {
+      "poses": 40,
+      "mean_dirty_patterns": 119.55,
+      "mean_frame_equivalents": 4.29277,
+      "mean_cycles": {
+        "palette_and_entry": 20826.1,
+        "begin_cache": 302,
+        "block_expansion": 55871.5,
+        "variant_conversion": 142375.1,
+        "pattern_uploads": 156366.7,
+        "map_packing": 77606.2,
+        "map_uploads": 86491.9,
+        "final_VBlank_wait": 59160,
+        "commit_palette_and_registers": 3912
+      },
+      "mean_gap_after_pose_cycles": 18438.153846153848
+    },
+    "same_image": {
+      "poses": 4,
+      "mean_dirty_patterns": 0,
+      "mean_frame_equivalents": 3.2752499999999998,
+      "mean_cycles": {
+        "palette_and_entry": 2604,
+        "begin_cache": 302,
+        "block_expansion": 73830,
+        "variant_conversion": 146298,
+        "pattern_uploads": 32236,
+        "map_packing": 93962,
+        "map_uploads": 72711,
+        "final_VBlank_wait": 34148,
+        "commit_palette_and_registers": 3912
+      }
+    }
+  },
+  "notes": [
+    "Isolated diagnostic copy only; production sources are unchanged. Symbol exports and zero-instruction profiling labels add no emulated instructions.",
+    "Measured emulator CPU cycle counter includes actual score IRQ and HBlank DMA stalls.",
+    "This diagnostic is not a replacement for source-image/PPU correctness tests.",
+    "Experimental free-running caller omits the second VBlank wait after the uploader has already committed a complete image.",
+    "Narrower production proposal retains the extra final VBlank for every frame0, preserving standing before callbacks."
+  ]
+}

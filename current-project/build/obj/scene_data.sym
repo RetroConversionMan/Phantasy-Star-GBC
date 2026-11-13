@@ -1,0 +1,227 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _scene_assets                                                   00000000 GR
+    _scene_map_000                                                  ******** GX
+    _scene_map_001                                                  ******** GX
+    _scene_map_002                                                  ******** GX
+    _scene_map_003                                                  ******** GX
+    _scene_map_004                                                  ******** GX
+    _scene_map_005                                                  ******** GX
+    _scene_map_006                                                  ******** GX
+    _scene_map_007                                                  ******** GX
+    _scene_map_008                                                  ******** GX
+    _scene_map_009                                                  ******** GX
+    _scene_map_010                                                  ******** GX
+    _scene_map_011                                                  ******** GX
+    _scene_map_012                                                  ******** GX
+    _scene_map_013                                                  ******** GX
+    _scene_map_014                                                  ******** GX
+    _scene_map_015                                                  ******** GX
+    _scene_map_016                                                  ******** GX
+    _scene_map_017                                                  ******** GX
+    _scene_map_018                                                  ******** GX
+    _scene_map_019                                                  ******** GX
+    _scene_map_020                                                  ******** GX
+    _scene_map_021                                                  ******** GX
+    _scene_map_022                                                  ******** GX
+    _scene_map_023                                                  ******** GX
+    _scene_map_024                                                  ******** GX
+    _scene_map_025                                                  ******** GX
+    _scene_map_026                                                  ******** GX
+    _scene_map_027                                                  ******** GX
+    _scene_map_028                                                  ******** GX
+    _scene_map_029                                                  ******** GX
+    _scene_map_030                                                  ******** GX
+    _scene_map_031                                                  ******** GX
+    _scene_map_032                                                  ******** GX
+    _scene_map_033                                                  ******** GX
+    _scene_map_034                                                  ******** GX
+    _scene_map_035                                                  ******** GX
+    _scene_map_036                                                  ******** GX
+    _scene_map_037                                                  ******** GX
+    _scene_map_038                                                  ******** GX
+    _scene_map_039                                                  ******** GX
+    _scene_map_040                                                  ******** GX
+    _scene_map_041                                                  ******** GX
+    _scene_map_042                                                  ******** GX
+    _scene_map_043                                                  ******** GX
+    _scene_map_044                                                  ******** GX
+    _scene_map_045                                                  ******** GX
+    _scene_map_046                                                  ******** GX
+    _scene_map_047                                                  ******** GX
+    _scene_map_048                                                  ******** GX
+    _scene_map_049                                                  ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_map_050                                                  ******** GX
+    _scene_map_051                                                  ******** GX
+    _scene_map_052                                                  ******** GX
+    _scene_map_053                                                  ******** GX
+    _scene_map_054                                                  ******** GX
+    _scene_map_055                                                  ******** GX
+    _scene_map_056                                                  ******** GX
+    _scene_map_057                                                  ******** GX
+    _scene_map_058                                                  ******** GX
+    _scene_map_059                                                  ******** GX
+    _scene_map_060                                                  ******** GX
+    _scene_map_061                                                  ******** GX
+    _scene_map_062                                                  ******** GX
+    _scene_map_063                                                  ******** GX
+    _scene_map_064                                                  ******** GX
+    _scene_map_065                                                  ******** GX
+    _scene_map_066                                                  ******** GX
+    _scene_map_067                                                  ******** GX
+    _scene_map_068                                                  ******** GX
+    _scene_map_069                                                  ******** GX
+    _scene_map_070                                                  ******** GX
+    _scene_map_071                                                  ******** GX
+    _scene_map_072                                                  ******** GX
+    _scene_map_073                                                  ******** GX
+    _scene_map_074                                                  ******** GX
+    _scene_map_075                                                  ******** GX
+    _scene_map_076                                                  ******** GX
+    _scene_map_077                                                  ******** GX
+    _scene_map_078                                                  ******** GX
+    _scene_map_079                                                  ******** GX
+    _scene_map_080                                                  ******** GX
+    _scene_map_081                                                  ******** GX
+    _scene_map_082                                                  ******** GX
+    _scene_map_083                                                  ******** GX
+    _scene_map_084                                                  ******** GX
+    _scene_map_085                                                  ******** GX
+    _scene_map_086                                                  ******** GX
+    _scene_map_087                                                  ******** GX
+    _scene_map_088                                                  ******** GX
+    _scene_map_089                                                  ******** GX
+    _scene_map_090                                                  ******** GX
+    _scene_map_091                                                  ******** GX
+    _scene_map_092                                                  ******** GX
+    _scene_map_093                                                  ******** GX
+    _scene_map_094                                                  ******** GX
+    _scene_map_095                                                  ******** GX
+    _scene_map_096                                                  ******** GX
+    _scene_map_097                                                  ******** GX
+    _scene_map_098                                                  ******** GX
+    _scene_map_099                                                  ******** GX
+    _scene_map_100                                                  ******** GX
+    _scene_map_101                                                  ******** GX
+    _scene_map_102                                                  ******** GX
+    _scene_map_103                                                  ******** GX
+    _scene_map_104                                                  ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_map_105                                                  ******** GX
+    _scene_map_106                                                  ******** GX
+    _scene_map_107                                                  ******** GX
+    _scene_map_108                                                  ******** GX
+    _scene_map_109                                                  ******** GX
+    _scene_map_110                                                  ******** GX
+    _scene_map_111                                                  ******** GX
+    _scene_map_112                                                  ******** GX
+    _scene_map_113                                                  ******** GX
+    _scene_map_114                                                  ******** GX
+    _scene_map_115                                                  ******** GX
+    _scene_map_116                                                  ******** GX
+    _scene_map_117                                                  ******** GX
+    _scene_map_118                                                  ******** GX
+    _scene_map_119                                                  ******** GX
+    _scene_map_120                                                  ******** GX
+    _scene_map_121                                                  ******** GX
+    _scene_map_122                                                  ******** GX
+    _scene_map_123                                                  ******** GX
+    _scene_map_124                                                  ******** GX
+    _scene_map_125                                                  ******** GX
+    _scene_map_126                                                  ******** GX
+    _scene_map_127                                                  ******** GX
+    _scene_map_128                                                  ******** GX
+    _scene_map_129                                                  ******** GX
+    _scene_map_130                                                  ******** GX
+    _scene_map_131                                                  ******** GX
+    _scene_map_132                                                  ******** GX
+    _scene_map_133                                                  ******** GX
+    _scene_map_134                                                  ******** GX
+    _scene_map_135                                                  ******** GX
+    _scene_map_136                                                  ******** GX
+    _scene_map_137                                                  ******** GX
+    _scene_map_138                                                  ******** GX
+    _scene_map_139                                                  ******** GX
+    _scene_map_140                                                  ******** GX
+    _scene_map_141                                                  ******** GX
+    _scene_map_142                                                  ******** GX
+    _scene_map_143                                                  ******** GX
+    _scene_map_144                                                  ******** GX
+    _scene_map_145                                                  ******** GX
+    _scene_map_146                                                  ******** GX
+    _scene_map_147                                                  ******** GX
+    _scene_map_148                                                  ******** GX
+    _scene_map_149                                                  ******** GX
+    _scene_map_150                                                  ******** GX
+    _scene_map_151                                                  ******** GX
+    _scene_map_152                                                  ******** GX
+    _scene_map_153                                                  ******** GX
+    _scene_map_154                                                  ******** GX
+    _scene_map_155                                                  ******** GX
+    _scene_map_156                                                  ******** GX
+    _scene_map_157                                                  ******** GX
+    _scene_map_158                                                  ******** GX
+    _scene_map_159                                                  ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _scene_map_160                                                  ******** GX
+    _scene_map_161                                                  ******** GX
+    _scene_map_162                                                  ******** GX
+    _scene_map_163                                                  ******** GX
+    _scene_map_164                                                  ******** GX
+    _scene_map_165                                                  ******** GX
+    _scene_map_166                                                  ******** GX
+    _scene_map_167                                                  ******** GX
+    _scene_map_168                                                  ******** GX
+  8 _scene_pattern_pools                                            000003F6 GR
+    _scene_patterns_00                                              ******** GX
+    _scene_patterns_01                                              ******** GX
+    _scene_patterns_02                                              ******** GX
+    _scene_patterns_03                                              ******** GX
+    _scene_patterns_04                                              ******** GX
+    _scene_patterns_05                                              ******** GX
+    _scene_patterns_06                                              ******** GX
+    _scene_patterns_07                                              ******** GX
+    _scene_patterns_08                                              ******** GX
+    _scene_patterns_09                                              ******** GX
+    _scene_patterns_10                                              ******** GX
+    _scene_patterns_11                                              ******** GX
+    _scene_patterns_12                                              ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_13                                   size      41D   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

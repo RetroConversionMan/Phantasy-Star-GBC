@@ -1,0 +1,55 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _scene_actor_062                                                00000000 GR
+  8 _scene_actor_063                                                00000290 GR
+  8 _scene_actor_064                                                00000550 GR
+  8 _scene_actor_065                                                00000810 GR
+  8 _scene_actor_066                                                00000AD0 GR
+  8 _scene_actor_067                                                00000D90 GR
+  8 _scene_actor_068                                                00001050 GR
+  8 _scene_actor_069                                                00001310 GR
+  8 _scene_actor_070                                                000015D0 GR
+  8 _scene_actor_071                                                00001890 GR
+  8 _scene_actor_072                                                00001B20 GR
+  8 _scene_actor_073                                                00001DE0 GR
+  8 _scene_actor_074                                                000020A0 GR
+  8 _scene_actor_075                                                00002220 GR
+  8 _scene_actor_076                                                000023A0 GR
+  8 _scene_actor_077                                                000025E8 GR
+  8 _scene_actor_078                                                000027B8 GR
+  8 _scene_actor_079                                                00002988 GR
+  8 _scene_actor_080                                                00002B58 GR
+  8 _scene_actor_081                                                00002D28 GR
+  8 _scene_actor_082                                                00002EF8 GR
+  8 _scene_actor_083                                                000030C8 GR
+  8 _scene_actor_084                                                00003298 GR
+  8 _scene_actor_085                                                00003468 GR
+  8 _scene_actor_086                                                00003638 GR
+  8 _scene_actor_087                                                00003808 GR
+  8 _scene_actor_088                                                000039D8 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_113                                  size     3BA8   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

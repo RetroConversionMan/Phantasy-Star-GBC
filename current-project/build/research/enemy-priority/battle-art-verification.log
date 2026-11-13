@@ -1,0 +1,110 @@
+{
+  "assets": 468,
+  "graphics_bytes": 4791200,
+  "oam_records": 149725,
+  "clip_cases": 15,
+  "source_composites": 144,
+  "source_sfx_records": 74,
+  "map_remaps": 176,
+  "animation_assets": 2693,
+  "palette_bytes": 576256,
+  "flash_palette_bytes": 821504,
+  "source_flash_pixels": 477556,
+  "weapon_assets": 5846,
+  "weapon_pattern_bytes": 532320,
+  "weapon_oam_records": 16635,
+  "weapon_source_pixels": 200954,
+  "magic_assets": 104,
+  "magic_pattern_bytes": 4512,
+  "magic_source_pixels": 1845,
+  "screenshots": [
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/palma-sworm.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-5.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-49.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-60.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-70.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-74.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-1.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-19.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-58.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-60.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-72.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/weapon-73.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-13.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-23.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-47.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-49.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-56.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-57.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/enemy-magic-65.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-motion-72.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-motion-73.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/gold-phase-0.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/gold-phase-1.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/gold-phase-2.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/gold-blue-outcome.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/gold-blue-cleared.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-72.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-72-cleared.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-73.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-scenes/boss-73-cleared.png"
+  ],
+  "boss_poses": 39,
+  "boss_patch_cells": 30,
+  "gold_phase_cases": [
+    {
+      "phase": 0,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "phase": 1,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "phase": 2,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "flash_command": 15,
+      "white": 1,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "flash_command": 15,
+      "white": 0,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "flash_command": 16,
+      "white": 1,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    },
+    {
+      "flash_command": 16,
+      "white": 0,
+      "physical_frames": 5,
+      "mixed_frames": 0
+    }
+  ],
+  "passed": true,
+  "rom_sha256": "dee6a047ca806ffcc83cffc1c0d608d3312257e17addd8326c9053c04a5eb704",
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "dee6a047ca806ffcc83cffc1c0d608d3312257e17addd8326c9053c04a5eb704",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "scope": "All extracted initial-pose/floor variants native VRAM/OAM and source background preservation, original boss clearing, window clipping, source composition and sound-descriptor lookup. Includes all extracted physical attack pose assets; source motion timing is verified separately. Includes104ordinary enemy magic records,39boss poses and30Dark Falz patch-cell writes/restoration with exact existing palettes. Actor choreography, remaining victory/death details and campaign completion have separate evidence."
+}

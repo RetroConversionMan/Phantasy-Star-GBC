@@ -1,0 +1,70 @@
+XL4
+H B areas A global symbols
+M vehicle_cycle
+S _audio_command_before_tick Ref00000000
+S b_vehicle_palette_cycle Ref00000000
+S .__.ABS. Def00000000
+S b_vehicle_cycle_world_tick Def00000076
+S b_vehicle_cycle_step Def00000076
+S ___sdcc_bcall_ehl Ref00000000
+S _vehicle_palette_cycle Ref00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 2 flags 0 addr 0
+S _vehicle_cycle Def00000000
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_118 size 71 flags 0 addr 0
+S _vehicle_cycle_step Def00000000
+S _vehicle_cycle_world_tick Def00000043
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 02 00
+T 00 00 00 00
+R 00 00 02 00
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 F8 08 7E B7 28 05 7E D6 0E 38 02
+R 00 00 08 00
+T 0B 00 00 00
+R 00 00 08 00
+T 0B 00 00 00 AF C9
+R 00 00 08 00
+T 0D 00 00 00
+R 00 00 08 00
+T 0D 00 00 00 F8 08 7E D6 08 3E 01 28 01 AF
+R 00 00 08 00
+T 17 00 00 00
+R 00 00 08 00
+T 17 00 00 00 4F CB 41 20 05 F8 09 7E B7 C8
+R 00 00 08 00
+T 21 00 00 00
+R 00 00 08 00
+T 21 00 00 00 F8 06 2A 5F 56 6B 62 23 35 7E 07 38
+R 00 00 08 00
+T 2D 00 00 00 02 AF C9
+R 00 00 08 00
+T 30 00 00 00
+R 00 00 08 00
+T 30 00 00 00 36 03 1A 3C 12 D6 03 38 02 AF 12
+R 00 00 08 00
+T 3B 00 00 00
+R 00 00 08 00
+T 3B 00 00 00 79 B7 3E D1 C0 3E D0 C9
+R 00 00 08 00
+T 43 00 00 00
+R 00 00 08 00
+T 43 00 00 00 F8 07 3A 57 7E 5F D5 11 00 00 D5 1E
+R 00 00 08 00 00 0C 02 00
+T 4F 00 00 00 00 00 00 00 21 00 00 CD 00 00 E8 04
+R 00 00 08 00 0B 04 04 00 00 09 08 00 02 0C 05 00
+T 58 00 00 00 B7 C8 CD 00 00 FA 00 00 F5 33 F8 07
+R 00 00 08 00 02 07 00 00 00 0A 02 00
+T 64 00 00 00 7E F5 33 1E 00 00 00 00 21 00 00 CD
+R 00 00 08 00 0B 08 01 00 02 0D 06 00
+T 6D 00 00 00 00 00 E1 C9
+R 00 00 08 00 02 04 05 00

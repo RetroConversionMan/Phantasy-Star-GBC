@@ -1,0 +1,9 @@
+{
+  "checks": 80,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false
+}

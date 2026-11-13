@@ -1,0 +1,43 @@
+{
+  "changed": {
+    "31-00-00": {
+      "source": true,
+      "native": true
+    },
+    "32-00-73": {
+      "source": true,
+      "native": true
+    }
+  },
+  "unchanged_source_and_native_images": 167,
+  "before_patterns": 6749,
+  "after_patterns": 6620,
+  "changed_production_files": {
+    "src/boss_effects_bank_255.c": "0429eccd159dc4101d37d25e22b355af86b277d86eab915c0cf676b119566532",
+    "src/scene_bank_097.c": "ff2ccf3392b476311083c022eee039975ae06d4c6a43e633504f56e5477b3ac3",
+    "src/scene_bank_098.c": "d60db86a7fd58a7bc8cbf3a63d1c364327305d2496b4882434af35a2ccb3e5a5",
+    "src/scene_bank_099.c": "57fa2a28317e79493143d699d46e02d0a643cd42913053d9e950b5d6e94eb6ca",
+    "src/scene_bank_100.c": "804299ebb79b30f17ea31bfe940729625e27d4321de3131e1c93080d4501959e",
+    "src/scene_bank_101.c": "fdeee5efe687e08fd6015991e6c1779cfe409ec7fb5c700832d5e55a6f89d085",
+    "src/scene_bank_102.c": "35f7e667125ece7a2b86d34cefc5b6f53c83017a4ab887f63e96d62b6af1abad",
+    "src/scene_bank_103.c": "2b10dede4b5b0df7c52e8cefde010f2501caaba5fc5135a372a0c8b0a18ccf4d",
+    "src/scene_bank_104.c": "027e8bc9ffca6d7cd3b81ffb454e78dcebbd9eb6a490bbfa6202782667ea99e1",
+    "src/scene_bank_105.c": "04454dcd7ce9e899747bed7962960442ce587d459f6ddd81e0cfa7d916c77f81",
+    "src/scene_bank_106.c": "a6a9849e27cb32b6872f110404cc1308ff1ba22beb3e24523cfe70fd5b5a6ba6",
+    "src/scene_bank_107.c": "41b91fcc1143356e78d0d73397fbe2570800a21c6f8b96eef30090f6a37beaba",
+    "src/scene_bank_108.c": "a1d191a4b690056400a3e1d17a72a5f13be9d722df4bfab003e2ac262e76bd96",
+    "src/scene_bank_109.c": "98088ee73e1a9238aa5be628e05fc74188f5957499405a33dae865bf0ac038c6",
+    "src/scene_bank_110.c": "60d84da85fee6e4ea26f4191e58fd66e288f86a38569e08e6316188c6414f018",
+    "src/scene_bank_192.c": "08013cd6be124680af0da9746208afbc350a53dbb70e915c61a94e9f28798f73",
+    "src/scene_data.c": "2b9473f3bb766d3399c5422ae1fd78ec0b7bc3dd7efe5175664db62c8bd404ee",
+    "src/scene_data.h": "df9f278a055ea7717d1e3e04fb938f849f713ee9aa7f2b093b14de970edad26a"
+  },
+  "passed": true,
+  "previous_art_source_RGB_changes": 12740,
+  "previous_art_native_RGB_changes": 5066,
+  "native_probe_sha256": "dee56ee8ea1870937626efd5bba93f613673179bde7e04c8c07112f8a4dd650b",
+  "native_art_report": "build/verification/battle-scenes/report.json",
+  "independent_report": "build/verification/dark-falz-art-independent/report.json",
+  "flash_mixed_frames": 0,
+  "full_main_integration_pending": true
+}

@@ -1,0 +1,103 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    _WX_REG                                                         ******** GX
+    _WY_REG                                                         ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    _audio_command                                                  ******** GX
+    _background_changed                                             ******** GX
+  8 _black_tile                                                     000001C8 R
+    _display_off                                                    ******** GX
+    _dungeon_motion_active                                          ******** GX
+    _dungeon_motion_door_image                                      ******** GX
+    _dungeon_motion_external_view                                   ******** GX
+    _dungeon_motion_home                                            ******** GX
+    _dungeon_motion_invalidate                                      ******** GX
+    _dungeon_motion_palette_muted                                   ******** GX
+    _dungeon_motion_render                                          ******** GX
+    _dungeon_motion_render_image                                    ******** GX
+    _dungeon_motion_scene                                           ******** GX
+    _dungeon_motion_sequence_frame                                  ******** GX
+    _dungeon_motion_turn_sequence                                   ******** GX
+  8 _dungeon_present_door                                           000000C1 GR
+  8 _dungeon_present_fall                                           000004C7 GR
+  8 _dungeon_present_frame                                          0000004C GR
+  8 _dungeon_present_prepare                                        0000000A GR
+  8 _dungeon_present_scene_fall                                     000004D0 GR
+  8 _dungeon_present_sequence                                       00000068 GR
+  8 _dungeon_present_transition                                     00000125 GR
+  8 _dungeon_present_turn                                           0000009A GR
+    _dungeon_render_palette                                         ******** GX
+  8 _fall                                                           0000028E R
+  8 _fill_map                                                       00000187 R
+    _game_transition_fade_in                                        ******** GX
+    _game_transition_fade_out                                       ******** GX
+    _game_transition_vint16                                         ******** GX
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_fade_begin                                               ******** GX
+    _scene_palette_background                                       ******** GX
+    _scene_palette_capture                                          ******** GX
+    _scene_palette_commit                                           ******** GX
+    _scene_shared_colors                                            ******** GX
+    _set_bkg_data                                                   ******** GX
+    _set_bkg_palette                                                ******** GX
+    _vmemset                                                        ******** GX
+    _vsync                                                          ******** GX
+  8 _wait_frames                                                    00000000 R
+    b_audio_command                                                 ******** GX
+    b_dungeon_motion_door_image                                     ******** GX
+    b_dungeon_motion_render                                         ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_dungeon_motion_render_image                                   ******** GX
+    b_dungeon_motion_scene                                          ******** GX
+    b_dungeon_motion_sequence_frame                                 ******** GX
+    b_dungeon_motion_turn_sequence                                  ******** GX
+    b_dungeon_present_door                                      =   00000011 G
+    b_dungeon_present_fall                                      =   00000011 G
+    b_dungeon_present_frame                                     =   00000011 G
+    b_dungeon_present_prepare                                   =   00000011 G
+    b_dungeon_present_scene_fall                                =   00000011 G
+    b_dungeon_present_sequence                                  =   00000011 G
+    b_dungeon_present_transition                                =   00000011 G
+    b_dungeon_present_turn                                      =   00000011 G
+    b_game_transition_fade_in                                       ******** GX
+    b_game_transition_fade_out                                      ******** GX
+    b_game_transition_vint16                                        ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_scene_palette_capture                                         ******** GX
+    b_scene_palette_commit                                          ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_17                                   size      4DA   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

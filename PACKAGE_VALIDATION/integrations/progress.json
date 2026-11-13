@@ -1,0 +1,119 @@
+{
+  "dungeon": {
+    "suite": "dungeon",
+    "script": "verify_dungeon_emulator.py",
+    "script_sha256": "a7b341bf72783de5752dc17c7f0a62825110010a785c08bd06397ee474fbc1d2",
+    "returncode": 0,
+    "seconds": 2.43,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "field": {
+    "suite": "field",
+    "script": "verify_field_integration.py",
+    "script_sha256": "fe0a1326c1bd0458aff1c2c3d455cc99fc98f15b0f3dd157fd5bc5b0acd18561",
+    "returncode": 0,
+    "seconds": 2.82,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "battle": {
+    "suite": "battle",
+    "script": "verify_integrated_battle.py",
+    "script_sha256": "f16b78893c1d113989e3c2d3a5d2117086a86f2d20743040e0f904cd868b1822",
+    "returncode": 0,
+    "seconds": 2.93,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "expansion": {
+    "suite": "expansion",
+    "script": "verify_expansion.py",
+    "script_sha256": "ed8de7302a0e0b1992f110c9093d65abf50f7df2cb838e4369ca6e2c44245a5b",
+    "returncode": 0,
+    "seconds": 3.36,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "audio": {
+    "suite": "audio",
+    "script": "verify_integrated_audio.py",
+    "script_sha256": "1078245e4ab476821db0537d4e3de29c3715d65a6a5a3f79ca5a5e772f2d015d",
+    "returncode": 0,
+    "seconds": 1.46,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "chest": {
+    "suite": "chest",
+    "script": "verify_chest_menu_integration.py",
+    "script_sha256": "e22e9be57237b7c5b4c37cfa39784eba4eb0139b2199a6d060b624629fd8ba7a",
+    "returncode": 0,
+    "seconds": 2.38,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "travel": {
+    "suite": "travel",
+    "script": "verify_travel_integration.py",
+    "script_sha256": "cf66f22dd5abe353c0dc24b7a4c8f50b0b0e034ac5cd86db2ca2a3a13d171853",
+    "returncode": 0,
+    "seconds": 4.26,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "dialogue": {
+    "suite": "dialogue",
+    "script": "verify_dialogue_input.py",
+    "script_sha256": "72c7fa0e85501aeeb2c65d33b7791cb9b3b0026a9e0aedf404986f7053fc51e7",
+    "returncode": 0,
+    "seconds": 1.76,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "battle-vehicle": {
+    "suite": "battle-vehicle",
+    "script": "verify_battle_vehicle_integration.py",
+    "script_sha256": "71bac783b012dec38dcfc4bcfd43ddbcd0f6e8475eb60d2dd7b63b3e90a42aa2",
+    "returncode": 0,
+    "seconds": 2.42,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "save": {
+    "suite": "save",
+    "script": "verify_save_ui.py",
+    "script_sha256": "d01649a6657c7f2d1f473825efc67f85c8d4d9ca16c65d4c94e2e36649d9b98f",
+    "returncode": 0,
+    "seconds": 6.8,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "services": {
+    "suite": "services",
+    "script": "verify_services_emulator.py",
+    "script_sha256": "620825df6821e8264c39a29029625e1d7793d96a4c9587dd2f7d3f2335cf4465",
+    "returncode": 0,
+    "seconds": 5.6,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "enemy-magic": {
+    "suite": "enemy-magic",
+    "script": "verify_enemy_magic_integration.py",
+    "script_sha256": "fabb9caa5cd0bfe5931a3f410e14abfefef028552a43553450df06edf9b2a7bf",
+    "returncode": 0,
+    "seconds": 4.48,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  },
+  "story": {
+    "suite": "story",
+    "script": "verify_story_ui.py",
+    "script_sha256": "4befb9dfba9ad17e4f6af6c3f29d0ffbec707a5027101a2a229ef52b0d5a2f6a",
+    "returncode": 0,
+    "seconds": 11.71,
+    "passed": true,
+    "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+  }
+}

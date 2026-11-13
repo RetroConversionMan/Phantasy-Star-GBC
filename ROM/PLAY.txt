@@ -1,0 +1,29 @@
+PHANTASY STAR — NATIVE GAME BOY COLOR PORT
+
+Open Phantasy Star.gbc in a Game Boy Color emulator.
+4 MiB ROM, MBC5, 8 KiB battery-backed RAM; Game Boy Color required.
+Keep your emulator's battery-save file when moving your game.
+
+GAME BOY CONTROLS
+D-pad: move or select.
+A: choose or advance dialogue.
+B: return from menus; A or B confirms the highlighted Yes/No answer.
+A or B while exploring: open the field menu at a movement boundary.
+Start: begin or use the menu/resume shortcut.
+Select: save after the current movement step.
+
+PYBOY KEYBOARD DEFAULTS
+Arrow keys: D-pad. A: A button. S: B button.
+Enter: Start. Backspace: Select.
+
+This build restores missing opening, transformation, and ending dialogue.
+All 88 observed dialogue screens passed the documented emulator audit.
+The ending completed through credits back to the title.
+Late-game checks use save fixtures, not a fresh complete campaign replay.
+The corrected build has not yet been verified on physical hardware.
+
+Original Phantasy Star content belongs to its respective rights holders.
+See ../README.md and ../ATTRIBUTION.md for source and verification details.
+
+SHA-256
+0b9cee5c4cf9dca47887436237cf34ba19e76a26c79714bc64430d3f923e1133

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "seven_core_logic_suites_passed": true,
+  "thirteen_emulator_integration_suites_passed": true,
+  "scope": "Seven host logic and thirteen emulator integration suites ran in the previous clean-build extraction after removing all 88 excluded upstream/source/object files. Native production, generated assembly, toolchain, data and ROM match the revised package. No second full compilation or complete campaign replay was needed for this source-removal-only revision.",
+  "native_source_files_unchanged": 343,
+  "native_assembly_modules_unchanged": 262,
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "disassembly_code_restored_for_tests": false,
+  "setup_retry": "Initial emulator attempt invoked the base Python by resolving the environment symlink and failed to import PyBoy. Corrected the interpreter path to the existing virtual environment; all thirteen suites then passed. No production or test code changed."
+}

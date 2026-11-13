@@ -1,0 +1,159 @@
+{
+  "source": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/live-replay-ingestion-final/published-source",
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "source_immutable_files": {
+    "campaign.gbc": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "campaign.noi": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c",
+    "native-layout.json": "07c8fe451d35177e185d9064dd23039e45a68f30f6ce2763672ddf0b6a925279"
+  },
+  "tooling_sha256": {
+    "native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+    "verify_campaign_title.py": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba",
+    "replay_campaign_live.py": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+    "verify_rom.py": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+  },
+  "frozen_manifest_sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7",
+  "initial_sram_loaded": false,
+  "save_states_loaded": false,
+  "state_injection": false,
+  "source_mutated": false,
+  "diagnostic_stop": "003-grind-town",
+  "finalization": "Only immutable CAMPAIGN_CLOSED.json after source process/emulator/log close; no transient campaign_complete acceptance",
+  "passed": true,
+  "diagnostic_prefix_only": true,
+  "campaign_complete": false,
+  "frames": 11674,
+  "checkpoints": [
+    {
+      "name": "000-01-nekise",
+      "frame": 4512
+    },
+    {
+      "name": "001-grind-town",
+      "frame": 5618
+    },
+    {
+      "name": "002-grind-town",
+      "frame": 8432
+    },
+    {
+      "name": "003-grind-town",
+      "frame": 11674
+    }
+  ],
+  "final": {
+    "frame": 11674,
+    "vehicle": 0,
+    "dungeon": null,
+    "object_flags": {
+      "0": 255,
+      "4": 255
+    },
+    "screen": 1,
+    "map": 4,
+    "position": [
+      1640,
+      384
+    ],
+    "cell": [
+      102,
+      23
+    ],
+    "party": [
+      [
+        1,
+        16,
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        12,
+        13,
+        2,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "items": [
+      56
+    ],
+    "money": 0,
+    "joined": 1,
+    "rng": 3331,
+    "story_flags": {
+      "1": 1,
+      "2": 1
+    },
+    "vehicle_cycle": [
+      0,
+      0
+    ],
+    "fade_clock": 3,
+    "map_music": 135
+  },
+  "consumed_rows": 458,
+  "consumed_bytes": 50403,
+  "consumed_controller_sha256": "3356c1d9c66986a1cc7efc74b6416bc1be199ec57b1b4fffbc2f7cca8cae4d56",
+  "source_prefix_byte_exact": true,
+  "omitted_later_source_bytes": 0,
+  "elapsed_seconds": 5.2
+}

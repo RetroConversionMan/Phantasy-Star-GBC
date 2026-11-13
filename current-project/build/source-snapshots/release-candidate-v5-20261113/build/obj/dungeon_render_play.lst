@@ -1,0 +1,82 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module dungeon_render_play
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl b_dungeon_motion_render
+                                     11 	.globl _dungeon_motion_render
+                                     12 	.globl _dungeon_render_phase
+                                     13 	.globl _dungeon_render_scratch
+                                     14 	.globl _dungeon_render_palette
+                                     15 	.globl _dungeon_render_map
+                                     16 	.globl b_dungeon_render
+                                     17 	.globl _dungeon_render
+                                     18 ;--------------------------------------------------------
+                                     19 ; special function registers
+                                     20 ;--------------------------------------------------------
+                                     21 	.area _HRAM
+                                     22 ;--------------------------------------------------------
+                                     23 ; ram data
+                                     24 ;--------------------------------------------------------
+                                     25 	.area _DATA
+    00000000                         26 _dungeon_render_map::
+    00000000                         27 	.ds 600
+    00000258                         28 _dungeon_render_palette::
+    00000258                         29 	.ds 56
+    00000290                         30 _dungeon_render_scratch::
+    00000290                         31 	.ds 1540
+    00000894                         32 _dungeon_render_phase::
+    00000894                         33 	.ds 1
+                                     34 ;--------------------------------------------------------
+                                     35 ; ram data
+                                     36 ;--------------------------------------------------------
+                                     37 	.area _INITIALIZED
+                                     38 ;--------------------------------------------------------
+                                     39 ; absolute external ram data
+                                     40 ;--------------------------------------------------------
+                                     41 	.area _DABS (ABS)
+                                     42 ;--------------------------------------------------------
+                                     43 ; global & static initialisations
+                                     44 ;--------------------------------------------------------
+                                     45 	.area _HOME
+                                     46 	.area _GSINIT
+                                     47 	.area _GSFINAL
+                                     48 	.area _GSINIT
+                                     49 ;--------------------------------------------------------
+                                     50 ; Home
+                                     51 ;--------------------------------------------------------
+                                     52 	.area _HOME
+                                     53 	.area _HOME
+                                     54 ;--------------------------------------------------------
+                                     55 ; code
+                                     56 ;--------------------------------------------------------
+                                     57 	.area _CODE_17
+                                     58 ;src/dungeon_render_play.c:15: uint8_t dungeon_render(const DungeonState *state,uint8_t frame) DUNGEON_BANKED {
+                                     59 ;	---------------------------------
+                                     60 ; Function dungeon_render
+                                     61 ; ---------------------------------
+                         00000011    62 	b_dungeon_render	= 17
+    00000000                         63 _dungeon_render::
+                                     64 ;src/dungeon_render_play.c:17: return dungeon_motion_render(state,frame);
+    00000000 F8 08            [12]   65 	ldhl	sp,	#8
+    00000002 3A               [ 8]   66 	ld	a, (hl-)
+    00000003 2B               [ 8]   67 	dec	hl
+    00000004 F5               [16]   68 	push	af
+    00000005 33               [ 8]   69 	inc	sp
+    00000006 2A               [ 8]   70 	ld	a, (hl+)
+    00000007 5F               [ 4]   71 	ld	e, a
+    00000008 56               [ 8]   72 	ld	d, (hl)
+    00000009 D5               [16]   73 	push	de
+    0000000A 1Er00            [ 8]   74 	ld	e, #b_dungeon_motion_render
+    0000000C 21r00r00         [12]   75 	ld	hl, #_dungeon_motion_render
+    0000000F CDr00r00         [24]   76 	call	___sdcc_bcall_ehl
+    00000012 E8 03            [16]   77 	add	sp, #3
+                                     78 ;src/dungeon_render_play.c:22: }
+    00000014 C9               [16]   79 	ret
+                                     80 	.area _CODE_17
+                                     81 	.area _INITIALIZER
+                                     82 	.area _CABS (ABS)

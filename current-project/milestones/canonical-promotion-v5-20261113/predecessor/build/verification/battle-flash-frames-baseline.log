@@ -1,0 +1,371 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "passed": false,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "25112f86accd7d298285516a7b6d8cf538c34036a3aa8afc3a8b9de9d169b267",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "source_snapshot": "build/source-snapshots/item-chronology-candidate",
+  "cases": [
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 2,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 2,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 3,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 3,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 3,
+      "extra": 1,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 1,
+      "enemy": 1,
+      "command": 3,
+      "extra": 1,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 2,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 2,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 121,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 3,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 3,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 3,
+      "extra": 1,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 1,
+      "enemy": 13,
+      "command": 3,
+      "extra": 1,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 18614,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 2,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 203,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 2,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 203,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 3,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 3,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 3,
+      "extra": 1,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14348,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 14,
+      "enemy": 70,
+      "command": 3,
+      "extra": 1,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14348,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 2,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2506,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 2,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 4,
+      "audio_updates": 4,
+      "changed_pixels": 2506,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 3,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 3,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 3,
+      "extra": 1,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14369,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 15,
+      "enemy": 72,
+      "command": 3,
+      "extra": 1,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14369,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 2,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2506,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 2,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 4,
+      "audio_updates": 4,
+      "changed_pixels": 2506,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 3,
+      "extra": 0,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 3,
+      "extra": 0,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 2916,
+      "mixed_frames": []
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 3,
+      "extra": 1,
+      "white": 1,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14369,
+      "mixed_frames": [
+        1
+      ]
+    },
+    {
+      "scene": 15,
+      "enemy": 73,
+      "command": 3,
+      "extra": 1,
+      "white": 0,
+      "physical_frames": 5,
+      "audio_updates": 5,
+      "changed_pixels": 14369,
+      "mixed_frames": []
+    }
+  ],
+  "mixed_frames": 10,
+  "scope": "Production palette flash functions and actual original art, with production score interrupts; every completed PPU frame must equal the stable before or after image. Original source-mask semantics are covered separately."
+}

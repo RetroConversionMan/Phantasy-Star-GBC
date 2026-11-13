@@ -1,0 +1,407 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _weapon_asset_1212                                              00000000 GR
+  8 _weapon_asset_1213                                              0000001A GR
+  8 _weapon_asset_1214                                              00000039 GR
+  8 _weapon_asset_1215                                              00000058 GR
+  8 _weapon_asset_1216                                              0000007C GR
+  8 _weapon_asset_1217                                              000000AF GR
+  8 _weapon_asset_1218                                              000000CE GR
+  8 _weapon_asset_1219                                              000000FC GR
+  8 _weapon_asset_1220                                              00000116 GR
+  8 _weapon_asset_1221                                              0000013A GR
+  8 _weapon_asset_1222                                              0000015E GR
+  8 _weapon_asset_1223                                              00000187 GR
+  8 _weapon_asset_1224                                              000001A1 GR
+  8 _weapon_asset_1225                                              000001CA GR
+  8 _weapon_asset_1226                                              000001F3 GR
+  8 _weapon_asset_1227                                              0000021C GR
+  8 _weapon_asset_1228                                              00000231 GR
+  8 _weapon_asset_1229                                              00000250 GR
+  8 _weapon_asset_1230                                              0000026A GR
+  8 _weapon_asset_1231                                              00000298 GR
+  8 _weapon_asset_1232                                              000002BC GR
+  8 _weapon_asset_1233                                              000002D1 GR
+  8 _weapon_asset_1234                                              000002EB GR
+  8 _weapon_asset_1235                                              0000030F GR
+  8 _weapon_asset_1236                                              0000032E GR
+  8 _weapon_asset_1237                                              00000348 GR
+  8 _weapon_asset_1238                                              00000367 GR
+  8 _weapon_asset_1239                                              0000037C GR
+  8 _weapon_asset_1240                                              00000396 GR
+  8 _weapon_asset_1241                                              000003B0 GR
+  8 _weapon_asset_1242                                              000003CA GR
+  8 _weapon_asset_1243                                              000003F3 GR
+  8 _weapon_asset_1244                                              00000412 GR
+  8 _weapon_asset_1245                                              00000431 GR
+  8 _weapon_asset_1246                                              00000446 GR
+  8 _weapon_asset_1247                                              0000045B GR
+  8 _weapon_asset_1248                                              00000470 GR
+  8 _weapon_asset_1249                                              0000048A GR
+  8 _weapon_asset_1250                                              000004A4 GR
+  8 _weapon_asset_1251                                              000004BE GR
+  8 _weapon_asset_1252                                              000004D8 GR
+  8 _weapon_asset_1253                                              000004ED GR
+  8 _weapon_asset_1254                                              00000502 GR
+  8 _weapon_asset_1255                                              00000517 GR
+  8 _weapon_asset_1256                                              00000531 GR
+  8 _weapon_asset_1257                                              0000055A GR
+  8 _weapon_asset_1258                                              00000574 GR
+  8 _weapon_asset_1259                                              00000593 GR
+  8 _weapon_asset_1260                                              000005A8 GR
+  8 _weapon_asset_1261                                              000005BD GR
+  8 _weapon_asset_1262                                              000005D2 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1263                                              000005EC GR
+  8 _weapon_asset_1264                                              00000606 GR
+  8 _weapon_asset_1265                                              0000062F GR
+  8 _weapon_asset_1266                                              0000064E GR
+  8 _weapon_asset_1267                                              00000672 GR
+  8 _weapon_asset_1268                                              0000068C GR
+  8 _weapon_asset_1269                                              000006A1 GR
+  8 _weapon_asset_1270                                              000006B6 GR
+  8 _weapon_asset_1271                                              000006CB GR
+  8 _weapon_asset_1272                                              000006EF GR
+  8 _weapon_asset_1273                                              00000713 GR
+  8 _weapon_asset_1274                                              00000732 GR
+  8 _weapon_asset_1275                                              00000747 GR
+  8 _weapon_asset_1276                                              00000761 GR
+  8 _weapon_asset_1277                                              00000776 GR
+  8 _weapon_asset_1278                                              0000079A GR
+  8 _weapon_asset_1279                                              000007B9 GR
+  8 _weapon_asset_1280                                              000007E2 GR
+  8 _weapon_asset_1281                                              00000801 GR
+  8 _weapon_asset_1282                                              00000825 GR
+  8 _weapon_asset_1283                                              00000849 GR
+  8 _weapon_asset_1284                                              0000087C GR
+  8 _weapon_asset_1285                                              000008A0 GR
+  8 _weapon_asset_1286                                              000008C4 GR
+  8 _weapon_asset_1287                                              000008DE GR
+  8 _weapon_asset_1288                                              00000907 GR
+  8 _weapon_asset_1289                                              00000921 GR
+  8 _weapon_asset_1290                                              00000945 GR
+  8 _weapon_asset_1291                                              0000095A GR
+  8 _weapon_asset_1292                                              00000988 GR
+  8 _weapon_asset_1293                                              000009B1 GR
+  8 _weapon_asset_1294                                              000009C6 GR
+  8 _weapon_asset_1295                                              000009EA GR
+  8 _weapon_asset_1296                                              00000A04 GR
+  8 _weapon_asset_1297                                              00000A28 GR
+  8 _weapon_asset_1298                                              00000A47 GR
+  8 _weapon_asset_1299                                              00000A66 GR
+  8 _weapon_asset_1300                                              00000A8A GR
+  8 _weapon_asset_1301                                              00000AAE GR
+  8 _weapon_asset_1302                                              00000AD7 GR
+  8 _weapon_asset_1303                                              00000AFB GR
+  8 _weapon_asset_1304                                              00000B15 GR
+  8 _weapon_asset_1305                                              00000B34 GR
+  8 _weapon_asset_1306                                              00000B4E GR
+  8 _weapon_asset_1307                                              00000B72 GR
+  8 _weapon_asset_1308                                              00000B96 GR
+  8 _weapon_asset_1309                                              00000BAB GR
+  8 _weapon_asset_1310                                              00000BCF GR
+  8 _weapon_asset_1311                                              00000BF3 GR
+  8 _weapon_asset_1312                                              00000C12 GR
+  8 _weapon_asset_1313                                              00000C2C GR
+  8 _weapon_asset_1314                                              00000C46 GR
+  8 _weapon_asset_1315                                              00000C5B GR
+  8 _weapon_asset_1316                                              00000C75 GR
+  8 _weapon_asset_1317                                              00000C8A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1318                                              00000CAE GR
+  8 _weapon_asset_1319                                              00000CD7 GR
+  8 _weapon_asset_1320                                              00000CF6 GR
+  8 _weapon_asset_1321                                              00000D10 GR
+  8 _weapon_asset_1322                                              00000D25 GR
+  8 _weapon_asset_1323                                              00000D3F GR
+  8 _weapon_asset_1324                                              00000D54 GR
+  8 _weapon_asset_1325                                              00000D6E GR
+  8 _weapon_asset_1326                                              00000D88 GR
+  8 _weapon_asset_1327                                              00000DA2 GR
+  8 _weapon_asset_1328                                              00000DB7 GR
+  8 _weapon_asset_1329                                              00000DCC GR
+  8 _weapon_asset_1330                                              00000DE6 GR
+  8 _weapon_asset_1331                                              00000E00 GR
+  8 _weapon_asset_1332                                              00000E24 GR
+  8 _weapon_asset_1333                                              00000E48 GR
+  8 _weapon_asset_1334                                              00000E67 GR
+  8 _weapon_asset_1335                                              00000E81 GR
+  8 _weapon_asset_1336                                              00000E96 GR
+  8 _weapon_asset_1337                                              00000EB0 GR
+  8 _weapon_asset_1338                                              00000ECA GR
+  8 _weapon_asset_1339                                              00000EDF GR
+  8 _weapon_asset_1340                                              00000F03 GR
+  8 _weapon_asset_1341                                              00000F36 GR
+  8 _weapon_asset_1342                                              00000F50 GR
+  8 _weapon_asset_1343                                              00000F6F GR
+  8 _weapon_asset_1344                                              00000F89 GR
+  8 _weapon_asset_1345                                              00000FA3 GR
+  8 _weapon_asset_1346                                              00000FBD GR
+  8 _weapon_asset_1347                                              00000FD7 GR
+  8 _weapon_asset_1348                                              00000FF6 GR
+  8 _weapon_asset_1349                                              0000101A GR
+  8 _weapon_asset_1350                                              0000103E GR
+  8 _weapon_asset_1351                                              00001053 GR
+  8 _weapon_asset_1352                                              0000106D GR
+  8 _weapon_asset_1353                                              00001082 GR
+  8 _weapon_asset_1354                                              000010A1 GR
+  8 _weapon_asset_1355                                              000010C0 GR
+  8 _weapon_asset_1356                                              000010E4 GR
+  8 _weapon_asset_1357                                              000010FE GR
+  8 _weapon_asset_1358                                              0000111D GR
+  8 _weapon_asset_1359                                              0000113C GR
+  8 _weapon_asset_1360                                              00001160 GR
+  8 _weapon_asset_1361                                              00001184 GR
+  8 _weapon_asset_1362                                              000011AD GR
+  8 _weapon_asset_1363                                              000011D1 GR
+  8 _weapon_asset_1364                                              000011FA GR
+  8 _weapon_asset_1365                                              00001214 GR
+  8 _weapon_asset_1366                                              00001233 GR
+  8 _weapon_asset_1367                                              0000124D GR
+  8 _weapon_asset_1368                                              00001271 GR
+  8 _weapon_asset_1369                                              0000129A GR
+  8 _weapon_asset_1370                                              000012B4 GR
+  8 _weapon_asset_1371                                              000012D8 GR
+  8 _weapon_asset_1372                                              000012F2 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1373                                              00001311 GR
+  8 _weapon_asset_1374                                              00001330 GR
+  8 _weapon_asset_1375                                              00001354 GR
+  8 _weapon_asset_1376                                              0000136E GR
+  8 _weapon_asset_1377                                              0000138D GR
+  8 _weapon_asset_1378                                              000013AC GR
+  8 _weapon_asset_1379                                              000013D0 GR
+  8 _weapon_asset_1380                                              000013EF GR
+  8 _weapon_asset_1381                                              0000140E GR
+  8 _weapon_asset_1382                                              00001432 GR
+  8 _weapon_asset_1383                                              0000145B GR
+  8 _weapon_asset_1384                                              0000147F GR
+  8 _weapon_asset_1385                                              00001499 GR
+  8 _weapon_asset_1386                                              000014BD GR
+  8 _weapon_asset_1387                                              000014E1 GR
+  8 _weapon_asset_1388                                              00001500 GR
+  8 _weapon_asset_1389                                              0000151A GR
+  8 _weapon_asset_1390                                              0000152F GR
+  8 _weapon_asset_1391                                              00001549 GR
+  8 _weapon_asset_1392                                              00001563 GR
+  8 _weapon_asset_1393                                              0000157D GR
+  8 _weapon_asset_1394                                              000015A1 GR
+  8 _weapon_asset_1395                                              000015CF GR
+  8 _weapon_asset_1396                                              000015EE GR
+  8 _weapon_asset_1397                                              0000160D GR
+  8 _weapon_asset_1398                                              00001622 GR
+  8 _weapon_asset_1399                                              00001637 GR
+  8 _weapon_asset_1400                                              00001651 GR
+  8 _weapon_asset_1401                                              00001670 GR
+  8 _weapon_asset_1402                                              0000168A GR
+  8 _weapon_asset_1403                                              000016A4 GR
+  8 _weapon_asset_1404                                              000016B9 GR
+  8 _weapon_asset_1405                                              000016CE GR
+  8 _weapon_asset_1406                                              000016E3 GR
+  8 _weapon_asset_1407                                              000016F8 GR
+  8 _weapon_asset_1408                                              0000171C GR
+  8 _weapon_asset_1409                                              00001740 GR
+  8 _weapon_asset_1410                                              0000175A GR
+  8 _weapon_asset_1411                                              00001779 GR
+  8 _weapon_asset_1412                                              0000178E GR
+  8 _weapon_asset_1413                                              000017A8 GR
+  8 _weapon_asset_1414                                              000017BD GR
+  8 _weapon_asset_1415                                              000017D7 GR
+  8 _weapon_asset_1416                                              000017FB GR
+  8 _weapon_asset_1417                                              0000181F GR
+  8 _weapon_asset_1418                                              0000183E GR
+  8 _weapon_asset_1419                                              00001862 GR
+  8 _weapon_asset_1420                                              0000187C GR
+  8 _weapon_asset_1421                                              00001891 GR
+  8 _weapon_asset_1422                                              000018A6 GR
+  8 _weapon_asset_1423                                              000018BB GR
+  8 _weapon_asset_1424                                              000018E4 GR
+  8 _weapon_asset_1425                                              00001908 GR
+  8 _weapon_asset_1426                                              00001927 GR
+  8 _weapon_asset_1427                                              00001941 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1428                                              0000195B GR
+  8 _weapon_asset_1429                                              00001975 GR
+  8 _weapon_asset_1430                                              0000199E GR
+  8 _weapon_asset_1431                                              000019C2 GR
+  8 _weapon_asset_1432                                              000019F0 GR
+  8 _weapon_asset_1433                                              00001A0F GR
+  8 _weapon_asset_1434                                              00001A33 GR
+  8 _weapon_asset_1435                                              00001A57 GR
+  8 _weapon_asset_1436                                              00001A80 GR
+  8 _weapon_asset_1437                                              00001AA4 GR
+  8 _weapon_asset_1438                                              00001ACD GR
+  8 _weapon_asset_1439                                              00001AF1 GR
+  8 _weapon_asset_1440                                              00001B15 GR
+  8 _weapon_asset_1441                                              00001B2F GR
+  8 _weapon_asset_1442                                              00001B53 GR
+  8 _weapon_asset_1443                                              00001B6D GR
+  8 _weapon_asset_1444                                              00001B91 GR
+  8 _weapon_asset_1445                                              00001BB5 GR
+  8 _weapon_asset_1446                                              00001BCF GR
+  8 _weapon_asset_1447                                              00001BF3 GR
+  8 _weapon_asset_1448                                              00001C0D GR
+  8 _weapon_asset_1449                                              00001C2C GR
+  8 _weapon_asset_1450                                              00001C4B GR
+  8 _weapon_asset_1451                                              00001C6A GR
+  8 _weapon_asset_1452                                              00001C8E GR
+  8 _weapon_asset_1453                                              00001CAD GR
+  8 _weapon_asset_1454                                              00001CD1 GR
+  8 _weapon_asset_1455                                              00001CF0 GR
+  8 _weapon_asset_1456                                              00001D14 GR
+  8 _weapon_asset_1457                                              00001D38 GR
+  8 _weapon_asset_1458                                              00001D52 GR
+  8 _weapon_asset_1459                                              00001D7B GR
+  8 _weapon_asset_1460                                              00001D9F GR
+  8 _weapon_asset_1461                                              00001DB9 GR
+  8 _weapon_asset_1462                                              00001DD3 GR
+  8 _weapon_asset_1463                                              00001DF7 GR
+  8 _weapon_asset_1464                                              00001E1B GR
+  8 _weapon_asset_1465                                              00001E3A GR
+  8 _weapon_asset_1466                                              00001E54 GR
+  8 _weapon_asset_1467                                              00001E6E GR
+  8 _weapon_asset_1468                                              00001E92 GR
+  8 _weapon_asset_1469                                              00001EAC GR
+  8 _weapon_asset_1470                                              00001EC6 GR
+  8 _weapon_asset_1471                                              00001EEF GR
+  8 _weapon_asset_1472                                              00001F13 GR
+  8 _weapon_asset_1473                                              00001F32 GR
+  8 _weapon_asset_1474                                              00001F47 GR
+  8 _weapon_asset_1475                                              00001F5C GR
+  8 _weapon_asset_1476                                              00001F76 GR
+  8 _weapon_asset_1477                                              00001F90 GR
+  8 _weapon_asset_1478                                              00001FAA GR
+  8 _weapon_asset_1479                                              00001FC4 GR
+  8 _weapon_asset_1480                                              00001FD9 GR
+  8 _weapon_asset_1481                                              00001FEE GR
+  8 _weapon_asset_1482                                              00002003 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1483                                              00002018 GR
+  8 _weapon_asset_1484                                              00002032 GR
+  8 _weapon_asset_1485                                              00002060 GR
+  8 _weapon_asset_1486                                              00002084 GR
+  8 _weapon_asset_1487                                              000020A3 GR
+  8 _weapon_asset_1488                                              000020B8 GR
+  8 _weapon_asset_1489                                              000020D2 GR
+  8 _weapon_asset_1490                                              000020E7 GR
+  8 _weapon_asset_1491                                              00002101 GR
+  8 _weapon_asset_1492                                              0000211B GR
+  8 _weapon_asset_1493                                              00002144 GR
+  8 _weapon_asset_1494                                              00002168 GR
+  8 _weapon_asset_1495                                              0000218C GR
+  8 _weapon_asset_1496                                              000021A6 GR
+  8 _weapon_asset_1497                                              000021BB GR
+  8 _weapon_asset_1498                                              000021D0 GR
+  8 _weapon_asset_1499                                              000021E5 GR
+  8 _weapon_asset_1500                                              0000220E GR
+  8 _weapon_asset_1501                                              00002237 GR
+  8 _weapon_asset_1502                                              00002256 GR
+  8 _weapon_asset_1503                                              00002270 GR
+  8 _weapon_asset_1504                                              0000228A GR
+  8 _weapon_asset_1505                                              000022A4 GR
+  8 _weapon_asset_1506                                              000022C8 GR
+  8 _weapon_asset_1507                                              000022E7 GR
+  8 _weapon_asset_1508                                              0000230B GR
+  8 _weapon_asset_1509                                              0000232A GR
+  8 _weapon_asset_1510                                              0000234E GR
+  8 _weapon_asset_1511                                              0000236D GR
+  8 _weapon_asset_1512                                              00002396 GR
+  8 _weapon_asset_1513                                              000023B5 GR
+  8 _weapon_asset_1514                                              000023DE GR
+  8 _weapon_asset_1515                                              000023F8 GR
+  8 _weapon_asset_1516                                              0000241C GR
+  8 _weapon_asset_1517                                              00002436 GR
+  8 _weapon_asset_1518                                              00002455 GR
+  8 _weapon_asset_1519                                              0000246A GR
+  8 _weapon_asset_1520                                              0000248E GR
+  8 _weapon_asset_1521                                              000024BC GR
+  8 _weapon_asset_1522                                              000024D1 GR
+  8 _weapon_asset_1523                                              000024FF GR
+  8 _weapon_asset_1524                                              00002519 GR
+  8 _weapon_asset_1525                                              0000253D GR
+  8 _weapon_asset_1526                                              00002561 GR
+  8 _weapon_asset_1527                                              00002585 GR
+  8 _weapon_asset_1528                                              000025A4 GR
+  8 _weapon_asset_1529                                              000025C8 GR
+  8 _weapon_asset_1530                                              000025F1 GR
+  8 _weapon_asset_1531                                              00002615 GR
+  8 _weapon_asset_1532                                              0000262F GR
+  8 _weapon_asset_1533                                              0000264E GR
+  8 _weapon_asset_1534                                              00002668 GR
+  8 _weapon_asset_1535                                              00002691 GR
+  8 _weapon_asset_1536                                              000026B0 GR
+  8 _weapon_asset_1537                                              000026D9 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _weapon_asset_1538                                              000026FD GR
+  8 _weapon_asset_1539                                              00002721 GR
+  8 _weapon_asset_1540                                              00002740 GR
+  8 _weapon_asset_1541                                              0000275F GR
+  8 _weapon_asset_1542                                              00002783 GR
+  8 _weapon_asset_1543                                              0000279D GR
+  8 _weapon_asset_1544                                              000027BC GR
+  8 _weapon_asset_1545                                              000027DB GR
+  8 _weapon_asset_1546                                              000027FF GR
+  8 _weapon_asset_1547                                              00002823 GR
+  8 _weapon_asset_1548                                              0000283D GR
+  8 _weapon_asset_1549                                              00002866 GR
+  8 _weapon_asset_1550                                              00002885 GR
+  8 _weapon_asset_1551                                              0000289F GR
+  8 _weapon_asset_1552                                              000028C3 GR
+  8 _weapon_asset_1553                                              000028EC GR
+  8 _weapon_asset_1554                                              00002906 GR
+  8 _weapon_asset_1555                                              0000292A GR
+  8 _weapon_asset_1556                                              00002949 GR
+  8 _weapon_asset_1557                                              00002968 GR
+  8 _weapon_asset_1558                                              00002982 GR
+  8 _weapon_asset_1559                                              000029A1 GR
+  8 _weapon_asset_1560                                              000029C0 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_213                                  size     29DF   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

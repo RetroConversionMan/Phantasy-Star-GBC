@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "cases": [
+    {
+      "phase": 0,
+      "asset": "31-00-00",
+      "source_index_pixels_exact": 49152,
+      "source_palette_bytes_exact": 32,
+      "native_flash_class_pixels_exact": 19200,
+      "native_RGB_quantized_pixels": 740,
+      "native_decoded_color_sha256": "272be69e2424c385cea605a5c0fa7a08394783dd434dd283dda9ab00a1c9c320"
+    },
+    {
+      "phase": 1,
+      "asset": "32-00-73",
+      "source_index_pixels_exact": 49152,
+      "source_palette_bytes_exact": 32,
+      "native_flash_class_pixels_exact": 19200,
+      "native_RGB_quantized_pixels": 740,
+      "native_decoded_color_sha256": "272be69e2424c385cea605a5c0fa7a08394783dd434dd283dda9ab00a1c9c320"
+    }
+  ],
+  "preserved_pre_edit_source_RGB_pixels_changed": 12740,
+  "generic_blank_model_source_RGB_pixels_changed": 14024,
+  "victory_clear": {
+    "audio": [
+      [
+        0,
+        175
+      ]
+    ],
+    "wait_commands": [
+      10,
+      10,
+      10,
+      10,
+      16
+    ],
+    "frames": 5,
+    "map_words": "768x0800",
+    "final_pixels_black": 49152,
+    "native_blank_type32_correct_after_clear": true,
+    "chronology": "AF precedes four row-restoration waits and one final upload;180 source wait then follows at1683."
+  },
+  "limits": [
+    "Native files are directly decoded, not executed by this independent test; production PPU/runtime integration is a separate proof.",
+    "GBC color quantization is measured; flash membership and source indices are exact.",
+    "Source victory begins before the battle-menu initialization, so the four temporary restored rows are not treated as a battle-UI image oracle. Final cleared map and palette are actual source results."
+  ]
+}

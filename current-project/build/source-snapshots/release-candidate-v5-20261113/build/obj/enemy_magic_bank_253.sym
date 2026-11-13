@@ -1,0 +1,146 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _enemy_magic_asset_000                                          000014C0 GR
+  8 _enemy_magic_asset_001                                          000014DA GR
+  8 _enemy_magic_asset_002                                          000014FE GR
+  8 _enemy_magic_asset_003                                          00001518 GR
+  8 _enemy_magic_asset_004                                          0000153C GR
+  8 _enemy_magic_asset_005                                          00001560 GR
+  8 _enemy_magic_asset_006                                          0000157A GR
+  8 _enemy_magic_asset_007                                          00001594 GR
+  8 _enemy_magic_asset_008                                          000015B8 GR
+  8 _enemy_magic_asset_009                                          000015D2 GR
+  8 _enemy_magic_asset_010                                          000015EC GR
+  8 _enemy_magic_asset_011                                          00001610 GR
+  8 _enemy_magic_asset_012                                          00001625 GR
+  8 _enemy_magic_asset_013                                          00001649 GR
+  8 _enemy_magic_asset_014                                          00001663 GR
+  8 _enemy_magic_asset_015                                          0000167D GR
+  8 _enemy_magic_asset_016                                          00001697 GR
+  8 _enemy_magic_asset_017                                          000016AC GR
+  8 _enemy_magic_asset_018                                          000016C6 GR
+  8 _enemy_magic_asset_019                                          000016EA GR
+  8 _enemy_magic_asset_020                                          00001704 GR
+  8 _enemy_magic_asset_021                                          00001728 GR
+  8 _enemy_magic_asset_022                                          00001742 GR
+  8 _enemy_magic_asset_023                                          0000175C GR
+  8 _enemy_magic_asset_024                                          00001776 GR
+  8 _enemy_magic_asset_025                                          0000181B GR
+  8 _enemy_magic_asset_026                                          000018C0 GR
+  8 _enemy_magic_asset_027                                          00001965 GR
+  8 _enemy_magic_asset_028                                          00001A0A GR
+  8 _enemy_magic_asset_029                                          00001AAF GR
+  8 _enemy_magic_asset_030                                          00001B54 GR
+  8 _enemy_magic_asset_031                                          00001BF9 GR
+  8 _enemy_magic_asset_032                                          00001C9E GR
+  8 _enemy_magic_asset_033                                          00001D43 GR
+  8 _enemy_magic_asset_034                                          00001DE8 GR
+  8 _enemy_magic_asset_035                                          00001E8D GR
+  8 _enemy_magic_asset_036                                          00001EA2 GR
+  8 _enemy_magic_asset_037                                          00001EBC GR
+  8 _enemy_magic_asset_038                                          00001ED1 GR
+  8 _enemy_magic_asset_039                                          00001EEB GR
+  8 _enemy_magic_asset_040                                          00001F0A GR
+  8 _enemy_magic_asset_041                                          00001F24 GR
+  8 _enemy_magic_asset_042                                          00001F39 GR
+  8 _enemy_magic_asset_043                                          00001F58 GR
+  8 _enemy_magic_asset_044                                          00001F6D GR
+  8 _enemy_magic_asset_045                                          00001F87 GR
+  8 _enemy_magic_asset_046                                          00001FAB GR
+  8 _enemy_magic_asset_047                                          00001FD4 GR
+  8 _enemy_magic_asset_048                                          00002002 GR
+  8 _enemy_magic_asset_049                                          0000201C GR
+  8 _enemy_magic_asset_050                                          00002036 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _enemy_magic_asset_051                                          00002050 GR
+  8 _enemy_magic_asset_052                                          000020F5 GR
+  8 _enemy_magic_asset_053                                          0000219A GR
+  8 _enemy_magic_asset_054                                          0000223F GR
+  8 _enemy_magic_asset_055                                          000022E4 GR
+  8 _enemy_magic_asset_056                                          00002389 GR
+  8 _enemy_magic_asset_057                                          0000242E GR
+  8 _enemy_magic_asset_058                                          000024D3 GR
+  8 _enemy_magic_asset_059                                          00002578 GR
+  8 _enemy_magic_asset_060                                          0000261D GR
+  8 _enemy_magic_asset_061                                          000026C2 GR
+  8 _enemy_magic_asset_062                                          00002767 GR
+  8 _enemy_magic_asset_063                                          0000277C GR
+  8 _enemy_magic_asset_064                                          0000279B GR
+  8 _enemy_magic_asset_065                                          000027B5 GR
+  8 _enemy_magic_asset_066                                          000027CF GR
+  8 _enemy_magic_asset_067                                          000027F3 GR
+  8 _enemy_magic_asset_068                                          00002812 GR
+  8 _enemy_magic_asset_069                                          00002831 GR
+  8 _enemy_magic_asset_070                                          00002855 GR
+  8 _enemy_magic_asset_071                                          000028FF GR
+  8 _enemy_magic_asset_072                                          000029A9 GR
+  8 _enemy_magic_asset_073                                          00002A53 GR
+  8 _enemy_magic_asset_074                                          00002AFD GR
+  8 _enemy_magic_asset_075                                          00002BA7 GR
+  8 _enemy_magic_asset_076                                          00002C51 GR
+  8 _enemy_magic_asset_077                                          00002CFB GR
+  8 _enemy_magic_asset_078                                          00002DA5 GR
+  8 _enemy_magic_asset_079                                          00002E4F GR
+  8 _enemy_magic_asset_080                                          00002EF9 GR
+  8 _enemy_magic_asset_081                                          00002FA3 GR
+  8 _enemy_magic_asset_082                                          0000304D GR
+  8 _enemy_magic_asset_083                                          000030F7 GR
+  8 _enemy_magic_asset_084                                          000031A1 GR
+  8 _enemy_magic_asset_085                                          0000324B GR
+  8 _enemy_magic_asset_086                                          000032F5 GR
+  8 _enemy_magic_asset_087                                          0000339F GR
+  8 _enemy_magic_asset_088                                          00003449 GR
+  8 _enemy_magic_asset_089                                          000034F3 GR
+  8 _enemy_magic_asset_090                                          0000359D GR
+  8 _enemy_magic_asset_091                                          00003647 GR
+  8 _enemy_magic_asset_092                                          000036F1 GR
+  8 _enemy_magic_asset_093                                          00003706 GR
+  8 _enemy_magic_asset_094                                          0000371B GR
+  8 _enemy_magic_asset_095                                          00003735 GR
+  8 _enemy_magic_asset_096                                          00003759 GR
+  8 _enemy_magic_asset_097                                          00003782 GR
+  8 _enemy_magic_asset_098                                          0000379C GR
+  8 _enemy_magic_asset_099                                          000037B1 GR
+  8 _enemy_magic_pairs_00                                           00000000 GR
+  8 _enemy_magic_sequence_13                                        000037CB GR
+  8 _enemy_magic_sequence_23                                        000037D6 GR
+  8 _enemy_magic_sequence_47                                        000037E1 GR
+  8 _enemy_magic_sequence_49                                        000037E5 GR
+  8 _enemy_magic_sequence_56                                        000037EF GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _enemy_magic_sequence_57                                        000037F3 GR
+  8 _enemy_magic_sequence_65                                        000037F9 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_253                                  size     37FC   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

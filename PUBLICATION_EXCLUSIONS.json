@@ -1,0 +1,82 @@
+{
+  "scope": "Complete supplied project package plus corrected source/build and cutscene audit.",
+  "excluded": [
+    {
+      "path": ".DS_Store",
+      "reason": "Host-generated metadata/cache",
+      "sha256": "38324e6544accc703fd3f615c7bf71953381fe4cb6980698f7751c42571d2ad4"
+    },
+    {
+      "path": "baseline-reproduction/build/sms-reference/report.json",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "731e2b45b80327f7076080f3709b64858a644fa50e207e5ca0f2f1b185ec63d3"
+    },
+    {
+      "path": "baseline-reproduction/tools/__pycache__/verify_rom.cpython-312.pyc",
+      "reason": "Host-generated metadata/cache",
+      "sha256": "1cca1ac08d2e84718d25cafb2d7e5d1ad199494d8432c87e905f2ff33e3b3896"
+    },
+    {
+      "path": "current-project/build/sms-reference/assemble-patched.log",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "current-project/build/sms-reference/assemble.log",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "f8d0a7203e1fea780dd0ffbe7929607be0ea860f1c929baf0c206b448ffe8aae"
+    },
+    {
+      "path": "current-project/build/sms-reference/link.log",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "b6630bb045ae8190fd9293be7b427e7e1392db81670e8397a7ab806ad5ab12d6"
+    },
+    {
+      "path": "current-project/build/sms-reference/link.txt",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "36b8a58ecc9f5b692b59885ef772ca7e9117e606e27ba26d46bee35a4627ee74"
+    },
+    {
+      "path": "current-project/build/sms-reference/ps1built.sms",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88"
+    },
+    {
+      "path": "current-project/build/sms-reference/ps1built.sym",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "78a60bbf982f590f0309bc6c05c9ee26a1bd07ee9baa3ae3aa428168ed28fa71"
+    },
+    {
+      "path": "current-project/build/sms-reference/report.json",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "731e2b45b80327f7076080f3709b64858a644fa50e207e5ca0f2f1b185ec63d3"
+    },
+    {
+      "path": "current-project/build/source-snapshots/replay-live-tools-20261113/tools/__pycache__/native_layout.cpython-312.pyc",
+      "reason": "Host-generated metadata/cache",
+      "sha256": "235c24a9665c8ecaf0b3176d5c07fa544f89b1637157fa4927fe2889afb1418c"
+    },
+    {
+      "path": "current-project/build/source-snapshots/replay-live-tools-20261113/tools/__pycache__/verify_rom.cpython-312.pyc",
+      "reason": "Host-generated metadata/cache",
+      "sha256": "1ed5c9ac9e3bba24f69289670ca8e4fa2c1aa62db4247e1e32d39960c9b0e2ed"
+    },
+    {
+      "path": "current-project/upstream/ps1disasm/ps1original.sms",
+      "reason": "Original attributed upstream material",
+      "sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88"
+    },
+    {
+      "path": "verified-baseline/build/sms-reference/report.json",
+      "reason": "Original SMS reference build, symbols and logs",
+      "sha256": "731e2b45b80327f7076080f3709b64858a644fa50e207e5ca0f2f1b185ec63d3"
+    }
+  ],
+  "not_project_payload": [
+    "Separate downloaded ps1disasm-original checkout",
+    "Cartridge programmer utilities and device/session logs",
+    "Installed Python environments",
+    "Personal emulator battery save next to the working ROM"
+  ],
+  "historical_evidence": "Earlier builds and recorded campaign fixtures remain historical; current ROM is ROM/Phantasy Star.gbc."
+}

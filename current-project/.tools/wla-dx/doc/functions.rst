@@ -1,0 +1,188 @@
+Functions
+=========
+
+WLA supports functions in addition to ``.MACRO`` s. Functions are different from
+``.MACRO`` s as functions always return a value.
+
+
+User defined functions
+----------------------
+
+Use ``.FUNCTION`` to create your own functions.
+
+
+Built-in functions
+------------------
+
+The following built-in functions can be used where ever a number is expected:
+
+====================== ================================================================================
+abs(exp)               Returns the positive version of the argument
+accu()                 Returns the assumed accumulator width in bits (WLA-65816 only)
+acos(exp)              The same as ANSI C90 acos()
+adl()                  Returns 1 if ADL mode is ON, 0 if OFF (WLA-eZ80 only)
+align()                Returns the most recent .ALIGN argument, or 1 before the first .ALIGN
+asc(exp)               Uses ``.ASCIITABLE`` to map the supplied value
+asin(exp)              The same as ANSI C90 asin()
+atan(exp)              The same as ANSI C90 atan()
+atan2(exp)             The same as ANSI C90 atan2()
+bank()                 Returns the current bank (*)
+bank(label)            Returns the bank of the supplied label (the same as preceding ``:``)
+bankbyte()             Returns the current bank byte, bits 16-23 (*)
+bankbyte(label)        Returns the bank byte, bits 16-23, of the supplied label
+base()                 Returns current base (*)
+base(label)            Returns the base of the supplied label
+blank(s)               Returns 1 (true) if ``s`` is empty or whitespace, 0 (false) otherwise
+ceil(exp)              The same as ANSI C90 ceil()
+clamp(value, min, max) Clamps the value between min and max
+cos(exp)               The same as ANSI C90 cos()
+cosh(exp)              The same as ANSI C90 cosh()
+defined(definition)    Returns 1 (true) if the supplied definition exists, 0 (false) otherwise
+definedfunction(func)  Returns 1 (true) if the supplied function exists, 0 (false) otherwise
+definedmacro(macro)    Returns 1 (true) if the supplied macro exists, 0 (false) otherwise
+exists(path)           Returns 1 (true) if the supplied file exists, 0 (false) otherwise
+floor(exp)             The same as ANSI C90 floor()
+get(keyword1)          Returns value/string depending on what ``keyword1`` is
+hibyte(exp)            Returns the high byte, bits 8-15 (the same as preceding ``>``)
+hiword(exp)            Returns the high word, bits 16-31
+index()                Returns the assumed X/Y register width in bits (WLA-65816 only)
+is(keyword2)           Return 0 (false) or 1 (true), see below for "keyword2"
+left(len, s)           Returns the leftmost ``len`` characters of ``s``
+lobyte(exp)            Returns the low byte, bits 0-7 (the same as preceding ``<``)
+log(exp)               The same as ANSI C90 log()
+log10(exp)             The same as ANSI C90 log10()
+loword(exp)            Returns the low word, bits 0-15
+match(a, b)            Returns 1 (true) if ``a`` and ``b`` have matching token types
+max(exp1, exp2)        Returns the bigger value
+mid(ind, len, s)       Returns ``len`` characters of ``s``, starting at index ``ind``
+min(exp1, exp2)        Returns the smaller value
+org()                  Returns the current address since the start of the slot (*)
+orga()                 Returns the current 16-bit memory address (*)
+paword(exp)            Returns bits 8-15 of the argument (the same as ``a & $FF00``)
+pow(base, power)       The same as ANSI C90 pow()
+random(min, max)       Returns a pseudo random integer like ``.DBRND`` [min, max]
+right(len, s)          Returns the rightmost ``len`` characters of ``s``
+round(exp)             The same as ANSI C99 round()
+sign(exp)              Return 0 if the supplied value is 0, -1 if negative and 1 if positive
+sin(exp)               The same as ANSI C90 sin()
+sinh(exp)              The same as ANSI C90 sinh()
+slot()                 Returns the current slot (*)
+slot(label)            Returns the final slot of the supplied label
+slotaddress(label, s)  Returns the address of ``label`` as seen through slot ``s`` (number or name)
+slotbase(slot)         Returns the start address of ``slot`` (number or name)
+sqrt(exp)              Returns the square root of the supplied value
+substring(s, ind, len) Returns a substring of ``s``, starting at index ``ind``, consisting of ``len`` characters
+tan(exp)               The same as ANSI C90 tan()
+tanh(exp)              The same as ANSI C90 tanh()
+tcount(s)              Returns the number of tokens in ``s``
+xmatch(a, b)           Returns 1 (true) if ``a`` and ``b`` have the same tokens
+====================== ================================================================================
+
+Note! Use bankbyte() with WLA-65816 as on that platform the bank (+ base) bits
+are 16-23. On other platforms bank() works better.
+
+Note! Functions marked with (*) are evaluated in the assembler, so if the linker relocates the
+code then these functions return possibly wrong values.
+
+Note! ``match()``, ``xmatch()`` and ``tcount()`` operate on WLA token text supplied as strings
+or expanded macro arguments. ``match()`` compares token types, while ``xmatch()`` compares the
+token text as well.
+
+
+Assembler state queries
+-----------------------
+
+``accu()`` and ``index()`` return 8 or 16, reflecting the current ``.ACCU``,
+``.INDEX`` and ``REP`` / ``SEP`` tracking. Both initially return 8. They report
+the assembler's assumptions, not runtime CPU state or an instruction's operand
+hint.
+
+``adl()`` returns 0 (NO) initially and after ``.ADL OFF``, and 1 (YES) after
+``.ADL ON``. Per-instruction eZ80 suffixes do not change this setting.
+
+``align()`` is available on all targets. It initially returns 1, then returns
+the argument of the most recent successfully processed ``.ALIGN`` directive.
+This value persists across includes and section boundaries. It is not the
+current address's alignment or a section's ``ALIGN`` attribute; use
+``get("section.alignment")`` for the latter.
+
+All four functions take no arguments. Using ``accu()`` or ``index()`` outside
+WLA-65816, or ``adl()`` outside WLA-eZ80, is an error.
+
+These queries are evaluated at their point of use in the assembler. In a
+user-defined ``.FUNCTION``, that means when the function is called, not when it
+is defined. If the surrounding expression is deferred to the linker, the
+queried state is captured at assembly time. A ``.DEFINE`` of a query's value
+likewise captures the value at that point.
+
+For example, with WLA-65816::
+
+    .MACRO ASSERT_A_LARGE
+        .ASSERT accu() == 16
+    .ENDM
+
+    .ACCU 16
+    ASSERT_A_LARGE
+
+
+Examples of functions
+---------------------
+
+Here's an example about how these functions can be used ::
+
+    .IF defined(USE_DEBUG) && defined(DEBUG_SHOW) && min(VALUE_A, VALUE_B) > 10
+  
+    LDX #lobyte(playMusic)          ; instead of (playMusic & $FF)
+    .DW paword(playMusic)           ; instead of (playMusic & $FF00)
+    LDA #bank(playMusic)            ; instead of :playMusic
+    LDA #bank(playMusic)
+    TAM #$08
+    .DW slotaddress(playMusic, 3)   ; address if playMusic's bank is mapped into slot 3
+    .DW slotaddress(playMusic, "MPR3")
+    .DB random(0, 10)               ; defines a byte with value 0-10
+    .DL (base() << 16) | orga()     ; defines the current 24-bit address
+
+    .IF blank("")
+    .ENDIF
+
+    .IF match("lda #1", "foo #2")
+    .ENDIF
+
+    .IF xmatch("lda #1", "lda #1")
+    .ENDIF
+
+    .DB tcount("lda #1,foo")
+    .DB left(4, "WLA-DX")
+
+    .ENDIF
+
+NOTE: random() needs immediate min and max values.
+
+NOTE: If you use e.g., bank(label) inside an .IF then the current bank for the label
+is given. If WLALINK e.g., changes the label's .SECTION's bank for some reason
+(e.g., the .SECTION is relocated) then .IF is not calculated correctly.
+
+NOTE: bank(), bankbyte(), base() and slot() without arguments use the information
+the assembler knows, not the linker. ``slot(label)`` and ``slotaddress(label,slot)``
+use the label information WLALINK knows.
+
+
+Keywords
+--------
+
+Here are the supported keyword1s for get() ::
+
+    "section.aligment"              ; returns the current .SECTION's alignment (int)
+    "section.name"                  ; returns the current .SECTION's name (string)
+    "section.offset"                ; returns the current .SECTION's offset (int)
+    "section.priority"              ; returns the current .SECTION's priority (int)
+    "section.type"                  ; returns the current .SECTION's type (string),
+                                    ;   possible strings being "FREE", "FORCE", "OVERWRITE",
+                                    ;   "HEADER", "SEMIFREE", "ABSOLUTE", "SUPERFREE",
+                                    ;   "SEMISUBFREE" and "SEMISUPERFREE"
+    "label.latest"                  ; returns the latest defined label
+                                    
+Here are the supported keyword2s for is() ::
+
+    "insidesection"                 ; is the parser at this point inside a .SECTION?
+    

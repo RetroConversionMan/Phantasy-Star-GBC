@@ -1,0 +1,521 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module inventory_menu
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _inventory_dialogue_overlay
+                                     11 	.globl _show_dialogue
+                                     12 	.globl b_ui_text
+                                     13 	.globl _ui_text
+                                     14 	.globl b_ui_panel
+                                     15 	.globl _ui_panel
+                                     16 	.globl b_dialogue_item_name
+                                     17 	.globl _dialogue_item_name
+                                     18 	.globl b_party_screen
+                                     19 	.globl _party_screen
+                                     20 	.globl b_inventory_screen
+                                     21 	.globl _inventory_screen
+                                     22 	.globl b_rpg_equip_finish
+                                     23 	.globl _rpg_equip_finish
+                                     24 	.globl b_rpg_equip_stage
+                                     25 	.globl _rpg_equip_stage
+                                     26 	.globl b_rpg_item_equippers
+                                     27 	.globl _rpg_item_equippers
+                                     28 	.globl b_rpg_item_discardable
+                                     29 	.globl _rpg_item_discardable
+                                     30 	.globl b_rpg_remove_item
+                                     31 	.globl _rpg_remove_item
+                                     32 	.globl b_rpg_refresh_stats
+                                     33 	.globl _rpg_refresh_stats
+                                     34 	.globl _memset
+                                     35 	.globl _vsync
+                                     36 	.globl b_inventory_equip_begin
+                                     37 	.globl _inventory_equip_begin
+                                     38 	.globl b_inventory_equip_select
+                                     39 	.globl _inventory_equip_select
+                                     40 	.globl b_inventory_drop_begin
+                                     41 	.globl _inventory_drop_begin
+                                     42 	.globl b_inventory_action_advance
+                                     43 	.globl _inventory_action_advance
+                                     44 	.globl b_inventory_equipment_done
+                                     45 	.globl _inventory_equipment_done
+                                     46 ;--------------------------------------------------------
+                                     47 ; special function registers
+                                     48 ;--------------------------------------------------------
+                                     49 	.area _HRAM
+                                     50 ;--------------------------------------------------------
+                                     51 ; ram data
+                                     52 ;--------------------------------------------------------
+                                     53 	.area _DATA
+                                     54 ;--------------------------------------------------------
+                                     55 ; ram data
+                                     56 ;--------------------------------------------------------
+                                     57 	.area _INITIALIZED
+                                     58 ;--------------------------------------------------------
+                                     59 ; absolute external ram data
+                                     60 ;--------------------------------------------------------
+                                     61 	.area _DABS (ABS)
+                                     62 ;--------------------------------------------------------
+                                     63 ; global & static initialisations
+                                     64 ;--------------------------------------------------------
+                                     65 	.area _HOME
+                                     66 	.area _GSINIT
+                                     67 	.area _GSFINAL
+                                     68 	.area _GSINIT
+                                     69 ;--------------------------------------------------------
+                                     70 ; Home
+                                     71 ;--------------------------------------------------------
+                                     72 	.area _HOME
+                                     73 	.area _HOME
+                                     74 ;--------------------------------------------------------
+                                     75 ; code
+                                     76 ;--------------------------------------------------------
+                                     77 	.area _CODE_19
+                                     78 ;src/inventory_menu.c:15: static void close_rows(uint8_t rows) {while(rows--)vsync();}
+                                     79 ;	---------------------------------
+                                     80 ; Function close_rows
+                                     81 ; ---------------------------------
+    00000000                         82 _close_rows:
+    00000000 4F               [ 4]   83 	ld	c, a
+    00000001                         84 00101$:
+    00000001 79               [ 4]   85 	ld	a, c
+    00000002 0D               [ 4]   86 	dec	c
+    00000003 B7               [ 4]   87 	or	a, a
+    00000004 C8               [20]   88 	ret	Z
+    00000005 CDr00r00         [24]   89 	call	_vsync
+    00000008 18 F7            [12]   90 	jr	00101$
+                                     91 ;src/inventory_menu.c:16: static void finish(uint8_t refresh) {
+                                     92 ;	---------------------------------
+                                     93 ; Function finish
+                                     94 ; ---------------------------------
+    0000000A                         95 _finish:
+    0000000A 4F               [ 4]   96 	ld	c, a
+                                     97 ;src/inventory_menu.c:17: HIDE_WIN;close_rows(6u);
+    0000000B F0r00            [12]   98 	ldh	a, (_LCDC_REG + 0)
+    0000000D E6 DF            [ 8]   99 	and	a, #0xdf
+    0000000F E0r00            [12]  100 	ldh	(_LCDC_REG + 0), a
+    00000011 C5               [16]  101 	push	bc
+    00000012 3E 06            [ 8]  102 	ld	a, #0x06
+    00000014 CDr00r00         [24]  103 	call	_close_rows
+    00000017 C1               [12]  104 	pop	bc
+                                    105 ;src/inventory_menu.c:18: if(refresh)rpg_refresh_stats(&game_rpg);
+    00000018 79               [ 4]  106 	ld	a, c
+    00000019 B7               [ 4]  107 	or	a, a
+    0000001A 28 0F            [12]  108 	jr	Z, 00102$
+    0000001C C5               [16]  109 	push	bc
+    0000001D 11r00r00         [12]  110 	ld	de, #_game_rpg
+    00000020 D5               [16]  111 	push	de
+    00000021 1Er00            [ 8]  112 	ld	e, #b_rpg_refresh_stats
+    00000023 21r00r00         [12]  113 	ld	hl, #_rpg_refresh_stats
+    00000026 CDr00r00         [24]  114 	call	___sdcc_bcall_ehl
+    00000029 E1               [12]  115 	pop	hl
+    0000002A C1               [12]  116 	pop	bc
+    0000002B                        117 00102$:
+                                    118 ;src/inventory_menu.c:19: if(refresh&&(game_rpg.joined_mask&14u))close_rows(9u);
+    0000002B 79               [ 4]  119 	ld	a, c
+    0000002C B7               [ 4]  120 	or	a, a
+    0000002D 28 0C            [12]  121 	jr	Z, 00104$
+    0000002F FAr59r00         [16]  122 	ld	a, (#(_game_rpg + 89) + 0)
+    00000032 E6 0E            [ 8]  123 	and	a, #0x0e
+    00000034 28 05            [12]  124 	jr	Z, 00104$
+    00000036 3E 09            [ 8]  125 	ld	a, #0x09
+    00000038 CDr00r00         [24]  126 	call	_close_rows
+    0000003B                        127 00104$:
+                                    128 ;src/inventory_menu.c:20: field_active=0;inventory_screen();
+    0000003B AF               [ 4]  129 	xor	a, a
+    0000003C EAr00r00         [16]  130 	ld	(#_field_active),a
+    0000003F 1Er00            [ 8]  131 	ld	e, #b_inventory_screen
+    00000041 21r00r00         [12]  132 	ld	hl, #_inventory_screen
+                                    133 ;src/inventory_menu.c:21: }
+    00000044 C3r00r00         [16]  134 	jp  ___sdcc_bcall_ehl
+                                    135 ;src/inventory_menu.c:22: static void start(uint8_t slot) {
+                                    136 ;	---------------------------------
+                                    137 ; Function start
+                                    138 ; ---------------------------------
+    00000047                        139 _start:
+    00000047 4F               [ 4]  140 	ld	c, a
+                                    141 ;src/inventory_menu.c:23: memset(&field_action,0,sizeof(field_action));field_active=2;
+    00000048 11 16 00         [12]  142 	ld	de, #0x0016
+    0000004B D5               [16]  143 	push	de
+    0000004C 11 00 00         [12]  144 	ld	de, #0x0000
+    0000004F D5               [16]  145 	push	de
+    00000050 11r00r00         [12]  146 	ld	de, #_field_action
+    00000053 D5               [16]  147 	push	de
+    00000054 CDr00r00         [24]  148 	call	_memset
+    00000057 E8 06            [16]  149 	add	sp, #6
+    00000059 21r00r00         [12]  150 	ld	hl, #_field_active
+    0000005C 36 02            [12]  151 	ld	(hl), #0x02
+                                    152 ;src/inventory_menu.c:24: field_action.a=slot;field_action.item=game_rpg.inventory[slot];field_action.character=255;
+    0000005E 21r06r00         [12]  153 	ld	hl, #(_field_action + 6)
+    00000061 71               [ 8]  154 	ld	(hl), c
+    00000062 21r40r00         [12]  155 	ld	hl, #(_game_rpg + 64)
+    00000065 06 00            [ 8]  156 	ld	b, #0x00
+    00000067 09               [ 8]  157 	add	hl, bc
+    00000068 7E               [ 8]  158 	ld	a, (hl)
+    00000069 21r03r00         [12]  159 	ld	hl, #(_field_action + 3)
+    0000006C 22               [ 8]  160 	ld	(hl+), a
+    0000006D 36 FF            [12]  161 	ld	(hl), #0xff
+                                    162 ;src/inventory_menu.c:25: }
+    0000006F C9               [16]  163 	ret
+                                    164 ;src/inventory_menu.c:26: void inventory_equip_begin(uint8_t slot) RPG_BANKED {
+                                    165 ;	---------------------------------
+                                    166 ; Function inventory_equip_begin
+                                    167 ; ---------------------------------
+                         00000013   168 	b_inventory_equip_begin	= 19
+    00000070                        169 _inventory_equip_begin::
+                                    170 ;src/inventory_menu.c:27: start(slot);
+    00000070 F8 06            [12]  171 	ldhl	sp,	#6
+    00000072 7E               [ 8]  172 	ld	a, (hl)
+    00000073 CDr47r00         [24]  173 	call	_start
+                                    174 ;src/inventory_menu.c:28: if(!rpg_item_equippers(field_action.item)) {
+    00000076 FAr03r00         [16]  175 	ld	a, (#(_field_action + 3) + 0)
+    00000079 F5               [16]  176 	push	af
+    0000007A 33               [ 8]  177 	inc	sp
+    0000007B 1Er00            [ 8]  178 	ld	e, #b_rpg_item_equippers
+    0000007D 21r00r00         [12]  179 	ld	hl, #_rpg_item_equippers
+    00000080 CDr00r00         [24]  180 	call	___sdcc_bcall_ehl
+    00000083 33               [ 8]  181 	inc	sp
+    00000084 B7               [ 4]  182 	or	a, a
+    00000085 20 0B            [12]  183 	jr	NZ, 00102$
+                                    184 ;src/inventory_menu.c:29: field_action.target=ITEM_CLOSE;show_dialogue(0xb5f0);return;
+    00000087 21r05r00         [12]  185 	ld	hl, #_field_action + 5
+    0000008A 36 01            [12]  186 	ld	(hl), #0x01
+    0000008C 11 F0 B5         [12]  187 	ld	de, #0xb5f0
+    0000008F C3r00r00         [16]  188 	jp	_show_dialogue
+    00000092                        189 00102$:
+                                    190 ;src/inventory_menu.c:31: if(!(game_rpg.joined_mask&14u)){inventory_equip_select(0u);return;}
+    00000092 FAr59r00         [16]  191 	ld	a, (#(_game_rpg + 89) + 0)
+    00000095 E6 0E            [ 8]  192 	and	a, #0x0e
+    00000097 20 0D            [12]  193 	jr	NZ, 00104$
+    00000099 AF               [ 4]  194 	xor	a, a
+    0000009A F5               [16]  195 	push	af
+    0000009B 33               [ 8]  196 	inc	sp
+    0000009C 1Er00            [ 8]  197 	ld	e, #b_inventory_equip_select
+    0000009E 21rB2r00         [12]  198 	ld	hl, #_inventory_equip_select
+    000000A1 CDr00r00         [24]  199 	call	___sdcc_bcall_ehl
+    000000A4 33               [ 8]  200 	inc	sp
+    000000A5 C9               [16]  201 	ret
+    000000A6                        202 00104$:
+                                    203 ;src/inventory_menu.c:32: party_choice=0;party_screen();
+    000000A6 AF               [ 4]  204 	xor	a, a
+    000000A7 EAr00r00         [16]  205 	ld	(#_party_choice),a
+    000000AA 1Er00            [ 8]  206 	ld	e, #b_party_screen
+    000000AC 21r00r00         [12]  207 	ld	hl, #_party_screen
+                                    208 ;src/inventory_menu.c:33: }
+    000000AF C3r00r00         [16]  209 	jp  ___sdcc_bcall_ehl
+                                    210 ;src/inventory_menu.c:34: void inventory_equip_select(uint8_t character) RPG_BANKED {
+                                    211 ;	---------------------------------
+                                    212 ; Function inventory_equip_select
+                                    213 ; ---------------------------------
+                         00000013   214 	b_inventory_equip_select	= 19
+    000000B2                        215 _inventory_equip_select::
+                                    216 ;src/inventory_menu.c:36: if(character==255u){
+    000000B2 F8 06            [12]  217 	ldhl	sp,	#6
+    000000B4 7E               [ 8]  218 	ld	a, (hl)
+    000000B5 3C               [ 4]  219 	inc	a
+    000000B6 20 25            [12]  220 	jr	NZ, 00104$
+                                    221 ;src/inventory_menu.c:37: rpg_refresh_stats(&game_rpg);
+    000000B8 11r00r00         [12]  222 	ld	de, #_game_rpg
+    000000BB D5               [16]  223 	push	de
+    000000BC 1Er00            [ 8]  224 	ld	e, #b_rpg_refresh_stats
+    000000BE 21r00r00         [12]  225 	ld	hl, #_rpg_refresh_stats
+    000000C1 CDr00r00         [24]  226 	call	___sdcc_bcall_ehl
+    000000C4 E1               [12]  227 	pop	hl
+                                    228 ;src/inventory_menu.c:38: if(game_rpg.joined_mask&14u)close_rows(9u);
+    000000C5 FAr59r00         [16]  229 	ld	a, (#(_game_rpg + 89) + 0)
+    000000C8 E6 0E            [ 8]  230 	and	a, #0x0e
+    000000CA 28 05            [12]  231 	jr	Z, 00102$
+    000000CC 3E 09            [ 8]  232 	ld	a, #0x09
+    000000CE CDr00r00         [24]  233 	call	_close_rows
+    000000D1                        234 00102$:
+                                    235 ;src/inventory_menu.c:39: field_active=0;inventory_screen();return;
+    000000D1 AF               [ 4]  236 	xor	a, a
+    000000D2 EAr00r00         [16]  237 	ld	(#_field_active),a
+    000000D5 1Er00            [ 8]  238 	ld	e, #b_inventory_screen
+    000000D7 21r00r00         [12]  239 	ld	hl, #_inventory_screen
+    000000DA C3r00r00         [16]  240 	jp  ___sdcc_bcall_ehl
+    000000DD                        241 00104$:
+                                    242 ;src/inventory_menu.c:41: field_action.character=character;
+    000000DD 11r04r00         [12]  243 	ld	de, #(_field_action + 4)
+    000000E0 F8 06            [12]  244 	ldhl	sp,	#6
+    000000E2 7E               [ 8]  245 	ld	a, (hl)
+    000000E3 12               [ 8]  246 	ld	(de), a
+                                    247 ;src/inventory_menu.c:42: result=rpg_equip_stage(&game_rpg,field_action.a,character);
+    000000E4 21r06r00         [12]  248 	ld	hl, #_field_action + 6
+    000000E7 46               [ 8]  249 	ld	b, (hl)
+    000000E8 F8 06            [12]  250 	ldhl	sp,	#6
+    000000EA 7E               [ 8]  251 	ld	a, (hl)
+    000000EB F5               [16]  252 	push	af
+    000000EC 33               [ 8]  253 	inc	sp
+    000000ED C5               [16]  254 	push	bc
+    000000EE 33               [ 8]  255 	inc	sp
+    000000EF 11r00r00         [12]  256 	ld	de, #_game_rpg
+    000000F2 D5               [16]  257 	push	de
+    000000F3 1Er00            [ 8]  258 	ld	e, #b_rpg_equip_stage
+    000000F5 21r00r00         [12]  259 	ld	hl, #_rpg_equip_stage
+    000000F8 CDr00r00         [24]  260 	call	___sdcc_bcall_ehl
+    000000FB E8 04            [16]  261 	add	sp, #4
+                                    262 ;src/inventory_menu.c:43: field_action.target=result==RPG_OK?ITEM_EQUIP_TEXT:ITEM_EQUIP_DENIED;
+    000000FD 4F               [ 4]  263 	ld	c, a
+    000000FE B7               [ 4]  264 	or	a, a
+    000000FF 3E 03            [ 8]  265 	ld	a, #0x03
+    00000101 28 02            [12]  266 	jr	Z, 00108$
+    00000103 3E 04            [ 8]  267 	ld	a, #0x04
+    00000105                        268 00108$:
+    00000105 EAr05r00         [16]  269 	ld	(#(_field_action + 5)),a
+                                    270 ;src/inventory_menu.c:44: show_dialogue(result==RPG_OK?0xb2b6:result==RPG_DEAD?0xb730:0xb5de);
+    00000108 79               [ 4]  271 	ld	a, c
+    00000109 B7               [ 4]  272 	or	a, a
+    0000010A 20 06            [12]  273 	jr	NZ, 00109$
+    0000010C 11 B6 B2         [12]  274 	ld	de, #0xb2b6
+    0000010F C3r00r00         [16]  275 	jp	_show_dialogue
+    00000112                        276 00109$:
+    00000112 79               [ 4]  277 	ld	a, c
+    00000113 D6 05            [ 8]  278 	sub	a, #0x05
+    00000115 20 06            [12]  279 	jr	NZ, 00111$
+    00000117 11 30 B7         [12]  280 	ld	de, #0xb730
+    0000011A C3r00r00         [16]  281 	jp	_show_dialogue
+    0000011D                        282 00111$:
+    0000011D 11 DE B5         [12]  283 	ld	de, #0xb5de
+                                    284 ;src/inventory_menu.c:45: }
+    00000120 C3r00r00         [16]  285 	jp	_show_dialogue
+                                    286 ;src/inventory_menu.c:46: void inventory_drop_begin(uint8_t slot) RPG_BANKED {
+                                    287 ;	---------------------------------
+                                    288 ; Function inventory_drop_begin
+                                    289 ; ---------------------------------
+                         00000013   290 	b_inventory_drop_begin	= 19
+    00000123                        291 _inventory_drop_begin::
+                                    292 ;src/inventory_menu.c:47: start(slot);field_action.target=rpg_item_discardable(field_action.item)?ITEM_DROP:ITEM_CLOSE;
+    00000123 F8 06            [12]  293 	ldhl	sp,	#6
+    00000125 7E               [ 8]  294 	ld	a, (hl)
+    00000126 CDr47r00         [24]  295 	call	_start
+    00000129 FAr03r00         [16]  296 	ld	a, (#(_field_action + 3) + 0)
+    0000012C F5               [16]  297 	push	af
+    0000012D 33               [ 8]  298 	inc	sp
+    0000012E 1Er00            [ 8]  299 	ld	e, #b_rpg_item_discardable
+    00000130 21r00r00         [12]  300 	ld	hl, #_rpg_item_discardable
+    00000133 CDr00r00         [24]  301 	call	___sdcc_bcall_ehl
+    00000136 33               [ 8]  302 	inc	sp
+    00000137 B7               [ 4]  303 	or	a, a
+    00000138 3E 02            [ 8]  304 	ld	a, #0x02
+    0000013A 20 02            [12]  305 	jr	NZ, 00104$
+    0000013C 3E 01            [ 8]  306 	ld	a, #0x01
+    0000013E                        307 00104$:
+    0000013E EAr05r00         [16]  308 	ld	(#(_field_action + 5)),a
+                                    309 ;src/inventory_menu.c:48: show_dialogue(field_action.target==ITEM_DROP?0xb2c2:0xb6de);
+    00000141 D6 02            [ 8]  310 	sub	a, #0x02
+    00000143 20 06            [12]  311 	jr	NZ, 00105$
+    00000145 11 C2 B2         [12]  312 	ld	de, #0xb2c2
+    00000148 C3r00r00         [16]  313 	jp	_show_dialogue
+    0000014B                        314 00105$:
+    0000014B 11 DE B6         [12]  315 	ld	de, #0xb6de
+                                    316 ;src/inventory_menu.c:49: }
+    0000014E C3r00r00         [16]  317 	jp	_show_dialogue
+                                    318 ;src/inventory_menu.c:50: void inventory_action_advance(void) RPG_BANKED {
+                                    319 ;	---------------------------------
+                                    320 ; Function inventory_action_advance
+                                    321 ; ---------------------------------
+                         00000013   322 	b_inventory_action_advance	= 19
+    00000151                        323 _inventory_action_advance::
+    00000151 E8 F1            [16]  324 	add	sp, #-15
+                                    325 ;src/inventory_menu.c:52: if(field_action.target==ITEM_EQUIP_TEXT){
+    00000153 FAr05r00         [16]  326 	ld	a, (#(_field_action + 5) + 0)
+    00000156 F8 0E            [12]  327 	ldhl	sp,#14
+    00000158 77               [ 8]  328 	ld	(hl), a
+    00000159 D6 03            [ 8]  329 	sub	a, #0x03
+    0000015B C2r06r02         [16]  330 	jp	NZ, 00103$
+                                    331 ;src/inventory_menu.c:55: p=&game_rpg.party[field_action.character];ui_panel(40u,13u);
+    0000015E FAr04r00         [16]  332 	ld	a, (#(_field_action + 4) + 0)
+    00000161 CB 37            [ 8]  333 	swap	a
+    00000163 E6 F0            [ 8]  334 	and	a, #0xf0
+    00000165 C6r00            [ 8]  335 	add	a, #<(_game_rpg)
+    00000167 4F               [ 4]  336 	ld	c, a
+    00000168 3E 00            [ 8]  337 	ld	a, #0x00
+    0000016A CEs00            [ 8]  338 	adc	a, #>(_game_rpg)
+    0000016C 47               [ 4]  339 	ld	b, a
+    0000016D C5               [16]  340 	push	bc
+    0000016E 3E 0D            [ 8]  341 	ld	a, #0x0d
+    00000170 F5               [16]  342 	push	af
+    00000171 33               [ 8]  343 	inc	sp
+    00000172 3E 28            [ 8]  344 	ld	a, #0x28
+    00000174 F5               [16]  345 	push	af
+    00000175 33               [ 8]  346 	inc	sp
+    00000176 1Er00            [ 8]  347 	ld	e, #b_ui_panel
+    00000178 21r00r00         [12]  348 	ld	hl, #_ui_panel
+    0000017B CDr00r00         [24]  349 	call	___sdcc_bcall_ehl
+    0000017E E1               [12]  350 	pop	hl
+    0000017F C1               [12]  351 	pop	bc
+                                    352 ;src/inventory_menu.c:56: for(i=0;i<3u;++i){
+    00000180 21 0C 00         [12]  353 	ld	hl, #0x000c
+    00000183 09               [ 8]  354 	add	hl, bc
+    00000184 E5               [16]  355 	push	hl
+    00000185 7D               [ 4]  356 	ld	a, l
+    00000186 F8 0B            [12]  357 	ldhl	sp,	#11
+    00000188 77               [ 8]  358 	ld	(hl), a
+    00000189 E1               [12]  359 	pop	hl
+    0000018A 7C               [ 4]  360 	ld	a, h
+    0000018B F8 0A            [12]  361 	ldhl	sp,	#10
+    0000018D 77               [ 8]  362 	ld	(hl), a
+    0000018E 21 0B 00         [12]  363 	ld	hl, #0x000b
+    00000191 09               [ 8]  364 	add	hl, bc
+    00000192 E5               [16]  365 	push	hl
+    00000193 7D               [ 4]  366 	ld	a, l
+    00000194 F8 0D            [12]  367 	ldhl	sp,	#13
+    00000196 77               [ 8]  368 	ld	(hl), a
+    00000197 E1               [12]  369 	pop	hl
+    00000198 7C               [ 4]  370 	ld	a, h
+    00000199 F8 0C            [12]  371 	ldhl	sp,	#12
+    0000019B 77               [ 8]  372 	ld	(hl), a
+    0000019C 21 0A 00         [12]  373 	ld	hl, #0x000a
+    0000019F 09               [ 8]  374 	add	hl, bc
+    000001A0 E5               [16]  375 	push	hl
+    000001A1 7D               [ 4]  376 	ld	a, l
+    000001A2 F8 0F            [12]  377 	ldhl	sp,	#15
+    000001A4 77               [ 8]  378 	ld	(hl), a
+    000001A5 E1               [12]  379 	pop	hl
+    000001A6 7C               [ 4]  380 	ld	a, h
+    000001A7 F8 0E            [12]  381 	ldhl	sp,	#14
+    000001A9 77               [ 8]  382 	ld	(hl), a
+    000001AA 0E 00            [ 8]  383 	ld	c, #0x00
+    000001AC                        384 00106$:
+                                    385 ;src/inventory_menu.c:57: item=i==0u?p->weapon:i==1u?p->armor:p->shield;
+    000001AC 79               [ 4]  386 	ld	a, c
+    000001AD B7               [ 4]  387 	or	a, a
+    000001AE 20 08            [12]  388 	jr	NZ, 00110$
+    000001B0 F8 0D            [12]  389 	ldhl	sp,#13
+    000001B2 2A               [ 8]  390 	ld	a, (hl+)
+    000001B3 5F               [ 4]  391 	ld	e, a
+    000001B4 56               [ 8]  392 	ld	d, (hl)
+    000001B5 1A               [ 8]  393 	ld	a, (de)
+    000001B6 18 12            [12]  394 	jr	00111$
+    000001B8                        395 00110$:
+    000001B8 79               [ 4]  396 	ld	a, c
+    000001B9 3D               [ 4]  397 	dec	a
+    000001BA 20 08            [12]  398 	jr	NZ, 00112$
+    000001BC F8 0B            [12]  399 	ldhl	sp,#11
+    000001BE 2A               [ 8]  400 	ld	a, (hl+)
+    000001BF 5F               [ 4]  401 	ld	e, a
+    000001C0 56               [ 8]  402 	ld	d, (hl)
+    000001C1 1A               [ 8]  403 	ld	a, (de)
+    000001C2 18 06            [12]  404 	jr	00113$
+    000001C4                        405 00112$:
+    000001C4 F8 09            [12]  406 	ldhl	sp,#9
+    000001C6 2A               [ 8]  407 	ld	a, (hl+)
+    000001C7 5F               [ 4]  408 	ld	e, a
+    000001C8 56               [ 8]  409 	ld	d, (hl)
+    000001C9 1A               [ 8]  410 	ld	a, (de)
+    000001CA                        411 00113$:
+    000001CA                        412 00111$:
+                                    413 ;src/inventory_menu.c:58: dialogue_item_name(item,name);ui_text(3u,2u+i*2u,name);
+    000001CA 21 00 00         [12]  414 	ld	hl, #0
+    000001CD 39               [ 8]  415 	add	hl, sp
+    000001CE E5               [16]  416 	push	hl
+    000001CF C5               [16]  417 	push	bc
+    000001D0 E5               [16]  418 	push	hl
+    000001D1 F5               [16]  419 	push	af
+    000001D2 33               [ 8]  420 	inc	sp
+    000001D3 1Er00            [ 8]  421 	ld	e, #b_dialogue_item_name
+    000001D5 21r00r00         [12]  422 	ld	hl, #_dialogue_item_name
+    000001D8 CDr00r00         [24]  423 	call	___sdcc_bcall_ehl
+    000001DB E8 03            [16]  424 	add	sp, #3
+    000001DD C1               [12]  425 	pop	bc
+    000001DE E1               [12]  426 	pop	hl
+    000001DF 79               [ 4]  427 	ld	a, c
+    000001E0 87               [ 4]  428 	add	a, a
+    000001E1 C6 02            [ 8]  429 	add	a, #0x02
+    000001E3 C5               [16]  430 	push	bc
+    000001E4 E5               [16]  431 	push	hl
+    000001E5 F5               [16]  432 	push	af
+    000001E6 33               [ 8]  433 	inc	sp
+    000001E7 3E 03            [ 8]  434 	ld	a, #0x03
+    000001E9 F5               [16]  435 	push	af
+    000001EA 33               [ 8]  436 	inc	sp
+    000001EB 1Er00            [ 8]  437 	ld	e, #b_ui_text
+    000001ED 21r00r00         [12]  438 	ld	hl, #_ui_text
+    000001F0 CDr00r00         [24]  439 	call	___sdcc_bcall_ehl
+    000001F3 E8 04            [16]  440 	add	sp, #4
+    000001F5 C1               [12]  441 	pop	bc
+                                    442 ;src/inventory_menu.c:56: for(i=0;i<3u;++i){
+    000001F6 0C               [ 4]  443 	inc	c
+    000001F7 79               [ 4]  444 	ld	a, c
+    000001F8 D6 03            [ 8]  445 	sub	a, #0x03
+    000001FA 38 B0            [12]  446 	jr	C, 00106$
+                                    447 ;src/inventory_menu.c:60: inventory_dialogue_overlay();screen_state=STATE_EQUIPMENT_PANEL;return;
+    000001FC CDr00r00         [24]  448 	call	_inventory_dialogue_overlay
+    000001FF 21r00r00         [12]  449 	ld	hl, #_screen_state
+    00000202 36 1E            [12]  450 	ld	(hl), #0x1e
+    00000204 18 27            [12]  451 	jr	00108$
+    00000206                        452 00103$:
+                                    453 ;src/inventory_menu.c:62: if(field_action.target==ITEM_DROP)rpg_remove_item(&game_rpg,field_action.a);
+    00000206 F8 0E            [12]  454 	ldhl	sp,	#14
+    00000208 7E               [ 8]  455 	ld	a, (hl)
+    00000209 D6 02            [ 8]  456 	sub	a, #0x02
+    0000020B 20 13            [12]  457 	jr	NZ, 00105$
+    0000020D FAr06r00         [16]  458 	ld	a, (#_field_action + 6)
+    00000210 F5               [16]  459 	push	af
+    00000211 33               [ 8]  460 	inc	sp
+    00000212 11r00r00         [12]  461 	ld	de, #_game_rpg
+    00000215 D5               [16]  462 	push	de
+    00000216 1Er00            [ 8]  463 	ld	e, #b_rpg_remove_item
+    00000218 21r00r00         [12]  464 	ld	hl, #_rpg_remove_item
+    0000021B CDr00r00         [24]  465 	call	___sdcc_bcall_ehl
+    0000021E E8 03            [16]  466 	add	sp, #3
+    00000220                        467 00105$:
+                                    468 ;src/inventory_menu.c:63: finish(field_action.target==ITEM_EQUIP_DENIED);
+    00000220 FAr05r00         [16]  469 	ld	a, (#(_field_action + 5) + 0)
+    00000223 D6 04            [ 8]  470 	sub	a, #0x04
+    00000225 3E 01            [ 8]  471 	ld	a, #0x01
+    00000227 28 01            [12]  472 	jr	Z, 00164$
+    00000229 AF               [ 4]  473 	xor	a, a
+    0000022A                        474 00164$:
+    0000022A CDr0Ar00         [24]  475 	call	_finish
+    0000022D                        476 00108$:
+                                    477 ;src/inventory_menu.c:64: }
+    0000022D E8 0F            [16]  478 	add	sp, #15
+    0000022F C9               [16]  479 	ret
+                                    480 ;src/inventory_menu.c:65: void inventory_equipment_done(void) RPG_BANKED {
+                                    481 ;	---------------------------------
+                                    482 ; Function inventory_equipment_done
+                                    483 ; ---------------------------------
+                         00000013   484 	b_inventory_equipment_done	= 19
+    00000230                        485 _inventory_equipment_done::
+                                    486 ;src/inventory_menu.c:66: HIDE_WIN;close_rows(8u);close_rows(6u);
+    00000230 F0r00            [12]  487 	ldh	a, (_LCDC_REG + 0)
+    00000232 E6 DF            [ 8]  488 	and	a, #0xdf
+    00000234 E0r00            [12]  489 	ldh	(_LCDC_REG + 0), a
+    00000236 3E 08            [ 8]  490 	ld	a, #0x08
+    00000238 CDr00r00         [24]  491 	call	_close_rows
+    0000023B 3E 06            [ 8]  492 	ld	a, #0x06
+    0000023D CDr00r00         [24]  493 	call	_close_rows
+                                    494 ;src/inventory_menu.c:67: rpg_equip_finish(&game_rpg,field_action.a);
+    00000240 21r06r00         [12]  495 	ld	hl, #(_field_action + 6)
+    00000243 46               [ 8]  496 	ld	b, (hl)
+    00000244 C5               [16]  497 	push	bc
+    00000245 33               [ 8]  498 	inc	sp
+    00000246 11r00r00         [12]  499 	ld	de, #_game_rpg
+    00000249 D5               [16]  500 	push	de
+    0000024A 1Er00            [ 8]  501 	ld	e, #b_rpg_equip_finish
+    0000024C 21r00r00         [12]  502 	ld	hl, #_rpg_equip_finish
+    0000024F CDr00r00         [24]  503 	call	___sdcc_bcall_ehl
+    00000252 E8 03            [16]  504 	add	sp, #3
+                                    505 ;src/inventory_menu.c:68: if(game_rpg.joined_mask&14u)close_rows(9u);
+    00000254 FAr59r00         [16]  506 	ld	a, (#(_game_rpg + 89) + 0)
+    00000257 E6 0E            [ 8]  507 	and	a, #0x0e
+    00000259 28 05            [12]  508 	jr	Z, 00102$
+    0000025B 3E 09            [ 8]  509 	ld	a, #0x09
+    0000025D CDr00r00         [24]  510 	call	_close_rows
+    00000260                        511 00102$:
+                                    512 ;src/inventory_menu.c:69: field_active=0;inventory_screen();
+    00000260 AF               [ 4]  513 	xor	a, a
+    00000261 EAr00r00         [16]  514 	ld	(#_field_active),a
+    00000264 1Er00            [ 8]  515 	ld	e, #b_inventory_screen
+    00000266 21r00r00         [12]  516 	ld	hl, #_inventory_screen
+                                    517 ;src/inventory_menu.c:70: }
+    00000269 C3r00r00         [16]  518 	jp  ___sdcc_bcall_ehl
+                                    519 	.area _CODE_19
+                                    520 	.area _INITIALIZER
+                                    521 	.area _CABS (ABS)

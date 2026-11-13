@@ -1,0 +1,1943 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_banks": [
+    111,
+    112,
+    113,
+    114
+  ],
+  "bank_bytes": [
+    15480,
+    15424,
+    15272,
+    14848
+  ],
+  "records": [
+    {
+      "kind": 0,
+      "id": 1,
+      "palette_index": 255,
+      "name": "0-01-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 183,
+      "data_sha256": "c3f3cc9a9c5d463fbace536186372077a67b6952caeaa8744fa0f8a7830a04ae"
+    },
+    {
+      "kind": 0,
+      "id": 2,
+      "palette_index": 255,
+      "name": "0-02-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 180,
+      "data_sha256": "07c49cb9ac0e4e151ff85797c9f16e5fc86d6f7c704438941dc06de1d5593f52"
+    },
+    {
+      "kind": 0,
+      "id": 3,
+      "palette_index": 255,
+      "name": "0-03-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 175,
+      "data_sha256": "108ad45078b4e695ab1d0066ed227a3b45662020a4d66e7aeb888a5e474348c9"
+    },
+    {
+      "kind": 0,
+      "id": 4,
+      "palette_index": 255,
+      "name": "0-04-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 133,
+      "data_sha256": "f916ea3a0124d228230723cc75e20c28b1df3d7d78aee9ede8744ef9c3d5422b"
+    },
+    {
+      "kind": 0,
+      "id": 5,
+      "palette_index": 255,
+      "name": "0-05-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 183,
+      "data_sha256": "127bd68d6720546c699aeafd4690be65f2b888b77c505f20633d42ab21208fbd"
+    },
+    {
+      "kind": 0,
+      "id": 6,
+      "palette_index": 255,
+      "name": "0-06-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 169,
+      "data_sha256": "2b2c259fa0b8986d14d977c0431d5864dca8eb23274aa4110615b72845099009"
+    },
+    {
+      "kind": 0,
+      "id": 7,
+      "palette_index": 255,
+      "name": "0-07-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 167,
+      "data_sha256": "4cad764f7f36a3e123a6370b34fb166bb6fa729053c1d12da2ee09225994b6dc"
+    },
+    {
+      "kind": 0,
+      "id": 8,
+      "palette_index": 255,
+      "name": "0-08-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 128,
+      "data_sha256": "d6512f69349932681cd5d6d5d3789b5f40098ca7854721ce7d6fd4ea74e0661a"
+    },
+    {
+      "kind": 0,
+      "id": 9,
+      "palette_index": 255,
+      "name": "0-09-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 179,
+      "data_sha256": "8f43baff0ff6f27577f34cb42229a3445c8453dad5b6221e621d1710d4735ce1"
+    },
+    {
+      "kind": 0,
+      "id": 10,
+      "palette_index": 255,
+      "name": "0-10-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 181,
+      "data_sha256": "fd39cdbcdaaf583a7d4cf685cd06265856f0a7a11510cd4069ec394983e9601e"
+    },
+    {
+      "kind": 0,
+      "id": 11,
+      "palette_index": 255,
+      "name": "0-11-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 175,
+      "data_sha256": "169ba63cc28ccd656a8e725831a0a71a13e483218cf0828d94c27f9021fad374"
+    },
+    {
+      "kind": 0,
+      "id": 12,
+      "palette_index": 255,
+      "name": "0-12-255",
+      "bank": 111,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        84,
+        143,
+        168
+      ],
+      "quantized_pixels": 131,
+      "data_sha256": "9e9faa76ead7680a785afab1d42b2df489e36cdfeefa5221a4ef60bd0fdcffc4"
+    },
+    {
+      "kind": 0,
+      "id": 13,
+      "palette_index": 255,
+      "name": "0-13-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 133,
+      "data_sha256": "7b997fcc579315ab3ff3a29fd99bd14c496ee808208b6f405e236bb2dd73a9f3"
+    },
+    {
+      "kind": 0,
+      "id": 14,
+      "palette_index": 255,
+      "name": "0-14-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 127,
+      "data_sha256": "e4e92f93ecaef05803b941dccb4a121b47ac2239b03e21a4e702746510a67ec3"
+    },
+    {
+      "kind": 0,
+      "id": 15,
+      "palette_index": 255,
+      "name": "0-15-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 131,
+      "data_sha256": "59f8a498a5776fd3c2ccc680ace31c91fc28d847194802144b4d4b31181fb374"
+    },
+    {
+      "kind": 0,
+      "id": 16,
+      "palette_index": 255,
+      "name": "0-16-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 100,
+      "data_sha256": "4e21b096fd724cd994c7be6aadebfba30f78ec9e0f90b4f01c3093d5b9419cab"
+    },
+    {
+      "kind": 0,
+      "id": 17,
+      "palette_index": 255,
+      "name": "0-17-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 130,
+      "data_sha256": "bb5343cefc08dd373d797bd873c9436a33ff50d5e4c97a6237d5e9f33fb572cf"
+    },
+    {
+      "kind": 0,
+      "id": 18,
+      "palette_index": 255,
+      "name": "0-18-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 124,
+      "data_sha256": "6b36042cc0a731021d5e41888c455f05cdc5baf7c0e3716a95e7bda197d6b6f3"
+    },
+    {
+      "kind": 0,
+      "id": 19,
+      "palette_index": 255,
+      "name": "0-19-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 122,
+      "data_sha256": "ca2aef99cfcb77489e9d17d53b484f80f70cb1325655a83c58d99010ff8e1c7b"
+    },
+    {
+      "kind": 0,
+      "id": 20,
+      "palette_index": 255,
+      "name": "0-20-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 107,
+      "data_sha256": "40a717ad987afe04fb58b7f4ceb44fc4303d77f59166a81e44fc6c1e383cd731"
+    },
+    {
+      "kind": 0,
+      "id": 21,
+      "palette_index": 255,
+      "name": "0-21-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 136,
+      "data_sha256": "ed173fe73230da1243eff8cbf1c17ad9d83218ed1e5a4865dec1aba27d5e90fd"
+    },
+    {
+      "kind": 0,
+      "id": 22,
+      "palette_index": 255,
+      "name": "0-22-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 130,
+      "data_sha256": "43785c0b547f4b6591ef5f63f1ea11b36235fc3a1a664944a0edfdcb3366f756"
+    },
+    {
+      "kind": 0,
+      "id": 23,
+      "palette_index": 255,
+      "name": "0-23-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 131,
+      "data_sha256": "3b89e7448b4a418f2f5922c2357f28314b29bb118f8626ed41ce3ecf98cea292"
+    },
+    {
+      "kind": 0,
+      "id": 24,
+      "palette_index": 255,
+      "name": "0-24-255",
+      "bank": 111,
+      "tiles": 19,
+      "sprites": 20,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 113,
+      "data_sha256": "1f93d23c87cf9281ce90d41a2a8bf21dfe309124fcdecb88a85dcd594bf208f5"
+    },
+    {
+      "kind": 0,
+      "id": 25,
+      "palette_index": 255,
+      "name": "0-25-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 161,
+      "data_sha256": "f9b52993a735afcae12142b8188e2533e2d510692034638077413395ebd2bd7c"
+    },
+    {
+      "kind": 0,
+      "id": 26,
+      "palette_index": 255,
+      "name": "0-26-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 153,
+      "data_sha256": "8474744559247b42b09ea22a0e182eed690dffe98d081bd62002b2d755e8461f"
+    },
+    {
+      "kind": 0,
+      "id": 27,
+      "palette_index": 255,
+      "name": "0-27-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 162,
+      "data_sha256": "b4b5a3914ef8daf4ea281f2adb651804f3a78655a885e86be2a32c803c4deb68"
+    },
+    {
+      "kind": 0,
+      "id": 28,
+      "palette_index": 255,
+      "name": "0-28-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 135,
+      "data_sha256": "08a749476972677e59117c97c24545ac2cd9434b51c55ea26a877936ec3b60e9"
+    },
+    {
+      "kind": 0,
+      "id": 29,
+      "palette_index": 255,
+      "name": "0-29-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 144,
+      "data_sha256": "cf361eb0f0240fdfcfd0251b896c74cb5186adc5619c6b20e53986477b6d337c"
+    },
+    {
+      "kind": 0,
+      "id": 30,
+      "palette_index": 255,
+      "name": "0-30-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 136,
+      "data_sha256": "5601843c4987916fd1271541820b4f811c641d595fed3305861848ccb5fd2845"
+    },
+    {
+      "kind": 0,
+      "id": 31,
+      "palette_index": 255,
+      "name": "0-31-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 141,
+      "data_sha256": "35e2ceecd6cfd15f2449a1fb7f113d05bd1b2132e0aa6048c632022178a44abf"
+    },
+    {
+      "kind": 0,
+      "id": 32,
+      "palette_index": 255,
+      "name": "0-32-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 114,
+      "data_sha256": "3fb881e49e9a675d5f97028f4c66f61c96b4165b595b4b262b5ac8b5c61e5773"
+    },
+    {
+      "kind": 0,
+      "id": 33,
+      "palette_index": 255,
+      "name": "0-33-255",
+      "bank": 111,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 170,
+      "data_sha256": "e846d5e37cd8c075b1b93523b3a4e7d8cd6d5246de3fa54b214e8eafcd1db2ad"
+    },
+    {
+      "kind": 0,
+      "id": 34,
+      "palette_index": 255,
+      "name": "0-34-255",
+      "bank": 112,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 175,
+      "data_sha256": "43a20040e94aaf456213ec296293687659cf5983e2c70f3f226a9ac5ac6b8d96"
+    },
+    {
+      "kind": 0,
+      "id": 35,
+      "palette_index": 255,
+      "name": "0-35-255",
+      "bank": 112,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 159,
+      "data_sha256": "3404173cd8639a1ae9ac3f97ee6db3bf30b2494ea451ee8250b2b47945e782c0"
+    },
+    {
+      "kind": 0,
+      "id": 36,
+      "palette_index": 255,
+      "name": "0-36-255",
+      "bank": 112,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        112,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 139,
+      "data_sha256": "7aabbab4ab4550bce3fc4b22da2004f0b17d078b5ce8d3572335fdcf9ac9f619"
+    },
+    {
+      "kind": 0,
+      "id": 37,
+      "palette_index": 255,
+      "name": "0-37-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 197,
+      "data_sha256": "c85e6262a86c945e4f3c8bcbfc83dee697ed5cc70dba2cb0c44d28684e06deb5"
+    },
+    {
+      "kind": 0,
+      "id": 38,
+      "palette_index": 255,
+      "name": "0-38-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 193,
+      "data_sha256": "83e1f04a8c2cf1f09206539f1f9a7b2ca4b03810e65e883f691eb9e0f926412b"
+    },
+    {
+      "kind": 0,
+      "id": 39,
+      "palette_index": 255,
+      "name": "0-39-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 189,
+      "data_sha256": "838564b2dea19cc7364bfdc3ca50929445fe00f859a802c3838f285e04498cdd"
+    },
+    {
+      "kind": 0,
+      "id": 40,
+      "palette_index": 255,
+      "name": "0-40-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 169,
+      "data_sha256": "c1f078bb3f7ec95995dc4edeef637ce2776344f584b7b1a9697763f70dc90de2"
+    },
+    {
+      "kind": 0,
+      "id": 41,
+      "palette_index": 255,
+      "name": "0-41-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 192,
+      "data_sha256": "b7e2bf9fca2eae08b84fd5b15d799c1da5d358a1ee19a2bad05571b7855a8419"
+    },
+    {
+      "kind": 0,
+      "id": 42,
+      "palette_index": 255,
+      "name": "0-42-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 184,
+      "data_sha256": "9f3130d5104913405caf2e40dcc28055dcb4f244bcd32e749e9631e2c5b62009"
+    },
+    {
+      "kind": 0,
+      "id": 43,
+      "palette_index": 255,
+      "name": "0-43-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 178,
+      "data_sha256": "feb69f2d17c6e352c4632482e3e7003655d470f9fb04c1c6ecbdf5d47dec42fc"
+    },
+    {
+      "kind": 0,
+      "id": 44,
+      "palette_index": 255,
+      "name": "0-44-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 159,
+      "data_sha256": "89e7d5be5e8c83bebe98fb288fa5e5e3ebbeb3f7f261e1e969234452ed970a58"
+    },
+    {
+      "kind": 0,
+      "id": 45,
+      "palette_index": 255,
+      "name": "0-45-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 210,
+      "data_sha256": "9fb69e8ee6d57b5633c58cba2bf53594b0e3d358ee797af9ca7b93697469fc6a"
+    },
+    {
+      "kind": 0,
+      "id": 46,
+      "palette_index": 255,
+      "name": "0-46-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 201,
+      "data_sha256": "4d437bdd02a52f0347ac9310f99fa00838a6d723ddb356ddd554687a3c4bbc53"
+    },
+    {
+      "kind": 0,
+      "id": 47,
+      "palette_index": 255,
+      "name": "0-47-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 197,
+      "data_sha256": "1b5057779d159b0a77103d2d63afb9f08b8ce49d68ae4277c94463a778350c88"
+    },
+    {
+      "kind": 0,
+      "id": 48,
+      "palette_index": 255,
+      "name": "0-48-255",
+      "bank": 112,
+      "tiles": 24,
+      "sprites": 25,
+      "source_bbox": [
+        112,
+        81,
+        144,
+        168
+      ],
+      "quantized_pixels": 179,
+      "data_sha256": "8aef6016917bd00fc7a87ce2a725fe2a65ea7ac3930df4828b87c79549ad2e9e"
+    },
+    {
+      "kind": 0,
+      "id": 49,
+      "palette_index": 255,
+      "name": "0-49-255",
+      "bank": 112,
+      "tiles": 27,
+      "sprites": 28,
+      "source_bbox": [
+        110,
+        80,
+        143,
+        168
+      ],
+      "quantized_pixels": 52,
+      "data_sha256": "0062067770c752bad4f257a942b61ab73addeacc7c4dcaca44fc5e678e02f8a7"
+    },
+    {
+      "kind": 0,
+      "id": 50,
+      "palette_index": 255,
+      "name": "0-50-255",
+      "bank": 112,
+      "tiles": 18,
+      "sprites": 18,
+      "source_bbox": [
+        112,
+        89,
+        142,
+        168
+      ],
+      "quantized_pixels": 180,
+      "data_sha256": "ae88f9223eaa4912c4cb38de37028979335ef45d32b7a9f408ba83a9546ddba5"
+    },
+    {
+      "kind": 0,
+      "id": 51,
+      "palette_index": 255,
+      "name": "0-51-255",
+      "bank": 112,
+      "tiles": 17,
+      "sprites": 17,
+      "source_bbox": [
+        114,
+        84,
+        142,
+        168
+      ],
+      "quantized_pixels": 95,
+      "data_sha256": "5063f2a970b37a3418fb2f03931f30f65edaaa4cd5c45e29051bbf68aa15208e"
+    },
+    {
+      "kind": 0,
+      "id": 52,
+      "palette_index": 255,
+      "name": "0-52-255",
+      "bank": 112,
+      "tiles": 29,
+      "sprites": 30,
+      "source_bbox": [
+        112,
+        80,
+        144,
+        168
+      ],
+      "quantized_pixels": 139,
+      "data_sha256": "37f72c03d4ca8db55b775e3760a9377aaa82c7635cab8b01a982faa207b20d09"
+    },
+    {
+      "kind": 0,
+      "id": 53,
+      "palette_index": 255,
+      "name": "0-53-255",
+      "bank": 112,
+      "tiles": 27,
+      "sprites": 27,
+      "source_bbox": [
+        106,
+        81,
+        149,
+        168
+      ],
+      "quantized_pixels": 401,
+      "data_sha256": "e12f5220c826aa93084c9fcd6c5b68b97977323d76065325dc8266350a907c30"
+    },
+    {
+      "kind": 0,
+      "id": 54,
+      "palette_index": 255,
+      "name": "0-54-255",
+      "bank": 112,
+      "tiles": 26,
+      "sprites": 27,
+      "source_bbox": [
+        100,
+        112,
+        156,
+        168
+      ],
+      "quantized_pixels": 137,
+      "data_sha256": "2bca21ef1a8accebe4794488cf4de02856514a49638d84160b189dec85bc42b7"
+    },
+    {
+      "kind": 0,
+      "id": 55,
+      "palette_index": 255,
+      "name": "0-55-255",
+      "bank": 112,
+      "tiles": 22,
+      "sprites": 22,
+      "source_bbox": [
+        110,
+        112,
+        146,
+        168
+      ],
+      "quantized_pixels": 175,
+      "data_sha256": "49cc18cf187258a021c97c87a20b7f39c5ec9847c645525bcf45fe4a9ab74bc4"
+    },
+    {
+      "kind": 0,
+      "id": 56,
+      "palette_index": 255,
+      "name": "0-56-255",
+      "bank": 112,
+      "tiles": 27,
+      "sprites": 27,
+      "source_bbox": [
+        112,
+        80,
+        144,
+        168
+      ],
+      "quantized_pixels": 101,
+      "data_sha256": "37a2f4a3288956c0c9872975619ee1af4ad7ca575c13ae729c46cfb7bb63290f"
+    },
+    {
+      "kind": 0,
+      "id": 57,
+      "palette_index": 255,
+      "name": "0-57-255",
+      "bank": 112,
+      "tiles": 17,
+      "sprites": 28,
+      "source_bbox": [
+        112,
+        80,
+        143,
+        168
+      ],
+      "quantized_pixels": 264,
+      "data_sha256": "5d0bd8dd1012bf81320bd28a132f181c6fe3d2661e66b61692d2164392ddc579"
+    },
+    {
+      "kind": 0,
+      "id": 58,
+      "palette_index": 255,
+      "name": "0-58-255",
+      "bank": 112,
+      "tiles": 30,
+      "sprites": 31,
+      "source_bbox": [
+        108,
+        80,
+        147,
+        168
+      ],
+      "quantized_pixels": 52,
+      "data_sha256": "001e1e6eda897b37f80615329370c4a89091025c0ad18a51705affee654170d8"
+    },
+    {
+      "kind": 0,
+      "id": 59,
+      "palette_index": 255,
+      "name": "0-59-255",
+      "bank": 112,
+      "tiles": 26,
+      "sprites": 26,
+      "source_bbox": [
+        106,
+        81,
+        150,
+        168
+      ],
+      "quantized_pixels": 306,
+      "data_sha256": "e2dc6d3f5c4a2eae123ea8f60b13ce9b2d5fd40d85316cf059202f5c2ab6784b"
+    },
+    {
+      "kind": 0,
+      "id": 60,
+      "palette_index": 255,
+      "name": "0-60-255",
+      "bank": 112,
+      "tiles": 16,
+      "sprites": 16,
+      "source_bbox": [
+        116,
+        80,
+        140,
+        168
+      ],
+      "quantized_pixels": 251,
+      "data_sha256": "c76789b5a25c39c97e74db7baa7fdd05e2924f8159e14fda8bbd76a5bde108b8"
+    },
+    {
+      "kind": 0,
+      "id": 61,
+      "palette_index": 255,
+      "name": "0-61-255",
+      "bank": 112,
+      "tiles": 16,
+      "sprites": 16,
+      "source_bbox": [
+        116,
+        80,
+        140,
+        168
+      ],
+      "quantized_pixels": 243,
+      "data_sha256": "3129d9b5f9459a7ee89b1a64d5bdaea204040f4c6cbfa0ccb7cf654297e943b2"
+    },
+    {
+      "kind": 1,
+      "id": 8,
+      "palette_index": 255,
+      "name": "1-08-255",
+      "bank": 112,
+      "tiles": 21,
+      "sprites": 21,
+      "source_bbox": [
+        110,
+        81,
+        145,
+        144
+      ],
+      "quantized_pixels": 203,
+      "data_sha256": "abed7c5f59c118b14a66e16e05f0f2bba57f0598c38dcca832c02870063993e9"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 0,
+      "name": "1-22-000",
+      "bank": 113,
+      "tiles": 29,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 99,
+      "data_sha256": "f5e8a488e5580d403cc5bf79aea43820e046aea5640be0ec4a9516325d4257ff"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 1,
+      "name": "1-22-001",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 143,
+      "data_sha256": "eb60dd4d701f9d7dfac849e644758e3bcbf30ef627b847b5f3c7f1a740a0b8a4"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 2,
+      "name": "1-22-002",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 132,
+      "data_sha256": "7c0601aa246551d715aaac246aa94138ee7fe72baf9736574b1d2e69b25db6ce"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 3,
+      "name": "1-22-003",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 149,
+      "data_sha256": "e49603f6ad61814701392eaca8e50747a8499b4b247ae35fc15366a43af75308"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 4,
+      "name": "1-22-004",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 151,
+      "data_sha256": "72727f6030943ad4cb9078b9dc10d17396d568f6a4d7caf59742d6ecb1c7e211"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 5,
+      "name": "1-22-005",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 145,
+      "data_sha256": "e308f6e51c0445b20ae4855e50f4dadc6d5cbdc181c672c8bd07dd7fd48e525b"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 6,
+      "name": "1-22-006",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 144,
+      "data_sha256": "1c92254746256e0613b0ce9f7e403b5033004e3039222331919811766ae8c63c"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 7,
+      "name": "1-22-007",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 144,
+      "data_sha256": "6baefed844918b8bcb482f95f1e45b796f2d1efa5dce5c313f187f2389e9f7e6"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 8,
+      "name": "1-22-008",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 151,
+      "data_sha256": "a89548c86a75ef83a3b4363772e71800557288304447ca4bc4fb322ac159bb6f"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 9,
+      "name": "1-22-009",
+      "bank": 113,
+      "tiles": 29,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 99,
+      "data_sha256": "f5e8a488e5580d403cc5bf79aea43820e046aea5640be0ec4a9516325d4257ff"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 10,
+      "name": "1-22-010",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 144,
+      "data_sha256": "8227aca7261185a756438c830cca8a2f2ce0056b44f87e1e6758c1f1658c15a2"
+    },
+    {
+      "kind": 1,
+      "id": 22,
+      "palette_index": 11,
+      "name": "1-22-011",
+      "bank": 113,
+      "tiles": 32,
+      "sprites": 32,
+      "source_bbox": [
+        96,
+        88,
+        160,
+        144
+      ],
+      "quantized_pixels": 114,
+      "data_sha256": "7020619262cf58b45cae3479a06ace3218da7a736ec19711eb8ea91fd86bf2dc"
+    },
+    {
+      "kind": 1,
+      "id": 27,
+      "palette_index": 255,
+      "name": "1-27-255",
+      "bank": 113,
+      "tiles": 16,
+      "sprites": 16,
+      "source_bbox": [
+        116,
+        56,
+        140,
+        144
+      ],
+      "quantized_pixels": 233,
+      "data_sha256": "a6475568170a5d06ca5fa6a50503f5119c31dac6a170c226a6c74f7aa386d746"
+    },
+    {
+      "kind": 1,
+      "id": 43,
+      "palette_index": 255,
+      "name": "1-43-255",
+      "bank": 113,
+      "tiles": 16,
+      "sprites": 16,
+      "source_bbox": [
+        116,
+        56,
+        140,
+        144
+      ],
+      "quantized_pixels": 135,
+      "data_sha256": "fc9ae4d73a2a2f34841c0a2050841882f6609bbabc9ac6cc752275364d514e3a"
+    },
+    {
+      "kind": 1,
+      "id": 46,
+      "palette_index": 255,
+      "name": "1-46-255",
+      "bank": 113,
+      "tiles": 26,
+      "sprites": 26,
+      "source_bbox": [
+        110,
+        65,
+        146,
+        144
+      ],
+      "quantized_pixels": 109,
+      "data_sha256": "35439f68d1eb7cb28a9cede5b4deef43daa49409a05c829ec216985c5b923cae"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 0,
+      "name": "1-49-000",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 1,
+      "name": "1-49-001",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 2,
+      "name": "1-49-002",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 3,
+      "name": "1-49-003",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 4,
+      "name": "1-49-004",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 5,
+      "name": "1-49-005",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 6,
+      "name": "1-49-006",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 7,
+      "name": "1-49-007",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 8,
+      "name": "1-49-008",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 9,
+      "name": "1-49-009",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 10,
+      "name": "1-49-010",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 49,
+      "palette_index": 11,
+      "name": "1-49-011",
+      "bank": 113,
+      "tiles": 20,
+      "sprites": 20,
+      "source_bbox": [
+        113,
+        86,
+        144,
+        144
+      ],
+      "quantized_pixels": 174,
+      "data_sha256": "e6d75b26624dc3bbf197444102fa55936ef88102a3f05782a03a027d947889f8"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 0,
+      "name": "1-62-000",
+      "bank": 114,
+      "tiles": 26,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 187,
+      "data_sha256": "3717cb91e90c5d9d4c410559477b40f2675106cf61e482e0e5a59e5936ec669c"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 1,
+      "name": "1-62-001",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 243,
+      "data_sha256": "68b02c0b203f63c5f317d7a857e18278bede74f6ce1aa489f7af52457f3b83fe"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 2,
+      "name": "1-62-002",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 246,
+      "data_sha256": "86c33e89d3bbb2c088cb622e1e8cd3d78fda3f402e4e086655b0f5b5fb0eb9b0"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 3,
+      "name": "1-62-003",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 195,
+      "data_sha256": "dbdda706a6bb3fb08ccf452dc63c69b731cb5c238685392460810a21fecaaf44"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 4,
+      "name": "1-62-004",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 225,
+      "data_sha256": "b522d2b32c43fcc7a33375c2c802484d5fbbd9f9eeb036a3c2e2d3a196034806"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 5,
+      "name": "1-62-005",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 213,
+      "data_sha256": "9596bda3884f5a28a9aa1e41e582c7f26f5e9dd293f98078655bb0cb03fd1f75"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 6,
+      "name": "1-62-006",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 258,
+      "data_sha256": "7d143c23d0349bec3c343ef0eea4b3286bba7cf6ead28976eb26e4fb7b5d9998"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 7,
+      "name": "1-62-007",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 258,
+      "data_sha256": "5f12d2c4d4c7754924100c0831b1cd4c3d4b312c4ad2c8dbb6e062950413167b"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 8,
+      "name": "1-62-008",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 240,
+      "data_sha256": "ed151bf59e26873734ab83493568dc8c96b9dc50bf80f882312bbc77a67e9573"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 9,
+      "name": "1-62-009",
+      "bank": 114,
+      "tiles": 26,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 187,
+      "data_sha256": "3717cb91e90c5d9d4c410559477b40f2675106cf61e482e0e5a59e5936ec669c"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 10,
+      "name": "1-62-010",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 209,
+      "data_sha256": "423ca28c2e5c7e87c9624aee2ff0a50609b27237d5a3734c1ce013423c28f7bf"
+    },
+    {
+      "kind": 1,
+      "id": 62,
+      "palette_index": 11,
+      "name": "1-62-011",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 231,
+      "data_sha256": "592ee6044c5da0fe3986f310b0f81454ef1895341cebc4731e8b583b6debe3a9"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 0,
+      "name": "1-71-000",
+      "bank": 114,
+      "tiles": 26,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 159,
+      "data_sha256": "5031a1c8c1fe2ed0d86460a4c261d0d3bbe9669e0976d068ba22c3995533b87d"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 1,
+      "name": "1-71-001",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 205,
+      "data_sha256": "415ae4e4b76abcce1f281ef02435c74bf43a76e5c51e0a2c7c77eade454818c1"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 2,
+      "name": "1-71-002",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 205,
+      "data_sha256": "b1a6c5e4fdc0239b09482a7fcaedee549a03eeef11199a2b471275f46e74fef7"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 3,
+      "name": "1-71-003",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 228,
+      "data_sha256": "fc9c27f789f60d68d37244c0b7329969ef9be50f1e9c9c052fc265c8bb15ffba"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 4,
+      "name": "1-71-004",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 205,
+      "data_sha256": "5d2ec13d67d7016bc1b25f01d2d16c08830a81ccc6380eecaf08a3693ebe51c6"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 5,
+      "name": "1-71-005",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 204,
+      "data_sha256": "23e161e86ebbe5ce06396a4ffa5dbdf16613854e7bdd7cbab00f0d1d95e5d638"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 6,
+      "name": "1-71-006",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 217,
+      "data_sha256": "4de807ab7307d634460e41460b2527b85a569e02d11eee11135fedd62f0783a8"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 7,
+      "name": "1-71-007",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 205,
+      "data_sha256": "ad456c9a240eec3de7d65d7930f0db2f94880b7912c0526e44918f601da1337e"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 8,
+      "name": "1-71-008",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 210,
+      "data_sha256": "540370f33deea568c48ce0b202209bb13d04504b472785b6f50cad007cb925c2"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 9,
+      "name": "1-71-009",
+      "bank": 114,
+      "tiles": 26,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 159,
+      "data_sha256": "5031a1c8c1fe2ed0d86460a4c261d0d3bbe9669e0976d068ba22c3995533b87d"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 10,
+      "name": "1-71-010",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 261,
+      "data_sha256": "fa5f80ab46fe9af3729f706eea3b6084304e3f192b85c2b837f11c86b4cb6007"
+    },
+    {
+      "kind": 1,
+      "id": 71,
+      "palette_index": 11,
+      "name": "1-71-011",
+      "bank": 114,
+      "tiles": 28,
+      "sprites": 28,
+      "source_bbox": [
+        109,
+        64,
+        147,
+        144
+      ],
+      "quantized_pixels": 205,
+      "data_sha256": "962a8f6f5d4f5cf72188630c6faba8522e6613674a5d201b12c6876bf3691e3c"
+    }
+  ],
+  "limits": [
+    "Static first poses, not source animation",
+    "Native OBJ maximum40 sprites; source image scaled5/8",
+    "Enemy overlays supported only for explicitly extracted IDs and source floor palette variants"
+  ]
+}

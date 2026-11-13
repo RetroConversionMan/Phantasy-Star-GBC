@@ -1,0 +1,14 @@
+{
+  "status": "Predecessor preserved and v5 inputs verified before source promotion; exact rebuild pending",
+  "from_rom_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+  "to_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "changed_production_files": [
+    "src/game_field.c"
+  ],
+  "source_files": 343,
+  "frozen_objects": 262,
+  "v5_manifest_sha256": "5e16a7c5e010421313970c42809a768d0d34fa6cf14fa4faca299265f25377ec",
+  "v5_build_proof_sha256": "032d73e4b7a766499315b2dfd3f7253133db5c62d747cefac7db52e366604255",
+  "predecessor_files": 1725,
+  "campaign_complete": false
+}

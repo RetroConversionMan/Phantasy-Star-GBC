@@ -1,0 +1,102 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _world_g00_collision                                            ******** GX
+    _world_g00_exits                                                ******** GX
+    _world_g00_map                                                  ******** GX
+    _world_g00_metatiles                                            ******** GX
+    _world_g00_palettes                                             ******** GX
+    _world_g00_tiles                                                ******** GX
+    _world_g01_collision                                            ******** GX
+    _world_g01_exits                                                ******** GX
+    _world_g01_map                                                  ******** GX
+    _world_g01_metatiles                                            ******** GX
+    _world_g01_palettes                                             ******** GX
+    _world_g01_tiles                                                ******** GX
+    _world_g02_collision                                            ******** GX
+    _world_g02_exits                                                ******** GX
+    _world_g02_map                                                  ******** GX
+    _world_g02_metatiles                                            ******** GX
+    _world_g02_palettes                                             ******** GX
+    _world_g02_tiles                                                ******** GX
+    _world_g03_collision                                            ******** GX
+    _world_g03_exits                                                ******** GX
+    _world_g03_map                                                  ******** GX
+    _world_g03_metatiles                                            ******** GX
+    _world_g03_palettes                                             ******** GX
+    _world_g03_tiles                                                ******** GX
+    _world_g04_collision                                            ******** GX
+    _world_g04_exits                                                ******** GX
+    _world_g04_map                                                  ******** GX
+    _world_g04_metatiles                                            ******** GX
+    _world_g04_palettes                                             ******** GX
+    _world_g04_tiles                                                ******** GX
+    _world_g05_collision                                            ******** GX
+    _world_g05_exits                                                ******** GX
+    _world_g05_map                                                  ******** GX
+    _world_g05_metatiles                                            ******** GX
+    _world_g05_palettes                                             ******** GX
+    _world_g05_tiles                                                ******** GX
+    _world_g06_collision                                            ******** GX
+    _world_g06_exits                                                ******** GX
+    _world_g06_map                                                  ******** GX
+    _world_g06_metatiles                                            ******** GX
+    _world_g06_palettes                                             ******** GX
+    _world_g06_tiles                                                ******** GX
+    _world_g07_collision                                            ******** GX
+    _world_g07_exits                                                ******** GX
+    _world_g07_map                                                  ******** GX
+    _world_g07_metatiles                                            ******** GX
+    _world_g07_palettes                                             ******** GX
+    _world_g07_tiles                                                ******** GX
+    _world_g08_collision                                            ******** GX
+    _world_g08_exits                                                ******** GX
+    _world_g08_map                                                  ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _world_g08_metatiles                                            ******** GX
+    _world_g08_palettes                                             ******** GX
+    _world_g08_tiles                                                ******** GX
+    _world_g09_collision                                            ******** GX
+    _world_g09_exits                                                ******** GX
+    _world_g09_map                                                  ******** GX
+    _world_g09_metatiles                                            ******** GX
+    _world_g09_palettes                                             ******** GX
+    _world_g09_tiles                                                ******** GX
+    _world_g10_collision                                            ******** GX
+    _world_g10_exits                                                ******** GX
+    _world_g10_map                                                  ******** GX
+    _world_g10_metatiles                                            ******** GX
+    _world_g10_palettes                                             ******** GX
+    _world_g10_tiles                                                ******** GX
+  8 _world_map_group                                                00000000 GR
+  8 _world_map_music                                                00000018 GR
+  8 _world_scenes                                                   00000030 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_0                                    size       EB   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

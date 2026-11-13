@@ -1,0 +1,107 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_banks": [
+    116,
+    117
+  ],
+  "bank_bytes": [
+    15008,
+    4624
+  ],
+  "records": [
+    {
+      "portrait": 0,
+      "sms_bank": 31,
+      "sms_palette_address": 32768,
+      "sms_map_address": 43152,
+      "bank": 116,
+      "tiles": 104,
+      "color_quantized_pixels": 803,
+      "data_sha256": "fac0b7e7903b14f4aa385df84019f24aa5f1d748d1cf211c33d0206ef86cb4c2"
+    },
+    {
+      "portrait": 1,
+      "sms_bank": 30,
+      "sms_palette_address": 32768,
+      "sms_map_address": 43632,
+      "bank": 116,
+      "tiles": 95,
+      "color_quantized_pixels": 1904,
+      "data_sha256": "135c730008a58e99ecc7925965639f40ad0dcbbd4c32a44a77e6268ac12a9ed7"
+    },
+    {
+      "portrait": 2,
+      "sms_bank": 30,
+      "sms_palette_address": 36706,
+      "sms_map_address": 44112,
+      "bank": 116,
+      "tiles": 81,
+      "color_quantized_pixels": 1248,
+      "data_sha256": "912220a49f1945f90815038282107634e30fd4a88d70abc41152d7070d8351fd"
+    },
+    {
+      "portrait": 3,
+      "sms_bank": 30,
+      "sms_palette_address": 39979,
+      "sms_map_address": 44592,
+      "bank": 116,
+      "tiles": 99,
+      "color_quantized_pixels": 1054,
+      "data_sha256": "baf0a6b69b48535fcc031a9057c35a68b5b92f0f1b5835b1a1b300960bb338ca"
+    },
+    {
+      "portrait": 4,
+      "sms_bank": 31,
+      "sms_palette_address": 35547,
+      "sms_map_address": 45072,
+      "bank": 116,
+      "tiles": 91,
+      "color_quantized_pixels": 1155,
+      "data_sha256": "1f04e29d58edeb8dc028a3dd92166193f3366ed1091b6cc2a2f3c8f1901d7404"
+    },
+    {
+      "portrait": 5,
+      "sms_bank": 29,
+      "sms_palette_address": 46634,
+      "sms_map_address": 45552,
+      "bank": 116,
+      "tiles": 80,
+      "color_quantized_pixels": 1104,
+      "data_sha256": "0fad2d92fcf3b6fafb2db9981af9f1dfea299dcd7dac11b477433a7988f56e58"
+    },
+    {
+      "portrait": 6,
+      "sms_bank": 18,
+      "sms_palette_address": 45960,
+      "sms_map_address": 46032,
+      "bank": 116,
+      "tiles": 101,
+      "color_quantized_pixels": 1395,
+      "data_sha256": "4a47317c7e90c87b952d663ae23cdfc1c3a6052fb007e247b5f09cf111723659"
+    },
+    {
+      "portrait": 7,
+      "sms_bank": 30,
+      "sms_palette_address": 43598,
+      "sms_map_address": 46512,
+      "bank": 117,
+      "tiles": 114,
+      "color_quantized_pixels": 950,
+      "data_sha256": "c05e496b37572bb6a3acc98dbd1aabe37740eb1c8d75d4a83fc5a8dc4eea55dc"
+    },
+    {
+      "portrait": 8,
+      "sms_bank": 30,
+      "sms_palette_address": 45836,
+      "sms_map_address": 46992,
+      "bank": 117,
+      "tiles": 93,
+      "color_quantized_pixels": 1072,
+      "data_sha256": "21715a6910f87ffeea1591101966bdb741ec02b26ea1403f4e9ecad2890669ed"
+    }
+  ],
+  "limits": [
+    "Native color and resolution adaptation",
+    "Original fades and surrounding intro/ending camera sequences are separate"
+  ]
+}

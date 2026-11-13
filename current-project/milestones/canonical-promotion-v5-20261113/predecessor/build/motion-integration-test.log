@@ -1,0 +1,205 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-MOTION",
+    "bytes": 4194304,
+    "sha256": "30fcd2fe47b494532202629444ace2aa25cc881fec2ea8273a70258f29bad9f5",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "fixtures": [
+    {
+      "name": "door-2",
+      "dungeon": [
+        2,
+        104,
+        1
+      ],
+      "items": []
+    },
+    {
+      "name": "door-3",
+      "dungeon": [
+        1,
+        39,
+        2
+      ],
+      "items": [
+        45
+      ]
+    },
+    {
+      "name": "door-4",
+      "dungeon": [
+        9,
+        234,
+        1
+      ],
+      "items": [
+        62
+      ]
+    },
+    {
+      "name": "stairs",
+      "dungeon": [
+        19,
+        82,
+        1
+      ]
+    },
+    {
+      "name": "fall",
+      "dungeon": [
+        19,
+        73,
+        0
+      ],
+      "controller": "forward into original floor19/39 pit, automatic fall to18/39"
+    },
+    {
+      "name": "large-enemy",
+      "dungeon": [
+        28,
+        62,
+        0
+      ],
+      "items": [],
+      "strong_party": true
+    },
+    {
+      "name": "enemy-magic",
+      "dungeon": [
+        8,
+        53,
+        2
+      ],
+      "items": [
+        45
+      ],
+      "strong_party": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "door-2",
+      "source_visible_changes": 2,
+      "physical_frames": 32,
+      "audio_irq_ticks": 32,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "door-3",
+      "source_visible_changes": 2,
+      "physical_frames": 33,
+      "audio_irq_ticks": 33,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 1,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "door-4",
+      "source_visible_changes": 2,
+      "physical_frames": 33,
+      "audio_irq_ticks": 33,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 1,
+      "commands": [
+        189
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "stairs",
+      "source_visible_changes": 10,
+      "physical_frames": 119,
+      "audio_irq_ticks": 119,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        195
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "fall",
+      "source_visible_changes": 28,
+      "physical_frames": 49,
+      "audio_irq_ticks": 49,
+      "unmatched_frames": 0,
+      "preceding_menu_frames": 0,
+      "commands": [
+        192
+      ],
+      "standing_pattern_buffer": 0
+    },
+    {
+      "name": "large-enemy",
+      "enemy": 60,
+      "talk_turns": 1,
+      "physical_frames": 849,
+      "LCD_active_frames": 844,
+      "audio_irq_ticks": 844,
+      "frames": 722,
+      "lcd_off_frames": 5,
+      "max_visible_OBJ_tile": 158,
+      "states": [
+        1,
+        5,
+        6,
+        8,
+        11,
+        13,
+        14,
+        15
+      ],
+      "background_bytes_checked": 3171024,
+      "post_actor_turn_state": 17
+    },
+    {
+      "name": "enemy-magic",
+      "enemy": 13,
+      "talk_turns": 1,
+      "physical_frames": 1062,
+      "LCD_active_frames": 1057,
+      "audio_irq_ticks": 1057,
+      "frames": 935,
+      "lcd_off_frames": 5,
+      "max_visible_OBJ_tile": 108,
+      "states": [
+        1,
+        5,
+        6,
+        8,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "background_bytes_checked": 4226200,
+      "post_actor_turn_state": 17
+    }
+  ],
+  "campaign_complete": false,
+  "passed": true,
+  "guard": {
+    "address": "0xDBC0",
+    "bytes": 64,
+    "stack_window": 1024,
+    "intact": true
+  }
+}

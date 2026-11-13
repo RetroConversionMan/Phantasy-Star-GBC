@@ -1,0 +1,58 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __mulint                                                        ******** GX
+  8 _destinations                                                   00000450 R
+  8 _direction                                                      00000000 R
+    _game_rpg                                                       ******** GX
+    _memset                                                         ******** GX
+  8 _order                                                          0000000A R
+  8 _party_reset                                                    0000007D GR
+  8 _party_step                                                     00000184 GR
+  2 _party_world                                                    00000000 GR
+    _party_world_attrs                                              ******** GX
+  8 _party_world_draw                                               0000046D GR
+    _party_world_palettes                                           ******** GX
+  8 _party_world_reset                                              00000409 GR
+  8 _party_world_tick                                               00000454 GR
+    _party_world_tiles                                              ******** GX
+    _set_sprite_data                                                ******** GX
+    _set_sprite_palette                                             ******** GX
+    _shadow_OAM                                                     ******** GX
+  8 _shift                                                          0000005E R
+  8 _standing                                                       0000000E R
+  8 _starts                                                         00000448 R
+  8 _walking                                                        0000001E R
+    b_party_reset                                               =   00000016 G
+    b_party_step                                                =   00000016 G
+    b_party_world_draw                                          =   00000016 G
+    b_party_world_reset                                         =   00000016 G
+    b_party_world_tick                                          =   00000016 G
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       2A   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_22                                   size      823   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

@@ -1,0 +1,155 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _enemy_magic_animations                                         00000016 GR
+    _enemy_magic_asset_000                                          ******** GX
+    _enemy_magic_asset_001                                          ******** GX
+    _enemy_magic_asset_002                                          ******** GX
+    _enemy_magic_asset_003                                          ******** GX
+    _enemy_magic_asset_004                                          ******** GX
+    _enemy_magic_asset_005                                          ******** GX
+    _enemy_magic_asset_006                                          ******** GX
+    _enemy_magic_asset_007                                          ******** GX
+    _enemy_magic_asset_008                                          ******** GX
+    _enemy_magic_asset_009                                          ******** GX
+    _enemy_magic_asset_010                                          ******** GX
+    _enemy_magic_asset_011                                          ******** GX
+    _enemy_magic_asset_012                                          ******** GX
+    _enemy_magic_asset_013                                          ******** GX
+    _enemy_magic_asset_014                                          ******** GX
+    _enemy_magic_asset_015                                          ******** GX
+    _enemy_magic_asset_016                                          ******** GX
+    _enemy_magic_asset_017                                          ******** GX
+    _enemy_magic_asset_018                                          ******** GX
+    _enemy_magic_asset_019                                          ******** GX
+    _enemy_magic_asset_020                                          ******** GX
+    _enemy_magic_asset_021                                          ******** GX
+    _enemy_magic_asset_022                                          ******** GX
+    _enemy_magic_asset_023                                          ******** GX
+    _enemy_magic_asset_024                                          ******** GX
+    _enemy_magic_asset_025                                          ******** GX
+    _enemy_magic_asset_026                                          ******** GX
+    _enemy_magic_asset_027                                          ******** GX
+    _enemy_magic_asset_028                                          ******** GX
+    _enemy_magic_asset_029                                          ******** GX
+    _enemy_magic_asset_030                                          ******** GX
+    _enemy_magic_asset_031                                          ******** GX
+    _enemy_magic_asset_032                                          ******** GX
+    _enemy_magic_asset_033                                          ******** GX
+    _enemy_magic_asset_034                                          ******** GX
+    _enemy_magic_asset_035                                          ******** GX
+    _enemy_magic_asset_036                                          ******** GX
+    _enemy_magic_asset_037                                          ******** GX
+    _enemy_magic_asset_038                                          ******** GX
+    _enemy_magic_asset_039                                          ******** GX
+    _enemy_magic_asset_040                                          ******** GX
+    _enemy_magic_asset_041                                          ******** GX
+    _enemy_magic_asset_042                                          ******** GX
+    _enemy_magic_asset_043                                          ******** GX
+    _enemy_magic_asset_044                                          ******** GX
+    _enemy_magic_asset_045                                          ******** GX
+    _enemy_magic_asset_046                                          ******** GX
+    _enemy_magic_asset_047                                          ******** GX
+    _enemy_magic_asset_048                                          ******** GX
+    _enemy_magic_asset_049                                          ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_magic_asset_050                                          ******** GX
+    _enemy_magic_asset_051                                          ******** GX
+    _enemy_magic_asset_052                                          ******** GX
+    _enemy_magic_asset_053                                          ******** GX
+    _enemy_magic_asset_054                                          ******** GX
+    _enemy_magic_asset_055                                          ******** GX
+    _enemy_magic_asset_056                                          ******** GX
+    _enemy_magic_asset_057                                          ******** GX
+    _enemy_magic_asset_058                                          ******** GX
+    _enemy_magic_asset_059                                          ******** GX
+    _enemy_magic_asset_060                                          ******** GX
+    _enemy_magic_asset_061                                          ******** GX
+    _enemy_magic_asset_062                                          ******** GX
+    _enemy_magic_asset_063                                          ******** GX
+    _enemy_magic_asset_064                                          ******** GX
+    _enemy_magic_asset_065                                          ******** GX
+    _enemy_magic_asset_066                                          ******** GX
+    _enemy_magic_asset_067                                          ******** GX
+    _enemy_magic_asset_068                                          ******** GX
+    _enemy_magic_asset_069                                          ******** GX
+    _enemy_magic_asset_070                                          ******** GX
+    _enemy_magic_asset_071                                          ******** GX
+    _enemy_magic_asset_072                                          ******** GX
+    _enemy_magic_asset_073                                          ******** GX
+    _enemy_magic_asset_074                                          ******** GX
+    _enemy_magic_asset_075                                          ******** GX
+    _enemy_magic_asset_076                                          ******** GX
+    _enemy_magic_asset_077                                          ******** GX
+    _enemy_magic_asset_078                                          ******** GX
+    _enemy_magic_asset_079                                          ******** GX
+    _enemy_magic_asset_080                                          ******** GX
+    _enemy_magic_asset_081                                          ******** GX
+    _enemy_magic_asset_082                                          ******** GX
+    _enemy_magic_asset_083                                          ******** GX
+    _enemy_magic_asset_084                                          ******** GX
+    _enemy_magic_asset_085                                          ******** GX
+    _enemy_magic_asset_086                                          ******** GX
+    _enemy_magic_asset_087                                          ******** GX
+    _enemy_magic_asset_088                                          ******** GX
+    _enemy_magic_asset_089                                          ******** GX
+    _enemy_magic_asset_090                                          ******** GX
+    _enemy_magic_asset_091                                          ******** GX
+    _enemy_magic_asset_092                                          ******** GX
+    _enemy_magic_asset_093                                          ******** GX
+    _enemy_magic_asset_094                                          ******** GX
+    _enemy_magic_asset_095                                          ******** GX
+    _enemy_magic_asset_096                                          ******** GX
+    _enemy_magic_asset_097                                          ******** GX
+    _enemy_magic_asset_098                                          ******** GX
+    _enemy_magic_asset_099                                          ******** GX
+  8 _enemy_magic_assets                                             0000011F GR
+  8 _enemy_magic_effect_lookup                                      000000AF GR
+  8 _enemy_magic_effects                                            0000000E GR
+  8 _enemy_magic_enemies                                            00000000 GR
+  8 _enemy_magic_kinds                                              00000007 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _enemy_magic_pairs_00                                           ******** GX
+  8 _enemy_magic_pools                                              000002AF GR
+  8 _enemy_magic_pose_keys                                          00000047 GR
+  8 _enemy_magic_pose_lookup                                        0000004F GR
+    _enemy_magic_sequence_13                                        ******** GX
+    _enemy_magic_sequence_23                                        ******** GX
+    _enemy_magic_sequence_47                                        ******** GX
+    _enemy_magic_sequence_49                                        ******** GX
+    _enemy_magic_sequence_56                                        ******** GX
+    _enemy_magic_sequence_57                                        ******** GX
+    _enemy_magic_sequence_65                                        ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_252                                  size      2B2   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

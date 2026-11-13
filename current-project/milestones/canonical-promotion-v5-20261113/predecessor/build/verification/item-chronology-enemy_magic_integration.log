@@ -1,0 +1,75 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "7f0d421313822cb99afee48f62a932e2668e312b230edc8fea21a85cd264efae",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "checks": [
+    "Original floor37/pool80 produces a natural GiantFly encounter; Compass actions allow its actual Fire decision, native animation and per-hit playback before a controller-driven victory",
+    "Full party/inventory/money/RNG and dungeon location survive combat, save and power-cycle Continue; real audio runs and1KiB stack guard remains intact"
+  ],
+  "encounters": [
+    11,
+    13
+  ],
+  "hit_presentations": [
+    {
+      "enemy": 13,
+      "rng": 49031,
+      "mode": 128,
+      "hit_cursor": 0,
+      "action_hits": [
+        [
+          0,
+          9,
+          209
+        ],
+        [
+          3,
+          7,
+          172
+        ]
+      ],
+      "frames": 61,
+      "audio_start": 3948,
+      "audio_ticks": 64
+    },
+    {
+      "enemy": 13,
+      "rng": 49031,
+      "mode": 128,
+      "hit_cursor": 1,
+      "action_hits": [
+        [
+          0,
+          9,
+          209
+        ],
+        [
+          3,
+          7,
+          172
+        ]
+      ],
+      "frames": 61,
+      "audio_start": 4018,
+      "audio_ticks": 64
+    }
+  ],
+  "injected_fixtures": [
+    "Valid SRAM at source floor37/AC with four living level30 party members using original unequipped stats/full HP/MP/EXP, Compass53 and fixed seed1234. No encounter, turn, damage, spell choice or outcome is injected; no RNG search/retries. Subsequent actions are controller-only.",
+    "Diagnostic64-byte unused-WRAM guard atDBC0..DBFF;1KiB stack window aboveDC00"
+  ],
+  "campaign_complete": false,
+  "controller_turns": 125,
+  "passed": true
+}

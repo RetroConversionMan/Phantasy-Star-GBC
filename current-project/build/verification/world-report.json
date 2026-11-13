@@ -1,0 +1,153 @@
+{
+  "header": {
+    "title": "PSGBC-EXPLORE",
+    "bytes": 65536,
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "routes": [
+    {
+      "from": [
+        25,
+        6
+      ],
+      "to": [
+        4,
+        5
+      ],
+      "steps": 22
+    },
+    {
+      "from": [
+        4,
+        5
+      ],
+      "to": [
+        29,
+        3
+      ],
+      "steps": 29
+    },
+    {
+      "from": [
+        29,
+        3
+      ],
+      "to": [
+        2,
+        22
+      ],
+      "steps": 46
+    },
+    {
+      "from": [
+        2,
+        22
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 45
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 0
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 0
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        27,
+        18
+      ],
+      "steps": 2
+    },
+    {
+      "from": [
+        27,
+        18
+      ],
+      "to": [
+        27,
+        18
+      ],
+      "steps": 0
+    }
+  ],
+  "walls": [
+    {
+      "direction": "right",
+      "from": [
+        456,
+        316
+      ],
+      "stopped": [
+        459,
+        316
+      ]
+    },
+    {
+      "direction": "down",
+      "from": [
+        456,
+        316
+      ],
+      "stopped": [
+        456,
+        321
+      ]
+    },
+    {
+      "direction": "left",
+      "from": [
+        440,
+        300
+      ],
+      "stopped": [
+        437,
+        300
+      ]
+    },
+    {
+      "direction": "up",
+      "from": [
+        440,
+        300
+      ],
+      "stopped": [
+        440,
+        295
+      ]
+    }
+  ],
+  "tile_checks": 59451,
+  "reachable_floor_cells": 214,
+  "status": "passed"
+}

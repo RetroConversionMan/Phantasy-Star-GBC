@@ -1,0 +1,2 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{"passed": true, "cases": 6, "probe_sha256": "8bfa663adc9a8aa2d1d4e231ceff1039ff36b4522b18331a71253d5a251c9640"}

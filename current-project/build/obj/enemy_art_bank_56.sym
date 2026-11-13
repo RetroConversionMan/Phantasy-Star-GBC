@@ -1,0 +1,76 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _enemy_29_attrs                                                 00000388 GR
+  8 _enemy_29_map                                                   00000270 GR
+  8 _enemy_29_palettes                                              000004A0 GR
+  8 _enemy_29_tiles                                                 00000000 GR
+  8 _enemy_30_attrs                                                 00000B70 GR
+  8 _enemy_30_map                                                   00000A58 GR
+  8 _enemy_30_palettes                                              00000C88 GR
+  8 _enemy_30_tiles                                                 000004D8 GR
+  8 _enemy_31_attrs                                                 00001078 GR
+  8 _enemy_31_map                                                   00000F60 GR
+  8 _enemy_31_palettes                                              00001190 GR
+  8 _enemy_31_tiles                                                 00000CC0 GR
+  8 _enemy_32_attrs                                                 000014D0 GR
+  8 _enemy_32_map                                                   000013B8 GR
+  8 _enemy_32_palettes                                              000015E8 GR
+  8 _enemy_32_tiles                                                 000011C8 GR
+  8 _enemy_33_attrs                                                 000019A8 GR
+  8 _enemy_33_map                                                   00001890 GR
+  8 _enemy_33_palettes                                              00001AC0 GR
+  8 _enemy_33_tiles                                                 00001620 GR
+  8 _enemy_34_attrs                                                 00001E00 GR
+  8 _enemy_34_map                                                   00001CE8 GR
+  8 _enemy_34_palettes                                              00001F18 GR
+  8 _enemy_34_tiles                                                 00001AF8 GR
+  8 _enemy_35_attrs                                                 00002308 GR
+  8 _enemy_35_map                                                   000021F0 GR
+  8 _enemy_35_palettes                                              00002420 GR
+  8 _enemy_35_tiles                                                 00001F50 GR
+  8 _enemy_36_attrs                                                 00002760 GR
+  8 _enemy_36_map                                                   00002648 GR
+  8 _enemy_36_palettes                                              00002878 GR
+  8 _enemy_36_tiles                                                 00002458 GR
+  8 _enemy_37_attrs                                                 00002D68 GR
+  8 _enemy_37_map                                                   00002C50 GR
+  8 _enemy_37_palettes                                              00002E80 GR
+  8 _enemy_37_tiles                                                 000028B0 GR
+  8 _enemy_38_attrs                                                 000033A0 GR
+  8 _enemy_38_map                                                   00003288 GR
+  8 _enemy_38_palettes                                              000034B8 GR
+  8 _enemy_38_tiles                                                 00002EB8 GR
+  8 _enemy_39_attrs                                                 000036E8 GR
+  8 _enemy_39_map                                                   000035D0 GR
+  8 _enemy_39_palettes                                              00003800 GR
+  8 _enemy_39_tiles                                                 000034F0 GR
+  8 _enemy_40_attrs                                                 00003B40 GR
+  8 _enemy_40_map                                                   00003A28 GR
+  8 _enemy_40_palettes                                              00003C58 GR
+  8 _enemy_40_tiles                                                 00003838 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_56                                   size     3C90   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

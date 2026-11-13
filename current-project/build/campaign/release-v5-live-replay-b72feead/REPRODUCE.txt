@@ -1,0 +1,9 @@
+Run from current-project with a NEW, absent output directory.
+
+../../.venv-transfer/bin/python build/source-snapshots/replay-live-tools-20261113/tools/replay_campaign_live.py build/campaign/release-v5-newgame-b72feead --output build/campaign/release-v5-replay-reproduction-new
+
+After it succeeds, run:
+
+../../.venv-transfer/bin/python build/source-snapshots/replay-live-tools-20261113/tools/verify_campaign_title.py build/campaign/release-v5-replay-reproduction-new
+
+The independent replay begins with no SRAM/state and changes no emulator memory. The separate title reference boots with only that replay's newly earned native SRAM.

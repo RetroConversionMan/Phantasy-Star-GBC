@@ -1,0 +1,88 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _boss_animations                                                000000C3 GR
+    _boss_asset_0                                                   ******** GX
+    _boss_asset_1                                                   ******** GX
+    _boss_asset_10                                                  ******** GX
+    _boss_asset_11                                                  ******** GX
+    _boss_asset_12                                                  ******** GX
+    _boss_asset_13                                                  ******** GX
+    _boss_asset_14                                                  ******** GX
+    _boss_asset_15                                                  ******** GX
+    _boss_asset_16                                                  ******** GX
+    _boss_asset_17                                                  ******** GX
+    _boss_asset_18                                                  ******** GX
+    _boss_asset_19                                                  ******** GX
+    _boss_asset_2                                                   ******** GX
+    _boss_asset_20                                                  ******** GX
+    _boss_asset_21                                                  ******** GX
+    _boss_asset_22                                                  ******** GX
+    _boss_asset_23                                                  ******** GX
+    _boss_asset_24                                                  ******** GX
+    _boss_asset_25                                                  ******** GX
+    _boss_asset_26                                                  ******** GX
+    _boss_asset_27                                                  ******** GX
+    _boss_asset_28                                                  ******** GX
+    _boss_asset_29                                                  ******** GX
+    _boss_asset_3                                                   ******** GX
+    _boss_asset_30                                                  ******** GX
+    _boss_asset_31                                                  ******** GX
+    _boss_asset_32                                                  ******** GX
+    _boss_asset_33                                                  ******** GX
+    _boss_asset_34                                                  ******** GX
+    _boss_asset_35                                                  ******** GX
+    _boss_asset_36                                                  ******** GX
+    _boss_asset_37                                                  ******** GX
+    _boss_asset_38                                                  ******** GX
+    _boss_asset_4                                                   ******** GX
+    _boss_asset_5                                                   ******** GX
+    _boss_asset_6                                                   ******** GX
+    _boss_asset_7                                                   ******** GX
+    _boss_asset_8                                                   ******** GX
+    _boss_asset_9                                                   ******** GX
+  8 _boss_assets                                                    000000E6 GR
+    _boss_pairs_0                                                   ******** GX
+    _boss_patch_0                                                   ******** GX
+    _boss_patch_1                                                   ******** GX
+    _boss_patch_2                                                   ******** GX
+  8 _boss_patch_cells                                               00000185 GR
+  8 _boss_patches                                                   0000018F GR
+  8 _boss_pools                                                     00000182 GR
+  8 _boss_pose_keys                                                 00000000 GR
+  8 _boss_pose_lookup                                               00000075 GR
+    _boss_sequence_0                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _boss_sequence_1                                                ******** GX
+    _boss_sequence_2                                                ******** GX
+    _boss_sequence_3                                                ******** GX
+    _boss_sequence_4                                                ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_254                                  size      195   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

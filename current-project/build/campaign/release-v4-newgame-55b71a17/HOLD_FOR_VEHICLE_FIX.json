@@ -1,0 +1,48 @@
+{
+  "status": "Cleanly held after actual Continue and original Aukba hospital recovery; no active emulator process",
+  "ROM_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+  "checkpoint": "351-torch-continue-aukba-rested",
+  "frame": 1633795,
+  "latest_exactly_matches_last_checkpoint": true,
+  "map": 22,
+  "party_HP_MP": [
+    [
+      153,
+      22,
+      153,
+      22
+    ],
+    [
+      118,
+      27,
+      118,
+      27
+    ],
+    [
+      129,
+      0,
+      129,
+      0
+    ],
+    [
+      112,
+      50,
+      112,
+      50
+    ]
+  ],
+  "money": 1711,
+  "checkpoints": 352,
+  "battles": 501,
+  "natural_full_party_deaths": 1,
+  "actual_continues": 1,
+  "field_vehicle_used": false,
+  "vehicle_cycle": [
+    0,
+    0
+  ],
+  "native_save_version": 5,
+  "native_save_crc_valid": true,
+  "native_save_sha256": "c1e606f4e7c3d83c6ab289da755f6733bd83a63c79e4bc8dc45533733765f11c",
+  "next_step": "Await explicitly verified replacement candidate, then replay this entire controller prefix from clean power-on and require every checkpoint/RNG/fade/cycle field to match. No old save or state imported."
+}

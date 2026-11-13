@@ -1,0 +1,2 @@
+usage: verify_world_motion_source.py [-h] --source SOURCE --output OUTPUT
+verify_world_motion_source.py: error: unrecognized arguments: --assets build/source-snapshots/full-presentation-work/assets/world

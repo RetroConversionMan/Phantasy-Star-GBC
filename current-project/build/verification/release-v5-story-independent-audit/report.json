@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "scope": "Independent read-only completed-story/provenance/hash/pixel audit. No emulator or broad gameplay suite was rerun. Full independent controller replay remains pending.",
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "manifest_files": 443,
+  "all_manifest_entries_match": true,
+  "unmanifested_source_files": 0,
+  "closed_marker_all_five_hashes_match": true,
+  "controller_rows": 144464,
+  "controller_frames_monotonic": true,
+  "complete_JSONL_records_only": true,
+  "balanced_controller_edges": true,
+  "pressed_edges": 68199,
+  "ordered_unique_checkpoints": 484,
+  "all51_phase_completions_exact_once": true,
+  "DarkFalz73_victory_recorded": true,
+  "final_title_frame": 3581580,
+  "final_title_state_matches_report": true,
+  "encounter_annotations": {
+    "total": 1230,
+    "inherited_v4_prefix": 501,
+    "fresh_b72_continuation": 729,
+    "limit": "Prefix per-battle annotations were inherited, not recollected. B72 independently re-executed the exact input prefix and generated/compared all352 native checkpoint snapshots."
+  },
+  "clean_prefix": {
+    "frames": 1633795,
+    "checkpoints": 352,
+    "input_bytes": 7492013,
+    "zero_omitted_gameplay_frames": true,
+    "old_SRAM_or_state_loaded": false,
+    "retries": 0,
+    "generated_b72_resume_state_hash_matches": true
+  },
+  "driver_provenance": {
+    "initial_prefix_tools": 10,
+    "final_driver_helpers": 9,
+    "initial_only": [
+      "replay_campaign_prefix.py"
+    ],
+    "changed_common_files": [
+      "campaign_runner.py",
+      "verify_campaign_title.py"
+    ],
+    "runner_change": "Fly failure return uses native Hovercraft when actual Alis MP is below8; no game/source/state change.",
+    "title_helper_change": "Separate reference boot waits for LCD and native frame-counter progress, then3 frames; no campaign mutation.",
+    "gameplay_memory_register_writes": 0,
+    "seed_writes": 0,
+    "resume_annotations": [
+      {
+        "frame": 1613443,
+        "file": "failure-001.state"
+      },
+      {
+        "frame": 1633795,
+        "file": "351-torch-continue-aukba-rested.state"
+      },
+      {
+        "frame": 3037490,
+        "file": "failure-002.state"
+      }
+    ],
+    "resume_meaning": "First is inherited log metadata ignored by clean b72 prefix replay. The two b72 process resumes load only their exact latest same-ROM native-generated states."
+  },
+  "retained_failures": {
+    "natural_full_party_defeats": 1,
+    "real_Continues": 1,
+    "natural_defeat_frame": 1613443,
+    "Continue_frame": 1613883,
+    "runner_Fly_assertion_frame": 3037490,
+    "Alis_HP_MP_at_assertion": [
+      152,
+      0
+    ],
+    "earned_Sword14_and_object203_preserved": true,
+    "failure_state_duplicates_identical": true,
+    "forward_exact_resume_guard_and_log_verified": true,
+    "earlier_checkpoint_retry": false
+  },
+  "title": {
+    "pixels": 23040,
+    "differing_pixels": 0,
+    "reference_boot_frames": 304,
+    "reference": "Separate native boot using this same completed cartridge earned SRAM",
+    "campaign_memory_or_input_mutated": false
+  },
+  "native_save": {
+    "bytes": 8192,
+    "version": 5,
+    "record_bytes": 628,
+    "CRC_valid": true,
+    "sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60"
+  },
+  "story_milestone_links_and_summary_hash_match": true,
+  "inputs_sha256": {
+    "build/campaign/release-v5-newgame-b72feead/SHA256.json": "27a748fa2877af0def9b7267df318f383175c2258e27dd736383b65949797457",
+    "build/campaign/release-v5-newgame-b72feead/CAMPAIGN_CLOSED.json": "d69190bb142b1e2e92e6e5c6d728a97fce4cdece5cca155f0c77b620738af7f1",
+    "build/campaign/release-v5-newgame-b72feead/report.json": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb",
+    "build/campaign/release-v5-newgame-b72feead/controller.jsonl": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+    "build/campaign/release-v5-newgame-b72feead/ENDING_TITLE_VISUAL_PROOF.json": "fddd1dc694833238b16964cba84f19725ec8a8933c226fdd0decab32f28a7ce1",
+    "build/campaign/release-v5-newgame-b72feead/PREFIX_REPLAY_PROOF.json": "ab275e3f00351a17cdf023959aff3eea334869a4342e791eb040f148ed9da474",
+    "build/campaign/release-v5-newgame-b72feead/PREFIX_METADATA_PROVENANCE.json": "bbde80d335e443db114991c536cf026893ab991ca89306a58926067b801c7624",
+    "build/campaign/release-v5-newgame-b72feead/FRESH_START_PROVENANCE.json": "d2984d8f15176452f8172ffeed4e73af492fb7d2e8b900d439e2197fc5e4e967",
+    "build/campaign/release-v5-newgame-b72feead/driver-final/MANIFEST.json": "7e27a8c56adbaad006ea313088641b4487d2cfc5d3903350a5039d4ff8648a4a",
+    "build/campaign/release-v5-newgame-b72feead/verification-tooling/MANIFEST.json": "dd5a8d6c97b38bfde2b4483b0dab49814af7fd2323351469a750c9a36fe4fb81",
+    "build/campaign/release-v5-newgame-b72feead/driver-correction-002-fly-return/MANIFEST.json": "124d449c03406455ebf2eb3dbb28d763b09881442f25d7b41eabadeb4d598a5d",
+    "build/campaign/release-v5-newgame-b72feead/failure-002.json": "af902e55edeca76c1343d2d27df120a97ed1af91add86f9f1456bfed16d2c317",
+    "build/milestones/release-v5-campaign-story-20261113/MANIFEST.json": "f03899b137cdc60a5b2061060cffa2b50748960ae4f793b0539e88557af85dbb",
+    "build/milestones/release-v5-campaign-story-20261113/SUMMARY.md": "f4b3721ab3b97b2af44f387f249883778ddcd160251765245d4e46e46846a619",
+    "build/verification/release-v5-story-independent-audit/audit.py": "57eaf443f8053bbbed857abee7cfd898612998adfafca62a3224ae9428c1b708"
+  },
+  "story_complete": true,
+  "independent_full_replay_complete": false,
+  "remaining_acceptance": "Audit the world agent full replay/final-title evidence and final release/preservation hashes after replay finishes."
+}

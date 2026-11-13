@@ -1,0 +1,2 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{"passed": true, "cases": 5, "rom_sha256": "b0878a395483a5895f18d4fc679a8ba1ae1c1f5309f944bcac5712e002d78191"}

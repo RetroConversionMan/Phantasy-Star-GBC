@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "scope": "Complete original game content and native gameplay implemented and verified in a GBC emulator through an earned New Game-to-ending campaign and independent clean-power-on replay. Declared native adaptations and untested physical/listening validation remain explicit.",
+  "rom": "Phantasy-Star-GBC.gbc",
+  "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "bytes": 4194304,
+  "format": "Native SM83/Game Boy Color only; MBC5;256 ROM banks;8 KiB battery RAM",
+  "source_snapshot": "../../build/source-snapshots/release-candidate-v5-20261113",
+  "canonical_rebuild": "../../milestones/canonical-promotion-v5-20261113/EXACT_REBUILD.json",
+  "story_phases": 51,
+  "campaign_frames": 3581580,
+  "checkpoints": 484,
+  "independent_full_replay_passed": true,
+  "controller_rows": 144464,
+  "controller_bytes": 11721245,
+  "earned_sram_bytes": 8192,
+  "earned_sram_sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60",
+  "earned_sram_identical": true,
+  "source_and_replay_title_comparisons_differing_pixels": 0,
+  "integration_suites_passed": 13,
+  "baseline_files_preserved": 45,
+  "baseline_reproduced_byte_identically": true,
+  "final_independent_audit": "../../build/verification/release-v5-final-independent-audit/report.json",
+  "native_adaptations": [
+    "160x144 resolution and palette/color reduction",
+    "GBC APU pitch/volume/noise mapping; LCD-off pauses scanline sound updates",
+    "Source RNG feedback port omits unavailable Z80 refresh-registerR contribution; no exact SMS random-sequence claim",
+    "Expensive native graphics uploads and some motion/credits take additional physical frames while tested source logical waits/order remain intact",
+    "Battle outcomes are computed before visible per-hit playback",
+    "Native dialogue window closes as a whole while preserving the original six logical close waits, rather than the SMS six-row raster closure"
+  ],
+  "untested_external_validation": [
+    "Physical GBC hardware",
+    "Complete subjective soundtrack listening review"
+  ],
+  "coverage_limit": "Required story route and declared focused cases verified; not all possible optional input/route combinations exhaustively played."
+}

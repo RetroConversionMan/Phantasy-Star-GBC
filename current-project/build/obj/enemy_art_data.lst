@@ -1,0 +1,490 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module enemy_art_data
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _enemy_art
+                                     11 ;--------------------------------------------------------
+                                     12 ; special function registers
+                                     13 ;--------------------------------------------------------
+                                     14 	.area _HRAM
+                                     15 ;--------------------------------------------------------
+                                     16 ; ram data
+                                     17 ;--------------------------------------------------------
+                                     18 	.area _DATA
+                                     19 ;--------------------------------------------------------
+                                     20 ; ram data
+                                     21 ;--------------------------------------------------------
+                                     22 	.area _INITIALIZED
+                                     23 ;--------------------------------------------------------
+                                     24 ; absolute external ram data
+                                     25 ;--------------------------------------------------------
+                                     26 	.area _DABS (ABS)
+                                     27 ;--------------------------------------------------------
+                                     28 ; global & static initialisations
+                                     29 ;--------------------------------------------------------
+                                     30 	.area _HOME
+                                     31 	.area _GSINIT
+                                     32 	.area _GSFINAL
+                                     33 	.area _GSINIT
+                                     34 ;--------------------------------------------------------
+                                     35 ; Home
+                                     36 ;--------------------------------------------------------
+                                     37 	.area _HOME
+                                     38 	.area _HOME
+                                     39 ;--------------------------------------------------------
+                                     40 ; code
+                                     41 ;--------------------------------------------------------
+                                     42 	.area _CODE
+                                     43 	.area _CODE
+    00000000                         44 _enemy_art:
+    00000000 36                      45 	.db #0x36	; 54	'6'
+    00000001 15                      46 	.db #0x15	; 21
+    00000002r00r00                   47 	.dw _enemy_01_tiles
+    00000004r00r00                   48 	.dw _enemy_01_map
+    00000006r00r00                   49 	.dw _enemy_01_attrs
+    00000008r00r00                   50 	.dw _enemy_01_palettes
+    0000000A 36                      51 	.db #0x36	; 54	'6'
+    0000000B 09                      52 	.db #0x09	; 9
+    0000000Cr00r00                   53 	.dw _enemy_02_tiles
+    0000000Er00r00                   54 	.dw _enemy_02_map
+    00000010r00r00                   55 	.dw _enemy_02_attrs
+    00000012r00r00                   56 	.dw _enemy_02_palettes
+    00000014 36                      57 	.db #0x36	; 54	'6'
+    00000015 17                      58 	.db #0x17	; 23
+    00000016r00r00                   59 	.dw _enemy_03_tiles
+    00000018r00r00                   60 	.dw _enemy_03_map
+    0000001Ar00r00                   61 	.dw _enemy_03_attrs
+    0000001Cr00r00                   62 	.dw _enemy_03_palettes
+    0000001E 36                      63 	.db #0x36	; 54	'6'
+    0000001F 1D                      64 	.db #0x1d	; 29
+    00000020r00r00                   65 	.dw _enemy_04_tiles
+    00000022r00r00                   66 	.dw _enemy_04_map
+    00000024r00r00                   67 	.dw _enemy_04_attrs
+    00000026r00r00                   68 	.dw _enemy_04_palettes
+    00000028 36                      69 	.db #0x36	; 54	'6'
+    00000029 1B                      70 	.db #0x1b	; 27
+    0000002Ar00r00                   71 	.dw _enemy_05_tiles
+    0000002Cr00r00                   72 	.dw _enemy_05_map
+    0000002Er00r00                   73 	.dw _enemy_05_attrs
+    00000030r00r00                   74 	.dw _enemy_05_palettes
+    00000032 36                      75 	.db #0x36	; 54	'6'
+    00000033 1B                      76 	.db #0x1b	; 27
+    00000034r00r00                   77 	.dw _enemy_06_tiles
+    00000036r00r00                   78 	.dw _enemy_06_map
+    00000038r00r00                   79 	.dw _enemy_06_attrs
+    0000003Ar00r00                   80 	.dw _enemy_06_palettes
+    0000003C 36                      81 	.db #0x36	; 54	'6'
+    0000003D 09                      82 	.db #0x09	; 9
+    0000003Er00r00                   83 	.dw _enemy_07_tiles
+    00000040r00r00                   84 	.dw _enemy_07_map
+    00000042r00r00                   85 	.dw _enemy_07_attrs
+    00000044r00r00                   86 	.dw _enemy_07_palettes
+    00000046 36                      87 	.db #0x36	; 54	'6'
+    00000047 22                      88 	.db #0x22	; 34
+    00000048r00r00                   89 	.dw _enemy_08_tiles
+    0000004Ar00r00                   90 	.dw _enemy_08_map
+    0000004Cr00r00                   91 	.dw _enemy_08_attrs
+    0000004Er00r00                   92 	.dw _enemy_08_palettes
+    00000050 36                      93 	.db #0x36	; 54	'6'
+    00000051 17                      94 	.db #0x17	; 23
+    00000052r00r00                   95 	.dw _enemy_09_tiles
+    00000054r00r00                   96 	.dw _enemy_09_map
+    00000056r00r00                   97 	.dw _enemy_09_attrs
+    00000058r00r00                   98 	.dw _enemy_09_palettes
+    0000005A 36                      99 	.db #0x36	; 54	'6'
+    0000005B 1D                     100 	.db #0x1d	; 29
+    0000005Cr00r00                  101 	.dw _enemy_10_tiles
+    0000005Er00r00                  102 	.dw _enemy_10_map
+    00000060r00r00                  103 	.dw _enemy_10_attrs
+    00000062r00r00                  104 	.dw _enemy_10_palettes
+    00000064 36                     105 	.db #0x36	; 54	'6'
+    00000065 1B                     106 	.db #0x1b	; 27
+    00000066r00r00                  107 	.dw _enemy_11_tiles
+    00000068r00r00                  108 	.dw _enemy_11_map
+    0000006Ar00r00                  109 	.dw _enemy_11_attrs
+    0000006Cr00r00                  110 	.dw _enemy_11_palettes
+    0000006E 36                     111 	.db #0x36	; 54	'6'
+    0000006F 22                     112 	.db #0x22	; 34
+    00000070r00r00                  113 	.dw _enemy_12_tiles
+    00000072r00r00                  114 	.dw _enemy_12_map
+    00000074r00r00                  115 	.dw _enemy_12_attrs
+    00000076r00r00                  116 	.dw _enemy_12_palettes
+    00000078 36                     117 	.db #0x36	; 54	'6'
+    00000079 15                     118 	.db #0x15	; 21
+    0000007Ar00r00                  119 	.dw _enemy_13_tiles
+    0000007Cr00r00                  120 	.dw _enemy_13_map
+    0000007Er00r00                  121 	.dw _enemy_13_attrs
+    00000080r00r00                  122 	.dw _enemy_13_palettes
+    00000082 36                     123 	.db #0x36	; 54	'6'
+    00000083 0E                     124 	.db #0x0e	; 14
+    00000084r00r00                  125 	.dw _enemy_14_tiles
+    00000086r00r00                  126 	.dw _enemy_14_map
+    00000088r00r00                  127 	.dw _enemy_14_attrs
+    0000008Ar00r00                  128 	.dw _enemy_14_palettes
+    0000008C 36                     129 	.db #0x36	; 54	'6'
+    0000008D 21                     130 	.db #0x21	; 33
+    0000008Er00r00                  131 	.dw _enemy_15_tiles
+    00000090r00r00                  132 	.dw _enemy_15_map
+    00000092r00r00                  133 	.dw _enemy_15_attrs
+    00000094r00r00                  134 	.dw _enemy_15_palettes
+    00000096 37                     135 	.db #0x37	; 55	'7'
+    00000097 17                     136 	.db #0x17	; 23
+    00000098r00r00                  137 	.dw _enemy_16_tiles
+    0000009Ar00r00                  138 	.dw _enemy_16_map
+    0000009Cr00r00                  139 	.dw _enemy_16_attrs
+    0000009Er00r00                  140 	.dw _enemy_16_palettes
+    000000A0 37                     141 	.db #0x37	; 55	'7'
+    000000A1 09                     142 	.db #0x09	; 9
+    000000A2r00r00                  143 	.dw _enemy_17_tiles
+    000000A4r00r00                  144 	.dw _enemy_17_map
+    000000A6r00r00                  145 	.dw _enemy_17_attrs
+    000000A8r00r00                  146 	.dw _enemy_17_palettes
+    000000AA 37                     147 	.db #0x37	; 55	'7'
+    000000AB 27                     148 	.db #0x27	; 39
+    000000ACr00r00                  149 	.dw _enemy_18_tiles
+    000000AEr00r00                  150 	.dw _enemy_18_map
+    000000B0r00r00                  151 	.dw _enemy_18_attrs
+    000000B2r00r00                  152 	.dw _enemy_18_palettes
+    000000B4 37                     153 	.db #0x37	; 55	'7'
+    000000B5 27                     154 	.db #0x27	; 39
+    000000B6r00r00                  155 	.dw _enemy_19_tiles
+    000000B8r00r00                  156 	.dw _enemy_19_map
+    000000BAr00r00                  157 	.dw _enemy_19_attrs
+    000000BCr00r00                  158 	.dw _enemy_19_palettes
+    000000BE 37                     159 	.db #0x37	; 55	'7'
+    000000BF 35                     160 	.db #0x35	; 53	'5'
+    000000C0r00r00                  161 	.dw _enemy_20_tiles
+    000000C2r00r00                  162 	.dw _enemy_20_map
+    000000C4r00r00                  163 	.dw _enemy_20_attrs
+    000000C6r00r00                  164 	.dw _enemy_20_palettes
+    000000C8 37                     165 	.db #0x37	; 55	'7'
+    000000C9 1F                     166 	.db #0x1f	; 31
+    000000CAr00r00                  167 	.dw _enemy_21_tiles
+    000000CCr00r00                  168 	.dw _enemy_21_map
+    000000CEr00r00                  169 	.dw _enemy_21_attrs
+    000000D0r00r00                  170 	.dw _enemy_21_palettes
+    000000D2 37                     171 	.db #0x37	; 55	'7'
+    000000D3 2D                     172 	.db #0x2d	; 45
+    000000D4r00r00                  173 	.dw _enemy_22_tiles
+    000000D6r00r00                  174 	.dw _enemy_22_map
+    000000D8r00r00                  175 	.dw _enemy_22_attrs
+    000000DAr00r00                  176 	.dw _enemy_22_palettes
+    000000DC 37                     177 	.db #0x37	; 55	'7'
+    000000DD 3A                     178 	.db #0x3a	; 58
+    000000DEr00r00                  179 	.dw _enemy_23_tiles
+    000000E0r00r00                  180 	.dw _enemy_23_map
+    000000E2r00r00                  181 	.dw _enemy_23_attrs
+    000000E4r00r00                  182 	.dw _enemy_23_palettes
+    000000E6 37                     183 	.db #0x37	; 55	'7'
+    000000E7 2A                     184 	.db #0x2a	; 42
+    000000E8r00r00                  185 	.dw _enemy_24_tiles
+    000000EAr00r00                  186 	.dw _enemy_24_map
+    000000ECr00r00                  187 	.dw _enemy_24_attrs
+    000000EEr00r00                  188 	.dw _enemy_24_palettes
+    000000F0 37                     189 	.db #0x37	; 55	'7'
+    000000F1 2D                     190 	.db #0x2d	; 45
+    000000F2r00r00                  191 	.dw _enemy_25_tiles
+    000000F4r00r00                  192 	.dw _enemy_25_map
+    000000F6r00r00                  193 	.dw _enemy_25_attrs
+    000000F8r00r00                  194 	.dw _enemy_25_palettes
+    000000FA 37                     195 	.db #0x37	; 55	'7'
+    000000FB 35                     196 	.db #0x35	; 53	'5'
+    000000FCr00r00                  197 	.dw _enemy_26_tiles
+    000000FEr00r00                  198 	.dw _enemy_26_map
+    00000100r00r00                  199 	.dw _enemy_26_attrs
+    00000102r00r00                  200 	.dw _enemy_26_palettes
+    00000104 37                     201 	.db #0x37	; 55	'7'
+    00000105 24                     202 	.db #0x24	; 36
+    00000106r00r00                  203 	.dw _enemy_27_tiles
+    00000108r00r00                  204 	.dw _enemy_27_map
+    0000010Ar00r00                  205 	.dw _enemy_27_attrs
+    0000010Cr00r00                  206 	.dw _enemy_27_palettes
+    0000010E 37                     207 	.db #0x37	; 55	'7'
+    0000010F 0E                     208 	.db #0x0e	; 14
+    00000110r00r00                  209 	.dw _enemy_28_tiles
+    00000112r00r00                  210 	.dw _enemy_28_map
+    00000114r00r00                  211 	.dw _enemy_28_attrs
+    00000116r00r00                  212 	.dw _enemy_28_palettes
+    00000118 38                     213 	.db #0x38	; 56	'8'
+    00000119 27                     214 	.db #0x27	; 39
+    0000011Ar00r00                  215 	.dw _enemy_29_tiles
+    0000011Cr00r00                  216 	.dw _enemy_29_map
+    0000011Er00r00                  217 	.dw _enemy_29_attrs
+    00000120r00r00                  218 	.dw _enemy_29_palettes
+    00000122 38                     219 	.db #0x38	; 56	'8'
+    00000123 58                     220 	.db #0x58	; 88	'X'
+    00000124r00r00                  221 	.dw _enemy_30_tiles
+    00000126r00r00                  222 	.dw _enemy_30_map
+    00000128r00r00                  223 	.dw _enemy_30_attrs
+    0000012Ar00r00                  224 	.dw _enemy_30_palettes
+    0000012C 38                     225 	.db #0x38	; 56	'8'
+    0000012D 2A                     226 	.db #0x2a	; 42
+    0000012Er00r00                  227 	.dw _enemy_31_tiles
+    00000130r00r00                  228 	.dw _enemy_31_map
+    00000132r00r00                  229 	.dw _enemy_31_attrs
+    00000134r00r00                  230 	.dw _enemy_31_palettes
+    00000136 38                     231 	.db #0x38	; 56	'8'
+    00000137 1F                     232 	.db #0x1f	; 31
+    00000138r00r00                  233 	.dw _enemy_32_tiles
+    0000013Ar00r00                  234 	.dw _enemy_32_map
+    0000013Cr00r00                  235 	.dw _enemy_32_attrs
+    0000013Er00r00                  236 	.dw _enemy_32_palettes
+    00000140 38                     237 	.db #0x38	; 56	'8'
+    00000141 27                     238 	.db #0x27	; 39
+    00000142r00r00                  239 	.dw _enemy_33_tiles
+    00000144r00r00                  240 	.dw _enemy_33_map
+    00000146r00r00                  241 	.dw _enemy_33_attrs
+    00000148r00r00                  242 	.dw _enemy_33_palettes
+    0000014A 38                     243 	.db #0x38	; 56	'8'
+    0000014B 1F                     244 	.db #0x1f	; 31
+    0000014Cr00r00                  245 	.dw _enemy_34_tiles
+    0000014Er00r00                  246 	.dw _enemy_34_map
+    00000150r00r00                  247 	.dw _enemy_34_attrs
+    00000152r00r00                  248 	.dw _enemy_34_palettes
+    00000154 38                     249 	.db #0x38	; 56	'8'
+    00000155 2A                     250 	.db #0x2a	; 42
+    00000156r00r00                  251 	.dw _enemy_35_tiles
+    00000158r00r00                  252 	.dw _enemy_35_map
+    0000015Ar00r00                  253 	.dw _enemy_35_attrs
+    0000015Cr00r00                  254 	.dw _enemy_35_palettes
+    0000015E 38                     255 	.db #0x38	; 56	'8'
+    0000015F 1F                     256 	.db #0x1f	; 31
+    00000160r00r00                  257 	.dw _enemy_36_tiles
+    00000162r00r00                  258 	.dw _enemy_36_map
+    00000164r00r00                  259 	.dw _enemy_36_attrs
+    00000166r00r00                  260 	.dw _enemy_36_palettes
+    00000168 38                     261 	.db #0x38	; 56	'8'
+    00000169 3A                     262 	.db #0x3a	; 58
+    0000016Ar00r00                  263 	.dw _enemy_37_tiles
+    0000016Cr00r00                  264 	.dw _enemy_37_map
+    0000016Er00r00                  265 	.dw _enemy_37_attrs
+    00000170r00r00                  266 	.dw _enemy_37_palettes
+    00000172 38                     267 	.db #0x38	; 56	'8'
+    00000173 3D                     268 	.db #0x3d	; 61
+    00000174r00r00                  269 	.dw _enemy_38_tiles
+    00000176r00r00                  270 	.dw _enemy_38_map
+    00000178r00r00                  271 	.dw _enemy_38_attrs
+    0000017Ar00r00                  272 	.dw _enemy_38_palettes
+    0000017C 38                     273 	.db #0x38	; 56	'8'
+    0000017D 0E                     274 	.db #0x0e	; 14
+    0000017Er00r00                  275 	.dw _enemy_39_tiles
+    00000180r00r00                  276 	.dw _enemy_39_map
+    00000182r00r00                  277 	.dw _enemy_39_attrs
+    00000184r00r00                  278 	.dw _enemy_39_palettes
+    00000186 38                     279 	.db #0x38	; 56	'8'
+    00000187 1F                     280 	.db #0x1f	; 31
+    00000188r00r00                  281 	.dw _enemy_40_tiles
+    0000018Ar00r00                  282 	.dw _enemy_40_map
+    0000018Cr00r00                  283 	.dw _enemy_40_attrs
+    0000018Er00r00                  284 	.dw _enemy_40_palettes
+    00000190 39                     285 	.db #0x39	; 57	'9'
+    00000191 3F                     286 	.db #0x3f	; 63
+    00000192r00r00                  287 	.dw _enemy_41_tiles
+    00000194r00r00                  288 	.dw _enemy_41_map
+    00000196r00r00                  289 	.dw _enemy_41_attrs
+    00000198r00r00                  290 	.dw _enemy_41_palettes
+    0000019A 39                     291 	.db #0x39	; 57	'9'
+    0000019B 2A                     292 	.db #0x2a	; 42
+    0000019Cr00r00                  293 	.dw _enemy_42_tiles
+    0000019Er00r00                  294 	.dw _enemy_42_map
+    000001A0r00r00                  295 	.dw _enemy_42_attrs
+    000001A2r00r00                  296 	.dw _enemy_42_palettes
+    000001A4 39                     297 	.db #0x39	; 57	'9'
+    000001A5 24                     298 	.db #0x24	; 36
+    000001A6r00r00                  299 	.dw _enemy_43_tiles
+    000001A8r00r00                  300 	.dw _enemy_43_map
+    000001AAr00r00                  301 	.dw _enemy_43_attrs
+    000001ACr00r00                  302 	.dw _enemy_43_palettes
+    000001AE 39                     303 	.db #0x39	; 57	'9'
+    000001AF 2A                     304 	.db #0x2a	; 42
+    000001B0r00r00                  305 	.dw _enemy_44_tiles
+    000001B2r00r00                  306 	.dw _enemy_44_map
+    000001B4r00r00                  307 	.dw _enemy_44_attrs
+    000001B6r00r00                  308 	.dw _enemy_44_palettes
+    000001B8 39                     309 	.db #0x39	; 57	'9'
+    000001B9 2A                     310 	.db #0x2a	; 42
+    000001BAr00r00                  311 	.dw _enemy_45_tiles
+    000001BCr00r00                  312 	.dw _enemy_45_map
+    000001BEr00r00                  313 	.dw _enemy_45_attrs
+    000001C0r00r00                  314 	.dw _enemy_45_palettes
+    000001C2 39                     315 	.db #0x39	; 57	'9'
+    000001C3 25                     316 	.db #0x25	; 37
+    000001C4r00r00                  317 	.dw _enemy_46_tiles
+    000001C6r00r00                  318 	.dw _enemy_46_map
+    000001C8r00r00                  319 	.dw _enemy_46_attrs
+    000001CAr00r00                  320 	.dw _enemy_46_palettes
+    000001CC 39                     321 	.db #0x39	; 57	'9'
+    000001CD 35                     322 	.db #0x35	; 53	'5'
+    000001CEr00r00                  323 	.dw _enemy_47_tiles
+    000001D0r00r00                  324 	.dw _enemy_47_map
+    000001D2r00r00                  325 	.dw _enemy_47_attrs
+    000001D4r00r00                  326 	.dw _enemy_47_palettes
+    000001D6 39                     327 	.db #0x39	; 57	'9'
+    000001D7 3D                     328 	.db #0x3d	; 61
+    000001D8r00r00                  329 	.dw _enemy_48_tiles
+    000001DAr00r00                  330 	.dw _enemy_48_map
+    000001DCr00r00                  331 	.dw _enemy_48_attrs
+    000001DEr00r00                  332 	.dw _enemy_48_palettes
+    000001E0 39                     333 	.db #0x39	; 57	'9'
+    000001E1 1E                     334 	.db #0x1e	; 30
+    000001E2r00r00                  335 	.dw _enemy_49_tiles
+    000001E4r00r00                  336 	.dw _enemy_49_map
+    000001E6r00r00                  337 	.dw _enemy_49_attrs
+    000001E8r00r00                  338 	.dw _enemy_49_palettes
+    000001EA 39                     339 	.db #0x39	; 57	'9'
+    000001EB 5E                     340 	.db #0x5e	; 94
+    000001ECr00r00                  341 	.dw _enemy_50_tiles
+    000001EEr00r00                  342 	.dw _enemy_50_map
+    000001F0r00r00                  343 	.dw _enemy_50_attrs
+    000001F2r00r00                  344 	.dw _enemy_50_palettes
+    000001F4 39                     345 	.db #0x39	; 57	'9'
+    000001F5 25                     346 	.db #0x25	; 37
+    000001F6r00r00                  347 	.dw _enemy_51_tiles
+    000001F8r00r00                  348 	.dw _enemy_51_map
+    000001FAr00r00                  349 	.dw _enemy_51_attrs
+    000001FCr00r00                  350 	.dw _enemy_51_palettes
+    000001FE 3A                     351 	.db #0x3a	; 58
+    000001FF 3C                     352 	.db #0x3c	; 60
+    00000200r00r00                  353 	.dw _enemy_52_tiles
+    00000202r00r00                  354 	.dw _enemy_52_map
+    00000204r00r00                  355 	.dw _enemy_52_attrs
+    00000206r00r00                  356 	.dw _enemy_52_palettes
+    00000208 3A                     357 	.db #0x3a	; 58
+    00000209 5E                     358 	.db #0x5e	; 94
+    0000020Ar00r00                  359 	.dw _enemy_53_tiles
+    0000020Cr00r00                  360 	.dw _enemy_53_map
+    0000020Er00r00                  361 	.dw _enemy_53_attrs
+    00000210r00r00                  362 	.dw _enemy_53_palettes
+    00000212 3A                     363 	.db #0x3a	; 58
+    00000213 3D                     364 	.db #0x3d	; 61
+    00000214r00r00                  365 	.dw _enemy_54_tiles
+    00000216r00r00                  366 	.dw _enemy_54_map
+    00000218r00r00                  367 	.dw _enemy_54_attrs
+    0000021Ar00r00                  368 	.dw _enemy_54_palettes
+    0000021C 3A                     369 	.db #0x3a	; 58
+    0000021D 44                     370 	.db #0x44	; 68	'D'
+    0000021Er00r00                  371 	.dw _enemy_55_tiles
+    00000220r00r00                  372 	.dw _enemy_55_map
+    00000222r00r00                  373 	.dw _enemy_55_attrs
+    00000224r00r00                  374 	.dw _enemy_55_palettes
+    00000226 3A                     375 	.db #0x3a	; 58
+    00000227 35                     376 	.db #0x35	; 53	'5'
+    00000228r00r00                  377 	.dw _enemy_56_tiles
+    0000022Ar00r00                  378 	.dw _enemy_56_map
+    0000022Cr00r00                  379 	.dw _enemy_56_attrs
+    0000022Er00r00                  380 	.dw _enemy_56_palettes
+    00000230 3A                     381 	.db #0x3a	; 58
+    00000231 45                     382 	.db #0x45	; 69	'E'
+    00000232r00r00                  383 	.dw _enemy_57_tiles
+    00000234r00r00                  384 	.dw _enemy_57_map
+    00000236r00r00                  385 	.dw _enemy_57_attrs
+    00000238r00r00                  386 	.dw _enemy_57_palettes
+    0000023A 3A                     387 	.db #0x3a	; 58
+    0000023B 3D                     388 	.db #0x3d	; 61
+    0000023Cr00r00                  389 	.dw _enemy_58_tiles
+    0000023Er00r00                  390 	.dw _enemy_58_map
+    00000240r00r00                  391 	.dw _enemy_58_attrs
+    00000242r00r00                  392 	.dw _enemy_58_palettes
+    00000244 3A                     393 	.db #0x3a	; 58
+    00000245 3D                     394 	.db #0x3d	; 61
+    00000246r00r00                  395 	.dw _enemy_59_tiles
+    00000248r00r00                  396 	.dw _enemy_59_map
+    0000024Ar00r00                  397 	.dw _enemy_59_attrs
+    0000024Cr00r00                  398 	.dw _enemy_59_palettes
+    0000024E 3A                     399 	.db #0x3a	; 58
+    0000024F 6D                     400 	.db #0x6d	; 109	'm'
+    00000250r00r00                  401 	.dw _enemy_60_tiles
+    00000252r00r00                  402 	.dw _enemy_60_map
+    00000254r00r00                  403 	.dw _enemy_60_attrs
+    00000256r00r00                  404 	.dw _enemy_60_palettes
+    00000258 3B                     405 	.db #0x3b	; 59
+    00000259 6D                     406 	.db #0x6d	; 109	'm'
+    0000025Ar00r00                  407 	.dw _enemy_61_tiles
+    0000025Cr00r00                  408 	.dw _enemy_61_map
+    0000025Er00r00                  409 	.dw _enemy_61_attrs
+    00000260r00r00                  410 	.dw _enemy_61_palettes
+    00000262 3B                     411 	.db #0x3b	; 59
+    00000263 2B                     412 	.db #0x2b	; 43
+    00000264r00r00                  413 	.dw _enemy_62_tiles
+    00000266r00r00                  414 	.dw _enemy_62_map
+    00000268r00r00                  415 	.dw _enemy_62_attrs
+    0000026Ar00r00                  416 	.dw _enemy_62_palettes
+    0000026C 3B                     417 	.db #0x3b	; 59
+    0000026D 58                     418 	.db #0x58	; 88	'X'
+    0000026Er00r00                  419 	.dw _enemy_63_tiles
+    00000270r00r00                  420 	.dw _enemy_63_map
+    00000272r00r00                  421 	.dw _enemy_63_attrs
+    00000274r00r00                  422 	.dw _enemy_63_palettes
+    00000276 3B                     423 	.db #0x3b	; 59
+    00000277 45                     424 	.db #0x45	; 69	'E'
+    00000278r00r00                  425 	.dw _enemy_64_tiles
+    0000027Ar00r00                  426 	.dw _enemy_64_map
+    0000027Cr00r00                  427 	.dw _enemy_64_attrs
+    0000027Er00r00                  428 	.dw _enemy_64_palettes
+    00000280 3B                     429 	.db #0x3b	; 59
+    00000281 44                     430 	.db #0x44	; 68	'D'
+    00000282r00r00                  431 	.dw _enemy_65_tiles
+    00000284r00r00                  432 	.dw _enemy_65_map
+    00000286r00r00                  433 	.dw _enemy_65_attrs
+    00000288r00r00                  434 	.dw _enemy_65_palettes
+    0000028A 3B                     435 	.db #0x3b	; 59
+    0000028B 5E                     436 	.db #0x5e	; 94
+    0000028Cr00r00                  437 	.dw _enemy_66_tiles
+    0000028Er00r00                  438 	.dw _enemy_66_map
+    00000290r00r00                  439 	.dw _enemy_66_attrs
+    00000292r00r00                  440 	.dw _enemy_66_palettes
+    00000294 3B                     441 	.db #0x3b	; 59
+    00000295 3A                     442 	.db #0x3a	; 58
+    00000296r00r00                  443 	.dw _enemy_67_tiles
+    00000298r00r00                  444 	.dw _enemy_67_map
+    0000029Ar00r00                  445 	.dw _enemy_67_attrs
+    0000029Cr00r00                  446 	.dw _enemy_67_palettes
+    0000029E 3B                     447 	.db #0x3b	; 59
+    0000029F 6D                     448 	.db #0x6d	; 109	'm'
+    000002A0r00r00                  449 	.dw _enemy_68_tiles
+    000002A2r00r00                  450 	.dw _enemy_68_map
+    000002A4r00r00                  451 	.dw _enemy_68_attrs
+    000002A6r00r00                  452 	.dw _enemy_68_palettes
+    000002A8 3C                     453 	.db #0x3c	; 60
+    000002A9 6D                     454 	.db #0x6d	; 109	'm'
+    000002AAr00r00                  455 	.dw _enemy_69_tiles
+    000002ACr00r00                  456 	.dw _enemy_69_map
+    000002AEr00r00                  457 	.dw _enemy_69_attrs
+    000002B0r00r00                  458 	.dw _enemy_69_palettes
+    000002B2 3C                     459 	.db #0x3c	; 60
+    000002B3 1C                     460 	.db #0x1c	; 28
+    000002B4r00r00                  461 	.dw _enemy_70_tiles
+    000002B6r00r00                  462 	.dw _enemy_70_map
+    000002B8r00r00                  463 	.dw _enemy_70_attrs
+    000002BAr00r00                  464 	.dw _enemy_70_palettes
+    000002BC 3C                     465 	.db #0x3c	; 60
+    000002BD 2B                     466 	.db #0x2b	; 43
+    000002BEr00r00                  467 	.dw _enemy_71_tiles
+    000002C0r00r00                  468 	.dw _enemy_71_map
+    000002C2r00r00                  469 	.dw _enemy_71_attrs
+    000002C4r00r00                  470 	.dw _enemy_71_palettes
+    000002C6 3C                     471 	.db #0x3c	; 60
+    000002C7 3F                     472 	.db #0x3f	; 63
+    000002C8r00r00                  473 	.dw _enemy_72_tiles
+    000002CAr00r00                  474 	.dw _enemy_72_map
+    000002CCr00r00                  475 	.dw _enemy_72_attrs
+    000002CEr00r00                  476 	.dw _enemy_72_palettes
+    000002D0 3C                     477 	.db #0x3c	; 60
+    000002D1 19                     478 	.db #0x19	; 25
+    000002D2r00r00                  479 	.dw _enemy_73_tiles
+    000002D4r00r00                  480 	.dw _enemy_73_map
+    000002D6r00r00                  481 	.dw _enemy_73_attrs
+    000002D8r00r00                  482 	.dw _enemy_73_palettes
+    000002DA 3C                     483 	.db #0x3c	; 60
+    000002DB 19                     484 	.db #0x19	; 25
+    000002DCr00r00                  485 	.dw _enemy_74_tiles
+    000002DEr00r00                  486 	.dw _enemy_74_map
+    000002E0r00r00                  487 	.dw _enemy_74_attrs
+    000002E2r00r00                  488 	.dw _enemy_74_palettes
+                                    489 	.area _INITIALIZER
+                                    490 	.area _CABS (ABS)

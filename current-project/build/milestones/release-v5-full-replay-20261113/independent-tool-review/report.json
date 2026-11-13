@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "scope": "Independent read-only source and focused-evidence review before/at launch; no full replay result is claimed. Actual campaign/replay/title results require separate final audit.",
+  "runtime_sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+  "frozen_tools_manifest_sha256": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7",
+  "all_frozen_tool_hashes_match": true,
+  "inputs_sha256": {
+    "build/source-snapshots/replay-live-tools-20261113/tools/FROZEN_TOOLS.json": "03fe485bc1576ff566f43b9dfa8c35021d7b9b023128fea0559e38d8fea4e9b7",
+    "build/source-snapshots/replay-live-tools-20261113/tools/native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+    "build/source-snapshots/replay-live-tools-20261113/tools/replay_campaign_live.py": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+    "build/source-snapshots/replay-live-tools-20261113/tools/verify_campaign_title.py": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba",
+    "build/source-snapshots/replay-live-tools-20261113/tools/verify_rom.py": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16",
+    "build/verification/live-replay-ingestion-final/report.json": "e96c0142bc09cc0d88f2c97d7bbe92c0d34822b2318c02ebb9b8fc2a9eec05a7",
+    "build/verification/live-replay-ingestion-final/following-output/prefix-replay-report.json": "6fbcbf9d16b6c7d24f83cac54e688bed3023ba8399561ea7ef99b8116508b88e",
+    "build/verification/live-replay-ingestion-final/mutation-output/replay-failure.json": "a537d4f3735d6fefe34d90ffdc7643effbcd464b172864c42f67447ea26a6932",
+    "build/research/replay-live-work/test_ingestion_final.py": "a406e7991f46af057a203adaaaa1d66ee0a1697275cec6b2ca70b3db7f5adc1c"
+  },
+  "checks": {
+    "new_output_required": true,
+    "only_ROM_NOI_layout_copied_at_start": true,
+    "initial_SRAM_absent": true,
+    "load_state_calls": 0,
+    "emulator_memory_register_write_nodes": 0,
+    "controller_records_require_trailing_newline": true,
+    "all_previously_observed_bytes_pinned_including_incomplete_or_unconsumed_tail": true,
+    "time_monotonic": true,
+    "checkpoint_order_names_frames_exact_and_unique": true,
+    "all_expected_gameplay_keys_required": true,
+    "published_checkpoint_metadata_prefix_immutable": true,
+    "caught_up_or_partial_report_waits_do_not_tick_emulator": true,
+    "executing_and_delivered_tooling_ROM_NOI_hashes_stable": true,
+    "diagnostic_target_absent_at_closed_marker_fails": true,
+    "failure_report_preserved_and_no_retry_path": true
+  },
+  "completion_requirements": [
+    "Immutable post-close CAMPAIGN_CLOSED.json schema1 with ROM/NOI/controller/report/SRAM hashes",
+    "Source campaign_complete and next_phase51, ending-return row and final_maze phase-complete row",
+    "All final rows and checkpoint sequence consumed exactly; entire recorded-controller byte hash equals final source hash",
+    "Final native snapshot includes RNG, vehicle cycle, fade/music and every expected key",
+    "Settled nonblank title with no controller input",
+    "Freshly generated follower SRAM exactly matches source-earned SRAM",
+    "Marker/report/log/ROM/NOI/SRAM/tool hashes rechecked after settling"
+  ],
+  "reviewed_race_fixes": [
+    "Observed but not-yet-consumed log bytes cannot be rewritten/truncated",
+    "Final valid rows arriving between EOF observation and closed marker are consumed before acceptance",
+    "Closed marker bytes remain pinned across iterations",
+    "Diagnostic mode cannot fall through into full campaign completion"
+  ],
+  "focused_test_evidence": {
+    "cases": [
+      "Caught-up wall-clock waiting advances no frames or input rows",
+      "Incomplete JSONL tail remains unconsumed without ticking",
+      "Partial source report waits without consuming/ticking new rows",
+      "Four exact committed checkpoints and11674frames match fixed-prefix expectations after staggered publication",
+      "Rewrite of an observed but unconsumed partial tail fails immediately with preserved failure and no retry"
+    ],
+    "exact_checkpoints": 4,
+    "frames": 11674,
+    "negative_control_expected_failure": "Previously observed controller bytes were changed or truncated",
+    "production_campaign_mutated": false
+  },
+  "separate_remaining_gate": "After complete replay, run frozen verify_campaign_title.py for exact earned-SRAM native boot/title pixel comparison; then independently audit all final proof and preservation hashes.",
+  "full_replay_complete": false
+}

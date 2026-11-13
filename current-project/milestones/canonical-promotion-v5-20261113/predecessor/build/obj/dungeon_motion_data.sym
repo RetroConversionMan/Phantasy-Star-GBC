@@ -1,0 +1,77 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _dungeon_motion_bank_209                                        ******** GX
+    _dungeon_motion_bank_210                                        ******** GX
+    _dungeon_motion_bank_211                                        ******** GX
+    _dungeon_motion_bank_212                                        ******** GX
+    _dungeon_motion_bank_214                                        ******** GX
+    _dungeon_motion_bank_215                                        ******** GX
+    _dungeon_motion_bank_216                                        ******** GX
+    _dungeon_motion_bank_217                                        ******** GX
+    _dungeon_motion_bank_218                                        ******** GX
+    _dungeon_motion_bank_219                                        ******** GX
+    _dungeon_motion_bank_220                                        ******** GX
+    _dungeon_motion_bank_221                                        ******** GX
+    _dungeon_motion_bank_222                                        ******** GX
+    _dungeon_motion_bank_223                                        ******** GX
+    _dungeon_motion_bank_224                                        ******** GX
+    _dungeon_motion_bank_225                                        ******** GX
+    _dungeon_motion_bank_226                                        ******** GX
+    _dungeon_motion_bank_227                                        ******** GX
+    _dungeon_motion_bank_228                                        ******** GX
+    _dungeon_motion_bank_229                                        ******** GX
+    _dungeon_motion_bank_230                                        ******** GX
+    _dungeon_motion_bank_231                                        ******** GX
+    _dungeon_motion_bank_232                                        ******** GX
+    _dungeon_motion_bank_233                                        ******** GX
+    _dungeon_motion_bank_234                                        ******** GX
+    _dungeon_motion_bank_235                                        ******** GX
+    _dungeon_motion_bank_236                                        ******** GX
+    _dungeon_motion_bank_237                                        ******** GX
+    _dungeon_motion_bank_238                                        ******** GX
+    _dungeon_motion_bank_239                                        ******** GX
+    _dungeon_motion_bank_240                                        ******** GX
+    _dungeon_motion_bank_241                                        ******** GX
+    _dungeon_motion_bank_242                                        ******** GX
+    _dungeon_motion_bank_243                                        ******** GX
+    _dungeon_motion_bank_244                                        ******** GX
+    _dungeon_motion_bank_245                                        ******** GX
+    _dungeon_motion_bank_246                                        ******** GX
+    _dungeon_motion_bank_247                                        ******** GX
+    _dungeon_motion_bank_248                                        ******** GX
+    _dungeon_motion_bank_249                                        ******** GX
+    _dungeon_motion_bank_250                                        ******** GX
+    _dungeon_motion_bank_251                                        ******** GX
+  8 _motion_blocks                                                  000010E6 GR
+  8 _motion_fixed                                                   00001C7D GR
+  8 _motion_lookup                                                  00001119 GR
+  8 _motion_maps                                                    00000000 GR
+  8 _motion_patterns                                                000010EC GR
+  8 _motion_sequences                                               00001CC9 GR
+  8 _motion_variants                                                000010C2 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_77                                   size     1D23   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

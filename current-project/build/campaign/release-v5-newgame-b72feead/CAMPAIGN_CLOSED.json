@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "closed": true,
+  "campaign_complete": true,
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "symbols_sha256": "233b33a799df57940fb7ffab80bd55a6d87627b48cf1a4ff7b47fe7c6fe6324c",
+  "controller_sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+  "report_sha256": "9a64f3b7ab7d634637ff447316ebcb40e36d5bd4135127c60420e29d4dd16deb",
+  "sram_sha256": "3fd1272237e5779e5be6df1a414f211b810598452679cff04a4dc1a1833dbb60",
+  "final_frame": 3581580,
+  "checkpoint_count": 484
+}

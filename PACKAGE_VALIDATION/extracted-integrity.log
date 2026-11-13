@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "payload_files": 23812,
+  "payload_bytes": 1122708493,
+  "scope": "All package payload SHA-256 hashes and sizes; ZIP paths, duplicates and CRCs when ZIP supplied."
+}

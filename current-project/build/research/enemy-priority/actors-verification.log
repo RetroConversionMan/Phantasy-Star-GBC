@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 2097152,
+    "sha256": "9e060f9cd826a3cd0b64b13828e0c3d238bc8abb318e251d1b88780c0f833df4",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "native_actors": 113,
+  "native_pattern_bytes": 42864,
+  "native_oam_records": 2732,
+  "protected_bytes": 1771614,
+  "palette_bytes": 7232,
+  "render_frames": {
+    "min": 3,
+    "max": 4
+  },
+  "limits": [
+    "Separate native actor probe on unchanged checkerboard background, not a dungeon campaign playthrough",
+    "Source initial poses only; animation not implemented",
+    "Opaque original enemy BG-overlay pixels are retained using the specified floor palette"
+  ]
+}

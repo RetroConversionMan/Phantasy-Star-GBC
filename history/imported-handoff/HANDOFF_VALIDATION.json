@@ -1,0 +1,17 @@
+{
+  "verified_baseline_rebuild": "passed",
+  "rom_sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+  "source_sms_rebuild": {
+    "reference_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+    "assembled_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+    "reference_bytes": 524288,
+    "assembled_bytes": 524288,
+    "identical": true,
+    "labels_renamed_in_temporary_copy": 57,
+    "source_adjustment": "Only conflicting bank15 DungeonID_ labels renamed Dungeon_; upstream untouched."
+  },
+  "existing_behavior_report": "passed",
+  "existing_world_report": "passed",
+  "current_expansion_build": "not attempted; known ROM-bank configuration mismatch",
+  "package_integrity": "Run verify_bundle.py against final ZIP; external SHA256 sidecar supplied"
+}

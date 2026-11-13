@@ -1,0 +1,50 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/scene-probe/main.c:
+src/scene.c:
+src/palette_commit.c:
+src/scene_data.c:
+src/bank_io.c:
+src/font.c:
+src/assets_sprites.c:
+src/scene_bank_097.c:
+src/scene_bank_098.c:
+src/scene_bank_099.c:
+src/scene_bank_100.c:
+src/scene_bank_101.c:
+src/scene_bank_102.c:
+src/scene_bank_103.c:
+src/scene_bank_104.c:
+src/scene_bank_105.c:
+src/scene_bank_106.c:
+src/scene_bank_107.c:
+src/scene_bank_108.c:
+src/scene_bank_109.c:
+src/scene_bank_110.c:
+src/scene_bank_192.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "e4b67cc78572f01ed3a10ab50169904140154804a3ded235ae65daf0919a2f3a",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "source_portrait_records": 61,
+  "native_scenes": 169,
+  "native_pattern_bytes": 811200,
+  "native_map_attributes": 50700,
+  "protected_bytes": 865280,
+  "flash_palette_bytes": 86528,
+  "source_flash_pixels": 3244800,
+  "limits": [
+    "Separate native graphics probe; integrated scene UI not verified by this test",
+    "No original SMS emulator screenshot comparison",
+    "Static source poses; animation and dynamic dungeon overlays remain separate"
+  ]
+}

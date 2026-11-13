@@ -1,0 +1,85 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/travel-native/main.c:
+src/palette_commit.c:
+src/travel.c:
+src/travel_render.c:
+src/travel_art.c:
+src/world.c:
+src/world_assets.c:
+src/scene_actor.c:
+src/scene_actor_data.c:
+src/bank_io.c:
+src/font.c:
+src/assets.c:
+src/assets_sprites.c:
+src/world_assets_00_map.c:
+src/world_assets_00_tiles.c:
+src/world_assets_01_map.c:
+src/world_assets_01_tiles.c:
+src/world_assets_02_map.c:
+src/world_assets_02_tiles.c:
+src/world_assets_03_map.c:
+src/world_assets_03_tiles.c:
+src/world_assets_04_map.c:
+src/world_assets_04_tiles.c:
+src/world_assets_05_map.c:
+src/world_assets_05_tiles.c:
+src/world_assets_06_map.c:
+src/world_assets_06_tiles.c:
+src/world_assets_07_map.c:
+src/world_assets_07_tiles.c:
+src/world_assets_08_map.c:
+src/world_assets_08_tiles.c:
+src/world_assets_09_map.c:
+src/world_assets_09_tiles.c:
+src/world_assets_10_map.c:
+src/world_assets_10_tiles.c:
+src/scene_actor_bank_111.c:
+src/scene_actor_bank_112.c:
+src/scene_actor_bank_113.c:
+src/scene_actor_bank_114.c:
+{
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 2097152,
+    "sha256": "519eed652082cf966ecb62c24b2446fb6744920923a872abbf4414c867d4079b",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "routes": 14,
+  "native_steps": 13544,
+  "state_bytes": 460496,
+  "viewports": 572,
+  "tile_attribute_pairs": 223364,
+  "palette_bytes": 37408,
+  "protected_bytes": 33152,
+  "current_palette_fade_bytes": 3600,
+  "probe_roundtrip_emulator_frames": {
+    "world": {
+      "min": 2,
+      "max": 9,
+      "mean": 2.72
+    },
+    "load": {
+      "min": 11,
+      "max": 37,
+      "mean": 25.84
+    },
+    "space": {
+      "min": 2,
+      "max": 8,
+      "mean": 2.08
+    }
+  },
+  "limits": [
+    "Standalone native presenter/route probe, not main input-driven story integration",
+    "Round-trip timings include probe vsync and palette readback, not just renderer cost",
+    "Original initial transition fade-out and party follower sprites remain caller work"
+  ]
+}

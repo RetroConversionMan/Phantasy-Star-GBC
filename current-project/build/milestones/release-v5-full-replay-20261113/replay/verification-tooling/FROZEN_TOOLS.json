@@ -1,0 +1,11 @@
+{
+  "tools": {
+    "native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+    "verify_campaign_title.py": "b6658730d5c3c307b2f0e83b82c8462a41fa16a8b23fa58b4c0867b3f1addcba",
+    "replay_campaign_live.py": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e",
+    "verify_rom.py": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16"
+  },
+  "scope": "Independently reviewed forward-only clean-power-on live campaign replay; final success requires closed marker and complete native SRAM equality.",
+  "reviewer": "support_commands",
+  "reviewed_tool_sha256": "f7181f40b9e83ad3a4f655cc6101401f81f4625f0df05e61b5e0f6652ce4b70e"
+}

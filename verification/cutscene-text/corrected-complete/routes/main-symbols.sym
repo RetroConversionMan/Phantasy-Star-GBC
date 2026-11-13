@@ -1,0 +1,450 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _DIV_REG                                                        ******** GX
+    _LCDC_REG                                                       ******** GX
+    _VBK_REG                                                        ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  0 ___str_10                                                       00000E84 R
+  0 ___str_11                                                       00001116 R
+  0 ___str_12                                                       00002673 R
+  0 ___str_13                                                       0000267E R
+  0 ___str_14                                                       0000268A R
+  0 ___str_4                                                        000001BC R
+  0 ___str_5                                                        00000C67 R
+  0 ___str_6                                                        00000D70 R
+  0 ___str_7                                                        00000D74 R
+  0 ___str_8                                                        00000D79 R
+  0 ___str_9                                                        00000D7B R
+    __current_bank                                                  ******** GX
+    __moduint                                                       ******** GX
+  0 __str_0                                                         00000064 R
+  0 __str_1                                                         00000069 R
+  0 __str_2                                                         0000006E R
+  0 __str_3                                                         00000073 R
+  8 __xinit__vehicle_loaded_facing                                  00000000 R
+    _alis_palettes                                                  ******** GX
+    _alis_tiles                                                     ******** GX
+    _apply_dungeon                                                  ******** GX
+    _apply_event                                                    ******** GX
+  0 _apply_service                                                  00000D8D GR
+    _audio_clock                                                    ******** GX
+    _audio_command                                                  ******** GX
+    _audio_install                                                  ******** GX
+    _audio_map_track                                                ******** GX
+  2 _background_changed                                             000006F3 GR
+  2 _battle_from_event                                              000006EF GR
+  2 _battle_object_flag                                             000006F0 GR
+    _battle_scene_configure                                         ******** GX
+    _battle_scene_world_type                                        ******** GX
+    _battle_view_battle                                             ******** GX
+    _battle_view_begin                                              ******** GX
+    _battle_view_chest_abandon                                      ******** GX
+    _battle_view_chest_leave                                        ******** GX
+    _battle_view_chest_pending                                      ******** GX
+    _battle_view_chest_prompt                                       ******** GX
+    _battle_view_field_menu_pending                                 ******** GX
+    _battle_view_menu_allowed                                       ******** GX
+    _battle_view_text_revealing                                     ******** GX
+    _battle_view_tick                                               ******** GX
+  0 _begin_battle                                                   00000318 GR
+  2 _camera_x                                                       00000004 GR
+  2 _camera_y                                                       00000006 GR
+  0 _check_trigger                                                  00000E97 R
+  2 _choice                                                         000006E1 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  0 _compute_camera                                                 0000040F R
+    _cpu_fast                                                       ******** GX
+    _cutscene_advance                                               ******** GX
+    _cutscene_begin                                                 ******** GX
+    _cutscene_portrait_show                                         ******** GX
+  2 _dark_menu_pending                                              000006F4 GR
+  2 _deferred_buttons                                               000006DE R
+  2 _dialogue                                                       00000635 R
+  2 _dialogue_clock                                                 00000691 R
+  0 _dialogue_draw                                                  00000000 R
+  0 _dialogue_glyph                                                 00000078 R
+    _dialogue_item_name                                             ******** GX
+    _dialogue_open                                                  ******** GX
+  0 _dialogue_page                                                  00000B2E R
+  2 _dialogue_revealing                                             00000690 GR
+    _dialogue_stream_begin                                          ******** GX
+    _dialogue_stream_next                                           ******** GX
+  0 _dialogue_tick                                                  000000D4 R
+  2 _dialogue_wait                                                  0000068E R
+    _dialogue_wait_frames                                           ******** GX
+    _dialogue_wait_tick                                             ******** GX
+    _display_off                                                    ******** GX
+    _dplay_escape                                                   ******** GX
+    _dplay_escape_blocked                                           ******** GX
+    _dplay_mark_object                                              ******** GX
+    _dplay_resume                                                   ******** GX
+    _dplay_show_opening                                             ******** GX
+    _dplay_step                                                     ******** GX
+  0 _draw_dungeon                                                   000002AB GR
+  0 _draw_dungeon_faded                                             000002E8 GR
+  0 _draw_player                                                    0000043F R
+    _dungeon_enter                                                  ******** GX
+    _dungeon_invalidate_view_cache                                  ******** GX
+  2 _dungeon_keys_delay                                             000006F5 GR
+    _dungeon_motion_palette_muted                                   ******** GX
+    _dungeon_refresh_light                                          ******** GX
+    _dungeon_render                                                 ******** GX
+    _dungeon_render_palette                                         ******** GX
+    _dungeon_sample_position                                        ******** GX
+    _enter_dungeon                                                  ******** GX
+  0 _enter_map                                                      00000607 GR
+  0 _enter_map_ready                                                00000654 GR
+    _event_advance                                                  ******** GX
+    _event_battle_result                                            ******** GX
+    _event_begin                                                    ******** GX
+    _event_buy_secret                                               ******** GX
+    _event_choose_destination                                       ******** GX
+    _event_init                                                     ******** GX
+    _event_replace_item                                             ******** GX
+    _event_respond                                                  ******** GX
+    _event_search                                                   ******** GX
+    _event_use_story_item                                           ******** GX
+  2 _facing                                                         00000009 GR
+    _field_action                                                   ******** GX
+    _field_active                                                   ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  2 _frame_counter                                                  0000000F GR
+  2 _game_cutscene                                                  00000692 R
+  2 _game_dungeon                                                   000002A5 GR
+  2 _game_events                                                    0000006F GR
+    _game_field_advance                                             ******** GX
+    _game_field_item                                                ******** GX
+    _game_field_spell                                               ******** GX
+    _game_movie_battle_done                                         ******** GX
+    _game_movie_story_done                                          ******** GX
+    _game_movie_text_done                                           ******** GX
+    _game_movie_tick                                                ******** GX
+  0 _game_read_slot                                                 0000078C GR
+  2 _game_rpg                                                       00000011 GR
+    _game_sequence_tick                                             ******** GX
+  2 _game_service                                                   00000294 GR
+    _game_transition_fade_in                                        ******** GX
+    _game_transition_fade_out                                       ******** GX
+    _game_transition_interaction_music                              ******** GX
+    _game_transition_map_music                                      ******** GX
+    _game_transition_wait                                           ******** GX
+  2 _game_vehicle                                                   0000000D GR
+  0 _game_write_slot                                                000007FC GR
+    _help_screen                                                    ******** GX
+    _inventory_action_advance                                       ******** GX
+  0 _inventory_dialogue_overlay                                     00000C7A GR
+    _inventory_drop_begin                                           ******** GX
+    _inventory_equip_begin                                          ******** GX
+    _inventory_equip_select                                         ******** GX
+    _inventory_equipment_done                                       ******** GX
+    _inventory_screen                                               ******** GX
+  2 _item_action                                                    000006E5 GR
+    _item_screen                                                    ******** GX
+  2 _item_slot                                                      000006E4 GR
+    _joypad                                                         ******** GX
+  2 _last_keys                                                      000006DD GR
+  2 _magic_caster                                                   000006E7 GR
+  2 _magic_choice                                                   000006E8 GR
+  0 _main                                                           000013F7 GR
+    _map_magic_screen                                               ******** GX
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+  2 _menu_choice                                                    000006DF GR
+    _menu_screen                                                    ******** GX
+  0 _move_player                                                    00001129 R
+  0 _names                                                          0000005C R
+    _notice                                                         ******** GX
+  2 _notice_return                                                  000006EB GR
+  2 _party_choice                                                   000006E6 GR
+  2 _party_purpose                                                  000006EA R
+    _party_screen                                                   ******** GX
+    _party_world_draw                                               ******** GX
+    _party_world_reset                                              ******** GX
+    _party_world_tick                                               ******** GX
+  2 _player_x                                                       00000000 GR
+  2 _player_y                                                       00000002 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _prompt_screen                                                  ******** GX
+    _rRAMB                                                          ******** GX
+    _rRAMG                                                          ******** GX
+    _rROMB0                                                         ******** GX
+  0 _read_save                                                      000007F6 R
+  0 _redraw_world                                                   000004B6 R
+  0 _reload_world_mode                                              000004F7 GR
+  2 _replace_source                                                 000006EC GR
+    _result                                                         ******** GX
+  0 _resume_walk                                                    000006CF GR
+  2 _retained_trap                                                  000006F2 GR
+  0 _return_from_notice                                             000013AC R
+  2 _return_x                                                       000006F8 R
+  2 _return_y                                                       000006FA R
+    _rpg_buy                                                        ******** GX
+    _rpg_equip                                                      ******** GX
+    _rpg_find_item                                                  ******** GX
+    _rpg_hospital                                                   ******** GX
+    _rpg_new_game                                                   ******** GX
+    _rpg_remove_item                                                ******** GX
+    _rpg_revive                                                     ******** GX
+    _rpg_seed_rng                                                   ******** GX
+    _rpg_sell                                                       ******** GX
+    _rpg_spell_option                                               ******** GX
+    _rpg_use_item                                                   ******** GX
+    _rpg_world_encounter                                            ******** GX
+    _save_active_slot                                               ******** GX
+    _save_decode                                                    ******** GX
+    _save_encode                                                    ******** GX
+    _save_slot_offset                                               ******** GX
+  2 _save_storage                                                   000003C1 R
+    _save_ui_open                                                   ******** GX
+    _save_ui_scan                                                   ******** GX
+    _save_ui_tick                                                   ******** GX
+    _save_valid_mask                                                ******** GX
+  2 _saved_position_valid                                           0000000B GR
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+  2 _scene_context_type                                             0000000E GR
+    _scene_enemy_show                                               ******** GX
+    _scene_fade_begin                                               ******** GX
+  2 _screen_state                                                   00000008 GR
+  2 _selected_field_spell                                           000006E9 R
+  2 _service_active                                                 000006ED GR
+    _service_advance                                                ******** GX
+    _service_respond                                                ******** GX
+    _service_select                                                 ******** GX
+  0 _service_selection                                              00000CC8 R
+  2 _service_selector                                               000006EE GR
+    _set_bkg_data                                                   ******** GX
+    _set_bkg_palette                                                ******** GX
+    _set_sprite_data                                                ******** GX
+    _set_sprite_palette                                             ******** GX
+  2 _ship_arrival                                                   000006CB GR
+  2 _ship_departure                                                 000006C5 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  2 _ship_exit                                                      000006D1 GR
+  2 _shop_count                                                     000006E3 GR
+  2 _shop_id                                                        000006E2 GR
+    _shop_screen                                                    ******** GX
+  0 _show_cutscene_record                                           000001DC R
+  0 _show_dialogue                                                  00000B68 GR
+    _show_interaction_scene                                         ******** GX
+  0 _start_cutscene                                                 0000027A GR
+  0 _start_game                                                     00000918 GR
+  0 _start_movie_text                                               00000C9F GR
+    _start_opening                                                  ******** GX
+    _status_screen                                                  ******** GX
+  2 _step_dx                                                        000006F6 R
+  2 _step_dy                                                        000006F7 R
+  2 _step_remaining                                                 0000000C GR
+  2 _story_lower                                                    00000699 R
+  0 _story_page                                                     000001BE R
+    _strcpy                                                         ******** GX
+  2 _terrain_action                                                 000006D7 R
+  2 _title_choice                                                   000006E0 GR
+    _title_screen                                                   ******** GX
+    _travel_menu                                                    ******** GX
+    _ui_font                                                        ******** GX
+  0 _ui_palette                                                     00000054 R
+    _ui_panel                                                       ******** GX
+    _ui_text                                                        ******** GX
+    _vehicle_cycle                                                  ******** GX
+    _vehicle_cycle_world_tick                                       ******** GX
+  3 _vehicle_loaded_facing                                          00000000 R
+    _vehicle_palette_reset                                          ******** GX
+    _vehicle_sprite_draw                                            ******** GX
+    _vehicle_sprite_load                                            ******** GX
+    _vsync                                                          ******** GX
+  2 _walk_frame                                                     0000000A GR
+  2 _world_action                                                   000006BF GR
+    _world_check_trigger                                            ******** GX
+    _world_decode_destination                                       ******** GX
+    _world_draw                                                     ******** GX
+    _world_flags_at                                                 ******** GX
+    _world_group_id                                                 ******** GX
+    _world_ice_changed                                              ******** GX
+    _world_interaction_type                                         ******** GX
+    _world_load_graphics                                            ******** GX
+    _world_map_id                                                   ******** GX
+    _world_meta_at                                                  ******** GX
+    _world_motion_step                                              ******** GX
+    _world_select                                                   ******** GX
+    _world_special                                                  ******** GX
+    _world_step_allowed                                             ******** GX
+    _world_terrain_sync                                             ******** GX
+    _world_vehicle_footprint                                        ******** GX
+  0 _write_save                                                     00000912 R
+    b_apply_dungeon                                                 ******** GX
+    b_apply_event                                                   ******** GX
+    b_audio_command                                                 ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_audio_map_track                                               ******** GX
+    b_battle_scene_configure                                        ******** GX
+    b_battle_scene_world_type                                       ******** GX
+    b_battle_view_begin                                             ******** GX
+    b_battle_view_chest_abandon                                     ******** GX
+    b_battle_view_chest_leave                                       ******** GX
+    b_battle_view_chest_prompt                                      ******** GX
+    b_battle_view_tick                                              ******** GX
+    b_cutscene_advance                                              ******** GX
+    b_cutscene_begin                                                ******** GX
+    b_cutscene_portrait_show                                        ******** GX
+    b_dialogue_item_name                                            ******** GX
+    b_dialogue_open                                                 ******** GX
+    b_dialogue_stream_begin                                         ******** GX
+    b_dialogue_stream_next                                          ******** GX
+    b_dialogue_wait_frames                                          ******** GX
+    b_dialogue_wait_tick                                            ******** GX
+    b_dplay_escape                                                  ******** GX
+    b_dplay_escape_blocked                                          ******** GX
+    b_dplay_mark_object                                             ******** GX
+    b_dplay_resume                                                  ******** GX
+    b_dplay_show_opening                                            ******** GX
+    b_dplay_step                                                    ******** GX
+    b_dungeon_enter                                                 ******** GX
+    b_dungeon_refresh_light                                         ******** GX
+    b_dungeon_render                                                ******** GX
+    b_dungeon_sample_position                                       ******** GX
+    b_enter_dungeon                                                 ******** GX
+    b_event_advance                                                 ******** GX
+    b_event_battle_result                                           ******** GX
+    b_event_begin                                                   ******** GX
+    b_event_buy_secret                                              ******** GX
+    b_event_choose_destination                                      ******** GX
+    b_event_init                                                    ******** GX
+    b_event_replace_item                                            ******** GX
+    b_event_respond                                                 ******** GX
+    b_event_search                                                  ******** GX
+    b_event_use_story_item                                          ******** GX
+    b_game_field_advance                                            ******** GX
+    b_game_field_item                                               ******** GX
+    b_game_field_spell                                              ******** GX
+    b_game_movie_battle_done                                        ******** GX
+    b_game_movie_story_done                                         ******** GX
+    b_game_movie_text_done                                          ******** GX
+    b_game_movie_tick                                               ******** GX
+    b_game_sequence_tick                                            ******** GX
+    b_game_transition_fade_in                                       ******** GX
+    b_game_transition_fade_out                                      ******** GX
+    b_game_transition_interaction_music                             ******** GX
+    b_game_transition_map_music                                     ******** GX
+    b_game_transition_wait                                          ******** GX
+    b_help_screen                                                   ******** GX
+    b_inventory_action_advance                                      ******** GX
+    b_inventory_drop_begin                                          ******** GX
+    b_inventory_equip_begin                                         ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_inventory_equip_select                                        ******** GX
+    b_inventory_equipment_done                                      ******** GX
+    b_inventory_screen                                              ******** GX
+    b_item_screen                                                   ******** GX
+    b_map_magic_screen                                              ******** GX
+    b_menu_screen                                                   ******** GX
+    b_notice                                                        ******** GX
+    b_party_screen                                                  ******** GX
+    b_party_world_draw                                              ******** GX
+    b_party_world_reset                                             ******** GX
+    b_party_world_tick                                              ******** GX
+    b_prompt_screen                                                 ******** GX
+    b_result                                                        ******** GX
+    b_rpg_buy                                                       ******** GX
+    b_rpg_equip                                                     ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_rpg_hospital                                                  ******** GX
+    b_rpg_new_game                                                  ******** GX
+    b_rpg_remove_item                                               ******** GX
+    b_rpg_revive                                                    ******** GX
+    b_rpg_seed_rng                                                  ******** GX
+    b_rpg_sell                                                      ******** GX
+    b_rpg_spell_option                                              ******** GX
+    b_rpg_use_item                                                  ******** GX
+    b_rpg_world_encounter                                           ******** GX
+    b_save_decode                                                   ******** GX
+    b_save_encode                                                   ******** GX
+    b_save_slot_offset                                              ******** GX
+    b_save_ui_open                                                  ******** GX
+    b_save_ui_scan                                                  ******** GX
+    b_save_ui_tick                                                  ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_enemy_show                                              ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_service_advance                                               ******** GX
+    b_service_respond                                               ******** GX
+    b_service_select                                                ******** GX
+    b_shop_screen                                                   ******** GX
+    b_show_interaction_scene                                        ******** GX
+    b_start_opening                                                 ******** GX
+    b_status_screen                                                 ******** GX
+    b_title_screen                                                  ******** GX
+    b_travel_menu                                                   ******** GX
+    b_ui_panel                                                      ******** GX
+    b_ui_text                                                       ******** GX
+    b_vehicle_cycle_world_tick                                      ******** GX
+    b_vehicle_palette_reset                                         ******** GX
+    b_vehicle_sprite_draw                                           ******** GX
+    b_vehicle_sprite_load                                           ******** GX
+    b_world_check_trigger                                           ******** GX
+    b_world_decode_destination                                      ******** GX
+    b_world_draw                                                    ******** GX
+    b_world_flags_at                                                ******** GX
+    b_world_interaction_type                                        ******** GX
+    b_world_load_graphics                                           ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_world_meta_at                                                 ******** GX
+    b_world_motion_step                                             ******** GX
+    b_world_select                                                  ******** GX
+    b_world_special                                                 ******** GX
+    b_world_step_allowed                                            ******** GX
+    b_world_terrain_sync                                            ******** GX
+    b_world_vehicle_footprint                                       ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 9
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size     2694   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size      6FC   flags    0
+   3 _INITIALIZED                               size        1   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _INITIALIZER                               size        1   flags    0
+   9 _CABS                                      size        0   flags    8
+

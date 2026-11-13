@@ -1,0 +1,91 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _ask                                                            0000006B R
+  8 _battle                                                         00000186 R
+  8 _death_next                                                     00000262 R
+  8 _emit                                                           00000000 R
+  8 _event_advance                                                  00000F2D GR
+  8 _event_battle_result                                            000028A2 GR
+  8 _event_begin                                                    00000354 GR
+  8 _event_buy_secret                                               00002744 GR
+  8 _event_choose_destination                                       00002A7C GR
+  8 _event_governor_room_loaded                                     00002A56 GR
+  8 _event_init                                                     00000322 GR
+  8 _event_replace_item                                             00002665 GR
+  8 _event_respond                                                  00001AAA GR
+  8 _event_respond_routes_40000_207                                 0000265D R
+  8 _event_search                                                   00002C0D GR
+    _event_simple_dialogue                                          ******** GX
+  8 _event_use_story_item                                           00002B5B GR
+  8 _finish                                                         0000002D R
+  8 _gate                                                           00000079 R
+  8 _give                                                           000000AE R
+  8 _has                                                            00000039 R
+  8 _luveno_ready                                                   00000158 R
+    _memset                                                         ******** GX
+  8 _present                                                        0000024B R
+  8 _remember_status                                                0000019E R
+  8 _restore_status                                                 000001ED R
+  8 _resume                                                         00000091 R
+    _rpg_add_item                                                   ******** GX
+    _rpg_find_item                                                  ******** GX
+    _rpg_item_discardable                                           ******** GX
+    _rpg_recruit                                                    ******** GX
+    _rpg_remove_item                                                ******** GX
+    _rpg_replace_item                                               ******** GX
+    _rpg_rest                                                       ******** GX
+    _rpg_shop_option                                                ******** GX
+  8 _say                                                            0000005D R
+  8 _scene                                                          00000234 R
+  8 _select_replacement                                             0000013E R
+    b_event_advance                                             =   00000007 G
+    b_event_battle_result                                       =   00000007 G
+    b_event_begin                                               =   00000007 G
+    b_event_buy_secret                                          =   00000007 G
+    b_event_choose_destination                                  =   00000007 G
+    b_event_governor_room_loaded                                =   00000007 G
+    b_event_init                                                =   00000007 G
+    b_event_replace_item                                        =   00000007 G
+    b_event_respond                                             =   00000007 G
+    b_event_search                                              =   00000007 G
+    b_event_use_story_item                                      =   00000007 G
+    b_has                                                       =   00000007 
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_rpg_add_item                                                  ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_rpg_item_discardable                                          ******** GX
+    b_rpg_recruit                                                   ******** GX
+    b_rpg_remove_item                                               ******** GX
+    b_rpg_replace_item                                              ******** GX
+    b_rpg_rest                                                      ******** GX
+    b_rpg_shop_option                                               ******** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_7                                    size     2D5B   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

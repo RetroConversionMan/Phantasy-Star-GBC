@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "method": "Forced full rebuild of current working source with make -B -j4, GBDK4.5.0 macOS arm64; compared exact binary and every linked object to frozen v2 snapshot.",
+  "rom_sha256": "1b2b41bc5eaa0380f907cf5a614a551451b1157ba99dbb8fa55842366c1deffa",
+  "bytes": 4194304,
+  "object_files_compared": 253,
+  "object_mismatches": [],
+  "log": "build/verification/release-v2-working-rebuild.log",
+  "frozen_source": "build/source-snapshots/release-candidate-v2-20261113",
+  "baseline_modified": false
+}

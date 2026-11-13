@@ -1,0 +1,71 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _enemy_41_attrs                                                 00000508 GR
+  8 _enemy_41_map                                                   000003F0 GR
+  8 _enemy_41_palettes                                              00000620 GR
+  8 _enemy_41_tiles                                                 00000000 GR
+  8 _enemy_42_attrs                                                 00000A10 GR
+  8 _enemy_42_map                                                   000008F8 GR
+  8 _enemy_42_palettes                                              00000B28 GR
+  8 _enemy_42_tiles                                                 00000658 GR
+  8 _enemy_43_attrs                                                 00000EB8 GR
+  8 _enemy_43_map                                                   00000DA0 GR
+  8 _enemy_43_palettes                                              00000FD0 GR
+  8 _enemy_43_tiles                                                 00000B60 GR
+  8 _enemy_44_attrs                                                 000013C0 GR
+  8 _enemy_44_map                                                   000012A8 GR
+  8 _enemy_44_palettes                                              000014D8 GR
+  8 _enemy_44_tiles                                                 00001008 GR
+  8 _enemy_45_attrs                                                 000018C8 GR
+  8 _enemy_45_map                                                   000017B0 GR
+  8 _enemy_45_palettes                                              000019E0 GR
+  8 _enemy_45_tiles                                                 00001510 GR
+  8 _enemy_46_attrs                                                 00001D80 GR
+  8 _enemy_46_map                                                   00001C68 GR
+  8 _enemy_46_palettes                                              00001E98 GR
+  8 _enemy_46_tiles                                                 00001A18 GR
+  8 _enemy_47_attrs                                                 00002338 GR
+  8 _enemy_47_map                                                   00002220 GR
+  8 _enemy_47_palettes                                              00002450 GR
+  8 _enemy_47_tiles                                                 00001ED0 GR
+  8 _enemy_48_attrs                                                 00002970 GR
+  8 _enemy_48_map                                                   00002858 GR
+  8 _enemy_48_palettes                                              00002A88 GR
+  8 _enemy_48_tiles                                                 00002488 GR
+  8 _enemy_49_attrs                                                 00002DB8 GR
+  8 _enemy_49_map                                                   00002CA0 GR
+  8 _enemy_49_palettes                                              00002ED0 GR
+  8 _enemy_49_tiles                                                 00002AC0 GR
+  8 _enemy_50_attrs                                                 00003600 GR
+  8 _enemy_50_map                                                   000034E8 GR
+  8 _enemy_50_palettes                                              00003718 GR
+  8 _enemy_50_tiles                                                 00002F08 GR
+  8 _enemy_51_attrs                                                 00003AB8 GR
+  8 _enemy_51_map                                                   000039A0 GR
+  8 _enemy_51_palettes                                              00003BD0 GR
+  8 _enemy_51_tiles                                                 00003750 GR
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_57                                   size     3C08   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

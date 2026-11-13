@@ -1,0 +1,1309 @@
+{
+  "format_version": 1,
+  "repository": "https://github.com/sung3r/ps1disasm",
+  "commit": "8efc4110adcf1a81c70d40522016393ba6f6b5ae",
+  "method": "Lexical audit of .asm source, excluding comments and assembler directives from instruction counts. Hazard categories overlap; references are not runtime frequencies. Numeric operands are address candidates, not proven memory accesses. No macros or expressions are evaluated.",
+  "source_file_count": 31,
+  "totals": {
+    "bytes": 2915252,
+    "lines": 85794,
+    "labels": 2669,
+    "data_directive_lines": 64028,
+    "instructions": 14069
+  },
+  "mnemonics": {
+    "adc": 78,
+    "add": 765,
+    "and": 231,
+    "bit": 109,
+    "call": 1535,
+    "ccf": 17,
+    "cp": 408,
+    "cpi": 1,
+    "cpir": 1,
+    "cpl": 7,
+    "dec": 122,
+    "di": 40,
+    "djnz": 109,
+    "ei": 37,
+    "ex": 83,
+    "exx": 3,
+    "im": 1,
+    "in": 6,
+    "inc": 541,
+    "ini": 1,
+    "jp": 791,
+    "jr": 897,
+    "ld": 5868,
+    "ldi": 39,
+    "ldir": 88,
+    "neg": 11,
+    "nop": 10,
+    "or": 325,
+    "otir": 3,
+    "out": 106,
+    "outi": 29,
+    "pop": 376,
+    "push": 338,
+    "res": 16,
+    "ret": 531,
+    "retn": 1,
+    "rl": 33,
+    "rlca": 1,
+    "rr": 19,
+    "rra": 12,
+    "rrca": 81,
+    "rst": 51,
+    "sbc": 25,
+    "set": 27,
+    "srl": 19,
+    "sub": 149,
+    "xor": 128
+  },
+  "unsupported_mnemonics": {
+    "cpi": 1,
+    "cpir": 1,
+    "djnz": 109,
+    "ex": 83,
+    "exx": 3,
+    "im": 1,
+    "in": 6,
+    "ini": 1,
+    "ldi": 39,
+    "ldir": 88,
+    "neg": 11,
+    "otir": 3,
+    "out": 106,
+    "outi": 29,
+    "retn": 1
+  },
+  "port_symbol_references": {
+    "Port_IOPort1": 1,
+    "Port_IOPort2": 1,
+    "Port_PSG": 22,
+    "Port_VDPAddress": 38,
+    "Port_VDPData": 63,
+    "Port_VDPStatus": 4
+  },
+  "porting_hazards": {
+    "absolute_16bit_load_instruction": 198,
+    "adc_sbc_hl_instruction": 40,
+    "alternate_register_instruction": 7,
+    "i_or_r_register_instruction": 1,
+    "ix_iy_register_instruction": 503,
+    "port_io_instruction": 145,
+    "unsupported_condition_flag": 55,
+    "unsupported_mnemonic": 482
+  },
+  "game_mode_symbols": {
+    "GameMode_InitIntro": {
+      "file": "ps1.asm",
+      "line": 1062
+    },
+    "GameMode_Intro": {
+      "file": "ps1.asm",
+      "line": 1067
+    },
+    "GameMode_LoadIntro": {
+      "file": "ps1.asm",
+      "line": 1244
+    },
+    "GameMode_Ship": {
+      "file": "ps1.asm",
+      "line": 1350
+    },
+    "GameMode_LoadShip": {
+      "file": "ps1.asm",
+      "line": 1591
+    },
+    "GameMode_Map": {
+      "file": "ps1.asm",
+      "line": 1661
+    },
+    "GameMode_LoadMap": {
+      "file": "ps1.asm",
+      "line": 1709
+    },
+    "GameMode_Road": {
+      "file": "ps1.asm",
+      "line": 1992
+    },
+    "GameMode_LoadRoad": {
+      "file": "ps1.asm",
+      "line": 2030
+    },
+    "GameMode_Dungeon": {
+      "file": "ps1.asm",
+      "line": 2068
+    },
+    "GameMode_LoadDungeon": {
+      "file": "ps1.asm",
+      "line": 2102
+    },
+    "GameMode_Interaction": {
+      "file": "ps1.asm",
+      "line": 8363
+    },
+    "GameMode_LoadInteraction": {
+      "file": "ps1.asm",
+      "line": 8461
+    },
+    "GameMode_NameInput": {
+      "file": "ps1.asm",
+      "line": 8720
+    },
+    "GameMode_LoadNameInput": {
+      "file": "ps1.asm",
+      "line": 8948
+    }
+  },
+  "entry_points": {
+    "startup_and_interrupts": {
+      "_START": {
+        "file": "ps1.asm",
+        "line": 37
+      },
+      "MainSetup": {
+        "file": "ps1.asm",
+        "line": 122
+      },
+      "MainGameLoop": {
+        "file": "ps1.asm",
+        "line": 147
+      },
+      "GameModeTbl": {
+        "file": "ps1.asm",
+        "line": 156
+      },
+      "VInt": {
+        "file": "ps1.asm",
+        "line": 201
+      },
+      "WaitForVInt": {
+        "file": "ps1.asm",
+        "line": 90
+      },
+      "ReadJoypad": {
+        "file": "ps1.asm",
+        "line": 508
+      }
+    },
+    "intro_and_transport": {
+      "GameMode_InitIntro": {
+        "file": "ps1.asm",
+        "line": 1062
+      },
+      "GameMode_LoadIntro": {
+        "file": "ps1.asm",
+        "line": 1244
+      },
+      "GameMode_Intro": {
+        "file": "ps1.asm",
+        "line": 1067
+      },
+      "GameMode_LoadShip": {
+        "file": "ps1.asm",
+        "line": 1591
+      },
+      "GameMode_Ship": {
+        "file": "ps1.asm",
+        "line": 1350
+      },
+      "GameMode_LoadRoad": {
+        "file": "ps1.asm",
+        "line": 2030
+      },
+      "GameMode_Road": {
+        "file": "ps1.asm",
+        "line": 1992
+      }
+    },
+    "maps": {
+      "GameMode_LoadMap": {
+        "file": "ps1.asm",
+        "line": 1709
+      },
+      "GameMode_Map": {
+        "file": "ps1.asm",
+        "line": 1661
+      },
+      "LABEL_576A": {
+        "file": "ps1.asm",
+        "line": 11927
+      },
+      "LABEL_77AC": {
+        "file": "ps1.asm",
+        "line": 16532
+      },
+      "Map_RunRandomBattles": {
+        "file": "ps1.asm",
+        "line": 12891
+      }
+    },
+    "dungeons": {
+      "GameMode_LoadDungeon": {
+        "file": "ps1.asm",
+        "line": 2102
+      },
+      "GameMode_Dungeon": {
+        "file": "ps1.asm",
+        "line": 2068
+      },
+      "Dungeon_GetEncounter": {
+        "file": "ps1.asm",
+        "line": 12963
+      },
+      "B03_DungeonEntrancePoints": {
+        "file": "banks/bank03.asm",
+        "line": 3091
+      },
+      "B03_DungeonTransitionData": {
+        "file": "banks/bank03.asm",
+        "line": 4271
+      },
+      "B03_ObjectData": {
+        "file": "banks/bank03.asm",
+        "line": 3323
+      }
+    },
+    "interaction_and_battle": {
+      "GameMode_LoadInteraction": {
+        "file": "ps1.asm",
+        "line": 8461
+      },
+      "GameMode_Interaction": {
+        "file": "ps1.asm",
+        "line": 8363
+      },
+      "LABEL_3C1A": {
+        "file": "ps1.asm",
+        "line": 8429
+      },
+      "LABEL_100F": {
+        "file": "ps1.asm",
+        "line": 2168
+      },
+      "BattleMenu_OptionTbl": {
+        "file": "ps1.asm",
+        "line": 3479
+      },
+      "BattleMenu_Attack": {
+        "file": "ps1.asm",
+        "line": 3487
+      },
+      "BattleMenu_Talk": {
+        "file": "ps1.asm",
+        "line": 3496
+      },
+      "BattleMenu_Run": {
+        "file": "ps1.asm",
+        "line": 3557
+      },
+      "BattleMenu_Magic": {
+        "file": "ps1.asm",
+        "line": 3589
+      },
+      "BattleMenu_Item": {
+        "file": "ps1.asm",
+        "line": 3882
+      }
+    },
+    "menus_and_character_state": {
+      "PlayerMenu_OptionTbl": {
+        "file": "ps1.asm",
+        "line": 4020
+      },
+      "PlayerMenu_Stats": {
+        "file": "ps1.asm",
+        "line": 4029
+      },
+      "PlayerMenu_Magic": {
+        "file": "ps1.asm",
+        "line": 4125
+      },
+      "PlayerMenu_Item": {
+        "file": "ps1.asm",
+        "line": 4782
+      },
+      "PlayerMenu_Search": {
+        "file": "ps1.asm",
+        "line": 5704
+      },
+      "UnlockCharacter": {
+        "file": "ps1.asm",
+        "line": 3155
+      },
+      "B03_AlisLevelTable": {
+        "file": "banks/bank03.asm",
+        "line": 4699
+      },
+      "B03_MyauLevelTable": {
+        "file": "banks/bank03.asm",
+        "line": 4734
+      },
+      "B03_OdinLevelTable": {
+        "file": "banks/bank03.asm",
+        "line": 4769
+      },
+      "B03_NoahLevelTable": {
+        "file": "banks/bank03.asm",
+        "line": 4804
+      },
+      "B03_ShopData": {
+        "file": "banks/bank03.asm",
+        "line": 4399
+      }
+    },
+    "dialogue": {
+      "ShowDialogue_B12": {
+        "file": "ps1.asm",
+        "line": 7000
+      },
+      "ShowDialogue_B2": {
+        "file": "ps1.asm",
+        "line": 11916
+      },
+      "LABEL_31D4": {
+        "file": "ps1.asm",
+        "line": 7004
+      },
+      "DialogueBlock": {
+        "file": "ps1.asm",
+        "line": 17498
+      }
+    },
+    "save_and_load": {
+      "PlayerMenu_Save": {
+        "file": "ps1.asm",
+        "line": 4069
+      },
+      "LABEL_634": {
+        "file": "ps1.asm",
+        "line": 1105
+      },
+      "LABEL_73A": {
+        "file": "ps1.asm",
+        "line": 1232
+      },
+      "GameMode_NameInput": {
+        "file": "ps1.asm",
+        "line": 8720
+      },
+      "GameMode_LoadNameInput": {
+        "file": "ps1.asm",
+        "line": 8948
+      }
+    },
+    "sound": {
+      "CallSndInit": {
+        "file": "ps1.asm",
+        "line": 461
+      },
+      "CallSndUpdate": {
+        "file": "ps1.asm",
+        "line": 456
+      },
+      "CallSndMute": {
+        "file": "ps1.asm",
+        "line": 466
+      },
+      "Snd_InitDriver": {
+        "file": "sound/sound_driver.asm",
+        "line": 1
+      },
+      "Snd_SilencePSG": {
+        "file": "sound/sound_driver.asm",
+        "line": 25
+      },
+      "Snd_UpdateAll": {
+        "file": "sound/sound_driver.asm",
+        "line": 49
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "banks/bank03.asm",
+      "sha256": "c0a8fa6c2f284547eba4be20cb1141d41814471be12508d5e94594e45c40be04",
+      "bytes": 114263,
+      "lines": 4933,
+      "labels": 243,
+      "data_directive_lines": 3909,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank04.asm",
+      "sha256": "159e1379ef26e36679d2b065ef847a8335c46dcc2883bad7b5a7c54cabf3d557",
+      "bytes": 88376,
+      "lines": 2093,
+      "labels": 16,
+      "data_directive_lines": 2062,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank05.asm",
+      "sha256": "90279b061c9037fe1bf3025af29ebde73cb99a19391054957055bd338a4ddeb6",
+      "bytes": 88188,
+      "lines": 2087,
+      "labels": 16,
+      "data_directive_lines": 2056,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank06.asm",
+      "sha256": "b77f39ed34f5e2eed031b6615cfb7c9dc8f2b21511a227dc9985b5af4070d381",
+      "bytes": 88191,
+      "lines": 2066,
+      "labels": 9,
+      "data_directive_lines": 2048,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank07.asm",
+      "sha256": "be70696dc3c903ff8f40010ace9170efb99c2309ebcefa080486335e3d05d81a",
+      "bytes": 87934,
+      "lines": 2059,
+      "labels": 6,
+      "data_directive_lines": 2048,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank08.asm",
+      "sha256": "12da96a95502fbe9b0a3c3cfc9a160d4ea1f6c5888d07870fcc483c4325664e2",
+      "bytes": 88199,
+      "lines": 2067,
+      "labels": 7,
+      "data_directive_lines": 2054,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank09.asm",
+      "sha256": "f86be3d1254328a6187a49d31ae4b1ec6319616b9eeb20a7edaab7a0a319bfea",
+      "bytes": 87154,
+      "lines": 2042,
+      "labels": 7,
+      "data_directive_lines": 2029,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank10.asm",
+      "sha256": "6c1028a45ac7098601208144ef83d00d91b069b4a734074545b91523164af7b4",
+      "bytes": 88144,
+      "lines": 2064,
+      "labels": 6,
+      "data_directive_lines": 2053,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank11.asm",
+      "sha256": "6f18cd88a46cd855ca5859833af768623ae633451ad973990cbaa84df2d05dfd",
+      "bytes": 85761,
+      "lines": 2008,
+      "labels": 6,
+      "data_directive_lines": 1997,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank13.asm",
+      "sha256": "72eff786868b0d875f1210153ba9961b3e94ba7d75300ffecc2b47e0358688a6",
+      "bytes": 87861,
+      "lines": 2044,
+      "labels": 0,
+      "data_directive_lines": 2044,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank14.asm",
+      "sha256": "61b638b3978e147de1a2a39fc799ac9b0c79e1c6af4e22c684571006e7b300ea",
+      "bytes": 87612,
+      "lines": 2077,
+      "labels": 24,
+      "data_directive_lines": 2028,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank15.asm",
+      "sha256": "16308bd3d255b98f3edd977a18cc642e26d71e0db8433d6b11174adafc4adcae",
+      "bytes": 90533,
+      "lines": 2280,
+      "labels": 74,
+      "data_directive_lines": 2113,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank16.asm",
+      "sha256": "a7d89a1f0292d201a03833995f641122682b1a2f92110bd1582d17194b8ee6fa",
+      "bytes": 85537,
+      "lines": 2016,
+      "labels": 12,
+      "data_directive_lines": 1991,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank17.asm",
+      "sha256": "bee77895345508741c161921e82dbebcc01f133cd14bd06fc0ba7bf4393d5504",
+      "bytes": 88069,
+      "lines": 2065,
+      "labels": 8,
+      "data_directive_lines": 2050,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank18.asm",
+      "sha256": "2bcc28a10cd7ea428d76ba0dbc2311958531c67d83c70fdca74d552ef0060bdf",
+      "bytes": 87806,
+      "lines": 2053,
+      "labels": 6,
+      "data_directive_lines": 2042,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank19.asm",
+      "sha256": "0e0554b10954ca08c78f4aa575c3bb62f5b94819751d97a9e2c28d9683513615",
+      "bytes": 87304,
+      "lines": 2047,
+      "labels": 7,
+      "data_directive_lines": 2034,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank20.asm",
+      "sha256": "a48e88baa4c18ad17a3de60353a5fa15bbe161e7d42250154facce803a5562ff",
+      "bytes": 87715,
+      "lines": 2054,
+      "labels": 7,
+      "data_directive_lines": 2041,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank21.asm",
+      "sha256": "c416843cd04e8f4adddd3886beea79091c692f8e6c5d2d25359f802bd68116e0",
+      "bytes": 95000,
+      "lines": 2967,
+      "labels": 257,
+      "data_directive_lines": 2454,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank22.asm",
+      "sha256": "d7c4c9d7b33b140e4d3d65bf7d3bff7de2f829e4c41a08fda2986a8791607dcf",
+      "bytes": 88064,
+      "lines": 2054,
+      "labels": 3,
+      "data_directive_lines": 2048,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank23.asm",
+      "sha256": "f0ff550a6db89d9d12fa8b62e368fe9c3256d7ad2cebd7fa65135142fc4f98c7",
+      "bytes": 87979,
+      "lines": 2051,
+      "labels": 2,
+      "data_directive_lines": 2047,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank24.asm",
+      "sha256": "0283b80d9e818ab141a355d268c637e4c94d205b561b116f11eff1645526848c",
+      "bytes": 87710,
+      "lines": 2049,
+      "labels": 4,
+      "data_directive_lines": 2041,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank25.asm",
+      "sha256": "5fc25121745a7f01ba74e25ba302e6381a99a672e1adfc17f8c12583acd8983d",
+      "bytes": 88176,
+      "lines": 2063,
+      "labels": 6,
+      "data_directive_lines": 2052,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank26.asm",
+      "sha256": "73ac3da2f6647b5dbd1e92885907ab568999fb2ee72a49bcca6d1fb7e8f247df",
+      "bytes": 87978,
+      "lines": 2057,
+      "labels": 6,
+      "data_directive_lines": 2046,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank27.asm",
+      "sha256": "e4db56a86ca9ecea094bc5c70259d19a82bf2700c521757b1956ea617d7b6f4e",
+      "bytes": 88429,
+      "lines": 2123,
+      "labels": 26,
+      "data_directive_lines": 2071,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank28.asm",
+      "sha256": "231e38d972fe2381623bffc364a90459e59adcb5aefe7c4413e87915fd75fac4",
+      "bytes": 87746,
+      "lines": 2067,
+      "labels": 14,
+      "data_directive_lines": 2040,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank29.asm",
+      "sha256": "2889d64a6966988cf7dd3c241a69f23d97f6d11414ad17510d98e2dadc9c1c5e",
+      "bytes": 87081,
+      "lines": 2027,
+      "labels": 1,
+      "data_directive_lines": 2025,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank30.asm",
+      "sha256": "508189f3b385608e2c7827adb6a4571017bc61a90860f71c21a7be6d4a683565",
+      "bytes": 87881,
+      "lines": 2044,
+      "labels": 0,
+      "data_directive_lines": 2044,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "banks/bank31.asm",
+      "sha256": "d02ba25a3ae984e2b7c9f23c1baaf65efc570ee3551127c98a6b094c2c75aa58",
+      "bytes": 88118,
+      "lines": 2057,
+      "labels": 3,
+      "data_directive_lines": 2051,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "ps1.asm",
+      "sha256": "2d133a646a03f6dc8b87c760f603560052e26744dd2dd9999a6ffd8a946f39d4",
+      "bytes": 313509,
+      "lines": 20071,
+      "labels": 1577,
+      "data_directive_lines": 2661,
+      "instructions": 13102,
+      "mnemonics": {
+        "adc": 78,
+        "add": 719,
+        "and": 223,
+        "bit": 81,
+        "call": 1504,
+        "ccf": 17,
+        "cp": 372,
+        "cpi": 1,
+        "cpir": 1,
+        "cpl": 7,
+        "dec": 97,
+        "di": 40,
+        "djnz": 98,
+        "ei": 37,
+        "ex": 76,
+        "im": 1,
+        "in": 6,
+        "inc": 486,
+        "ini": 1,
+        "jp": 734,
+        "jr": 831,
+        "ld": 5499,
+        "ldi": 39,
+        "ldir": 86,
+        "neg": 11,
+        "nop": 10,
+        "or": 299,
+        "otir": 1,
+        "out": 86,
+        "outi": 29,
+        "pop": 349,
+        "push": 314,
+        "res": 1,
+        "ret": 463,
+        "retn": 1,
+        "rl": 33,
+        "rlca": 1,
+        "rr": 19,
+        "rra": 12,
+        "rrca": 77,
+        "rst": 51,
+        "sbc": 25,
+        "set": 11,
+        "srl": 19,
+        "sub": 141,
+        "xor": 115
+      },
+      "unsupported_mnemonics": {
+        "cpi": 1,
+        "cpir": 1,
+        "djnz": 98,
+        "ex": 76,
+        "im": 1,
+        "in": 6,
+        "ini": 1,
+        "ldi": 39,
+        "ldir": 86,
+        "neg": 11,
+        "otir": 1,
+        "out": 86,
+        "outi": 29,
+        "retn": 1
+      },
+      "port_symbol_references": {
+        "Port_IOPort1": 1,
+        "Port_IOPort2": 1,
+        "Port_VDPAddress": 38,
+        "Port_VDPData": 63,
+        "Port_VDPStatus": 4
+      },
+      "porting_hazards": {
+        "absolute_16bit_load_instruction": 198,
+        "adc_sbc_hl_instruction": 40,
+        "i_or_r_register_instruction": 1,
+        "ix_iy_register_instruction": 357,
+        "port_io_instruction": 123,
+        "unsupported_condition_flag": 36,
+        "unsupported_mnemonic": 437
+      },
+      "numeric_operand_regions": {
+        "sega_mapper_FFFC_FFFF": 135,
+        "sms_ram_mirror_E000_FFFB": 10,
+        "sms_rom_window0_0000_3FFF": 456,
+        "sms_rom_window1_4000_7FFF": 141,
+        "sms_rom_window2_8000_BFFF": 16,
+        "sms_work_ram_C000_DFFF": 1068
+      },
+      "literal_memory_operand_regions": {
+        "sega_mapper_FFFC_FFFF": 58,
+        "sms_work_ram_C000_DFFF": 803
+      },
+      "hazard_examples": {
+        "unsupported_mnemonic": [
+          {
+            "line": 39,
+            "instruction": "im\t1"
+          },
+          {
+            "line": 45,
+            "instruction": "out\t(Port_VDPAddress), a"
+          },
+          {
+            "line": 47,
+            "instruction": "out\t(Port_VDPAddress), a"
+          },
+          {
+            "line": 71,
+            "instruction": "in\ta, (Port_VDPStatus)"
+          },
+          {
+            "line": 120,
+            "instruction": "retn"
+          }
+        ],
+        "port_io_instruction": [
+          {
+            "line": 45,
+            "instruction": "out\t(Port_VDPAddress), a"
+          },
+          {
+            "line": 47,
+            "instruction": "out\t(Port_VDPAddress), a"
+          },
+          {
+            "line": 71,
+            "instruction": "in\ta, (Port_VDPStatus)"
+          },
+          {
+            "line": 213,
+            "instruction": "in\ta, (Port_IOPort2)"
+          },
+          {
+            "line": 272,
+            "instruction": "out (Port_VDPAddress), a"
+          }
+        ],
+        "ix_iy_register_instruction": [
+          {
+            "line": 205,
+            "instruction": "push\tix"
+          },
+          {
+            "line": 206,
+            "instruction": "push\tiy"
+          },
+          {
+            "line": 256,
+            "instruction": "pop\tiy"
+          },
+          {
+            "line": 257,
+            "instruction": "pop\tix"
+          },
+          {
+            "line": 1082,
+            "instruction": "ld\tiy, Alis_stats"
+          }
+        ],
+        "unsupported_condition_flag": [
+          {
+            "line": 490,
+            "instruction": "jp\tp, LABEL_31B"
+          },
+          {
+            "line": 494,
+            "instruction": "jp\tp, LABEL_321"
+          },
+          {
+            "line": 499,
+            "instruction": "jp\tp, LABEL_327"
+          },
+          {
+            "line": 1308,
+            "instruction": "jp\tpe, LABEL_7EC"
+          },
+          {
+            "line": 7024,
+            "instruction": "jp\tm, LABEL_3332"
+          }
+        ],
+        "adc_sbc_hl_instruction": [
+          {
+            "line": 502,
+            "instruction": "sbc  hl, de"
+          },
+          {
+            "line": 881,
+            "instruction": "adc\thl, hl"
+          },
+          {
+            "line": 891,
+            "instruction": "adc\thl, hl"
+          },
+          {
+            "line": 901,
+            "instruction": "adc\thl, hl"
+          },
+          {
+            "line": 911,
+            "instruction": "adc\thl, hl"
+          }
+        ],
+        "absolute_16bit_load_instruction": [
+          {
+            "line": 1038,
+            "instruction": "ld\thl, (RNG_seed)"
+          },
+          {
+            "line": 1057,
+            "instruction": "ld\t(RNG_seed), hl"
+          },
+          {
+            "line": 1069,
+            "instruction": "ld\t(Cursor_pos), hl"
+          },
+          {
+            "line": 1091,
+            "instruction": "ld\t($C308), hl"
+          },
+          {
+            "line": 1093,
+            "instruction": "ld\t($C301), hl"
+          }
+        ],
+        "i_or_r_register_instruction": [
+          {
+            "line": 1055,
+            "instruction": "ld\ta, r"
+          }
+        ]
+      }
+    },
+    {
+      "path": "ps1.constants.asm",
+      "sha256": "5b46d7286d6418371fe211747ab66f89b9aaf5497613fcb784e2a965fd526844",
+      "bytes": 13672,
+      "lines": 495,
+      "labels": 0,
+      "data_directive_lines": 0,
+      "instructions": 0,
+      "mnemonics": {},
+      "unsupported_mnemonics": {},
+      "port_symbol_references": {},
+      "porting_hazards": {},
+      "numeric_operand_regions": {},
+      "literal_memory_operand_regions": {},
+      "hazard_examples": {}
+    },
+    {
+      "path": "sound/sound_driver.asm",
+      "sha256": "b4fe87cb39eaa49afa7dbff8c7a43d55f76e23f2def086f9240b48e49f5b4dfe",
+      "bytes": 95262,
+      "lines": 3614,
+      "labels": 316,
+      "data_directive_lines": 1849,
+      "instructions": 967,
+      "mnemonics": {
+        "add": 46,
+        "and": 8,
+        "bit": 28,
+        "call": 31,
+        "cp": 36,
+        "dec": 25,
+        "djnz": 11,
+        "ex": 7,
+        "exx": 3,
+        "inc": 55,
+        "jp": 57,
+        "jr": 66,
+        "ld": 369,
+        "ldir": 2,
+        "or": 26,
+        "otir": 2,
+        "out": 20,
+        "pop": 27,
+        "push": 24,
+        "res": 15,
+        "ret": 68,
+        "rrca": 4,
+        "set": 16,
+        "sub": 8,
+        "xor": 13
+      },
+      "unsupported_mnemonics": {
+        "djnz": 11,
+        "ex": 7,
+        "exx": 3,
+        "ldir": 2,
+        "otir": 2,
+        "out": 20
+      },
+      "port_symbol_references": {
+        "Port_PSG": 22
+      },
+      "porting_hazards": {
+        "alternate_register_instruction": 7,
+        "ix_iy_register_instruction": 146,
+        "port_io_instruction": 22,
+        "unsupported_condition_flag": 19,
+        "unsupported_mnemonic": 45
+      },
+      "numeric_operand_regions": {
+        "sms_rom_window0_0000_3FFF": 15,
+        "sms_work_ram_C000_DFFF": 95
+      },
+      "literal_memory_operand_regions": {
+        "sms_work_ram_C000_DFFF": 51
+      },
+      "hazard_examples": {
+        "unsupported_mnemonic": [
+          {
+            "line": 20,
+            "instruction": "djnz -"
+          },
+          {
+            "line": 31,
+            "instruction": "otir"
+          },
+          {
+            "line": 42,
+            "instruction": "ldir"
+          },
+          {
+            "line": 51,
+            "instruction": "exx"
+          },
+          {
+            "line": 72,
+            "instruction": "djnz --"
+          }
+        ],
+        "port_io_instruction": [
+          {
+            "line": 31,
+            "instruction": "otir"
+          },
+          {
+            "line": 282,
+            "instruction": "out (Port_PSG), a"
+          },
+          {
+            "line": 295,
+            "instruction": "out (Port_PSG), a"
+          },
+          {
+            "line": 297,
+            "instruction": "out (Port_PSG), a"
+          },
+          {
+            "line": 321,
+            "instruction": "otir"
+          }
+        ],
+        "alternate_register_instruction": [
+          {
+            "line": 51,
+            "instruction": "exx"
+          },
+          {
+            "line": 1161,
+            "instruction": "ex af, af'"
+          },
+          {
+            "line": 1172,
+            "instruction": "ex af, af'"
+          },
+          {
+            "line": 1178,
+            "instruction": "ex af, af'"
+          },
+          {
+            "line": 1183,
+            "instruction": "ex af, af'"
+          }
+        ],
+        "unsupported_condition_flag": [
+          {
+            "line": 58,
+            "instruction": "jp m, ++"
+          },
+          {
+            "line": 108,
+            "instruction": "jp m, ++"
+          },
+          {
+            "line": 140,
+            "instruction": "jp m, LABEL_B12_80EB"
+          },
+          {
+            "line": 154,
+            "instruction": "jp m, LABEL_B12_8155"
+          },
+          {
+            "line": 179,
+            "instruction": "jp p, Snd_InitDriver"
+          }
+        ],
+        "ix_iy_register_instruction": [
+          {
+            "line": 59,
+            "instruction": "ld ix, $C06E"
+          },
+          {
+            "line": 66,
+            "instruction": "bit 7, (ix+0)"
+          },
+          {
+            "line": 70,
+            "instruction": "add ix, de"
+          },
+          {
+            "line": 76,
+            "instruction": "bit 7, (ix+0)"
+          },
+          {
+            "line": 81,
+            "instruction": "ld ix, $C0EE"
+          }
+        ]
+      }
+    }
+  ],
+  "reference_rom": {
+    "path": "ps1original.sms",
+    "bytes": 524288,
+    "sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88"
+  }
+}

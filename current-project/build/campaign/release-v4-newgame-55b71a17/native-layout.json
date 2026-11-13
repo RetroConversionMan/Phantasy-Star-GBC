@@ -1,0 +1,31 @@
+{
+  "rom_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+  "method": "compiled-event-init-exact-rom-match",
+  "event_object_flags_offset": 293,
+  "event_state_size": 549,
+  "event_init": {
+    "bank": 7,
+    "address": 17186,
+    "rom_file_offset": 115490,
+    "bytes": 50,
+    "machine_code_hex": "f8062a4f46112502d5110000d5c5cd223ce806f8062a4f46210001095d54f8082a12137e122125010936ff2129010936ffc9"
+  },
+  "inputs": {
+    "events_asm": {
+      "path": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/release-candidate-v4-20261113/build/obj/events.asm",
+      "sha256": "8df068e51e6cc1e73a25d46fb4084e457fb58c7fd501333b69b4e8664acc5485"
+    },
+    "rom_symbols": {
+      "path": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/release-candidate-v4-20261113/build/phantasy-star-gbc-world.noi",
+      "sha256": "a5ef0ce7cae9171a020a79a08b3b2fb955ac314e9f53c655cafd2921819c8997"
+    },
+    "events_o": {
+      "path": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/release-candidate-v4-20261113/build/obj/events.o",
+      "sha256": "2fc296a97ea5fbc45ee4f266b01dd106d49108121acc39a91115c02b5c213d2d"
+    },
+    "events_lst": {
+      "path": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/release-candidate-v4-20261113/build/obj/events.lst",
+      "sha256": "406b4b8bc4b1029908f554bc3fef2b2e7eddc2fd11c7487c6e5f030c9476d93e"
+    }
+  }
+}

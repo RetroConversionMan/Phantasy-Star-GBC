@@ -1,0 +1,147 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Actual Camineet guard accepts Road Pass; original road1 plays and arrives at Palma spaceport exit triple",
+    "Original Passport application answers and100-Meseta payment grant Passport; spaceport guard admits party through actual dialogue",
+    "Original ship81 prompt starts ascent, space transfer and descent; full route reaches Motavia spaceport",
+    "Original return ship82 accepts action-button skips and preserves its correct Palma destination",
+    "Power-cycle Continue restores post-travel map, coordinates, party and Road Pass"
+  ],
+  "routes": [
+    {
+      "map": 4,
+      "event": 11,
+      "from": [
+        105,
+        18
+      ],
+      "trigger": [
+        82,
+        24
+      ],
+      "controller_steps": 31
+    },
+    {
+      "map": 5,
+      "event": 29,
+      "from": [
+        44,
+        25
+      ],
+      "trigger": [
+        39,
+        23
+      ],
+      "controller_steps": 7
+    },
+    {
+      "map": 5,
+      "event": 26,
+      "from": [
+        39,
+        24
+      ],
+      "trigger": [
+        21,
+        24
+      ],
+      "controller_steps": 22
+    },
+    {
+      "map": 5,
+      "event": 179,
+      "from": [
+        23,
+        24
+      ],
+      "trigger": [
+        22,
+        19
+      ],
+      "controller_steps": 6
+    },
+    {
+      "map": 16,
+      "event": 180,
+      "from": [
+        23,
+        63
+      ],
+      "trigger": [
+        22,
+        63
+      ],
+      "controller_steps": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/road-pass-guard.png",
+      "sha256_pixels": "2728f2d84e1bbb04a3dad983fe346429f9870b6f2f656d77213b989f0c941033",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/road-departure.png",
+      "sha256_pixels": "3503f1c9c79434e917600be24ba274cde9e8f6547453c8f56346a816bdea866d",
+      "unique_colors": 3,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/spaceport-road-arrival.png",
+      "sha256_pixels": "83c1f43f17210a0d83e5d9fe2992da04547621b49c442af4bf3149ae7e87ca5a",
+      "unique_colors": 17,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/ship-question.png",
+      "sha256_pixels": "7e4ac3f7da2950ea4607c5bd98d8e737ac4a95fd01eda1b56a74d855cf34f90f",
+      "unique_colors": 15,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/ship-departure.png",
+      "sha256_pixels": "a236d7266119376dce53bc22d1346b2730d25fc55f4122aba158fdbdfa3056da",
+      "unique_colors": 2,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/motavia-arrival.png",
+      "sha256_pixels": "a8dcd9dfe0ef6cdb6c5a7a4f71743d8f8c189a27148471ce09c9d1b2a2dcd658",
+      "unique_colors": 12,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/travel-integration/palma-return.png",
+      "sha256_pixels": "e00c7eae1217f8c77bb119afebb698594321f5c736ef29649ece2958f7da3b8e",
+      "unique_colors": 16,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    }
+  ],
+  "injected_fixtures": [
+    "One Road Pass and100 Meseta for an actual Passport purchase; no map, position, event, party-stat or RNG fixtures"
+  ],
+  "campaign_complete": false,
+  "road_ticks": 779,
+  "ship_full_ticks": 2312,
+  "ship_skip_ticks": 689,
+  "passed": true
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "valid directory []",
+      "passed": true
+    },
+    {
+      "case": "valid directory ['-O']",
+      "passed": true
+    },
+    {
+      "case": "same-length corrupted payload rejected []",
+      "passed": true
+    },
+    {
+      "case": "same-length corrupted payload rejected ['-O']",
+      "passed": true
+    },
+    {
+      "case": "optimized ZIP verification rejects corruption",
+      "passed": true
+    },
+    {
+      "case": "reject unsafe ZIP member ../escape.txt",
+      "passed": true
+    },
+    {
+      "case": "reject unsafe ZIP member /absolute.txt",
+      "passed": true
+    },
+    {
+      "case": "reject unsupported compiler path bad path",
+      "passed": true
+    },
+    {
+      "case": "reject unsupported compiler path bad;path",
+      "passed": true
+    },
+    {
+      "case": "reject unsupported compiler path bad$(path)",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuchar                                                      ******** GX
+    __moduchar                                                      ******** GX
+  8 _characters                                                     00000042 R
+  8 _checksum                                                       00000000 R
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+  8 _save_label_decode                                              00000120 GR
+  8 _save_label_encode                                              000000C5 GR
+  8 _save_name_begin                                                000001C9 GR
+  8 _save_name_character                                            000001B5 GR
+  8 _save_name_input                                                00000271 GR
+  8 _save_name_move                                                 000001EC GR
+  8 _save_slot_offset                                               000000B4 GR
+  8 _valid_name                                                     00000067 R
+    b_checksum                                                  =   0000007A 
+    b_save_label_decode                                         =   0000007A G
+    b_save_label_encode                                         =   0000007A G
+    b_save_name_begin                                           =   0000007A G
+    b_save_name_character                                       =   0000007A G
+    b_save_name_input                                           =   0000007A G
+    b_save_name_move                                            =   0000007A G
+    b_save_slot_offset                                          =   0000007A G
+    b_valid_name                                                =   0000007A 
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_122                                  size      2EC   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

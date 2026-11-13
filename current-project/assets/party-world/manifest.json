@@ -1,0 +1,87 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "records": [
+    {
+      "name": "alis",
+      "address": "28:8000",
+      "frames": 14,
+      "tiles_per_frame": 6,
+      "start": 0
+    },
+    {
+      "name": "noah",
+      "address": "28:8A80",
+      "frames": 13,
+      "tiles_per_frame": 6,
+      "start": 84
+    },
+    {
+      "name": "odin",
+      "address": "28:9440",
+      "frames": 14,
+      "tiles_per_frame": 6,
+      "start": 162
+    },
+    {
+      "name": "myau",
+      "address": "28:9EC0",
+      "frames": 16,
+      "tiles_per_frame": 4,
+      "start": 246
+    }
+  ],
+  "opaque_pixels": 12143,
+  "quantized_pixels": 2976,
+  "palettes_sms": [
+    [
+      0,
+      0,
+      11,
+      42
+    ],
+    [
+      0,
+      0,
+      52,
+      63
+    ],
+    [
+      0,
+      0,
+      43,
+      52
+    ],
+    [
+      0,
+      0,
+      6,
+      42
+    ],
+    [
+      0,
+      0,
+      11,
+      15
+    ],
+    [
+      0,
+      0,
+      52,
+      55
+    ],
+    [
+      0,
+      0,
+      56,
+      63
+    ],
+    [
+      0,
+      0,
+      15,
+      42
+    ]
+  ],
+  "tiles_sha256": "4216392508d9c91d82c51861d58af8e0c072f44710767959819aa884aba83415",
+  "attributes_sha256": "193d44d35712a92831a0777650176deee4b45f634f31c945274ffce3438fd960"
+}

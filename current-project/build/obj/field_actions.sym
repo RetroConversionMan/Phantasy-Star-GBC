@@ -1,0 +1,71 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _alive                                                          0000003E R
+    _dungeon_find_object                                            ******** GX
+    _dungeon_refresh_light                                          ******** GX
+    _dungeon_sample                                                 ******** GX
+    _dungeon_sample_position                                        ******** GX
+  8 _fail                                                           00000028 R
+  8 _field_cast                                                     000001F4 GR
+  8 _field_torch_finish                                             00000ECB GR
+  8 _field_torch_reply                                              00000E75 GR
+  8 _field_use_item                                                 00000791 GR
+  8 _field_use_item_compass_10000_140                               00000E6D R
+  8 _floor_trap                                                     0000006C R
+  8 _key                                                            00000674 R
+  8 _line                                                           00000000 R
+    _memset                                                         ******** GX
+    _rpg_add_item                                                   ******** GX
+    _rpg_battle_prepare_chest                                       ******** GX
+    _rpg_cast_heal                                                  ******** GX
+    _rpg_find_item                                                  ******** GX
+    _rpg_knows_spell                                                ******** GX
+    _rpg_magic_cost                                                 ******** GX
+    _rpg_remove_item                                                ******** GX
+    _rpg_use_item                                                   ******** GX
+  8 _tele                                                           0000013C R
+  8 _transfer                                                       000000B3 R
+  8 _transfer_places_10000_98                                       00000121 R
+    b_dungeon_find_object                                           ******** GX
+    b_dungeon_refresh_light                                         ******** GX
+    b_dungeon_sample                                                ******** GX
+    b_dungeon_sample_position                                       ******** GX
+    b_field_cast                                                =   0000000B G
+    b_field_torch_finish                                        =   0000000B G
+    b_field_torch_reply                                         =   0000000B G
+    b_field_use_item                                            =   0000000B G
+    b_rpg_add_item                                                  ******** GX
+    b_rpg_battle_prepare_chest                                      ******** GX
+    b_rpg_cast_heal                                                 ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_rpg_knows_spell                                               ******** GX
+    b_rpg_magic_cost                                                ******** GX
+    b_rpg_remove_item                                               ******** GX
+    b_rpg_use_item                                                  ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_11                                   size      F34   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

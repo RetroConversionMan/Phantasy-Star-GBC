@@ -1,0 +1,150 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 ___str_0                                                        000004A4 R
+  8 ___str_1                                                        000004AE R
+  8 ___str_2                                                        00000734 R
+  8 _apply_dungeon                                                  000004C3 GR
+  8 _apply_event                                                    00000135 GR
+    _apply_service                                                  ******** GX
+    _audio_command                                                  ******** GX
+    _background_changed                                             ******** GX
+    _battle_from_event                                              ******** GX
+    _battle_object_flag                                             ******** GX
+    _battle_scene_configure                                         ******** GX
+    _battle_view_battle                                             ******** GX
+    _battle_view_chest_begin                                        ******** GX
+    _begin_battle                                                   ******** GX
+    _choice                                                         ******** GX
+    _dark_menu_pending                                              ******** GX
+    _display_off                                                    ******** GX
+    _dplay_enter                                                    ******** GX
+    _dplay_escape                                                   ******** GX
+    _dplay_scene_fall                                               ******** GX
+    _draw_dungeon                                                   ******** GX
+    _draw_dungeon_faded                                             ******** GX
+    _dungeon_keys_delay                                             ******** GX
+  8 _enter_dungeon                                                  0000082B GR
+    _enter_map                                                      ******** GX
+    _event_advance                                                  ******** GX
+    _event_begin                                                    ******** GX
+  8 _event_presentation                                             0000005D R
+  8 _flow_notice                                                    00000000 R
+    _game_dungeon                                                   ******** GX
+    _game_events                                                    ******** GX
+    _game_rpg                                                       ******** GX
+    _game_service                                                   ******** GX
+    _game_transition_close                                          ******** GX
+    _game_transition_fade_in                                        ******** GX
+    _game_transition_fade_out                                       ******** GX
+    _game_transition_interaction_music                              ******** GX
+    _game_transition_map_music                                      ******** GX
+    _game_transition_wait                                           ******** GX
+    _game_vehicle                                                   ******** GX
+    _inventory_screen                                               ******** GX
+    _item_slot                                                      ******** GX
+    _menu_choice                                                    ******** GX
+    _menu_screen                                                    ******** GX
+    _notice                                                         ******** GX
+    _player_x                                                       ******** GX
+    _player_y                                                       ******** GX
+    _replace_source                                                 ******** GX
+    _resume_walk                                                    ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _retained_trap                                                  ******** GX
+    _saved_position_valid                                           ******** GX
+    _scene_actor_active                                             ******** GX
+    _scene_actor_hide                                               ******** GX
+    _scene_context_type                                             ******** GX
+    _scene_enemy_show                                               ******** GX
+    _scene_fade_begin                                               ******** GX
+    _scene_portrait_show                                            ******** GX
+    _scene_show                                                     ******** GX
+    _scene_show_room                                                ******** GX
+    _screen_state                                                   ******** GX
+    _service_active                                                 ******** GX
+    _service_begin                                                  ******** GX
+    _show_dialogue                                                  ******** GX
+  8 _show_interaction_scene                                         00000748 GR
+    _start_dark_falz_reveal                                         ******** GX
+    _start_ending                                                   ******** GX
+    _start_governor_room                                            ******** GX
+    _start_recruitment                                              ******** GX
+    _start_travel                                                   ******** GX
+    _title_choice                                                   ******** GX
+    _travel_menu                                                    ******** GX
+    _vsync                                                          ******** GX
+    _world_action                                                   ******** GX
+    _world_decode_destination                                       ******** GX
+    _world_map_id                                                   ******** GX
+    b_apply_dungeon                                             =   0000000C G
+    b_apply_event                                               =   0000000C G
+    b_audio_command                                                 ******** GX
+    b_battle_scene_configure                                        ******** GX
+    b_battle_view_chest_begin                                       ******** GX
+    b_dplay_enter                                                   ******** GX
+    b_dplay_escape                                                  ******** GX
+    b_dplay_scene_fall                                              ******** GX
+    b_enter_dungeon                                             =   0000000C G
+    b_event_advance                                                 ******** GX
+    b_event_begin                                                   ******** GX
+    b_game_transition_close                                         ******** GX
+    b_game_transition_fade_in                                       ******** GX
+    b_game_transition_fade_out                                      ******** GX
+    b_game_transition_interaction_music                             ******** GX
+    b_game_transition_map_music                                     ******** GX
+    b_game_transition_wait                                          ******** GX
+    b_inventory_screen                                              ******** GX
+    b_menu_screen                                                   ******** GX
+    b_notice                                                        ******** GX
+    b_scene_actor_hide                                              ******** GX
+    b_scene_enemy_show                                              ******** GX
+    b_scene_fade_begin                                              ******** GX
+    b_scene_portrait_show                                           ******** GX
+    b_scene_show                                                    ******** GX
+    b_scene_show_room                                               ******** GX
+    b_service_begin                                                 ******** GX
+    b_show_interaction_scene                                    =   0000000C G
+    b_start_dark_falz_reveal                                        ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_start_ending                                                  ******** GX
+    b_start_governor_room                                           ******** GX
+    b_start_recruitment                                             ******** GX
+    b_start_travel                                                  ******** GX
+    b_travel_menu                                                   ******** GX
+    b_world_decode_destination                                      ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_12                                   size      8AB   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

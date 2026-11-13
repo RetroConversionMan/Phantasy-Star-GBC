@@ -1,0 +1,447 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+build/verification/dungeon-motion/main.c:
+src/dungeon_motion.c:
+src/dungeon_motion_data.c:
+src/dungeon_motion_upload.c:
+src/dungeon.c:
+src/dungeon_data.c:
+src/dungeon_view.c:
+src/dungeon_views.c:
+src/dungeon_upload.c:
+src/dungeon_graphics.c:
+src/bank_io.c:
+src/font.c:
+src/audio.c:
+src/audio_tables.c:
+src/audio_data.c:
+src/audio_low_62.c:
+src/audio_low_63.c:
+src/audio_irq.c:
+src/dungeon_motion_bank_209.c:
+src/dungeon_motion_bank_210.c:
+src/dungeon_motion_bank_211.c:
+src/dungeon_motion_bank_212.c:
+src/dungeon_motion_bank_214.c:
+src/dungeon_motion_bank_215.c:
+src/dungeon_motion_bank_216.c:
+src/dungeon_motion_bank_217.c:
+src/dungeon_motion_bank_218.c:
+src/dungeon_motion_bank_219.c:
+src/dungeon_motion_bank_220.c:
+src/dungeon_motion_bank_221.c:
+src/dungeon_motion_bank_222.c:
+src/dungeon_motion_bank_223.c:
+src/dungeon_motion_bank_224.c:
+src/dungeon_motion_bank_225.c:
+src/dungeon_motion_bank_226.c:
+src/dungeon_motion_bank_227.c:
+src/dungeon_motion_bank_228.c:
+src/dungeon_motion_bank_229.c:
+src/dungeon_motion_bank_230.c:
+src/dungeon_motion_bank_231.c:
+src/dungeon_motion_bank_232.c:
+src/dungeon_motion_bank_233.c:
+src/dungeon_motion_bank_234.c:
+src/dungeon_motion_bank_235.c:
+src/dungeon_motion_bank_236.c:
+src/dungeon_motion_bank_237.c:
+src/dungeon_motion_bank_238.c:
+src/dungeon_motion_bank_239.c:
+src/dungeon_motion_bank_240.c:
+src/dungeon_motion_bank_241.c:
+src/dungeon_motion_bank_242.c:
+src/dungeon_motion_bank_243.c:
+src/dungeon_motion_bank_244.c:
+src/dungeon_motion_bank_245.c:
+src/dungeon_motion_bank_246.c:
+src/dungeon_motion_bank_247.c:
+src/dungeon_motion_bank_248.c:
+src/dungeon_motion_bank_249.c:
+src/dungeon_motion_bank_250.c:
+src/dungeon_motion_bank_251.c:
+src/dungeon_views_00.c:
+src/dungeon_views_01.c:
+src/dungeon_views_02.c:
+src/dungeon_views_03.c:
+src/dungeon_views_04.c:
+src/dungeon_views_05.c:
+src/dungeon_views_06.c:
+src/dungeon_views_07.c:
+src/dungeon_views_08.c:
+src/dungeon_views_09.c:
+src/dungeon_views_10.c:
+src/dungeon_views_11.c:
+src/dungeon_views_12.c:
+src/dungeon_views_13.c:
+src/dungeon_views_14.c:
+src/dungeon_views_15.c:
+src/dungeon_views_16.c:
+src/dungeon_views_17.c:
+src/dungeon_views_18.c:
+src/dungeon_graphics_00.c:
+src/dungeon_graphics_01.c:
+src/dungeon_graphics_02.c:
+src/dungeon_graphics_03.c:
+src/dungeon_graphics_04.c:
+src/dungeon_graphics_05.c:
+src/dungeon_graphics_06.c:
+src/dungeon_graphics_07.c:
+src/dungeon_graphics_08.c:
+src/dungeon_graphics_09.c:
+src/dungeon_graphics_10.c:
+src/dungeon_graphics_11.c:
+src/dungeon_graphics_12.c:
+src/dungeon_graphics_13.c:
+src/dungeon_graphics_14.c:
+src/dungeon_graphics_15.c:
+src/dungeon_graphics_16.c:
+src/dungeon_graphics_17.c:
+src/dungeon_graphics_18.c:
+src/dungeon_graphics_19.c:
+src/dungeon_graphics_20.c:
+src/dungeon_graphics_21.c:
+src/dungeon_graphics_22.c:
+{
+  "passed": true,
+  "quick": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "5deef70c7b4af80a6ccce5b69326183dd03a857a21e6c35811af8ccfd505fa3c",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "sequence_bytes": 90,
+  "banked_door_selectors": 24,
+  "map_attribute_pairs": 2400,
+  "pattern_bytes": 18464,
+  "protected_bytes": 24576,
+  "palette_bytes": 448,
+  "images": 8,
+  "audio_irq_ticks": 880,
+  "stack_guard_bytes": 64,
+  "stack_window": 1024,
+  "static_data_end": "0xd08a",
+  "native_command_frames": {
+    "min": 6,
+    "max": 7,
+    "mean": 6.5
+  },
+  "source_path": {
+    "floor": 19,
+    "start_position": 19,
+    "start_direction": 3,
+    "palette": 4,
+    "logical_frames": 40,
+    "free_running_frames": 210,
+    "audio_irq_ticks": 212,
+    "visible_changes": 40,
+    "unmatched_display_frames": 0,
+    "frames": [
+      {
+        "operation": "forward",
+        "frame": 1,
+        "image": 442,
+        "native_frames": 7,
+        "dirty_patterns": 194
+      },
+      {
+        "operation": "forward",
+        "frame": 2,
+        "image": 674,
+        "native_frames": 6,
+        "dirty_patterns": 126
+      },
+      {
+        "operation": "forward",
+        "frame": 3,
+        "image": 906,
+        "native_frames": 6,
+        "dirty_patterns": 124
+      },
+      {
+        "operation": "forward",
+        "frame": 4,
+        "image": 1138,
+        "native_frames": 6,
+        "dirty_patterns": 112
+      },
+      {
+        "operation": "forward",
+        "frame": 5,
+        "image": 1370,
+        "native_frames": 6,
+        "dirty_patterns": 104
+      },
+      {
+        "operation": "forward",
+        "frame": 0,
+        "image": 114,
+        "native_frames": 6,
+        "dirty_patterns": 113
+      },
+      {
+        "operation": "forward",
+        "frame": 1,
+        "image": 356,
+        "native_frames": 6,
+        "dirty_patterns": 98
+      },
+      {
+        "operation": "forward",
+        "frame": 2,
+        "image": 588,
+        "native_frames": 6,
+        "dirty_patterns": 112
+      },
+      {
+        "operation": "forward",
+        "frame": 3,
+        "image": 820,
+        "native_frames": 6,
+        "dirty_patterns": 72
+      },
+      {
+        "operation": "forward",
+        "frame": 4,
+        "image": 1052,
+        "native_frames": 6,
+        "dirty_patterns": 58
+      },
+      {
+        "operation": "forward",
+        "frame": 5,
+        "image": 1284,
+        "native_frames": 6,
+        "dirty_patterns": 40
+      },
+      {
+        "operation": "forward",
+        "frame": 0,
+        "image": 232,
+        "native_frames": 6,
+        "dirty_patterns": 58
+      },
+      {
+        "operation": "left",
+        "frame": 31,
+        "image": 1423,
+        "native_frames": 6,
+        "dirty_patterns": 138
+      },
+      {
+        "operation": "left",
+        "frame": 32,
+        "image": 1424,
+        "native_frames": 7,
+        "dirty_patterns": 158
+      },
+      {
+        "operation": "left",
+        "frame": 33,
+        "image": 1425,
+        "native_frames": 7,
+        "dirty_patterns": 163
+      },
+      {
+        "operation": "left",
+        "frame": 34,
+        "image": 1426,
+        "native_frames": 6,
+        "dirty_patterns": 162
+      },
+      {
+        "operation": "left",
+        "frame": 35,
+        "image": 1427,
+        "native_frames": 7,
+        "dirty_patterns": 165
+      },
+      {
+        "operation": "left",
+        "frame": 36,
+        "image": 1428,
+        "native_frames": 6,
+        "dirty_patterns": 179
+      },
+      {
+        "operation": "left",
+        "frame": 37,
+        "image": 1429,
+        "native_frames": 7,
+        "dirty_patterns": 183
+      },
+      {
+        "operation": "left",
+        "frame": 0,
+        "image": 231,
+        "native_frames": 7,
+        "dirty_patterns": 175
+      },
+      {
+        "operation": "forward",
+        "frame": 1,
+        "image": 473,
+        "native_frames": 7,
+        "dirty_patterns": 171
+      },
+      {
+        "operation": "forward",
+        "frame": 2,
+        "image": 705,
+        "native_frames": 6,
+        "dirty_patterns": 112
+      },
+      {
+        "operation": "forward",
+        "frame": 3,
+        "image": 937,
+        "native_frames": 6,
+        "dirty_patterns": 90
+      },
+      {
+        "operation": "forward",
+        "frame": 4,
+        "image": 1169,
+        "native_frames": 6,
+        "dirty_patterns": 59
+      },
+      {
+        "operation": "forward",
+        "frame": 5,
+        "image": 1401,
+        "native_frames": 6,
+        "dirty_patterns": 55
+      },
+      {
+        "operation": "forward",
+        "frame": 0,
+        "image": 236,
+        "native_frames": 6,
+        "dirty_patterns": 117
+      },
+      {
+        "operation": "back",
+        "frame": 5,
+        "image": 1401,
+        "native_frames": 5,
+        "dirty_patterns": 0
+      },
+      {
+        "operation": "back",
+        "frame": 4,
+        "image": 1169,
+        "native_frames": 6,
+        "dirty_patterns": 108
+      },
+      {
+        "operation": "back",
+        "frame": 3,
+        "image": 937,
+        "native_frames": 6,
+        "dirty_patterns": 55
+      },
+      {
+        "operation": "back",
+        "frame": 2,
+        "image": 705,
+        "native_frames": 6,
+        "dirty_patterns": 67
+      },
+      {
+        "operation": "back",
+        "frame": 1,
+        "image": 473,
+        "native_frames": 6,
+        "dirty_patterns": 84
+      },
+      {
+        "operation": "back",
+        "frame": 0,
+        "image": 231,
+        "native_frames": 6,
+        "dirty_patterns": 112
+      },
+      {
+        "operation": "right",
+        "frame": 37,
+        "image": 1429,
+        "native_frames": 7,
+        "dirty_patterns": 177
+      },
+      {
+        "operation": "right",
+        "frame": 36,
+        "image": 1428,
+        "native_frames": 7,
+        "dirty_patterns": 174
+      },
+      {
+        "operation": "right",
+        "frame": 35,
+        "image": 1427,
+        "native_frames": 7,
+        "dirty_patterns": 166
+      },
+      {
+        "operation": "right",
+        "frame": 34,
+        "image": 1426,
+        "native_frames": 6,
+        "dirty_patterns": 168
+      },
+      {
+        "operation": "right",
+        "frame": 33,
+        "image": 1425,
+        "native_frames": 6,
+        "dirty_patterns": 154
+      },
+      {
+        "operation": "right",
+        "frame": 32,
+        "image": 1424,
+        "native_frames": 6,
+        "dirty_patterns": 141
+      },
+      {
+        "operation": "right",
+        "frame": 31,
+        "image": 1423,
+        "native_frames": 6,
+        "dirty_patterns": 129
+      },
+      {
+        "operation": "right",
+        "frame": 0,
+        "image": 232,
+        "native_frames": 5,
+        "dirty_patterns": 59
+      }
+    ],
+    "same_image_repeats": [
+      {
+        "native_frames": 6,
+        "dirty_patterns": 57
+      },
+      {
+        "native_frames": 5,
+        "dirty_patterns": 0
+      },
+      {
+        "native_frames": 5,
+        "dirty_patterns": 0
+      }
+    ]
+  },
+  "limits": [
+    "Native renderer and original sequence table only; main-controller sequencing/event callbacks remain separate integration work.",
+    "HBlank DMA keeps the prior frame visible; original SMS60fps timing is not claimed.",
+    "Real audio IRQ and1KiB stack-window guard are exercised; full production battle/audio stack checks require the combined build."
+  ]
+}

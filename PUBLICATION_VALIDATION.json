@@ -1,0 +1,12 @@
+{
+  "rom_bytes": 4194304,
+  "rom_sha256": "0b9cee5c4cf9dca47887436237cf34ba19e76a26c79714bc64430d3f923e1133",
+  "native_c_modules": 262,
+  "native_headers": 80,
+  "native_assembly_modules": 262,
+  "reference_sms_files": 0,
+  "full_native_rebuild": "passed; exact corrected ROM identity",
+  "cutscene_audit": "88 observed dialogue screens passed",
+  "hardware_validation": "Corrected cartridge not yet tested",
+  "historical_campaign_evidence": "Preserved for original pre-fix ROM hashes, not claimed as a full replay of the corrected binary."
+}

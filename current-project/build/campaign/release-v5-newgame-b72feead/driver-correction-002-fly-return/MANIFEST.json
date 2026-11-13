@@ -1,0 +1,8 @@
+{
+  "scope": "Runner-only return after original Fly lacks8MP; no game changes",
+  "latest_failure": "failure-002.state",
+  "frame": 3037490,
+  "ROM_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "driver_sha256": "9eed1aaf35ac7aef952700820e1f2e45d6c938574eb68fb42d2272a87d3d32ff",
+  "plan": "Keep earned Sword and every current resource; board/disembark Hovercraft by original geometry, reach Camineet and rest normally. Resume only exact latest failure state."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "full-replay-passed",
+  "frame": 3581580,
+  "rows": 144464,
+  "checkpoints": 484,
+  "last_checkpoint": {
+    "name": "483-122-dark-falz-approach",
+    "frame": 3558255
+  },
+  "consumed_bytes": 11721245,
+  "consumed_sha256": "6f6683ab690a6f3d0e029587ef8e5ab37b184428b9a1f05fd182f09960c627f1",
+  "caught_up_polls_without_ticks": 0,
+  "held_keys": [],
+  "elapsed_seconds": 1469.1,
+  "campaign_complete": false,
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+}

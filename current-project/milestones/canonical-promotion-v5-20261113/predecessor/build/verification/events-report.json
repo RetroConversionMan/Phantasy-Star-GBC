@@ -1,0 +1,12 @@
+{
+  "checks": 3168,
+  "dialogue_records": 534,
+  "rendered_pages": 1012,
+  "passed": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "emulator_tested": false,
+  "dialogue_font_characters": 39
+}

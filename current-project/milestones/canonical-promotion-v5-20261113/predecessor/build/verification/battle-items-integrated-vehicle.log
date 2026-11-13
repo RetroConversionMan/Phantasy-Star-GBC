@@ -1,0 +1,60 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "95c6d55f7c8c23c14a449c3d90721eff6e7dababc145ed2cdeef9f1b9cda365a",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Two actual combat Landrover selections board/reboard using original geometry, preserve item, and continue combat; neither acts as field-menu dismount",
+    "Victory restores vehicle art/world at the boarding coordinates; power-cycle Continue preserves mode, location and full party/RNG/inventory state"
+  ],
+  "boarding": [
+    {
+      "previous_mode": 0,
+      "from": [
+        1448,
+        864
+      ],
+      "source_expected": [
+        1,
+        1448,
+        864,
+        4
+      ],
+      "dialogues": [
+        "0xb2ac",
+        "0xb305"
+      ]
+    },
+    {
+      "previous_mode": 4,
+      "from": [
+        1448,
+        864
+      ],
+      "source_expected": [
+        1,
+        1448,
+        864,
+        4
+      ],
+      "dialogues": [
+        "0xb2ac",
+        "0xb305"
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "Alis level30 with200HP/maxHP/defense and40attack plus one Landrover; map, position, flags, RNG, encounter and outcomes are never injected"
+  ],
+  "campaign_complete": false,
+  "passed": true
+}

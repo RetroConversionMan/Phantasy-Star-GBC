@@ -1,0 +1,338 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 ___str_23                                                       000001D2 R
+  8 ___str_24                                                       00000286 R
+  8 ___str_25                                                       00000297 R
+  8 ___str_26                                                       000002DB R
+  8 ___str_27                                                       000003CA R
+  8 ___str_28                                                       000003CD R
+  8 ___str_29                                                       000003D0 R
+  8 ___str_30                                                       000003D7 R
+  8 ___str_31                                                       000003DD R
+  8 ___str_32                                                       000003E2 R
+  8 ___str_33                                                       000003E7 R
+  8 ___str_34                                                       000003EB R
+  8 ___str_35                                                       000003ED R
+  8 ___str_36                                                       000004BE R
+  8 ___str_37                                                       000004C4 R
+  8 ___str_38                                                       000004C7 R
+  8 ___str_39                                                       000004C9 R
+  8 ___str_40                                                       000005B9 R
+  8 ___str_41                                                       000005C7 R
+  8 ___str_42                                                       000005CD R
+  8 ___str_43                                                       000005D3 R
+  8 ___str_44                                                       000005D5 R
+  8 ___str_45                                                       000006C4 R
+  8 ___str_46                                                       000006D5 R
+  8 ___str_47                                                       000006D7 R
+  8 ___str_48                                                       000006D9 R
+  8 ___str_49                                                       00000728 R
+  8 ___str_50                                                       0000072C R
+  8 ___str_51                                                       0000072F R
+  8 ___str_52                                                       00000731 R
+  8 ___str_53                                                       000007E4 R
+  8 ___str_54                                                       000007F7 R
+  8 ___str_55                                                       0000125F R
+  8 ___str_56                                                       00001264 R
+  8 ___str_57                                                       0000126C R
+  8 ___str_58                                                       00001271 R
+  8 ___str_59                                                       00001278 R
+  8 ___str_60                                                       0000127B R
+  8 ___str_61                                                       00001466 R
+  8 ___str_62                                                       0000146D R
+  8 ___str_63                                                       00001472 R
+  8 ___str_64                                                       0000147A R
+  8 ___str_65                                                       000016B4 R
+  8 ___str_66                                                       000016BB R
+  8 ___str_67                                                       000016C0 R
+  8 ___str_68                                                       000016C8 R
+  8 ___str_69                                                       00001DEA R
+  8 ___str_70                                                       00001DFC R
+  8 ___str_71                                                       00002F36 R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 ___str_72                                                       00002F3F R
+  8 ___str_73                                                       00002F51 R
+  8 ___str_74                                                       00002F52 R
+  8 ___str_75                                                       00002F54 R
+    __divuchar                                                      ******** GX
+    __moduint                                                       ******** GX
+  8 __str_0                                                         000000E8 R
+  8 __str_1                                                         000000ED R
+  8 __str_10                                                        00000116 R
+  8 __str_11                                                        0000011B R
+  8 __str_12                                                        00000120 R
+  8 __str_13                                                        00000125 R
+  8 __str_14                                                        00000129 R
+  8 __str_15                                                        0000012E R
+  8 __str_16                                                        00000133 R
+  8 __str_17                                                        00000138 R
+  8 __str_18                                                        0000013D R
+  8 __str_19                                                        00000142 R
+  8 __str_2                                                         000000F2 R
+  8 __str_20                                                        00000147 R
+  8 __str_21                                                        0000014C R
+  8 __str_22                                                        00000151 R
+  8 __str_3                                                         000000F7 R
+  8 __str_4                                                         000000FC R
+  8 __str_5                                                         000000FD R
+  8 __str_6                                                         00000102 R
+  8 __str_7                                                         00000107 R
+  8 __str_8                                                         0000010C R
+  8 __str_9                                                         00000111 R
+  8 _action_feedback                                                00000E69 R
+  2 _actions                                                        000000E5 R
+  2 _after_message                                                  0000014A R
+    _audio_battle_track                                             ******** GX
+    _audio_clock                                                    ******** GX
+    _audio_command                                                  ******** GX
+  2 _audio_delay_frames                                             00000166 R
+  2 _audio_delay_start                                              00000165 R
+    _audio_enemy_effect                                             ******** GX
+    _battle_motion_begin                                            ******** GX
+    _battle_motion_begin_magic                                      ******** GX
+    _battle_motion_tick                                             ******** GX
+    _battle_scene_animation_frame                                   ******** GX
+    _battle_scene_begin                                             ******** GX
+    _battle_scene_boss_frame                                        ******** GX
+    _battle_scene_boss_patch                                        ******** GX
+    _battle_scene_clear                                             ******** GX
+    _battle_scene_clip                                              ******** GX
+    _battle_scene_enemy                                             ******** GX
+    _battle_scene_flash_enemy                                       ******** GX
+    _battle_scene_flash_party                                       ******** GX
+    _battle_scene_hide                                              ******** GX
+    _battle_scene_magic_frame                                       ******** GX
+    _battle_scene_type                                              ******** GX
+    _battle_scene_weapon_clear                                      ******** GX
+    _battle_scene_weapon_frame                                      ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  2 _battle_view_actor                                              000000D1 GR
+  2 _battle_view_battle                                             00000000 GR
+  8 _battle_view_begin                                              00001DFD GR
+  8 _battle_view_chest_abandon                                      00001FC9 GR
+  8 _battle_view_chest_begin                                        00001EA4 GR
+  8 _battle_view_chest_leave                                        00001F9E GR
+  8 _battle_view_chest_open                                         00001F62 GR
+  2 _battle_view_chest_pending                                      000000D8 GR
+  8 _battle_view_chest_prompt                                       00001F39 GR
+  2 _battle_view_choice                                             000000D2 GR
+  2 _battle_view_dialogue_id                                        000000D6 GR
+  2 _battle_view_field_menu_pending                                 000000D9 GR
+  2 _battle_view_hit_cursor                                         000000D4 GR
+  2 _battle_view_menu_allowed                                       000000DA GR
+  2 _battle_view_result                                             000000D3 GR
+  2 _battle_view_state                                              000000D0 GR
+  2 _battle_view_text_revealing                                     000000D5 GR
+  8 _battle_view_tick                                               00002003 GR
+    _battle_weapon_begin                                            ******** GX
+    _battle_weapon_sound                                            ******** GX
+    _battle_weapon_tick                                             ******** GX
+  2 _boss_motion                                                    0000017B R
+    _boss_motion_begin                                              ******** GX
+    _boss_motion_tick                                               ******** GX
+  8 _character_for_message                                          000001A1 R
+  2 _chest_clock                                                    000000E2 R
+  2 _chest_motion                                                   000000DB R
+    _chest_motion_begin                                             ******** GX
+    _chest_motion_tick                                              ******** GX
+  8 _chest_pose                                                     0000007E R
+    _chest_show                                                     ******** GX
+  8 _close_delay                                                    000009C9 R
+  8 _command_feedback                                               00000A16 R
+  8 _command_screen                                                 000002DD R
+  8 _command_screen_x_10000_336                                     000003C0 R
+  8 _command_screen_y_10000_336                                     000003C5 R
+  8 _core_item_feedback                                             00000CF2 R
+  2 _deaths_pending                                                 0000015F R
+    _dialogue_item_name                                             ******** GX
+    _dialogue_open                                                  ******** GX
+    _dialogue_stream_begin                                          ******** GX
+    _dialogue_stream_next                                           ******** GX
+    _dialogue_wait_frames                                           ******** GX
+    _dialogue_wait_tick                                             ******** GX
+    _display_off                                                    ******** GX
+  2 _dragon_fall                                                    00000160 R
+  8 _eligible                                                       00000155 R
+  2 _enemy_effect                                                   00000174 R
+    _enemy_magic_begin                                              ******** GX
+    _enemy_magic_sound                                              ******** GX
+    _enemy_magic_tick                                               ******** GX
+  2 _enemy_motion                                                   00000167 R
+  2 _enemy_name                                                     0000018A R
+  8 _execute_step                                                   000016CD R
+  2 _feedback_animated                                              00000188 R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _field_action                                                   ******** GX
+    _game_field_battle_item                                         ******** GX
+    _gold_scene_blue                                                ******** GX
+  2 _is_literal                                                     0000014B R
+  2 _item_after                                                     00000153 R
+  2 _item_close_frames                                              00000154 R
+  2 _item_line                                                      00000152 R
+  2 _item_name                                                      00000193 R
+  8 _item_next_line                                                 00000973 R
+  8 _item_screen                                                    000004D9 R
+  2 _level_cursor                                                   00000155 R
+  8 _literal                                                        0000029D R
+  8 _magic_hit_begin                                                00001284 R
+  2 _magic_phase                                                    00000185 R
+    _memset                                                         ******** GX
+  2 _message                                                        000000F1 R
+  2 _message_clock                                                  00000151 R
+  8 _message_page                                                   000001B6 R
+  2 _message_wait                                                   0000014F R
+  2 _motion_clock                                                   00000186 R
+  2 _motion_hit_hold                                                00000189 R
+  2 _motion_last_frame                                              00000187 R
+  8 _names                                                          00000094 R
+  8 _new_round                                                      0000082B R
+  8 _next_character                                                 00000804 R
+  2 _old_battle_magic                                               00000156 R
+  2 _old_map_magic                                                  0000015A R
+  8 _one_line                                                       000009DC R
+  2 _party                                                          000000E3 R
+  8 _present_action                                                 0000147D R
+  2 _previous_alive                                                 00000161 R
+  8 _prompt                                                         000006E9 R
+  2 _prompt_kind                                                    0000014C R
+  2 _replacement_slot                                               0000015E R
+  8 _result_screen                                                  00000862 R
+  8 _resume                                                         000017CE R
+    _rpg_battle_begin                                               ******** GX
+    _rpg_battle_decline_chest                                       ******** GX
+    _rpg_battle_open_chest                                          ******** GX
+    _rpg_battle_prepare                                             ******** GX
+    _rpg_battle_prepare_chest                                       ******** GX
+    _rpg_battle_replace_reward                                      ******** GX
+    _rpg_battle_step                                                ******** GX
+    _rpg_claim_rewards                                              ******** GX
+    _rpg_enemy_name                                                 ******** GX
+    _rpg_item_discardable                                           ******** GX
+    _rpg_magic_cost                                                 ******** GX
+    _rpg_spell_option                                               ******** GX
+  8 _say                                                            000001D4 R
+    _scene_actor_active                                             ******** GX
+  2 _selected_slot                                                  0000014D R
+  2 _selection_phase                                                0000014E R
+  8 _spell_screen                                                   000003FD R
+  8 _spells                                                         0000009C R
+  8 _start_resolution                                               0000073A R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _strcpy                                                         ******** GX
+  8 _support_feedback                                               00000B0D R
+  8 _talk_texts                                                     000000C2 R
+  8 _target_screen                                                  000005E5 R
+    _ui_number                                                      ******** GX
+    _ui_panel                                                       ******** GX
+    _ui_text                                                        ******** GX
+  8 _view_panel                                                     00000044 R
+  8 _view_text                                                      00000000 R
+  2 _weapon_motion                                                  0000016D R
+    b_audio_battle_track                                            ******** GX
+    b_audio_command                                                 ******** GX
+    b_audio_enemy_effect                                            ******** GX
+    b_battle_motion_begin                                           ******** GX
+    b_battle_motion_begin_magic                                     ******** GX
+    b_battle_motion_tick                                            ******** GX
+    b_battle_scene_animation_frame                                  ******** GX
+    b_battle_scene_begin                                            ******** GX
+    b_battle_scene_boss_frame                                       ******** GX
+    b_battle_scene_boss_patch                                       ******** GX
+    b_battle_scene_clear                                            ******** GX
+    b_battle_scene_clip                                             ******** GX
+    b_battle_scene_flash_enemy                                      ******** GX
+    b_battle_scene_flash_party                                      ******** GX
+    b_battle_scene_hide                                             ******** GX
+    b_battle_scene_magic_frame                                      ******** GX
+    b_battle_scene_weapon_clear                                     ******** GX
+    b_battle_scene_weapon_frame                                     ******** GX
+    b_battle_view_begin                                         =   0000001E G
+    b_battle_view_chest_abandon                                 =   0000001E G
+    b_battle_view_chest_begin                                   =   0000001E G
+    b_battle_view_chest_leave                                   =   0000001E G
+    b_battle_view_chest_open                                    =   0000001E G
+    b_battle_view_chest_prompt                                  =   0000001E G
+    b_battle_view_tick                                          =   0000001E G
+    b_battle_weapon_begin                                           ******** GX
+    b_battle_weapon_sound                                           ******** GX
+    b_battle_weapon_tick                                            ******** GX
+    b_boss_motion_begin                                             ******** GX
+    b_boss_motion_tick                                              ******** GX
+    b_chest_motion_begin                                            ******** GX
+    b_chest_motion_tick                                             ******** GX
+    b_chest_show                                                    ******** GX
+    b_dialogue_item_name                                            ******** GX
+    b_dialogue_open                                                 ******** GX
+    b_dialogue_stream_begin                                         ******** GX
+    b_dialogue_stream_next                                          ******** GX
+    b_dialogue_wait_frames                                          ******** GX
+    b_dialogue_wait_tick                                            ******** GX
+    b_enemy_magic_begin                                             ******** GX
+    b_enemy_magic_sound                                             ******** GX
+    b_enemy_magic_tick                                              ******** GX
+    b_game_field_battle_item                                        ******** GX
+    b_gold_scene_blue                                               ******** GX
+    b_rpg_battle_begin                                              ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_rpg_battle_decline_chest                                      ******** GX
+    b_rpg_battle_open_chest                                         ******** GX
+    b_rpg_battle_prepare                                            ******** GX
+    b_rpg_battle_prepare_chest                                      ******** GX
+    b_rpg_battle_replace_reward                                     ******** GX
+    b_rpg_battle_step                                               ******** GX
+    b_rpg_claim_rewards                                             ******** GX
+    b_rpg_enemy_name                                                ******** GX
+    b_rpg_item_discardable                                          ******** GX
+    b_rpg_magic_cost                                                ******** GX
+    b_rpg_spell_option                                              ******** GX
+    b_ui_number                                                     ******** GX
+    b_ui_panel                                                      ******** GX
+    b_ui_text                                                       ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size      19C   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_30                                   size     2F56   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

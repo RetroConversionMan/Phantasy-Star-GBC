@@ -1,0 +1,84 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _HDMA1_REG                                                      ******** GX
+    _HDMA2_REG                                                      ******** GX
+    _HDMA3_REG                                                      ******** GX
+    _HDMA4_REG                                                      ******** GX
+    _HDMA5_REG                                                      ******** GX
+    _LCDC_REG                                                       ******** GX
+    _LY_REG                                                         ******** GX
+    _SCX_REG                                                        ******** GX
+    _SCY_REG                                                        ******** GX
+    _VBK_REG                                                        ******** GX
+    __current_bank                                                  ******** GX
+    _bank_copy                                                      ******** GX
+  2 _block_sources                                                  0000036E R
+  2 _buffer_patterns                                                00000008 R
+  5 _convert_map                                                    00000121 R
+    _display_off                                                    ******** GX
+  8 _dma                                                            00000000 R
+  2 _dungeon_motion_active                                          00000000 GR
+  2 _dungeon_motion_buffer                                          00000001 GR
+  5 _dungeon_motion_expand_map                                      000000D5 GR
+  5 _dungeon_motion_external_view                                   00000005 GR
+  2 _dungeon_motion_fault                                           00000002 GR
+  5 _dungeon_motion_home                                            00000380 GR
+  5 _dungeon_motion_invalidate                                      00000000 GR
+  2 _dungeon_motion_palette_muted                                   00000003 GR
+  5 _dungeon_motion_prepare_variant                                 00000164 GR
+  5 _dungeon_motion_upload_begin                                    00000020 GR
+  5 _dungeon_motion_upload_end                                      000002CB GR
+  2 _dungeon_motion_uploaded                                        00000004 GR
+    _dungeon_render_map                                             ******** GX
+    _dungeon_render_palette                                         ******** GX
+    _dungeon_render_scratch                                         ******** GX
+    _dungeon_uploaded_patterns                                      ******** GX
+  5 _expand_blocks                                                  00000062 R
+  2 _map_work                                                       0000036C R
+  8 _maps                                                           00000054 R
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+    _motion_blocks                                                  ******** GX
+  2 _pack_col                                                       00000375 R
+  5 _pack_map                                                       0000026A R
+  2 _pack_row                                                       00000374 R
+  5 _pattern_banks                                                  00000112 R
+    _rROMB0                                                         ******** GX
+    _rROMB1                                                         ******** GX
+    _set_bkg_palette                                                ******** GX
+  2 _target_map                                                     00000007 R
+  2 _target_pattern                                                 00000006 R
+  5 _upload_patterns                                                000001A3 R
+  2 _upload_slot                                                    00000378 R
+  2 _variant_base                                                   00000376 R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size      379   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size      398   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_0                                    size       87   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

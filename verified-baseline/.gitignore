@@ -1,0 +1,10 @@
+.tools/
+dist/
+upstream/
+build/*
+!build/.gitkeep
+__pycache__/
+*.pyc
+*.sav
+*.ram
+.DS_Store

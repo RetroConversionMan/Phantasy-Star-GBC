@@ -1,0 +1,14 @@
+{
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "initial_sram": null,
+  "initial_emulator_state": null,
+  "start": "Native New Game by independently replaying verified controller prefix from clean power-on",
+  "controller_only": true,
+  "phase_count": 51,
+  "source_prefix": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/campaign/release-v4-newgame-55b71a17",
+  "source_report_sha256": "1edcf6216fbe1d7fe98b223981c42ba94082b7c306b13115fd35b94aff17bce9",
+  "source_controller_sha256": "de4101e993d280b0b6173f86f2e146f7ced363ac6cc73bd414f293e8827c7d0b",
+  "all_checkpoints_matched": true,
+  "old_resume_log_annotations": "Metadata only: no old save state is loaded during replay",
+  "new_rom_generated_resume_state": "351-torch-continue-aukba-rested.state"
+}

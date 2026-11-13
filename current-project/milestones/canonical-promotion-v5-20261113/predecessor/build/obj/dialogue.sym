@@ -1,0 +1,64 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___memcpy                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 ___str_0                                                        0000019B R
+    __divuint                                                       ******** GX
+    __moduint                                                       ******** GX
+    _bank_read8                                                     ******** GX
+  8 _clear_lines                                                    00000000 R
+  8 _dialogue_item_name                                             000001A0 GR
+    _dialogue_items                                                 ******** GX
+  8 _dialogue_next_page                                             00000260 GR
+  8 _dialogue_next_story_page                                       00000614 GR
+  8 _dialogue_open                                                  000000EA GR
+    _dialogue_ref_count                                             ******** GX
+    _dialogue_refs                                                  ******** GX
+  8 _dialogue_stream_begin                                          000008DE GR
+  8 _dialogue_stream_next                                           00000932 GR
+  8 _dialogue_wait_frames                                           00000CFA GR
+  8 _dialogue_wait_tick                                             00000D39 GR
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+  8 _newline                                                        0000003F R
+  8 _number_token                                                   000001CB R
+  8 _put_char                                                       00000098 R
+  8 _story_char                                                     000004EF R
+  8 _story_clear                                                    000004B4 R
+  8 _stream_newline                                                 0000091A R
+    b_dialogue_item_name                                        =   00000008 G
+    b_dialogue_next_page                                        =   00000008 G
+    b_dialogue_next_story_page                                  =   00000008 G
+    b_dialogue_open                                             =   00000008 G
+    b_dialogue_stream_begin                                     =   00000008 G
+    b_dialogue_stream_next                                      =   00000008 G
+    b_dialogue_wait_frames                                      =   00000008 G
+    b_dialogue_wait_tick                                        =   00000008 G
+    b_story_char                                                =   00000008 
+    b_story_clear                                               =   00000008 
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_8                                    size      D89   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

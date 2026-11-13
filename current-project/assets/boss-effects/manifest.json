@@ -1,0 +1,575 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "banks": [
+    254,
+    255
+  ],
+  "data_bytes": 11694,
+  "pattern_pairs": 215,
+  "assets": 39,
+  "poses": [
+    {
+      "enemy": 72,
+      "frame": 16,
+      "y": 255,
+      "asset": 0,
+      "name": "72-016-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 17,
+      "y": 255,
+      "asset": 1,
+      "name": "72-017-255",
+      "sprites": 5,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 18,
+      "y": 255,
+      "asset": 2,
+      "name": "72-018-255",
+      "sprites": 8,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 70,
+      "y": 255,
+      "asset": 3,
+      "name": "72-070-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 142,
+      "y": 255,
+      "asset": 4,
+      "name": "72-142-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 179,
+      "y": 255,
+      "asset": 5,
+      "name": "72-179-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 236,
+      "y": 255,
+      "asset": 6,
+      "name": "72-236-255",
+      "sprites": 4,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 237,
+      "y": 255,
+      "asset": 7,
+      "name": "72-237-255",
+      "sprites": 5,
+      "scanline": 2,
+      "quantized_pixels": 33,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 238,
+      "y": 255,
+      "asset": 8,
+      "name": "72-238-255",
+      "sprites": 5,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 239,
+      "y": 255,
+      "asset": 9,
+      "name": "72-239-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 4,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 240,
+      "y": 255,
+      "asset": 10,
+      "name": "72-240-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 6,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 241,
+      "y": 255,
+      "asset": 11,
+      "name": "72-241-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 242,
+      "y": 255,
+      "asset": 12,
+      "name": "72-242-255",
+      "sprites": 4,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 243,
+      "y": 255,
+      "asset": 13,
+      "name": "72-243-255",
+      "sprites": 11,
+      "scanline": 5,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 244,
+      "y": 255,
+      "asset": 14,
+      "name": "72-244-255",
+      "sprites": 1,
+      "scanline": 1,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 245,
+      "y": 255,
+      "asset": 15,
+      "name": "72-245-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 246,
+      "y": 255,
+      "asset": 16,
+      "name": "72-246-255",
+      "sprites": 3,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 247,
+      "y": 255,
+      "asset": 17,
+      "name": "72-247-255",
+      "sprites": 4,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 248,
+      "y": 255,
+      "asset": 18,
+      "name": "72-248-255",
+      "sprites": 6,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 249,
+      "y": 255,
+      "asset": 19,
+      "name": "72-249-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 250,
+      "y": 255,
+      "asset": 20,
+      "name": "72-250-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 251,
+      "y": 255,
+      "asset": 21,
+      "name": "72-251-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 252,
+      "y": 255,
+      "asset": 22,
+      "name": "72-252-255",
+      "sprites": 4,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 253,
+      "y": 255,
+      "asset": 23,
+      "name": "72-253-255",
+      "sprites": 6,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 254,
+      "y": 255,
+      "asset": 24,
+      "name": "72-254-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 72,
+      "frame": 255,
+      "y": 255,
+      "asset": 25,
+      "name": "72-255-255",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 19,
+      "y": 79,
+      "asset": 26,
+      "name": "73-019-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 20,
+      "y": 79,
+      "asset": 27,
+      "name": "73-020-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 61,
+      "y": 79,
+      "asset": 28,
+      "name": "73-061-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 62,
+      "y": 79,
+      "asset": 29,
+      "name": "73-062-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 118,
+      "y": 79,
+      "asset": 30,
+      "name": "73-118-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 119,
+      "y": 79,
+      "asset": 31,
+      "name": "73-119-079",
+      "sprites": 2,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 136,
+      "y": 79,
+      "asset": 32,
+      "name": "73-136-079",
+      "sprites": 4,
+      "scanline": 2,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 137,
+      "y": 79,
+      "asset": 33,
+      "name": "73-137-079",
+      "sprites": 23,
+      "scanline": 6,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 138,
+      "y": 71,
+      "asset": 34,
+      "name": "73-138-071",
+      "sprites": 25,
+      "scanline": 10,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 139,
+      "y": 71,
+      "asset": 35,
+      "name": "73-139-071",
+      "sprites": 15,
+      "scanline": 5,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 140,
+      "y": 71,
+      "asset": 36,
+      "name": "73-140-071",
+      "sprites": 23,
+      "scanline": 5,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 204,
+      "y": 71,
+      "asset": 37,
+      "name": "73-204-071",
+      "sprites": 22,
+      "scanline": 8,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    },
+    {
+      "enemy": 73,
+      "frame": 205,
+      "y": 71,
+      "asset": 38,
+      "name": "73-205-071",
+      "sprites": 6,
+      "scanline": 3,
+      "quantized_pixels": 0,
+      "source_composition_exact": true
+    }
+  ],
+  "motions": [
+    {
+      "enemy": 72,
+      "speed": 3,
+      "sequence": [
+        0,
+        236,
+        237,
+        238,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        0,
+        246,
+        0
+      ]
+    },
+    {
+      "enemy": 72,
+      "speed": 3,
+      "sequence": [
+        0,
+        239,
+        240,
+        241,
+        247,
+        248,
+        249,
+        250,
+        0,
+        251,
+        0
+      ]
+    },
+    {
+      "enemy": 72,
+      "speed": 3,
+      "sequence": [
+        0,
+        239,
+        240,
+        241,
+        252,
+        253,
+        254,
+        255,
+        0,
+        16,
+        0
+      ]
+    },
+    {
+      "enemy": 72,
+      "speed": 3,
+      "sequence": [
+        0,
+        239,
+        240,
+        241,
+        17,
+        18,
+        179,
+        70,
+        0,
+        142,
+        0
+      ]
+    },
+    {
+      "enemy": 73,
+      "speed": 5,
+      "sequence": [
+        0,
+        19,
+        19,
+        20,
+        61,
+        62,
+        118,
+        61,
+        62,
+        118,
+        61,
+        62,
+        118,
+        61,
+        119,
+        119,
+        136,
+        137,
+        138,
+        139,
+        140,
+        204,
+        0,
+        205,
+        0
+      ]
+    }
+  ],
+  "patch_cells": [
+    109,
+    110,
+    129,
+    130,
+    149,
+    150,
+    169,
+    170,
+    189,
+    190
+  ],
+  "patch_quantized_pixels": [
+    159,
+    129,
+    155
+  ],
+  "patch_bank": 24,
+  "patch_pointers": [
+    48928,
+    48976,
+    49024
+  ],
+  "palette_equals_original_scene": true,
+  "limits": [
+    "Original256x192 source composition before5/8resize; GBC palettes adapt measured RGB",
+    "No battle choreography/native renderer claim from extraction alone"
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    "Canceling Heal target selection spends no MP and heals nobody",
+    "Heal selected through field menu restores20 HP capped at maximum and spends2 MP",
+    "Canceling Rise after selecting Noah spends12 MP as in source",
+    "Landrover entry uses original geometry, retains item, and survives save/power-cycle with party state intact",
+    "Selecting the active vehicle item dismounts directly and restores the living Alis/Noah party without leaving stale vehicle sprites"
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/field-integration/heal-result.png",
+      "sha256_pixels": "edbe6b3885ef7c8812ed18180f51dc00603e4f55ee690024b667d4a113f44b15",
+      "unique_colors": 2,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/field-integration/landrover.png",
+      "sha256_pixels": "79faa7c6161c1d86254104e4a89aca58088e51141c4c5c74ec3c78d9945b0b98",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x43b6"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/field-integration/landrover-continued.png",
+      "sha256_pixels": "b3199d39ba04b62052bab63b9cb55bf21f801948c23270217b2ae65c8e8dcc2d",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x43b6"
+    },
+    {
+      "file": "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/field-integration/dismounted.png",
+      "sha256_pixels": "7ec27dee0cdbc13dfe759298837284bd045fbe2b8680d74c04be84e13ac5379c",
+      "unique_colors": 15,
+      "lcd_enabled": true,
+      "pc": "0x42f1"
+    }
+  ],
+  "injected_fixtures": [
+    "Alis HP1, MP/maxMP20 and2 mapspells; Noah joined with MP/maxMP60, HP/maxHP100 and5 mapspells to test menu costs without campaign grinding",
+    "Landrover inventory item for vehicle UI; map location, flags and RNG unchanged"
+  ],
+  "campaign_complete": false,
+  "inputs": [
+    {
+      "key": "start",
+      "state": 0,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 40,
+      "after": 23,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 0,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "start",
+      "state": 1,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1069,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 0,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1074,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 1,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1152,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1230,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 3,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1308,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 4,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1386,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 5,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1464,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 6,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1542,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1620,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1697,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1775,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "b",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1853,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 1931,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2009,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2087,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2165,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2244,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2321,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2398,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2476,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2554,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2632,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2709,
+      "after": 19,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 19,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2787,
+      "after": 11,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "b",
+      "state": 11,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2864,
+      "after": 2,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "b",
+      "state": 2,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 2942,
+      "after": 1,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 7,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "start",
+      "state": 1,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3328,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 0,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3333,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 1,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3411,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3489,
+      "after": 9,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 9,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3567,
+      "after": 10,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 10,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3646,
+      "after": 4,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 1,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 4,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3725,
+      "after": 1,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "select",
+      "state": 1,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 3733,
+      "after": 8,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "start",
+      "state": 0,
+      "position": [
+        1688,
+        304
+      ],
+      "frame": 38,
+      "after": 25,
+      "after_position": [
+        1688,
+        304
+      ],
+      "menu_choice": 0,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "start",
+      "state": 1,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 154,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 0,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 159,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 1,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "down",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 237,
+      "after": 2,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 2,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 315,
+      "after": 9,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    },
+    {
+      "key": "a",
+      "state": 9,
+      "position": [
+        1368,
+        736
+      ],
+      "frame": 393,
+      "after": 1,
+      "after_position": [
+        1368,
+        736
+      ],
+      "menu_choice": 2,
+      "field_active": 0,
+      "last_keys": 0
+    }
+  ],
+  "passed": true
+}

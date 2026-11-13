@@ -1,0 +1,124 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _NR10_REG                                                       ******** GX
+    _NR11_REG                                                       ******** GX
+    _NR12_REG                                                       ******** GX
+    _NR13_REG                                                       ******** GX
+    _NR14_REG                                                       ******** GX
+    _NR21_REG                                                       ******** GX
+    _NR22_REG                                                       ******** GX
+    _NR23_REG                                                       ******** GX
+    _NR24_REG                                                       ******** GX
+    _NR30_REG                                                       ******** GX
+    _NR32_REG                                                       ******** GX
+    _NR33_REG                                                       ******** GX
+    _NR34_REG                                                       ******** GX
+    _NR42_REG                                                       ******** GX
+    _NR43_REG                                                       ******** GX
+    _NR44_REG                                                       ******** GX
+    _NR50_REG                                                       ******** GX
+    _NR51_REG                                                       ******** GX
+    _NR52_REG                                                       ******** GX
+    __AUD3WAVERAM                                                   ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __muluchar                                                      ******** GX
+  8 _acknowledge                                                    000001B5 R
+  8 _apu                                                            000011A5 R
+    _audio_apu_fixed_noise                                          ******** GX
+    _audio_apu_noise                                                ******** GX
+    _audio_apu_period                                               ******** GX
+  8 _audio_battle_track                                             000014A2 GR
+  2 _audio_clock                                                    0000020F GR
+  8 _audio_command                                                  0000145E GR
+    _audio_data                                                     ******** GX
+  8 _audio_enemy_effect                                             000014B6 GR
+    _audio_enemy_sfx                                                ******** GX
+  2 _audio_fault                                                    0000020D GR
+  2 _audio_frames                                                   00000206 GR
+  8 _audio_gb_noise                                                 0000116F GR
+  8 _audio_gb_period                                                00001131 GR
+  8 _audio_gb_volume                                                00001151 GR
+  8 _audio_gb_volume_levels_10000_378                               0000115F R
+  8 _audio_init                                                     000013D5 GR
+    _audio_low0                                                     ******** GX
+    _audio_low1                                                     ******** GX
+  8 _audio_map_track                                                00001476 GR
+  8 _audio_map_track_tracks_10000_405                               0000148A R
+  2 _audio_music                                                    0000020E GR
+  2 _audio_noise                                                    0000020C GR
+  2 _audio_ram                                                      00000000 GR
+  8 _audio_stop                                                     00001466 GR
+  8 _audio_tick                                                     000014CD GR
+  2 _audio_tone                                                     00000200 GR
+  2 _audio_volume                                                   00000208 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _bank_read8                                                     ******** GX
+  8 _clear_control                                                  0000013A R
+  8 _command                                                        00000219 R
+  8 _cw                                                             0000005D R
+  8 _drum                                                           00000A4A R
+  8 _envelope                                                       00000D8C R
+  8 _fade                                                           000005C0 R
+  8 _fade_begin                                                     000001FC R
+  8 _finish_channel                                                 00000700 R
+  2 _latch                                                          00000210 R
+    _memset                                                         ******** GX
+  8 _modulation                                                     00000EA1 R
+  8 _new_duration                                                   000009C1 R
+  8 _next_note                                                      00000AA4 R
+  2 _noise_written                                                  00000211 R
+  2 _previous_noise                                                 00000216 R
+  2 _previous_volume                                                00000212 R
+  8 _priority                                                       000006D6 R
+  8 _psg                                                            0000008B R
+  8 _rd                                                             00000000 R
+  8 _reset_driver                                                   0000014C R
+  8 _resume                                                         000001BB R
+  8 _rw                                                             0000004C R
+  8 _score_command                                                  0000076A R
+  8 _silence                                                        00000120 R
+  8 _sw                                                             0000006A R
+  8 _tempo                                                          0000056D R
+  8 _tone                                                           0000019F R
+  8 _update_channel                                                 00000F8A R
+  8 _volume                                                         0000018F R
+    b_audio_battle_track                                        =   0000000F G
+    b_audio_command                                             =   0000000F G
+    b_audio_enemy_effect                                        =   0000000F G
+    b_audio_gb_noise                                            =   0000000F G
+    b_audio_gb_period                                           =   0000000F G
+    b_audio_gb_volume                                           =   0000000F G
+    b_audio_init                                                =   0000000F G
+    b_audio_map_track                                           =   0000000F G
+    b_audio_stop                                                =   0000000F G
+    b_audio_tick                                                =   0000000F G
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size      217   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_15                                   size     1539   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

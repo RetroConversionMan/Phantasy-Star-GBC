@@ -1,0 +1,44 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/source-snapshots/world-priority-files/tools/verify_world_priority.py:169: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  assert len(set(e.screen.image.convert('RGB').crop((48,48,56,56)).getdata()))==1
+{
+  "passed": true,
+  "source_rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "header": {
+    "title": "PSPRIORITY",
+    "bytes": 65536,
+    "sha256": "8db0583cdda0a99d16c7df497f07d9ee373876d4c9fbcd94a984d9f3e866f405",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "groups": 11,
+  "priority_keys": 91,
+  "priority_words": 140,
+  "source_mask_pixels": 5824,
+  "unchanged_priority_free_tiles": 1404,
+  "native_cases": 1584,
+  "native_pixels": 101376,
+  "native_zero_pixels": 3760,
+  "native_opaque_pixels": 46928,
+  "synthetic_duplicate_rgb_cases": 128,
+  "negative_control": {
+    "omitted_priority_flag_hides_no_OBJ_pixels": true,
+    "old_RGB_only_conversion_zero_mask_errors": 1609,
+    "naive_priority_flag_added_to_old_RGB_conversion_native_cases": 91,
+    "naive_priority_flag_added_to_old_RGB_conversion_native_mask_errors": 1609
+  },
+  "helper_sha256": "a8456578aeec7a1f13ba50fe4fc3edabcd1139ee5a3e805942d2b389e87f5892",
+  "script_sha256": "97ba7e0356674e3853bbd05139ad94c864d5430f0f516bf9c3c6234272981342",
+  "font_and_alis_reserved_patterns_preserved": true,
+  "fixed_animation_palette_duplicate_RGB_phases": 8,
+  "limitations": [
+    "Isolated declared tile/OBJ fixtures; not full-game campaign evidence",
+    "Native seven-palette color quantization remains an explicit hardware adaptation",
+    "Animated source integration and full world renderer are verified separately by parent"
+  ]
+}

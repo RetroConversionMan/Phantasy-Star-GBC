@@ -1,0 +1,105 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+    ___sdcc_bcall_ehl                                               ******** GX
+    __moduint                                                       ******** GX
+    _apply_event                                                    ******** GX
+    _audio_command                                                  ******** GX
+    _battle_scene_type                                              ******** GX
+    _battle_view_battle                                             ******** GX
+    _battle_view_chest_open                                         ******** GX
+    _battle_view_chest_pending                                      ******** GX
+    _battle_view_chest_prompt                                       ******** GX
+  8 _context                                                        00000000 R
+    _dplay_show_opening                                             ******** GX
+    _enter_map                                                      ******** GX
+    _event_use_story_item                                           ******** GX
+    _facing                                                         ******** GX
+  2 _field_action                                                   00000000 GR
+  2 _field_active                                                   00000016 GR
+    _field_cast                                                     ******** GX
+  2 _field_line                                                     00000017 R
+    _field_torch_finish                                             ******** GX
+    _field_torch_reply                                              ******** GX
+    _field_use_item                                                 ******** GX
+  8 _finish                                                         0000011D R
+    _game_dungeon                                                   ******** GX
+    _game_events                                                    ******** GX
+  8 _game_field_advance                                             000002F2 GR
+  8 _game_field_battle_item                                         0000045D GR
+  8 _game_field_item                                                00000368 GR
+  8 _game_field_scene_done                                          0000033F GR
+  8 _game_field_spell                                               00000433 GR
+    _game_rpg                                                       ******** GX
+    _game_vehicle                                                   ******** GX
+    _memset                                                         ******** GX
+    _menu_screen                                                    ******** GX
+  8 _next_line                                                      0000029A R
+    _player_x                                                       ******** GX
+    _player_y                                                       ******** GX
+    _result                                                         ******** GX
+    _resume_walk                                                    ******** GX
+    _rpg_find_item                                                  ******** GX
+    _screen_state                                                   ******** GX
+    _show_dialogue                                                  ******** GX
+  8 _start                                                          000002D4 R
+    _start_field_scene                                              ******** GX
+    _vsync                                                          ******** GX
+    _world_decode_destination                                       ******** GX
+    _world_flags_at                                                 ******** GX
+    _world_group_id                                                 ******** GX
+    _world_map_id                                                   ******** GX
+    _world_vehicle_use                                              ******** GX
+    b_apply_event                                                   ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    b_audio_command                                                 ******** GX
+    b_battle_view_chest_open                                        ******** GX
+    b_battle_view_chest_prompt                                      ******** GX
+    b_dplay_show_opening                                            ******** GX
+    b_event_use_story_item                                          ******** GX
+    b_field_cast                                                    ******** GX
+    b_field_torch_finish                                            ******** GX
+    b_field_torch_reply                                             ******** GX
+    b_field_use_item                                                ******** GX
+    b_game_field_advance                                        =   0000000C G
+    b_game_field_battle_item                                    =   0000000C G
+    b_game_field_item                                           =   0000000C G
+    b_game_field_scene_done                                     =   0000000C G
+    b_game_field_spell                                          =   0000000C G
+    b_menu_screen                                                   ******** GX
+    b_result                                                        ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_start_field_scene                                             ******** GX
+    b_world_decode_destination                                      ******** GX
+    b_world_flags_at                                                ******** GX
+    b_world_vehicle_use                                             ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       18   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_12                                   size      518   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c",
+  "suites": {
+    "field": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "field",
+      "script": "verify_field_integration.py",
+      "script_sha256": "fd2e9cbc424308cfd4b81c0316db3dc3a142f018c4bf6feab3b54229f1fc1308",
+      "returncode": 0,
+      "seconds": 2.63,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "expansion": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "expansion",
+      "script": "verify_expansion.py",
+      "script_sha256": "ed8de7302a0e0b1992f110c9093d65abf50f7df2cb838e4369ca6e2c44245a5b",
+      "returncode": 0,
+      "seconds": 3.04,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "chest": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "chest",
+      "script": "verify_chest_menu_integration.py",
+      "script_sha256": "e244181ef718effb61a8db5be5de7628cfd1130aff2b1d812333c84d8a01888d",
+      "returncode": 0,
+      "seconds": 2.25,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "audio": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "audio",
+      "script": "verify_integrated_audio.py",
+      "script_sha256": "60df37ba90219c6d5bd6bb6216aa9868f9db9c8e06dfd97360e90326993e207a",
+      "returncode": 0,
+      "seconds": 1.39,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "travel": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "travel",
+      "script": "verify_travel_integration.py",
+      "script_sha256": "cf66f22dd5abe353c0dc24b7a4c8f50b0b0e034ac5cd86db2ca2a3a13d171853",
+      "returncode": 0,
+      "seconds": 3.82,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "dialogue": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "dialogue",
+      "script": "verify_dialogue_input.py",
+      "script_sha256": "72c7fa0e85501aeeb2c65d33b7791cb9b3b0026a9e0aedf404986f7053fc51e7",
+      "returncode": 0,
+      "seconds": 1.47,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "save": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "save",
+      "script": "verify_save_ui.py",
+      "script_sha256": "b85716bcb5f5a48c3a71682fa359a114e3177567473ceaaaaffdb2b2c2a6c2ee",
+      "returncode": 0,
+      "seconds": 5.2,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "battle-vehicle": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "battle-vehicle",
+      "script": "verify_battle_vehicle_integration.py",
+      "script_sha256": "71bac783b012dec38dcfc4bcfd43ddbcd0f6e8475eb60d2dd7b63b3e90a42aa2",
+      "returncode": 0,
+      "seconds": 2.03,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "enemy-magic": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "enemy-magic",
+      "script": "verify_enemy_magic_integration.py",
+      "script_sha256": "58095a7daa7b1edf14b2e8536dfb1fcbbdf2fe17cc548f08f0e3af1e3921ca11",
+      "returncode": 0,
+      "seconds": 4.41,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "story": {
+      "report": "build/verification/world-motion-combined/report.json",
+      "report_sha256": "256f2cb27c4d7143903abc7d18f0d492cbcbfd64c4670918dbe31f1a6d2a19f5",
+      "suite": "story",
+      "script": "verify_story_ui.py",
+      "script_sha256": "97cf432d5a4f96c3b5e9892fd42c5f2e10938f8289f4ebf77e8b5d4965a30837",
+      "returncode": 0,
+      "seconds": 11.13,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "services": {
+      "report": "build/verification/world-motion-services-tap/report.json",
+      "report_sha256": "a1ac536814423fb58811106a49234a8d3ea76b715915f1becf49cdcea01edf0f",
+      "suite": "services",
+      "script": "verify_services_emulator.py",
+      "script_sha256": "620825df6821e8264c39a29029625e1d7793d96a4c9587dd2f7d3f2335cf4465",
+      "returncode": 0,
+      "seconds": 5.4,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "dungeon": {
+      "report": "build/verification/world-motion-walk-tap/report.json",
+      "report_sha256": "68e1aa6ea53f87856fedcdb5d4a2661c44f7816b5b8cf2c89391ec0c0d4ab7ee",
+      "suite": "dungeon",
+      "script": "verify_dungeon_emulator.py",
+      "script_sha256": "8473c1779aed74430c05d7734b40cb13a61d0737246aa15486775d694edc2484",
+      "returncode": 0,
+      "seconds": 2.75,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    },
+    "battle": {
+      "report": "build/verification/world-motion-battle-table/report.json",
+      "report_sha256": "01394514345c01b84a9e9f3ec98b7c9a3d3bfe8f6f63b5195be289e7efe100d4",
+      "suite": "battle",
+      "script": "verify_integrated_battle.py",
+      "script_sha256": "f16b78893c1d113989e3c2d3a5d2117086a86f2d20743040e0f904cd868b1822",
+      "returncode": 0,
+      "seconds": 2.2,
+      "passed": true,
+      "reported_rom_sha256": "30f09020e57b1f64d71b2cae4d585006abf364531e78febdb435c6f3eef9a92c"
+    }
+  },
+  "full_campaign": false,
+  "prior_failures_preserved": [
+    "build/verification/world-motion-combined/report.json",
+    "build/verification/world-motion-walk-tap/report.json"
+  ],
+  "harness_corrections": [
+    "Release direction once a grid step commits; rendering can hide exact grid boundaries from display-frame polling.",
+    "World-return expectations read tested cartridge metatile data instead of a different canonical ROM asset set. Source conversion verified independently."
+  ],
+  "scope": "Thirteen existing controller and explicitly labeled fixture suites on unchanged isolated world-motion ROM. Source/native animation tests are separate; this is not final combined ROM or campaign evidence."
+}

@@ -1,0 +1,24 @@
+{
+  "updated_date": "2026-11-13",
+  "status": "Cutscene text correction packaged for publication",
+  "current_binary": {
+    "path": "build/phantasy-star-gbc-world.gbc",
+    "distribution_path": "../ROM/Phantasy Star.gbc",
+    "bytes": 4194304,
+    "sha256": "0b9cee5c4cf9dca47887436237cf34ba19e76a26c79714bc64430d3f923e1133",
+    "source_has_newer_unbuilt_changes": false
+  },
+  "change": "Restore text palette 7 before each narrative portrait record.",
+  "validation": {
+    "narrative_sequences": 6,
+    "narrative_pages": 38,
+    "closing_text_screens": 6,
+    "observed_dialogue_screens": 88,
+    "ending_credits_return_to_title": true,
+    "fixture_based_late_game_routes": true,
+    "fresh_full_campaign_replay": false,
+    "physical_corrected_rom_test": false,
+    "report": "../verification/cutscene-text/audit-report.json"
+  },
+  "previous_release_status": "../history/before-cutscene-text-fix/current-project/PROJECT_STATE.json"
+}

@@ -1,0 +1,46 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "scene_count": 169,
+  "unique_patterns": 6749,
+  "native_banks": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    192
+  ],
+  "bank_bytes": [
+    15773,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15639,
+    15571,
+    3385
+  ],
+  "scope": "All raw and original group-remapped world entrance scene/portrait pairs, original table backgrounds1..31, blank32, explicit governor/final boss preparations and original FF bank9 rooms in their lit/unlit floor palettes. Internal types64..75 are distinct FF rooms. Static source poses, nearest-neighbour256x192 to160x120, seven four-color GBC palettes per frame.",
+  "limits": [
+    "Source animations and transitions are not reproduced",
+    "Dynamic portraits over arbitrary dungeon geometry remain separate from static FF rooms",
+    "Color quantization is measured, not claimed pixel-exact to the SMS palette",
+    "Three7-byte source flash masks follow56 palette bytes: indices3..15, index16, indices19..31; all palette effect classes exact"
+  ]
+}

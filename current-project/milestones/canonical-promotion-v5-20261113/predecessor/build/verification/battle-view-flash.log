@@ -1,0 +1,57 @@
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/src/battle.c:247: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+{
+  "host_checks": 87,
+  "native_checks": [
+    "Bank30 menu strings copied to WRAM before bank1 UI call; ALIS and ATTACK VRAM tiles match expected font IDs",
+    "Native bank30 controller calls bank18 battle, bank4 RNG/stats, bank8 dialogue, bank31 art and restores caller bank1; Run exits",
+    "Original Sworm physical motion and10-frame hit hold execute, exit to real damage dialogue, and restore caller bank1; observed duration includes input/render alignment, exact actor cadence is tested against Z80 separately",
+    "Heal target selection rejects dead Myau with original dialogue and spends no MP",
+    "Native physical battle resolves to victory, awards EXP and opens source money chest",
+    "Chest full-inventory prompts: protected replacement refused, cancel repeats, abandon declined, valid replacement succeeds without duplicate money",
+    "Closed chest decline returns254 with preparation retained; native field Tele spends4MP and reopens question, Trap spends2MP and disarms,49-frame lid opening grants10meseta without HP loss or RNG reroll"
+  ],
+  "injected_fixtures": [
+    "HighHP/defense Alis and255HP Sworms force observation of an ordinary enemy physical animation; no campaign reward claim",
+    "Level30 Alis and1HP Sworms shorten isolated combat test; no campaign reward claim",
+    "Victory with20meseta/Flute reward and24 items exercises native chest overflow; source inventory data unchanged",
+    "Level30 recruited party, forced party-trap chest and direct field-menu bridge API calls verify native cross-bank chest magic; full main-menu controller route is a separate integration test"
+  ],
+  "screenshots": [
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/command.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/spells.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/dead-target.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/full-inventory.png",
+    "/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/phantasy-star-gbc-transfer/current-project/build/verification/battle-view/protected-item.png"
+  ],
+  "observed_physical_animation_frames": 33,
+  "inputs_sha256": {
+    "chest_motion.c": "99197bd0a0f451688d915b48b583a9feea38bbf63d172024ec1d7bdace646f6e",
+    "field_actions.c": "4cea0091f27dc390ef6181305bc7f824887b92ba276cf63457621f28175fb300",
+    "dungeon.c": "340513e6b552130bc9f49ee00d78f0b3dd8f23db3a3024b292acd0e61ab16327",
+    "dungeon_data.c": "5f9c450b65762b5d97df6b847fba2780fb991bef3ea5368cad3a910cf65bb211",
+    "rpg.c": "f6f23ab3848aa108bf29048ae13746732533db1ead092893cdc3300005bd426b",
+    "rpg_data.c": "21079867793003aa15dbf18383ea749041156b359617b19ce39c9dd55b38471c",
+    "battle.c": "ef5a5e809b79ad24046e5782c47cd90978e4267267653b4dbd646e0c39e62d6b",
+    "battle_view.c": "afc6ef5f439cbc1dcd0d7185be2517599c16e168eaf2eccba45b355781ebbd8b",
+    "dialogue.c": "e1be0d7db6cbf270d30c68477c009b17c917c4ddfa8536a973baa3105cce943e",
+    "dialogue_data.c": "710eb4f88696fd82ba78193edbdddd6e1494180e6356bb94e541f7ca0e82778d",
+    "dialogue_text_09.c": "75afb12cd057e893dd2f20e3ad351c85435a9a9421ef9272ec7391796c22c0f2",
+    "dialogue_text_10.c": "be47bd2334d29b0afccc33013cf6e7559ae77306ac7e1a91787ba501230e5bdf",
+    "bank_io.c": "534a7caaa9cc1a4ef0fb1f97d1fa39481c1a30e4cdf371bff37976bc03991a03"
+  },
+  "passed": true,
+  "header": {
+    "title": "",
+    "bytes": 4194304,
+    "sha256": "a8f3618f29eb247788149cbf29892e814e5320bddcc8c29a4e4561f93e7c8961",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "probe_sha256": "a8f3618f29eb247788149cbf29892e814e5320bddcc8c29a4e4561f93e7c8961",
+  "scope": "Separate native controller/art/rules probe, not integrated world encounter or campaign test"
+}

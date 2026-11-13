@@ -1,0 +1,1469 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.1 #15267 (Mac OS X ppc)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module game_flow
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _apply_service
+                                     11 	.globl _show_dialogue
+                                     12 	.globl _enter_map
+                                     13 	.globl _draw_dungeon_faded
+                                     14 	.globl _draw_dungeon
+                                     15 	.globl _begin_battle
+                                     16 	.globl _resume_walk
+                                     17 	.globl b_scene_fade_begin
+                                     18 	.globl _scene_fade_begin
+                                     19 	.globl b_game_transition_interaction_music
+                                     20 	.globl _game_transition_interaction_music
+                                     21 	.globl b_game_transition_map_music
+                                     22 	.globl _game_transition_map_music
+                                     23 	.globl b_game_transition_close
+                                     24 	.globl _game_transition_close
+                                     25 	.globl b_game_transition_wait
+                                     26 	.globl _game_transition_wait
+                                     27 	.globl b_game_transition_fade_in
+                                     28 	.globl _game_transition_fade_in
+                                     29 	.globl b_game_transition_fade_out
+                                     30 	.globl _game_transition_fade_out
+                                     31 	.globl b_start_governor_room
+                                     32 	.globl _start_governor_room
+                                     33 	.globl b_start_dark_falz_reveal
+                                     34 	.globl _start_dark_falz_reveal
+                                     35 	.globl b_start_ending
+                                     36 	.globl _start_ending
+                                     37 	.globl b_start_travel
+                                     38 	.globl _start_travel
+                                     39 	.globl b_start_recruitment
+                                     40 	.globl _start_recruitment
+                                     41 	.globl b_audio_command
+                                     42 	.globl _audio_command
+                                     43 	.globl b_scene_actor_hide
+                                     44 	.globl _scene_actor_hide
+                                     45 	.globl b_scene_enemy_show
+                                     46 	.globl _scene_enemy_show
+                                     47 	.globl b_scene_portrait_show
+                                     48 	.globl _scene_portrait_show
+                                     49 	.globl b_scene_show_room
+                                     50 	.globl _scene_show_room
+                                     51 	.globl b_scene_show
+                                     52 	.globl _scene_show
+                                     53 	.globl b_dplay_escape
+                                     54 	.globl _dplay_escape
+                                     55 	.globl b_dplay_scene_fall
+                                     56 	.globl _dplay_scene_fall
+                                     57 	.globl b_dplay_enter
+                                     58 	.globl _dplay_enter
+                                     59 	.globl b_battle_scene_configure
+                                     60 	.globl _battle_scene_configure
+                                     61 	.globl b_battle_view_chest_begin
+                                     62 	.globl _battle_view_chest_begin
+                                     63 	.globl b_service_begin
+                                     64 	.globl _service_begin
+                                     65 	.globl b_event_advance
+                                     66 	.globl _event_advance
+                                     67 	.globl b_event_begin
+                                     68 	.globl _event_begin
+                                     69 	.globl b_world_decode_destination
+                                     70 	.globl _world_decode_destination
+                                     71 	.globl b_travel_menu
+                                     72 	.globl _travel_menu
+                                     73 	.globl b_inventory_screen
+                                     74 	.globl _inventory_screen
+                                     75 	.globl b_notice
+                                     76 	.globl _notice
+                                     77 	.globl b_menu_screen
+                                     78 	.globl _menu_screen
+                                     79 	.globl _display_off
+                                     80 	.globl _vsync
+                                     81 	.globl b_apply_event
+                                     82 	.globl _apply_event
+                                     83 	.globl b_apply_dungeon
+                                     84 	.globl _apply_dungeon
+                                     85 	.globl b_show_interaction_scene
+                                     86 	.globl _show_interaction_scene
+                                     87 	.globl b_enter_dungeon
+                                     88 	.globl _enter_dungeon
+                                     89 ;--------------------------------------------------------
+                                     90 ; special function registers
+                                     91 ;--------------------------------------------------------
+                                     92 	.area _HRAM
+                                     93 ;--------------------------------------------------------
+                                     94 ; ram data
+                                     95 ;--------------------------------------------------------
+                                     96 	.area _DATA
+                                     97 ;--------------------------------------------------------
+                                     98 ; ram data
+                                     99 ;--------------------------------------------------------
+                                    100 	.area _INITIALIZED
+                                    101 ;--------------------------------------------------------
+                                    102 ; absolute external ram data
+                                    103 ;--------------------------------------------------------
+                                    104 	.area _DABS (ABS)
+                                    105 ;--------------------------------------------------------
+                                    106 ; global & static initialisations
+                                    107 ;--------------------------------------------------------
+                                    108 	.area _HOME
+                                    109 	.area _GSINIT
+                                    110 	.area _GSFINAL
+                                    111 	.area _GSINIT
+                                    112 ;--------------------------------------------------------
+                                    113 ; Home
+                                    114 ;--------------------------------------------------------
+                                    115 	.area _HOME
+                                    116 	.area _HOME
+                                    117 ;--------------------------------------------------------
+                                    118 ; code
+                                    119 ;--------------------------------------------------------
+                                    120 	.area _CODE_12
+                                    121 ;src/game_flow.c:37: static void flow_notice(const char *text,uint8_t state) {
+                                    122 ;	---------------------------------
+                                    123 ; Function flow_notice
+                                    124 ; ---------------------------------
+    00000000                        125 _flow_notice:
+    00000000 E8 E6            [16]  126 	add	sp, #-26
+    00000002 F8 18            [12]  127 	ldhl	sp,	#24
+    00000004 73               [ 8]  128 	ld	(hl), e
+    00000005 23               [ 8]  129 	inc	hl
+    00000006 72               [ 8]  130 	ld	(hl), d
+    00000007 2B               [ 8]  131 	dec	hl
+    00000008 2B               [ 8]  132 	dec	hl
+    00000009 77               [ 8]  133 	ld	(hl), a
+                                    134 ;src/game_flow.c:38: char copy[21];uint8_t i=0;while(text[i]&&i<20u){copy[i]=text[i];++i;}copy[i]=0;notice(copy,state);
+    0000000A 0E 00            [ 8]  135 	ld	c, #0x00
+    0000000C                        136 00102$:
+    0000000C F8 18            [12]  137 	ldhl	sp,#24
+    0000000E 2A               [ 8]  138 	ld	a, (hl+)
+    0000000F 5F               [ 4]  139 	ld	e, a
+    00000010 56               [ 8]  140 	ld	d, (hl)
+    00000011 69               [ 4]  141 	ld	l, c
+    00000012 26 00            [ 8]  142 	ld	h, #0x00
+    00000014 19               [ 8]  143 	add	hl, de
+    00000015 5D               [ 4]  144 	ld	e, l
+    00000016 54               [ 4]  145 	ld	d, h
+    00000017 1A               [ 8]  146 	ld	a, (de)
+    00000018 47               [ 4]  147 	ld	b, a
+    00000019 E5               [16]  148 	push	hl
+    0000001A 21 02 00         [12]  149 	ld	hl, #2
+    0000001D 39               [ 8]  150 	add	hl, sp
+    0000001E 5D               [ 4]  151 	ld	e, l
+    0000001F 54               [ 4]  152 	ld	d, h
+    00000020 E1               [12]  153 	pop	hl
+    00000021 69               [ 4]  154 	ld	l, c
+    00000022 26 00            [ 8]  155 	ld	h, #0x00
+    00000024 19               [ 8]  156 	add	hl, de
+    00000025 E5               [16]  157 	push	hl
+    00000026 7D               [ 4]  158 	ld	a, l
+    00000027 F8 17            [12]  159 	ldhl	sp,	#23
+    00000029 77               [ 8]  160 	ld	(hl), a
+    0000002A E1               [12]  161 	pop	hl
+    0000002B 7C               [ 4]  162 	ld	a, h
+    0000002C F8 16            [12]  163 	ldhl	sp,	#22
+    0000002E 77               [ 8]  164 	ld	(hl), a
+    0000002F 78               [ 4]  165 	ld	a, b
+    00000030 B7               [ 4]  166 	or	a, a
+    00000031 28 0C            [12]  167 	jr	Z, 00104$
+    00000033 79               [ 4]  168 	ld	a, c
+    00000034 D6 14            [ 8]  169 	sub	a, #0x14
+    00000036 30 07            [12]  170 	jr	NC, 00104$
+    00000038 3A               [ 8]  171 	ld	a, (hl-)
+    00000039 6E               [ 8]  172 	ld	l, (hl)
+    0000003A 67               [ 4]  173 	ld	h, a
+    0000003B 70               [ 8]  174 	ld	(hl), b
+    0000003C 0C               [ 4]  175 	inc	c
+    0000003D 18 CD            [12]  176 	jr	00102$
+    0000003F                        177 00104$:
+    0000003F 21 00 00         [12]  178 	ld	hl, #0
+    00000042 39               [ 8]  179 	add	hl, sp
+    00000043 4D               [ 4]  180 	ld	c, l
+    00000044 44               [ 4]  181 	ld	b, h
+    00000045 F8 15            [12]  182 	ldhl	sp,	#21
+    00000047 2A               [ 8]  183 	ld	a, (hl+)
+    00000048 66               [ 8]  184 	ld	h, (hl)
+    00000049 6F               [ 4]  185 	ld	l, a
+    0000004A 36 00            [12]  186 	ld	(hl), #0x00
+    0000004C F8 17            [12]  187 	ldhl	sp,	#23
+    0000004E 7E               [ 8]  188 	ld	a, (hl)
+    0000004F F5               [16]  189 	push	af
+    00000050 33               [ 8]  190 	inc	sp
+    00000051 C5               [16]  191 	push	bc
+    00000052 1Er00            [ 8]  192 	ld	e, #b_notice
+    00000054 21r00r00         [12]  193 	ld	hl, #_notice
+    00000057 CDr00r00         [24]  194 	call	___sdcc_bcall_ehl
+                                    195 ;src/game_flow.c:39: }
+    0000005A E8 1D            [16]  196 	add	sp, #29
+    0000005C C9               [16]  197 	ret
+                                    198 ;src/game_flow.c:60: static void event_presentation(uint8_t effect) {
+                                    199 ;	---------------------------------
+                                    200 ; Function event_presentation
+                                    201 ; ---------------------------------
+    0000005D                        202 _event_presentation:
+                                    203 ;src/game_flow.c:61: if(effect==EVENT_PRESENT_SUEL_HEAL)return;
+                                    204 ;src/game_flow.c:62: if(effect==EVENT_PRESENT_GUEST_WAKE){game_transition_fade_in();return;}
+    0000005D 4F               [ 4]  205 	ld	c,a
+    0000005E B7               [ 4]  206 	or	a,a
+    0000005F C8               [20]  207 	ret	Z
+    00000060 D6 02            [ 8]  208 	sub	a, #0x02
+    00000062 20 08            [12]  209 	jr	NZ, 00104$
+    00000064 1Er00            [ 8]  210 	ld	e, #b_game_transition_fade_in
+    00000066 21r00r00         [12]  211 	ld	hl, #_game_transition_fade_in
+    00000069 C3r00r00         [16]  212 	jp  ___sdcc_bcall_ehl
+    0000006C                        213 00104$:
+                                    214 ;src/game_flow.c:63: if(effect==EVENT_PRESENT_GUEST_SLEEP) {
+    0000006C 79               [ 4]  215 	ld	a, c
+    0000006D 3D               [ 4]  216 	dec	a
+    0000006E 20 2B            [12]  217 	jr	NZ, 00106$
+                                    218 ;src/game_flow.c:64: game_transition_fade_out();game_transition_close();audio_command(0xa0);
+    00000070 1Er00            [ 8]  219 	ld	e, #b_game_transition_fade_out
+    00000072 21r00r00         [12]  220 	ld	hl, #_game_transition_fade_out
+    00000075 CDr00r00         [24]  221 	call	___sdcc_bcall_ehl
+    00000078 1Er00            [ 8]  222 	ld	e, #b_game_transition_close
+    0000007A 21r00r00         [12]  223 	ld	hl, #_game_transition_close
+    0000007D CDr00r00         [24]  224 	call	___sdcc_bcall_ehl
+    00000080 3E A0            [ 8]  225 	ld	a, #0xa0
+    00000082 F5               [16]  226 	push	af
+    00000083 33               [ 8]  227 	inc	sp
+    00000084 1Er00            [ 8]  228 	ld	e, #b_audio_command
+    00000086 21r00r00         [12]  229 	ld	hl, #_audio_command
+    00000089 CDr00r00         [24]  230 	call	___sdcc_bcall_ehl
+    0000008C 33               [ 8]  231 	inc	sp
+                                    232 ;src/game_flow.c:65: game_transition_wait(208u,1u);
+    0000008D 21 D0 01         [12]  233 	ld	hl, #0x1d0
+    00000090 E5               [16]  234 	push	hl
+    00000091 1Er00            [ 8]  235 	ld	e, #b_game_transition_wait
+    00000093 21r00r00         [12]  236 	ld	hl, #_game_transition_wait
+    00000096 CDr00r00         [24]  237 	call	___sdcc_bcall_ehl
+    00000099 E1               [12]  238 	pop	hl
+                                    239 ;src/game_flow.c:68: return;
+    0000009A C9               [16]  240 	ret
+    0000009B                        241 00106$:
+                                    242 ;src/game_flow.c:70: if(effect==EVENT_PRESENT_NIGHTMARE_HOLD) {
+    0000009B 79               [ 4]  243 	ld	a, c
+    0000009C D6 04            [ 8]  244 	sub	a, #0x04
+    0000009E 20 23            [12]  245 	jr	NZ, 00108$
+                                    246 ;src/game_flow.c:71: game_transition_close();audio_command(0xa0);game_transition_wait(208u,1u);return;
+    000000A0 1Er00            [ 8]  247 	ld	e, #b_game_transition_close
+    000000A2 21r00r00         [12]  248 	ld	hl, #_game_transition_close
+    000000A5 CDr00r00         [24]  249 	call	___sdcc_bcall_ehl
+    000000A8 3E A0            [ 8]  250 	ld	a, #0xa0
+    000000AA F5               [16]  251 	push	af
+    000000AB 33               [ 8]  252 	inc	sp
+    000000AC 1Er00            [ 8]  253 	ld	e, #b_audio_command
+    000000AE 21r00r00         [12]  254 	ld	hl, #_audio_command
+    000000B1 CDr00r00         [24]  255 	call	___sdcc_bcall_ehl
+    000000B4 33               [ 8]  256 	inc	sp
+    000000B5 21 D0 01         [12]  257 	ld	hl, #0x1d0
+    000000B8 E5               [16]  258 	push	hl
+    000000B9 1Er00            [ 8]  259 	ld	e, #b_game_transition_wait
+    000000BB 21r00r00         [12]  260 	ld	hl, #_game_transition_wait
+    000000BE CDr00r00         [24]  261 	call	___sdcc_bcall_ehl
+    000000C1 E1               [12]  262 	pop	hl
+    000000C2 C9               [16]  263 	ret
+    000000C3                        264 00108$:
+                                    265 ;src/game_flow.c:73: game_transition_fade_out();
+    000000C3 C5               [16]  266 	push	bc
+    000000C4 1Er00            [ 8]  267 	ld	e, #b_game_transition_fade_out
+    000000C6 21r00r00         [12]  268 	ld	hl, #_game_transition_fade_out
+    000000C9 CDr00r00         [24]  269 	call	___sdcc_bcall_ehl
+    000000CC C1               [12]  270 	pop	bc
+                                    271 ;src/game_flow.c:74: if(effect==EVENT_PRESENT_NIGHTMARE_SCENE)game_transition_close();
+    000000CD 79               [ 4]  272 	ld	a, c
+    000000CE D6 03            [ 8]  273 	sub	a, #0x03
+    000000D0 20 08            [12]  274 	jr	NZ, 00110$
+    000000D2 1Er00            [ 8]  275 	ld	e, #b_game_transition_close
+    000000D4 21r00r00         [12]  276 	ld	hl, #_game_transition_close
+    000000D7 CDr00r00         [24]  277 	call	___sdcc_bcall_ehl
+    000000DA                        278 00110$:
+                                    279 ;src/game_flow.c:75: DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;scene_actor_hide();
+    000000DA CDr00r00         [24]  280 	call	_display_off
+    000000DD F0r00            [12]  281 	ldh	a, (_LCDC_REG + 0)
+    000000DF E6 DF            [ 8]  282 	and	a, #0xdf
+    000000E1 E0r00            [12]  283 	ldh	(_LCDC_REG + 0), a
+    000000E3 F0r00            [12]  284 	ldh	a, (_LCDC_REG + 0)
+    000000E5 E6 FD            [ 8]  285 	and	a, #0xfd
+    000000E7 E0r00            [12]  286 	ldh	(_LCDC_REG + 0), a
+    000000E9 1Er00            [ 8]  287 	ld	e, #b_scene_actor_hide
+    000000EB 21r00r00         [12]  288 	ld	hl, #_scene_actor_hide
+    000000EE CDr00r00         [24]  289 	call	___sdcc_bcall_ehl
+                                    290 ;src/game_flow.c:76: scene_show(32u,0u,0u);scene_context_type=32u;background_changed=1;
+    000000F1 AF               [ 4]  291 	xor	a, a
+    000000F2 0F               [ 4]  292 	rrca
+    000000F3 F5               [16]  293 	push	af
+    000000F4 AF               [ 4]  294 	xor	a, a
+    000000F5 3E 20            [ 8]  295 	ld	a, #0x20
+    000000F7 F5               [16]  296 	push	af
+    000000F8 33               [ 8]  297 	inc	sp
+    000000F9 1Er00            [ 8]  298 	ld	e, #b_scene_show
+    000000FB 21r00r00         [12]  299 	ld	hl, #_scene_show
+    000000FE CDr00r00         [24]  300 	call	___sdcc_bcall_ehl
+    00000101 E8 03            [16]  301 	add	sp, #3
+    00000103 21r00r00         [12]  302 	ld	hl, #_scene_context_type
+    00000106 36 20            [12]  303 	ld	(hl), #0x20
+    00000108 21r00r00         [12]  304 	ld	hl, #_background_changed
+    0000010B 36 01            [12]  305 	ld	(hl), #0x01
+                                    306 ;src/game_flow.c:77: scene_fade_begin(1u);DISPLAY_ON;
+    0000010D 3E 01            [ 8]  307 	ld	a, #0x01
+    0000010F F5               [16]  308 	push	af
+    00000110 33               [ 8]  309 	inc	sp
+    00000111 1Er00            [ 8]  310 	ld	e, #b_scene_fade_begin
+    00000113 21r00r00         [12]  311 	ld	hl, #_scene_fade_begin
+    00000116 CDr00r00         [24]  312 	call	___sdcc_bcall_ehl
+    00000119 33               [ 8]  313 	inc	sp
+    0000011A F0r00            [12]  314 	ldh	a, (_LCDC_REG + 0)
+    0000011C F6 80            [ 8]  315 	or	a, #0x80
+    0000011E E0r00            [12]  316 	ldh	(_LCDC_REG + 0), a
+                                    317 ;src/game_flow.c:78: game_transition_wait(1u,0u);game_transition_fade_in();
+    00000120 21 01 00         [12]  318 	ld	hl, #0x01
+    00000123 E5               [16]  319 	push	hl
+    00000124 1Er00            [ 8]  320 	ld	e, #b_game_transition_wait
+    00000126 21r00r00         [12]  321 	ld	hl, #_game_transition_wait
+    00000129 CDr00r00         [24]  322 	call	___sdcc_bcall_ehl
+    0000012C E1               [12]  323 	pop	hl
+    0000012D 1Er00            [ 8]  324 	ld	e, #b_game_transition_fade_in
+    0000012F 21r00r00         [12]  325 	ld	hl, #_game_transition_fade_in
+                                    326 ;src/game_flow.c:79: }
+    00000132 C3r00r00         [16]  327 	jp  ___sdcc_bcall_ehl
+                                    328 ;src/game_flow.c:80: void apply_event(void) RPG_BANKED {
+                                    329 ;	---------------------------------
+                                    330 ; Function apply_event
+                                    331 ; ---------------------------------
+                         0000000C   332 	b_apply_event	= 12
+    00000135                        333 _apply_event::
+    00000135 E8 FB            [16]  334 	add	sp, #-5
+                                    335 ;src/game_flow.c:81: EventAction *a=&game_events.action;
+                                    336 ;src/game_flow.c:82: if(a->sound){audio_command(a->sound);a->sound=0;}
+    00000137 21r24r01         [12]  337 	ld	hl, #(_game_events + 282) + 10
+    0000013A 7E               [ 8]  338 	ld	a, (hl)
+    0000013B B7               [ 4]  339 	or	a, a
+    0000013C 28 0F            [12]  340 	jr	Z, 00102$
+    0000013E E5               [16]  341 	push	hl
+    0000013F F5               [16]  342 	push	af
+    00000140 33               [ 8]  343 	inc	sp
+    00000141 1Er00            [ 8]  344 	ld	e, #b_audio_command
+    00000143 21r00r00         [12]  345 	ld	hl, #_audio_command
+    00000146 CDr00r00         [24]  346 	call	___sdcc_bcall_ehl
+    00000149 33               [ 8]  347 	inc	sp
+    0000014A E1               [12]  348 	pop	hl
+    0000014B 36 00            [12]  349 	ld	(hl), #0x00
+    0000014D                        350 00102$:
+                                    351 ;src/game_flow.c:83: if(a->kind==EVENT_PRESENTATION){event_presentation(a->target);event_advance(&game_events);apply_event();return;}
+    0000014D FAr1Ar01         [16]  352 	ld	a, (#(_game_events + 282) + 0)
+    00000150 F8 04            [12]  353 	ldhl	sp,#4
+    00000152 77               [ 8]  354 	ld	(hl), a
+    00000153 7E               [ 8]  355 	ld	a, (hl)
+    00000154 D6 19            [ 8]  356 	sub	a, #0x19
+    00000156 20 1E            [12]  357 	jr	NZ, 00104$
+    00000158 FAr20r01         [16]  358 	ld	a, (#(_game_events + 288) + 0)
+    0000015B CDr5Dr00         [24]  359 	call	_event_presentation
+    0000015E 11r00r00         [12]  360 	ld	de, #_game_events
+    00000161 D5               [16]  361 	push	de
+    00000162 1Er00            [ 8]  362 	ld	e, #b_event_advance
+    00000164 21r00r00         [12]  363 	ld	hl, #_event_advance
+    00000167 CDr00r00         [24]  364 	call	___sdcc_bcall_ehl
+    0000016A E1               [12]  365 	pop	hl
+    0000016B 1Er00            [ 8]  366 	ld	e, #b_apply_event
+    0000016D 21r35r01         [12]  367 	ld	hl, #_apply_event
+    00000170 CDr00r00         [24]  368 	call	___sdcc_bcall_ehl
+    00000173 C3rA1r04         [16]  369 	jp	00185$
+    00000176                        370 00104$:
+                                    371 ;src/game_flow.c:84: if(a->kind==EVENT_DONE) resume_walk();
+    00000176 F8 04            [12]  372 	ldhl	sp,	#4
+    00000178 7E               [ 8]  373 	ld	a, (hl)
+    00000179 B7               [ 4]  374 	or	a, a
+    0000017A 20 06            [12]  375 	jr	NZ, 00180$
+    0000017C CDr00r00         [24]  376 	call	_resume_walk
+    0000017F C3rA1r04         [16]  377 	jp	00185$
+    00000182                        378 00180$:
+                                    379 ;src/game_flow.c:85: else if(a->kind==EVENT_MENU) {menu_choice=0;menu_screen();}
+    00000182 F8 04            [12]  380 	ldhl	sp,	#4
+    00000184 7E               [ 8]  381 	ld	a, (hl)
+    00000185 D6 0A            [ 8]  382 	sub	a, #0x0a
+    00000187 20 0F            [12]  383 	jr	NZ, 00177$
+    00000189 AF               [ 4]  384 	xor	a, a
+    0000018A EAr00r00         [16]  385 	ld	(#_menu_choice),a
+    0000018D 1Er00            [ 8]  386 	ld	e, #b_menu_screen
+    0000018F 21r00r00         [12]  387 	ld	hl, #_menu_screen
+    00000192 CDr00r00         [24]  388 	call	___sdcc_bcall_ehl
+    00000195 C3rA1r04         [16]  389 	jp	00185$
+    00000198                        390 00177$:
+                                    391 ;src/game_flow.c:86: else if(a->kind==EVENT_BATTLE) {
+    00000198 F8 04            [12]  392 	ldhl	sp,	#4
+    0000019A 7E               [ 8]  393 	ld	a, (hl)
+    0000019B D6 0C            [ 8]  394 	sub	a, #0x0c
+    0000019D 20 25            [12]  395 	jr	NZ, 00174$
+                                    396 ;src/game_flow.c:87: begin_battle(a->target,1);
+    0000019F FAr20r01         [16]  397 	ld	a, (#(_game_events + 288) + 0)
+    000001A2 1E 01            [ 8]  398 	ld	e, #0x01
+    000001A4 CDr00r00         [24]  399 	call	_begin_battle
+                                    400 ;src/game_flow.c:88: if(game_events.battle.options&EVENT_BATTLE_OVERRIDE_ITEM) battle_view_battle.item_reward=game_events.battle.item_reward;
+    000001A7 FAr13r01         [16]  401 	ld	a, (#(_game_events + 275) + 0)
+    000001AA 0F               [ 4]  402 	rrca
+    000001AB 30 06            [12]  403 	jr	NC, 00106$
+    000001AD FAr14r01         [16]  404 	ld	a, (#(_game_events + 276) + 0)
+    000001B0 EAr98r00         [16]  405 	ld	(#(_battle_view_battle + 152)),a
+    000001B3                        406 00106$:
+                                    407 ;src/game_flow.c:89: if(game_events.battle.options&EVENT_BATTLE_ZERO_MONEY) battle_view_battle.money_reward=0;
+    000001B3 FAr13r01         [16]  408 	ld	a, (#(_game_events + 275) + 0)
+    000001B6 CB 4F            [ 8]  409 	bit	1, a
+    000001B8 CArA1r04         [16]  410 	jp	Z, 00185$
+    000001BB 21r96r00         [12]  411 	ld	hl, #(_battle_view_battle + 150)
+    000001BE AF               [ 4]  412 	xor	a, a
+    000001BF 22               [ 8]  413 	ld	(hl+), a
+    000001C0 77               [ 8]  414 	ld	(hl), a
+    000001C1 C3rA1r04         [16]  415 	jp	00185$
+    000001C4                        416 00174$:
+                                    417 ;src/game_flow.c:91: else if(a->kind==EVENT_DUNGEON)enter_dungeon(a->target,a->a,a->b);
+    000001C4 F8 04            [12]  418 	ldhl	sp,	#4
+    000001C6 7E               [ 8]  419 	ld	a, (hl)
+    000001C7 D6 0D            [ 8]  420 	sub	a, #0x0d
+    000001C9 20 1E            [12]  421 	jr	NZ, 00171$
+    000001CB 21r22r01         [12]  422 	ld	hl, #(_game_events + 290)
+    000001CE 46               [ 8]  423 	ld	b, (hl)
+    000001CF FAr21r01         [16]  424 	ld	a, (#(_game_events + 289) + 0)
+    000001D2 21r20r01         [12]  425 	ld	hl, #(_game_events + 288)
+    000001D5 66               [ 8]  426 	ld	h, (hl)
+    000001D6 C5               [16]  427 	push	bc
+    000001D7 33               [ 8]  428 	inc	sp
+    000001D8 F5               [16]  429 	push	af
+    000001D9 33               [ 8]  430 	inc	sp
+    000001DA E5               [16]  431 	push	hl
+    000001DB 33               [ 8]  432 	inc	sp
+    000001DC 1Er00            [ 8]  433 	ld	e, #b_enter_dungeon
+    000001DE 21r2Br08         [12]  434 	ld	hl, #_enter_dungeon
+    000001E1 CDr00r00         [24]  435 	call	___sdcc_bcall_ehl
+    000001E4 E8 03            [16]  436 	add	sp, #3
+    000001E6 C3rA1r04         [16]  437 	jp	00185$
+    000001E9                        438 00171$:
+                                    439 ;src/game_flow.c:92: else if(a->kind==EVENT_DARK_FALZ_REVEAL)start_dark_falz_reveal();
+    000001E9 F8 04            [12]  440 	ldhl	sp,	#4
+    000001EB 7E               [ 8]  441 	ld	a, (hl)
+    000001EC D6 17            [ 8]  442 	sub	a, #0x17
+    000001EE 20 0B            [12]  443 	jr	NZ, 00168$
+    000001F0 1Er00            [ 8]  444 	ld	e, #b_start_dark_falz_reveal
+    000001F2 21r00r00         [12]  445 	ld	hl, #_start_dark_falz_reveal
+    000001F5 CDr00r00         [24]  446 	call	___sdcc_bcall_ehl
+    000001F8 C3rA1r04         [16]  447 	jp	00185$
+    000001FB                        448 00168$:
+                                    449 ;src/game_flow.c:93: else if(a->kind==EVENT_GOVERNOR_ROOM)start_governor_room();
+    000001FB F8 04            [12]  450 	ldhl	sp,	#4
+    000001FD 7E               [ 8]  451 	ld	a, (hl)
+    000001FE D6 18            [ 8]  452 	sub	a, #0x18
+    00000200 20 0B            [12]  453 	jr	NZ, 00165$
+    00000202 1Er00            [ 8]  454 	ld	e, #b_start_governor_room
+    00000204 21r00r00         [12]  455 	ld	hl, #_start_governor_room
+    00000207 CDr00r00         [24]  456 	call	___sdcc_bcall_ehl
+    0000020A C3rA1r04         [16]  457 	jp	00185$
+    0000020D                        458 00165$:
+                                    459 ;src/game_flow.c:94: else if(a->kind==EVENT_DUNGEON_FALL) {
+    0000020D F8 04            [12]  460 	ldhl	sp,	#4
+    0000020F 7E               [ 8]  461 	ld	a, (hl)
+    00000210 D6 16            [ 8]  462 	sub	a, #0x16
+    00000212 20 75            [12]  463 	jr	NZ, 00162$
+                                    464 ;src/game_flow.c:98: HIDE_WIN;for(close_frames=0;close_frames<6u;++close_frames)vsync();
+    00000214 F0r00            [12]  465 	ldh	a, (_LCDC_REG + 0)
+    00000216 E6 DF            [ 8]  466 	and	a, #0xdf
+    00000218 E0r00            [12]  467 	ldh	(_LCDC_REG + 0), a
+    0000021A 0E 06            [ 8]  468 	ld	c, #0x06
+    0000021C                        469 00184$:
+    0000021C CDr00r00         [24]  470 	call	_vsync
+    0000021F 0D               [ 4]  471 	dec	c
+    00000220 20 FA            [12]  472 	jr	NZ, 00184$
+                                    473 ;src/game_flow.c:99: if(scene_actor_active)scene_actor_hide();
+    00000222 FAr00r00         [16]  474 	ld	a, (#_scene_actor_active)
+    00000225 B7               [ 4]  475 	or	a, a
+    00000226 28 08            [12]  476 	jr	Z, 00111$
+    00000228 1Er00            [ 8]  477 	ld	e, #b_scene_actor_hide
+    0000022A 21r00r00         [12]  478 	ld	hl, #_scene_actor_hide
+    0000022D CDr00r00         [24]  479 	call	___sdcc_bcall_ehl
+    00000230                        480 00111$:
+                                    481 ;src/game_flow.c:100: game_vehicle=0;game_events.type=0;game_events.event=0;dark_menu_pending=0;background_changed=0;
+    00000230 AF               [ 4]  482 	xor	a, a
+    00000231 EAr00r00         [16]  483 	ld	(#_game_vehicle),a
+    00000234 21r05r01         [12]  484 	ld	hl, #_game_events + 261
+    00000237 36 00            [12]  485 	ld	(hl), #0x00
+    00000239 21r04r01         [12]  486 	ld	hl, #_game_events + 260
+    0000023C 36 00            [12]  487 	ld	(hl), #0x00
+    0000023E AF               [ 4]  488 	xor	a, a
+    0000023F EAr00r00         [16]  489 	ld	(#_dark_menu_pending), a
+    00000242 EAr00r00         [16]  490 	ld	(#_background_changed),a
+                                    491 ;src/game_flow.c:101: dplay_scene_fall(&game_dungeon,&game_rpg,&game_events,a->target,a->a,a->b,retained_trap);
+    00000245 21r22r01         [12]  492 	ld	hl, #(_game_events + 282) + 8
+    00000248 5E               [ 8]  493 	ld	e, (hl)
+    00000249 21r21r01         [12]  494 	ld	hl, #(_game_events + 282) + 7
+    0000024C 46               [ 8]  495 	ld	b, (hl)
+    0000024D 21r20r01         [12]  496 	ld	hl, #(_game_events + 282) + 6
+    00000250 4E               [ 8]  497 	ld	c, (hl)
+    00000251 FAr00r00         [16]  498 	ld	a, (_retained_trap)
+    00000254 57               [ 4]  499 	ld	d,a
+    00000255 D5               [16]  500 	push	de
+    00000256 C5               [16]  501 	push	bc
+    00000257 33               [ 8]  502 	inc	sp
+    00000258 79               [ 4]  503 	ld	a, c
+    00000259 F5               [16]  504 	push	af
+    0000025A 33               [ 8]  505 	inc	sp
+    0000025B 11r00r00         [12]  506 	ld	de, #_game_events
+    0000025E D5               [16]  507 	push	de
+    0000025F 11r00r00         [12]  508 	ld	de, #_game_rpg
+    00000262 D5               [16]  509 	push	de
+    00000263 11r00r00         [12]  510 	ld	de, #_game_dungeon
+    00000266 D5               [16]  511 	push	de
+    00000267 1Er00            [ 8]  512 	ld	e, #b_dplay_scene_fall
+    00000269 21r00r00         [12]  513 	ld	hl, #_dplay_scene_fall
+    0000026C CDr00r00         [24]  514 	call	___sdcc_bcall_ehl
+    0000026F E8 0A            [16]  515 	add	sp, #10
+                                    516 ;src/game_flow.c:102: game_transition_map_music(0x85);apply_dungeon();
+    00000271 3E 85            [ 8]  517 	ld	a, #0x85
+    00000273 F5               [16]  518 	push	af
+    00000274 33               [ 8]  519 	inc	sp
+    00000275 1Er00            [ 8]  520 	ld	e, #b_game_transition_map_music
+    00000277 21r00r00         [12]  521 	ld	hl, #_game_transition_map_music
+    0000027A CDr00r00         [24]  522 	call	___sdcc_bcall_ehl
+    0000027D 33               [ 8]  523 	inc	sp
+    0000027E 1Er00            [ 8]  524 	ld	e, #b_apply_dungeon
+    00000280 21rC3r04         [12]  525 	ld	hl, #_apply_dungeon
+    00000283 CDr00r00         [24]  526 	call	___sdcc_bcall_ehl
+    00000286 C3rA1r04         [16]  527 	jp	00185$
+    00000289                        528 00162$:
+                                    529 ;src/game_flow.c:104: else if(a->kind==EVENT_DUNGEON_BACK) {
+    00000289 F8 04            [12]  530 	ldhl	sp,	#4
+    0000028B 7E               [ 8]  531 	ld	a, (hl)
+    0000028C D6 0E            [ 8]  532 	sub	a, #0x0e
+    0000028E 20 21            [12]  533 	jr	NZ, 00159$
+                                    534 ;src/game_flow.c:105: dplay_escape(&game_dungeon,&game_rpg,&game_events);apply_dungeon();
+    00000290 11r00r00         [12]  535 	ld	de, #_game_events
+    00000293 D5               [16]  536 	push	de
+    00000294 11r00r00         [12]  537 	ld	de, #_game_rpg
+    00000297 D5               [16]  538 	push	de
+    00000298 11r00r00         [12]  539 	ld	de, #_game_dungeon
+    0000029B D5               [16]  540 	push	de
+    0000029C 1Er00            [ 8]  541 	ld	e, #b_dplay_escape
+    0000029E 21r00r00         [12]  542 	ld	hl, #_dplay_escape
+    000002A1 CDr00r00         [24]  543 	call	___sdcc_bcall_ehl
+    000002A4 E8 06            [16]  544 	add	sp, #6
+    000002A6 1Er00            [ 8]  545 	ld	e, #b_apply_dungeon
+    000002A8 21rC3r04         [12]  546 	ld	hl, #_apply_dungeon
+    000002AB CDr00r00         [24]  547 	call	___sdcc_bcall_ehl
+    000002AE C3rA1r04         [16]  548 	jp	00185$
+    000002B1                        549 00159$:
+                                    550 ;src/game_flow.c:107: else if(a->kind==EVENT_DUNGEON_CELL) {
+    000002B1 F8 04            [12]  551 	ldhl	sp,	#4
+    000002B3 7E               [ 8]  552 	ld	a, (hl)
+    000002B4 D6 14            [ 8]  553 	sub	a, #0x14
+    000002B6 20 2D            [12]  554 	jr	NZ, 00156$
+                                    555 ;src/game_flow.c:108: if(game_dungeon.active)game_dungeon.dungeon.layout[a->target]=a->a;
+    000002B8 FAr08r01         [16]  556 	ld	a, (#_game_dungeon + 264)
+    000002BB B7               [ 4]  557 	or	a, a
+    000002BC 28 0F            [12]  558 	jr	Z, 00113$
+    000002BE FAr20r01         [16]  559 	ld	a, (#(_game_events + 288) + 0)
+    000002C1 C6r08            [ 8]  560 	add	a, #<((_game_dungeon + 8))
+    000002C3 4F               [ 4]  561 	ld	c, a
+    000002C4 3E 00            [ 8]  562 	ld	a, #0x00
+    000002C6 CEs00            [ 8]  563 	adc	a, #>((_game_dungeon + 8))
+    000002C8 47               [ 4]  564 	ld	b, a
+    000002C9 FAr21r01         [16]  565 	ld	a, (#(_game_events + 289) + 0)
+    000002CC 02               [ 8]  566 	ld	(bc), a
+    000002CD                        567 00113$:
+                                    568 ;src/game_flow.c:109: event_advance(&game_events);apply_event();
+    000002CD 11r00r00         [12]  569 	ld	de, #_game_events
+    000002D0 D5               [16]  570 	push	de
+    000002D1 1Er00            [ 8]  571 	ld	e, #b_event_advance
+    000002D3 21r00r00         [12]  572 	ld	hl, #_event_advance
+    000002D6 CDr00r00         [24]  573 	call	___sdcc_bcall_ehl
+    000002D9 E1               [12]  574 	pop	hl
+    000002DA 1Er00            [ 8]  575 	ld	e, #b_apply_event
+    000002DC 21r35r01         [12]  576 	ld	hl, #_apply_event
+    000002DF CDr00r00         [24]  577 	call	___sdcc_bcall_ehl
+    000002E2 C3rA1r04         [16]  578 	jp	00185$
+    000002E5                        579 00156$:
+                                    580 ;src/game_flow.c:111: else if(a->kind==EVENT_SCENE) {
+    000002E5 F8 04            [12]  581 	ldhl	sp,	#4
+    000002E7 7E               [ 8]  582 	ld	a, (hl)
+    000002E8 D6 13            [ 8]  583 	sub	a, #0x13
+    000002EA 20 5D            [12]  584 	jr	NZ, 00153$
+                                    585 ;src/game_flow.c:112: if(scene_actor_active)scene_actor_hide();
+    000002EC FAr00r00         [16]  586 	ld	a, (#_scene_actor_active)
+    000002EF B7               [ 4]  587 	or	a, a
+    000002F0 28 08            [12]  588 	jr	Z, 00115$
+    000002F2 1Er00            [ 8]  589 	ld	e, #b_scene_actor_hide
+    000002F4 21r00r00         [12]  590 	ld	hl, #_scene_actor_hide
+    000002F7 CDr00r00         [24]  591 	call	___sdcc_bcall_ehl
+    000002FA                        592 00115$:
+                                    593 ;src/game_flow.c:113: DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;
+    000002FA CDr00r00         [24]  594 	call	_display_off
+    000002FD F0r00            [12]  595 	ldh	a, (_LCDC_REG + 0)
+    000002FF E6 DF            [ 8]  596 	and	a, #0xdf
+    00000301 E0r00            [12]  597 	ldh	(_LCDC_REG + 0), a
+    00000303 F0r00            [12]  598 	ldh	a, (_LCDC_REG + 0)
+    00000305 E6 FD            [ 8]  599 	and	a, #0xfd
+    00000307 E0r00            [12]  600 	ldh	(_LCDC_REG + 0), a
+                                    601 ;src/game_flow.c:114: if(scene_show(a->target,0,0)){background_changed=1;scene_context_type=a->target;}
+    00000309 21r20r01         [12]  602 	ld	hl, #(_game_events + 288)
+    0000030C 46               [ 8]  603 	ld	b, (hl)
+    0000030D AF               [ 4]  604 	xor	a, a
+    0000030E 0F               [ 4]  605 	rrca
+    0000030F F5               [16]  606 	push	af
+    00000310 AF               [ 4]  607 	xor	a, a
+    00000311 C5               [16]  608 	push	bc
+    00000312 33               [ 8]  609 	inc	sp
+    00000313 1Er00            [ 8]  610 	ld	e, #b_scene_show
+    00000315 21r00r00         [12]  611 	ld	hl, #_scene_show
+    00000318 CDr00r00         [24]  612 	call	___sdcc_bcall_ehl
+    0000031B E8 03            [16]  613 	add	sp, #3
+    0000031D B7               [ 4]  614 	or	a, a
+    0000031E 28 0B            [12]  615 	jr	Z, 00117$
+    00000320 21r00r00         [12]  616 	ld	hl, #_background_changed
+    00000323 36 01            [12]  617 	ld	(hl), #0x01
+    00000325 FAr20r01         [16]  618 	ld	a, (#(_game_events + 288) + 0)
+    00000328 EAr00r00         [16]  619 	ld	(#_scene_context_type),a
+    0000032B                        620 00117$:
+                                    621 ;src/game_flow.c:115: DISPLAY_ON;event_advance(&game_events);apply_event();
+    0000032B F0r00            [12]  622 	ldh	a, (_LCDC_REG + 0)
+    0000032D F6 80            [ 8]  623 	or	a, #0x80
+    0000032F E0r00            [12]  624 	ldh	(_LCDC_REG + 0), a
+    00000331 11r00r00         [12]  625 	ld	de, #_game_events
+    00000334 D5               [16]  626 	push	de
+    00000335 1Er00            [ 8]  627 	ld	e, #b_event_advance
+    00000337 21r00r00         [12]  628 	ld	hl, #_event_advance
+    0000033A CDr00r00         [24]  629 	call	___sdcc_bcall_ehl
+    0000033D E1               [12]  630 	pop	hl
+    0000033E 1Er00            [ 8]  631 	ld	e, #b_apply_event
+    00000340 21r35r01         [12]  632 	ld	hl, #_apply_event
+    00000343 CDr00r00         [24]  633 	call	___sdcc_bcall_ehl
+    00000346 C3rA1r04         [16]  634 	jp	00185$
+    00000349                        635 00153$:
+                                    636 ;src/game_flow.c:117: else if(a->kind==EVENT_CUTSCENE)start_recruitment(a->target);
+    00000349 F8 04            [12]  637 	ldhl	sp,	#4
+    0000034B 7E               [ 8]  638 	ld	a, (hl)
+    0000034C D6 15            [ 8]  639 	sub	a, #0x15
+    0000034E 20 11            [12]  640 	jr	NZ, 00150$
+    00000350 FAr20r01         [16]  641 	ld	a, (#(_game_events + 288) + 0)
+    00000353 F5               [16]  642 	push	af
+    00000354 33               [ 8]  643 	inc	sp
+    00000355 1Er00            [ 8]  644 	ld	e, #b_start_recruitment
+    00000357 21r00r00         [12]  645 	ld	hl, #_start_recruitment
+    0000035A CDr00r00         [24]  646 	call	___sdcc_bcall_ehl
+    0000035D 33               [ 8]  647 	inc	sp
+    0000035E C3rA1r04         [16]  648 	jp	00185$
+    00000361                        649 00150$:
+                                    650 ;src/game_flow.c:118: else if(a->kind==EVENT_ENDING)start_ending();
+    00000361 F8 04            [12]  651 	ldhl	sp,	#4
+    00000363 7E               [ 8]  652 	ld	a, (hl)
+    00000364 D6 11            [ 8]  653 	sub	a, #0x11
+    00000366 20 0B            [12]  654 	jr	NZ, 00147$
+    00000368 1Er00            [ 8]  655 	ld	e, #b_start_ending
+    0000036A 21r00r00         [12]  656 	ld	hl, #_start_ending
+    0000036D CDr00r00         [24]  657 	call	___sdcc_bcall_ehl
+    00000370 C3rA1r04         [16]  658 	jp	00185$
+    00000373                        659 00147$:
+                                    660 ;src/game_flow.c:119: else if(a->kind==EVENT_GAME_OVER) {title_choice=saved_position_valid?1u:0u;notice("GAME OVER",STATE_TITLE);}
+    00000373 F8 04            [12]  661 	ldhl	sp,	#4
+    00000375 7E               [ 8]  662 	ld	a, (hl)
+    00000376 D6 12            [ 8]  663 	sub	a, #0x12
+    00000378 20 20            [12]  664 	jr	NZ, 00144$
+    0000037A FAr00r00         [16]  665 	ld	a, (#_saved_position_valid)
+    0000037D B7               [ 4]  666 	or	a, a
+    0000037E 28 06            [12]  667 	jr	Z, 00187$
+    00000380 F8 04            [12]  668 	ldhl	sp,	#4
+    00000382 36 01            [12]  669 	ld	(hl), #0x01
+    00000384 18 04            [12]  670 	jr	00188$
+    00000386                        671 00187$:
+    00000386 F8 04            [12]  672 	ldhl	sp,	#4
+    00000388 36 00            [12]  673 	ld	(hl), #0x00
+    0000038A                        674 00188$:
+    0000038A F8 04            [12]  675 	ldhl	sp,	#4
+    0000038C 7E               [ 8]  676 	ld	a, (hl)
+    0000038D EAr00r00         [16]  677 	ld	(#_title_choice),a
+    00000390 AF               [ 4]  678 	xor	a, a
+    00000391 11rA4r04         [12]  679 	ld	de, #___str_0
+    00000394 CDr00r00         [24]  680 	call	_flow_notice
+    00000397 C3rA1r04         [16]  681 	jp	00185$
+    0000039A                        682 00144$:
+                                    683 ;src/game_flow.c:120: else if(a->kind==EVENT_TRAVEL_MENU) {choice=0;travel_menu();}
+    0000039A F8 04            [12]  684 	ldhl	sp,	#4
+    0000039C 7E               [ 8]  685 	ld	a, (hl)
+    0000039D D6 10            [ 8]  686 	sub	a, #0x10
+    0000039F 20 0F            [12]  687 	jr	NZ, 00141$
+    000003A1 AF               [ 4]  688 	xor	a, a
+    000003A2 EAr00r00         [16]  689 	ld	(#_choice),a
+    000003A5 1Er00            [ 8]  690 	ld	e, #b_travel_menu
+    000003A7 21r00r00         [12]  691 	ld	hl, #_travel_menu
+    000003AA CDr00r00         [24]  692 	call	___sdcc_bcall_ehl
+    000003AD C3rA1r04         [16]  693 	jp	00185$
+    000003B0                        694 00141$:
+                                    695 ;src/game_flow.c:121: else if(a->kind==EVENT_TRAVEL) {
+    000003B0 F8 04            [12]  696 	ldhl	sp,	#4
+    000003B2 7E               [ 8]  697 	ld	a, (hl)
+    000003B3 D6 0F            [ 8]  698 	sub	a, #0x0f
+    000003B5 20 11            [12]  699 	jr	NZ, 00138$
+                                    700 ;src/game_flow.c:122: start_travel(a->target);
+    000003B7 FAr20r01         [16]  701 	ld	a, (#(_game_events + 288) + 0)
+    000003BA F5               [16]  702 	push	af
+    000003BB 33               [ 8]  703 	inc	sp
+    000003BC 1Er00            [ 8]  704 	ld	e, #b_start_travel
+    000003BE 21r00r00         [12]  705 	ld	hl, #_start_travel
+    000003C1 CDr00r00         [24]  706 	call	___sdcc_bcall_ehl
+    000003C4 33               [ 8]  707 	inc	sp
+    000003C5 C3rA1r04         [16]  708 	jp	00185$
+    000003C8                        709 00138$:
+                                    710 ;src/game_flow.c:124: else if(a->kind==EVENT_DIALOGUE||a->kind==EVENT_YES_NO) show_dialogue(a->dialogue_id);
+    000003C8 F8 04            [12]  711 	ldhl	sp,	#4
+    000003CA 7E               [ 8]  712 	ld	a, (hl)
+    000003CB 3D               [ 4]  713 	dec	a
+    000003CC 28 07            [12]  714 	jr	Z, 00133$
+    000003CE F8 04            [12]  715 	ldhl	sp,	#4
+    000003D0 7E               [ 8]  716 	ld	a, (hl)
+    000003D1 D6 02            [ 8]  717 	sub	a, #0x02
+    000003D3 20 0D            [12]  718 	jr	NZ, 00134$
+    000003D5                        719 00133$:
+    000003D5 21r1Br01         [12]  720 	ld	hl, #(_game_events + 282) + 1
+    000003D8 2A               [ 8]  721 	ld	a, (hl+)
+    000003D9 4E               [ 8]  722 	ld	c, (hl)
+    000003DA 5F               [ 4]  723 	ld	e, a
+    000003DB 51               [ 4]  724 	ld	d, c
+    000003DC CDr00r00         [24]  725 	call	_show_dialogue
+    000003DF C3rA1r04         [16]  726 	jp	00185$
+    000003E2                        727 00134$:
+                                    728 ;src/game_flow.c:125: else if(a->kind==EVENT_SHOP||a->kind==EVENT_HOSPITAL||a->kind==EVENT_CHURCH||a->kind==EVENT_SELL) {
+    000003E2 F8 04            [12]  729 	ldhl	sp,	#4
+    000003E4 7E               [ 8]  730 	ld	a, (hl)
+    000003E5 D6 03            [ 8]  731 	sub	a, #0x03
+    000003E7 28 15            [12]  732 	jr	Z, 00127$
+    000003E9 F8 04            [12]  733 	ldhl	sp,	#4
+    000003EB 7E               [ 8]  734 	ld	a, (hl)
+    000003EC D6 04            [ 8]  735 	sub	a, #0x04
+    000003EE 28 0E            [12]  736 	jr	Z, 00127$
+    000003F0 F8 04            [12]  737 	ldhl	sp,	#4
+    000003F2 7E               [ 8]  738 	ld	a, (hl)
+    000003F3 D6 05            [ 8]  739 	sub	a, #0x05
+    000003F5 28 07            [12]  740 	jr	Z, 00127$
+    000003F7 F8 04            [12]  741 	ldhl	sp,	#4
+    000003F9 7E               [ 8]  742 	ld	a, (hl)
+    000003FA D6 06            [ 8]  743 	sub	a, #0x06
+    000003FC 20 26            [12]  744 	jr	NZ, 00128$
+    000003FE                        745 00127$:
+                                    746 ;src/game_flow.c:126: service_active=1;service_begin(&game_service,&game_events,game_events.type,game_events.event);apply_service();
+    000003FE 21r00r00         [12]  747 	ld	hl, #_service_active
+    00000401 36 01            [12]  748 	ld	(hl), #0x01
+    00000403 21r04r01         [12]  749 	ld	hl, #_game_events + 260
+    00000406 56               [ 8]  750 	ld	d, (hl)
+    00000407 21r05r01         [12]  751 	ld	hl, #_game_events + 261
+    0000040A 5E               [ 8]  752 	ld	e, (hl)
+    0000040B D5               [16]  753 	push	de
+    0000040C 11r00r00         [12]  754 	ld	de, #_game_events
+    0000040F D5               [16]  755 	push	de
+    00000410 11r00r00         [12]  756 	ld	de, #_game_service
+    00000413 D5               [16]  757 	push	de
+    00000414 1Er00            [ 8]  758 	ld	e, #b_service_begin
+    00000416 21r00r00         [12]  759 	ld	hl, #_service_begin
+    00000419 CDr00r00         [24]  760 	call	___sdcc_bcall_ehl
+    0000041C E8 06            [16]  761 	add	sp, #6
+    0000041E CDr00r00         [24]  762 	call	_apply_service
+    00000421 C3rA1r04         [16]  763 	jp	00185$
+    00000424                        764 00128$:
+                                    765 ;src/game_flow.c:128: else if(a->kind==EVENT_REPLACE_ITEM) {replace_source=1;item_slot=0;inventory_screen();}
+    00000424 F8 04            [12]  766 	ldhl	sp,	#4
+    00000426 7E               [ 8]  767 	ld	a, (hl)
+    00000427 D6 07            [ 8]  768 	sub	a, #0x07
+    00000429 20 13            [12]  769 	jr	NZ, 00125$
+    0000042B 21r00r00         [12]  770 	ld	hl, #_replace_source
+    0000042E 36 01            [12]  771 	ld	(hl), #0x01
+    00000430 AF               [ 4]  772 	xor	a, a
+    00000431 EAr00r00         [16]  773 	ld	(#_item_slot),a
+    00000434 1Er00            [ 8]  774 	ld	e, #b_inventory_screen
+    00000436 21r00r00         [12]  775 	ld	hl, #_inventory_screen
+    00000439 CDr00r00         [24]  776 	call	___sdcc_bcall_ehl
+    0000043C 18 63            [12]  777 	jr	00185$
+    0000043E                        778 00125$:
+                                    779 ;src/game_flow.c:129: else if(a->kind==EVENT_TRANSITION) {
+    0000043E F8 04            [12]  780 	ldhl	sp,	#4
+    00000440 7E               [ 8]  781 	ld	a, (hl)
+    00000441 D6 08            [ 8]  782 	sub	a, #0x08
+    00000443 20 10            [12]  783 	jr	NZ, 00122$
+                                    784 ;src/game_flow.c:130: start_travel(a->target);
+    00000445 FAr20r01         [16]  785 	ld	a, (#(_game_events + 288) + 0)
+    00000448 F5               [16]  786 	push	af
+    00000449 33               [ 8]  787 	inc	sp
+    0000044A 1Er00            [ 8]  788 	ld	e, #b_start_travel
+    0000044C 21r00r00         [12]  789 	ld	hl, #_start_travel
+    0000044F CDr00r00         [24]  790 	call	___sdcc_bcall_ehl
+    00000452 33               [ 8]  791 	inc	sp
+    00000453 18 4C            [12]  792 	jr	00185$
+    00000455                        793 00122$:
+                                    794 ;src/game_flow.c:131: } else if(a->kind==EVENT_MAP_TRANSITION) {
+    00000455 F8 04            [12]  795 	ldhl	sp,	#4
+    00000457 7E               [ 8]  796 	ld	a, (hl)
+    00000458 D6 09            [ 8]  797 	sub	a, #0x09
+    0000045A 20 3D            [12]  798 	jr	NZ, 00119$
+                                    799 ;src/game_flow.c:132: uint16_t x,y;world_action.target=a->target;world_action.a=a->a;world_action.b=a->b;
+    0000045C 01r01r00         [12]  800 	ld	bc, #_world_action + 1
+    0000045F FAr20r01         [16]  801 	ld	a, (#(_game_events + 288) + 0)
+    00000462 02               [ 8]  802 	ld	(bc), a
+    00000463 FAr21r01         [16]  803 	ld	a, (#(_game_events + 289) + 0)
+    00000466 21r02r00         [12]  804 	ld	hl, #(_world_action + 2)
+    00000469 22               [ 8]  805 	ld	(hl+), a
+    0000046A FAr22r01         [16]  806 	ld	a, (#(_game_events + 290) + 0)
+    0000046D 77               [ 8]  807 	ld	(hl), a
+                                    808 ;src/game_flow.c:133: world_decode_destination(&world_action,&x,&y);enter_map(world_action.target,x,y);
+    0000046E F8 00            [12]  809 	ldhl	sp,	#0
+    00000470 5D               [ 4]  810 	ld	e, l
+    00000471 54               [ 4]  811 	ld	d, h
+    00000472 C5               [16]  812 	push	bc
+    00000473 21 04 00         [12]  813 	ld	hl, #4
+    00000476 39               [ 8]  814 	add	hl, sp
+    00000477 E5               [16]  815 	push	hl
+    00000478 D5               [16]  816 	push	de
+    00000479 11r00r00         [12]  817 	ld	de, #_world_action
+    0000047C D5               [16]  818 	push	de
+    0000047D 1Er00            [ 8]  819 	ld	e, #b_world_decode_destination
+    0000047F 21r00r00         [12]  820 	ld	hl, #_world_decode_destination
+    00000482 CDr00r00         [24]  821 	call	___sdcc_bcall_ehl
+    00000485 E8 06            [16]  822 	add	sp, #6
+    00000487 C1               [12]  823 	pop	bc
+    00000488 0A               [ 8]  824 	ld	a, (bc)
+    00000489 F8 02            [12]  825 	ldhl	sp,	#2
+    0000048B 5E               [ 8]  826 	ld	e, (hl)
+    0000048C 23               [ 8]  827 	inc	hl
+    0000048D 56               [ 8]  828 	ld	d, (hl)
+    0000048E D5               [16]  829 	push	de
+    0000048F F8 02            [12]  830 	ldhl	sp,	#2
+    00000491 5E               [ 8]  831 	ld	e, (hl)
+    00000492 23               [ 8]  832 	inc	hl
+    00000493 56               [ 8]  833 	ld	d, (hl)
+    00000494 CDr00r00         [24]  834 	call	_enter_map
+    00000497 18 08            [12]  835 	jr	00185$
+    00000499                        836 00119$:
+                                    837 ;src/game_flow.c:134: } else notice("EVENT NOT YET PORTED",STATE_WALK);
+    00000499 3E 01            [ 8]  838 	ld	a, #0x01
+    0000049B 11rAEr04         [12]  839 	ld	de, #___str_1
+    0000049E CDr00r00         [24]  840 	call	_flow_notice
+    000004A1                        841 00185$:
+                                    842 ;src/game_flow.c:135: }
+    000004A1 E8 05            [16]  843 	add	sp, #5
+    000004A3 C9               [16]  844 	ret
+    000004A4                        845 ___str_0:
+    000004A4 47 41 4D 45 20 4F 56   846 	.ascii "GAME OVER"
+             45 52
+    000004AD 00                     847 	.db 0x00
+    000004AE                        848 ___str_1:
+    000004AE 45 56 45 4E 54 20 4E   849 	.ascii "EVENT NOT YET PORTED"
+             4F 54 20 59 45 54 20
+             50 4F 52 54 45 44
+    000004C2 00                     850 	.db 0x00
+                                    851 ;src/game_flow.c:137: void apply_dungeon(void) RPG_BANKED {
+                                    852 ;	---------------------------------
+                                    853 ; Function apply_dungeon
+                                    854 ; ---------------------------------
+                         0000000C   855 	b_apply_dungeon	= 12
+    000004C3                        856 _apply_dungeon::
+    000004C3 E8 FB            [16]  857 	add	sp, #-5
+                                    858 ;src/game_flow.c:138: DungeonPlayAction *a=&game_dungeon.action;
+                                    859 ;src/game_flow.c:140: retained_trap=game_dungeon.retained_trap;
+    000004C5 FAr12r01         [16]  860 	ld	a, (#(_game_dungeon + 274) + 0)
+    000004C8 EAr00r00         [16]  861 	ld	(#_retained_trap),a
+                                    862 ;src/game_flow.c:141: if(a->kind==DPLAY_VIEW){draw_dungeon();screen_state=STATE_DUNGEON;dungeon_keys_delay=8;}
+    000004CB FAr13r01         [16]  863 	ld	a, (#(_game_dungeon + 275) + 0)
+    000004CE F8 04            [12]  864 	ldhl	sp,#4
+    000004D0 77               [ 8]  865 	ld	(hl), a
+    000004D1 7E               [ 8]  866 	ld	a, (hl)
+    000004D2 B7               [ 4]  867 	or	a, a
+    000004D3 20 10            [12]  868 	jr	NZ, 00135$
+    000004D5 CDr00r00         [24]  869 	call	_draw_dungeon
+    000004D8 21r00r00         [12]  870 	ld	hl, #_screen_state
+    000004DB 36 11            [12]  871 	ld	(hl), #0x11
+    000004DD 21r00r00         [12]  872 	ld	hl, #_dungeon_keys_delay
+    000004E0 36 08            [12]  873 	ld	(hl), #0x08
+    000004E2 C3r31r07         [16]  874 	jp	00137$
+    000004E5                        875 00135$:
+                                    876 ;src/game_flow.c:142: else if(a->kind==DPLAY_MENU){menu_choice=0;menu_screen();}
+    000004E5 F8 04            [12]  877 	ldhl	sp,	#4
+    000004E7 7E               [ 8]  878 	ld	a, (hl)
+    000004E8 3D               [ 4]  879 	dec	a
+    000004E9 20 0E            [12]  880 	jr	NZ, 00132$
+    000004EB EAr00r00         [16]  881 	ld	(#_menu_choice),a
+    000004EE 1Er00            [ 8]  882 	ld	e, #b_menu_screen
+    000004F0 21r00r00         [12]  883 	ld	hl, #_menu_screen
+    000004F3 CDr00r00         [24]  884 	call	___sdcc_bcall_ehl
+    000004F6 C3r31r07         [16]  885 	jp	00137$
+    000004F9                        886 00132$:
+                                    887 ;src/game_flow.c:144: battle_object_flag=a->flag_address;begin_battle(a->target,2);
+                                    888 ;src/game_flow.c:145: if(a->type)battle_view_battle.item_reward=a->a;
+                                    889 ;src/game_flow.c:143: else if(a->kind==DPLAY_BATTLE) {
+    000004F9 F8 04            [12]  890 	ldhl	sp,	#4
+    000004FB 7E               [ 8]  891 	ld	a, (hl)
+    000004FC D6 02            [ 8]  892 	sub	a, #0x02
+    000004FE 20 23            [12]  893 	jr	NZ, 00129$
+                                    894 ;src/game_flow.c:144: battle_object_flag=a->flag_address;begin_battle(a->target,2);
+    00000500 11r18r01         [12]  895 	ld	de, #(_game_dungeon + 280)
+    00000503 1A               [ 8]  896 	ld	a, (de)
+    00000504 21r00r00         [12]  897 	ld	hl, #_battle_object_flag
+    00000507 22               [ 8]  898 	ld	(hl+), a
+    00000508 13               [ 8]  899 	inc	de
+    00000509 1A               [ 8]  900 	ld	a, (de)
+    0000050A 77               [ 8]  901 	ld	(hl), a
+    0000050B FAr14r01         [16]  902 	ld	a, (#(_game_dungeon + 276) + 0)
+    0000050E 1E 02            [ 8]  903 	ld	e, #0x02
+    00000510 CDr00r00         [24]  904 	call	_begin_battle
+                                    905 ;src/game_flow.c:145: if(a->type)battle_view_battle.item_reward=a->a;
+    00000513 FAr17r01         [16]  906 	ld	a, (#(_game_dungeon + 279) + 0)
+    00000516 B7               [ 4]  907 	or	a, a
+    00000517 CAr31r07         [16]  908 	jp	Z, 00137$
+    0000051A FAr15r01         [16]  909 	ld	a, (#(_game_dungeon + 277) + 0)
+    0000051D EAr98r00         [16]  910 	ld	(#(_battle_view_battle + 152)),a
+    00000520 C3r31r07         [16]  911 	jp	00137$
+    00000523                        912 00129$:
+                                    913 ;src/game_flow.c:147: else if(a->kind==DPLAY_CHEST) {
+    00000523 F8 04            [12]  914 	ldhl	sp,	#4
+    00000525 7E               [ 8]  915 	ld	a, (hl)
+    00000526 D6 03            [ 8]  916 	sub	a, #0x03
+    00000528 20 59            [12]  917 	jr	NZ, 00126$
+                                    918 ;src/game_flow.c:148: draw_dungeon();battle_from_event=2;battle_object_flag=a->flag_address;
+    0000052A CDr00r00         [24]  919 	call	_draw_dungeon
+    0000052D 21r00r00         [12]  920 	ld	hl, #_battle_from_event
+    00000530 36 02            [12]  921 	ld	(hl), #0x02
+    00000532 11r18r01         [12]  922 	ld	de, #(_game_dungeon + 280)
+    00000535 1A               [ 8]  923 	ld	a, (de)
+    00000536 21r00r00         [12]  924 	ld	hl, #_battle_object_flag
+    00000539 22               [ 8]  925 	ld	(hl+), a
+    0000053A 13               [ 8]  926 	inc	de
+    0000053B 1A               [ 8]  927 	ld	a, (de)
+    0000053C 77               [ 8]  928 	ld	(hl), a
+                                    929 ;src/game_flow.c:149: retained_trap=a->a;
+    0000053D FAr15r01         [16]  930 	ld	a, (#(_game_dungeon + 277) + 0)
+    00000540 EAr00r00         [16]  931 	ld	(#_retained_trap),a
+                                    932 ;src/game_flow.c:150: battle_scene_configure(scene_context_type,game_dungeon.dungeon.palette_index);
+    00000543 FAr06r00         [16]  933 	ld	a, (#(_game_dungeon + 6) + 0)
+    00000546 F5               [16]  934 	push	af
+    00000547 33               [ 8]  935 	inc	sp
+    00000548 FAr00r00         [16]  936 	ld	a, (_scene_context_type)
+    0000054B F5               [16]  937 	push	af
+    0000054C 33               [ 8]  938 	inc	sp
+    0000054D 1Er00            [ 8]  939 	ld	e, #b_battle_scene_configure
+    0000054F 21r00r00         [12]  940 	ld	hl, #_battle_scene_configure
+    00000552 CDr00r00         [24]  941 	call	___sdcc_bcall_ehl
+    00000555 E1               [12]  942 	pop	hl
+                                    943 ;src/game_flow.c:151: battle_view_chest_begin(&game_rpg,a->target,a->money,retained_trap);screen_state=STATE_BATTLE;
+    00000556 21r1Ar01         [12]  944 	ld	hl, #(_game_dungeon + 275) + 7
+    00000559 2A               [ 8]  945 	ld	a, (hl+)
+    0000055A 4F               [ 4]  946 	ld	c, a
+    0000055B 46               [ 8]  947 	ld	b, (hl)
+    0000055C FAr14r01         [16]  948 	ld	a, (#(_game_dungeon + 276) + 0)
+    0000055F F8 04            [12]  949 	ldhl	sp,	#4
+    00000561 77               [ 8]  950 	ld	(hl), a
+    00000562 FAr00r00         [16]  951 	ld	a, (_retained_trap)
+    00000565 F5               [16]  952 	push	af
+    00000566 33               [ 8]  953 	inc	sp
+    00000567 C5               [16]  954 	push	bc
+    00000568 F8 07            [12]  955 	ldhl	sp,	#7
+    0000056A 7E               [ 8]  956 	ld	a, (hl)
+    0000056B F5               [16]  957 	push	af
+    0000056C 33               [ 8]  958 	inc	sp
+    0000056D 11r00r00         [12]  959 	ld	de, #_game_rpg
+    00000570 D5               [16]  960 	push	de
+    00000571 1Er00            [ 8]  961 	ld	e, #b_battle_view_chest_begin
+    00000573 21r00r00         [12]  962 	ld	hl, #_battle_view_chest_begin
+    00000576 CDr00r00         [24]  963 	call	___sdcc_bcall_ehl
+    00000579 E8 06            [16]  964 	add	sp, #6
+    0000057B 21r00r00         [12]  965 	ld	hl, #_screen_state
+    0000057E 36 0F            [12]  966 	ld	(hl), #0x0f
+    00000580 C3r31r07         [16]  967 	jp	00137$
+    00000583                        968 00126$:
+                                    969 ;src/game_flow.c:160: if(a->b>=253u) {
+                                    970 ;src/game_flow.c:153: else if(a->kind==DPLAY_EVENT) {
+    00000583 F8 04            [12]  971 	ldhl	sp,	#4
+    00000585 7E               [ 8]  972 	ld	a, (hl)
+    00000586 D6 04            [ 8]  973 	sub	a, #0x04
+    00000588 C2r9Dr06         [16]  974 	jp	NZ, 00123$
+                                    975 ;src/game_flow.c:154: draw_dungeon();
+    0000058B CDr00r00         [24]  976 	call	_draw_dungeon
+                                    977 ;src/game_flow.c:155: type=a->type==255u?game_events.type:a->type;
+    0000058E 21r17r01         [12]  978 	ld	hl, #(_game_dungeon + 279)
+    00000591 4E               [ 8]  979 	ld	c, (hl)
+    00000592 79               [ 4]  980 	ld	a, c
+    00000593 3C               [ 4]  981 	inc	a
+    00000594 20 05            [12]  982 	jr	NZ, 00139$
+    00000596 FAr05r01         [16]  983 	ld	a, (#(_game_events + 261) + 0)
+    00000599 18 01            [12]  984 	jr	00140$
+    0000059B                        985 00139$:
+    0000059B 79               [ 4]  986 	ld	a, c
+    0000059C                        987 00140$:
+    0000059C F8 04            [12]  988 	ldhl	sp,	#4
+    0000059E 77               [ 8]  989 	ld	(hl), a
+                                    990 ;src/game_flow.c:156: if(a->type) {
+    0000059F 79               [ 4]  991 	ld	a, c
+    000005A0 B7               [ 4]  992 	or	a, a
+    000005A1 CAr3Cr06         [16]  993 	jp	Z, 00109$
+                                    994 ;src/game_flow.c:159: game_transition_fade_out();background_changed=1;
+    000005A4 1Er00            [ 8]  995 	ld	e, #b_game_transition_fade_out
+    000005A6 21r00r00         [12]  996 	ld	hl, #_game_transition_fade_out
+    000005A9 CDr00r00         [24]  997 	call	___sdcc_bcall_ehl
+    000005AC 21r00r00         [12]  998 	ld	hl, #_background_changed
+    000005AF 36 01            [12]  999 	ld	(hl), #0x01
+                                   1000 ;src/game_flow.c:160: if(a->b>=253u) {
+    000005B1 FAr16r01         [16] 1001 	ld	a, (#(_game_dungeon + 278) + 0)
+    000005B4 D6 FD            [ 8] 1002 	sub	a, #0xfd
+    000005B6 DAr3Cr06         [16] 1003 	jp	C, 00109$
+                                   1004 ;src/game_flow.c:161: DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;scene_actor_hide();
+    000005B9 CDr00r00         [24] 1005 	call	_display_off
+    000005BC F0r00            [12] 1006 	ldh	a, (_LCDC_REG + 0)
+    000005BE E6 DF            [ 8] 1007 	and	a, #0xdf
+    000005C0 E0r00            [12] 1008 	ldh	(_LCDC_REG + 0), a
+    000005C2 F0r00            [12] 1009 	ldh	a, (_LCDC_REG + 0)
+    000005C4 E6 FD            [ 8] 1010 	and	a, #0xfd
+    000005C6 E0r00            [12] 1011 	ldh	(_LCDC_REG + 0), a
+    000005C8 1Er00            [ 8] 1012 	ld	e, #b_scene_actor_hide
+    000005CA 21r00r00         [12] 1013 	ld	hl, #_scene_actor_hide
+    000005CD CDr00r00         [24] 1014 	call	___sdcc_bcall_ehl
+                                   1015 ;src/game_flow.c:162: if(a->b==255u) {
+    000005D0 FAr16r01         [16] 1016 	ld	a, (#(_game_dungeon + 278) + 0)
+    000005D3 3C               [ 4] 1017 	inc	a
+    000005D4 20 1E            [12] 1018 	jr	NZ, 00104$
+                                   1019 ;src/game_flow.c:163: scene_show_room(game_dungeon.dungeon.palette_index,0u,0u);
+    000005D6 21r06r00         [12] 1020 	ld	hl, #(_game_dungeon + 6)
+    000005D9 46               [ 8] 1021 	ld	b, (hl)
+    000005DA AF               [ 4] 1022 	xor	a, a
+    000005DB 0F               [ 4] 1023 	rrca
+    000005DC F5               [16] 1024 	push	af
+    000005DD AF               [ 4] 1025 	xor	a, a
+    000005DE C5               [16] 1026 	push	bc
+    000005DF 33               [ 8] 1027 	inc	sp
+    000005E0 1Er00            [ 8] 1028 	ld	e, #b_scene_show_room
+    000005E2 21r00r00         [12] 1029 	ld	hl, #_scene_show_room
+    000005E5 CDr00r00         [24] 1030 	call	___sdcc_bcall_ehl
+    000005E8 E8 03            [16] 1031 	add	sp, #3
+                                   1032 ;src/game_flow.c:164: scene_context_type=64u+game_dungeon.dungeon.palette_index;
+    000005EA FAr06r00         [16] 1033 	ld	a, (#(_game_dungeon + 6) + 0)
+    000005ED C6 40            [ 8] 1034 	add	a, #0x40
+    000005EF EAr00r00         [16] 1035 	ld	(#_scene_context_type),a
+    000005F2 18 18            [12] 1036 	jr	00105$
+    000005F4                       1037 00104$:
+                                   1038 ;src/game_flow.c:165: } else {scene_show(type,0u,0u);scene_context_type=type;}
+    000005F4 AF               [ 4] 1039 	xor	a, a
+    000005F5 0F               [ 4] 1040 	rrca
+    000005F6 F5               [16] 1041 	push	af
+    000005F7 F8 06            [12] 1042 	ldhl	sp,	#6
+    000005F9 7E               [ 8] 1043 	ld	a, (hl)
+    000005FA F5               [16] 1044 	push	af
+    000005FB 33               [ 8] 1045 	inc	sp
+    000005FC 1Er00            [ 8] 1046 	ld	e, #b_scene_show
+    000005FE 21r00r00         [12] 1047 	ld	hl, #_scene_show
+    00000601 CDr00r00         [24] 1048 	call	___sdcc_bcall_ehl
+    00000604 E8 03            [16] 1049 	add	sp, #3
+    00000606 F8 04            [12] 1050 	ldhl	sp,	#4
+    00000608 7E               [ 8] 1051 	ld	a, (hl)
+    00000609 EAr00r00         [16] 1052 	ld	(#_scene_context_type),a
+    0000060C                       1053 00105$:
+                                   1054 ;src/game_flow.c:166: background_changed=1;scene_fade_begin(1u);DISPLAY_ON;
+    0000060C 21r00r00         [12] 1055 	ld	hl, #_background_changed
+    0000060F 36 01            [12] 1056 	ld	(hl), #0x01
+    00000611 3E 01            [ 8] 1057 	ld	a, #0x01
+    00000613 F5               [16] 1058 	push	af
+    00000614 33               [ 8] 1059 	inc	sp
+    00000615 1Er00            [ 8] 1060 	ld	e, #b_scene_fade_begin
+    00000617 21r00r00         [12] 1061 	ld	hl, #_scene_fade_begin
+    0000061A CDr00r00         [24] 1062 	call	___sdcc_bcall_ehl
+    0000061D 33               [ 8] 1063 	inc	sp
+    0000061E F0r00            [12] 1064 	ldh	a, (_LCDC_REG + 0)
+    00000620 F6 80            [ 8] 1065 	or	a, #0x80
+    00000622 E0r00            [12] 1066 	ldh	(_LCDC_REG + 0), a
+                                   1067 ;src/game_flow.c:167: game_transition_wait(1u,0u);game_transition_fade_in();
+    00000624 AF               [ 4] 1068 	xor	a, a
+    00000625 F5               [16] 1069 	push	af
+    00000626 33               [ 8] 1070 	inc	sp
+    00000627 3E 01            [ 8] 1071 	ld	a, #0x01
+    00000629 F5               [16] 1072 	push	af
+    0000062A 33               [ 8] 1073 	inc	sp
+    0000062B 1Er00            [ 8] 1074 	ld	e, #b_game_transition_wait
+    0000062D 21r00r00         [12] 1075 	ld	hl, #_game_transition_wait
+    00000630 CDr00r00         [24] 1076 	call	___sdcc_bcall_ehl
+    00000633 E1               [12] 1077 	pop	hl
+    00000634 1Er00            [ 8] 1078 	ld	e, #b_game_transition_fade_in
+    00000636 21r00r00         [12] 1079 	ld	hl, #_game_transition_fade_in
+    00000639 CDr00r00         [24] 1080 	call	___sdcc_bcall_ehl
+    0000063C                       1081 00109$:
+                                   1082 ;src/game_flow.c:171: event_begin(&game_events,type,a->target,a->a,world_map_id);
+    0000063C 21r15r01         [12] 1083 	ld	hl, #(_game_dungeon + 277)
+    0000063F 46               [ 8] 1084 	ld	b, (hl)
+    00000640 21r14r01         [12] 1085 	ld	hl, #(_game_dungeon + 275) + 1
+    00000643 56               [ 8] 1086 	ld	d, (hl)
+    00000644 FAr00r00         [16] 1087 	ld	a, (_world_map_id)
+    00000647 F5               [16] 1088 	push	af
+    00000648 33               [ 8] 1089 	inc	sp
+    00000649 4A               [ 4] 1090 	ld	c, d
+    0000064A C5               [16] 1091 	push	bc
+    0000064B F8 07            [12] 1092 	ldhl	sp,	#7
+    0000064D 7E               [ 8] 1093 	ld	a, (hl)
+    0000064E F5               [16] 1094 	push	af
+    0000064F 33               [ 8] 1095 	inc	sp
+    00000650 11r00r00         [12] 1096 	ld	de, #_game_events
+    00000653 D5               [16] 1097 	push	de
+    00000654 1Er00            [ 8] 1098 	ld	e, #b_event_begin
+    00000656 21r00r00         [12] 1099 	ld	hl, #_event_begin
+    00000659 CDr00r00         [24] 1100 	call	___sdcc_bcall_ehl
+    0000065C E8 06            [16] 1101 	add	sp, #6
+                                   1102 ;src/game_flow.c:172: DISPLAY_OFF;
+    0000065E CDr00r00         [24] 1103 	call	_display_off
+                                   1104 ;src/game_flow.c:173: if(game_events.prepared_enemy)scene_enemy_show(game_events.prepared_enemy,game_dungeon.dungeon.palette_index);
+    00000661 FAr0Er01         [16] 1105 	ld	a, (#(_game_events + 270) + 0)
+    00000664 F8 04            [12] 1106 	ldhl	sp,#4
+    00000666 77               [ 8] 1107 	ld	(hl), a
+    00000667 7E               [ 8] 1108 	ld	a, (hl)
+    00000668 B7               [ 4] 1109 	or	a, a
+    00000669 28 13            [12] 1110 	jr	Z, 00111$
+    0000066B FAr06r00         [16] 1111 	ld	a, (#(_game_dungeon + 6) + 0)
+    0000066E F5               [16] 1112 	push	af
+    0000066F 33               [ 8] 1113 	inc	sp
+    00000670 7E               [ 8] 1114 	ld	a, (hl)
+    00000671 F5               [16] 1115 	push	af
+    00000672 33               [ 8] 1116 	inc	sp
+    00000673 1Er00            [ 8] 1117 	ld	e, #b_scene_enemy_show
+    00000675 21r00r00         [12] 1118 	ld	hl, #_scene_enemy_show
+    00000678 CDr00r00         [24] 1119 	call	___sdcc_bcall_ehl
+    0000067B E1               [12] 1120 	pop	hl
+    0000067C 18 0E            [12] 1121 	jr	00112$
+    0000067E                       1122 00111$:
+                                   1123 ;src/game_flow.c:174: else scene_portrait_show(game_events.portrait);
+    0000067E FAr06r01         [16] 1124 	ld	a, (#(_game_events + 262) + 0)
+    00000681 F5               [16] 1125 	push	af
+    00000682 33               [ 8] 1126 	inc	sp
+    00000683 1Er00            [ 8] 1127 	ld	e, #b_scene_portrait_show
+    00000685 21r00r00         [12] 1128 	ld	hl, #_scene_portrait_show
+    00000688 CDr00r00         [24] 1129 	call	___sdcc_bcall_ehl
+    0000068B 33               [ 8] 1130 	inc	sp
+    0000068C                       1131 00112$:
+                                   1132 ;src/game_flow.c:175: DISPLAY_ON;
+    0000068C F0r00            [12] 1133 	ldh	a, (_LCDC_REG + 0)
+    0000068E F6 80            [ 8] 1134 	or	a, #0x80
+    00000690 E0r00            [12] 1135 	ldh	(_LCDC_REG + 0), a
+                                   1136 ;src/game_flow.c:176: apply_event();
+    00000692 1Er00            [ 8] 1137 	ld	e, #b_apply_event
+    00000694 21r35r01         [12] 1138 	ld	hl, #_apply_event
+    00000697 CDr00r00         [24] 1139 	call	___sdcc_bcall_ehl
+    0000069A C3r31r07         [16] 1140 	jp	00137$
+    0000069D                       1141 00123$:
+                                   1142 ;src/game_flow.c:178: else if(a->kind==DPLAY_MAP) {
+    0000069D F8 04            [12] 1143 	ldhl	sp,	#4
+    0000069F 7E               [ 8] 1144 	ld	a, (hl)
+    000006A0 D6 05            [ 8] 1145 	sub	a, #0x05
+    000006A2 20 43            [12] 1146 	jr	NZ, 00120$
+                                   1147 ;src/game_flow.c:179: world_action.target=a->target;world_action.a=a->a;world_action.b=a->b;
+    000006A4 FAr14r01         [16] 1148 	ld	a, (#(_game_dungeon + 276) + 0)
+    000006A7 21r01r00         [12] 1149 	ld	hl, #(_world_action + 1)
+    000006AA 22               [ 8] 1150 	ld	(hl+), a
+    000006AB FAr15r01         [16] 1151 	ld	a, (#(_game_dungeon + 277) + 0)
+    000006AE 77               [ 8] 1152 	ld	(hl), a
+    000006AF FAr16r01         [16] 1153 	ld	a, (#(_game_dungeon + 278) + 0)
+    000006B2 F8 04            [12] 1154 	ldhl	sp,	#4
+    000006B4 77               [ 8] 1155 	ld	(hl), a
+    000006B5 11r03r00         [12] 1156 	ld	de, #(_world_action + 3)
+    000006B8 F8 04            [12] 1157 	ldhl	sp,	#4
+    000006BA 7E               [ 8] 1158 	ld	a, (hl)
+    000006BB 12               [ 8] 1159 	ld	(de), a
+                                   1160 ;src/game_flow.c:180: world_decode_destination(&world_action,&x,&y);enter_map(world_action.target,x,y);
+    000006BC 21 02 00         [12] 1161 	ld	hl, #2
+    000006BF 39               [ 8] 1162 	add	hl, sp
+    000006C0 E5               [16] 1163 	push	hl
+    000006C1 21 02 00         [12] 1164 	ld	hl, #2
+    000006C4 39               [ 8] 1165 	add	hl, sp
+    000006C5 E5               [16] 1166 	push	hl
+    000006C6 11r00r00         [12] 1167 	ld	de, #_world_action
+    000006C9 D5               [16] 1168 	push	de
+    000006CA 1Er00            [ 8] 1169 	ld	e, #b_world_decode_destination
+    000006CC 21r00r00         [12] 1170 	ld	hl, #_world_decode_destination
+    000006CF CDr00r00         [24] 1171 	call	___sdcc_bcall_ehl
+    000006D2 E8 06            [16] 1172 	add	sp, #6
+    000006D4 FAr01r00         [16] 1173 	ld	a, (#(_world_action + 1) + 0)
+    000006D7 F8 02            [12] 1174 	ldhl	sp,	#2
+    000006D9 5E               [ 8] 1175 	ld	e, (hl)
+    000006DA 23               [ 8] 1176 	inc	hl
+    000006DB 56               [ 8] 1177 	ld	d, (hl)
+    000006DC D5               [16] 1178 	push	de
+    000006DD F8 02            [12] 1179 	ldhl	sp,	#2
+    000006DF 5E               [ 8] 1180 	ld	e, (hl)
+    000006E0 23               [ 8] 1181 	inc	hl
+    000006E1 56               [ 8] 1182 	ld	d, (hl)
+    000006E2 CDr00r00         [24] 1183 	call	_enter_map
+    000006E5 18 4A            [12] 1184 	jr	00137$
+    000006E7                       1185 00120$:
+                                   1186 ;src/game_flow.c:182: else if(a->kind==DPLAY_EXIT)enter_map(world_map_id,player_x,player_y);
+    000006E7 F8 04            [12] 1187 	ldhl	sp,	#4
+    000006E9 7E               [ 8] 1188 	ld	a, (hl)
+    000006EA D6 06            [ 8] 1189 	sub	a, #0x06
+    000006EC 20 19            [12] 1190 	jr	NZ, 00117$
+    000006EE FAr00r00         [16] 1191 	ld	a, (_player_y)
+    000006F1 5F               [ 4] 1192 	ld	e, a
+    000006F2 21r01r00         [12] 1193 	ld	hl, #_player_y + 1
+    000006F5 56               [ 8] 1194 	ld	d, (hl)
+    000006F6 D5               [16] 1195 	push	de
+    000006F7 FAr00r00         [16] 1196 	ld	a, (_player_x)
+    000006FA 5F               [ 4] 1197 	ld	e, a
+    000006FB 21r01r00         [12] 1198 	ld	hl, #_player_x + 1
+    000006FE 56               [ 8] 1199 	ld	d, (hl)
+    000006FF FAr00r00         [16] 1200 	ld	a, (_world_map_id)
+    00000702 CDr00r00         [24] 1201 	call	_enter_map
+    00000705 18 2A            [12] 1202 	jr	00137$
+    00000707                       1203 00117$:
+                                   1204 ;src/game_flow.c:183: else if(a->kind==DPLAY_DARK) {
+    00000707 F8 04            [12] 1205 	ldhl	sp,	#4
+    00000709 7E               [ 8] 1206 	ld	a, (hl)
+    0000070A D6 07            [ 8] 1207 	sub	a, #0x07
+    0000070C 20 1B            [12] 1208 	jr	NZ, 00114$
+                                   1209 ;src/game_flow.c:184: draw_dungeon();dark_menu_pending=1;
+    0000070E CDr00r00         [24] 1210 	call	_draw_dungeon
+    00000711 21r00r00         [12] 1211 	ld	hl, #_dark_menu_pending
+    00000714 36 01            [12] 1212 	ld	(hl), #0x01
+                                   1213 ;src/game_flow.c:185: game_events.action.kind=EVENT_MENU;game_events.action.dialogue_id=0xb392;show_dialogue(0xb392);
+    00000716 21r1Ar01         [12] 1214 	ld	hl, #(_game_events + 282)
+    00000719 3E 0A            [ 8] 1215 	ld	a, #0x0a
+    0000071B 22               [ 8] 1216 	ld	(hl+), a
+    0000071C 3E 92            [ 8] 1217 	ld	a, #0x92
+    0000071E 22               [ 8] 1218 	ld	(hl+), a
+    0000071F 36 B3            [12] 1219 	ld	(hl), #0xb3
+    00000721 11 92 B3         [12] 1220 	ld	de, #0xb392
+    00000724 CDr00r00         [24] 1221 	call	_show_dialogue
+    00000727 18 08            [12] 1222 	jr	00137$
+    00000729                       1223 00114$:
+                                   1224 ;src/game_flow.c:187: else notice("DUNGEON STATE ERROR",STATE_WALK);
+    00000729 3E 01            [ 8] 1225 	ld	a, #0x01
+    0000072B 11r34r07         [12] 1226 	ld	de, #___str_2
+    0000072E CDr00r00         [24] 1227 	call	_flow_notice
+    00000731                       1228 00137$:
+                                   1229 ;src/game_flow.c:188: }
+    00000731 E8 05            [16] 1230 	add	sp, #5
+    00000733 C9               [16] 1231 	ret
+    00000734                       1232 ___str_2:
+    00000734 44 55 4E 47 45 4F 4E  1233 	.ascii "DUNGEON STATE ERROR"
+             20 53 54 41 54 45 20
+             45 52 52 4F 52
+    00000747 00                    1234 	.db 0x00
+                                   1235 ;src/game_flow.c:190: void show_interaction_scene(uint8_t type,uint8_t portrait,uint8_t enemy) RPG_BANKED {
+                                   1236 ;	---------------------------------
+                                   1237 ; Function show_interaction_scene
+                                   1238 ; ---------------------------------
+                         0000000C  1239 	b_show_interaction_scene	= 12
+    00000748                       1240 _show_interaction_scene::
+                                   1241 ;src/game_flow.c:192: audio_command(0xd6);game_transition_fade_out();
+    00000748 3E D6            [ 8] 1242 	ld	a, #0xd6
+    0000074A F5               [16] 1243 	push	af
+    0000074B 33               [ 8] 1244 	inc	sp
+    0000074C 1Er00            [ 8] 1245 	ld	e, #b_audio_command
+    0000074E 21r00r00         [12] 1246 	ld	hl, #_audio_command
+    00000751 CDr00r00         [24] 1247 	call	___sdcc_bcall_ehl
+    00000754 33               [ 8] 1248 	inc	sp
+    00000755 1Er00            [ 8] 1249 	ld	e, #b_game_transition_fade_out
+    00000757 21r00r00         [12] 1250 	ld	hl, #_game_transition_fade_out
+    0000075A CDr00r00         [24] 1251 	call	___sdcc_bcall_ehl
+                                   1252 ;src/game_flow.c:193: scene_context_type=type;
+    0000075D F8 06            [12] 1253 	ldhl	sp,	#6
+    0000075F 46               [ 8] 1254 	ld	b, (hl)
+    00000760 21r00r00         [12] 1255 	ld	hl, #_scene_context_type
+    00000763 70               [ 8] 1256 	ld	(hl), b
+                                   1257 ;src/game_flow.c:194: DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;scene_actor_hide();
+    00000764 CDr00r00         [24] 1258 	call	_display_off
+    00000767 F0r00            [12] 1259 	ldh	a, (_LCDC_REG + 0)
+    00000769 E6 DF            [ 8] 1260 	and	a, #0xdf
+    0000076B E0r00            [12] 1261 	ldh	(_LCDC_REG + 0), a
+    0000076D F0r00            [12] 1262 	ldh	a, (_LCDC_REG + 0)
+    0000076F E6 FD            [ 8] 1263 	and	a, #0xfd
+    00000771 E0r00            [12] 1264 	ldh	(_LCDC_REG + 0), a
+    00000773 C5               [16] 1265 	push	bc
+    00000774 1Er00            [ 8] 1266 	ld	e, #b_scene_actor_hide
+    00000776 21r00r00         [12] 1267 	ld	hl, #_scene_actor_hide
+    00000779 CDr00r00         [24] 1268 	call	___sdcc_bcall_ehl
+    0000077C C1               [12] 1269 	pop	bc
+                                   1270 ;src/game_flow.c:195: if(scene_show(type,0u,0u))background_changed=1;
+    0000077D C5               [16] 1271 	push	bc
+    0000077E AF               [ 4] 1272 	xor	a, a
+    0000077F 0F               [ 4] 1273 	rrca
+    00000780 F5               [16] 1274 	push	af
+    00000781 C5               [16] 1275 	push	bc
+    00000782 33               [ 8] 1276 	inc	sp
+    00000783 1Er00            [ 8] 1277 	ld	e, #b_scene_show
+    00000785 21r00r00         [12] 1278 	ld	hl, #_scene_show
+    00000788 CDr00r00         [24] 1279 	call	___sdcc_bcall_ehl
+    0000078B E8 03            [16] 1280 	add	sp, #3
+    0000078D C1               [12] 1281 	pop	bc
+    0000078E B7               [ 4] 1282 	or	a, a
+    0000078F 28 05            [12] 1283 	jr	Z, 00102$
+    00000791 21r00r00         [12] 1284 	ld	hl, #_background_changed
+    00000794 36 01            [12] 1285 	ld	(hl), #0x01
+    00000796                       1286 00102$:
+                                   1287 ;src/game_flow.c:196: music=game_transition_interaction_music(type);if(music)audio_command(music);
+    00000796 C5               [16] 1288 	push	bc
+    00000797 33               [ 8] 1289 	inc	sp
+    00000798 1Er00            [ 8] 1290 	ld	e, #b_game_transition_interaction_music
+    0000079A 21r00r00         [12] 1291 	ld	hl, #_game_transition_interaction_music
+    0000079D CDr00r00         [24] 1292 	call	___sdcc_bcall_ehl
+    000007A0 33               [ 8] 1293 	inc	sp
+    000007A1 47               [ 4] 1294 	ld	b, a
+    000007A2 B7               [ 4] 1295 	or	a, a
+    000007A3 28 0B            [12] 1296 	jr	Z, 00104$
+    000007A5 C5               [16] 1297 	push	bc
+    000007A6 33               [ 8] 1298 	inc	sp
+    000007A7 1Er00            [ 8] 1299 	ld	e, #b_audio_command
+    000007A9 21r00r00         [12] 1300 	ld	hl, #_audio_command
+    000007AC CDr00r00         [24] 1301 	call	___sdcc_bcall_ehl
+    000007AF 33               [ 8] 1302 	inc	sp
+    000007B0                       1303 00104$:
+                                   1304 ;src/game_flow.c:197: scene_fade_begin(1u);DISPLAY_ON;
+    000007B0 3E 01            [ 8] 1305 	ld	a, #0x01
+    000007B2 F5               [16] 1306 	push	af
+    000007B3 33               [ 8] 1307 	inc	sp
+    000007B4 1Er00            [ 8] 1308 	ld	e, #b_scene_fade_begin
+    000007B6 21r00r00         [12] 1309 	ld	hl, #_scene_fade_begin
+    000007B9 CDr00r00         [24] 1310 	call	___sdcc_bcall_ehl
+    000007BC 33               [ 8] 1311 	inc	sp
+    000007BD F0r00            [12] 1312 	ldh	a, (_LCDC_REG + 0)
+    000007BF F6 80            [ 8] 1313 	or	a, #0x80
+    000007C1 E0r00            [12] 1314 	ldh	(_LCDC_REG + 0), a
+                                   1315 ;src/game_flow.c:198: game_transition_wait(2u,0u); /* Original0C upload, then2FD's14 upload. */
+    000007C3 21 02 00         [12] 1316 	ld	hl, #0x02
+    000007C6 E5               [16] 1317 	push	hl
+    000007C7 1Er00            [ 8] 1318 	ld	e, #b_game_transition_wait
+    000007C9 21r00r00         [12] 1319 	ld	hl, #_game_transition_wait
+    000007CC CDr00r00         [24] 1320 	call	___sdcc_bcall_ehl
+    000007CF E1               [12] 1321 	pop	hl
+                                   1322 ;src/game_flow.c:199: game_transition_fade_in();
+    000007D0 1Er00            [ 8] 1323 	ld	e, #b_game_transition_fade_in
+    000007D2 21r00r00         [12] 1324 	ld	hl, #_game_transition_fade_in
+    000007D5 CDr00r00         [24] 1325 	call	___sdcc_bcall_ehl
+                                   1326 ;src/game_flow.c:201: game_transition_wait(1u,1u);
+    000007D8 21 01 01         [12] 1327 	ld	hl, #0x101
+    000007DB E5               [16] 1328 	push	hl
+    000007DC 1Er00            [ 8] 1329 	ld	e, #b_game_transition_wait
+    000007DE 21r00r00         [12] 1330 	ld	hl, #_game_transition_wait
+    000007E1 CDr00r00         [24] 1331 	call	___sdcc_bcall_ehl
+    000007E4 E1               [12] 1332 	pop	hl
+                                   1333 ;src/game_flow.c:202: if(portrait||enemy){
+    000007E5 F8 07            [12] 1334 	ldhl	sp,	#7
+    000007E7 7E               [ 8] 1335 	ld	a, (hl)
+    000007E8 B7               [ 4] 1336 	or	a, a
+    000007E9 20 04            [12] 1337 	jr	NZ, 00108$
+    000007EB 23               [ 8] 1338 	inc	hl
+    000007EC 7E               [ 8] 1339 	ld	a, (hl)
+    000007ED B7               [ 4] 1340 	or	a, a
+    000007EE C8               [20] 1341 	ret	Z
+    000007EF                       1342 00108$:
+                                   1343 ;src/game_flow.c:203: DISPLAY_OFF;
+    000007EF CDr00r00         [24] 1344 	call	_display_off
+                                   1345 ;src/game_flow.c:204: if(enemy)scene_enemy_show(enemy,game_dungeon.active?game_dungeon.dungeon.palette_index:0u);
+    000007F2 F8 08            [12] 1346 	ldhl	sp,	#8
+    000007F4 7E               [ 8] 1347 	ld	a, (hl)
+    000007F5 B7               [ 4] 1348 	or	a, a
+    000007F6 28 1E            [12] 1349 	jr	Z, 00106$
+    000007F8 FAr08r01         [16] 1350 	ld	a, (#(_game_dungeon + 264) + 0)
+    000007FB B7               [ 4] 1351 	or	a, a
+    000007FC 28 05            [12] 1352 	jr	Z, 00113$
+    000007FE FAr06r00         [16] 1353 	ld	a, (#(_game_dungeon + 6) + 0)
+    00000801 18 01            [12] 1354 	jr	00114$
+    00000803                       1355 00113$:
+    00000803 AF               [ 4] 1356 	xor	a, a
+    00000804                       1357 00114$:
+    00000804 F5               [16] 1358 	push	af
+    00000805 33               [ 8] 1359 	inc	sp
+    00000806 F8 09            [12] 1360 	ldhl	sp,	#9
+    00000808 7E               [ 8] 1361 	ld	a, (hl)
+    00000809 F5               [16] 1362 	push	af
+    0000080A 33               [ 8] 1363 	inc	sp
+    0000080B 1Er00            [ 8] 1364 	ld	e, #b_scene_enemy_show
+    0000080D 21r00r00         [12] 1365 	ld	hl, #_scene_enemy_show
+    00000810 CDr00r00         [24] 1366 	call	___sdcc_bcall_ehl
+    00000813 E1               [12] 1367 	pop	hl
+    00000814 18 0E            [12] 1368 	jr	00107$
+    00000816                       1369 00106$:
+                                   1370 ;src/game_flow.c:205: else scene_portrait_show(portrait);
+    00000816 F8 07            [12] 1371 	ldhl	sp,	#7
+    00000818 7E               [ 8] 1372 	ld	a, (hl)
+    00000819 F5               [16] 1373 	push	af
+    0000081A 33               [ 8] 1374 	inc	sp
+    0000081B 1Er00            [ 8] 1375 	ld	e, #b_scene_portrait_show
+    0000081D 21r00r00         [12] 1376 	ld	hl, #_scene_portrait_show
+    00000820 CDr00r00         [24] 1377 	call	___sdcc_bcall_ehl
+    00000823 33               [ 8] 1378 	inc	sp
+    00000824                       1379 00107$:
+                                   1380 ;src/game_flow.c:206: DISPLAY_ON;
+    00000824 F0r00            [12] 1381 	ldh	a, (_LCDC_REG + 0)
+    00000826 F6 80            [ 8] 1382 	or	a, #0x80
+    00000828 E0r00            [12] 1383 	ldh	(_LCDC_REG + 0), a
+                                   1384 ;src/game_flow.c:208: }
+    0000082A C9               [16] 1385 	ret
+                                   1386 ;src/game_flow.c:210: void enter_dungeon(uint8_t floor,uint8_t position,uint8_t direction) RPG_BANKED {
+                                   1387 ;	---------------------------------
+                                   1388 ; Function enter_dungeon
+                                   1389 ; ---------------------------------
+                         0000000C  1390 	b_enter_dungeon	= 12
+    0000082B                       1391 _enter_dungeon::
+                                   1392 ;src/game_flow.c:211: game_transition_fade_out();
+    0000082B 1Er00            [ 8] 1393 	ld	e, #b_game_transition_fade_out
+    0000082D 21r00r00         [12] 1394 	ld	hl, #_game_transition_fade_out
+    00000830 CDr00r00         [24] 1395 	call	___sdcc_bcall_ehl
+                                   1396 ;src/game_flow.c:212: if(game_vehicle){scene_actor_hide();game_vehicle=0;}
+    00000833 FAr00r00         [16] 1397 	ld	a, (#_game_vehicle)
+    00000836 B7               [ 4] 1398 	or	a, a
+    00000837 28 0C            [12] 1399 	jr	Z, 00102$
+    00000839 1Er00            [ 8] 1400 	ld	e, #b_scene_actor_hide
+    0000083B 21r00r00         [12] 1401 	ld	hl, #_scene_actor_hide
+    0000083E CDr00r00         [24] 1402 	call	___sdcc_bcall_ehl
+    00000841 AF               [ 4] 1403 	xor	a, a
+    00000842 EAr00r00         [16] 1404 	ld	(#_game_vehicle),a
+    00000845                       1405 00102$:
+                                   1406 ;src/game_flow.c:213: game_events.type=0;game_events.event=0;background_changed=1;dark_menu_pending=0;
+    00000845 21r05r01         [12] 1407 	ld	hl, #_game_events + 261
+    00000848 36 00            [12] 1408 	ld	(hl), #0x00
+    0000084A 21r04r01         [12] 1409 	ld	hl, #_game_events + 260
+    0000084D 36 00            [12] 1410 	ld	(hl), #0x00
+    0000084F 21r00r00         [12] 1411 	ld	hl, #_background_changed
+    00000852 36 01            [12] 1412 	ld	(hl), #0x01
+    00000854 AF               [ 4] 1413 	xor	a, a
+    00000855 EAr00r00         [16] 1414 	ld	(#_dark_menu_pending),a
+                                   1415 ;src/game_flow.c:214: dplay_enter(&game_dungeon,&game_rpg,&game_events,floor,position,direction,retained_trap);
+    00000858 FAr00r00         [16] 1416 	ld	a, (_retained_trap)
+    0000085B F5               [16] 1417 	push	af
+    0000085C 33               [ 8] 1418 	inc	sp
+    0000085D F8 09            [12] 1419 	ldhl	sp,	#9
+    0000085F 3A               [ 8] 1420 	ld	a, (hl-)
+    00000860 57               [ 4] 1421 	ld	d, a
+    00000861 3A               [ 8] 1422 	ld	a, (hl-)
+    00000862 5F               [ 4] 1423 	ld	e, a
+    00000863 D5               [16] 1424 	push	de
+    00000864 7E               [ 8] 1425 	ld	a, (hl)
+    00000865 F5               [16] 1426 	push	af
+    00000866 33               [ 8] 1427 	inc	sp
+    00000867 11r00r00         [12] 1428 	ld	de, #_game_events
+    0000086A D5               [16] 1429 	push	de
+    0000086B 11r00r00         [12] 1430 	ld	de, #_game_rpg
+    0000086E D5               [16] 1431 	push	de
+    0000086F 11r00r00         [12] 1432 	ld	de, #_game_dungeon
+    00000872 D5               [16] 1433 	push	de
+    00000873 1Er00            [ 8] 1434 	ld	e, #b_dplay_enter
+    00000875 21r00r00         [12] 1435 	ld	hl, #_dplay_enter
+    00000878 CDr00r00         [24] 1436 	call	___sdcc_bcall_ehl
+    0000087B E8 0A            [16] 1437 	add	sp, #10
+                                   1438 ;src/game_flow.c:215: game_transition_map_music(game_dungeon.dungeon.music);
+    0000087D FAr07r00         [16] 1439 	ld	a, (#(_game_dungeon + 7) + 0)
+    00000880 F5               [16] 1440 	push	af
+    00000881 33               [ 8] 1441 	inc	sp
+    00000882 1Er00            [ 8] 1442 	ld	e, #b_game_transition_map_music
+    00000884 21r00r00         [12] 1443 	ld	hl, #_game_transition_map_music
+    00000887 CDr00r00         [24] 1444 	call	___sdcc_bcall_ehl
+    0000088A 33               [ 8] 1445 	inc	sp
+                                   1446 ;src/game_flow.c:216: draw_dungeon_faded();
+    0000088B CDr00r00         [24] 1447 	call	_draw_dungeon_faded
+                                   1448 ;src/game_flow.c:217: game_transition_wait(2u,0u);game_transition_fade_in();apply_dungeon();
+    0000088E 21 02 00         [12] 1449 	ld	hl, #0x02
+    00000891 E5               [16] 1450 	push	hl
+    00000892 1Er00            [ 8] 1451 	ld	e, #b_game_transition_wait
+    00000894 21r00r00         [12] 1452 	ld	hl, #_game_transition_wait
+    00000897 CDr00r00         [24] 1453 	call	___sdcc_bcall_ehl
+    0000089A E1               [12] 1454 	pop	hl
+    0000089B 1Er00            [ 8] 1455 	ld	e, #b_game_transition_fade_in
+    0000089D 21r00r00         [12] 1456 	ld	hl, #_game_transition_fade_in
+    000008A0 CDr00r00         [24] 1457 	call	___sdcc_bcall_ehl
+    000008A3 1Er00            [ 8] 1458 	ld	e, #b_apply_dungeon
+    000008A5 21rC3r04         [12] 1459 	ld	hl, #_apply_dungeon
+                                   1460 ;src/game_flow.c:218: }
+    000008A8 C3r00r00         [16] 1461 	jp  ___sdcc_bcall_ehl
+                                   1462 	.area _CODE_12
+                                   1463 	.area _INITIALIZER
+                                   1464 	.area _CABS (ABS)

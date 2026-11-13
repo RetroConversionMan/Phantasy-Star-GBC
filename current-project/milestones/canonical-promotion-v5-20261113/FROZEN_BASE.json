@@ -1,0 +1,5 @@
+{
+  "base": "full-presentation-work-v2",
+  "base_sha256": "55b71a1732aa2fb20214ed27b04fc2d5a655e80940648f4e3ad9f66b8cae2e12",
+  "change": "Remove redundant FIELD_VEHICLE map reload; resume_walk owns one source reload and interaction return bookkeeping."
+}

@@ -1,0 +1,35 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "enemy_obj_palettes": 6,
+  "reserved_effect_palettes": [
+    6,
+    7
+  ],
+  "native_banks": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "bank_bytes": [
+    15739,
+    15787,
+    15735,
+    15765,
+    15790,
+    15790,
+    980
+  ],
+  "pattern_pairs": 673,
+  "unique_assets": 422,
+  "scope": "Source initial enemy poses1..71,74 at original256x192 coordinates scaled5/8;8x16OBJ;all12 original floor palette variants; Lassic/Dark Falz use source precomposed scenes.",
+  "limits": [
+    "This manifest contains initial poses; physical frame assets are in battle-animation",
+    "GBC8 palettes of3 opaque colors per8x16 sprite quantize source colors",
+    "Original transparent composition verified before quantization; not pixel-identical RGB to SMS hardware",
+    "Append8 enemy-hit masks then8 source-index0 masks after64 palette bytes; exact source flash classes retained"
+  ]
+}

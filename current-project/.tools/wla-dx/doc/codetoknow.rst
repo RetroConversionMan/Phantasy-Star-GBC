@@ -1,0 +1,286 @@
+Things you should know about coding for...
+==========================================
+
+Please be aware that the source code files in there are mainly used to test that
+the compiler and linker work, they are not possibly good examples of how you should
+write code using WLA DX. 
+
+Z80
+---
+
+Check the Z80 specific directives. All SMS/GG coders should find ``.SMSTAG``,
+``.SDSCTAG`` and ``.COMPUTESMSCHECKSUM`` very useful...
+
+There are shadow register aliases for opcodes that use registers A, F, BC, DE and HL.
+The shadow register versions are just for convenience, if the programmer wants to
+explicitly show that he is now using the shadow registers. For example:
+
+  AND A     ; (original, assembles to 0xA7)
+  AND A'    ; (alias, assembles to 0xA7 and is in reality "AND A")
+
+Opcodes that make relative label references::
+
+    JR *
+    DJNZ
+
+.. _codesub6502:
+
+6502
+----
+
+For example mnemonics ``ADC``, ``AND``, ``ASL``, etc... cause problems to WLA,
+because they take different sized arguments. Take a look at this::
+
+    LSR 11       ; $46 $0B
+    LSR $A000    ; $4E $00 $A0
+
+The first one could also be ::
+
+    LSR 11       ; $4E $0B $00
+
+To really get what you want, use ``.8BIT``, ``.16BIT`` and ``.24BIT``
+directives. Or even better, supply WLA the size of the argument::
+
+    LSR 11.W     ; $4E $0B $00
+
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+
+
+65C02
+-----
+
+Read the subsection :ref:`codesub6502` as the information applies also to 65C02
+coding...
+
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+    BRA
+    BBR*
+    BBS*
+
+
+65CE02
+------
+
+Read the subsection :ref:`codesub6502` as the information applies also to 65CE02
+coding...
+
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+    BRA
+    BSR
+    BBR*
+    BBS*
+
+
+.. _codesub65816:
+    
+65816
+-----
+
+Read the subsection :ref:`codesub6502` as the information applies also to 65816
+coding...
+
+WLA-65816 has also few SNES specific directives which are all very
+helpful. Remember that when you use ``.LOROM``, ``.HIROM``, ``.SLOWROM`` and
+``.FASTROM`` WLA automatically writes the information into the output.
+``.COMPUTESNESCHECKSUM``, ``.SNESHEADER`` and few others could also be useful.
+
+Use ``.BASE`` to set the upmost eight bits of 24-bit addresses.
+
+If possible, use operand hints to specify the size of the operand.
+WLA is able to deduce the accumulator/index mode to some extent from
+``REP``/``SEP``-mnemonics and ``.ACCU`` and ``.INDEX``-directives, but just to
+be sure, terminate the operand with ``.B``, ``.W`` or ``.L``. ::
+
+    AND #10    ; can be two different things, depending on the size of the operand.
+    AND #10.B  ; forces 8-bit immediate value.
+    AND #10.W  ; forces 16-bit immediate value.
+
+    AND 10     ; can be three different things, depending on the size of the operand.
+    AND 10.B   ; forces 8-bit address.
+    AND 10.W   ; forces 16-bit address.
+    AND 10.L   ; forces 24-bit address.
+
+Or if you must, these work as well::
+
+    AND.B #10  ; the same as "AND #10.B".
+    AND.W #10  ; the same as "AND #10.W".
+
+    AND.B 10   ; the same as "AND 10.B".
+    AND.W 10   ; the same as "AND 10.W".
+    AND.L 10   ; the same as "AND 10.L".
+    
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+    BRA
+    BRL
+    PER
+
+Use ``.WDC`` to start parsing WDC standard assembly code. ``.NOWDC`` sets
+the parser to parse WLA syntax assembly code.
+
+``MVN`` and ``MVP`` work as follows::
+
+    MVN $xx, $yy
+    MVN $xxyy
+    MVP $xx, $yy
+    MVP $xxyy
+
+``xx`` is the source bank, ``yy`` is the target bank.
+
+
+MC68000
+-------
+
+In addition to operand hints ``.B``, ``.W`` and ``.L`` we also have ``.D`` (32-bit).
+
+
+HUC6280
+-------
+
+Read the subsection :ref:`codesub6502` as the information applies also to
+HUC6280 coding...
+
+As PC Engine's zero page starts at $2000 (imagine ``ZEROPAGE1`` label's
+address is $2001), operand hint ``.#b`` will be useful::
+
+    STA ZEROPAGE1.#B  ; $85 $01
+
+It takes the lowest 8 bits of ``ZEROPAGE1`` and hints the assembler's parser that
+the operand is 8 bits in size.
+
+PC Engine ROMs use HuC6280 MPRs to map 8KB physical pages into the CPU address
+space. WLA DX still places a label in one final memory map slot, but you can use
+``slotaddress(label, slot)`` when the same ROM bank will be mapped through a
+different MPR slot at run time. The ``slot`` argument can be either a slot number
+or a slot name::
+
+    .MEMORYMAP
+      DEFAULTSLOT 0
+      SLOTSIZE $2000
+      SLOT 0 $0000 NAME "MPR0"
+      SLOT 1 $2000 NAME "MPR1"
+      SLOT 2 $4000 NAME "MPR2"
+      SLOT 3 $6000 NAME "MPR3"
+      SLOT 4 $8000 NAME "MPR4"
+      SLOT 5 $A000 NAME "MPR5"
+      SLOT 6 $C000 NAME "MPR6"
+      SLOT 7 $E000 NAME "MPR7"
+    .ENDME
+
+    ; Map playMusic's ROM bank into MPR3 ($6000-$7FFF), then use the address
+    ; of playMusic as seen through that slot.
+    LDA #bank(playMusic)
+    TAM #$08
+    JSR slotaddress(playMusic, "MPR3")
+
+``bank(label)`` gives the physical 8KB ROM bank to put into an MPR. The operand
+of ``TAM`` is a bit mask selecting the target MPR (``$08`` selects MPR3). The
+``slotaddress()`` function only calculates the address; it doesn't emit MPR setup
+code. ``slotbase(slot)`` returns the start address of a slot, and ``slot(label)``
+returns the final slot of a label.
+
+The ``include/pcengine/macros.inc`` file has helpers such as
+``PCE_MAP_LABEL_TO_MPR label, slot`` and ``PCE_MAP_BANK_TO_MPR bank, slot`` for
+the common ``LDA #...`` / ``TAM #...`` sequence.
+    
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+    BSR
+    BBR*
+    BBS*
+
+
+SPC-700
+-------
+
+Note that you'll have to put an exclamation mark before a 16-bit value.
+For example, ::
+
+    CALL !Main
+    AND  A, !$1000
+
+Opcodes that make relative label references::
+
+    BCC
+    BCS
+    BEQ
+    BMI
+    BNE
+    BPL
+    BVC
+    BVS
+    BRA
+    BBS
+    BBC
+    CBNE *
+    DBNZ *
+
+
+Pocket Voice (GB-Z80)
+---------------------
+
+Pocket Voice uses its own MBC. You can enable Pocket Voice mode by selecting
+Pocket Voice cartridge type (``$BE`` in ``$0147``) and defining correct
+``.ROMBANKMAP`` and ``.MEMORYMAP``. In PV mode bank 0 is 24KB and the rest are
+8KB.
+
+Note that WLA assumes that ROM offset is all the time 0. If you use
+something else as the offset, make sure to compute the jumps by hand as WLA
+cannot do that.
+
+Check out ``tests/gb-z80/include/pocket_voice.i`` for more information.
+
+
+GB-Z80
+------
+
+WLA outputs only ``$10`` when it decodes ``STOP``. Often it's necessary to put
+an extra ``NOP`` (``$00``) after a ``STOP``, and sometimes something else, but
+that's left entirely to the user.
+
+Opcodes that make relative label references::
+
+    JR *

@@ -1,0 +1,197 @@
+XL4
+H B areas 53 global symbols
+M battle_animation_data
+S _battle_motion_sequence_10 Ref00000000
+S _battle_motion_sequence_01 Ref00000000
+S _battle_motion_sequence_20 Ref00000000
+S _battle_motion_sequence_11 Ref00000000
+S _battle_motion_sequence_02 Ref00000000
+S _battle_motion_sequence_30 Ref00000000
+S _battle_motion_sequence_21 Ref00000000
+S _battle_motion_sequence_12 Ref00000000
+S _battle_motion_sequence_03 Ref00000000
+S _battle_motion_sequence_40 Ref00000000
+S _battle_motion_sequence_31 Ref00000000
+S _battle_motion_sequence_22 Ref00000000
+S _battle_motion_sequence_13 Ref00000000
+S _battle_motion_sequence_04 Ref00000000
+S _battle_motion_sequence_50 Ref00000000
+S _battle_motion_sequence_41 Ref00000000
+S _battle_motion_sequence_32 Ref00000000
+S _battle_motion_sequence_23 Ref00000000
+S _battle_motion_sequence_14 Ref00000000
+S _battle_motion_sequence_05 Ref00000000
+S _battle_motion_pairs_00 Ref00000000
+S _battle_motion_sequence_60 Ref00000000
+S _battle_motion_sequence_51 Ref00000000
+S _battle_motion_sequence_42 Ref00000000
+S _battle_motion_sequence_33 Ref00000000
+S _battle_motion_sequence_24 Ref00000000
+S _battle_motion_sequence_15 Ref00000000
+S _battle_motion_sequence_06 Ref00000000
+S _battle_motion_pairs_01 Ref00000000
+S _battle_motion_sequence_70 Ref00000000
+S _battle_motion_sequence_61 Ref00000000
+S _battle_motion_sequence_52 Ref00000000
+S _battle_motion_sequence_43 Ref00000000
+S _battle_motion_sequence_34 Ref00000000
+S _battle_motion_sequence_25 Ref00000000
+S _battle_motion_sequence_16 Ref00000000
+S _battle_motion_sequence_07 Ref00000000
+S _battle_motion_pairs_02 Ref00000000
+S _battle_motion_sequence_71 Ref00000000
+S _battle_motion_sequence_62 Ref00000000
+S _battle_motion_sequence_53 Ref00000000
+S _battle_motion_sequence_44 Ref00000000
+S _battle_motion_sequence_35 Ref00000000
+S _battle_motion_sequence_26 Ref00000000
+S _battle_motion_sequence_17 Ref00000000
+S _battle_motion_sequence_08 Ref00000000
+S _battle_motion_pairs_03 Ref00000000
+S _battle_motion_sequence_63 Ref00000000
+S _battle_motion_sequence_54 Ref00000000
+S _battle_motion_sequence_45 Ref00000000
+S _battle_motion_sequence_36 Ref00000000
+S _battle_motion_sequence_27 Ref00000000
+S _battle_motion_sequence_18 Ref00000000
+S _battle_motion_sequence_09 Ref00000000
+S _battle_motion_pairs_04 Ref00000000
+S _battle_motion_sequence_64 Ref00000000
+S _battle_motion_sequence_55 Ref00000000
+S _battle_motion_sequence_46 Ref00000000
+S _battle_motion_sequence_37 Ref00000000
+S _battle_motion_sequence_28 Ref00000000
+S _battle_motion_sequence_19 Ref00000000
+S _battle_motion_pairs_05 Ref00000000
+S _battle_motion_sequence_74 Ref00000000
+S _battle_motion_sequence_65 Ref00000000
+S _battle_motion_sequence_56 Ref00000000
+S _battle_motion_sequence_47 Ref00000000
+S _battle_motion_sequence_38 Ref00000000
+S _battle_motion_sequence_29 Ref00000000
+S _battle_motion_pairs_06 Ref00000000
+S _battle_motion_sequence_66 Ref00000000
+S _battle_motion_sequence_57 Ref00000000
+S _battle_motion_sequence_48 Ref00000000
+S _battle_motion_sequence_39 Ref00000000
+S _battle_motion_pairs_07 Ref00000000
+S _battle_motion_sequence_67 Ref00000000
+S _battle_motion_sequence_58 Ref00000000
+S _battle_motion_sequence_49 Ref00000000
+S _battle_motion_sequence_68 Ref00000000
+S _battle_motion_sequence_59 Ref00000000
+S _battle_motion_sequence_69 Ref00000000
+S .__.ABS. Def00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_31 size 21E flags 0 addr 0
+S _battle_animation_pools Def00000206
+S _battle_animations Def00000000
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 01 0B 03 66 97 00 00 07 0F 07 09 B4
+R 00 00 08 00 02 09 01 00
+T 0C 00 00 00 00 00 05 0D 04 D3 A7 00 00 03 0C 06
+R 00 00 08 00 02 04 04 00 02 0B 08 00
+T 18 00 00 00 82 B4 00 00 01 0B 03 50 9D 00 00 01
+R 00 00 08 00 02 06 0D 00 02 0D 13 00
+T 24 00 00 00 0B 03 50 A9 00 00 07 0F 07 09 B4
+R 00 00 08 00 02 08 1B 00
+T 2F 00 00 00 00 00 03 07 04 99 AE 00 00 05 0D 04
+R 00 00 08 00 02 04 24 00 02 0B 2D 00
+T 3B 00 00 00 D3 B4 00 00 03 0C 06 82 B4 00 00 01
+R 00 00 08 00 02 06 35 00 02 0D 00 00
+T 47 00 00 00 0B 03 50 B0 00 00 03 07 04 99 B5
+R 00 00 08 00 02 08 03 00
+T 52 00 00 00 00 00 01 0B 03 66 B2 00 00 07 0A 05
+R 00 00 08 00 02 04 07 00 02 0B 0C 00
+T 5E 00 00 00 CE B5 00 00 03 0A 06 9D B5 00 00 05
+R 00 00 08 00 02 06 12 00 02 0D 1A 00
+T 6A 00 00 00 0D 04 D3 B5 00 00 07 0F 07 09 B5
+R 00 00 08 00 02 08 23 00
+T 75 00 00 00 00 00 03 11 08 D7 B5 00 00 07 0A 07
+R 00 00 08 00 02 04 2C 00 02 0B 34 00
+T 81 00 00 00 2D B5 00 00 07 08 04 28 B5 00 00 07
+R 00 00 08 00 02 06 3C 00 02 0D 02 00
+T 8D 00 00 00 0B 05 00 B5 00 00 07 0B 09 5D B5
+R 00 00 08 00 02 08 06 00
+T 98 00 00 00 00 00 05 0B 06 70 B5 00 00 07 08 06
+R 00 00 08 00 02 04 0B 00 02 0B 11 00
+T A4 00 00 00 4A B5 00 00 07 0B 09 5D B5 00 00 07
+R 00 00 08 00 02 06 19 00 02 0D 22 00
+T B0 00 00 00 08 04 28 B5 00 00 07 09 05 40 B5
+R 00 00 08 00 02 08 2B 00
+T BB 00 00 00 00 00 07 0A 05 CE B5 00 00 03 11 08
+R 00 00 08 00 02 04 33 00 02 0B 3B 00
+T C7 00 00 00 D7 B5 00 00 07 09 06 16 B5 00 00 0B
+R 00 00 08 00 02 06 43 00 02 0D 05 00
+T D3 00 00 00 0F 07 69 B5 00 00 07 0B 08 35 B5
+R 00 00 08 00 02 08 0A 00
+T DE 00 00 00 00 00 07 0A 07 2D B5 00 00 07 0B 05
+R 00 00 08 00 02 04 10 00 02 0B 18 00
+T EA 00 00 00 00 B5 00 00 07 08 06 4A B5 00 00 07
+R 00 00 08 00 02 06 21 00 02 0D 2A 00
+T F6 00 00 00 0B 08 35 B5 00 00 05 0B 06 70 B5
+R 00 00 08 00 02 08 32 00
+T 01 01 00 00 00 00 03 0F 08 54 B5 00 00 07 0A 05
+R 00 00 08 00 02 04 3A 00 02 0B 42 00
+T 0D 01 00 00 CE B5 00 00 07 0B 05 00 B5 00 00 07
+R 00 00 08 00 02 06 48 00 02 0D 09 00
+T 19 01 00 00 08 04 20 B5 00 00 07 08 06 4A B5
+R 00 00 08 00 02 08 0F 00
+T 24 01 00 00 00 00 07 09 05 40 B5 00 00 0B 0F 07
+R 00 00 08 00 02 04 17 00 02 0B 20 00
+T 30 01 00 00 69 B5 00 00 0B 0F 07 69 B5 00 00 03
+R 00 00 08 00 02 06 29 00 02 0D 31 00
+T 3C 01 00 00 0C 08 79 B5 00 00 0F 06 03 1C B5
+R 00 00 08 00 02 08 39 00
+T 47 01 00 00 00 00 03 0F 08 54 B5 00 00 07 0A 04
+R 00 00 08 00 02 04 41 00 02 0B 47 00
+T 53 01 00 00 24 B5 00 00 07 06 04 BB B5 00 00 03
+R 00 00 08 00 02 06 4C 00 02 0D 0E 00
+T 5F 01 00 00 0C 08 79 B5 00 00 07 08 04 20 B5
+R 00 00 08 00 02 08 16 00
+T 6A 01 00 00 00 00 07 06 04 BB B5 00 00 03 0F 08
+R 00 00 08 00 02 04 1F 00 02 0B 28 00
+T 76 01 00 00 54 B5 00 00 05 09 05 B5 B5 00 00 0F
+R 00 00 08 00 02 06 30 00 02 0D 38 00
+T 82 01 00 00 06 03 1C B5 00 00 07 08 04 AD B5
+R 00 00 08 00 02 08 40 00
+T 8D 01 00 00 00 00 07 0E 08 A3 B5 00 00 07 0E 08
+R 00 00 08 00 02 04 46 00 02 0B 4B 00
+T 99 01 00 00 A3 B5 00 00 03 09 07 02 B5 00 00 03
+R 00 00 08 00 02 06 4E 00 02 0D 15 00
+T A5 01 00 00 09 07 02 B5 00 00 03 0D 08 00 B5
+R 00 00 08 00 02 08 1E 00
+T B0 01 00 00 00 00 07 09 06 16 B5 00 00 07 08 04
+R 00 00 08 00 02 04 27 00 02 0B 2F 00
+T BC 01 00 00 AD B5 00 00 05 09 05 B5 B5 00 00 07
+R 00 00 08 00 02 06 37 00 02 0D 3F 00
+T C8 01 00 00 06 04 BB B5 00 00 03 09 06 C0 B5
+R 00 00 08 00 02 08 45 00
+T D3 01 00 00 00 00 03 09 07 02 B5 00 00 03 09 07
+R 00 00 08 00 02 04 4A 00 02 0B 4D 00
+T DF 01 00 00 02 B5 00 00 03 12 09 E3 B5 00 00 03
+R 00 00 08 00 02 06 4F 00 02 0D 1D 00
+T EB 01 00 00 0D 08 00 B5 00 00 00 00 00 00 00
+R 00 00 08 00 02 08 26 00
+T F6 01 00 00 00 00 00 00 00 00 00 00 00 07 08 04
+R 00 00 08 00
+T 02 02 00 00 DF B5 00 00
+R 00 00 08 00 02 06 3E 00
+T 06 02 00 00
+R 00 00 08 00
+T 06 02 00 00 95 00 00 96 00 00 97 00 00 98
+R 00 00 08 00 02 05 14 00 02 08 1C 00 02 0B 25 00
+T 10 02 00 00 00 00 99 00 00 9A 00 00 9B
+R 00 00 08 00 02 04 2E 00 02 07 36 00 02 0A 3D 00
+T 19 02 00 00 00 00 9C 00 00
+R 00 00 08 00 02 04 44 00 02 07 49 00

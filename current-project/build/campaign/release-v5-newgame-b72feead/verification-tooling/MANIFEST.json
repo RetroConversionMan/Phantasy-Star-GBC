@@ -1,0 +1,12 @@
+{
+  "replay_campaign_prefix.py": "4dc40e2d22688b78d346dc958f541c69ee931ea2e2f925d9205c91f6d731258c",
+  "replay_campaign.py": "a918ea373ec1ff861d4553cb15b99edc3a7e7aa9e6a1a78203bebf04f8e50d1a",
+  "native_layout.py": "0ad4eedc3d696cd4224c1397be93ac40f9c5ba8e7f784980060d6df385124f36",
+  "verify_rom.py": "782a7db1e16eaff894633af97ac11faf9f3bcdb43d21d5ec14151e43a0b1ed16",
+  "verify_campaign_title.py": "6f20926a7bc8ecd5d66f71f1485059715b41d25932e90c36e8a5daea854ba231",
+  "campaign_runner.py": "b83aace29eaa5a02d8b7e6bc621177e4e29fe4eb3c20234e2408c5162dbe3527",
+  "run_campaign_story.py": "cd353317ece972e965c2d1b99dbfb8dc5ac9bcd73e33f41a08aceec6fb72e1c7",
+  "campaign_dungeon_route.py": "dc159d7a294b763c8888f2592dbb3f748be39a4044786de23e18225ac69e934b",
+  "campaign_world_route.py": "067030c808f993e257e8b3d4338c59976117b458df41a5166d4ca429820f3eab",
+  "campaign_hover_route.py": "b9899327f1418ed81cc638ea6f66dc1653f6ef161f667575d3b84a0a87612d8b"
+}

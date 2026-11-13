@@ -1,0 +1,309 @@
+{
+  "header": {
+    "title": "PSGBC-WORLD",
+    "bytes": 4194304,
+    "sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "checks": [
+    {
+      "opening": "Original title, full unskipped pan/city/three-record narrative, then source newgame",
+      "pan_source_changes": 224,
+      "pan_emulator_frames": 225,
+      "story_records": [
+        [
+          4,
+          0,
+          62619
+        ],
+        [
+          4,
+          1,
+          62716
+        ],
+        [
+          4,
+          2,
+          62933
+        ]
+      ]
+    },
+    {
+      "myau": "Both original prompts, Pot exchange, Alsulin award and five original speaker records",
+      "story_records": [
+        [
+          1,
+          3,
+          62999
+        ],
+        [
+          1,
+          4,
+          63046
+        ],
+        [
+          1,
+          3,
+          63053
+        ],
+        [
+          1,
+          4,
+          63086
+        ],
+        [
+          1,
+          3,
+          63169
+        ]
+      ]
+    },
+    {
+      "odin": "Actual Alsulin use,111-frame revival/button wait and five-record recruitment",
+      "story_records": [
+        [
+          2,
+          5,
+          63219
+        ],
+        [
+          2,
+          3,
+          63302
+        ],
+        [
+          2,
+          5,
+          63366
+        ],
+        [
+          2,
+          3,
+          63417
+        ],
+        [
+          2,
+          5,
+          63441
+        ]
+      ]
+    },
+    {
+      "noah": "Opened original door, Letter recruitment and two-record narrative",
+      "story_records": [
+        [
+          3,
+          3,
+          63580
+        ],
+        [
+          3,
+          6,
+          63620
+        ]
+      ]
+    },
+    {
+      "flight": "Actual Prism/Nuts menus, Laerma narrative,507-frame outbound/GoldDragon to castle and571-frame return to original Palma destination",
+      "story_records": [
+        [
+          5,
+          7,
+          63785
+        ],
+        [
+          5,
+          8,
+          63868
+        ]
+      ]
+    },
+    {
+      "ending_real_audio_IRQ_frames": 6794,
+      "ending_measured_native_frames": 6793,
+      "difference_allowed_for_ISR_sampling": 2,
+      "stack_guard": "DBC0..DBFF unchanged through DarkFalz, complete ending and return to title",
+      "audio_fault": 0
+    },
+    {
+      "ending": "Actual MiracleKey/door, DarkFalz combat, ending choice, sky/text/story/bitmap",
+      "credits_verified": true,
+      "stopped_before_credits": false,
+      "story_records": [
+        [
+          6,
+          3,
+          63976
+        ],
+        [
+          6,
+          5,
+          63984
+        ],
+        [
+          6,
+          6,
+          63995
+        ],
+        [
+          6,
+          4,
+          64006
+        ],
+        [
+          6,
+          3,
+          64018
+        ],
+        [
+          6,
+          3,
+          64084
+        ]
+      ],
+      "closing_texts": [
+        48822,
+        48848,
+        48872,
+        48893,
+        48905,
+        48929
+      ],
+      "stages": [
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "injected_fixtures": [
+    "SRAM fixture:map14 beside original event54, Laconian Pot56, Alis only; no recruitment flag injected",
+    "SRAM fixture:floor0/E2 facing original Odin objectE3, Myau joined, Alsulin43; C50A remains0",
+    "SRAM fixture:floor29/68 facing Noah room78, first3party joined, Letter55; C506 remains0",
+    "SRAM fixture:floor15/1C beside original Baya Malay event176, Prism/Nuts, living4party with level30/HP255/attack255/defense255 for GoldDragon battle",
+    "SRAM fixture:floor31/DE facing original DarkFalz doorCE, MiracleKey,4strong party, prior Shadow/Lassic flags; no DarkFalz outcome or ending state injected",
+    "Diagnostic64-byte guard atDBC0..DBFF, below the1KiB DC00..DFFF stack window; no game state changed"
+  ],
+  "screenshots": [
+    {
+      "file": "verification/cutscene-text/original-complete/routes/title.png",
+      "sha256_pixels": "c6e9d7d382f54de3c8125bbe0bfaabd142bb096ed36ec03d263f81b1b298639a",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/opening-planet.png",
+      "sha256_pixels": "0815d366b26ccd18530bfac21b40ad05f8499bc55e989d3818e64967585bdd1d",
+      "unique_colors": 8,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/newgame-camineet.png",
+      "sha256_pixels": "11b2bd3c72e002a34f39cdf5eddcb38ecc845598e9ea81fb648e3977bd0432aa",
+      "unique_colors": 16,
+      "lcd_enabled": true,
+      "pc": "0x42ec"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/myau-recruited.png",
+      "sha256_pixels": "523d1ee52e196b5484ff87d39e8098d49002029a4bd3730c9937ed2f95a434fe",
+      "unique_colors": 16,
+      "lcd_enabled": true,
+      "pc": "0x42e9"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/odin-revival.png",
+      "sha256_pixels": "05227250e9358030e4631c40ae92ac5a7bfaa4ccde62fc87d62c06ab79783f35",
+      "unique_colors": 13,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/revealed-castle.png",
+      "sha256_pixels": "0efbb996a17b0bea733ac8b2eb6d68d2f0277738de3a4842e0079b76be561cc3",
+      "unique_colors": 2,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/gold-dragon.png",
+      "sha256_pixels": "bacc18f4d30617384839fccf1cdae77c485cdf7ae14b9d919a47e017458b68c2",
+      "unique_colors": 12,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/flying-castle.png",
+      "sha256_pixels": "d9820128e2a0417b8459f6c05265c17e0639ee1bdddebbfb8fc3b86112042813",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x43b6"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/myau-return-palma.png",
+      "sha256_pixels": "2e257021b13a4c231a561fb2bebb2653b0bef038b1651cb9cd56e1e5e99b48f8",
+      "unique_colors": 13,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/dark-falz.png",
+      "sha256_pixels": "d1acae9c94766ea33e6ea37199bb07eba12cbf9ffe4f30b2319499b6aab02ee4",
+      "unique_colors": 8,
+      "lcd_enabled": true,
+      "pc": "0x456a"
+    },
+    {
+      "file": "verification/cutscene-text/original-complete/routes/ending-title.png",
+      "sha256_pixels": "9efc025842be57e3232d782127e8575236f9df59f73994e1cf8df6ecb7d9f241",
+      "unique_colors": 14,
+      "lcd_enabled": true,
+      "pc": "0x54e5"
+    }
+  ],
+  "campaign_complete": false,
+  "save_records": [
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "509844fc269b139da02d3ee1b6e8225d9b6dd9a32eb5e30447c598dea2a1cba7"
+    },
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "8655c2f4b8adcced332fb2988f5bb8935ce15632733b801695629bfd2899b8bb"
+    },
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "f797b53a47e2267143669a0c2965d84b552efdca83ebcbfbbbbf7cc9810dadf3"
+    },
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "085400f3e090643cf8fe587b037612dfd75aef1c93abab0cc9e96aa99f128439"
+    },
+    {
+      "version": 5,
+      "bytes": 628,
+      "sha256": "64821ca01b97800d8fb03f7a331b9a0a49dc1f8184a66fdce3435171b95e1eef"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "original_rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "script_sha256": "d268b79f5862cf917f9410dd132f17160f79d8f991c25850269ec70bf05c0164",
+  "counter_phase_cases": 12288,
+  "timeline_cases": 43,
+  "score_frames": 1152,
+  "trace_sha256": "8e9ee200c5bf9414ab91f21e90f30728a0b447b4db93e0566c24b19b5dc830ce",
+  "original_irq_calls": [
+    "588B",
+    "7C18",
+    "61F5",
+    "73D0",
+    "62BC",
+    "0339",
+    "02E5"
+  ],
+  "scope": "Original unmodified Z80 motor handler7C18 and score CallSndUpdate; actual7143 released-control path emits newD6 after the score tick. All ordered PSG writes and512driver bytes match independently stepped original driver per frame. Declared fixture ordinary commands model their mailbox writes; this source oracle is not native integration or earned gameplay.",
+  "findings": [
+    "Hover08 emits D1 on expiry even idle; other nonzero modes below0E emit D0 only while C265 is nonzero.",
+    "Expired countdown has original signed-byte behavior; count0 and129..255 expire, count1..128 decrement without motor.",
+    "Expiry overwrites any old C004, then one sound tick consumes the motor. New ordinary C004 written after that tick is pending for the next tick; another expired motor can overwrite it there.",
+    "Original no-direction main7143 emitsD6 after the interrupt score tick. Repeating hover-idle source frames alternates motor emission every4frames with idleD6; no added score tick."
+  ]
+}

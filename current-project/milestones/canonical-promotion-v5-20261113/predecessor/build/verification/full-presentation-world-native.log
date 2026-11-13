@@ -1,0 +1,53 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{"group": 0, "road": 0, "steps": 128, "native_frames": 390, "max_native_frames_per_requested_step": 4, "audio_frames": 390, "viewport": [576, 768]}
+{"group": 1, "road": 0, "steps": 128, "native_frames": 396, "max_native_frames_per_requested_step": 4, "audio_frames": 396, "viewport": [1856, 768]}
+{"group": 2, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 3, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 4, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 5, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 6, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 7, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 8, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 9, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 10, "road": 0, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 1344]}
+{"group": 0, "road": 1, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 0, "road": 2, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 0, "road": 3, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 0, "road": 4, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 0, "road": 5, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 0, "road": 6, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [576, 768]}
+{"group": 1, "road": 1, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{"group": 1, "road": 2, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{"group": 1, "road": 3, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{"group": 1, "road": 4, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{"group": 1, "road": 5, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{"group": 1, "road": 6, "steps": 128, "native_frames": 384, "max_native_frames_per_requested_step": 3, "audio_frames": 384, "viewport": [1856, 768]}
+{
+  "passed": true,
+  "header": {
+    "title": "PSWORLD-MOTION",
+    "bytes": 1048576,
+    "sha256": "19443495292c85254eb8227c579569762958c308b87dbe9373d14ab72aff395d",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "original_rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "counts": {
+    "logical_steps": 2944,
+    "source_native_pattern_bytes": 745472,
+    "counter_bytes": 35328,
+    "priority_attributes": 10284,
+    "completed_frames": 453,
+    "mixed_frames": 0,
+    "protected_bytes": 6971392
+  },
+  "guard_bytes": 64,
+  "fixture_scope": "Explicit probe requests map/road/step only; RPG/campaign not linked. Exact production world and audio objects used.",
+  "source_rom_sha256": "ad50f3b7bb662d692b6467edfd3fcee52e3f57b4a5b36fba4f60fcc34620c2cc",
+  "atomic_frame_check": "Every completed native display frame during sampled updates must equal either its preceding or completed phase image."
+}

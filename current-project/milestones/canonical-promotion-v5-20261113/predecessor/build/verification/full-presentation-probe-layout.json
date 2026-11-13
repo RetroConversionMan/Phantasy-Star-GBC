@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "probes": [
+    {
+      "rom": "build/verification/full-presentation-world-native/world-motion-probe.gbc",
+      "passed": true,
+      "rom_sha256": "19443495292c85254eb8227c579569762958c308b87dbe9373d14ab72aff395d",
+      "rom_banks": 64,
+      "wram_start": 49312,
+      "wram_bytes": 992,
+      "wram_end": 50304,
+      "stack_address_space_reserved": 7040
+    },
+    {
+      "rom": "build/verification/full-presentation-audio-motor/audio-motor-order.gbc",
+      "passed": true,
+      "rom_sha256": "26b9146450e129b21e7187bdba995da3ac0dc24bd9a1ed6028f307aed5071bfa",
+      "rom_banks": 64,
+      "wram_start": 49312,
+      "wram_bytes": 1086,
+      "wram_end": 50398,
+      "stack_address_space_reserved": 6946
+    },
+    {
+      "rom": "build/verification/full-presentation-world-probe/world-probe.gbc",
+      "passed": true,
+      "rom_sha256": "c72acba583a203778cd846225123658b75c683fe3e0c73231760fbf3a477b9fd",
+      "rom_banks": 64,
+      "wram_start": 49312,
+      "wram_bytes": 447,
+      "wram_end": 49759,
+      "stack_address_space_reserved": 7585
+    }
+  ],
+  "scope": "Independent final bank and WRAM layout validation for root source-object native probes."
+}

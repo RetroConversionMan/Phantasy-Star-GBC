@@ -1,0 +1,60 @@
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+STEP left (1688, 304) target (1672, 304) actual (1672, 304) state 1 map 4
+STEP left (1672, 304) target (1656, 304) actual (1656, 304) state 1 map 4
+STEP left (1656, 304) target (1640, 304) actual (1640, 304) state 1 map 4
+STEP left (1640, 304) target (1624, 304) actual (1624, 304) state 1 map 4
+STEP down (1624, 304) target (1624, 320) actual (1624, 320) state 1 map 4
+STEP down (1624, 320) target (1624, 336) actual (1624, 336) state 1 map 4
+STEP down (1624, 336) target (1624, 352) actual (1624, 352) state 1 map 4
+STEP down (1624, 352) target (1624, 368) actual (1624, 368) state 1 map 4
+STEP down (1624, 368) target (1624, 384) actual (1624, 384) state 1 map 4
+STEP right (1624, 384) target (1640, 384) actual (1640, 384) state 1 map 4
+STEP right (1640, 384) target (1656, 384) actual (1656, 384) state 1 map 4
+STEP right (1656, 384) target (1672, 384) actual (1672, 384) state 1 map 4
+STEP right (1672, 384) target (1688, 384) actual (1688, 384) state 1 map 4
+STEP right (1688, 384) target (1704, 384) actual (1704, 384) state 1 map 4
+STEP right (1704, 384) target (1720, 384) actual (1720, 384) state 1 map 4
+STEP right (1720, 384) target (1736, 384) actual (1736, 384) state 1 map 4
+STEP right (1736, 384) target (1752, 384) actual (1368, 736) state 1 map 0
+ROUTE (85, 45) (77, 64) (10, 0, 220, 0, 53, 26) ['down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'right', 'right', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left']
+STEP down (1368, 736) target (1368, 752) actual (1368, 752) state 1 map 0
+STEP down (1368, 752) target (1368, 768) actual (1368, 768) state 1 map 0
+STEP down (1368, 768) target (1368, 784) actual (1368, 784) state 1 map 0
+STEP down (1368, 784) target (1368, 800) actual (1368, 800) state 1 map 0
+STEP down (1368, 800) target (1368, 816) actual (1368, 816) state 1 map 0
+STEP down (1368, 816) target (1368, 832) actual (1368, 832) state 1 map 0
+STEP down (1368, 832) target (1368, 848) actual (1368, 848) state 1 map 0
+STEP down (1368, 848) target (1368, 864) actual (1368, 864) state 1 map 0
+STEP down (1368, 864) target (1368, 880) actual (1368, 880) state 1 map 0
+STEP down (1368, 880) target (1368, 896) actual (1368, 896) state 1 map 0
+STEP right (1368, 896) target (1384, 896) actual (1384, 896) state 1 map 0
+STEP right (1384, 896) target (1400, 896) actual (1400, 896) state 1 map 0
+STEP down (1400, 896) target (1400, 912) actual (1400, 912) state 1 map 0
+STEP down (1400, 912) target (1400, 928) actual (1400, 928) state 1 map 0
+STEP down (1400, 928) target (1400, 944) actual (1400, 944) state 1 map 0
+STEP down (1400, 944) target (1400, 960) actual (1400, 960) state 1 map 0
+STEP down (1400, 960) target (1400, 976) actual (1400, 976) state 1 map 0
+STEP down (1400, 976) target (1400, 992) actual (1400, 992) state 1 map 0
+STEP down (1400, 992) target (1400, 1008) actual (1400, 1008) state 1 map 0
+STEP down (1400, 1008) target (1400, 1024) actual (1400, 1024) state 1 map 0
+STEP down (1400, 1024) target (1400, 1040) actual (1400, 1040) state 1 map 0
+STEP left (1400, 1040) target (1384, 1040) actual (1400, 1040) state 1 map 0
+STEP left (1400, 1040) target (1384, 1040) actual (1384, 1040) state 1 map 0
+STEP left (1384, 1040) target (1368, 1040) actual (1368, 1040) state 1 map 0
+STEP left (1368, 1040) target (1352, 1040) actual (1352, 1040) state 1 map 0
+STEP left (1352, 1040) target (1336, 1040) actual (1336, 1040) state 1 map 0
+STEP left (1336, 1040) target (1320, 1040) actual (1320, 1040) state 1 map 0
+STEP left (1320, 1040) target (1304, 1040) actual (1304, 1040) state 1 map 0
+STEP left (1304, 1040) target (1288, 1040) actual (1288, 1040) state 1 map 0
+STEP left (1288, 1040) target (1272, 1040) actual (1272, 1040) state 1 map 0
+STEP left (1272, 1040) target (1256, 1040) actual (1256, 1040) state 1 map 0
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "tools/verify_dungeon_emulator.py", line 100, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "tools/verify_dungeon_emulator.py", line 58, in main
+    wait(lambda:state()==4,'dark dungeon introduction')
+  File "tools/verify_dungeon_emulator.py", line 29, in wait
+    raise AssertionError((why,state(),pos(),ds(),hex(e.register_file.PC)))
+AssertionError: ('dark dungeon introduction', 1, (1256, 1040), (0, 0, 0, 0), '0x46d6')

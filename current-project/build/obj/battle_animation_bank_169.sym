@@ -1,0 +1,124 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+  8 _battle_motion_asset_1479                                       00000000 GR
+  8 _battle_motion_asset_1480                                       000000BE GR
+  8 _battle_motion_asset_1481                                       00000168 GR
+  8 _battle_motion_asset_1482                                       00000212 GR
+  8 _battle_motion_asset_1483                                       000002BC GR
+  8 _battle_motion_asset_1484                                       00000366 GR
+  8 _battle_motion_asset_1485                                       00000410 GR
+  8 _battle_motion_asset_1486                                       000004BA GR
+  8 _battle_motion_asset_1487                                       00000564 GR
+  8 _battle_motion_asset_1488                                       0000060E GR
+  8 _battle_motion_asset_1489                                       000006B8 GR
+  8 _battle_motion_asset_1490                                       00000762 GR
+  8 _battle_motion_asset_1491                                       0000080C GR
+  8 _battle_motion_asset_1492                                       000008B6 GR
+  8 _battle_motion_asset_1493                                       00000960 GR
+  8 _battle_motion_asset_1494                                       00000A0A GR
+  8 _battle_motion_asset_1495                                       00000AB4 GR
+  8 _battle_motion_asset_1496                                       00000B5E GR
+  8 _battle_motion_asset_1497                                       00000C08 GR
+  8 _battle_motion_asset_1498                                       00000CB2 GR
+  8 _battle_motion_asset_1499                                       00000D5C GR
+  8 _battle_motion_asset_1500                                       00000E06 GR
+  8 _battle_motion_asset_1501                                       00000EB0 GR
+  8 _battle_motion_asset_1502                                       00000F5A GR
+  8 _battle_motion_asset_1503                                       00001004 GR
+  8 _battle_motion_asset_1504                                       000010AE GR
+  8 _battle_motion_asset_1505                                       00001158 GR
+  8 _battle_motion_asset_1506                                       00001202 GR
+  8 _battle_motion_asset_1507                                       000012AC GR
+  8 _battle_motion_asset_1508                                       00001356 GR
+  8 _battle_motion_asset_1509                                       00001400 GR
+  8 _battle_motion_asset_1510                                       000014AA GR
+  8 _battle_motion_asset_1511                                       00001554 GR
+  8 _battle_motion_asset_1512                                       000015FE GR
+  8 _battle_motion_asset_1513                                       000016A8 GR
+  8 _battle_motion_asset_1514                                       00001752 GR
+  8 _battle_motion_asset_1515                                       000017FC GR
+  8 _battle_motion_asset_1516                                       000018A6 GR
+  8 _battle_motion_asset_1517                                       00001950 GR
+  8 _battle_motion_asset_1518                                       000019FA GR
+  8 _battle_motion_asset_1519                                       00001AA4 GR
+  8 _battle_motion_asset_1520                                       00001B4E GR
+  8 _battle_motion_asset_1521                                       00001BF8 GR
+  8 _battle_motion_asset_1522                                       00001CA2 GR
+  8 _battle_motion_asset_1523                                       00001D4C GR
+  8 _battle_motion_asset_1524                                       00001DF6 GR
+  8 _battle_motion_asset_1525                                       00001EA0 GR
+  8 _battle_motion_asset_1526                                       00001F4A GR
+  8 _battle_motion_asset_1527                                       00001FF4 GR
+  8 _battle_motion_asset_1528                                       0000209E GR
+  8 _battle_motion_asset_1529                                       00002148 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  8 _battle_motion_asset_1530                                       000021F2 GR
+  8 _battle_motion_asset_1531                                       0000229C GR
+  8 _battle_motion_asset_1532                                       00002346 GR
+  8 _battle_motion_asset_1533                                       000023F0 GR
+  8 _battle_motion_asset_1534                                       0000249A GR
+  8 _battle_motion_asset_1535                                       00002544 GR
+  8 _battle_motion_asset_1536                                       000025EE GR
+  8 _battle_motion_asset_1537                                       00002698 GR
+  8 _battle_motion_asset_1538                                       00002742 GR
+  8 _battle_motion_asset_1539                                       000027EC GR
+  8 _battle_motion_asset_1540                                       00002896 GR
+  8 _battle_motion_asset_1541                                       00002940 GR
+  8 _battle_motion_asset_1542                                       000029EA GR
+  8 _battle_motion_asset_1543                                       00002A94 GR
+  8 _battle_motion_asset_1544                                       00002B3E GR
+  8 _battle_motion_asset_1545                                       00002BE8 GR
+  8 _battle_motion_asset_1546                                       00002C92 GR
+  8 _battle_motion_asset_1547                                       00002D3C GR
+  8 _battle_motion_asset_1548                                       00002DE6 GR
+  8 _battle_motion_asset_1549                                       00002E90 GR
+  8 _battle_motion_asset_1550                                       00002F3A GR
+  8 _battle_motion_asset_1551                                       00002FE4 GR
+  8 _battle_motion_asset_1552                                       0000308E GR
+  8 _battle_motion_asset_1553                                       00003138 GR
+  8 _battle_motion_asset_1554                                       000031E2 GR
+  8 _battle_motion_asset_1555                                       0000328C GR
+  8 _battle_motion_asset_1556                                       00003336 GR
+  8 _battle_motion_asset_1557                                       000033E0 GR
+  8 _battle_motion_asset_1558                                       0000349E GR
+  8 _battle_motion_asset_1559                                       0000355C GR
+  8 _battle_motion_asset_1560                                       0000361A GR
+  8 _battle_motion_asset_1561                                       000036D8 GR
+  8 _battle_motion_asset_1562                                       00003796 GR
+  8 _battle_motion_asset_1563                                       00003854 GR
+  8 _battle_motion_asset_1564                                       00003912 GR
+  8 _battle_motion_asset_1565                                       000039D0 GR
+  8 _battle_motion_asset_1566                                       00003A8E GR
+  8 _battle_motion_asset_1567                                       00003B4C GR
+  8 _battle_motion_asset_1568                                       00003C0A GR
+  8 _battle_motion_asset_1569                                       00003CB4 GR
+  8 _battle_motion_sequence_06                                      00003D5E GR
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_169                                  size     3DB4   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

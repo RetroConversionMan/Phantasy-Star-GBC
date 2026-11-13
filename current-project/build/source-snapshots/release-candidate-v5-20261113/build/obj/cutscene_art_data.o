@@ -1,0 +1,35 @@
+XL4
+H B areas B global symbols
+M cutscene_art_data
+S _cutscene_portrait_0 Ref00000000
+S _cutscene_portrait_1 Ref00000000
+S _cutscene_portrait_2 Ref00000000
+S .__.ABS. Def00000000
+S _cutscene_portrait_3 Ref00000000
+S _cutscene_portrait_4 Ref00000000
+S _cutscene_portrait_5 Ref00000000
+S _cutscene_portrait_6 Ref00000000
+S _cutscene_portrait_7 Ref00000000
+S _cutscene_portrait_8 Ref00000000
+A _CODE size 0 flags 0 addr 0
+A _HRAM size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _CODE_12 size 2D flags 0 addr 0
+S _cutscene_portraits Def00000000
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00 00
+R 00 00 08 00
+T 00 00 00 00 74 68 00 00 00 74 5F 00 00 00 74
+R 00 00 08 00 02 07 00 00 02 0C 01 00
+T 0B 00 00 00 51 00 00 00 74 63 00 00 00 74 5B 00
+R 00 00 08 00 02 06 02 00 02 0B 04 00
+T 17 00 00 00 00 00 74 50 00 00 00 74 65 00 00 00
+R 00 00 08 00 02 04 05 00 02 09 06 00 02 0E 07 00
+T 23 00 00 00 75 72 00 00 00 75 5D 00 00 00
+R 00 00 08 00 02 07 08 00 02 0C 09 00

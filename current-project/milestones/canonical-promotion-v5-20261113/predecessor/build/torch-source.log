@@ -1,0 +1,254 @@
+{
+  "passed": true,
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "cases": [
+    {
+      "name": "off_event",
+      "initial_inventory": [
+        47,
+        56
+      ],
+      "selected_slot": 0,
+      "battle": 0,
+      "event_id": 0,
+      "final_inventory": [
+        47,
+        56
+      ],
+      "palette_effect": false
+    },
+    {
+      "name": "battle_denial",
+      "initial_inventory": [
+        47,
+        56
+      ],
+      "selected_slot": 0,
+      "battle": 1,
+      "event_id": 175,
+      "final_inventory": [
+        47,
+        56
+      ],
+      "palette_effect": false
+    },
+    {
+      "name": "battle_precedes_event_denial",
+      "initial_inventory": [
+        47
+      ],
+      "selected_slot": 0,
+      "battle": 1,
+      "event_id": 0,
+      "final_inventory": [
+        47
+      ],
+      "palette_effect": false
+    },
+    {
+      "name": "pot_absent",
+      "initial_inventory": [
+        47
+      ],
+      "selected_slot": 0,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        47
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "pot_absent_nuts_present",
+      "initial_inventory": [
+        49,
+        47
+      ],
+      "selected_slot": 1,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        49,
+        47
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "pot_present",
+      "initial_inventory": [
+        47,
+        56
+      ],
+      "selected_slot": 0,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        56,
+        49
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "nuts_already_present",
+      "initial_inventory": [
+        56,
+        49,
+        47
+      ],
+      "selected_slot": 2,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        56,
+        49
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "selected_middle_and_duplicate_torch",
+      "initial_inventory": [
+        47,
+        56,
+        47,
+        39
+      ],
+      "selected_slot": 2,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        47,
+        56,
+        39,
+        49
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "full_inventory",
+      "initial_inventory": [
+        47,
+        56,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ],
+      "selected_slot": 0,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        56,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        49
+      ],
+      "palette_effect": true
+    },
+    {
+      "name": "full_inventory_nuts_present",
+      "initial_inventory": [
+        47,
+        56,
+        49,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ],
+      "selected_slot": 0,
+      "battle": 0,
+      "event_id": 175,
+      "final_inventory": [
+        56,
+        49,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ],
+      "palette_effect": true
+    }
+  ],
+  "effect_palette_address": "C23B..C23F",
+  "effect_values": [
+    12,
+    8,
+    4,
+    3,
+    11
+  ],
+  "chronology": "B458; battle/event gate; original7CA6 and one22(0x16)VBlank; Pot check; selected Torch removal only with Pot; B49A/B471; actual3464 six10(0x0A)VBlanks; add Nuts only after close and only when absent.",
+  "reference": "Original Z80 item handler,7CA6 palette writer,inventory helpers,3464/3A57 and selected VBlank handlers execute. Dialogue drawing alone is intercepted; controller and sound engine are not emulated by this oracle."
+}

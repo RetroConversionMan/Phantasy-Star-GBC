@@ -1,0 +1,68 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+  8 _ask                                                            00000052 R
+  8 _church_choose                                                  000000EB R
+  8 _church_exit                                                    000000E0 R
+  8 _church_experience                                              00000135 R
+  8 _done                                                           00000060 R
+  8 _emit                                                           00000000 R
+    _event_buy_secret                                               ******** GX
+  8 _goods                                                          00000119 R
+  8 _hospital_choose                                                0000008B R
+  8 _hospital_return                                                000000C6 R
+  8 _items                                                          00000127 R
+    _memset                                                         ******** GX
+  8 _multiple                                                       0000006C R
+    _rpg_buy                                                        ******** GX
+    _rpg_exp_to_next                                                ******** GX
+    _rpg_hospital_cost                                              ******** GX
+    _rpg_revival_cost                                               ******** GX
+    _rpg_revive                                                     ******** GX
+    _rpg_sell                                                       ******** GX
+    _rpg_sell_price                                                 ******** GX
+    _rpg_shop_option                                                ******** GX
+  8 _say                                                            00000044 R
+  8 _service_advance                                                000002F1 GR
+  8 _service_begin                                                  00000236 GR
+  8 _service_respond                                                00000588 GR
+  8 _service_select                                                 000007D8 GR
+    b_event_buy_secret                                              ******** GX
+    b_multiple                                                  =   00000013 
+    b_rpg_buy                                                       ******** GX
+    b_rpg_exp_to_next                                               ******** GX
+    b_rpg_hospital_cost                                             ******** GX
+    b_rpg_revival_cost                                              ******** GX
+    b_rpg_revive                                                    ******** GX
+    b_rpg_sell                                                      ******** GX
+    b_rpg_sell_price                                                ******** GX
+    b_rpg_shop_option                                               ******** GX
+    b_service_advance                                           =   00000013 G
+    b_service_begin                                             =   00000013 G
+    b_service_respond                                           =   00000013 G
+    b_service_select                                            =   00000013 G
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_19                                   size      C08   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

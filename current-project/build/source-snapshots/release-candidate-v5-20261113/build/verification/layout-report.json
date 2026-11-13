@@ -1,0 +1,1537 @@
+{
+  "passed": true,
+  "rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1",
+  "rom_banks": 256,
+  "wram_start": 49312,
+  "wram_bytes": 6886,
+  "wram_end": 56198,
+  "stack_address_space_reserved": 1146,
+  "rom_areas": [
+    {
+      "area": "_CODE",
+      "bank": 0,
+      "start": 512,
+      "bytes": 12261,
+      "end": 12773
+    },
+    {
+      "area": "_HOME",
+      "bank": 0,
+      "start": 12773,
+      "bytes": 2925,
+      "end": 15698
+    },
+    {
+      "area": "_CODE_0",
+      "bank": 0,
+      "start": 15698,
+      "bytes": 561,
+      "end": 16259
+    },
+    {
+      "area": "_INITIALIZER",
+      "bank": 0,
+      "start": 16259,
+      "bytes": 6,
+      "end": 16265
+    },
+    {
+      "area": "_GSINIT",
+      "bank": 0,
+      "start": 16265,
+      "bytes": 12,
+      "end": 16277
+    },
+    {
+      "area": "_GSFINAL",
+      "bank": 0,
+      "start": 16277,
+      "bytes": 1,
+      "end": 16278
+    },
+    {
+      "area": "_CODE_2",
+      "bank": 2,
+      "start": 16384,
+      "bytes": 9464,
+      "end": 25848
+    },
+    {
+      "area": "_CODE_3",
+      "bank": 3,
+      "start": 16384,
+      "bytes": 1408,
+      "end": 17792
+    },
+    {
+      "area": "_CODE_1",
+      "bank": 1,
+      "start": 16384,
+      "bytes": 322,
+      "end": 16706
+    },
+    {
+      "area": "_CODE_14",
+      "bank": 14,
+      "start": 16384,
+      "bytes": 3892,
+      "end": 20276
+    },
+    {
+      "area": "_CODE_29",
+      "bank": 29,
+      "start": 16384,
+      "bytes": 233,
+      "end": 16617
+    },
+    {
+      "area": "_CODE_22",
+      "bank": 22,
+      "start": 16384,
+      "bytes": 7417,
+      "end": 23801
+    },
+    {
+      "area": "_CODE_12",
+      "bank": 12,
+      "start": 16384,
+      "bytes": 6441,
+      "end": 22825
+    },
+    {
+      "area": "_CODE_121",
+      "bank": 121,
+      "start": 16384,
+      "bytes": 1887,
+      "end": 18271
+    },
+    {
+      "area": "_CODE_11",
+      "bank": 11,
+      "start": 16384,
+      "bytes": 6858,
+      "end": 23242
+    },
+    {
+      "area": "_CODE_5",
+      "bank": 5,
+      "start": 16384,
+      "bytes": 3337,
+      "end": 19721
+    },
+    {
+      "area": "_CODE_122",
+      "bank": 122,
+      "start": 16384,
+      "bytes": 2855,
+      "end": 19239
+    },
+    {
+      "area": "_CODE_4",
+      "bank": 4,
+      "start": 16384,
+      "bytes": 12811,
+      "end": 29195
+    },
+    {
+      "area": "_CODE_7",
+      "bank": 7,
+      "start": 16384,
+      "bytes": 11977,
+      "end": 28361
+    },
+    {
+      "area": "_CODE_19",
+      "bank": 19,
+      "start": 16384,
+      "bytes": 3700,
+      "end": 20084
+    },
+    {
+      "area": "_CODE_8",
+      "bank": 8,
+      "start": 16384,
+      "bytes": 8324,
+      "end": 24708
+    },
+    {
+      "area": "_CODE_6",
+      "bank": 6,
+      "start": 16384,
+      "bytes": 5152,
+      "end": 21536
+    },
+    {
+      "area": "_CODE_21",
+      "bank": 21,
+      "start": 16384,
+      "bytes": 553,
+      "end": 16937
+    },
+    {
+      "area": "_CODE_24",
+      "bank": 24,
+      "start": 16384,
+      "bytes": 3712,
+      "end": 20096
+    },
+    {
+      "area": "_CODE_25",
+      "bank": 25,
+      "start": 16384,
+      "bytes": 2944,
+      "end": 19328
+    },
+    {
+      "area": "_CODE_18",
+      "bank": 18,
+      "start": 16384,
+      "bytes": 7635,
+      "end": 24019
+    },
+    {
+      "area": "_CODE_30",
+      "bank": 30,
+      "start": 16384,
+      "bytes": 12118,
+      "end": 28502
+    },
+    {
+      "area": "_CODE_31",
+      "bank": 31,
+      "start": 16384,
+      "bytes": 11923,
+      "end": 28307
+    },
+    {
+      "area": "_CODE_115",
+      "bank": 115,
+      "start": 16384,
+      "bytes": 4510,
+      "end": 20894
+    },
+    {
+      "area": "_CODE_118",
+      "bank": 118,
+      "start": 16384,
+      "bytes": 8158,
+      "end": 24542
+    },
+    {
+      "area": "_CODE_140",
+      "bank": 140,
+      "start": 16384,
+      "bytes": 15695,
+      "end": 32079
+    },
+    {
+      "area": "_CODE_141",
+      "bank": 141,
+      "start": 16384,
+      "bytes": 15787,
+      "end": 32171
+    },
+    {
+      "area": "_CODE_142",
+      "bank": 142,
+      "start": 16384,
+      "bytes": 15755,
+      "end": 32139
+    },
+    {
+      "area": "_CODE_143",
+      "bank": 143,
+      "start": 16384,
+      "bytes": 15765,
+      "end": 32149
+    },
+    {
+      "area": "_CODE_144",
+      "bank": 144,
+      "start": 16384,
+      "bytes": 15770,
+      "end": 32154
+    },
+    {
+      "area": "_CODE_145",
+      "bank": 145,
+      "start": 16384,
+      "bytes": 15790,
+      "end": 32174
+    },
+    {
+      "area": "_CODE_146",
+      "bank": 146,
+      "start": 16384,
+      "bytes": 1120,
+      "end": 17504
+    },
+    {
+      "area": "_CODE_254",
+      "bank": 254,
+      "start": 16384,
+      "bytes": 405,
+      "end": 16789
+    },
+    {
+      "area": "_CODE_255",
+      "bank": 255,
+      "start": 16384,
+      "bytes": 11694,
+      "end": 28078
+    },
+    {
+      "area": "_CODE_123",
+      "bank": 123,
+      "start": 16384,
+      "bytes": 2661,
+      "end": 19045
+    },
+    {
+      "area": "_CODE_147",
+      "bank": 147,
+      "start": 16384,
+      "bytes": 15795,
+      "end": 32179
+    },
+    {
+      "area": "_CODE_182",
+      "bank": 182,
+      "start": 16384,
+      "bytes": 10216,
+      "end": 26600
+    },
+    {
+      "area": "_CODE_183",
+      "bank": 183,
+      "start": 16384,
+      "bytes": 15800,
+      "end": 32184
+    },
+    {
+      "area": "_CODE_184",
+      "bank": 184,
+      "start": 16384,
+      "bytes": 15785,
+      "end": 32169
+    },
+    {
+      "area": "_CODE_185",
+      "bank": 185,
+      "start": 16384,
+      "bytes": 15783,
+      "end": 32167
+    },
+    {
+      "area": "_CODE_186",
+      "bank": 186,
+      "start": 16384,
+      "bytes": 15796,
+      "end": 32180
+    },
+    {
+      "area": "_CODE_187",
+      "bank": 187,
+      "start": 16384,
+      "bytes": 15788,
+      "end": 32172
+    },
+    {
+      "area": "_CODE_188",
+      "bank": 188,
+      "start": 16384,
+      "bytes": 15796,
+      "end": 32180
+    },
+    {
+      "area": "_CODE_189",
+      "bank": 189,
+      "start": 16384,
+      "bytes": 15790,
+      "end": 32174
+    },
+    {
+      "area": "_CODE_190",
+      "bank": 190,
+      "start": 16384,
+      "bytes": 15792,
+      "end": 32176
+    },
+    {
+      "area": "_CODE_191",
+      "bank": 191,
+      "start": 16384,
+      "bytes": 15800,
+      "end": 32184
+    },
+    {
+      "area": "_CODE_213",
+      "bank": 213,
+      "start": 16384,
+      "bytes": 10719,
+      "end": 27103
+    },
+    {
+      "area": "_CODE_148",
+      "bank": 148,
+      "start": 16384,
+      "bytes": 9740,
+      "end": 26124
+    },
+    {
+      "area": "_CODE_149",
+      "bank": 149,
+      "start": 16384,
+      "bytes": 15722,
+      "end": 32106
+    },
+    {
+      "area": "_CODE_150",
+      "bank": 150,
+      "start": 16384,
+      "bytes": 15757,
+      "end": 32141
+    },
+    {
+      "area": "_CODE_151",
+      "bank": 151,
+      "start": 16384,
+      "bytes": 15778,
+      "end": 32162
+    },
+    {
+      "area": "_CODE_152",
+      "bank": 152,
+      "start": 16384,
+      "bytes": 15782,
+      "end": 32166
+    },
+    {
+      "area": "_CODE_153",
+      "bank": 153,
+      "start": 16384,
+      "bytes": 15792,
+      "end": 32176
+    },
+    {
+      "area": "_CODE_154",
+      "bank": 154,
+      "start": 16384,
+      "bytes": 15782,
+      "end": 32166
+    },
+    {
+      "area": "_CODE_155",
+      "bank": 155,
+      "start": 16384,
+      "bytes": 15797,
+      "end": 32181
+    },
+    {
+      "area": "_CODE_156",
+      "bank": 156,
+      "start": 16384,
+      "bytes": 15794,
+      "end": 32178
+    },
+    {
+      "area": "_CODE_157",
+      "bank": 157,
+      "start": 16384,
+      "bytes": 15796,
+      "end": 32180
+    },
+    {
+      "area": "_CODE_158",
+      "bank": 158,
+      "start": 16384,
+      "bytes": 15785,
+      "end": 32169
+    },
+    {
+      "area": "_CODE_159",
+      "bank": 159,
+      "start": 16384,
+      "bytes": 15800,
+      "end": 32184
+    },
+    {
+      "area": "_CODE_160",
+      "bank": 160,
+      "start": 16384,
+      "bytes": 15765,
+      "end": 32149
+    },
+    {
+      "area": "_CODE_161",
+      "bank": 161,
+      "start": 16384,
+      "bytes": 15800,
+      "end": 32184
+    },
+    {
+      "area": "_CODE_162",
+      "bank": 162,
+      "start": 16384,
+      "bytes": 15795,
+      "end": 32179
+    },
+    {
+      "area": "_CODE_163",
+      "bank": 163,
+      "start": 16384,
+      "bytes": 15745,
+      "end": 32129
+    },
+    {
+      "area": "_CODE_164",
+      "bank": 164,
+      "start": 16384,
+      "bytes": 15760,
+      "end": 32144
+    },
+    {
+      "area": "_CODE_165",
+      "bank": 165,
+      "start": 16384,
+      "bytes": 15760,
+      "end": 32144
+    },
+    {
+      "area": "_CODE_166",
+      "bank": 166,
+      "start": 16384,
+      "bytes": 15795,
+      "end": 32179
+    },
+    {
+      "area": "_CODE_167",
+      "bank": 167,
+      "start": 16384,
+      "bytes": 15788,
+      "end": 32172
+    },
+    {
+      "area": "_CODE_168",
+      "bank": 168,
+      "start": 16384,
+      "bytes": 15735,
+      "end": 32119
+    },
+    {
+      "area": "_CODE_169",
+      "bank": 169,
+      "start": 16384,
+      "bytes": 15796,
+      "end": 32180
+    },
+    {
+      "area": "_CODE_170",
+      "bank": 170,
+      "start": 16384,
+      "bytes": 15730,
+      "end": 32114
+    },
+    {
+      "area": "_CODE_171",
+      "bank": 171,
+      "start": 16384,
+      "bytes": 15780,
+      "end": 32164
+    },
+    {
+      "area": "_CODE_172",
+      "bank": 172,
+      "start": 16384,
+      "bytes": 15780,
+      "end": 32164
+    },
+    {
+      "area": "_CODE_173",
+      "bank": 173,
+      "start": 16384,
+      "bytes": 15720,
+      "end": 32104
+    },
+    {
+      "area": "_CODE_174",
+      "bank": 174,
+      "start": 16384,
+      "bytes": 15792,
+      "end": 32176
+    },
+    {
+      "area": "_CODE_175",
+      "bank": 175,
+      "start": 16384,
+      "bytes": 15745,
+      "end": 32129
+    },
+    {
+      "area": "_CODE_176",
+      "bank": 176,
+      "start": 16384,
+      "bytes": 15786,
+      "end": 32170
+    },
+    {
+      "area": "_CODE_177",
+      "bank": 177,
+      "start": 16384,
+      "bytes": 15795,
+      "end": 32179
+    },
+    {
+      "area": "_CODE_178",
+      "bank": 178,
+      "start": 16384,
+      "bytes": 15796,
+      "end": 32180
+    },
+    {
+      "area": "_CODE_179",
+      "bank": 179,
+      "start": 16384,
+      "bytes": 15725,
+      "end": 32109
+    },
+    {
+      "area": "_CODE_180",
+      "bank": 180,
+      "start": 16384,
+      "bytes": 15777,
+      "end": 32161
+    },
+    {
+      "area": "_CODE_181",
+      "bank": 181,
+      "start": 16384,
+      "bytes": 9708,
+      "end": 26092
+    },
+    {
+      "area": "_CODE_252",
+      "bank": 252,
+      "start": 16384,
+      "bytes": 690,
+      "end": 17074
+    },
+    {
+      "area": "_CODE_253",
+      "bank": 253,
+      "start": 16384,
+      "bytes": 14332,
+      "end": 30716
+    },
+    {
+      "area": "_CODE_17",
+      "bank": 17,
+      "start": 16384,
+      "bytes": 3743,
+      "end": 20127
+    },
+    {
+      "area": "_CODE_16",
+      "bank": 16,
+      "start": 16384,
+      "bytes": 9845,
+      "end": 26229
+    },
+    {
+      "area": "_CODE_77",
+      "bank": 77,
+      "start": 16384,
+      "bytes": 8420,
+      "end": 24804
+    },
+    {
+      "area": "_CODE_209",
+      "bank": 209,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_210",
+      "bank": 210,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_211",
+      "bank": 211,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_212",
+      "bank": 212,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_214",
+      "bank": 214,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_215",
+      "bank": 215,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_216",
+      "bank": 216,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_217",
+      "bank": 217,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_218",
+      "bank": 218,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_219",
+      "bank": 219,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_220",
+      "bank": 220,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_221",
+      "bank": 221,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_222",
+      "bank": 222,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_223",
+      "bank": 223,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_224",
+      "bank": 224,
+      "start": 16384,
+      "bytes": 16304,
+      "end": 32688
+    },
+    {
+      "area": "_CODE_225",
+      "bank": 225,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_226",
+      "bank": 226,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_227",
+      "bank": 227,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_228",
+      "bank": 228,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_229",
+      "bank": 229,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_230",
+      "bank": 230,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_231",
+      "bank": 231,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_232",
+      "bank": 232,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_233",
+      "bank": 233,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_234",
+      "bank": 234,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_235",
+      "bank": 235,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_236",
+      "bank": 236,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_237",
+      "bank": 237,
+      "start": 16384,
+      "bytes": 16248,
+      "end": 32632
+    },
+    {
+      "area": "_CODE_238",
+      "bank": 238,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_239",
+      "bank": 239,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_240",
+      "bank": 240,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_241",
+      "bank": 241,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_242",
+      "bank": 242,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_243",
+      "bank": 243,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_244",
+      "bank": 244,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_245",
+      "bank": 245,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_246",
+      "bank": 246,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_247",
+      "bank": 247,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_248",
+      "bank": 248,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_249",
+      "bank": 249,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_250",
+      "bank": 250,
+      "start": 16384,
+      "bytes": 16320,
+      "end": 32704
+    },
+    {
+      "area": "_CODE_251",
+      "bank": 251,
+      "start": 16384,
+      "bytes": 2880,
+      "end": 19264
+    },
+    {
+      "area": "_CODE_20",
+      "bank": 20,
+      "start": 16384,
+      "bytes": 13072,
+      "end": 29456
+    },
+    {
+      "area": "_CODE_13",
+      "bank": 13,
+      "start": 16384,
+      "bytes": 3594,
+      "end": 19978
+    },
+    {
+      "area": "_CODE_119",
+      "bank": 119,
+      "start": 16384,
+      "bytes": 5278,
+      "end": 21662
+    },
+    {
+      "area": "_CODE_116",
+      "bank": 116,
+      "start": 16384,
+      "bytes": 15008,
+      "end": 31392
+    },
+    {
+      "area": "_CODE_117",
+      "bank": 117,
+      "start": 16384,
+      "bytes": 4624,
+      "end": 21008
+    },
+    {
+      "area": "_CODE_128",
+      "bank": 128,
+      "start": 16384,
+      "bytes": 14852,
+      "end": 31236
+    },
+    {
+      "area": "_CODE_120",
+      "bank": 120,
+      "start": 16384,
+      "bytes": 12552,
+      "end": 28936
+    },
+    {
+      "area": "_CODE_132",
+      "bank": 132,
+      "start": 16384,
+      "bytes": 1897,
+      "end": 18281
+    },
+    {
+      "area": "_CODE_129",
+      "bank": 129,
+      "start": 16384,
+      "bytes": 3160,
+      "end": 19544
+    },
+    {
+      "area": "_CODE_130",
+      "bank": 130,
+      "start": 16384,
+      "bytes": 10088,
+      "end": 26472
+    },
+    {
+      "area": "_CODE_131",
+      "bank": 131,
+      "start": 16384,
+      "bytes": 1056,
+      "end": 17440
+    },
+    {
+      "area": "_CODE_136",
+      "bank": 136,
+      "start": 16384,
+      "bytes": 6832,
+      "end": 23216
+    },
+    {
+      "area": "_CODE_137",
+      "bank": 137,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_138",
+      "bank": 138,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_139",
+      "bank": 139,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_193",
+      "bank": 193,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_194",
+      "bank": 194,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_195",
+      "bank": 195,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_196",
+      "bank": 196,
+      "start": 16384,
+      "bytes": 16329,
+      "end": 32713
+    },
+    {
+      "area": "_CODE_197",
+      "bank": 197,
+      "start": 16384,
+      "bytes": 16383,
+      "end": 32767
+    },
+    {
+      "area": "_CODE_198",
+      "bank": 198,
+      "start": 16384,
+      "bytes": 16135,
+      "end": 32519
+    },
+    {
+      "area": "_CODE_199",
+      "bank": 199,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_200",
+      "bank": 200,
+      "start": 16384,
+      "bytes": 16224,
+      "end": 32608
+    },
+    {
+      "area": "_CODE_201",
+      "bank": 201,
+      "start": 16384,
+      "bytes": 16379,
+      "end": 32763
+    },
+    {
+      "area": "_CODE_202",
+      "bank": 202,
+      "start": 16384,
+      "bytes": 16137,
+      "end": 32521
+    },
+    {
+      "area": "_CODE_203",
+      "bank": 203,
+      "start": 16384,
+      "bytes": 16334,
+      "end": 32718
+    },
+    {
+      "area": "_CODE_204",
+      "bank": 204,
+      "start": 16384,
+      "bytes": 16383,
+      "end": 32767
+    },
+    {
+      "area": "_CODE_205",
+      "bank": 205,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_206",
+      "bank": 206,
+      "start": 16384,
+      "bytes": 16368,
+      "end": 32752
+    },
+    {
+      "area": "_CODE_207",
+      "bank": 207,
+      "start": 16384,
+      "bytes": 16286,
+      "end": 32670
+    },
+    {
+      "area": "_CODE_208",
+      "bank": 208,
+      "start": 16384,
+      "bytes": 12606,
+      "end": 28990
+    },
+    {
+      "area": "_CODE_15",
+      "bank": 15,
+      "start": 16384,
+      "bytes": 10630,
+      "end": 27014
+    },
+    {
+      "area": "_CODE_61",
+      "bank": 61,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_62",
+      "bank": 62,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_63",
+      "bank": 63,
+      "start": 16384,
+      "bytes": 16384,
+      "end": 32768
+    },
+    {
+      "area": "_CODE_9",
+      "bank": 9,
+      "start": 16384,
+      "bytes": 14996,
+      "end": 31380
+    },
+    {
+      "area": "_CODE_10",
+      "bank": 10,
+      "start": 16384,
+      "bytes": 14204,
+      "end": 30588
+    },
+    {
+      "area": "_CODE_32",
+      "bank": 32,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_33",
+      "bank": 33,
+      "start": 16384,
+      "bytes": 7564,
+      "end": 23948
+    },
+    {
+      "area": "_CODE_34",
+      "bank": 34,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_35",
+      "bank": 35,
+      "start": 16384,
+      "bytes": 5416,
+      "end": 21800
+    },
+    {
+      "area": "_CODE_36",
+      "bank": 36,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_37",
+      "bank": 37,
+      "start": 16384,
+      "bytes": 4382,
+      "end": 20766
+    },
+    {
+      "area": "_CODE_38",
+      "bank": 38,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_39",
+      "bank": 39,
+      "start": 16384,
+      "bytes": 4286,
+      "end": 20670
+    },
+    {
+      "area": "_CODE_40",
+      "bank": 40,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_41",
+      "bank": 41,
+      "start": 16384,
+      "bytes": 6568,
+      "end": 22952
+    },
+    {
+      "area": "_CODE_42",
+      "bank": 42,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_43",
+      "bank": 43,
+      "start": 16384,
+      "bytes": 5106,
+      "end": 21490
+    },
+    {
+      "area": "_CODE_44",
+      "bank": 44,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_45",
+      "bank": 45,
+      "start": 16384,
+      "bytes": 5096,
+      "end": 21480
+    },
+    {
+      "area": "_CODE_46",
+      "bank": 46,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_47",
+      "bank": 47,
+      "start": 16384,
+      "bytes": 8300,
+      "end": 24684
+    },
+    {
+      "area": "_CODE_48",
+      "bank": 48,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_49",
+      "bank": 49,
+      "start": 16384,
+      "bytes": 3444,
+      "end": 19828
+    },
+    {
+      "area": "_CODE_50",
+      "bank": 50,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_51",
+      "bank": 51,
+      "start": 16384,
+      "bytes": 5570,
+      "end": 21954
+    },
+    {
+      "area": "_CODE_52",
+      "bank": 52,
+      "start": 16384,
+      "bytes": 12288,
+      "end": 28672
+    },
+    {
+      "area": "_CODE_53",
+      "bank": 53,
+      "start": 16384,
+      "bytes": 3452,
+      "end": 19836
+    },
+    {
+      "area": "_CODE_54",
+      "bank": 54,
+      "start": 16384,
+      "bytes": 15000,
+      "end": 31384
+    },
+    {
+      "area": "_CODE_55",
+      "bank": 55,
+      "start": 16384,
+      "bytes": 15800,
+      "end": 32184
+    },
+    {
+      "area": "_CODE_56",
+      "bank": 56,
+      "start": 16384,
+      "bytes": 15504,
+      "end": 31888
+    },
+    {
+      "area": "_CODE_57",
+      "bank": 57,
+      "start": 16384,
+      "bytes": 15368,
+      "end": 31752
+    },
+    {
+      "area": "_CODE_58",
+      "bank": 58,
+      "start": 16384,
+      "bytes": 15720,
+      "end": 32104
+    },
+    {
+      "area": "_CODE_59",
+      "bank": 59,
+      "start": 16384,
+      "bytes": 15136,
+      "end": 31520
+    },
+    {
+      "area": "_CODE_60",
+      "bank": 60,
+      "start": 16384,
+      "bytes": 8384,
+      "end": 24768
+    },
+    {
+      "area": "_CODE_97",
+      "bank": 97,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_98",
+      "bank": 98,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_99",
+      "bank": 99,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_100",
+      "bank": 100,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_101",
+      "bank": 101,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_102",
+      "bank": 102,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_103",
+      "bank": 103,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_104",
+      "bank": 104,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_105",
+      "bank": 105,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_106",
+      "bank": 106,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_107",
+      "bank": 107,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_108",
+      "bank": 108,
+      "start": 16384,
+      "bytes": 15639,
+      "end": 32023
+    },
+    {
+      "area": "_CODE_109",
+      "bank": 109,
+      "start": 16384,
+      "bytes": 15740,
+      "end": 32124
+    },
+    {
+      "area": "_CODE_110",
+      "bank": 110,
+      "start": 16384,
+      "bytes": 15571,
+      "end": 31955
+    },
+    {
+      "area": "_CODE_192",
+      "bank": 192,
+      "start": 16384,
+      "bytes": 1354,
+      "end": 17738
+    },
+    {
+      "area": "_CODE_111",
+      "bank": 111,
+      "start": 16384,
+      "bytes": 15480,
+      "end": 31864
+    },
+    {
+      "area": "_CODE_112",
+      "bank": 112,
+      "start": 16384,
+      "bytes": 15424,
+      "end": 31808
+    },
+    {
+      "area": "_CODE_113",
+      "bank": 113,
+      "start": 16384,
+      "bytes": 15272,
+      "end": 31656
+    },
+    {
+      "area": "_CODE_114",
+      "bank": 114,
+      "start": 16384,
+      "bytes": 14848,
+      "end": 31232
+    }
+  ]
+}

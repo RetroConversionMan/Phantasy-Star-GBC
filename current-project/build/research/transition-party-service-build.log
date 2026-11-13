@@ -1,0 +1,12 @@
+src/save_slots.c:16: warning 185: comparison of 'signed char' with 'unsigned char' requires promotion to int
+src/save_ui.c:47: warning 196: pointer target lost const qualifier
+src/battle.c:249: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+{
+  "passed": true,
+  "rom_sha256": "bdc70a55ac1722067922eb0422e54ec1a0d3f77aea718a9d99b63b8e0b57653a",
+  "rom_banks": 256,
+  "wram_start": 49312,
+  "wram_bytes": 6866,
+  "wram_end": 56178,
+  "stack_address_space_reserved": 1166
+}

@@ -1,0 +1,14 @@
+--- a/src/main.c
++++ b/src/main.c
+@@ -144,7 +144,10 @@
+     }
+     if(scene_actor_active)scene_actor_hide();
+     DISPLAY_OFF;HIDE_WIN;HIDE_SPRITES;
+-    cutscene_portrait_show(game_cutscene.action.portrait);background_changed=1;DISPLAY_ON;
++    cutscene_portrait_show(game_cutscene.action.portrait);
++    /* The preceding movie fade blacks all palettes. Portraits restore only
++     * palettes 0..6; the narrative window also needs its reserved palette. */
++    set_bkg_palette(7,1,ui_palette);background_changed=1;DISPLAY_ON;
+     dialogue_open(&dialogue,game_cutscene.action.dialogue_id);
+     dialogue_stream_begin(&dialogue,story_lower);story_page();
+ }

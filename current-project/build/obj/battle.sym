@@ -1,0 +1,114 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    ___sdcc_bcall_ehl                                               ******** GX
+    __divuchar                                                      ******** GX
+    __mulint                                                        ******** GX
+  8 _alive                                                          00000000 R
+  8 _boost                                                          000000F9 R
+  8 _check_outcome                                                  0000038C R
+  8 _chest_damage                                                   00001C0D R
+  8 _choose_enemy                                                   000000BE R
+  8 _choose_party                                                   00000097 R
+  8 _damage                                                         000001DA R
+  8 _decay_barrier                                                  000002FC R
+  8 _decay_binding                                                  00000299 R
+  8 _enemy_fire                                                     00000D44 R
+  8 _enemy_group                                                    00000E46 R
+  8 _enemy_physical                                                 00000C9D R
+  8 _enemy_turn                                                     00000FBA R
+  8 _living_enemies                                                 00000073 R
+  8 _living_party                                                   0000005B R
+    _memcpy                                                         ******** GX
+    _memset                                                         ******** GX
+  8 _party_alive                                                    00000004 R
+  8 _party_count                                                    0000002E R
+  8 _physical                                                       0000044F R
+  8 _player_group                                                   0000133B R
+  8 _player_item                                                    0000172B R
+  8 _player_magic                                                   000013EF R
+  8 _player_random_spell                                            000012E9 R
+  8 _player_turn                                                    000018A9 R
+  8 _record_damage                                                  0000013A R
+    _rpg_add_item                                                   ******** GX
+    _rpg_add_money                                                  ******** GX
+    _rpg_award_exp                                                  ******** GX
+  8 _rpg_battle_begin                                               000004DA GR
+  8 _rpg_battle_decline_chest                                       00001DB7 GR
+  8 _rpg_battle_open_chest                                          00001C31 GR
+  8 _rpg_battle_prepare                                             000009FD GR
+  8 _rpg_battle_prepare_chest                                       00001B99 GR
+  8 _rpg_battle_replace_reward                                      00001D6D GR
+  8 _rpg_battle_round                                               00001A99 GR
+  8 _rpg_battle_step                                                000019BF GR
+  8 _rpg_battle_talk                                                000007AA GR
+    _rpg_cast_heal                                                  ******** GX
+  8 _rpg_claim_rewards                                              00001AFE GR
+    _rpg_enemy_record                                               ******** GX
+    _rpg_find_item                                                  ******** GX
+    _rpg_knows_spell                                                ******** GX
+    _rpg_magic_cost                                                 ******** GX
+    _rpg_physical_damage                                            ******** GX
+    _rpg_random                                                     ******** GX
+    _rpg_refresh_stats                                              ******** GX
+    _rpg_remove_item                                                ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    _rpg_replace_item                                               ******** GX
+  8 _rpg_try_run                                                    00000739 GR
+    _rpg_use_item                                                   ******** GX
+  8 _signed_damage                                                  00000227 R
+  8 _validate_action                                                0000091C R
+    b_rpg_add_item                                                  ******** GX
+    b_rpg_add_money                                                 ******** GX
+    b_rpg_award_exp                                                 ******** GX
+    b_rpg_battle_begin                                          =   00000012 G
+    b_rpg_battle_decline_chest                                  =   00000012 G
+    b_rpg_battle_open_chest                                     =   00000012 G
+    b_rpg_battle_prepare                                        =   00000012 G
+    b_rpg_battle_prepare_chest                                  =   00000012 G
+    b_rpg_battle_replace_reward                                 =   00000012 G
+    b_rpg_battle_round                                          =   00000012 G
+    b_rpg_battle_step                                           =   00000012 G
+    b_rpg_battle_talk                                           =   00000012 G
+    b_rpg_cast_heal                                                 ******** GX
+    b_rpg_claim_rewards                                         =   00000012 G
+    b_rpg_enemy_record                                              ******** GX
+    b_rpg_find_item                                                 ******** GX
+    b_rpg_knows_spell                                               ******** GX
+    b_rpg_magic_cost                                                ******** GX
+    b_rpg_physical_damage                                           ******** GX
+    b_rpg_random                                                    ******** GX
+    b_rpg_refresh_stats                                             ******** GX
+    b_rpg_remove_item                                               ******** GX
+    b_rpg_replace_item                                              ******** GX
+    b_rpg_try_run                                               =   00000012 G
+    b_rpg_use_item                                                  ******** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size        0   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size        0   flags    0
+   3 _INITIALIZED                               size        0   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _CODE_18                                   size     1DD3   flags    0
+   9 _INITIALIZER                               size        0   flags    0
+   A _CABS                                      size        0   flags    8
+

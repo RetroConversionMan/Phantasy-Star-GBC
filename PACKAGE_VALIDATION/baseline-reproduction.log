@@ -1,0 +1,303 @@
+mkdir -p build
+../current-project/.tools/gbdk/bin/lcc -msm83:gb -Wm-yC -Wm-yt0x1b -Wm-yo4 -Wm-ya1 -Wm-ynPSGBC-EXPLORE -Wl-m -Wl-j -o build/phantasy-star-gbc-exploration.gbc src/assets.c src/assets_sprites.c src/font.c src/main.c
+src/assets.c:
+src/assets_sprites.c:
+src/font.c:
+src/main.c:
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_rom.py build/phantasy-star-gbc-exploration.gbc --port-suite
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "rom": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/phantasy-star-gbc-exploration.gbc",
+  "header": {
+    "title": "PSGBC-EXPLORE",
+    "bytes": 65536,
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "port_suite": {
+    "status": "passed",
+    "checks": [
+      "Fresh cartridge reaches title; Start begins exploration",
+      "Directional input moves the 16-bit player position",
+      "Menu and help open/close and pause movement",
+      "Select saves position/facing and Continue restores them after a fresh boot",
+      "Menu save/title actions work; New Walk resets to the start",
+      "Damaged save signature and checksum are rejected without preventing a new walk"
+    ],
+    "initial_position": [
+      408,
+      112
+    ],
+    "saved_position": [
+      408,
+      87
+    ],
+    "movement": [
+      {
+        "direction": "right",
+        "before": [
+          408,
+          112
+        ],
+        "after": [
+          440,
+          112
+        ]
+      },
+      {
+        "direction": "down",
+        "before": [
+          440,
+          112
+        ],
+        "after": [
+          440,
+          113
+        ]
+      },
+      {
+        "direction": "left",
+        "before": [
+          440,
+          113
+        ],
+        "after": [
+          408,
+          113
+        ]
+      },
+      {
+        "direction": "up",
+        "before": [
+          408,
+          113
+        ],
+        "after": [
+          408,
+          87
+        ]
+      }
+    ],
+    "screenshots": {
+      "title": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/title.png",
+        "sha256_pixels": "ed04b5c91d68c7dbdd601ad017a4502c3c630d68de2f6e21a92c32f6327cd458",
+        "unique_colors": 16,
+        "lcd_enabled": true,
+        "pc": "0x1c5"
+      },
+      "walk": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/walk.png",
+        "sha256_pixels": "3d6534f008928a4c8d9c93ad7335b1f925fab0a7ea40daa94b35f1cacc70fef8",
+        "unique_colors": 17,
+        "lcd_enabled": true,
+        "pc": "0xaf5"
+      },
+      "after-movement": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/after-movement.png",
+        "sha256_pixels": "4bc52a7dd7d88054a827f861506dccddbe5c38bfa11efa6ee2f87e191b4d729b",
+        "unique_colors": 17,
+        "lcd_enabled": true,
+        "pc": "0xaf5"
+      },
+      "menu": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/menu.png",
+        "sha256_pixels": "2ffe6d8eeb39bb6638966f06554d30fba0d53d446bfa2f2720049e079ef1ebc1",
+        "unique_colors": 11,
+        "lcd_enabled": true,
+        "pc": "0x1c5"
+      },
+      "help": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/help.png",
+        "sha256_pixels": "990a2533b593b3512a2ada8bba3dd199f17174bf96d9f7f536755910d6cf71ee",
+        "unique_colors": 2,
+        "lcd_enabled": true,
+        "pc": "0x1c5"
+      },
+      "saved": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/saved.png",
+        "sha256_pixels": "a3719c1b8fba082f13a84c6dccc6cfbf022278d43138c1cae8a4bd04895626f8",
+        "unique_colors": 19,
+        "lcd_enabled": true,
+        "pc": "0xaf5"
+      },
+      "continued": {
+        "file": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction/build/verification/continued.png",
+        "sha256_pixels": "4bc52a7dd7d88054a827f861506dccddbe5c38bfa11efa6ee2f87e191b4d729b",
+        "unique_colors": 17,
+        "lcd_enabled": true,
+        "pc": "0xaf5"
+      }
+    },
+    "emulator": "PyBoy 2.9.0, accurate CGB mode, no fast_mode"
+  },
+  "scope": "Native exploration behavior only; original RPG/story/combat completion is not tested."
+}
+/Users/m236303/.codex/.chatgpt-projects/g-p-6af563d347ac8191927f1179a1b4b9c5/.venv-transfer/bin/python tools/verify_world.py build/phantasy-star-gbc-exploration.gbc
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.32.10
+{
+  "header": {
+    "title": "PSGBC-EXPLORE",
+    "bytes": 65536,
+    "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+    "cgb_flag": "0xc0",
+    "cartridge_type": "0x1b",
+    "ram_size_code": "0x2",
+    "header_checksum": "passed",
+    "global_checksum": "passed",
+    "boot_logo": "passed",
+    "size": "passed"
+  },
+  "routes": [
+    {
+      "from": [
+        25,
+        6
+      ],
+      "to": [
+        4,
+        5
+      ],
+      "steps": 22
+    },
+    {
+      "from": [
+        4,
+        5
+      ],
+      "to": [
+        29,
+        3
+      ],
+      "steps": 29
+    },
+    {
+      "from": [
+        29,
+        3
+      ],
+      "to": [
+        2,
+        22
+      ],
+      "steps": 46
+    },
+    {
+      "from": [
+        2,
+        22
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 45
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 0
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        28,
+        19
+      ],
+      "steps": 0
+    },
+    {
+      "from": [
+        28,
+        19
+      ],
+      "to": [
+        27,
+        18
+      ],
+      "steps": 2
+    },
+    {
+      "from": [
+        27,
+        18
+      ],
+      "to": [
+        27,
+        18
+      ],
+      "steps": 0
+    }
+  ],
+  "walls": [
+    {
+      "direction": "right",
+      "from": [
+        456,
+        316
+      ],
+      "stopped": [
+        459,
+        316
+      ]
+    },
+    {
+      "direction": "down",
+      "from": [
+        456,
+        316
+      ],
+      "stopped": [
+        456,
+        321
+      ]
+    },
+    {
+      "direction": "left",
+      "from": [
+        440,
+        300
+      ],
+      "stopped": [
+        437,
+        300
+      ]
+    },
+    {
+      "direction": "up",
+      "from": [
+        440,
+        300
+      ],
+      "stopped": [
+        440,
+        295
+      ]
+    }
+  ],
+  "tile_checks": 59451,
+  "reachable_floor_cells": 214,
+  "status": "passed"
+}
+{
+  "status": "passed",
+  "sha256": "ffe3d67bb15c3d563f6f9b61e08dc166129818d99500a9af6fd8e9eb7c1b1356",
+  "baseline_unchanged": true,
+  "gbdk": "4.5.0",
+  "rebuild_path": "/private/tmp/psgbc-package-q3riqs5j/phantasy-star-gbc-source-package/baseline-reproduction"
+}

@@ -1,0 +1,160 @@
+{
+  "source_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "native_bank": 120,
+  "data_bytes": 12552,
+  "planets": [
+    {
+      "planet": 0,
+      "bytes": 3928,
+      "sha256": "66849a27258ec28e75b259774ec6d7ca164af5eab7bbb45f71ea56a78f8fe1aa",
+      "native_palettes": [
+        [
+          16,
+          52,
+          56,
+          62
+        ],
+        [
+          4,
+          32,
+          48,
+          56
+        ],
+        [
+          4,
+          52,
+          56,
+          62
+        ],
+        [
+          48,
+          52,
+          56,
+          62
+        ],
+        [
+          32,
+          48,
+          52,
+          56
+        ],
+        [
+          16,
+          56,
+          62,
+          63
+        ],
+        [
+          4,
+          48,
+          52,
+          56
+        ]
+      ]
+    },
+    {
+      "planet": 1,
+      "bytes": 3928,
+      "sha256": "bef21312bcf58a3c8176dd35f7159387a08434404967c0d363c628577bd8b54a",
+      "native_palettes": [
+        [
+          6,
+          11,
+          16,
+          47
+        ],
+        [
+          1,
+          6,
+          11,
+          31
+        ],
+        [
+          6,
+          11,
+          31,
+          47
+        ],
+        [
+          16,
+          31,
+          47,
+          63
+        ],
+        [
+          11,
+          31,
+          47,
+          63
+        ],
+        [
+          6,
+          16,
+          31,
+          47
+        ],
+        [
+          11,
+          16,
+          47,
+          63
+        ]
+      ]
+    },
+    {
+      "planet": 2,
+      "bytes": 3928,
+      "sha256": "24a119587377a9a28ef5e1503ae1f9ea73b788866f7ce4eda23cea6ea82f6ed1",
+      "native_palettes": [
+        [
+          16,
+          57,
+          60,
+          63
+        ],
+        [
+          56,
+          60,
+          62,
+          63
+        ],
+        [
+          57,
+          60,
+          62,
+          63
+        ],
+        [
+          16,
+          56,
+          62,
+          63
+        ],
+        [
+          56,
+          57,
+          60,
+          62
+        ],
+        [
+          16,
+          32,
+          60,
+          16
+        ],
+        [
+          16,
+          32,
+          63,
+          16
+        ]
+      ]
+    }
+  ],
+  "ships": 2,
+  "limits": [
+    "Space artwork is cropped to native160x144 viewport at original pixel size",
+    "Three planet adaptations use seven four-color BG palettes",
+    "Source animation row/ring sequencing belongs to travel controller"
+  ]
+}

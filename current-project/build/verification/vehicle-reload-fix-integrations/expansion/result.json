@@ -1,0 +1,9 @@
+{
+  "suite": "expansion",
+  "script": "verify_expansion.py",
+  "script_sha256": "ed8de7302a0e0b1992f110c9093d65abf50f7df2cb838e4369ca6e2c44245a5b",
+  "returncode": 0,
+  "seconds": 3.4,
+  "passed": true,
+  "reported_rom_sha256": "b72feead6a4a0b9efe779a2a61fbce7e96bd30247e3149b0ce1793dd414d59a1"
+}

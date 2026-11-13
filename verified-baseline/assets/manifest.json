@@ -1,0 +1,155 @@
+{
+  "source_repository": "https://github.com/sung3r/ps1disasm",
+  "source_rom_sha256": "9e324e92bd833b45126861b6f1d2dcbb51251bdf3df6d563ab3a3ff784d8cf88",
+  "status": "Assets only; the original RPG engine is not converted",
+  "map": {
+    "name": "Camineet",
+    "width_tiles": 64,
+    "height_tiles": 48,
+    "source_chunk_x": [
+      5,
+      6
+    ],
+    "source_chunk_y": [
+      1,
+      2
+    ],
+    "source_map_bank": 24,
+    "metatile_bank": 22,
+    "graphics_address": "22:8570",
+    "collision_address": "03:BD6F",
+    "collision_mask": 1,
+    "start_x": 408,
+    "start_y": 112
+  },
+  "bg_tile_count": 150,
+  "bg_palettes_sms_colors": [
+    [
+      0,
+      8,
+      37,
+      42
+    ],
+    [
+      4,
+      6,
+      8,
+      12
+    ],
+    [
+      0,
+      37,
+      42,
+      63
+    ],
+    [
+      0,
+      9,
+      0,
+      0
+    ],
+    [
+      2,
+      11,
+      56,
+      63
+    ],
+    [
+      0,
+      48,
+      60,
+      63
+    ],
+    [
+      0,
+      3,
+      8,
+      11
+    ]
+  ],
+  "sprite_tile_count": 84,
+  "sprite_palettes_sms_colors": [
+    [
+      0,
+      0,
+      43,
+      52
+    ],
+    [
+      0,
+      0,
+      52,
+      55
+    ],
+    [
+      0,
+      0,
+      43,
+      55
+    ],
+    [
+      0,
+      0,
+      56,
+      63
+    ],
+    [
+      0,
+      0,
+      43,
+      63
+    ],
+    [
+      0,
+      0,
+      55,
+      63
+    ],
+    [
+      0,
+      0,
+      42,
+      55
+    ],
+    [
+      0,
+      0,
+      55,
+      56
+    ]
+  ],
+  "quantization": {
+    "background": {
+      "pixels": 196608,
+      "exact_color_fraction": 0.969518,
+      "rgb_rmse_0_255": 13.218
+    },
+    "sprites_opaque": {
+      "pixels": 3010,
+      "exact_color_fraction": 0.810963,
+      "rgb_rmse_0_255": 29.109
+    }
+  },
+  "conversion_notes": [
+    "SMS 4bpp pixels are reduced to 2bpp with seven BG palettes and eight per-tile OBJ palettes.",
+    "Map tile flip flags are preserved. Static priority is omitted; source collisions prevent crossing scenery.",
+    "Original NPC art is retained in the map; NPC interactions and animation are not implemented."
+  ],
+  "sprite_source": "28:8000, 14 frames of 6 tiles in row-major 16x24 layout",
+  "sprite_frame_order_down_up_left_right": [
+    0,
+    2,
+    4,
+    1,
+    5,
+    7,
+    9,
+    8,
+    10,
+    12,
+    11,
+    13
+  ],
+  "rom_bank_2_bytes": 9464,
+  "rom_bank_3_bytes": 1408
+}
