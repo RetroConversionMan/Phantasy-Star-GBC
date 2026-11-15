@@ -652,8 +652,8 @@
       "sha256": "27332d768ed4573b4270b578456ee6809a89f1ba662464fb446cb7d916fb9a6c"
     },
     "README.md": {
-      "bytes": 3989,
-      "sha256": "a8496af4f4abf0264dd31a0152b73f5af1b697c772f32a5b8e810d171fb730c8"
+      "bytes": 4194,
+      "sha256": "ca39909f3e942e46332364ade47b45271e08ae037088c792c47daf07bb753c11"
     },
     "REVISION_CONTENT_AUDIT.json": {
       "bytes": 7240,
@@ -1202,6 +1202,10 @@
     "START_HERE.md": {
       "bytes": 917,
       "sha256": "b61a1fd3d95c12343887bb16753c2698dde26c8d5b6f60302abb62efaf8f6922"
+    },
+    "artwork/Phantasy-Star-GBC-box-art.png": {
+      "bytes": 3105921,
+      "sha256": "a7ae0261c7745d2a67d364cbce4e8c696b939d6d2f12fabf25c6195b9f634650"
     },
     "baseline-reproduction/.gitignore": {
       "bytes": 89,

@@ -1,5 +1,9 @@
 # Phantasy Star — Game Boy Color
 
+**Box art:** [View or download the full-resolution cover](artwork/Phantasy-Star-GBC-box-art.png).
+
+<img src="artwork/Phantasy-Star-GBC-box-art.png" alt="Phantasy Star Game Boy Color box art" width="420">
+
 A native Game Boy Color port of Phantasy Star, with complete project source, generated SM83 assembly, converted assets, build tools, documentation, and retained development/test evidence.
 
 **Play the corrected game:** [Phantasy Star.gbc](ROM/Phantasy%20Star.gbc) · [Controls](ROM/PLAY.txt)
